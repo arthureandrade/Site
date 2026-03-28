@@ -1,6 +1,8 @@
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import CartIcon from '@/components/CartIcon'
+import { CartProvider } from '@/context/CartContext'
 
 export const metadata = {
   title: {
@@ -16,9 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <CartIcon />
+        </CartProvider>
       </body>
     </html>
   )
