@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Galpão do Aço — A Solução Certa Para Sua Obra!',
 }
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '5595032240115'
 
 /* ── Ícones ── */
 function IconBox() {

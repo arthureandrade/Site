@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export default function Footer() {
-  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
+  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || '5595032240115'
 
   return (
     <footer className="bg-brand text-gray-400 mt-auto border-t-2 border-primary">
