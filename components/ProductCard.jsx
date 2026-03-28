@@ -49,6 +49,9 @@ export default function ProductCard({ produto }) {
           </span>
         )}
 
+        <span className="text-[10px] text-gray-400 font-mono">
+          Cód. {produto.id}
+        </span>
         <h3 className="font-semibold text-gray-900 text-xs leading-snug line-clamp-3 group-hover:text-primary transition-colors flex-1">
           {produto.nome}
         </h3>
