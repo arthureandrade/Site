@@ -41,6 +41,7 @@ export default async function ProdutoPage({ params }) {
               src={foto}
               alt={produto.nome}
               fill
+              unoptimized
               className="object-contain p-4"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
