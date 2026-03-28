@@ -32,6 +32,10 @@ export default function Header() {
             Instagram
           </a>
           <Link href="#contato" className="text-gray-300 hover:text-white transition-colors">Contato</Link>
+          <Link href="/vendedor"
+            className="text-gray-600 hover:text-gray-400 transition-colors text-[10px] uppercase tracking-widest font-normal">
+            Vendedor
+          </Link>
         </nav>
 
         {/* CTA + Burger */}
@@ -73,6 +77,7 @@ export default function Header() {
             Instagram
           </a>
           <Link href="#contato"  onClick={() => setMenuOpen(false)} className="text-gray-300 hover:text-white transition-colors py-2">Contato</Link>
+          <Link href="/vendedor" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-gray-400 transition-colors py-2 text-[10px] uppercase tracking-widest">Área do Vendedor</Link>
           <Link href="/produtos" onClick={() => setMenuOpen(false)} className="btn-primary text-sm py-2 mt-1 justify-center">
             Ver Catálogo
           </Link>
