@@ -4,7 +4,7 @@ import { useCart } from '@/context/CartContext'
 import { formatarPreco } from '@/lib/api'
 import { useEffect } from 'react'
 
-const WPP_NUMBER = '5595032240115'
+const WPP_NUMBER = '559532240115'
 
 function montarMensagemWpp(items, totalPreco) {
   const linhas = items.map(item => {
