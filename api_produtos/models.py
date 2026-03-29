@@ -24,3 +24,10 @@ class HomeSectionProduct(Base):
     section_key = Column(String, index=True, nullable=False)
     product_id = Column(Integer, nullable=False)
     sort_order = Column(Integer, default=0, nullable=False)
+
+
+class MarcaLogo(Base):
+    __tablename__ = "marcas_logo"
+
+    marca = Column(String, primary_key=True, index=True)
+    logo_url = Column(String, nullable=True)

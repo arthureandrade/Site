@@ -1,11 +1,11 @@
 'use client'
-import { useState, useEffect, useCallback } from 'react'
+
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
 import { normalizarCategoriaComercial, obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
 
-const LIMIT = 24
 const CATEGORIAS_MARCA = [
   { nome: 'Ferro e Aco', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'chapa', 'tela'] },
   { nome: 'Construcao e Coberturas', termos: ['cimento', 'argamassa', 'rejunte', 'massa', 'concreto', 'bloco', 'tijolo', 'telha', 'laje'] },
@@ -61,12 +61,23 @@ function montarMarcasCatalogo(produtos) {
       categoria: inferirCategoriaMarca(marca, itens),
       quantidade: itens.length,
     }))
-    .sort((a, b) => a.marca.localeCompare(b.marca, 'pt-BR'))
+    .sort((a, b) => b.quantidade - a.quantidade || a.marca.localeCompare(b.marca, 'pt-BR'))
 }
 
-export default function ProdutosCliente({ initialBusca = '', initialMarca = '', initialCategoria = '', initialSecao = '', initialSubgrupo = '' }) {
-  const [produtos, setProdutos] = useState([])
-  const [total, setTotal] = useState(0)
+function calcularScoreComercial(produto) {
+  const preco = Number(produto?.preco || 0)
+  const estoque = Number(produto?.estoque || 0)
+  return (preco + estoque) / 2
+}
+
+export default function ProdutosCliente({
+  initialBusca = '',
+  initialMarca = '',
+  initialCategoria = '',
+  initialSecao = '',
+  initialSubgrupo = '',
+}) {
+  const [todosProdutos, setTodosProdutos] = useState([])
   const [loading, setLoading] = useState(true)
   const [erro, setErro] = useState(false)
   const [page, setPage] = useState(0)
@@ -80,19 +91,27 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   const [emEstoque, setEmEstoque] = useState(true)
   const [marcasCatalogo, setMarcasCatalogo] = useState([])
   const [loadingMarcas, setLoadingMarcas] = useState(true)
+  const [produtosPorPagina, setProdutosPorPagina] = useState(24)
+  const [mostrarTodasCategorias, setMostrarTodasCategorias] = useState(false)
+  const [mostrarTodasMarcas, setMostrarTodasMarcas] = useState(false)
 
   const apiUrl =
     (typeof window !== 'undefined' && window.__ENV_API_URL__) ||
     process.env.NEXT_PUBLIC_API_URL ||
     'http://localhost:8000'
 
-  const fetchProdutos = useCallback(async (p = 0, busca_ = '', marca_ = '', est = true) => {
+  const fetchProdutos = useCallback(async (_p = 0, busca_ = '', marca_ = '', est = true) => {
     setLoading(true)
     setErro(false)
 
     try {
       if (categoriaEspecial === 'ferro_aco') {
-        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'false', secao: String(SECAO_FERRO_ACO) })
+        const qs = new URLSearchParams({
+          skip: 0,
+          limit: 5000,
+          com_preco: 'false',
+          secao: String(SECAO_FERRO_ACO),
+        })
         if (est != null) qs.set('em_estoque', est)
 
         const res = await fetch(`${apiUrl}/produtos?${qs}`)
@@ -108,13 +127,16 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
         }
         if (marca_) {
           const marcaNormalizada = normalizarTexto(marca_)
-          filtrados = filtrados.filter((produto) => normalizarTexto(produto.marca || '').includes(marcaNormalizada))
+          filtrados = filtrados.filter((produto) =>
+            normalizarTexto(produto.marca || '').includes(marcaNormalizada)
+          )
         }
 
-        setTotal(filtrados.length)
-        setProdutos(filtrados.slice(p * LIMIT, p * LIMIT + LIMIT))
+        setTodosProdutos(
+          [...filtrados].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
+        )
       } else {
-        const qs = new URLSearchParams({ skip: p * LIMIT, limit: LIMIT, com_preco: 'true' })
+        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'true' })
         if (busca_) qs.set('busca', busca_)
         if (marca_) qs.set('marca', marca_)
         if (secaoEspecial) qs.set('secao', String(secaoEspecial))
@@ -125,8 +147,9 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
         if (!res.ok) throw new Error()
         const data = await res.json()
         const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
-        setProdutos(produtosValidos)
-        setTotal(data.total || 0)
+        setTodosProdutos(
+          [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
+        )
       }
     } catch {
       setErro(true)
@@ -138,16 +161,21 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   const fetchMarcas = useCallback(async () => {
     setLoadingMarcas(true)
     try {
-      const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true' })
+      const qs = new URLSearchParams({
+        skip: 0,
+        limit: 5000,
+        com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true',
+      })
       if (categoriaEspecial === 'ferro_aco') qs.set('secao', String(SECAO_FERRO_ACO))
       if (secaoEspecial && categoriaEspecial !== 'ferro_aco') qs.set('secao', String(secaoEspecial))
       if (subgrupoEspecial && categoriaEspecial !== 'ferro_aco') qs.set('subgrupo', String(subgrupoEspecial))
       const res = await fetch(`${apiUrl}/produtos?${qs}`)
       if (!res.ok) throw new Error()
       const data = await res.json()
-      const produtosValidos = categoriaEspecial === 'ferro_aco'
-        ? (data.produtos || []).filter(ehProdutoFerroAco)
-        : (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
+      const produtosValidos =
+        categoriaEspecial === 'ferro_aco'
+          ? (data.produtos || []).filter(ehProdutoFerroAco)
+          : (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
       setMarcasCatalogo(montarMarcasCatalogo(produtosValidos))
     } catch {
       setMarcasCatalogo([])
@@ -171,7 +199,6 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
 
   function handlePage(nova) {
     setPage(nova)
-    fetchProdutos(nova, busca, marcaFiltro, emEstoque)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -186,26 +213,61 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   }
 
   const categorias = ['Todas', ...new Set(marcasCatalogo.map((item) => item.categoria))]
+  const categoriasResumo = categorias
+    .filter((categoria) => categoria !== 'Todas')
+    .map((categoria) => ({
+      nome: categoria,
+      quantidade: marcasCatalogo.filter((item) => item.categoria === categoria).length,
+    }))
+    .sort((a, b) => b.quantidade - a.quantidade || a.nome.localeCompare(b.nome, 'pt-BR'))
+
   const marcasFiltradas = marcasCatalogo.filter((item) => {
     const casaCategoria = categoriaAtiva === 'Todas' || item.categoria === categoriaAtiva
-    const casaBuscaMarca = !buscaMarca || normalizarTexto(item.marca).includes(normalizarTexto(buscaMarca))
+    const casaBuscaMarca =
+      !buscaMarca || normalizarTexto(item.marca).includes(normalizarTexto(buscaMarca))
     return casaCategoria && casaBuscaMarca
   })
-  const totalPages = Math.ceil(total / LIMIT)
+
+  const produtosFiltradosPorCategoria = useMemo(() => {
+    if (categoriaAtiva === 'Todas') return todosProdutos
+    return todosProdutos.filter(
+      (produto) => inferirCategoriaMarca(produto.marca, [produto]) === categoriaAtiva
+    )
+  }, [categoriaAtiva, todosProdutos])
+
+  const categoriasVisiveis = mostrarTodasCategorias
+    ? categoriasResumo
+    : categoriasResumo.slice(0, 6)
+  const marcasVisiveis = mostrarTodasMarcas ? marcasFiltradas : marcasFiltradas.slice(0, 8)
+  const totalFiltrado = produtosFiltradosPorCategoria.length
+  const totalPages = Math.ceil(totalFiltrado / produtosPorPagina)
+  const produtosPaginados = useMemo(
+    () =>
+      produtosFiltradosPorCategoria.slice(
+        page * produtosPorPagina,
+        page * produtosPorPagina + produtosPorPagina
+      ),
+    [produtosFiltradosPorCategoria, page, produtosPorPagina]
+  )
+
+  useEffect(() => {
+    const novoTotalPages = Math.max(1, Math.ceil(totalFiltrado / produtosPorPagina))
+    if (page > novoTotalPages - 1) setPage(0)
+  }, [page, produtosPorPagina, totalFiltrado])
 
   return (
     <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 lg:px-8">
-      <div className="grid gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
+      <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
         <aside>
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-            <div className="bg-brand px-5 py-4 border-b border-white/10">
-              <p className="text-[11px] uppercase tracking-[0.25em] text-primary font-bold mb-1">Catalogo</p>
-              <h2 className="font-display text-2xl text-white uppercase leading-none">Filtros laterais</h2>
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <div className="border-b border-white/10 bg-brand px-5 py-4">
+              <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Catalogo</p>
+              <h2 className="font-display text-2xl uppercase leading-none text-white">Filtros laterais</h2>
             </div>
 
-            <div className="p-5 space-y-5">
+            <div className="space-y-5 p-5">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
+                <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-gray-500">
                   Buscar produto
                 </label>
                 <input
@@ -218,20 +280,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-                  Buscar marca
-                </label>
-                <input
-                  type="text"
-                  placeholder="Digite o nome da marca"
-                  value={buscaMarca}
-                  onChange={(e) => setBuscaMarca(e.target.value)}
-                  className="input text-sm"
-                />
-              </div>
-
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Disponibilidade</p>
+                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-gray-500">Disponibilidade</p>
                 <div className="grid grid-cols-1 gap-2">
                   {[
                     { label: 'Somente com estoque', val: true },
@@ -254,62 +303,118 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Categorias de marcas</p>
-                <select
-                  value={categoriaAtiva}
-                  onChange={(e) => setCategoriaAtiva(e.target.value)}
-                  className="input text-sm"
-                >
-                  {categorias.map((categoria) => {
-                    const quantidade =
-                      categoria === 'Todas'
-                        ? marcasCatalogo.length
-                        : marcasCatalogo.filter((item) => item.categoria === categoria).length
-                    return (
-                      <option key={categoria} value={categoria}>
-                        {categoria} ({quantidade})
-                      </option>
-                    )
-                  })}
-                </select>
+                <div className="mb-3 flex items-center justify-between">
+                  <p className="text-base font-bold text-gray-800">Categorias</p>
+                  <button
+                    type="button"
+                    className="text-primary"
+                    onClick={() => setCategoriaAtiva('Todas')}
+                    aria-label="Limpar categoria"
+                  >
+                    <span className="text-lg leading-none">⌃</span>
+                  </button>
+                </div>
+                <div className="space-y-2 rounded-2xl border border-gray-200 p-3">
+                  {categoriasVisiveis.map((item) => (
+                    <button
+                      key={item.nome}
+                      type="button"
+                      onClick={() => {
+                        setCategoriaAtiva(item.nome)
+                        setPage(0)
+                      }}
+                      className={`flex w-full items-center justify-between gap-3 rounded-xl px-2 py-2 text-left transition ${
+                        categoriaAtiva === item.nome ? 'bg-red-50 text-primary' : 'hover:bg-gray-50'
+                      }`}
+                    >
+                      <span className="text-sm font-semibold text-gray-800">{item.nome}</span>
+                      <span className="rounded-md bg-gray-100 px-2 py-1 text-xs font-bold text-gray-500">
+                        {item.quantidade}
+                      </span>
+                    </button>
+                  ))}
+                  {categoriasResumo.length > 6 && (
+                    <button
+                      type="button"
+                      onClick={() => setMostrarTodasCategorias((valor) => !valor)}
+                      className="pt-1 text-sm font-black text-primary"
+                    >
+                      {mostrarTodasCategorias ? 'Ver menos' : 'Ver mais'}
+                    </button>
+                  )}
+                </div>
               </div>
 
               <div>
-                <div className="flex items-center justify-between mb-2">
-                  <p className="text-xs font-bold uppercase tracking-wider text-gray-500">Marcas</p>
-                  <span className="text-xs text-gray-400">{marcasFiltradas.length}</span>
+                <div className="mb-3 flex items-center justify-between">
+                  <p className="text-base font-bold text-gray-800">Marcas</p>
+                  <button
+                    type="button"
+                    className="text-primary"
+                    onClick={() => setMarcaFiltro('')}
+                    aria-label="Limpar marca"
+                  >
+                    <span className="text-lg leading-none">⌃</span>
+                  </button>
                 </div>
 
-                <div className="space-y-2">
-                  {loadingMarcas ? (
-                    <p className="text-sm text-gray-400">Carregando marcas...</p>
-                  ) : marcasFiltradas.length === 0 ? (
-                    <p className="text-sm text-gray-400">Nenhuma marca encontrada.</p>
-                  ) : (
-                    marcasFiltradas.map((item) => (
-                      <button
-                        key={item.marca}
-                        onClick={() => {
-                          setMarcaFiltro(item.marca === marcaFiltro ? '' : item.marca)
-                          setPage(0)
-                        }}
-                        className={`w-full rounded-xl border px-3 py-2 text-left transition-colors ${
-                          marcaFiltro === item.marca
-                            ? 'border-primary bg-red-50'
-                            : 'border-gray-200 hover:border-primary/30 hover:bg-gray-50'
-                        }`}
-                      >
-                        <div className="flex items-center justify-between gap-3">
-                          <div className="min-w-0">
-                            <p className="truncate text-sm font-semibold text-gray-900">{item.marca}</p>
-                            <p className="truncate text-[11px] uppercase tracking-wider text-gray-400">{item.categoria}</p>
+                <div className="rounded-2xl border border-gray-200 p-3">
+                  <div className="mb-3 flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2">
+                    <input
+                      type="text"
+                      placeholder="Busque por Marcas..."
+                      value={buscaMarca}
+                      onChange={(e) => setBuscaMarca(e.target.value)}
+                      className="w-full bg-transparent text-sm outline-none"
+                    />
+                    <span className="text-gray-400">⌕</span>
+                  </div>
+
+                  <div className="space-y-2">
+                    {loadingMarcas ? (
+                      <p className="text-sm text-gray-400">Carregando marcas...</p>
+                    ) : marcasFiltradas.length === 0 ? (
+                      <p className="text-sm text-gray-400">Nenhuma marca encontrada.</p>
+                    ) : (
+                      marcasVisiveis.map((item) => (
+                        <button
+                          key={item.marca}
+                          onClick={() => {
+                            setMarcaFiltro(item.marca === marcaFiltro ? '' : item.marca)
+                            setPage(0)
+                          }}
+                          className={`w-full rounded-xl px-2 py-2 text-left transition-colors ${
+                            marcaFiltro === item.marca ? 'bg-red-50' : 'hover:bg-gray-50'
+                          }`}
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="flex min-w-0 items-center gap-3">
+                              <span
+                                className={`h-4 w-4 rounded border ${
+                                  marcaFiltro === item.marca
+                                    ? 'border-primary bg-primary'
+                                    : 'border-gray-300 bg-white'
+                                }`}
+                              />
+                              <p className="truncate text-sm font-semibold text-gray-900">{item.marca}</p>
+                            </div>
+                            <span className="rounded-md bg-gray-100 px-2 py-1 text-xs font-bold text-gray-500">
+                              {item.quantidade}
+                            </span>
                           </div>
-                          <span className="rounded-full bg-gray-100 px-2 py-1 text-[11px] font-bold text-gray-500">
-                            {item.quantidade}
-                          </span>
-                        </div>
-                      </button>
-                    ))
+                        </button>
+                      ))
+                    )}
+                  </div>
+
+                  {marcasFiltradas.length > 8 && (
+                    <button
+                      type="button"
+                      onClick={() => setMostrarTodasMarcas((valor) => !valor)}
+                      className="pt-3 text-sm font-black text-primary"
+                    >
+                      {mostrarTodasMarcas ? 'Ver menos' : 'Ver mais'}
+                    </button>
                   )}
                 </div>
               </div>
@@ -322,19 +427,19 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
         </aside>
 
         <section>
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm p-5 mb-6">
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+            <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
               <div>
-                <div className="h-1 w-12 bg-primary rounded mb-3" />
-                <h3 className="font-display text-3xl text-gray-900 uppercase">Catalogo de Produtos</h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <div className="mb-3 h-1 w-12 rounded bg-primary" />
+                <h3 className="font-display text-3xl uppercase text-gray-900">Catalogo de Produtos</h3>
+                <p className="mt-1 text-sm text-gray-500">
                   {categoriaEspecial === 'ferro_aco'
-                    ? 'Linha Ferro e Aco da secao 6. Os valores devem ser consultados pelo WhatsApp.'
+                    ? 'Linha Ferro e Aco da secao 6. Valores sob consulta no WhatsApp.'
                     : secaoEspecial && subgrupoEspecial
                       ? `Exibindo produtos da secao ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
-                    : subgrupoEspecial
-                      ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
-                      : 'Exibindo apenas produtos com preco. Use a lateral para navegar por marcas e categorias.'}
+                      : subgrupoEspecial
+                        ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
+                        : 'Exibindo apenas produtos com preco. Use a lateral para navegar por categorias e marcas.'}
                 </p>
               </div>
 
@@ -345,69 +450,100 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
                   </span>
                 )}
                 <span className="rounded-full bg-gray-100 px-3 py-1.5 font-bold uppercase tracking-wide text-gray-600">
-                  {total.toLocaleString('pt-BR')} produto{total !== 1 ? 's' : ''}
+                  {totalFiltrado.toLocaleString('pt-BR')} produto{totalFiltrado !== 1 ? 's' : ''}
                 </span>
+                <span className="rounded-full bg-amber-50 px-3 py-1.5 font-bold uppercase tracking-wide text-amber-700">
+                  Ordenado pela media entre valor e estoque
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <label className="text-xs font-bold uppercase tracking-[0.18em] text-gray-500">
+                  Itens por pagina
+                </label>
+                <select
+                  value={produtosPorPagina}
+                  onChange={(e) => {
+                    setProdutosPorPagina(Number(e.target.value))
+                    setPage(0)
+                  }}
+                  className="rounded-xl border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 outline-none"
+                >
+                  {[12, 24, 36, 48].map((valor) => (
+                    <option key={valor} value={valor}>
+                      {valor}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
 
           {loading ? (
-            <SkeletonGrid count={LIMIT} />
+            <SkeletonGrid count={produtosPorPagina} />
           ) : erro ? (
-            <div className="text-center py-20">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z"/>
+            <div className="py-20 text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                <svg className="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-black text-gray-800 mb-2 uppercase">Nao foi possivel carregar os produtos</h3>
-              <p className="text-gray-500 mb-6 text-sm">Verifique a conexao com a API.</p>
+              <h3 className="mb-2 text-xl font-black uppercase text-gray-800">Nao foi possivel carregar os produtos</h3>
+              <p className="mb-6 text-sm text-gray-500">Verifique a conexao com a API.</p>
               <button onClick={() => fetchProdutos(page, busca, marcaFiltro, emEstoque)} className="btn-primary">
                 Tentar novamente
               </button>
             </div>
-          ) : produtos.length === 0 ? (
-            <div className="text-center py-20 rounded-2xl border border-dashed border-gray-300 bg-white">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/>
+          ) : produtosPaginados.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-gray-300 bg-white py-20 text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                <svg className="h-8 w-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0" />
                 </svg>
               </div>
-              <h3 className="text-xl font-black text-gray-800 mb-2 uppercase">Nenhum produto encontrado</h3>
-              <p className="text-gray-500 mb-6 text-sm">Tente outras marcas, categorias ou termos de busca.</p>
+              <h3 className="mb-2 text-xl font-black uppercase text-gray-800">Nenhum produto encontrado</h3>
+              <p className="mb-6 text-sm text-gray-500">Tente outras marcas, categorias ou termos de busca.</p>
               <button onClick={limparFiltros} className="btn-primary">
                 Limpar filtros
               </button>
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-                {produtos.map((produto) => (
-                  <ProductCard key={produto.id} produto={produto} ocultarPreco={categoriaEspecial === 'ferro_aco'} />
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-4">
+                {produtosPaginados.map((produto) => (
+                  <ProductCard
+                    key={produto.id}
+                    produto={produto}
+                    ocultarPreco={categoriaEspecial === 'ferro_aco'}
+                  />
                 ))}
               </div>
 
               {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-2 mt-10 flex-wrap">
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
                   <button
                     disabled={page === 0}
                     onClick={() => handlePage(page - 1)}
-                    className="px-4 py-2 rounded border border-gray-300 text-sm font-bold uppercase tracking-wide disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
+                    className="rounded border border-gray-300 px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     ← Anterior
                   </button>
 
                   {Array.from({ length: Math.min(totalPages, 7) }, (_, i) => {
-                    const pg = totalPages <= 7 ? i
-                      : page < 4 ? i
-                      : page > totalPages - 5 ? totalPages - 7 + i
-                      : page - 3 + i
+                    const pg =
+                      totalPages <= 7
+                        ? i
+                        : page < 4
+                          ? i
+                          : page > totalPages - 5
+                            ? totalPages - 7 + i
+                            : page - 3 + i
 
                     return (
                       <button
                         key={pg}
                         onClick={() => handlePage(pg)}
-                        className={`w-10 h-10 rounded text-sm font-black transition-all ${
+                        className={`h-10 w-10 rounded text-sm font-black transition-all ${
                           pg === page
                             ? 'bg-primary text-white shadow-md'
                             : 'border border-gray-300 text-gray-600 hover:bg-gray-100'
@@ -421,7 +557,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
                   <button
                     disabled={page >= totalPages - 1}
                     onClick={() => handlePage(page + 1)}
-                    className="px-4 py-2 rounded border border-gray-300 text-sm font-bold uppercase tracking-wide disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
+                    className="rounded border border-gray-300 px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     Proxima →
                   </button>

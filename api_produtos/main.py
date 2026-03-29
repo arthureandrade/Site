@@ -44,6 +44,8 @@ Base.metadata.create_all(bind=engine)
 BASE_DIR = Path(__file__).resolve().parent
 UPLOAD_DIR = BASE_DIR / "fotos"
 UPLOAD_DIR.mkdir(exist_ok=True)
+BRAND_LOGOS_DIR = BASE_DIR / "brand_logos"
+BRAND_LOGOS_DIR.mkdir(exist_ok=True)
 SITE_ASSETS_DIR = BASE_DIR / "site_assets"
 SITE_ASSETS_DIR.mkdir(exist_ok=True)
 ADMIN_PASSWORD = os.getenv("SITE_ADMIN_PASSWORD", "ferro123")
@@ -86,6 +88,7 @@ app.add_middleware(
 
 # Serve as fotos como arquivos estáticos
 app.mount("/fotos", StaticFiles(directory=str(UPLOAD_DIR)), name="fotos")
+app.mount("/brand-logos", StaticFiles(directory=str(BRAND_LOGOS_DIR)), name="brand-logos")
 app.mount("/site-assets", StaticFiles(directory=str(SITE_ASSETS_DIR)), name="site-assets")
 
 
@@ -103,9 +106,26 @@ def _foto_url_local(produto_id: int, db: Session) -> Optional[str]:
     return registro.foto_url if registro else None
 
 
+def _normalizar_marca(marca: str) -> str:
+    return " ".join(str(marca or "").strip().upper().split())
+
+
+def _marca_logo_url_local(marca: Optional[str], db: Session) -> Optional[str]:
+    marca_norm = _normalizar_marca(marca or "")
+    if not marca_norm:
+        return None
+    registro = (
+        db.query(models.MarcaLogo)
+        .filter(models.MarcaLogo.marca == marca_norm)
+        .first()
+    )
+    return registro.logo_url if registro else None
+
+
 def _produto_dict_to_response(
     dados: dict,
     foto_url: Optional[str],
+    marca_logo_url: Optional[str] = None,
 ) -> schemas.ProdutoResponse:
     """Converte um dict vindo do DB2 em ProdutoResponse (inclui foto_url local)."""
     return schemas.ProdutoResponse(
@@ -117,6 +137,7 @@ def _produto_dict_to_response(
         subgrupo=int(dados.get("subgrupo") or 0),
         preco=float(dados.get("preco") or 0),
         marca=dados.get("marca") or "",
+        marca_logo_url=marca_logo_url,
         estoque=int(dados.get("estoque") or 0),
         faturamento_3m=float(dados.get("faturamento_3m") or 0),
         quantidade_vendida_3m=float(dados.get("quantidade_vendida_3m") or 0),
@@ -161,7 +182,13 @@ def _carregar_produtos_por_ids(produto_ids: list[int], db: Session) -> list[sche
             dados = buscar_produto_db2(conn, int(produto_id))
             if dados is None:
                 continue
-            produtos.append(_produto_dict_to_response(dados, _foto_url_local(int(produto_id), db)))
+            produtos.append(
+                _produto_dict_to_response(
+                    dados,
+                    _foto_url_local(int(produto_id), db),
+                    _marca_logo_url_local(dados.get("marca"), db),
+                )
+            )
     return produtos
 
 
@@ -210,6 +237,37 @@ def root():
 @app.get("/home-config", tags=["Home"])
 def obter_home_config(db: Session = Depends(get_db)):
     return _montar_home_config(db)
+
+
+@app.get(
+    "/marcas/logos",
+    response_model=schemas.MarcaLogoListResponse,
+    tags=["Marcas"],
+    summary="Lista logos cadastradas por marca",
+)
+def listar_logos_marca(db: Session = Depends(get_db)):
+    registros = db.query(models.MarcaLogo).order_by(models.MarcaLogo.marca.asc()).all()
+    return {
+        "total": len(registros),
+        "logos": [{"marca": item.marca, "logo_url": item.logo_url} for item in registros],
+    }
+
+
+@app.get(
+    "/marcas/{marca}/logo",
+    response_model=schemas.MarcaLogoResponse,
+    tags=["Marcas"],
+    summary="Busca a logo cadastrada para uma marca",
+)
+def obter_logo_marca(marca: str, db: Session = Depends(get_db)):
+    marca_norm = _normalizar_marca(marca)
+    registro = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca == marca_norm).first()
+    if not registro:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Logo da marca '{marca_norm}' não encontrada.",
+        )
+    return {"marca": registro.marca, "logo_url": registro.logo_url}
 
 
 @app.post("/admin/login", tags=["Admin"])
@@ -334,6 +392,7 @@ def listar_produtos_catalogo_por_subgrupo(
 
     ids = [p["id"] for p in lista]
     fotos_locais: dict[int, str] = {}
+    logos_marca: dict[str, str] = {}
     if ids:
         registros = (
             db.query(models.FotoProduto)
@@ -341,9 +400,17 @@ def listar_produtos_catalogo_por_subgrupo(
             .all()
         )
         fotos_locais = {r.idproduto: r.foto_url for r in registros}
+        marcas = {_normalizar_marca(p.get("marca") or "") for p in lista if p.get("marca")}
+        if marcas:
+            logos = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca.in_(list(marcas))).all()
+            logos_marca = {item.marca: item.logo_url for item in logos}
 
     produtos_response = [
-        _produto_dict_to_response(p, fotos_locais.get(p["id"]))
+        _produto_dict_to_response(
+            p,
+            fotos_locais.get(p["id"]),
+            logos_marca.get(_normalizar_marca(p.get("marca") or "")),
+        )
         for p in lista
     ]
 
@@ -378,6 +445,7 @@ def listar_produtos_destaque(
 
     ids = [p["id"] for p in lista]
     fotos_locais: dict[int, str] = {}
+    logos_marca: dict[str, str] = {}
     if ids:
         registros = (
             db.query(models.FotoProduto)
@@ -385,9 +453,17 @@ def listar_produtos_destaque(
             .all()
         )
         fotos_locais = {r.idproduto: r.foto_url for r in registros}
+        marcas = {_normalizar_marca(p.get("marca") or "") for p in lista if p.get("marca")}
+        if marcas:
+            logos = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca.in_(list(marcas))).all()
+            logos_marca = {item.marca: item.logo_url for item in logos}
 
     produtos_response = [
-        _produto_dict_to_response(p, fotos_locais.get(p["id"]))
+        _produto_dict_to_response(
+            p,
+            fotos_locais.get(p["id"]),
+            logos_marca.get(_normalizar_marca(p.get("marca") or "")),
+        )
         for p in lista
     ]
 
@@ -404,7 +480,9 @@ def listar_produtos(
     busca: Optional[str] = Query(None, description="Buscar por nome ou descricao do produto"),
     marca: Optional[str] = Query(None, description="Filtrar por fabricante/marca (busca parcial)"),
     secao: Optional[int] = Query(None, description="Filtrar por ID da secao"),
+    grupo: Optional[int] = Query(None, description="Filtrar por ID do grupo"),
     subgrupo: Optional[int] = Query(None, description="Filtrar por ID do subgrupo"),
+    subgrupos: Optional[str] = Query(None, description="Lista CSV de subgrupos, ex: 25,26,27"),
     em_estoque: Optional[bool] = Query(None, description="true = só com estoque | false = só sem estoque"),
     com_preco: bool = Query(True, description="true = apenas produtos com preco"),
     skip: int = Query(0, ge=0, description="Paginação: registros a pular"),
@@ -416,10 +494,22 @@ def listar_produtos(
 
     - **busca**: busca parcial por nome ou descricao
     - **marca**: busca parcial no campo FABRICANTE (ex: `?marca=Votorantim`)
+    - **grupo**: filtra por grupo
+    - **subgrupo / subgrupos**: filtra por um subgrupo ou uma lista CSV
     - **em_estoque**: `true` → apenas com estoque disponível
     - **com_preco**: `true` → esconde itens sem preco
     - **skip / limit**: paginação
     """
+    lista_subgrupos: list[int] | None = None
+    if subgrupos:
+        try:
+            lista_subgrupos = [int(item.strip()) for item in subgrupos.split(",") if item.strip()]
+        except ValueError:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Parametro subgrupos invalido. Use numeros separados por virgula.",
+            )
+
     try:
         with get_db2() as conn:
             total, lista = listar_produtos_db2(
@@ -427,7 +517,9 @@ def listar_produtos(
                 busca=busca,
                 marca=marca,
                 secao=secao,
+                grupo=grupo,
                 subgrupo=subgrupo,
+                subgrupos=lista_subgrupos,
                 em_estoque=em_estoque,
                 com_preco=com_preco,
                 skip=skip,
@@ -442,6 +534,7 @@ def listar_produtos(
     # Carrega todas as fotos locais de uma vez para evitar N+1
     ids = [p["id"] for p in lista]
     fotos_locais: dict[int, str] = {}
+    logos_marca: dict[str, str] = {}
     if ids:
         registros = (
             db.query(models.FotoProduto)
@@ -449,9 +542,17 @@ def listar_produtos(
             .all()
         )
         fotos_locais = {r.idproduto: r.foto_url for r in registros}
+        marcas = {_normalizar_marca(p.get("marca") or "") for p in lista if p.get("marca")}
+        if marcas:
+            logos = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca.in_(list(marcas))).all()
+            logos_marca = {item.marca: item.logo_url for item in logos}
 
     produtos_response = [
-        _produto_dict_to_response(p, fotos_locais.get(p["id"]))
+        _produto_dict_to_response(
+            p,
+            fotos_locais.get(p["id"]),
+            logos_marca.get(_normalizar_marca(p.get("marca") or "")),
+        )
         for p in lista
     ]
 
@@ -484,7 +585,8 @@ def buscar_produto(produto_id: int, db: Session = Depends(get_db)):
         )
 
     foto_url = _foto_url_local(produto_id, db)
-    return _produto_dict_to_response(dados, foto_url)
+    marca_logo_url = _marca_logo_url_local(dados.get("marca"), db)
+    return _produto_dict_to_response(dados, foto_url, marca_logo_url)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -593,6 +695,81 @@ def remover_foto(produto_id: int, db: Session = Depends(get_db)):
         caminho = os.path.join(UPLOAD_DIR, nome_arquivo)
         if os.path.exists(caminho):
             os.remove(caminho)
+
+    db.delete(registro)
+    db.commit()
+
+
+@app.post(
+    "/marcas/{marca}/logo",
+    response_model=schemas.MarcaLogoResponse,
+    tags=["Marcas (Admin)"],
+    summary="Faz upload da logo de uma marca",
+)
+def upload_logo_marca(
+    marca: str,
+    arquivo: UploadFile = File(...),
+    _: str = Depends(_verificar_admin),
+    db: Session = Depends(get_db),
+):
+    marca_norm = _normalizar_marca(marca)
+    if not marca_norm:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Marca inválida.")
+
+    extensao = os.path.splitext(arquivo.filename or "")[-1].lower()
+    if extensao not in [".jpg", ".jpeg", ".png", ".webp", ".svg"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Formato inválido. Use JPG, PNG, WEBP ou SVG.",
+        )
+
+    registro = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca == marca_norm).first()
+    if registro and registro.logo_url:
+        nome_antigo = registro.logo_url.split("/brand-logos/")[-1]
+        caminho_antigo = BRAND_LOGOS_DIR / nome_antigo
+        if caminho_antigo.exists():
+            caminho_antigo.unlink()
+
+    slug = "".join(ch if ch.isalnum() else "_" for ch in marca_norm.lower()).strip("_") or "marca"
+    nome_arquivo = f"{slug}_{uuid.uuid4().hex}{extensao}"
+    caminho = BRAND_LOGOS_DIR / nome_arquivo
+    with open(caminho, "wb") as buffer:
+        shutil.copyfileobj(arquivo.file, buffer)
+
+    url = f"/brand-logos/{nome_arquivo}"
+    if registro:
+        registro.logo_url = url
+    else:
+        db.add(models.MarcaLogo(marca=marca_norm, logo_url=url))
+    db.commit()
+
+    return {"marca": marca_norm, "logo_url": url}
+
+
+@app.delete(
+    "/marcas/{marca}/logo",
+    status_code=status.HTTP_204_NO_CONTENT,
+    tags=["Marcas (Admin)"],
+    summary="Remove a logo de uma marca",
+)
+def remover_logo_marca(
+    marca: str,
+    _: str = Depends(_verificar_admin),
+    db: Session = Depends(get_db),
+):
+    marca_norm = _normalizar_marca(marca)
+    registro = db.query(models.MarcaLogo).filter(models.MarcaLogo.marca == marca_norm).first()
+    if not registro:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Nenhuma logo cadastrada para esta marca.",
+        )
+
+    if registro.logo_url:
+        nome_arquivo = registro.logo_url.split("/brand-logos/")[-1]
+        caminho = BRAND_LOGOS_DIR / nome_arquivo
+        if caminho.exists():
+            caminho.unlink()
 
     db.delete(registro)
     db.commit()

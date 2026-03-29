@@ -13,6 +13,7 @@ class ProdutoResponse(BaseModel):
     subgrupo: int = 0
     preco: float = Field(ge=0, description="Preco de varejo (R$)")
     marca: str = ""
+    marca_logo_url: Optional[str] = None
     estoque: int = Field(ge=0, description="Estoque total (todas as empresas)")
     faturamento_3m: float = Field(default=0, ge=0, description="Faturamento bruto dos ultimos 3 meses (R$)")
     quantidade_vendida_3m: float = Field(default=0, ge=0, description="Quantidade vendida nos ultimos 3 meses")
@@ -40,3 +41,13 @@ class HomeSectionProductIn(BaseModel):
 
 class HomeSectionUpdateRequest(BaseModel):
     items: list[HomeSectionProductIn]
+
+
+class MarcaLogoResponse(BaseModel):
+    marca: str
+    logo_url: Optional[str] = None
+
+
+class MarcaLogoListResponse(BaseModel):
+    total: int
+    logos: list[MarcaLogoResponse]

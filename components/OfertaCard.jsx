@@ -2,13 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
+import { useCart } from '@/context/CartContext'
 import { formatarParcelamento, formatarPreco, imagemUrl } from '@/lib/api'
-
-function calcularPrecoComDesconto(preco, desconto) {
-  const valor = Number(preco || 0)
-  if (valor <= 0) return 0
-  return valor * (1 - desconto / 100)
-}
+import { calcularPrecoPromocional } from '@/lib/ofertas'
 
 export default function OfertaCard({
   produto,
@@ -18,12 +15,19 @@ export default function OfertaCard({
 }) {
   const foto = imagemUrl(produto?.foto_url)
   const precoOriginal = Number(produto?.preco || 0)
-  const precoComDesconto = calcularPrecoComDesconto(precoOriginal, desconto)
+  const precoComDesconto = calcularPrecoPromocional(precoOriginal, desconto)
   const parcelamento = precoOriginal > 0 ? formatarParcelamento(precoOriginal, 10) : ''
+  const { dispatch } = useCart()
+  const [adicionado, setAdicionado] = useState(false)
+
+  function handleAdicionar() {
+    dispatch({ type: 'ADD', produto })
+    setAdicionado(true)
+    setTimeout(() => setAdicionado(false), 1500)
+  }
 
   return (
-    <Link
-      href={`/produto/${produto.id}`}
+    <div
       className={`group flex h-full flex-col overflow-hidden rounded-[26px] border border-red-200 bg-white shadow-[0_14px_35px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_40px_rgba(15,23,42,0.12)] ${
         destaque ? 'lg:min-h-[540px]' : ''
       }`}
@@ -40,7 +44,7 @@ export default function OfertaCard({
         </div>
       </div>
 
-      <div className="relative mx-3 mt-3 overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
+      <Link href={`/produto/${produto.id}`} className="relative mx-3 mt-3 block overflow-hidden rounded-2xl border border-slate-100 bg-slate-50">
         <div className="relative aspect-[1.1/1]">
           {foto ? (
             <Image
@@ -57,16 +61,18 @@ export default function OfertaCard({
             </div>
           )}
         </div>
-      </div>
+      </Link>
 
       <div className="flex flex-1 flex-col px-4 pb-5 pt-4 text-slate-900">
         <div className="mb-2 text-[10px] font-black uppercase tracking-[0.22em] text-primary">
           {produto.marca || 'Galpao do Aco'}
         </div>
 
-        <h3 className="line-clamp-3 min-h-[4.8rem] text-lg font-black leading-tight">
-          {produto.nome}
-        </h3>
+        <Link href={`/produto/${produto.id}`} className="block">
+          <h3 className="line-clamp-3 min-h-[4.8rem] text-lg font-black leading-tight">
+            {produto.nome}
+          </h3>
+        </Link>
 
         <div className="mt-4 rounded-2xl bg-slate-50 p-4">
           <div className="text-sm font-black uppercase text-slate-400 line-through decoration-2">
@@ -89,12 +95,24 @@ export default function OfertaCard({
           </div>
         </div>
 
-        <div className="mt-auto pt-5">
-          <span className="inline-flex rounded-xl bg-brand px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
-            Comprar agora
-          </span>
+        <div className="mt-auto grid grid-cols-1 gap-2 pt-5 sm:grid-cols-2">
+          <Link
+            href={`/produto/${produto.id}`}
+            className="rounded-xl bg-brand px-4 py-3 text-center text-xs font-black uppercase tracking-[0.2em] text-white"
+          >
+            Comprar
+          </Link>
+          <button
+            type="button"
+            onClick={handleAdicionar}
+            className={`rounded-xl px-4 py-3 text-xs font-black uppercase tracking-[0.2em] transition ${
+              adicionado ? 'bg-green-100 text-green-700' : 'border border-primary text-primary hover:bg-red-50'
+            }`}
+          >
+            {adicionado ? 'Adicionado' : 'Adicionar'}
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }

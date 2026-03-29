@@ -1,15 +1,32 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { formatarParcelamento, formatarPreco, getProduto, imagemUrl, whatsappLink } from '@/lib/api'
+import ProductCard from '@/components/ProductCard'
+import ProductPurchaseActions from '@/components/ProductPurchaseActions'
+import {
+  formatarParcelamento,
+  formatarPreco,
+  getProduto,
+  getProdutos,
+  imagemUrl,
+  whatsappLink,
+} from '@/lib/api'
+import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
 
 export async function generateMetadata({ params }) {
   const produto = await getProduto(params.id)
   if (!produto) return { title: 'Produto nao encontrado' }
 
+  const desconto = obterDescontoPromocional(produto)
+  const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
+
   return {
     title: produto.nome,
-    description: produto.descricao || `${produto.nome} - ${formatarPreco(produto.preco)}`,
+    description:
+      produto.descricao ||
+      `${produto.nome} - ${
+        desconto > 0 ? `${formatarPreco(precoPromocional)} a vista` : formatarPreco(produto.preco)
+      }`,
   }
 }
 
@@ -17,109 +34,220 @@ export default async function ProdutoPage({ params }) {
   const produto = await getProduto(params.id)
   if (!produto) notFound()
 
+  const desconto = obterDescontoPromocional(produto)
+  const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
   const foto = imagemUrl(produto.foto_url)
   const temEstoque = produto.estoque > 0
-  const linkWpp = whatsappLink(produto.nome, produto.preco)
+  const linkWpp = whatsappLink(produto.nome, desconto > 0 ? precoPromocional : produto.preco)
   const parcelamento = formatarParcelamento(produto.preco, 10)
+  const [mesmoGrupo, mesmaMarca] = await Promise.all([
+    getProdutos({
+      secao: produto.secao,
+      grupo: produto.grupo,
+      em_estoque: true,
+      com_preco: true,
+      limit: 8,
+      noStore: true,
+    }),
+    getProdutos({
+      marca: produto.marca,
+      secao: produto.secao,
+      em_estoque: true,
+      com_preco: true,
+      limit: 8,
+      noStore: true,
+    }),
+  ])
+
+  const similaresMap = new Map()
+  for (const item of [...(mesmoGrupo?.produtos || []), ...(mesmaMarca?.produtos || [])]) {
+    if (!item?.id || Number(item.id) === Number(produto.id)) continue
+    similaresMap.set(Number(item.id), item)
+  }
+  const similares = Array.from(similaresMap.values()).slice(0, 4)
 
   return (
-    <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500">
-        <Link href="/" className="transition-colors hover:text-primary">
-          Inicio
-        </Link>
-        <span>/</span>
-        <Link href="/produtos" className="transition-colors hover:text-primary">
-          Produtos
-        </Link>
-        <span>/</span>
-        <span className="max-w-xs truncate font-medium text-gray-800">{produto.nome}</span>
-      </nav>
+    <div className="bg-[#f8f9fb]">
+      <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500">
+          <Link href="/" className="transition-colors hover:text-primary">
+            Inicio
+          </Link>
+          <span>/</span>
+          <Link href="/produtos" className="transition-colors hover:text-primary">
+            Produtos
+          </Link>
+          <span>/</span>
+          <span className="max-w-xs truncate font-medium text-gray-800">{produto.nome}</span>
+        </nav>
 
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-16">
-        <div className="relative aspect-square overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 shadow-sm">
-          {foto ? (
-            <Image
-              src={foto}
-              alt={produto.nome}
-              fill
-              unoptimized
-              className="object-contain p-6"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-          ) : (
-            <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-brand text-white/70">
-              <svg className="h-20 w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1}
-                  d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] xl:gap-12">
+          <div className="rounded-[32px] border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+            <div className="relative aspect-square overflow-hidden rounded-[28px] border border-gray-100 bg-gradient-to-br from-white to-gray-50">
+              {desconto > 0 && (
+                <div className="absolute left-4 top-4 z-10 rounded-2xl bg-primary px-4 py-2 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg">
+                  {desconto}% OFF online
+                </div>
+              )}
+              {foto ? (
+                <Image
+                  src={foto}
+                  alt={produto.nome}
+                  fill
+                  unoptimized
+                  className="object-contain p-6 sm:p-8"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
                 />
-              </svg>
-              <span className="text-sm font-bold uppercase tracking-[0.25em]">Foto nao disponivel</span>
-            </div>
-          )}
-        </div>
-
-        <div className="flex flex-col">
-          {produto.marca && (
-            <span className="mb-2 text-sm font-black uppercase tracking-[0.24em] text-primary">{produto.marca}</span>
-          )}
-
-          <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl">{produto.nome}</h1>
-
-          {produto.descricao && (
-            <p className="mb-6 border-l-4 border-primary/30 pl-4 leading-relaxed text-gray-600">{produto.descricao}</p>
-          )}
-
-          <div className="mb-6 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-            <div className="mb-1 text-sm text-gray-500">Preco de venda</div>
-            <div className="text-4xl font-extrabold text-gray-900">{formatarPreco(produto.preco)}</div>
-            <div className="mt-3 inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-black uppercase tracking-wide text-white">
-              ou {parcelamento} sem juros
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-brand text-white/70">
+                  <svg className="h-20 w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                  <span className="text-sm font-bold uppercase tracking-[0.25em]">Foto nao disponivel</span>
+                </div>
+              )}
             </div>
           </div>
 
-          <div className="mb-8 flex items-center gap-3">
-            <div className={`h-3 w-3 rounded-full ${temEstoque ? 'bg-green-500' : 'bg-red-400'}`} />
-            <span className={`text-sm font-semibold ${temEstoque ? 'text-green-700' : 'text-red-600'}`}>
-              {temEstoque
-                ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponiveis`
-                : 'Produto temporariamente indisponivel'}
-            </span>
-          </div>
+          <div className="flex flex-col gap-5">
+            <div className="rounded-[32px] border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+              <div className="flex flex-wrap items-center gap-3">
+                {produto.marca && (
+                  <span className="rounded-full bg-red-50 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-primary">
+                    {produto.marca}
+                  </span>
+                )}
+                {produto.secao ? (
+                  <span className="rounded-full bg-slate-100 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-slate-700">
+                    Secao {produto.secao}
+                  </span>
+                ) : null}
+                {desconto > 0 ? (
+                  <span className="rounded-full bg-emerald-50 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-700">
+                    Oferta valida para compra online
+                  </span>
+                ) : null}
+              </div>
 
-          <div className="mt-auto flex flex-col gap-3 sm:flex-row">
-            {temEstoque && (
-              <a
-                href={linkWpp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-1 items-center justify-center gap-3 rounded-2xl bg-green-500 px-6 py-4 text-base font-black text-white shadow-md transition-all hover:bg-green-600 active:scale-95"
-              >
-                <svg className="h-5 w-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
-                Pedir pelo WhatsApp
-              </a>
-            )}
+              <h1 className="mt-5 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl xl:text-[2.7rem]">
+                {produto.nome}
+              </h1>
 
-            <Link
-              href="/produtos"
-              className="flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 px-6 py-4 text-sm font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50"
-            >
-              Voltar ao catalogo
-            </Link>
-          </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                {[
+                  temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
+                  'Compra rapida pelo WhatsApp',
+                  'Parcelamento em 10x no valor cheio',
+                ].map((item) => (
+                  <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                    {item}
+                  </div>
+                ))}
+              </div>
 
-          <div className="mt-6 border-t border-gray-100 pt-5">
-            <p className="text-xs text-gray-400">
-              Codigo interno: <span className="font-mono">{produto.id}</span>
-            </p>
+              {produto.descricao && (
+                <p className="mt-6 border-l-4 border-primary/30 pl-4 leading-relaxed text-gray-600">{produto.descricao}</p>
+              )}
+
+              <div className="mt-7 rounded-[28px] border border-red-100 bg-gradient-to-br from-white via-white to-red-50 p-6 shadow-sm">
+                <div className="mb-1 text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+                  Condicao comercial
+                </div>
+                {desconto > 0 ? (
+                  <>
+                    <div className="text-sm font-black uppercase tracking-[0.18em] text-gray-400 line-through">
+                      De: {formatarPreco(produto.preco)}
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-end gap-3">
+                      <span className="text-xl font-black text-primary">R$</span>
+                      <span className="text-5xl font-black leading-none text-gray-900">
+                        {formatarPreco(precoPromocional).replace('R$', '').trim()}
+                      </span>
+                      <span className="pb-2 text-sm font-black uppercase tracking-[0.18em] text-primary">
+                        a vista
+                      </span>
+                    </div>
+                    <div className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
+                      Desconto aplicado tambem nesta pagina
+                    </div>
+                  </>
+                ) : (
+                  <div className="mt-2 text-5xl font-black leading-none text-gray-900">{formatarPreco(produto.preco)}</div>
+                )}
+                <div className="mt-4 text-base font-semibold text-slate-700">
+                  ou {parcelamento} sem juros no valor cheio
+                </div>
+              </div>
+
+              <div className="mt-6 flex items-center gap-3">
+                <div className={`h-3 w-3 rounded-full ${temEstoque ? 'bg-green-500' : 'bg-red-400'}`} />
+                <span className={`text-sm font-semibold ${temEstoque ? 'text-green-700' : 'text-red-600'}`}>
+                  {temEstoque
+                    ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponiveis`
+                    : 'Produto temporariamente indisponivel'}
+                </span>
+              </div>
+
+              <div className="mt-8">
+                {temEstoque && (
+                  <ProductPurchaseActions
+                    produto={produto}
+                    comprarHref={linkWpp}
+                    comprarLabel="Comprar"
+                    fullWidth
+                  />
+                )}
+
+                <div className="mt-3">
+                  <Link
+                    href="/produtos"
+                    className="flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 px-6 py-4 text-sm font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50"
+                  >
+                    Voltar ao catalogo
+                  </Link>
+                </div>
+              </div>
+
+              <div className="mt-6 border-t border-gray-100 pt-5 text-xs text-gray-400">
+                Codigo interno: <span className="font-mono">{produto.id}</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <section className="mt-12 rounded-[32px] border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">
+                Sugestao de compra
+              </div>
+              <h2 className="mt-2 text-2xl font-black uppercase text-gray-900 sm:text-3xl">
+                Outros produtos semelhantes
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Selecionamos itens do mesmo grupo e da mesma marca para facilitar a continuacao da compra.
+              </p>
+            </div>
+          </div>
+
+          {similares.length ? (
+            <div className="mt-6 grid grid-cols-2 gap-4 xl:grid-cols-4">
+              {similares.map((item) => (
+                <ProductCard key={`similar-${item.id}`} produto={item} />
+              ))}
+            </div>
+          ) : (
+            <div className="mt-6 rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center text-sm font-semibold text-slate-500">
+              Ainda nao encontramos produtos semelhantes para este item.
+            </div>
+          )}
+        </section>
       </div>
     </div>
   )

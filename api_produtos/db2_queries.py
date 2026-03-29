@@ -99,6 +99,7 @@ LEFT JOIN (
 _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
 _FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
 _FILTRO_SECAO      = " AND COALESCE(p.IDSECAO, 0) = ?"
+_FILTRO_GRUPO      = " AND COALESCE(p.IDGRUPO, 0) = ?"
 _FILTRO_SUBGRUPO   = " AND COALESCE(p.IDSUBGRUPO, 0) = ?"
 _FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, pep.VALPRECO, 0) > 0"
 # Filtro apenas em estoque
@@ -118,7 +119,9 @@ def _build_where_params(
     busca: Optional[str],
     marca: Optional[str],
     secao: Optional[int],
+    grupo: Optional[int],
     subgrupo: Optional[int],
+    subgrupos: Optional[list[int]],
     em_estoque: Optional[bool],
     com_preco: bool,
 ) -> tuple[str, list]:
@@ -141,9 +144,17 @@ def _build_where_params(
         where += _FILTRO_SECAO
         params.append(int(secao))
 
+    if grupo is not None:
+        where += _FILTRO_GRUPO
+        params.append(int(grupo))
+
     if subgrupo is not None:
         where += _FILTRO_SUBGRUPO
         params.append(int(subgrupo))
+    elif subgrupos:
+        marcadores = ",".join(["?"] * len(subgrupos))
+        where += f" AND COALESCE(p.IDSUBGRUPO, 0) IN ({marcadores})"
+        params.extend([int(item) for item in subgrupos])
 
     if com_preco:
         where += _FILTRO_COM_PRECO
@@ -161,7 +172,9 @@ def listar_produtos_db2(
     busca: Optional[str] = None,
     marca: Optional[str] = None,
     secao: Optional[int] = None,
+    grupo: Optional[int] = None,
     subgrupo: Optional[int] = None,
+    subgrupos: Optional[list[int]] = None,
     em_estoque: Optional[bool] = None,
     com_preco: bool = True,
     skip: int = 0,
@@ -187,7 +200,16 @@ def listar_produtos_db2(
       produtos : list[dict] — cada dict tem as chaves:
                  id, nome, descricao, marca, preco, estoque
     """
-    where, params = _build_where_params(busca, marca, secao, subgrupo, em_estoque, com_preco)
+    where, params = _build_where_params(
+        busca,
+        marca,
+        secao,
+        grupo,
+        subgrupo,
+        subgrupos,
+        em_estoque,
+        com_preco,
+    )
 
     cursor = conn.cursor()
 

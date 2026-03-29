@@ -38,17 +38,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="border-b border-gray-100 bg-[#fafafa]">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-gray-500 sm:px-6 lg:px-8">
-          <a href="tel:9532240115" className="text-primary">{telefone}</a>
-          <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
-          <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-gray-500 sm:px-6 lg:px-8">
+          <a href="tel:9532240115" className="text-base text-primary sm:text-lg">{telefone}</a>
+          <span className="hidden text-base sm:inline">Av. Ataide Teive, 5928</span>
+          <span className="hidden text-base lg:inline">Av. Ataide Teive, 4509</span>
         </div>
       </div>
 
-      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-28 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           {logoUrl ? (
-            <div className="relative h-11 w-[170px]">
+            <div className="relative h-16 w-[280px]">
               <Image src={logoUrl} alt="Galpao do Aco" fill unoptimized className="object-contain object-left" />
             </div>
           ) : (
@@ -65,7 +65,7 @@ export default function Header() {
         </Link>
 
         <div className="hidden flex-1 px-8 md:block">
-          <form onSubmit={irParaBusca} className="mx-auto flex max-w-xl items-center gap-2">
+          <form onSubmit={irParaBusca} className="mx-auto flex max-w-2xl items-center gap-2">
             <input
               type="text"
               value={busca}
@@ -89,7 +89,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="tel:9532240115" className="hidden rounded-xl border border-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-primary transition hover:bg-red-50 lg:inline-flex">
+          <a href="tel:9532240115" className="hidden rounded-xl border border-primary px-6 py-4 text-base font-black uppercase tracking-wide text-primary transition hover:bg-red-50 lg:inline-flex">
             {telefone}
           </a>
           <button
@@ -134,6 +134,27 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      <div className="hidden border-t border-gray-200 bg-[#fff7f4] md:block">
+        <div className="mx-auto flex max-w-[1600px] items-center gap-2 overflow-x-auto px-4 py-2 sm:px-6 lg:px-8">
+          <Link
+            href="/#ofertas"
+            className="whitespace-nowrap rounded-full bg-primary px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:bg-red-700"
+          >
+            Ofertas
+          </Link>
+          <Link
+            href="/#saldao"
+            className="whitespace-nowrap rounded-full border border-primary bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-primary transition hover:bg-red-50"
+          >
+            Saldao
+          </Link>
+          <div className="ml-4 h-6 w-px bg-red-200" />
+          <span className="whitespace-nowrap text-xs font-black uppercase tracking-[0.22em] text-slate-500">
+            Ofertas online com estoque real
+          </span>
+        </div>
+      </div>
     </header>
   )
 }
