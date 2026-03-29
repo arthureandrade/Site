@@ -7,12 +7,17 @@ import { CartProvider } from '@/context/CartContext'
 
 export const metadata = {
   title: {
-    default: 'Galpão do Aço — Material de Construção',
-    template: '%s | Galpão do Aço',
+    default: 'Galpao do Aco | Material de Construcao',
+    template: '%s | Galpao do Aco',
   },
   description:
-    'Sua loja de material de construção com os melhores preços. Cimento, ferro, aço e muito mais.',
-  keywords: ['material de construção', 'cimento', 'ferro', 'aço', 'galpão do aço'],
+    'Sua loja de material de construcao com os melhores precos. Cimento, ferro, aco e muito mais.',
+  keywords: ['material de construcao', 'cimento', 'ferro', 'aco', 'galpao do aco'],
+  icons: {
+    icon: '/logo.jpeg',
+    shortcut: '/logo.jpeg',
+    apple: '/logo.jpeg',
+  },
 }
 
 export default function RootLayout({ children }) {
