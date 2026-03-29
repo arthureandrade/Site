@@ -32,6 +32,7 @@ SELECT
     TRIM(p.DESCRCOMPRODUTO)                        AS nome,
     COALESCE(TRIM(pg.SUBDESCRICAO), '')            AS descricao,
     COALESCE(TRIM(p.FABRICANTE), '')               AS marca,
+    COALESCE(p.IDSUBGRUPO, 0)                      AS subgrupo,
     COALESCE(ppd.PRECOVENDA, 0)                    AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
 FROM DBA.PRODUTO p
@@ -67,6 +68,7 @@ LEFT JOIN (
 # Filtro de marca (adicionado dinamicamente)
 _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
 _FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
+_FILTRO_SUBGRUPO   = " AND COALESCE(p.IDSUBGRUPO, 0) = ?"
 _FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, 0) > 0"
 # Filtro apenas em estoque
 _FILTRO_EM_ESTOQUE = " AND COALESCE(est.estoque_total, 0) > 0"
@@ -84,6 +86,7 @@ _PAGINATE = " OFFSET ? ROWS FETCH NEXT ? ROWS ONLY"
 def _build_where_params(
     busca: Optional[str],
     marca: Optional[str],
+    subgrupo: Optional[int],
     em_estoque: Optional[bool],
     com_preco: bool,
 ) -> tuple[str, list]:
@@ -102,6 +105,10 @@ def _build_where_params(
         where += _FILTRO_MARCA
         params.append(f"%{marca}%")
 
+    if subgrupo is not None:
+        where += _FILTRO_SUBGRUPO
+        params.append(int(subgrupo))
+
     if com_preco:
         where += _FILTRO_COM_PRECO
 
@@ -117,6 +124,7 @@ def listar_produtos_db2(
     conn,
     busca: Optional[str] = None,
     marca: Optional[str] = None,
+    subgrupo: Optional[int] = None,
     em_estoque: Optional[bool] = None,
     com_preco: bool = True,
     skip: int = 0,
@@ -142,7 +150,7 @@ def listar_produtos_db2(
       produtos : list[dict] — cada dict tem as chaves:
                  id, nome, descricao, marca, preco, estoque
     """
-    where, params = _build_where_params(busca, marca, em_estoque, com_preco)
+    where, params = _build_where_params(busca, marca, subgrupo, em_estoque, com_preco)
 
     cursor = conn.cursor()
 

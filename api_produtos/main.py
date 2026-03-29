@@ -324,6 +324,7 @@ def listar_produtos_destaque(
 def listar_produtos(
     busca: Optional[str] = Query(None, description="Buscar por nome ou descricao do produto"),
     marca: Optional[str] = Query(None, description="Filtrar por fabricante/marca (busca parcial)"),
+    subgrupo: Optional[int] = Query(None, description="Filtrar por ID do subgrupo"),
     em_estoque: Optional[bool] = Query(None, description="true = só com estoque | false = só sem estoque"),
     com_preco: bool = Query(True, description="true = apenas produtos com preco"),
     skip: int = Query(0, ge=0, description="Paginação: registros a pular"),
@@ -345,6 +346,7 @@ def listar_produtos(
                 conn,
                 busca=busca,
                 marca=marca,
+                subgrupo=subgrupo,
                 em_estoque=em_estoque,
                 com_preco=com_preco,
                 skip=skip,

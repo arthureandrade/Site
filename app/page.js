@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
 import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
-import { SECAO_FERRO_ACO } from '@/lib/catalogo'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -52,10 +51,10 @@ function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadge
 }
 
 export default async function HomePage() {
-  const [config, destaqueData, obraData, estruturasData, ferragensData] = await Promise.all([
+  const [config, destaqueData, subgrupo24Data, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutos({ secao: SECAO_FERRO_ACO, em_estoque: true, com_preco: false, limit: 10 }),
+    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])
@@ -64,7 +63,7 @@ export default async function HomePage() {
   const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
   const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
-  const obra = escolherProdutos(config, 'obra', obraData.produtos || [])
+  const destaqueSubgrupo = escolherProdutos(config, 'obra', subgrupo24Data.produtos || [])
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
   const heroImage = config?.hero_image_url ? `${API_URL}${config.hero_image_url}` : null
@@ -182,11 +181,11 @@ export default async function HomePage() {
       />
 
       <SectionShelf
-        title="Ferro e Aco"
-        subtitle="Produtos da secao 6 com venda consultiva pelo WhatsApp."
-        href="/produtos?categoria=ferro_aco"
-        produtos={obra}
-        badge="Obra"
+        title="Destaque"
+        subtitle="Produtos do subgrupo 24 para empurrar venda e visibilidade na home."
+        href="/produtos?subgrupo=24"
+        produtos={destaqueSubgrupo}
+        badge="Destaque"
       />
 
       <SectionShelf

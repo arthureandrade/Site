@@ -8,7 +8,18 @@ import { API_URL } from '@/lib/api'
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [logoUrl, setLogoUrl] = useState(null)
+  const [busca, setBusca] = useState('')
   const telefone = '(95) 3224-0115'
+
+  function irParaBusca(e) {
+    e.preventDefault()
+    const termo = busca.trim()
+    if (!termo) {
+      window.location.assign('/produtos')
+      return
+    }
+    window.location.assign(`/produtos?busca=${encodeURIComponent(termo)}`)
+  }
 
   useEffect(() => {
     let ativo = true
@@ -53,19 +64,25 @@ export default function Header() {
           )}
         </Link>
 
-        <nav className="hidden items-center gap-8 text-sm font-black uppercase tracking-wide text-gray-700 md:flex">
-          <Link href="/" className="transition-colors hover:text-primary">
-            Inicio
-          </Link>
-          <Link href="/produtos" className="transition-colors hover:text-primary">
-            Produtos
-          </Link>
-          <Link href="/produtos?categoria=ferro_aco" className="transition-colors hover:text-primary">
-            Ferro e aco
-          </Link>
-          <Link href="/produtos?busca=ferragem" className="transition-colors hover:text-primary">
-            Ferragens
-          </Link>
+        <div className="hidden flex-1 px-8 md:block">
+          <form onSubmit={irParaBusca} className="mx-auto flex max-w-xl items-center gap-2">
+            <input
+              type="text"
+              value={busca}
+              onChange={(e) => setBusca(e.target.value)}
+              placeholder="Buscar produtos e ir para compras..."
+              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
+            />
+            <button
+              type="submit"
+              className="rounded-xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700"
+            >
+              Buscar
+            </button>
+          </form>
+        </div>
+
+        <nav className="hidden items-center gap-5 text-sm font-black uppercase tracking-wide text-gray-700 md:flex">
           <Link href="/vendedor" className="transition-colors hover:text-primary">
             Area do vendedor
           </Link>
@@ -75,10 +92,6 @@ export default function Header() {
           <a href="tel:9532240115" className="hidden rounded-xl border border-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-primary transition hover:bg-red-50 lg:inline-flex">
             {telefone}
           </a>
-          <Link href="/produtos" className="hidden rounded-xl bg-primary px-5 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700 sm:inline-flex">
-            Comprar agora
-          </Link>
-
           <button
             className="rounded-xl border border-gray-200 p-2.5 text-gray-700 md:hidden"
             onClick={() => setMenuOpen((value) => !value)}
@@ -99,19 +112,22 @@ export default function Header() {
 
       {menuOpen && (
         <div className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
+          <form onSubmit={irParaBusca} className="mb-4 flex items-center gap-2">
+            <input
+              type="text"
+              value={busca}
+              onChange={(e) => setBusca(e.target.value)}
+              placeholder="Buscar produtos..."
+              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
+            />
+            <button
+              type="submit"
+              className="rounded-xl bg-primary px-4 py-3 text-xs font-black uppercase tracking-wide text-white transition hover:bg-red-700"
+            >
+              Buscar
+            </button>
+          </form>
           <div className="flex flex-col gap-3 text-sm font-black uppercase tracking-wide text-gray-700">
-            <Link href="/" onClick={() => setMenuOpen(false)}>
-              Inicio
-            </Link>
-            <Link href="/produtos" onClick={() => setMenuOpen(false)}>
-              Produtos
-            </Link>
-            <Link href="/produtos?categoria=ferro_aco" onClick={() => setMenuOpen(false)}>
-              Ferro e aco
-            </Link>
-            <Link href="/produtos?busca=ferragem" onClick={() => setMenuOpen(false)}>
-              Ferragens
-            </Link>
             <Link href="/vendedor" onClick={() => setMenuOpen(false)}>
               Area do vendedor
             </Link>

@@ -64,7 +64,7 @@ function montarMarcasCatalogo(produtos) {
     .sort((a, b) => a.marca.localeCompare(b.marca, 'pt-BR'))
 }
 
-export default function ProdutosCliente({ initialBusca = '', initialMarca = '', initialCategoria = '' }) {
+export default function ProdutosCliente({ initialBusca = '', initialMarca = '', initialCategoria = '', initialSubgrupo = '' }) {
   const [produtos, setProdutos] = useState([])
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -73,6 +73,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   const [busca, setBusca] = useState(initialBusca)
   const [marcaFiltro, setMarcaFiltro] = useState(initialMarca)
   const [categoriaEspecial] = useState(initialCategoria)
+  const [subgrupoEspecial] = useState(initialSubgrupo)
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
   const [emEstoque, setEmEstoque] = useState(true)
@@ -115,6 +116,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
         const qs = new URLSearchParams({ skip: p * LIMIT, limit: LIMIT, com_preco: 'true' })
         if (busca_) qs.set('busca', busca_)
         if (marca_) qs.set('marca', marca_)
+        if (subgrupoEspecial) qs.set('subgrupo', String(subgrupoEspecial))
         if (est != null) qs.set('em_estoque', est)
 
         const res = await fetch(`${apiUrl}/produtos?${qs}`)
@@ -129,13 +131,14 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
     } finally {
       setLoading(false)
     }
-  }, [apiUrl, categoriaEspecial])
+  }, [apiUrl, categoriaEspecial, subgrupoEspecial])
 
   const fetchMarcas = useCallback(async () => {
     setLoadingMarcas(true)
     try {
       const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true' })
       if (categoriaEspecial === 'ferro_aco') qs.set('secao', String(SECAO_FERRO_ACO))
+      if (subgrupoEspecial && categoriaEspecial !== 'ferro_aco') qs.set('subgrupo', String(subgrupoEspecial))
       const res = await fetch(`${apiUrl}/produtos?${qs}`)
       if (!res.ok) throw new Error()
       const data = await res.json()
@@ -148,7 +151,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
     } finally {
       setLoadingMarcas(false)
     }
-  }, [apiUrl, categoriaEspecial])
+  }, [apiUrl, categoriaEspecial, subgrupoEspecial])
 
   useEffect(() => {
     fetchProdutos(0, initialBusca, initialMarca, true)
@@ -324,7 +327,9 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
                 <p className="text-sm text-gray-500 mt-1">
                   {categoriaEspecial === 'ferro_aco'
                     ? 'Linha Ferro e Aco da secao 6. Os valores devem ser consultados pelo WhatsApp.'
-                    : 'Exibindo apenas produtos com preco. Use a lateral para navegar por marcas e categorias.'}
+                    : subgrupoEspecial
+                      ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
+                      : 'Exibindo apenas produtos com preco. Use a lateral para navegar por marcas e categorias.'}
                 </p>
               </div>
 

@@ -9,9 +9,12 @@ export default function ProdutosPage({ searchParams }) {
   const initialBusca = searchParams?.busca || ''
   const initialMarca = searchParams?.marca || ''
   const initialCategoria = searchParams?.categoria || ''
+  const initialSubgrupo = searchParams?.subgrupo || ''
   const descricao = initialCategoria === 'ferro_aco'
     ? 'Ferro e Aco da secao 6. Valores sob consulta no WhatsApp.'
-    : 'Precos e estoque atualizados em tempo real direto do nosso sistema.'
+    : initialSubgrupo
+      ? `Produtos filtrados pelo subgrupo ${initialSubgrupo}.`
+      : 'Precos e estoque atualizados em tempo real direto do nosso sistema.'
 
   return (
     <>
@@ -27,6 +30,7 @@ export default function ProdutosPage({ searchParams }) {
         initialBusca={initialBusca}
         initialMarca={initialMarca}
         initialCategoria={initialCategoria}
+        initialSubgrupo={initialSubgrupo}
       />
     </>
   )
