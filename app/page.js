@@ -24,6 +24,15 @@ function escolherProdutos(config, sectionKey, fallback) {
   return selecionados.length > 0 ? selecionados : fallback
 }
 
+function deduplicarProdutos(produtos) {
+  const mapa = new Map()
+  for (const produto of produtos || []) {
+    if (!produto?.id) continue
+    if (!mapa.has(produto.id)) mapa.set(produto.id, produto)
+  }
+  return Array.from(mapa.values())
+}
+
 function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadgeLabel = '', emptyMessage = '' }) {
   return (
     <section className="bg-white py-12">
@@ -57,10 +66,11 @@ function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadge
 }
 
 export default async function HomePage() {
-  const [config, destaqueData, subgrupo24Data, estruturasData, ferragensData] = await Promise.all([
+  const [config, destaqueData, subgrupo24CatalogoData, subgrupo24FallbackData, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
     getProdutosCatalogoPorSubgrupo(24, { em_estoque: true, com_preco: false, limit: 24 }),
+    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])
@@ -69,7 +79,10 @@ export default async function HomePage() {
   const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
   const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
-  const destaqueSubgrupo = subgrupo24Data.produtos || []
+  const destaqueSubgrupo = deduplicarProdutos([
+    ...(subgrupo24CatalogoData?.produtos || []),
+    ...(subgrupo24FallbackData?.produtos || []),
+  ]).filter((produto) => Number(produto.subgrupo || 0) === 24)
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
