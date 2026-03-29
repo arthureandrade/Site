@@ -10,6 +10,7 @@ export default function Header() {
   const [logoUrl, setLogoUrl] = useState('/logo.jpeg')
   const [busca, setBusca] = useState('')
   const telefone = '(95) 3224-0115'
+  const whatsappAco = `https://wa.me/559532240115?text=${encodeURIComponent('Ola! Quero comprar aco e preciso de atendimento comercial.')}`
 
   function irParaBusca(e) {
     e.preventDefault()
@@ -90,8 +91,8 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/produtos?categoria=ferro_aco"
-            className="hidden items-center justify-center rounded-2xl bg-gradient-to-r from-primary via-red-600 to-red-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_16px_30px_rgba(185,28,28,0.28)] transition hover:scale-[1.02] hover:shadow-[0_20px_36px_rgba(185,28,28,0.34)] lg:inline-flex"
+            href={whatsappAco}
+            className="hidden items-center justify-center rounded-2xl bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_16px_30px_rgba(22,163,74,0.28)] transition hover:scale-[1.02] hover:shadow-[0_20px_36px_rgba(22,163,74,0.34)] lg:inline-flex"
           >
             Comprar Aco
           </Link>
@@ -113,23 +114,26 @@ export default function Header() {
         </div>
       </div>
 
+      <div className="border-t border-gray-100 bg-white px-4 py-3 md:hidden">
+        <form onSubmit={irParaBusca} className="flex items-center gap-2">
+          <input
+            type="text"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
+            placeholder="Buscar produtos..."
+            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
+          />
+          <button
+            type="submit"
+            className="rounded-xl bg-primary px-4 py-3 text-xs font-black uppercase tracking-wide text-white transition hover:bg-red-700"
+          >
+            Buscar
+          </button>
+        </form>
+      </div>
+
       {menuOpen && (
         <div className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
-          <form onSubmit={irParaBusca} className="mb-4 flex items-center gap-2">
-            <input
-              type="text"
-              value={busca}
-              onChange={(e) => setBusca(e.target.value)}
-              placeholder="Buscar produtos..."
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
-            />
-            <button
-              type="submit"
-              className="rounded-xl bg-primary px-4 py-3 text-xs font-black uppercase tracking-wide text-white transition hover:bg-red-700"
-            >
-              Buscar
-            </button>
-          </form>
           <div className="flex flex-col gap-3 text-sm font-black uppercase tracking-wide text-gray-700">
             <Link href="/vendedor" onClick={() => setMenuOpen(false)}>
               Area do vendedor
@@ -140,6 +144,18 @@ export default function Header() {
 
       <div className="hidden border-t border-gray-200 bg-[#fff7f4] md:block">
         <div className="mx-auto flex max-w-[1600px] items-center gap-2 overflow-x-auto px-4 py-2 sm:px-6 lg:px-8">
+          <Link
+            href="/produtos"
+            className="whitespace-nowrap rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-slate-700 transition hover:border-primary hover:text-primary"
+          >
+            Catalogo
+          </Link>
+          <Link
+            href="/produtos?categoria=ferro_aco"
+            className="whitespace-nowrap rounded-full border border-green-600 bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-green-700 transition hover:bg-green-50"
+          >
+            Catalogo Aco
+          </Link>
           <Link
             href="/#ofertas"
             className="whitespace-nowrap rounded-full bg-primary px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:bg-red-700"
@@ -152,7 +168,7 @@ export default function Header() {
           >
             Saldao
           </Link>
-          <div className="ml-4 h-6 w-px bg-red-200" />
+          <div className="ml-2 h-6 w-px bg-red-200" />
           <span className="whitespace-nowrap text-xs font-black uppercase tracking-[0.22em] text-slate-500">
             Ofertas online com estoque real
           </span>

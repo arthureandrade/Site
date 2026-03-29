@@ -9,7 +9,8 @@ import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/oferta
 
 export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
   const foto = imagemUrlProduto(produto)
-  const temEstoque = produto.estoque > 0
+  const ocultarEstoque = ocultarPreco
+  const temEstoque = Number(produto.estoque || 0) > 0
   const desconto = obterDescontoPromocional(produto)
   const precoOriginal = Number(produto.preco || 0)
   const precoPromocional = calcularPrecoPromocional(precoOriginal, desconto)
@@ -54,10 +55,12 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
             </div>
           )}
 
-          <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+        <div className="absolute left-3 top-3 flex flex-wrap gap-2">
+          {!ocultarEstoque && (
             <span className={temEstoque ? 'badge-green shadow' : 'badge-red shadow'}>
               {temEstoque ? 'Pronta entrega' : 'Sob consulta'}
             </span>
+          )}
             {desconto > 0 && (
               <span className="rounded-full bg-primary px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-white shadow">
                 {desconto}% OFF online
@@ -124,7 +127,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
             <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Consultar preco</span>
           )}
 
-          {temEstoque && (
+          {!ocultarEstoque && temEstoque && (
             <span className="mt-2 block text-[11px] text-gray-500">
               {produto.estoque >= 1000
                 ? `${(produto.estoque / 1000).toFixed(0)}k un. disponiveis`
@@ -135,11 +138,11 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
 
         <div className="mt-auto flex items-center justify-between gap-2 border-t border-gray-100 pt-3">
           <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2">
-            {ocultarPreco ? (
-              <a
-                href={linkWhatsApp}
-                target="_blank"
-                rel="noopener noreferrer"
+          {ocultarPreco ? (
+            <a
+              href={linkWhatsApp}
+              target="_blank"
+              rel="noopener noreferrer"
                 className="rounded-xl bg-green-500 px-3 py-2 text-center text-xs font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-green-600"
               >
                 Comprar

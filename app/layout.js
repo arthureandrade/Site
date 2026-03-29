@@ -2,6 +2,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CartIcon from '@/components/CartIcon'
+import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { CartProvider } from '@/context/CartContext'
 
 export const metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <WhatsAppFloat />
           <CartIcon />
         </CartProvider>
       </body>

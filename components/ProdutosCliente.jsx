@@ -70,6 +70,12 @@ function calcularScoreComercial(produto) {
   return (preco + estoque) / 2
 }
 
+function calcularScoreFerroAco(produto) {
+  const nome = normalizarTexto(produto?.nome)
+  if (nome.startsWith('perfil')) return 1000000 + calcularScoreComercial(produto)
+  return calcularScoreComercial(produto)
+}
+
 function buscaEhCodigo(busca) {
   return /^\d+$/.test(String(busca || '').trim())
 }
@@ -138,7 +144,7 @@ export default function ProdutosCliente({
         }
 
         setTodosProdutos(
-          [...filtrados].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
+          [...filtrados].sort((a, b) => calcularScoreFerroAco(b) - calcularScoreFerroAco(a))
         )
       } else {
         const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'true' })
@@ -439,7 +445,7 @@ export default function ProdutosCliente({
                 <h3 className="font-display text-3xl uppercase text-gray-900">Catalogo de Produtos</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {categoriaEspecial === 'ferro_aco'
-                    ? 'Linha Ferro e Aco da secao 6. Valores sob consulta no WhatsApp.'
+                    ? 'Catalogo de aco da secao 6. Exibicao sem preco e sem estoque, apenas para mostrar o mix disponivel.'
                     : secaoEspecial && subgrupoEspecial
                       ? `Exibindo produtos da secao ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
                       : subgrupoEspecial
