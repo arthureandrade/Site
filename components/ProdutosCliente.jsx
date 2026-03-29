@@ -194,7 +194,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   const totalPages = Math.ceil(total / LIMIT)
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
         <aside>
           <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">

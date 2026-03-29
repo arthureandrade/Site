@@ -4,7 +4,7 @@ import OfertaCard from '@/components/OfertaCard'
 export default function VitrineSubgrupo24({ produtos = [], origem = '' }) {
   return (
     <section className="bg-gradient-to-b from-white via-[#fff7f4] to-white py-8 lg:py-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="rounded-[30px] border border-red-200 bg-white p-4 shadow-[0_16px_50px_rgba(15,23,42,0.06)] lg:p-6">
           <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div>

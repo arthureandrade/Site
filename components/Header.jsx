@@ -38,14 +38,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="border-b border-gray-100 bg-[#fafafa]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-gray-500 sm:px-6">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-gray-500 sm:px-6 lg:px-8">
           <a href="tel:9532240115" className="text-primary">{telefone}</a>
           <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
           <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
         </div>
       </div>
 
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           {logoUrl ? (
             <div className="relative h-11 w-[170px]">

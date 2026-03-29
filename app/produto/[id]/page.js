@@ -23,7 +23,7 @@ export default async function ProdutoPage({ params }) {
   const parcelamento = formatarParcelamento(produto.preco, 10)
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
       <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500">
         <Link href="/" className="transition-colors hover:text-primary">
           Inicio

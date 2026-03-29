@@ -50,7 +50,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="border-b border-red-700 bg-primary py-2 text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6 lg:px-8">
           <span>{TELEFONE}</span>
           <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
           <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
@@ -66,7 +66,7 @@ export default async function HomePage() {
       <VitrineSubgrupo24 produtos={produtosSubgrupo24} origem={origemSubgrupo24} />
 
       <section className="bg-white py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">Categorias principais</div>
             <h2 className="mt-2 text-3xl font-black uppercase text-gray-900">Compre por linha de produto</h2>
@@ -91,7 +91,7 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-[#fff7f2] py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
           <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <div className="text-[11px] font-black uppercase tracking-[0.28em] text-[#ff5a0a]">Saldão</div>
@@ -113,7 +113,7 @@ export default async function HomePage() {
       </section>
 
       <section className="bg-[#f6f7f8] py-14">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-[1600px] gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rapido para obras, oficinas e serralherias.' },
             { titulo: 'Grande estoque disponivel', texto: 'Produtos ativos com consulta de preco e estoque integrada ao ERP.' },

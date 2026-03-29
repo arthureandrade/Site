@@ -19,7 +19,7 @@ export default function OfertaCard({
   const foto = imagemUrl(produto?.foto_url)
   const precoOriginal = Number(produto?.preco || 0)
   const precoComDesconto = calcularPrecoComDesconto(precoOriginal, desconto)
-  const parcelamento = precoComDesconto > 0 ? formatarParcelamento(precoComDesconto, 10) : ''
+  const parcelamento = precoOriginal > 0 ? formatarParcelamento(precoOriginal, 10) : ''
 
   return (
     <Link
@@ -77,12 +77,15 @@ export default function OfertaCard({
             <span className="text-4xl font-black leading-none text-slate-900">
               {formatarPreco(precoComDesconto).replace('R$', '').trim()}
             </span>
+            <span className="pb-1 text-xs font-black uppercase tracking-[0.18em] text-primary">
+              a vista
+            </span>
           </div>
           <div className="mt-2 text-sm font-bold text-primary">
             Oferta valida para compras online
           </div>
           <div className="mt-2 text-sm font-semibold text-slate-700">
-            ou {parcelamento} sem juros
+            ou {parcelamento} sem juros no valor cheio
           </div>
         </div>
 
