@@ -8,7 +8,7 @@ import {
   formatarPreco,
   getProduto,
   getProdutos,
-  imagemUrl,
+  imagemUrlProduto,
   whatsappLink,
 } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
@@ -37,7 +37,7 @@ export default async function ProdutoPage({ params }) {
   const ocultarComercial = Number(produto.secao || 0) === 6
   const desconto = obterDescontoPromocional(produto)
   const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
-  const foto = imagemUrl(produto.foto_url)
+  const foto = imagemUrlProduto(produto)
   const temEstoque = produto.estoque > 0
   const linkWpp = whatsappLink(produto.nome, desconto > 0 ? precoPromocional : produto.preco)
   const parcelamento = formatarParcelamento(produto.preco, 10)

@@ -4,11 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
-import { formatarParcelamento, formatarPreco, imagemUrl, whatsappLink } from '@/lib/api'
+import { formatarParcelamento, formatarPreco, imagemUrlProduto, whatsappLink } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
 
 export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
-  const foto = imagemUrl(produto.foto_url)
+  const foto = imagemUrlProduto(produto)
   const temEstoque = produto.estoque > 0
   const desconto = obterDescontoPromocional(produto)
   const precoOriginal = Number(produto.preco || 0)

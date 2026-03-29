@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
-import { formatarParcelamento, formatarPreco, imagemUrl } from '@/lib/api'
+import { formatarParcelamento, formatarPreco, imagemUrlProduto } from '@/lib/api'
 import { calcularPrecoPromocional } from '@/lib/ofertas'
 
 export default function OfertaCard({
@@ -13,7 +13,7 @@ export default function OfertaCard({
   badge = 'Oferta online',
   destaque = false,
 }) {
-  const foto = imagemUrl(produto?.foto_url)
+  const foto = imagemUrlProduto(produto)
   const precoOriginal = Number(produto?.preco || 0)
   const precoComDesconto = calcularPrecoPromocional(precoOriginal, desconto)
   const parcelamento = precoOriginal > 0 ? formatarParcelamento(precoOriginal, 10) : ''
