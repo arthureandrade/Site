@@ -3,15 +3,15 @@ import OfertaCard from '@/components/OfertaCard'
 
 export default function VitrineSubgrupo24({ produtos = [], origem = '' }) {
   return (
-    <section className="bg-gradient-to-b from-white via-[#fff4ec] to-white py-8 lg:py-10">
+    <section className="bg-gradient-to-b from-white via-[#fff7f4] to-white py-8 lg:py-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="rounded-[30px] border border-[#ff5a0a] bg-white p-4 shadow-[0_16px_50px_rgba(255,90,10,0.08)] lg:p-6">
+        <div className="rounded-[30px] border border-red-200 bg-white p-4 shadow-[0_16px_50px_rgba(15,23,42,0.06)] lg:p-6">
           <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
             <div>
-              <div className="inline-flex rounded-md bg-[#16246f] px-4 py-2 text-sm font-black uppercase tracking-wide text-white">
+              <div className="inline-flex rounded-md bg-brand px-4 py-2 text-sm font-black uppercase tracking-wide text-white">
                 Ofertas em destaque
               </div>
-              <h2 className="mt-4 text-3xl font-black uppercase leading-tight text-[#13214e] sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-black uppercase leading-tight text-brand sm:text-4xl">
                 Aproveite as melhores oportunidades online da semana
               </h2>
               <p className="mt-3 max-w-3xl text-base text-slate-600">
@@ -20,7 +20,7 @@ export default function VitrineSubgrupo24({ produtos = [], origem = '' }) {
             </div>
             <Link
               href="/produtos?subgrupo=24"
-              className="inline-flex rounded-2xl border border-[#16246f] px-5 py-3 text-sm font-black uppercase tracking-wide text-[#16246f] transition hover:border-[#ff5a0a] hover:text-[#ff5a0a]"
+              className="inline-flex rounded-2xl border border-brand px-5 py-3 text-sm font-black uppercase tracking-wide text-brand transition hover:border-primary hover:text-primary"
             >
               Ver todos os destaques
             </Link>
@@ -28,7 +28,7 @@ export default function VitrineSubgrupo24({ produtos = [], origem = '' }) {
 
           {produtos.length ? (
             <>
-              <div className="mb-5 rounded-2xl bg-[#fff1e8] px-4 py-3 text-sm font-semibold text-[#ff5a0a]">
+              <div className="mb-5 rounded-2xl bg-red-50 px-4 py-3 text-sm font-semibold text-primary">
                 {produtos.length} oferta{produtos.length !== 1 ? 's' : ''} em destaque carregada
                 {produtos.length !== 1 ? 's' : ''} para compra online.
               </div>
