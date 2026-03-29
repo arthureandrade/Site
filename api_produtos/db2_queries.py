@@ -34,7 +34,7 @@ SELECT
     COALESCE(TRIM(p.FABRICANTE), '')               AS marca,
     COALESCE(p.IDSECAO, 0)                         AS secao,
     COALESCE(p.IDSUBGRUPO, 0)                      AS subgrupo,
-    COALESCE(ppd.PRECOVENDA, 0)                    AS preco,
+    COALESCE(ppd.PRECOVENDA, pep.VALPRECO, 0)      AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
 FROM DBA.PRODUTO p
 LEFT JOIN (
@@ -68,6 +68,23 @@ LEFT JOIN (
     WHERE a.TIPOPRECO = 'V'
 ) ppd
     ON ppd.IDPRODUTO = p.IDPRODUTO
+LEFT JOIN (
+    SELECT base.IDPRODUTO, base.VALPRECO
+    FROM (
+        SELECT
+            pep.IDPRODUTO,
+            pep.VALPRECO,
+            ROW_NUMBER() OVER (
+                PARTITION BY pep.IDPRODUTO
+                ORDER BY pep.DTALTERACAOPRECO DESC, pep.IDEMPRESA DESC
+            ) AS rn
+        FROM DBA.PRODUTO_EVOLUCAO_PRECOS pep
+        WHERE pep.TIPOPRECO = 'V'
+          AND COALESCE(pep.VALPRECO, 0) > 0
+    ) base
+    WHERE base.rn = 1
+) pep
+    ON pep.IDPRODUTO = p.IDPRODUTO
 -- Estoque total (soma de todas as empresas e locais)
 LEFT JOIN (
     SELECT IDPRODUTO, SUM(QTDATUALESTOQUE) AS estoque_total
@@ -82,7 +99,7 @@ _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
 _FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
 _FILTRO_SECAO      = " AND COALESCE(p.IDSECAO, 0) = ?"
 _FILTRO_SUBGRUPO   = " AND COALESCE(p.IDSUBGRUPO, 0) = ?"
-_FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, 0) > 0"
+_FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, pep.VALPRECO, 0) > 0"
 # Filtro apenas em estoque
 _FILTRO_EM_ESTOQUE = " AND COALESCE(est.estoque_total, 0) > 0"
 # Filtro sem estoque
