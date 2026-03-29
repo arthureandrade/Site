@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
-import { getHomeConfig } from '@/lib/api'
+import { getHomeConfig, getProdutos, getProdutosCatalogoPorSubgrupo } from '@/lib/api'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -20,8 +20,26 @@ const CATEGORIAS = [
 ]
 
 export default async function HomePage() {
-  const config = await getHomeConfig()
+  const [config, subgrupoDireto, subgrupoGenerico] = await Promise.all([
+    getHomeConfig(),
+    getProdutosCatalogoPorSubgrupo(24, { em_estoque: true, com_preco: false, limit: 24 }),
+    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
+  ])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
+  const produtosMap = new Map()
+
+  for (const produto of [...(subgrupoDireto?.produtos || []), ...(subgrupoGenerico?.produtos || [])]) {
+    if (!produto?.id) continue
+    if (Number(produto.subgrupo || 0) !== 24) continue
+    produtosMap.set(Number(produto.id), produto)
+  }
+
+  const produtosSubgrupo24 = Array.from(produtosMap.values())
+  const origemSubgrupo24 = produtosSubgrupo24.length
+    ? subgrupoDireto?.produtos?.length
+      ? 'rota dedicada'
+      : 'rota generica'
+    : 'sem retorno'
 
   return (
     <>
@@ -64,7 +82,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <VitrineSubgrupo24 />
+      <VitrineSubgrupo24 produtos={produtosSubgrupo24} origem={origemSubgrupo24} />
 
       <section className="bg-[#f6f7f8] py-14">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
