@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
+import HeroCarousel from '@/components/HeroCarousel'
 import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
 
 export const metadata = {
@@ -63,10 +64,17 @@ export default async function HomePage() {
   const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
   const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
-  const destaqueSubgrupo = escolherProdutos(config, 'obra', subgrupo24Data.produtos || [])
+  const produtosSubgrupo24 = subgrupo24Data.produtos || []
+  const destaqueSubgrupo = produtosSubgrupo24.some((produto) => 'subgrupo' in produto)
+    ? produtosSubgrupo24.filter((produto) => Number(produto.subgrupo || 0) === 24)
+    : produtosSubgrupo24
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
-  const heroImage = config?.hero_image_url ? `${API_URL}${config.hero_image_url}` : null
+  const heroImages = (config?.hero_images || [])
+    .filter(Boolean)
+    .map((image) => `${API_URL}${image}`)
+  const fallbackHero = config?.hero_image_url ? [`${API_URL}${config.hero_image_url}`] : []
+  const heroSlides = heroImages.length ? heroImages : fallbackHero
 
   return (
     <>
@@ -78,57 +86,11 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section
-        className="relative overflow-hidden border-b border-gray-200 bg-[#111]"
-        style={{
-          backgroundImage: heroImage
-            ? `linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.72) 38%, rgba(0,0,0,0.25) 72%, rgba(0,0,0,0.12) 100%), url('${heroImage}')`
-            : 'linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0.92) 35%, rgba(17,17,17,0.78) 100%)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
-          <div className="relative z-10">
-            <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.28em] text-white">
-              Home comercial
-            </span>
-            <h1 className="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.96] text-white sm:text-5xl lg:text-6xl">
-              {config?.hero_title || 'Ofertas em aco para sua obra'}
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-200">
-              {config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/produtos" className="rounded-2xl bg-primary px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700">
-                Comprar agora
-              </Link>
-              <a
-                href={`https://wa.me/${WHATSAPP}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-2xl border border-white/20 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/10"
-              >
-                Falar no WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              { titulo: '+ clientes atendidos', valor: 'Milhares' },
-              { titulo: 'Grande estoque', valor: 'Sempre ativo' },
-              { titulo: 'Parcelamento', valor: '10x sem juros' },
-              { titulo: 'Atendimento', valor: 'Resposta rapida' },
-            ].map((item) => (
-              <div key={item.titulo} className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
-                <div className="text-[11px] font-black uppercase tracking-[0.22em] text-gray-300">{item.titulo}</div>
-                <div className="mt-3 text-2xl font-black uppercase text-white">{item.valor}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HeroCarousel
+        images={heroSlides}
+        title={config?.hero_title || 'Ofertas em aco para sua obra'}
+        subtitle={config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
+      />
 
       <section className="bg-white py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">

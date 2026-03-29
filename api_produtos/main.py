@@ -24,6 +24,7 @@ from typing import Optional
 import shutil
 import os
 import uuid
+from pathlib import Path
 
 from database import engine, get_db, get_db2, Base
 import models
@@ -35,11 +36,19 @@ from db2_queries import listar_produtos_db2, buscar_produto_db2, listar_produtos
 Base.metadata.create_all(bind=engine)
 
 # Pasta de fotos
-UPLOAD_DIR = "fotos"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
-SITE_ASSETS_DIR = "site_assets"
-os.makedirs(SITE_ASSETS_DIR, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent
+UPLOAD_DIR = BASE_DIR / "fotos"
+UPLOAD_DIR.mkdir(exist_ok=True)
+SITE_ASSETS_DIR = BASE_DIR / "site_assets"
+SITE_ASSETS_DIR.mkdir(exist_ok=True)
 ADMIN_PASSWORD = os.getenv("SITE_ADMIN_PASSWORD", "ferro123")
+DEFAULT_ASSET_URLS = {
+    "logo": "/site-assets/default-logo.jpeg",
+    "hero_image": "/site-assets/default-hero-1.jpeg",
+    "hero_image_1": "/site-assets/default-hero-1.jpeg",
+    "hero_image_2": "/site-assets/default-hero-2.jpeg",
+    "hero_image_3": "/site-assets/default-hero-3.jpeg",
+}
 
 HOME_SECTIONS = [
     "featured",
@@ -71,8 +80,8 @@ app.add_middleware(
 )
 
 # Serve as fotos como arquivos estáticos
-app.mount("/fotos", StaticFiles(directory=UPLOAD_DIR), name="fotos")
-app.mount("/site-assets", StaticFiles(directory=SITE_ASSETS_DIR), name="site-assets")
+app.mount("/fotos", StaticFiles(directory=str(UPLOAD_DIR)), name="fotos")
+app.mount("/site-assets", StaticFiles(directory=str(SITE_ASSETS_DIR)), name="site-assets")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -98,6 +107,7 @@ def _produto_dict_to_response(
         id=dados["id"],
         nome=dados["nome"],
         descricao=dados.get("descricao") or "",
+        subgrupo=int(dados.get("subgrupo") or 0),
         preco=float(dados.get("preco") or 0),
         marca=dados.get("marca") or "",
         estoque=int(dados.get("estoque") or 0),
@@ -120,7 +130,9 @@ def _verificar_admin(x_admin_password: Optional[str] = Header(None)) -> str:
 
 def _obter_asset_url(chave: str, db: Session) -> Optional[str]:
     registro = db.query(models.SiteAsset).filter(models.SiteAsset.chave == chave).first()
-    return registro.valor if registro else None
+    if registro and registro.valor:
+        return registro.valor
+    return DEFAULT_ASSET_URLS.get(chave)
 
 
 def _salvar_asset(chave: str, valor: str, db: Session):
@@ -163,6 +175,11 @@ def _montar_home_config(db: Session) -> dict:
 
     return {
         "hero_image_url": _obter_asset_url("hero_image", db),
+        "hero_images": [
+            _obter_asset_url("hero_image_1", db),
+            _obter_asset_url("hero_image_2", db),
+            _obter_asset_url("hero_image_3", db),
+        ],
         "logo_url": _obter_asset_url("logo", db),
         "hero_title": "Ofertas em aco para sua obra",
         "hero_subtitle": "Estoque real, preco atualizado e atendimento rapido no WhatsApp.",
@@ -243,7 +260,7 @@ def atualizar_asset_home(
     _: str = Depends(_verificar_admin),
     db: Session = Depends(get_db),
 ):
-    if asset_key not in {"hero", "logo"}:
+    if asset_key not in {"hero", "hero_1", "hero_2", "hero_3", "logo"}:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Asset invalido.")
 
     extensao = os.path.splitext(arquivo.filename or "")[-1].lower()
@@ -253,21 +270,30 @@ def atualizar_asset_home(
             detail="Formato invalido. Use JPG, PNG ou WEBP.",
         )
 
-    chave = "hero_image" if asset_key == "hero" else "logo"
+    mapa_chave = {
+        "hero": "hero_image_1",
+        "hero_1": "hero_image_1",
+        "hero_2": "hero_image_2",
+        "hero_3": "hero_image_3",
+        "logo": "logo",
+    }
+    chave = mapa_chave[asset_key]
     atual = _obter_asset_url(chave, db)
-    if atual:
+    if atual and "/site-assets/" in atual and "default-" not in atual:
         nome_antigo = atual.split("/site-assets/")[-1]
-        caminho_antigo = os.path.join(SITE_ASSETS_DIR, nome_antigo)
-        if os.path.exists(caminho_antigo):
-            os.remove(caminho_antigo)
+        caminho_antigo = SITE_ASSETS_DIR / nome_antigo
+        if caminho_antigo.exists():
+            caminho_antigo.unlink()
 
     nome_arquivo = f"{asset_key}_{uuid.uuid4().hex}{extensao}"
-    caminho = os.path.join(SITE_ASSETS_DIR, nome_arquivo)
+    caminho = SITE_ASSETS_DIR / nome_arquivo
     with open(caminho, "wb") as buffer:
         shutil.copyfileobj(arquivo.file, buffer)
 
     url = f"/site-assets/{nome_arquivo}"
     _salvar_asset(chave, url, db)
+    if chave == "hero_image_1":
+        _salvar_asset("hero_image", url, db)
     return {"ok": True, "url": url, "config": _montar_home_config(db)}
 
 

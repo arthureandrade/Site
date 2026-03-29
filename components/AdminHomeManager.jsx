@@ -30,7 +30,7 @@ export default function AdminHomeManager() {
   const [carregando, setCarregando] = useState(true)
   const [salvando, setSalvando] = useState(false)
   const [mensagem, setMensagem] = useState('')
-  const [heroPreview, setHeroPreview] = useState('')
+  const [heroPreviews, setHeroPreviews] = useState(['', '', ''])
   const [logoPreview, setLogoPreview] = useState('')
 
   useEffect(() => {
@@ -53,7 +53,12 @@ export default function AdminHomeManager() {
       return
     }
     setConfig(data)
-    setHeroPreview(data.hero_image_url ? `${API_URL}${data.hero_image_url}` : '')
+    setHeroPreviews(
+      [0, 1, 2].map((index) => {
+        const asset = data.hero_images?.[index]
+        return asset ? `${API_URL}${asset}` : ''
+      })
+    )
     setLogoPreview(data.logo_url ? `${API_URL}${data.logo_url}` : '')
     setCarregando(false)
   }
@@ -120,14 +125,28 @@ export default function AdminHomeManager() {
     if (!file) return
     setMensagem('')
     const preview = URL.createObjectURL(file)
-    if (assetKey === 'hero') setHeroPreview(preview)
+    if (assetKey.startsWith('hero')) {
+      const heroIndex = assetKey === 'hero' ? 0 : Number(assetKey.split('_')[1]) - 1
+      setHeroPreviews((current) => {
+        const next = [...current]
+        next[heroIndex] = preview
+        return next
+      })
+    }
     if (assetKey === 'logo') setLogoPreview(preview)
 
     const data = await uploadAssetHome(password, assetKey, file)
     if (data?.config) {
       setConfig(data.config)
-      setMensagem(assetKey === 'hero' ? 'Hero atualizado.' : 'Logo atualizada.')
-      if (assetKey === 'hero') setHeroPreview(`${API_URL}${data.url}`)
+      setMensagem(assetKey.startsWith('hero') ? 'Slide do hero atualizado.' : 'Logo atualizada.')
+      if (assetKey.startsWith('hero')) {
+        const heroIndex = assetKey === 'hero' ? 0 : Number(assetKey.split('_')[1]) - 1
+        setHeroPreviews((current) => {
+          const next = [...current]
+          next[heroIndex] = `${API_URL}${data.url}`
+          return next
+        })
+      }
       if (assetKey === 'logo') setLogoPreview(`${API_URL}${data.url}`)
     } else {
       setMensagem('Nao foi possivel enviar o arquivo.')
@@ -155,18 +174,28 @@ export default function AdminHomeManager() {
         <aside className="space-y-6">
           <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
             <h2 className="text-sm font-black uppercase tracking-[0.24em] text-gray-900">Hero principal</h2>
-            <p className="mt-2 text-xs text-gray-500">Tamanho recomendado: 1920x800 px. Formato JPG ou PNG leve.</p>
-            <div className="relative mt-4 aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100">
-              {heroPreview ? (
-                <Image src={heroPreview} alt="Preview hero" fill unoptimized className="object-cover" />
-              ) : (
-                <div className="flex h-full items-center justify-center text-sm text-gray-400">Sem imagem</div>
-              )}
+            <p className="mt-2 text-xs text-gray-500">Use 3 imagens 1920x800 px em JPG ou PNG. O carrossel troca a cada 3 segundos.</p>
+            <div className="mt-4 space-y-4">
+              {[1, 2, 3].map((numero) => (
+                <div key={numero} className="rounded-2xl border border-gray-100 p-3">
+                  <div className="mb-2 flex items-center justify-between">
+                    <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-700">Slide {numero}</div>
+                    <div className="text-[11px] text-gray-400">1920x800 recomendado</div>
+                  </div>
+                  <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100">
+                    {heroPreviews[numero - 1] ? (
+                      <Image src={heroPreviews[numero - 1]} alt={`Preview hero ${numero}`} fill unoptimized className="object-cover" />
+                    ) : (
+                      <div className="flex h-full items-center justify-center text-sm text-gray-400">Sem imagem</div>
+                    )}
+                  </div>
+                  <label className="mt-3 inline-flex cursor-pointer rounded-2xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white">
+                    Enviar slide {numero}
+                    <input type="file" accept=".jpg,.jpeg,.png,.webp" className="hidden" onChange={(e) => handleUpload(`hero_${numero}`, e.target.files?.[0])} />
+                  </label>
+                </div>
+              ))}
             </div>
-            <label className="mt-4 inline-flex cursor-pointer rounded-2xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white">
-              Enviar novo banner
-              <input type="file" accept=".jpg,.jpeg,.png,.webp" className="hidden" onChange={(e) => handleUpload('hero', e.target.files?.[0])} />
-            </label>
           </div>
 
           <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
