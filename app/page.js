@@ -24,9 +24,7 @@ function escolherProdutos(config, sectionKey, fallback) {
   return selecionados.length > 0 ? selecionados : fallback
 }
 
-function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadgeLabel = '' }) {
-  if (!produtos?.length) return null
-
+function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadgeLabel = '', emptyMessage = '' }) {
   return (
     <section className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -41,11 +39,18 @@ function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadge
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {produtos.map((produto) => (
-            <ProductCard key={`${title}-${produto.id}`} produto={produto} badgeLabel={cardBadgeLabel} />
-          ))}
-        </div>
+        {produtos?.length ? (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {produtos.map((produto) => (
+              <ProductCard key={`${title}-${produto.id}`} produto={produto} badgeLabel={cardBadgeLabel} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
+            <div className="text-sm font-black uppercase tracking-wide text-gray-700">{emptyMessage || 'Nenhum produto disponivel nesta vitrine no momento.'}</div>
+            <div className="mt-2 text-sm text-gray-500">Atualize o cadastro ou aguarde a próxima sincronização do site.</div>
+          </div>
+        )}
       </div>
     </section>
   )
@@ -142,6 +147,7 @@ export default async function HomePage() {
         href="/produtos?subgrupo=24"
         produtos={destaqueSubgrupo}
         badge="Destaque"
+        emptyMessage="Nao ha produto em destaque no momento."
       />
 
       <SectionShelf
