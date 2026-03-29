@@ -1,11 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { ADMIN_PASSWORD } from '@/lib/adminAuth'
 
 export default function AcessoPage() {
-  const router = useRouter()
   const [password, setPassword] = useState('')
   const [erro, setErro] = useState('')
   const [loading, setLoading] = useState(false)
@@ -22,8 +20,8 @@ export default function AcessoPage() {
     }
 
     window.sessionStorage.setItem('admin_password', ADMIN_PASSWORD)
-    document.cookie = `admin_auth=${encodeURIComponent(ADMIN_PASSWORD)}; path=/; SameSite=Lax`
-    router.push('/admin')
+    document.cookie = `admin_auth=${encodeURIComponent(ADMIN_PASSWORD)}; path=/; Max-Age=86400; SameSite=Lax`
+    window.location.assign('/admin')
   }
 
   return (
