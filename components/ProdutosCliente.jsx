@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
+import { obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
 
 const LIMIT = 24
 const CATEGORIAS_MARCA = [
@@ -22,7 +23,10 @@ function normalizarTexto(valor) {
     .toLowerCase()
 }
 
-function inferirCategoriaMarca(produtosDaMarca) {
+function inferirCategoriaMarca(marca, produtosDaMarca) {
+  const categoriaPesquisada = obterCategoriaMarcaPorMapa(marca)
+  if (categoriaPesquisada) return categoriaPesquisada
+
   const base = normalizarTexto(
     produtosDaMarca
       .map((p) => `${p.nome || ''} ${p.descricao || ''} ${p.marca || ''}`)
@@ -53,7 +57,7 @@ function montarMarcasCatalogo(produtos) {
   return Array.from(mapa.entries())
     .map(([marca, itens]) => ({
       marca,
-      categoria: inferirCategoriaMarca(itens),
+      categoria: inferirCategoriaMarca(marca, itens),
       quantidade: itens.length,
     }))
     .sort((a, b) => a.marca.localeCompare(b.marca, 'pt-BR'))
