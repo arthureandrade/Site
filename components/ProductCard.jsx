@@ -4,13 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
-import { formatarParcelamento, formatarPreco, imagemUrl } from '@/lib/api'
+import { formatarParcelamento, formatarPreco, imagemUrl, whatsappLink } from '@/lib/api'
 
-export default function ProductCard({ produto, badgeLabel = '' }) {
+export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
   const foto = imagemUrl(produto.foto_url)
   const temEstoque = produto.estoque > 0
-  const temPreco = Number(produto.preco) > 0
+  const temPreco = !ocultarPreco && Number(produto.preco) > 0
   const parcelamento = temPreco ? formatarParcelamento(produto.preco, 10) : ''
+  const linkWhatsApp = whatsappLink(produto.nome, produto.preco)
   const { dispatch } = useCart()
   const [adicionado, setAdicionado] = useState(false)
 
@@ -22,11 +23,8 @@ export default function ProductCard({ produto, badgeLabel = '' }) {
     setTimeout(() => setAdicionado(false), 1500)
   }
 
-  return (
-    <Link
-      href={`/produto/${produto.id}`}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl"
-    >
+  const conteudo = (
+    <>
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
         {foto ? (
           <Image
@@ -67,23 +65,25 @@ export default function ProductCard({ produto, badgeLabel = '' }) {
           )}
         </div>
 
-        <button
-          onClick={handleAdicionar}
-          className={`absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-all duration-200 active:scale-90 ${
-            adicionado ? 'bg-green-500 text-white' : 'bg-primary text-white hover:bg-red-700'
-          }`}
-          title="Adicionar ao carrinho"
-        >
-          {adicionado ? (
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-            </svg>
-          ) : (
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
-            </svg>
-          )}
-        </button>
+        {!ocultarPreco && (
+          <button
+            onClick={handleAdicionar}
+            className={`absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-all duration-200 active:scale-90 ${
+              adicionado ? 'bg-green-500 text-white' : 'bg-primary text-white hover:bg-red-700'
+            }`}
+            title="Adicionar ao carrinho"
+          >
+            {adicionado ? (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+              </svg>
+            )}
+          </button>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
@@ -101,7 +101,14 @@ export default function ProductCard({ produto, badgeLabel = '' }) {
         </h3>
 
         <div className="rounded-2xl border border-gray-100 bg-gray-50 p-3">
-          {temPreco ? (
+          {ocultarPreco ? (
+            <>
+              <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Preco sob consulta</span>
+              <span className="mt-1 block text-[11px] font-bold uppercase tracking-wide text-primary">
+                Consulte no WhatsApp
+              </span>
+            </>
+          ) : temPreco ? (
             <>
               <span className="block text-2xl font-black leading-none text-gray-900">{formatarPreco(produto.preco)}</span>
               <span className="mt-1 block text-[11px] font-bold uppercase tracking-wide text-primary">
@@ -122,18 +129,44 @@ export default function ProductCard({ produto, badgeLabel = '' }) {
         </div>
 
         <div className="mt-auto flex items-center justify-between gap-2 border-t border-gray-100 pt-3">
-          <div className="text-[11px] font-bold uppercase tracking-wide text-gray-400">Compra online</div>
+          <div className="text-[11px] font-bold uppercase tracking-wide text-gray-400">
+            {ocultarPreco ? 'Atendimento comercial' : 'Compra online'}
+          </div>
 
-          <button
-            onClick={handleAdicionar}
-            className={`shrink-0 rounded-xl px-3 py-2 text-xs font-black uppercase tracking-wide transition-all duration-200 active:scale-95 ${
-              adicionado ? 'bg-green-100 text-green-700' : 'bg-primary text-white hover:bg-red-700'
-            }`}
-          >
-            {adicionado ? 'Adicionado' : 'Comprar'}
-          </button>
+          {ocultarPreco ? (
+            <a
+              href={linkWhatsApp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-xl bg-green-500 px-3 py-2 text-xs font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-green-600"
+            >
+              WhatsApp
+            </a>
+          ) : (
+            <button
+              onClick={handleAdicionar}
+              className={`shrink-0 rounded-xl px-3 py-2 text-xs font-black uppercase tracking-wide transition-all duration-200 active:scale-95 ${
+                adicionado ? 'bg-green-100 text-green-700' : 'bg-primary text-white hover:bg-red-700'
+              }`}
+            >
+              {adicionado ? 'Adicionado' : 'Comprar'}
+            </button>
+          )}
         </div>
       </div>
+    </>
+  )
+
+  if (ocultarPreco) {
+    return <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">{conteudo}</div>
+  }
+
+  return (
+    <Link
+      href={`/produto/${produto.id}`}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl"
+    >
+      {conteudo}
     </Link>
   )
 }

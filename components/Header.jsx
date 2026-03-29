@@ -59,14 +59,14 @@ export default function Header() {
           <Link href="/produtos" className="transition-colors hover:text-primary">
             Produtos
           </Link>
-          <Link href="/produtos?busca=ferro" className="transition-colors hover:text-primary">
+          <Link href="/produtos?categoria=ferro_aco" className="transition-colors hover:text-primary">
             Ferro e aco
-          </Link>
-          <Link href="/produtos?busca=tubo" className="transition-colors hover:text-primary">
-            Tubos
           </Link>
           <Link href="/produtos?busca=ferragem" className="transition-colors hover:text-primary">
             Ferragens
+          </Link>
+          <Link href="/vendedor" className="transition-colors hover:text-primary">
+            Area do vendedor
           </Link>
         </nav>
 
@@ -102,14 +102,14 @@ export default function Header() {
             <Link href="/produtos" onClick={() => setMenuOpen(false)}>
               Produtos
             </Link>
-            <Link href="/produtos?busca=ferro" onClick={() => setMenuOpen(false)}>
+            <Link href="/produtos?categoria=ferro_aco" onClick={() => setMenuOpen(false)}>
               Ferro e aco
-            </Link>
-            <Link href="/produtos?busca=tubo" onClick={() => setMenuOpen(false)}>
-              Tubos
             </Link>
             <Link href="/produtos?busca=ferragem" onClick={() => setMenuOpen(false)}>
               Ferragens
+            </Link>
+            <Link href="/vendedor" onClick={() => setMenuOpen(false)}>
+              Area do vendedor
             </Link>
           </div>
         </div>

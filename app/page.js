@@ -9,10 +9,8 @@ export const metadata = {
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 
 const CATEGORIAS = [
-  { nome: 'Ferro e aco', busca: 'ferro', cor: 'from-slate-900 to-slate-700' },
-  { nome: 'Tubos', busca: 'tubo', cor: 'from-gray-800 to-gray-600' },
+  { nome: 'Ferro e aco', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
   { nome: 'Ferragens', busca: 'ferragem', cor: 'from-red-700 to-red-500' },
-  { nome: 'Cimento', busca: 'cimento', cor: 'from-stone-700 to-stone-500' },
   { nome: 'Telhas', busca: 'telha', cor: 'from-neutral-800 to-neutral-600' },
   { nome: 'Parafusos', busca: 'parafuso', cor: 'from-zinc-800 to-zinc-600' },
   { nome: 'Estruturas', busca: 'estrutura', cor: 'from-black to-gray-700' },
@@ -52,14 +50,12 @@ function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadge
 }
 
 export default async function HomePage() {
-  const [config, destaqueData, obraData, estruturasData, tubosData, ferragensData, cimentoData] = await Promise.all([
+  const [config, destaqueData, obraData, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
     getProdutos({ busca: 'ferro', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
-    getProdutos({ busca: 'tubo', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
-    getProdutos({ busca: 'cimento', em_estoque: true, com_preco: true, limit: 10 }),
   ])
 
   const destaques = destaqueData.produtos || []
@@ -68,9 +64,7 @@ export default async function HomePage() {
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
   const obra = escolherProdutos(config, 'obra', obraData.produtos || [])
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
-  const tubos = escolherProdutos(config, 'tubos', tubosData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
-  const cimento = cimentoData.produtos || []
   const heroImage = config?.hero_image_url ? `${API_URL}${config.hero_image_url}` : null
 
   return (
@@ -146,7 +140,7 @@ export default async function HomePage() {
             {CATEGORIAS.map((categoria) => (
               <Link
                 key={categoria.nome}
-                href={`/produtos?busca=${encodeURIComponent(categoria.busca)}`}
+                href={categoria.href || `/produtos?busca=${encodeURIComponent(categoria.busca)}`}
                 className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className={`h-28 bg-gradient-to-br ${categoria.cor}`} />
@@ -188,7 +182,7 @@ export default async function HomePage() {
       <SectionShelf
         title="Produtos para obra"
         subtitle="Materiais para estrutura, serralheria e canteiro."
-        href="/produtos?busca=ferro"
+        href="/produtos?categoria=ferro_aco"
         produtos={obra}
         badge="Obra"
       />
@@ -202,27 +196,11 @@ export default async function HomePage() {
       />
 
       <SectionShelf
-        title="Linhas de produto: tubos"
-        subtitle="Tubos, conexoes e itens para montagem."
-        href="/produtos?busca=tubo"
-        produtos={tubos}
-        badge="Linhas"
-      />
-
-      <SectionShelf
         title="Linhas de produto: ferragens"
         subtitle="Parafusos, fechaduras, fixacao e acessorios."
         href="/produtos?busca=ferragem"
         produtos={ferragens}
         badge="Linhas"
-      />
-
-      <SectionShelf
-        title="Mais produtos para sua obra"
-        subtitle="Um novo bloco para manter a rolagem sempre ativa."
-        href="/produtos?busca=cimento"
-        produtos={cimento}
-        badge="Vitrine"
       />
 
       <section className="bg-[#f6f7f8] py-14">

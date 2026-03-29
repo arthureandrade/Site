@@ -5,6 +5,7 @@ import { SkeletonGrid } from './SkeletonCard'
 import { obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
 
 const LIMIT = 24
+const FERRO_ACO_TERMOS = ['metalon', 'tubo', 'cantoneira', 'vergalhao', 'barra', 'barrinha', 'perfil', 'chapa', 'tela', 'trelica']
 const CATEGORIAS_MARCA = [
   { nome: 'Acos e Estruturas', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'telha'] },
   { nome: 'Cimentos e Construcao', termos: ['cimento', 'argamassa', 'rejunte', 'massa', 'concreto', 'bloco', 'tijolo', 'telha', 'laje'] },
@@ -21,6 +22,11 @@ function normalizarTexto(valor) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
+}
+
+function ehProdutoFerroAco(produto) {
+  const base = normalizarTexto(`${produto?.nome || ''} ${produto?.descricao || ''}`)
+  return FERRO_ACO_TERMOS.some((termo) => base.includes(termo))
 }
 
 function inferirCategoriaMarca(marca, produtosDaMarca) {
@@ -63,7 +69,7 @@ function montarMarcasCatalogo(produtos) {
     .sort((a, b) => a.marca.localeCompare(b.marca, 'pt-BR'))
 }
 
-export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }) {
+export default function ProdutosCliente({ initialBusca = '', initialMarca = '', initialCategoria = '' }) {
   const [produtos, setProdutos] = useState([])
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -71,6 +77,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }
   const [page, setPage] = useState(0)
   const [busca, setBusca] = useState(initialBusca)
   const [marcaFiltro, setMarcaFiltro] = useState(initialMarca)
+  const [categoriaEspecial] = useState(initialCategoria)
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
   const [emEstoque, setEmEstoque] = useState(true)
@@ -86,40 +93,66 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }
     setLoading(true)
     setErro(false)
 
-    const qs = new URLSearchParams({ skip: p * LIMIT, limit: LIMIT, com_preco: 'true' })
-    if (busca_) qs.set('busca', busca_)
-    if (marca_) qs.set('marca', marca_)
-    if (est != null) qs.set('em_estoque', est)
-
     try {
-      const res = await fetch(`${apiUrl}/produtos?${qs}`)
-      if (!res.ok) throw new Error()
-      const data = await res.json()
-      const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
-      setProdutos(produtosValidos)
-      setTotal(data.total || 0)
+      if (categoriaEspecial === 'ferro_aco') {
+        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'false' })
+        if (est != null) qs.set('em_estoque', est)
+
+        const res = await fetch(`${apiUrl}/produtos?${qs}`)
+        if (!res.ok) throw new Error()
+        const data = await res.json()
+
+        let filtrados = (data.produtos || []).filter(ehProdutoFerroAco)
+        if (busca_) {
+          const buscaNormalizada = normalizarTexto(busca_)
+          filtrados = filtrados.filter((produto) =>
+            normalizarTexto(`${produto.nome || ''} ${produto.descricao || ''}`).includes(buscaNormalizada)
+          )
+        }
+        if (marca_) {
+          const marcaNormalizada = normalizarTexto(marca_)
+          filtrados = filtrados.filter((produto) => normalizarTexto(produto.marca || '').includes(marcaNormalizada))
+        }
+
+        setTotal(filtrados.length)
+        setProdutos(filtrados.slice(p * LIMIT, p * LIMIT + LIMIT))
+      } else {
+        const qs = new URLSearchParams({ skip: p * LIMIT, limit: LIMIT, com_preco: 'true' })
+        if (busca_) qs.set('busca', busca_)
+        if (marca_) qs.set('marca', marca_)
+        if (est != null) qs.set('em_estoque', est)
+
+        const res = await fetch(`${apiUrl}/produtos?${qs}`)
+        if (!res.ok) throw new Error()
+        const data = await res.json()
+        const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
+        setProdutos(produtosValidos)
+        setTotal(data.total || 0)
+      }
     } catch {
       setErro(true)
     } finally {
       setLoading(false)
     }
-  }, [apiUrl])
+  }, [apiUrl, categoriaEspecial])
 
   const fetchMarcas = useCallback(async () => {
     setLoadingMarcas(true)
     try {
-      const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'true' })
+      const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true' })
       const res = await fetch(`${apiUrl}/produtos?${qs}`)
       if (!res.ok) throw new Error()
       const data = await res.json()
-      const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
+      const produtosValidos = categoriaEspecial === 'ferro_aco'
+        ? (data.produtos || []).filter(ehProdutoFerroAco)
+        : (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
       setMarcasCatalogo(montarMarcasCatalogo(produtosValidos))
     } catch {
       setMarcasCatalogo([])
     } finally {
       setLoadingMarcas(false)
     }
-  }, [apiUrl])
+  }, [apiUrl, categoriaEspecial])
 
   useEffect(() => {
     fetchProdutos(0, initialBusca, initialMarca, true)
@@ -175,7 +208,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }
                 </label>
                 <input
                   type="text"
-                  placeholder="Ex: parafuso, tubo, cimento..."
+                  placeholder="Ex: parafuso, ferragem, perfil..."
                   value={busca}
                   onChange={(e) => setBusca(e.target.value)}
                   className="input text-sm"
@@ -297,7 +330,9 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }
                 <div className="h-1 w-12 bg-primary rounded mb-3" />
                 <h3 className="font-display text-3xl text-gray-900 uppercase">Catalogo de Produtos</h3>
                 <p className="text-sm text-gray-500 mt-1">
-                  Exibindo apenas produtos com preco. Use a lateral para navegar por marcas e categorias.
+                  {categoriaEspecial === 'ferro_aco'
+                    ? 'Linha Ferro e Aco da secao 6. Os valores devem ser consultados pelo WhatsApp.'
+                    : 'Exibindo apenas produtos com preco. Use a lateral para navegar por marcas e categorias.'}
                 </p>
               </div>
 
@@ -346,7 +381,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }
             <>
               <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
                 {produtos.map((produto) => (
-                  <ProductCard key={produto.id} produto={produto} />
+                  <ProductCard key={produto.id} produto={produto} ocultarPreco={categoriaEspecial === 'ferro_aco'} />
                 ))}
               </div>
 
