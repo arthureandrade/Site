@@ -107,6 +107,7 @@ def _produto_dict_to_response(
         id=dados["id"],
         nome=dados["nome"],
         descricao=dados.get("descricao") or "",
+        secao=int(dados.get("secao") or 0),
         subgrupo=int(dados.get("subgrupo") or 0),
         preco=float(dados.get("preco") or 0),
         marca=dados.get("marca") or "",
@@ -350,6 +351,7 @@ def listar_produtos_destaque(
 def listar_produtos(
     busca: Optional[str] = Query(None, description="Buscar por nome ou descricao do produto"),
     marca: Optional[str] = Query(None, description="Filtrar por fabricante/marca (busca parcial)"),
+    secao: Optional[int] = Query(None, description="Filtrar por ID da secao"),
     subgrupo: Optional[int] = Query(None, description="Filtrar por ID do subgrupo"),
     em_estoque: Optional[bool] = Query(None, description="true = só com estoque | false = só sem estoque"),
     com_preco: bool = Query(True, description="true = apenas produtos com preco"),
@@ -372,6 +374,7 @@ def listar_produtos(
                 conn,
                 busca=busca,
                 marca=marca,
+                secao=secao,
                 subgrupo=subgrupo,
                 em_estoque=em_estoque,
                 com_preco=com_preco,

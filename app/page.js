@@ -2,6 +2,7 @@ import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
 import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
+import { SECAO_FERRO_ACO } from '@/lib/catalogo'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -55,7 +56,7 @@ export default async function HomePage() {
   const [config, destaqueData, subgrupo24Data, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ secao: SECAO_FERRO_ACO, subgrupo: 24, em_estoque: true, com_preco: true, limit: 24 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])
@@ -65,9 +66,9 @@ export default async function HomePage() {
   const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
   const produtosSubgrupo24 = subgrupo24Data.produtos || []
-  const destaqueSubgrupo = produtosSubgrupo24.some((produto) => 'subgrupo' in produto)
-    ? produtosSubgrupo24.filter((produto) => Number(produto.subgrupo || 0) === 24)
-    : produtosSubgrupo24
+  const destaqueSubgrupo = produtosSubgrupo24.filter(
+    (produto) => Number(produto.subgrupo || 0) === 24 && Number(produto.secao || 0) === SECAO_FERRO_ACO
+  )
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
   const heroImages = (config?.hero_images || [])
@@ -145,7 +146,7 @@ export default async function HomePage() {
       <SectionShelf
         title="Destaque"
         subtitle="Produtos do subgrupo 24 para empurrar venda e visibilidade na home."
-        href="/produtos?subgrupo=24"
+        href={`/produtos?secao=${SECAO_FERRO_ACO}&subgrupo=24`}
         produtos={destaqueSubgrupo}
         badge="Destaque"
       />

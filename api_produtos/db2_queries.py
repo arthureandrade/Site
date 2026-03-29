@@ -32,6 +32,7 @@ SELECT
     TRIM(p.DESCRCOMPRODUTO)                        AS nome,
     COALESCE(TRIM(pg.SUBDESCRICAO), '')            AS descricao,
     COALESCE(TRIM(p.FABRICANTE), '')               AS marca,
+    COALESCE(p.IDSECAO, 0)                         AS secao,
     COALESCE(p.IDSUBGRUPO, 0)                      AS subgrupo,
     COALESCE(ppd.PRECOVENDA, 0)                    AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
@@ -68,6 +69,7 @@ LEFT JOIN (
 # Filtro de marca (adicionado dinamicamente)
 _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
 _FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
+_FILTRO_SECAO      = " AND COALESCE(p.IDSECAO, 0) = ?"
 _FILTRO_SUBGRUPO   = " AND COALESCE(p.IDSUBGRUPO, 0) = ?"
 _FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, 0) > 0"
 # Filtro apenas em estoque
@@ -86,6 +88,7 @@ _PAGINATE = " OFFSET ? ROWS FETCH NEXT ? ROWS ONLY"
 def _build_where_params(
     busca: Optional[str],
     marca: Optional[str],
+    secao: Optional[int],
     subgrupo: Optional[int],
     em_estoque: Optional[bool],
     com_preco: bool,
@@ -104,6 +107,10 @@ def _build_where_params(
     if marca:
         where += _FILTRO_MARCA
         params.append(f"%{marca}%")
+
+    if secao is not None:
+        where += _FILTRO_SECAO
+        params.append(int(secao))
 
     if subgrupo is not None:
         where += _FILTRO_SUBGRUPO
@@ -124,6 +131,7 @@ def listar_produtos_db2(
     conn,
     busca: Optional[str] = None,
     marca: Optional[str] = None,
+    secao: Optional[int] = None,
     subgrupo: Optional[int] = None,
     em_estoque: Optional[bool] = None,
     com_preco: bool = True,
@@ -150,7 +158,7 @@ def listar_produtos_db2(
       produtos : list[dict] — cada dict tem as chaves:
                  id, nome, descricao, marca, preco, estoque
     """
-    where, params = _build_where_params(busca, marca, subgrupo, em_estoque, com_preco)
+    where, params = _build_where_params(busca, marca, secao, subgrupo, em_estoque, com_preco)
 
     cursor = conn.cursor()
 
