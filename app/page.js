@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
+import SaldaoCarousel from '@/components/SaldaoCarousel'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
 import { getHomeConfig, getProdutos } from '@/lib/api'
 
@@ -22,19 +23,26 @@ const CATEGORIAS = [
 export default async function HomePage() {
   const [config, secao5Data, secao6Data] = await Promise.all([
     getHomeConfig(),
-    getProdutos({ secao: 5, em_estoque: true, com_preco: true, limit: 5000 }),
-    getProdutos({ secao: 6, em_estoque: true, com_preco: true, limit: 5000 }),
+    getProdutos({ secao: 5, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
+    getProdutos({ secao: 6, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
   ])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const produtosMap = new Map()
+  const produtosSaldaoMap = new Map()
 
   for (const produto of [...(secao5Data?.produtos || []), ...(secao6Data?.produtos || [])]) {
     if (!produto?.id) continue
-    if (Number(produto.subgrupo || 0) !== 24) continue
-    produtosMap.set(Number(produto.id), produto)
+    const subgrupo = Number(produto.subgrupo || 0)
+    if (subgrupo === 24) {
+      produtosMap.set(Number(produto.id), produto)
+    }
+    if (subgrupo === 25) {
+      produtosSaldaoMap.set(Number(produto.id), produto)
+    }
   }
 
-  const produtosSubgrupo24 = Array.from(produtosMap.values())
+  const produtosSubgrupo24 = Array.from(produtosMap.values()).slice(0, 10)
+  const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
   const origemSubgrupo24 = produtosSubgrupo24.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
@@ -55,6 +63,8 @@ export default async function HomePage() {
         subtitle={config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
       />
 
+      <VitrineSubgrupo24 produtos={produtosSubgrupo24} origem={origemSubgrupo24} />
+
       <section className="bg-white py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mb-6">
@@ -62,17 +72,17 @@ export default async function HomePage() {
             <h2 className="mt-2 text-3xl font-black uppercase text-gray-900">Compre por linha de produto</h2>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-6">
             {CATEGORIAS.map((categoria) => (
               <Link
                 key={categoria.nome}
                 href={categoria.href || `/produtos?busca=${encodeURIComponent(categoria.busca)}`}
-                className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className={`h-28 bg-gradient-to-br ${categoria.cor}`} />
-                <div className="p-4">
-                  <div className="text-sm font-black uppercase tracking-wide text-gray-900">{categoria.nome}</div>
-                  <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ver produtos</div>
+                <div className={`h-20 bg-gradient-to-br ${categoria.cor}`} />
+                <div className="p-3">
+                  <div className="text-xs font-black uppercase tracking-wide text-gray-900 sm:text-sm">{categoria.nome}</div>
+                  <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Ver produtos</div>
                 </div>
               </Link>
             ))}
@@ -80,7 +90,27 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <VitrineSubgrupo24 produtos={produtosSubgrupo24} origem={origemSubgrupo24} />
+      <section className="bg-[#fff7f2] py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <div className="text-[11px] font-black uppercase tracking-[0.28em] text-[#ff5a0a]">Saldão</div>
+              <h2 className="mt-2 text-3xl font-black uppercase text-[#13214e]">Queima online com 18% de desconto</h2>
+              <p className="mt-2 max-w-3xl text-sm text-slate-600">
+                Itens do subgrupo 25 em um carrossel de ofertas para girar estoque mais rapido sem perder visibilidade.
+              </p>
+            </div>
+            <Link
+              href="/produtos?subgrupo=25"
+              className="inline-flex rounded-2xl border border-[#ff5a0a] px-5 py-3 text-sm font-black uppercase tracking-wide text-[#ff5a0a] transition hover:bg-[#ff5a0a] hover:text-white"
+            >
+              Ver saldão
+            </Link>
+          </div>
+
+          <SaldaoCarousel produtos={produtosSubgrupo25} />
+        </div>
+      </section>
 
       <section className="bg-[#f6f7f8] py-14">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
