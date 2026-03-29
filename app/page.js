@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
+import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
 import { getHomeConfig } from '@/lib/api'
 
 export const metadata = {
@@ -62,6 +63,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <VitrineSubgrupo24 />
 
       <section className="bg-[#f6f7f8] py-14">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
