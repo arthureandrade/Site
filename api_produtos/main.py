@@ -16,7 +16,7 @@ Arquitetura:
     feita lá. Para adicionar fotos, use POST /produtos/{id}/foto.
 ────────────────────────────────────────────────────────────────────────────────
 """
-from fastapi import FastAPI, Depends, HTTPException, status, UploadFile, File, Query
+from fastapi import FastAPI, Depends, HTTPException, status, UploadFile, File, Query, Header
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
@@ -37,6 +37,19 @@ Base.metadata.create_all(bind=engine)
 # Pasta de fotos
 UPLOAD_DIR = "fotos"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+SITE_ASSETS_DIR = "site_assets"
+os.makedirs(SITE_ASSETS_DIR, exist_ok=True)
+ADMIN_PASSWORD = os.getenv("SITE_ADMIN_PASSWORD", "ferro123")
+
+HOME_SECTIONS = [
+    "featured",
+    "best_sellers",
+    "offers",
+    "obra",
+    "estruturas",
+    "tubos",
+    "ferragens",
+]
 
 app = FastAPI(
     title="API de Produtos — Galpão do Aço",
@@ -59,6 +72,7 @@ app.add_middleware(
 
 # Serve as fotos como arquivos estáticos
 app.mount("/fotos", StaticFiles(directory=UPLOAD_DIR), name="fotos")
+app.mount("/site-assets", StaticFiles(directory=SITE_ASSETS_DIR), name="site-assets")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -95,6 +109,67 @@ def _produto_dict_to_response(
     )
 
 
+def _verificar_admin(x_admin_password: Optional[str] = Header(None)) -> str:
+    if x_admin_password != ADMIN_PASSWORD:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Senha administrativa invalida.",
+        )
+    return x_admin_password or ""
+
+
+def _obter_asset_url(chave: str, db: Session) -> Optional[str]:
+    registro = db.query(models.SiteAsset).filter(models.SiteAsset.chave == chave).first()
+    return registro.valor if registro else None
+
+
+def _salvar_asset(chave: str, valor: str, db: Session):
+    registro = db.query(models.SiteAsset).filter(models.SiteAsset.chave == chave).first()
+    if registro:
+        registro.valor = valor
+    else:
+        db.add(models.SiteAsset(chave=chave, valor=valor))
+    db.commit()
+
+
+def _carregar_produtos_por_ids(produto_ids: list[int], db: Session) -> list[schemas.ProdutoResponse]:
+    produtos: list[schemas.ProdutoResponse] = []
+    if not produto_ids:
+        return produtos
+
+    with get_db2() as conn:
+        for produto_id in produto_ids:
+            dados = buscar_produto_db2(conn, int(produto_id))
+            if dados is None:
+                continue
+            produtos.append(_produto_dict_to_response(dados, _foto_url_local(int(produto_id), db)))
+    return produtos
+
+
+def _montar_home_config(db: Session) -> dict:
+    secoes: dict[str, dict] = {}
+    for section_key in HOME_SECTIONS:
+        registros = (
+            db.query(models.HomeSectionProduct)
+            .filter(models.HomeSectionProduct.section_key == section_key)
+            .order_by(models.HomeSectionProduct.sort_order.asc(), models.HomeSectionProduct.id.asc())
+            .all()
+        )
+        produto_ids = [int(item.product_id) for item in registros]
+        secoes[section_key] = {
+            "product_ids": produto_ids,
+            "products": _carregar_produtos_por_ids(produto_ids, db),
+        }
+
+    return {
+        "hero_image_url": _obter_asset_url("hero_image", db),
+        "logo_url": _obter_asset_url("logo", db),
+        "hero_title": "Ofertas em aco para sua obra",
+        "hero_subtitle": "Estoque real, preco atualizado e atendimento rapido no WhatsApp.",
+        "sections": secoes,
+    }
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # ROTAS PÚBLICAS (sem autenticação)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -106,6 +181,94 @@ def root():
         "mensagem": "API de Produtos — Galpão do Aço",
         "fonte_dados": "IBM DB2 / CISSERP",
     }
+
+
+@app.get("/home-config", tags=["Home"])
+def obter_home_config(db: Session = Depends(get_db)):
+    return _montar_home_config(db)
+
+
+@app.post("/admin/login", tags=["Admin"])
+def admin_login(payload: schemas.AdminLoginRequest):
+    if payload.password != ADMIN_PASSWORD:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Senha incorreta.",
+        )
+    return {"ok": True}
+
+
+@app.get("/admin/home-config", tags=["Admin"])
+def admin_home_config(
+    _: str = Depends(_verificar_admin),
+    db: Session = Depends(get_db),
+):
+    return _montar_home_config(db)
+
+
+@app.put("/admin/home-config/sections/{section_key}", tags=["Admin"])
+def atualizar_secao_home(
+    section_key: str,
+    payload: schemas.HomeSectionUpdateRequest,
+    _: str = Depends(_verificar_admin),
+    db: Session = Depends(get_db),
+):
+    if section_key not in HOME_SECTIONS:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Secao invalida.")
+
+    (
+        db.query(models.HomeSectionProduct)
+        .filter(models.HomeSectionProduct.section_key == section_key)
+        .delete()
+    )
+    db.commit()
+
+    for index, item in enumerate(payload.items):
+        db.add(
+            models.HomeSectionProduct(
+                section_key=section_key,
+                product_id=int(item.product_id),
+                sort_order=int(item.sort_order if item.sort_order is not None else index),
+            )
+        )
+    db.commit()
+
+    return _montar_home_config(db)
+
+
+@app.post("/admin/home-config/assets/{asset_key}", tags=["Admin"])
+def atualizar_asset_home(
+    asset_key: str,
+    arquivo: UploadFile = File(...),
+    _: str = Depends(_verificar_admin),
+    db: Session = Depends(get_db),
+):
+    if asset_key not in {"hero", "logo"}:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Asset invalido.")
+
+    extensao = os.path.splitext(arquivo.filename or "")[-1].lower()
+    if extensao not in [".jpg", ".jpeg", ".png", ".webp"]:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Formato invalido. Use JPG, PNG ou WEBP.",
+        )
+
+    chave = "hero_image" if asset_key == "hero" else "logo"
+    atual = _obter_asset_url(chave, db)
+    if atual:
+        nome_antigo = atual.split("/site-assets/")[-1]
+        caminho_antigo = os.path.join(SITE_ASSETS_DIR, nome_antigo)
+        if os.path.exists(caminho_antigo):
+            os.remove(caminho_antigo)
+
+    nome_arquivo = f"{asset_key}_{uuid.uuid4().hex}{extensao}"
+    caminho = os.path.join(SITE_ASSETS_DIR, nome_arquivo)
+    with open(caminho, "wb") as buffer:
+        shutil.copyfileobj(arquivo.file, buffer)
+
+    url = f"/site-assets/{nome_arquivo}"
+    _salvar_asset(chave, url, db)
+    return {"ok": True, "url": url, "config": _montar_home_config(db)}
 
 
 @app.get(

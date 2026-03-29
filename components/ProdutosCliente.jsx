@@ -63,14 +63,14 @@ function montarMarcasCatalogo(produtos) {
     .sort((a, b) => a.marca.localeCompare(b.marca, 'pt-BR'))
 }
 
-export default function ProdutosCliente() {
+export default function ProdutosCliente({ initialBusca = '', initialMarca = '' }) {
   const [produtos, setProdutos] = useState([])
   const [total, setTotal] = useState(0)
   const [loading, setLoading] = useState(true)
   const [erro, setErro] = useState(false)
   const [page, setPage] = useState(0)
-  const [busca, setBusca] = useState('')
-  const [marcaFiltro, setMarcaFiltro] = useState('')
+  const [busca, setBusca] = useState(initialBusca)
+  const [marcaFiltro, setMarcaFiltro] = useState(initialMarca)
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
   const [emEstoque, setEmEstoque] = useState(true)
@@ -122,9 +122,9 @@ export default function ProdutosCliente() {
   }, [apiUrl])
 
   useEffect(() => {
-    fetchProdutos(0, '', '', true)
+    fetchProdutos(0, initialBusca, initialMarca, true)
     fetchMarcas()
-  }, [fetchProdutos, fetchMarcas])
+  }, [fetchProdutos, fetchMarcas, initialBusca, initialMarca])
 
   useEffect(() => {
     const t = setTimeout(() => {

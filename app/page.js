@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
-import { getProdutos, getProdutosDestaque } from '@/lib/api'
+import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -8,133 +8,126 @@ export const metadata = {
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 
-function IconTruck() {
-  return (
-    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.8}
-        d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10h4m6 0h4m-7 0H9"
-      />
-    </svg>
-  )
+const CATEGORIAS = [
+  { nome: 'Ferro e aco', busca: 'ferro', cor: 'from-slate-900 to-slate-700' },
+  { nome: 'Tubos', busca: 'tubo', cor: 'from-gray-800 to-gray-600' },
+  { nome: 'Ferragens', busca: 'ferragem', cor: 'from-red-700 to-red-500' },
+  { nome: 'Cimento', busca: 'cimento', cor: 'from-stone-700 to-stone-500' },
+  { nome: 'Telhas', busca: 'telha', cor: 'from-neutral-800 to-neutral-600' },
+  { nome: 'Parafusos', busca: 'parafuso', cor: 'from-zinc-800 to-zinc-600' },
+  { nome: 'Estruturas', busca: 'estrutura', cor: 'from-black to-gray-700' },
+  { nome: 'Maquinas', busca: 'maquina', cor: 'from-red-900 to-red-600' },
+]
+
+function escolherProdutos(config, sectionKey, fallback) {
+  const selecionados = config?.sections?.[sectionKey]?.products || []
+  return selecionados.length > 0 ? selecionados : fallback
 }
 
-function IconShield() {
-  return (
-    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.8}
-        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-      />
-    </svg>
-  )
-}
+function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadgeLabel = '' }) {
+  if (!produtos?.length) return null
 
-function IconCard() {
   return (
-    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.8}
-        d="M3 10h18M7 15h1m3 0h2m8-9H3a2 2 0 00-2 2v8a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2z"
-      />
-    </svg>
-  )
-}
+    <section className="bg-white py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">{badge || 'Vitrine'}</div>
+            <h2 className="mt-2 text-3xl font-black uppercase text-gray-900">{title}</h2>
+            {subtitle && <p className="mt-2 max-w-2xl text-sm text-gray-500">{subtitle}</p>}
+          </div>
+          <Link href={href} className="rounded-2xl border border-gray-300 px-5 py-3 text-sm font-black uppercase tracking-wide text-gray-700 transition hover:border-primary hover:text-primary">
+            Ver mais
+          </Link>
+        </div>
 
-function IconBolt() {
-  return (
-    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.8}
-        d="M13 10V3L4 14h7v7l9-11h-7z"
-      />
-    </svg>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {produtos.map((produto) => (
+            <ProductCard key={`${title}-${produto.id}`} produto={produto} badgeLabel={cardBadgeLabel} />
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
 export default async function HomePage() {
-  const [{ total }, { produtos: destaques }] = await Promise.all([
-    getProdutos({ em_estoque: true, limit: 1 }),
-    getProdutosDestaque({ limit: 8, meses: 3, preco_min: 100 }),
+  const [config, destaqueData, obraData, estruturasData, tubosData, ferragensData, cimentoData] = await Promise.all([
+    getHomeConfig(),
+    getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
+    getProdutos({ busca: 'ferro', em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ busca: 'tubo', em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ busca: 'cimento', em_estoque: true, com_preco: true, limit: 10 }),
   ])
+
+  const destaques = destaqueData.produtos || []
+  const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
+  const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
+  const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
+  const obra = escolherProdutos(config, 'obra', obraData.produtos || [])
+  const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
+  const tubos = escolherProdutos(config, 'tubos', tubosData.produtos || [])
+  const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
+  const cimento = cimentoData.produtos || []
+  const heroImage = config?.hero_image_url ? `${API_URL}${config.hero_image_url}` : null
 
   return (
     <>
-      <section className="border-b border-red-800 bg-[#a40000] py-2 text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-6 px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:justify-between sm:px-6">
-          <span>Estoque real do ERP</span>
-          <span className="hidden sm:inline">Material para obra, serralheria e manutencao</span>
-          <span>Compra em 10x sem juros</span>
+      <section className="border-b border-red-700 bg-primary py-2 text-white">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6">
+          <span>Compre em 10x sem juros</span>
+          <span className="hidden sm:inline">Grande estoque disponivel</span>
+          <span>Atendimento rapido no WhatsApp</span>
         </div>
       </section>
 
       <section
-        className="relative overflow-hidden bg-brand"
+        className="relative overflow-hidden border-b border-gray-200 bg-[#111]"
         style={{
-          backgroundImage:
-            "linear-gradient(90deg, rgba(10,10,14,0.92) 0%, rgba(10,10,14,0.86) 34%, rgba(10,10,14,0.42) 62%, rgba(10,10,14,0.18) 100%), url('/hero-equipe-galpao.jpg')",
+          backgroundImage: heroImage
+            ? `linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.72) 38%, rgba(0,0,0,0.25) 72%, rgba(0,0,0,0.12) 100%), url('${heroImage}')`
+            : 'linear-gradient(90deg, rgba(17,17,17,1) 0%, rgba(17,17,17,0.92) 35%, rgba(17,17,17,0.78) 100%)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center right',
+          backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(204,0,0,0.28),transparent_28%)]" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.15fr_0.85fr] md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
           <div className="relative z-10">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.28em] text-white">
-              Loja completa para sua obra
+            <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.28em] text-white">
+              Home comercial
             </span>
-
-            <h1 className="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.95] text-white sm:text-5xl lg:text-7xl">
-              Aco e material de construcao com entrega rapida
+            <h1 className="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.96] text-white sm:text-5xl lg:text-6xl">
+              {config?.hero_title || 'Ofertas em aco para sua obra'}
             </h1>
-
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-200 sm:text-xl">
-              Estoque real, preco atualizado e atendimento imediato no WhatsApp para obra, serralheria e manutencao.
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-200">
+              {config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
             </p>
-
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/produtos" className="btn-primary px-8 py-4 text-base font-black uppercase tracking-wide">
-                Ver catalogo
+              <Link href="/produtos" className="rounded-2xl bg-primary px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700">
+                Comprar agora
               </Link>
               <a
                 href={`https://wa.me/${WHATSAPP}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline border-white/20 bg-black/35 px-8 py-4 text-base font-black uppercase tracking-wide text-white hover:bg-white/10"
+                className="rounded-2xl border border-white/20 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/10"
               >
                 Falar no WhatsApp
               </a>
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {['Parcelamento em 10x', 'Entrega em Boa Vista', 'Pedido rapido'].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-gray-200"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
 
-          <div className="relative z-10 grid gap-4 self-end sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { titulo: 'Produtos ativos', valor: total > 0 ? `${total.toLocaleString('pt-BR')}+` : '4.000+' },
-              { titulo: 'Compra online', valor: '10x sem juros' },
+              { titulo: '+ clientes atendidos', valor: 'Milhares' },
+              { titulo: 'Grande estoque', valor: 'Sempre ativo' },
+              { titulo: 'Parcelamento', valor: '10x sem juros' },
               { titulo: 'Atendimento', valor: 'Resposta rapida' },
-              { titulo: 'Retirada', valor: 'Pronta entrega' },
             ].map((item) => (
-              <div key={item.titulo} className="rounded-3xl border border-white/10 bg-white/10 p-5 shadow-2xl backdrop-blur-sm">
-                <div className="text-[11px] font-black uppercase tracking-[0.24em] text-gray-300">{item.titulo}</div>
+              <div key={item.titulo} className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                <div className="text-[11px] font-black uppercase tracking-[0.22em] text-gray-300">{item.titulo}</div>
                 <div className="mt-3 text-2xl font-black uppercase text-white">{item.valor}</div>
               </div>
             ))}
@@ -142,91 +135,126 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-gray-200 bg-white">
-        <div className="mx-auto grid max-w-7xl gap-4 px-4 py-5 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+      <section className="bg-white py-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="mb-6">
+            <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">Categorias principais</div>
+            <h2 className="mt-2 text-3xl font-black uppercase text-gray-900">Compre por linha de produto</h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+            {CATEGORIAS.map((categoria) => (
+              <Link
+                key={categoria.nome}
+                href={`/produtos?busca=${encodeURIComponent(categoria.busca)}`}
+                className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className={`h-28 bg-gradient-to-br ${categoria.cor}`} />
+                <div className="p-4">
+                  <div className="text-sm font-black uppercase tracking-wide text-gray-900">{categoria.nome}</div>
+                  <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Ver produtos</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SectionShelf
+        title="Produtos em destaque"
+        subtitle="Selecao principal da home para empurrar clique e navegação."
+        href="/produtos"
+        produtos={featured}
+        badge="Destaques"
+      />
+
+      <SectionShelf
+        title="Mais vendidos"
+        subtitle="Itens com maior giro recente para acelerar a decisao de compra."
+        href="/produtos"
+        produtos={bestSellers}
+        badge="Mais vendidos"
+      />
+
+      <SectionShelf
+        title="Ofertas e promocoes"
+        subtitle="Bloco promocional para dar contraste visual e aumentar conversao."
+        href="/produtos"
+        produtos={offers}
+        badge="Oferta"
+        cardBadgeLabel="Oferta"
+      />
+
+      <SectionShelf
+        title="Produtos para obra"
+        subtitle="Materiais para estrutura, serralheria e canteiro."
+        href="/produtos?busca=ferro"
+        produtos={obra}
+        badge="Obra"
+      />
+
+      <SectionShelf
+        title="Linhas de produto: estruturas metalicas"
+        subtitle="Perfis, estruturas e itens de sustentacao."
+        href="/produtos?busca=estrutura"
+        produtos={estruturas}
+        badge="Linhas"
+      />
+
+      <SectionShelf
+        title="Linhas de produto: tubos"
+        subtitle="Tubos, conexoes e itens para montagem."
+        href="/produtos?busca=tubo"
+        produtos={tubos}
+        badge="Linhas"
+      />
+
+      <SectionShelf
+        title="Linhas de produto: ferragens"
+        subtitle="Parafusos, fechaduras, fixacao e acessorios."
+        href="/produtos?busca=ferragem"
+        produtos={ferragens}
+        badge="Linhas"
+      />
+
+      <SectionShelf
+        title="Mais produtos para sua obra"
+        subtitle="Um novo bloco para manter a rolagem sempre ativa."
+        href="/produtos?busca=cimento"
+        produtos={cimento}
+        badge="Vitrine"
+      />
+
+      <section className="bg-[#f6f7f8] py-14">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
           {[
-            { icon: <IconTruck />, titulo: 'Entrega agil', texto: 'Despacho rapido para a sua obra.' },
-            { icon: <IconCard />, titulo: '10x sem juros', texto: 'Parcela exibida em todo o catalogo.' },
-            { icon: <IconShield />, titulo: 'Compra segura', texto: 'Estoque e preco atualizados no ERP.' },
-            { icon: <IconBolt />, titulo: 'Atendimento rapido', texto: 'Pedido e cotacao pelo WhatsApp.' },
+            { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rapido para obras, oficinas e serralherias.' },
+            { titulo: 'Grande estoque disponivel', texto: 'Produtos ativos com consulta de preco e estoque integrada ao ERP.' },
+            { titulo: 'Compra agil no WhatsApp', texto: 'Peça seu orcamento e feche o pedido com resposta mais rapida.' },
           ].map((item) => (
-            <div key={item.titulo} className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-4">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-white">{item.icon}</div>
-              <div>
-                <div className="text-sm font-black uppercase tracking-wide text-gray-900">{item.titulo}</div>
-                <div className="mt-1 text-sm text-gray-500">{item.texto}</div>
-              </div>
+            <div key={item.titulo} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div className="text-sm font-black uppercase tracking-wide text-gray-900">{item.titulo}</div>
+              <div className="mt-2 text-sm leading-relaxed text-gray-500">{item.texto}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {destaques.length > 0 && (
-        <section className="bg-[#f5f6f8] py-14">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <span className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">Mais vendidos</span>
-                <h2 className="mt-2 text-3xl font-black uppercase text-gray-900 sm:text-4xl">
-                  Produtos em destaque
-                </h2>
-                <p className="mt-2 max-w-2xl text-sm text-gray-500">
-                  Selecionados pelo maior faturamento dos ultimos 3 meses, com preco atual acima de R$ 100 e estoque disponivel.
-                </p>
-              </div>
-
-              <Link href="/produtos" className="btn-outline whitespace-nowrap px-5 py-3 text-sm font-black uppercase tracking-wide">
-                Ver todos os produtos
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-              {destaques.map((produto) => (
-                <ProductCard key={produto.id} produto={produto} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="bg-white py-14">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-[2rem] bg-brand p-8 text-white shadow-2xl">
-            <span className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">Venda assistida</span>
-            <h2 className="mt-3 text-3xl font-black uppercase sm:text-4xl">Monte seu pedido com nossa equipe</h2>
-            <p className="mt-4 max-w-xl text-gray-300">
-              Envie sua lista no WhatsApp e receba atendimento rapido para cotacao, separacao e retirada.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={`https://wa.me/${WHATSAPP}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-2xl bg-green-500 px-6 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-green-600"
-              >
-                Chamar no WhatsApp
-              </a>
-              <Link
-                href="/produtos"
-                className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/10"
-              >
-                Navegar no catalogo
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-            {[
-              { titulo: 'Acos e perfis', texto: 'Tubos, chapas, barras, vergalhoes e muito mais.' },
-              { titulo: 'Ferragens e fixacao', texto: 'Parafusos, fechaduras, cadeados e acessorios.' },
-              { titulo: 'Maquinas e ferramentas', texto: 'Linhas profissionais para obra e oficina.' },
-            ].map((item) => (
-              <div key={item.titulo} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="text-sm font-black uppercase tracking-wide text-gray-900">{item.titulo}</div>
-                <div className="mt-2 text-sm leading-relaxed text-gray-500">{item.texto}</div>
-              </div>
-            ))}
-          </div>
+      <section className="bg-brand py-14 text-white" id="contato">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">CTA final</div>
+          <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">Peca seu orcamento agora no WhatsApp</h2>
+          <p className="mt-4 text-lg text-gray-300">
+            Envie sua lista de materiais e receba atendimento rapido para cotacao, separacao e retirada.
+          </p>
+          <a
+            href={`https://wa.me/${WHATSAPP}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex rounded-2xl bg-green-500 px-8 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-green-600"
+          >
+            Falar com a equipe
+          </a>
         </div>
       </section>
     </>

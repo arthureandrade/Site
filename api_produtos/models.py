@@ -1,23 +1,26 @@
-"""
-models.py — Galpão do Aço
-────────────────────────────────────────────────────────────────────────────────
-O banco de dados principal (produtos, preços, estoque) é o DB2 / CISSERP.
-O banco SQLite local serve APENAS para armazenar a foto de cada produto,
-mapeada pelo IDPRODUTO do DB2.
-────────────────────────────────────────────────────────────────────────────────
-"""
 from sqlalchemy import Column, Integer, String
+
 from database import Base
 
 
 class FotoProduto(Base):
-    """
-    Tabela local: foto de cada produto, identificada pelo IDPRODUTO do DB2.
-
-    Não armazena nome, preço ou estoque — esses dados vêm do DB2 em tempo real.
-    """
     __tablename__ = "fotos_produto"
 
-    # Chave = IDPRODUTO da tabela DBA.PRODUTO no DB2
     idproduto = Column(Integer, primary_key=True, index=True)
-    foto_url  = Column(String, nullable=True)
+    foto_url = Column(String, nullable=True)
+
+
+class SiteAsset(Base):
+    __tablename__ = "site_assets"
+
+    chave = Column(String, primary_key=True, index=True)
+    valor = Column(String, nullable=True)
+
+
+class HomeSectionProduct(Base):
+    __tablename__ = "home_section_products"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    section_key = Column(String, index=True, nullable=False)
+    product_id = Column(Integer, nullable=False)
+    sort_order = Column(Integer, default=0, nullable=False)

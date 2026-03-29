@@ -5,7 +5,10 @@ export const metadata = {
   description: 'Catálogo completo de material de construção com estoque real e preços atualizados.',
 }
 
-export default function ProdutosPage() {
+export default function ProdutosPage({ searchParams }) {
+  const initialBusca = searchParams?.busca || ''
+  const initialMarca = searchParams?.marca || ''
+
   return (
     <>
       {/* Cabeçalho */}
@@ -19,7 +22,7 @@ export default function ProdutosPage() {
         </div>
       </div>
 
-      <ProdutosCliente />
+      <ProdutosCliente initialBusca={initialBusca} initialMarca={initialMarca} />
     </>
   )
 }

@@ -1,7 +1,3 @@
-"""
-schemas.py - Galpao do Aco
-Modelos Pydantic para validacao e serializacao dos dados de produtos.
-"""
 from datetime import datetime
 from typing import Optional
 
@@ -28,3 +24,16 @@ class ProdutoResponse(BaseModel):
 class ProdutoListResponse(BaseModel):
     total: int = Field(description="Total de registros (sem paginacao)")
     produtos: list[ProdutoResponse]
+
+
+class AdminLoginRequest(BaseModel):
+    password: str
+
+
+class HomeSectionProductIn(BaseModel):
+    product_id: int
+    sort_order: int = 0
+
+
+class HomeSectionUpdateRequest(BaseModel):
+    items: list[HomeSectionProductIn]

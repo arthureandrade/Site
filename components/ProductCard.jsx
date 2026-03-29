@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { formatarParcelamento, formatarPreco, imagemUrl } from '@/lib/api'
 
-export default function ProductCard({ produto }) {
+export default function ProductCard({ produto, badgeLabel = '' }) {
   const foto = imagemUrl(produto.foto_url)
   const temEstoque = produto.estoque > 0
   const temPreco = Number(produto.preco) > 0
@@ -55,6 +55,11 @@ export default function ProductCard({ produto }) {
           <span className={temEstoque ? 'badge-green shadow' : 'badge-red shadow'}>
             {temEstoque ? 'Pronta entrega' : 'Sob consulta'}
           </span>
+          {badgeLabel && (
+            <span className="rounded-full bg-primary px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-white shadow">
+              {badgeLabel}
+            </span>
+          )}
           {temPreco && (
             <span className="rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-gray-900 shadow">
               10x sem juros
@@ -125,7 +130,7 @@ export default function ProductCard({ produto }) {
               adicionado ? 'bg-green-100 text-green-700' : 'bg-primary text-white hover:bg-red-700'
             }`}
           >
-            {adicionado ? 'Adicionado' : 'Adicionar'}
+            {adicionado ? 'Adicionado' : 'Comprar'}
           </button>
         </div>
       </div>
