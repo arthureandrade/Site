@@ -32,7 +32,7 @@ export default function VitrineSubgrupo24({ produtos = [], origem = '' }) {
                 {produtos.length} oferta{produtos.length !== 1 ? 's' : ''} em destaque carregada
                 {produtos.length !== 1 ? 's' : ''} para compra online.
               </div>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-6">
                 {produtos.map((produto, indice) => (
                   <OfertaCard
                     key={`subgrupo24-${produto.id}`}
