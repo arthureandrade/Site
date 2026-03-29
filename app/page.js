@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import ProductCard from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
-import { getHomeConfig, getProdutos, getProdutosDestaque, getProdutosCatalogoPorSubgrupo } from '@/lib/api'
+import { getHomeConfig } from '@/lib/api'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -19,72 +18,8 @@ const CATEGORIAS = [
   { nome: 'Maquinas', busca: 'maquina', cor: 'from-red-900 to-red-600' },
 ]
 
-function escolherProdutos(config, sectionKey, fallback) {
-  const selecionados = config?.sections?.[sectionKey]?.products || []
-  return selecionados.length > 0 ? selecionados : fallback
-}
-
-function deduplicarProdutos(produtos) {
-  const mapa = new Map()
-  for (const produto of produtos || []) {
-    if (!produto?.id) continue
-    if (!mapa.has(produto.id)) mapa.set(produto.id, produto)
-  }
-  return Array.from(mapa.values())
-}
-
-function SectionShelf({ title, subtitle, href, produtos, badge = null, cardBadgeLabel = '', emptyMessage = '' }) {
-  return (
-    <section className="bg-white py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mb-7 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">{badge || 'Vitrine'}</div>
-            <h2 className="mt-2 text-3xl font-black uppercase text-gray-900">{title}</h2>
-            {subtitle && <p className="mt-2 max-w-2xl text-sm text-gray-500">{subtitle}</p>}
-          </div>
-          <Link href={href} className="rounded-2xl border border-gray-300 px-5 py-3 text-sm font-black uppercase tracking-wide text-gray-700 transition hover:border-primary hover:text-primary">
-            Ver mais
-          </Link>
-        </div>
-
-        {produtos?.length ? (
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-            {produtos.map((produto) => (
-              <ProductCard key={`${title}-${produto.id}`} produto={produto} badgeLabel={cardBadgeLabel} />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
-            <div className="text-sm font-black uppercase tracking-wide text-gray-700">{emptyMessage || 'Nenhum produto disponivel nesta vitrine no momento.'}</div>
-            <div className="mt-2 text-sm text-gray-500">Atualize o cadastro ou aguarde a próxima sincronização do site.</div>
-          </div>
-        )}
-      </div>
-    </section>
-  )
-}
-
 export default async function HomePage() {
-  const [config, destaqueData, subgrupo24CatalogoData, subgrupo24FallbackData, estruturasData, ferragensData] = await Promise.all([
-    getHomeConfig(),
-    getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutosCatalogoPorSubgrupo(24, { em_estoque: true, com_preco: false, limit: 24 }),
-    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
-    getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
-    getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
-  ])
-
-  const destaques = destaqueData.produtos || []
-  const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
-  const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
-  const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
-  const destaqueSubgrupo = deduplicarProdutos([
-    ...(subgrupo24CatalogoData?.produtos || []),
-    ...(subgrupo24FallbackData?.produtos || []),
-  ]).filter((produto) => Number(produto.subgrupo || 0) === 24)
-  const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
-  const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
+  const config = await getHomeConfig()
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
 
   return (
@@ -128,62 +63,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <SectionShelf
-        title="Produtos em destaque"
-        subtitle="Selecao principal da home para empurrar clique e navegação."
-        href="/produtos"
-        produtos={featured}
-        badge="Destaques"
-      />
-
-      <SectionShelf
-        title="Mais vendidos"
-        subtitle="Itens com maior giro recente para acelerar a decisao de compra."
-        href="/produtos"
-        produtos={bestSellers}
-        badge="Mais vendidos"
-      />
-
-      <SectionShelf
-        title="Ofertas e promocoes"
-        subtitle="Bloco promocional para dar contraste visual e aumentar conversao."
-        href="/produtos"
-        produtos={offers}
-        badge="Oferta"
-        cardBadgeLabel="Oferta"
-      />
-
-      <SectionShelf
-        title="Destaque"
-        subtitle="Produtos do subgrupo 24 para empurrar venda e visibilidade na home."
-        href="/produtos?subgrupo=24"
-        produtos={destaqueSubgrupo}
-        badge="Destaque"
-        emptyMessage="Nao ha produto em destaque no momento."
-      />
-
-      <SectionShelf
-        title="Linhas de produto: estruturas metalicas"
-        subtitle="Perfis, estruturas e itens de sustentacao."
-        href="/produtos?busca=estrutura"
-        produtos={estruturas}
-        badge="Linhas"
-      />
-
-      <SectionShelf
-        title="Linhas de produto: ferragens"
-        subtitle="Parafusos, fechaduras, fixacao e acessorios."
-        href="/produtos?busca=ferragem"
-        produtos={ferragens}
-        badge="Linhas"
-      />
-
       <section className="bg-[#f6f7f8] py-14">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-3">
           {[
             { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rapido para obras, oficinas e serralherias.' },
             { titulo: 'Grande estoque disponivel', texto: 'Produtos ativos com consulta de preco e estoque integrada ao ERP.' },
-            { titulo: 'Compra agil no WhatsApp', texto: 'Peça seu orcamento e feche o pedido com resposta mais rapida.' },
+            { titulo: 'Compra agil no WhatsApp', texto: 'Peca seu orcamento e feche o pedido com resposta mais rapida.' },
           ].map((item) => (
             <div key={item.titulo} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="text-sm font-black uppercase tracking-wide text-gray-900">{item.titulo}</div>
