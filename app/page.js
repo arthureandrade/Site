@@ -177,14 +177,14 @@ export default async function HomePage() {
                 Galpão<br /><span className="text-primary">do Aço</span>
               </h1>
               <p className="text-gray-400 text-lg max-w-xl mx-auto md:mx-0 mb-3 leading-relaxed">
-                A solução certa para sua obra!
+                A solução certa para sua obra, reforma e serralheria!
               </p>
               <p className="text-gray-500 text-sm max-w-lg mx-auto md:mx-0 mb-8">
                 Materiais de construção, ferragens e aços com estoque real e preços atualizados direto do nosso sistema.
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <Link href="/produtos" className="btn-primary text-base">
-                  Ver Catálogo
+                  Explorar Catálogo
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
