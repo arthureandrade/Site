@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
 import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
+import { SECAO_FERRO_ACO } from '@/lib/catalogo'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
 }
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
+const TELEFONE = '(95) 3224-0115'
 
 const CATEGORIAS = [
   { nome: 'Ferro e aco', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
@@ -53,7 +55,7 @@ export default async function HomePage() {
   const [config, destaqueData, obraData, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutos({ busca: 'ferro', em_estoque: true, com_preco: true, limit: 10 }),
+    getProdutos({ secao: SECAO_FERRO_ACO, em_estoque: true, com_preco: false, limit: 10 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])
@@ -71,9 +73,9 @@ export default async function HomePage() {
     <>
       <section className="border-b border-red-700 bg-primary py-2 text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6">
-          <span>Compre em 10x sem juros</span>
-          <span className="hidden sm:inline">Grande estoque disponivel</span>
-          <span>Atendimento rapido no WhatsApp</span>
+          <span>{TELEFONE}</span>
+          <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
+          <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
         </div>
       </section>
 
@@ -180,8 +182,8 @@ export default async function HomePage() {
       />
 
       <SectionShelf
-        title="Produtos para obra"
-        subtitle="Materiais para estrutura, serralheria e canteiro."
+        title="Ferro e Aco"
+        subtitle="Produtos da secao 6 com venda consultiva pelo WhatsApp."
         href="/produtos?categoria=ferro_aco"
         produtos={obra}
         badge="Obra"

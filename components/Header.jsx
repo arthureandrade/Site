@@ -8,6 +8,7 @@ import { API_URL } from '@/lib/api'
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [logoUrl, setLogoUrl] = useState(null)
+  const telefone = '(95) 3224-0115'
 
   useEffect(() => {
     let ativo = true
@@ -27,9 +28,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
       <div className="border-b border-gray-100 bg-[#fafafa]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-gray-500 sm:px-6">
-          <span>Compra em 10x sem juros</span>
-          <span className="hidden sm:inline">Entrega rapida em Boa Vista</span>
-          <span>Estoque real do ERP</span>
+          <a href="tel:9532240115" className="text-primary">{telefone}</a>
+          <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
+          <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
         </div>
       </div>
 
@@ -71,6 +72,9 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a href="tel:9532240115" className="hidden rounded-xl border border-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-primary transition hover:bg-red-50 lg:inline-flex">
+            {telefone}
+          </a>
           <Link href="/produtos" className="hidden rounded-xl bg-primary px-5 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700 sm:inline-flex">
             Comprar agora
           </Link>

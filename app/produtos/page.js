@@ -10,7 +10,7 @@ export default function ProdutosPage({ searchParams }) {
   const initialMarca = searchParams?.marca || ''
   const initialCategoria = searchParams?.categoria || ''
   const descricao = initialCategoria === 'ferro_aco'
-    ? 'Produtos da secao 6. Valores sob consulta no WhatsApp.'
+    ? 'Ferro e Aco da secao 6. Valores sob consulta no WhatsApp.'
     : 'Precos e estoque atualizados em tempo real direto do nosso sistema.'
 
   return (

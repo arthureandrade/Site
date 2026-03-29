@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { adminLogin } from '@/lib/api'
+import { ADMIN_PASSWORD } from '@/lib/adminAuth'
 
 export default function AcessoPage() {
   const router = useRouter()
@@ -15,15 +15,14 @@ export default function AcessoPage() {
     setLoading(true)
     setErro('')
 
-    const data = await adminLogin(password)
-    if (!data?.ok) {
+    if (password.trim() !== ADMIN_PASSWORD) {
       setErro('Senha incorreta.')
       setLoading(false)
       return
     }
 
-    window.sessionStorage.setItem('admin_password', password)
-    document.cookie = `admin_auth=${password}; path=/`
+    window.sessionStorage.setItem('admin_password', ADMIN_PASSWORD)
+    document.cookie = `admin_auth=${encodeURIComponent(ADMIN_PASSWORD)}; path=/; SameSite=Lax`
     router.push('/admin')
   }
 

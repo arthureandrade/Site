@@ -2,18 +2,18 @@
 import { useState, useEffect, useCallback } from 'react'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
-import { obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
+import { normalizarCategoriaComercial, obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
+import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
 
 const LIMIT = 24
-const FERRO_ACO_TERMOS = ['metalon', 'tubo', 'cantoneira', 'vergalhao', 'barra', 'barrinha', 'perfil', 'chapa', 'tela', 'trelica']
 const CATEGORIAS_MARCA = [
-  { nome: 'Acos e Estruturas', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'telha'] },
-  { nome: 'Cimentos e Construcao', termos: ['cimento', 'argamassa', 'rejunte', 'massa', 'concreto', 'bloco', 'tijolo', 'telha', 'laje'] },
+  { nome: 'Ferro e Aco', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'chapa', 'tela'] },
+  { nome: 'Construcao e Coberturas', termos: ['cimento', 'argamassa', 'rejunte', 'massa', 'concreto', 'bloco', 'tijolo', 'telha', 'laje'] },
   { nome: 'Ferramentas e Maquinas', termos: ['betoneira', 'cortadora', 'furadeira', 'serra', 'maquina', 'motor', 'esmerilhadeira', 'compactador', 'lixadeira', 'vibratoria'] },
-  { nome: 'Fixacao e Ferragens', termos: ['parafuso', 'porca', 'arruela', 'fixador', 'corrente', 'cadeado', 'fechadura', 'dobradica', 'ferragem'] },
+  { nome: 'Ferragens e Fixacao', termos: ['parafuso', 'porca', 'arruela', 'fixador', 'corrente', 'cadeado', 'fechadura', 'dobradica', 'ferragem'] },
   { nome: 'Solda e Abrasivos', termos: ['solda', 'eletrodo', 'disco', 'abrasivo', 'corte', 'desbaste'] },
-  { nome: 'Hidraulica e Conexoes', termos: ['torneira', 'registro', 'conexao', 'tubo pvc', 'hidraul', 'caixa d agua', 'valvula'] },
-  { nome: 'Eletrica e Iluminacao', termos: ['fio', 'cabo', 'disjuntor', 'tomada', 'lampada', 'led', 'eletroduto', 'eletric'] },
+  { nome: 'Hidraulica', termos: ['torneira', 'registro', 'conexao', 'tubo pvc', 'hidraul', 'caixa d agua', 'valvula'] },
+  { nome: 'Eletrica', termos: ['fio', 'cabo', 'disjuntor', 'tomada', 'lampada', 'led', 'eletroduto', 'eletric'] },
   { nome: 'Tintas e Quimicos', termos: ['tinta', 'selador', 'verniz', 'thinner', 'solvente', 'impermeabil', 'silicone', 'cola', 'espuma'] },
 ]
 
@@ -22,11 +22,6 @@ function normalizarTexto(valor) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-}
-
-function ehProdutoFerroAco(produto) {
-  const base = normalizarTexto(`${produto?.nome || ''} ${produto?.descricao || ''}`)
-  return FERRO_ACO_TERMOS.some((termo) => base.includes(termo))
 }
 
 function inferirCategoriaMarca(marca, produtosDaMarca) {
@@ -41,7 +36,7 @@ function inferirCategoriaMarca(marca, produtosDaMarca) {
 
   for (const categoria of CATEGORIAS_MARCA) {
     if (categoria.termos.some((termo) => base.includes(termo))) {
-      return categoria.nome
+      return normalizarCategoriaComercial(categoria.nome)
     }
   }
 
@@ -95,7 +90,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
 
     try {
       if (categoriaEspecial === 'ferro_aco') {
-        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'false' })
+        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'false', secao: String(SECAO_FERRO_ACO) })
         if (est != null) qs.set('em_estoque', est)
 
         const res = await fetch(`${apiUrl}/produtos?${qs}`)
@@ -140,6 +135,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
     setLoadingMarcas(true)
     try {
       const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true' })
+      if (categoriaEspecial === 'ferro_aco') qs.set('secao', String(SECAO_FERRO_ACO))
       const res = await fetch(`${apiUrl}/produtos?${qs}`)
       if (!res.ok) throw new Error()
       const data = await res.json()
@@ -194,7 +190,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
       <div className="grid gap-6 lg:grid-cols-[290px_minmax(0,1fr)]">
-        <aside className="lg:sticky lg:top-24 lg:self-start">
+        <aside>
           <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
             <div className="bg-brand px-5 py-4 border-b border-white/10">
               <p className="text-[11px] uppercase tracking-[0.25em] text-primary font-bold mb-1">Catalogo</p>
@@ -253,27 +249,23 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
 
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Categorias de marcas</p>
-                <div className="flex flex-wrap gap-2">
+                <select
+                  value={categoriaAtiva}
+                  onChange={(e) => setCategoriaAtiva(e.target.value)}
+                  className="input text-sm"
+                >
                   {categorias.map((categoria) => {
                     const quantidade =
                       categoria === 'Todas'
                         ? marcasCatalogo.length
                         : marcasCatalogo.filter((item) => item.categoria === categoria).length
                     return (
-                      <button
-                        key={categoria}
-                        onClick={() => setCategoriaAtiva(categoria)}
-                        className={`rounded-full px-3 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
-                          categoriaAtiva === categoria
-                            ? 'bg-primary text-white'
-                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                        }`}
-                      >
+                      <option key={categoria} value={categoria}>
                         {categoria} ({quantidade})
-                      </button>
+                      </option>
                     )
                   })}
-                </div>
+                </select>
               </div>
 
               <div>
@@ -282,7 +274,7 @@ export default function ProdutosCliente({ initialBusca = '', initialMarca = '', 
                   <span className="text-xs text-gray-400">{marcasFiltradas.length}</span>
                 </div>
 
-                <div className="max-h-[360px] overflow-y-auto pr-1 space-y-2">
+                <div className="space-y-2">
                   {loadingMarcas ? (
                     <p className="text-sm text-gray-400">Carregando marcas...</p>
                   ) : marcasFiltradas.length === 0 ? (

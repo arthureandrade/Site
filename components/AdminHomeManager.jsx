@@ -4,20 +4,20 @@ import Image from 'next/image'
 import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { API_URL, getAdminHomeConfig, getProdutos, salvarSecaoHome, uploadAssetHome } from '@/lib/api'
+import { ADMIN_PASSWORD, lerAdminCookie } from '@/lib/adminAuth'
 
 const SECOES = [
   { key: 'featured', label: 'Produtos em destaque' },
   { key: 'best_sellers', label: 'Mais vendidos' },
   { key: 'offers', label: 'Ofertas' },
   { key: 'obra', label: 'Produtos para obra' },
-  { key: 'estruturas', label: 'Estruturas metalicas' },
-  { key: 'tubos', label: 'Tubos' },
+  { key: 'estruturas', label: 'Ferro e Aco (secao 6)' },
   { key: 'ferragens', label: 'Ferragens' },
 ]
 
 function lerSenha() {
   if (typeof window === 'undefined') return ''
-  return window.sessionStorage.getItem('admin_password') || ''
+  return window.sessionStorage.getItem('admin_password') || lerAdminCookie() || ''
 }
 
 export default function AdminHomeManager() {
@@ -35,12 +35,13 @@ export default function AdminHomeManager() {
 
   useEffect(() => {
     const senha = lerSenha()
-    if (!senha) {
+    if (senha !== ADMIN_PASSWORD) {
       router.replace('/acesso')
       return
     }
-    setPassword(senha)
-    carregarConfig(senha)
+    window.sessionStorage.setItem('admin_password', ADMIN_PASSWORD)
+    setPassword(ADMIN_PASSWORD)
+    carregarConfig(ADMIN_PASSWORD)
   }, [router])
 
   async function carregarConfig(senha) {
