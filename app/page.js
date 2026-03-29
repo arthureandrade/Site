@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
-import { API_URL, getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
+import { getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
 import { SECAO_FERRO_ACO } from '@/lib/catalogo'
 
 export const metadata = {
@@ -71,11 +71,7 @@ export default async function HomePage() {
   )
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
-  const heroImages = (config?.hero_images || [])
-    .filter(Boolean)
-    .map((image) => `${API_URL}${image}`)
-  const fallbackHero = config?.hero_image_url ? [`${API_URL}${config.hero_image_url}`] : []
-  const heroSlides = heroImages.length ? heroImages : fallbackHero
+  const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
 
   return (
     <>

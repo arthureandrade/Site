@@ -21,6 +21,7 @@ function lerSenha() {
 }
 
 export default function AdminHomeManager() {
+  const heroFixos = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const router = useRouter()
   const [password, setPassword] = useState('')
   const [config, setConfig] = useState(null)
@@ -30,7 +31,7 @@ export default function AdminHomeManager() {
   const [carregando, setCarregando] = useState(true)
   const [salvando, setSalvando] = useState(false)
   const [mensagem, setMensagem] = useState('')
-  const [heroPreviews, setHeroPreviews] = useState(['', '', ''])
+  const [heroPreviews] = useState(heroFixos)
   const [logoPreview, setLogoPreview] = useState('')
 
   useEffect(() => {
@@ -53,12 +54,6 @@ export default function AdminHomeManager() {
       return
     }
     setConfig(data)
-    setHeroPreviews(
-      [0, 1, 2].map((index) => {
-        const asset = data.hero_images?.[index]
-        return asset ? `${API_URL}${asset}` : ''
-      })
-    )
     setLogoPreview(data.logo_url ? `${API_URL}${data.logo_url}` : '')
     setCarregando(false)
   }
@@ -125,28 +120,12 @@ export default function AdminHomeManager() {
     if (!file) return
     setMensagem('')
     const preview = URL.createObjectURL(file)
-    if (assetKey.startsWith('hero')) {
-      const heroIndex = assetKey === 'hero' ? 0 : Number(assetKey.split('_')[1]) - 1
-      setHeroPreviews((current) => {
-        const next = [...current]
-        next[heroIndex] = preview
-        return next
-      })
-    }
     if (assetKey === 'logo') setLogoPreview(preview)
 
     const data = await uploadAssetHome(password, assetKey, file)
     if (data?.config) {
       setConfig(data.config)
-      setMensagem(assetKey.startsWith('hero') ? 'Slide do hero atualizado.' : 'Logo atualizada.')
-      if (assetKey.startsWith('hero')) {
-        const heroIndex = assetKey === 'hero' ? 0 : Number(assetKey.split('_')[1]) - 1
-        setHeroPreviews((current) => {
-          const next = [...current]
-          next[heroIndex] = `${API_URL}${data.url}`
-          return next
-        })
-      }
+      setMensagem('Logo atualizada.')
       if (assetKey === 'logo') setLogoPreview(`${API_URL}${data.url}`)
     } else {
       setMensagem('Nao foi possivel enviar o arquivo.')
@@ -174,7 +153,7 @@ export default function AdminHomeManager() {
         <aside className="space-y-6">
           <div className="rounded-3xl border border-gray-200 bg-white p-5 shadow-sm">
             <h2 className="text-sm font-black uppercase tracking-[0.24em] text-gray-900">Hero principal</h2>
-            <p className="mt-2 text-xs text-gray-500">Use 3 imagens 1920x800 px em JPG ou PNG. O carrossel troca a cada 3 segundos.</p>
+            <p className="mt-2 text-xs text-gray-500">O hero agora vem de arquivos locais da pasta <strong>public/Hero</strong>.</p>
             <div className="mt-4 space-y-4">
               {[1, 2, 3].map((numero) => (
                 <div key={numero} className="rounded-2xl border border-gray-100 p-3">
@@ -189,12 +168,14 @@ export default function AdminHomeManager() {
                       <div className="flex h-full items-center justify-center text-sm text-gray-400">Sem imagem</div>
                     )}
                   </div>
-                  <label className="mt-3 inline-flex cursor-pointer rounded-2xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white">
-                    Enviar slide {numero}
-                    <input type="file" accept=".jpg,.jpeg,.png,.webp" className="hidden" onChange={(e) => handleUpload(`hero_${numero}`, e.target.files?.[0])} />
-                  </label>
+                  <div className="mt-3 text-xs text-gray-500">
+                    Arquivo usado: <strong>{`public/Hero/hero${numero}.jpeg`}</strong>
+                  </div>
                 </div>
               ))}
+            </div>
+            <div className="mt-4 rounded-2xl bg-gray-50 p-4 text-xs text-gray-600">
+              Para trocar as imagens, substitua os arquivos <strong>hero1.jpeg</strong>, <strong>hero2.jpeg</strong> e <strong>hero3.jpeg</strong> na pasta <strong>public/Hero</strong> e publique o site novamente.
             </div>
           </div>
 

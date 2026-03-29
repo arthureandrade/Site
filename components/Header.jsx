@@ -7,7 +7,7 @@ import { API_URL } from '@/lib/api'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [logoUrl, setLogoUrl] = useState(null)
+  const [logoUrl, setLogoUrl] = useState('/logo.jpeg')
   const [busca, setBusca] = useState('')
   const telefone = '(95) 3224-0115'
 

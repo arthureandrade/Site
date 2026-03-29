@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -10,10 +11,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <div className="mb-3 flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded bg-primary font-display text-xl leading-none text-white">G</div>
-              <div>
-                <div className="font-display text-lg uppercase tracking-wide text-white">Galpao do Aco</div>
-                <div className="text-[10px] uppercase tracking-widest text-gray-500">Material de construcao</div>
+              <div className="relative h-12 w-[170px]">
+                <Image src="/logo.jpeg" alt="Galpao do Aco" fill className="object-contain object-left" />
               </div>
             </div>
 
