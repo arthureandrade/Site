@@ -66,6 +66,8 @@ LEFT JOIN (
 
 # Filtro de marca (adicionado dinamicamente)
 _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
+_FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
+_FILTRO_COM_PRECO  = " AND COALESCE(ppd.PRECOVENDA, 0) > 0"
 # Filtro apenas em estoque
 _FILTRO_EM_ESTOQUE = " AND COALESCE(est.estoque_total, 0) > 0"
 # Filtro sem estoque
@@ -80,8 +82,10 @@ _PAGINATE = " OFFSET ? ROWS FETCH NEXT ? ROWS ONLY"
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _build_where_params(
+    busca: Optional[str],
     marca: Optional[str],
     em_estoque: Optional[bool],
+    com_preco: bool,
 ) -> tuple[str, list]:
     """
     Retorna a cláusula WHERE dinâmica e a lista de parâmetros correspondente.
@@ -90,9 +94,16 @@ def _build_where_params(
     where = " WHERE 1=1"
     params: list = []
 
+    if busca:
+        where += _FILTRO_BUSCA
+        params.extend([f"%{busca}%", f"%{busca}%"])
+
     if marca:
         where += _FILTRO_MARCA
         params.append(f"%{marca}%")
+
+    if com_preco:
+        where += _FILTRO_COM_PRECO
 
     if em_estoque is True:
         where += _FILTRO_EM_ESTOQUE
@@ -104,8 +115,10 @@ def _build_where_params(
 
 def listar_produtos_db2(
     conn,
+    busca: Optional[str] = None,
     marca: Optional[str] = None,
     em_estoque: Optional[bool] = None,
+    com_preco: bool = True,
     skip: int = 0,
     limit: int = 50,
 ) -> tuple[int, list[dict]]:
@@ -115,8 +128,10 @@ def listar_produtos_db2(
     Parâmetros
     ----------
     conn        : conexão pyodbc aberta
+    busca       : filtrar por nome/descricao (busca parcial, case-insensitive)
     marca       : filtrar por fabricante (busca parcial, case-insensitive)
     em_estoque  : True → só com estoque > 0 | False → só sem estoque | None → todos
+    com_preco   : True → só produtos com preço > 0
     skip        : paginação — registros a pular
     limit       : paginação — máximo de registros
 
@@ -127,7 +142,7 @@ def listar_produtos_db2(
       produtos : list[dict] — cada dict tem as chaves:
                  id, nome, descricao, marca, preco, estoque
     """
-    where, params = _build_where_params(marca, em_estoque)
+    where, params = _build_where_params(busca, marca, em_estoque, com_preco)
 
     cursor = conn.cursor()
 

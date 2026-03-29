@@ -164,6 +164,7 @@ export default async function HomePage() {
     <>
       {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="bg-brand relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(204,0,0,0.22),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.06),transparent_28%)]" />
         <div className="absolute right-0 top-0 h-full w-1/3 opacity-5 pointer-events-none"
              style={{ background: 'repeating-linear-gradient(-45deg, #CC0000, #CC0000 2px, transparent 2px, transparent 12px)' }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28 relative">
@@ -182,6 +183,17 @@ export default async function HomePage() {
               <p className="text-gray-500 text-sm max-w-lg mx-auto md:mx-0 mb-8">
                 Materiais de construção, ferragens e aços com estoque real e preços atualizados direto do nosso sistema.
               </p>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
+                {[
+                  'Entrega em Boa Vista',
+                  'Orcamento rapido',
+                  'Estoque real do ERP',
+                ].map((item) => (
+                  <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-gray-300">
+                    {item}
+                  </span>
+                ))}
+              </div>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <Link href="/produtos" className="btn-primary text-base">
                   Explorar Catálogo
@@ -197,16 +209,16 @@ export default async function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3 text-center">
+            <div className="grid grid-cols-2 gap-3 text-center w-full max-w-md">
               {[
                 { label: 'Produtos',     value: total > 0 ? `${total.toLocaleString('pt-BR')}+` : '1.000+' },
                 { label: 'Sempre',       value: 'Em Estoque' },
                 { label: 'Atendimento',  value: 'Rápido'   },
                 { label: 'Qualidade',    value: 'Garantida' },
               ].map(s => (
-                <div key={s.label} className="bg-white/5 border border-white/10 rounded-xl p-5 min-w-[130px]">
-                  <div className="font-display text-2xl text-white leading-none">{s.value}</div>
-                  <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">{s.label}</div>
+                <div key={s.label} className="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl p-5 min-w-[130px] shadow-2xl shadow-black/10 backdrop-blur-sm">
+                  <div className="font-display text-3xl text-white leading-none">{s.value}</div>
+                  <div className="text-[11px] text-gray-400 mt-2 uppercase tracking-[0.25em]">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -218,6 +230,15 @@ export default async function HomePage() {
       {/* ── DIFERENCIAIS ─────────────────────────────────────────────── */}
       <section className="bg-white py-16 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="h-1 w-12 bg-primary rounded mb-3" />
+              <h2 className="font-display text-3xl sm:text-4xl text-gray-900 uppercase">Por que comprar conosco</h2>
+            </div>
+            <p className="hidden lg:block text-sm text-gray-500 max-w-md text-right">
+              Estoque integrado ao sistema, atendimento agil e uma linha completa para obra, serralheria e manutencao.
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: <IconBox />,    title: 'Estoque Real',        desc: 'Dados atualizados direto do sistema de gestão ERP.' },
@@ -226,8 +247,8 @@ export default async function HomePage() {
               { icon: <IconShield />, title: 'Qualidade Garantida', desc: 'Trabalhamos apenas com produtos de qualidade.' },
             ].map(d => (
               <div key={d.title}
-                   className="flex flex-col items-center text-center p-6 rounded-lg border border-gray-100 hover:border-primary/30 hover:bg-red-50 transition-all group">
-                <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                   className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100 hover:border-primary/30 hover:bg-red-50/60 transition-all group shadow-sm hover:shadow-lg">
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-200">
                   {d.icon}
                 </div>
                 <h3 className="font-display text-lg uppercase text-gray-900 mb-2">{d.title}</h3>

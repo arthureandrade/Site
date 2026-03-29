@@ -113,8 +113,10 @@ def root():
     summary="Lista todos os produtos ativos do ERP",
 )
 def listar_produtos(
+    busca: Optional[str] = Query(None, description="Buscar por nome ou descricao do produto"),
     marca: Optional[str] = Query(None, description="Filtrar por fabricante/marca (busca parcial)"),
     em_estoque: Optional[bool] = Query(None, description="true = só com estoque | false = só sem estoque"),
+    com_preco: bool = Query(True, description="true = apenas produtos com preco"),
     skip: int = Query(0, ge=0, description="Paginação: registros a pular"),
     limit: int = Query(50, ge=1, le=200, description="Paginação: máximo de registros"),
     db: Session = Depends(get_db),
@@ -122,16 +124,20 @@ def listar_produtos(
     """
     Retorna produtos ativos do DB2 (CISSERP) com preço varejo e estoque atual.
 
+    - **busca**: busca parcial por nome ou descricao
     - **marca**: busca parcial no campo FABRICANTE (ex: `?marca=Votorantim`)
     - **em_estoque**: `true` → apenas com estoque disponível
+    - **com_preco**: `true` → esconde itens sem preco
     - **skip / limit**: paginação
     """
     try:
         with get_db2() as conn:
             total, lista = listar_produtos_db2(
                 conn,
+                busca=busca,
                 marca=marca,
                 em_estoque=em_estoque,
+                com_preco=com_preco,
                 skip=skip,
                 limit=limit,
             )
