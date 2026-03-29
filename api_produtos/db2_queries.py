@@ -33,6 +33,7 @@ SELECT
     COALESCE(TRIM(pg.SUBDESCRICAO), '')            AS descricao,
     COALESCE(TRIM(p.FABRICANTE), '')               AS marca,
     COALESCE(p.IDSECAO, 0)                         AS secao,
+    COALESCE(p.IDGRUPO, 0)                         AS grupo,
     COALESCE(p.IDSUBGRUPO, 0)                      AS subgrupo,
     COALESCE(ppd.PRECOVENDA, pep.VALPRECO, 0)      AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
@@ -196,6 +197,7 @@ def listar_produtos_db2(
     total = cursor.fetchone()[0]
 
     # --- dados paginados ---
+    limit = max(1, min(int(limit), 5000))
     sql_data = _SQL_PRODUTOS + where + _ORDER + _PAGINATE
     cursor.execute(sql_data, params + [skip, limit])
 

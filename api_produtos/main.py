@@ -113,6 +113,7 @@ def _produto_dict_to_response(
         nome=dados["nome"],
         descricao=dados.get("descricao") or "",
         secao=int(dados.get("secao") or 0),
+        grupo=int(dados.get("grupo") or 0),
         subgrupo=int(dados.get("subgrupo") or 0),
         preco=float(dados.get("preco") or 0),
         marca=dados.get("marca") or "",
@@ -407,7 +408,7 @@ def listar_produtos(
     em_estoque: Optional[bool] = Query(None, description="true = só com estoque | false = só sem estoque"),
     com_preco: bool = Query(True, description="true = apenas produtos com preco"),
     skip: int = Query(0, ge=0, description="Paginação: registros a pular"),
-    limit: int = Query(50, ge=1, le=200, description="Paginação: máximo de registros"),
+    limit: int = Query(50, ge=1, le=5000, description="Paginação: máximo de registros"),
     db: Session = Depends(get_db),
 ):
     """

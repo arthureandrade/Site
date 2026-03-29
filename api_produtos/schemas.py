@@ -9,6 +9,7 @@ class ProdutoResponse(BaseModel):
     nome: str
     descricao: str = ""
     secao: int = 0
+    grupo: int = 0
     subgrupo: int = 0
     preco: float = Field(ge=0, description="Preco de varejo (R$)")
     marca: str = ""

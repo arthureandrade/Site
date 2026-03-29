@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
-import { getHomeConfig, getProdutos, getProdutosCatalogoPorSubgrupo } from '@/lib/api'
+import { getHomeConfig, getProdutos } from '@/lib/api'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -20,15 +20,15 @@ const CATEGORIAS = [
 ]
 
 export default async function HomePage() {
-  const [config, subgrupoDireto, subgrupoGenerico] = await Promise.all([
+  const [config, secao5Data, secao6Data] = await Promise.all([
     getHomeConfig(),
-    getProdutosCatalogoPorSubgrupo(24, { em_estoque: true, com_preco: false, limit: 24 }),
-    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
+    getProdutos({ secao: 5, em_estoque: true, com_preco: true, limit: 5000 }),
+    getProdutos({ secao: 6, em_estoque: true, com_preco: true, limit: 5000 }),
   ])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const produtosMap = new Map()
 
-  for (const produto of [...(subgrupoDireto?.produtos || []), ...(subgrupoGenerico?.produtos || [])]) {
+  for (const produto of [...(secao5Data?.produtos || []), ...(secao6Data?.produtos || [])]) {
     if (!produto?.id) continue
     if (Number(produto.subgrupo || 0) !== 24) continue
     produtosMap.set(Number(produto.id), produto)
@@ -36,9 +36,7 @@ export default async function HomePage() {
 
   const produtosSubgrupo24 = Array.from(produtosMap.values())
   const origemSubgrupo24 = produtosSubgrupo24.length
-    ? subgrupoDireto?.produtos?.length
-      ? 'rota dedicada'
-      : 'rota generica'
+    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
 
   return (
