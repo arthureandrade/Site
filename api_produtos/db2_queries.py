@@ -211,6 +211,47 @@ def buscar_produto_db2(conn, produto_id: int) -> Optional[dict]:
     return dict(zip(colunas, row))
 
 
+def listar_produtos_catalogo_por_subgrupo_db2(
+    conn,
+    subgrupo: int,
+    em_estoque: Optional[bool] = None,
+    com_preco: bool = False,
+    limit: int = 24,
+) -> tuple[int, list[dict]]:
+    """
+    Busca os IDs na DBA.PRODUTO pelo subgrupo e monta a lista final usando o
+    mesmo formato do catálogo.
+    """
+    limit = max(1, min(int(limit), 200))
+    sql_ids = f"""
+    SELECT p.IDPRODUTO AS id
+    FROM DBA.PRODUTO p
+    WHERE COALESCE(p.IDSUBGRUPO, 0) = ?
+    ORDER BY p.DESCRCOMPRODUTO
+    FETCH FIRST {limit} ROWS ONLY
+    """
+
+    cursor = conn.cursor()
+    cursor.execute(sql_ids, [int(subgrupo)])
+    ids = [int(row[0]) for row in cursor.fetchall()]
+    produtos: list[dict] = []
+
+    for produto_id in ids:
+        item = buscar_produto_db2(conn, produto_id)
+        if not item:
+            continue
+        if com_preco and float(item.get("preco") or 0) <= 0:
+            continue
+        estoque = float(item.get("estoque") or 0)
+        if em_estoque is True and estoque <= 0:
+            continue
+        if em_estoque is False and estoque > 0:
+            continue
+        produtos.append(item)
+
+    return len(produtos), produtos
+
+
 def listar_produtos_destaque_db2(
     conn,
     limit: int = 8,

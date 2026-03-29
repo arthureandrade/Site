@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ProductCard from '@/components/ProductCard'
 import HeroCarousel from '@/components/HeroCarousel'
-import { getHomeConfig, getProdutos, getProdutosDestaque } from '@/lib/api'
+import { getHomeConfig, getProdutos, getProdutosDestaque, getProdutosCatalogoPorSubgrupo } from '@/lib/api'
 
 export const metadata = {
   title: 'Galpao do Aco | Material de construcao, ferragens e aco',
@@ -60,7 +60,7 @@ export default async function HomePage() {
   const [config, destaqueData, subgrupo24Data, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
+    getProdutosCatalogoPorSubgrupo(24, { em_estoque: true, com_preco: false, limit: 24 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])
@@ -69,8 +69,7 @@ export default async function HomePage() {
   const featured = escolherProdutos(config, 'featured', destaques.slice(0, 10))
   const bestSellers = escolherProdutos(config, 'best_sellers', destaques.slice(0, 10))
   const offers = escolherProdutos(config, 'offers', destaqueData.produtos?.slice(2, 12) || [])
-  const produtosSubgrupo24 = subgrupo24Data.produtos || []
-  const destaqueSubgrupo = produtosSubgrupo24.filter((produto) => Number(produto.subgrupo || 0) === 24)
+  const destaqueSubgrupo = subgrupo24Data.produtos || []
   const estruturas = escolherProdutos(config, 'estruturas', estruturasData.produtos || [])
   const ferragens = escolherProdutos(config, 'ferragens', ferragensData.produtos || [])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
