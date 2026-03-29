@@ -182,3 +182,80 @@ def buscar_produto_db2(conn, produto_id: int) -> Optional[dict]:
 
     colunas = [col[0].lower() for col in cursor.description]
     return dict(zip(colunas, row))
+
+
+def listar_produtos_destaque_db2(
+    conn,
+    limit: int = 8,
+    meses: int = 3,
+    preco_min: float = 100.0,
+) -> tuple[int, list[dict]]:
+    """
+    Produtos em destaque por maior faturamento recente.
+
+    Usa a mesma base sintetica de vendas dos relatorios WAHA, com janela de meses
+    configuravel e filtro de preco minimo atual.
+    """
+    meses = max(1, int(meses))
+    limit = max(1, min(int(limit), 24))
+    preco_min_centavos = int(round(float(preco_min) * 100))
+
+    sql = f"""
+    WITH vendas AS (
+        SELECT
+            m.IDPRODUTO                                   AS idproduto,
+            DECIMAL(SUM(m.VALVENDA) / 100.0, 15, 2)       AS faturamento_3m,
+            DECIMAL(SUM(m.QTDVENDA) / 1000.0, 15, 3)      AS quantidade_vendida_3m
+        FROM DBA.ESTOQUE_SINTETICO m
+        WHERE m.DTMOVIMENTO >= CURRENT DATE - {meses} MONTHS
+          AND m.IDLOCALESTOQUE IN (1, 2)
+          AND m.QTDVENDA > 0
+        GROUP BY m.IDPRODUTO
+    )
+    SELECT
+        p.IDPRODUTO                                      AS id,
+        TRIM(p.DESCRCOMPRODUTO)                          AS nome,
+        COALESCE(TRIM(pg.SUBDESCRICAO), '')              AS descricao,
+        COALESCE(TRIM(p.FABRICANTE), '')                 AS marca,
+        COALESCE(ppd.PRECOVENDA, 0) / 100.0              AS preco,
+        COALESCE(est.estoque_total, 0)                   AS estoque,
+        COALESCE(v.faturamento_3m, 0)                    AS faturamento_3m,
+        COALESCE(v.quantidade_vendida_3m, 0)             AS quantidade_vendida_3m
+    FROM vendas v
+    INNER JOIN DBA.PRODUTO p
+        ON p.IDPRODUTO = v.idproduto
+    INNER JOIN DBA.PRODUTO_GRADE pg
+        ON  pg.IDPRODUTO    = p.IDPRODUTO
+        AND pg.IDSUBPRODUTO = 1
+        AND pg.FLAGINATIVO  = 'F'
+    LEFT JOIN (
+        SELECT a.IDPRODUTO, a.PRECOVENDA
+        FROM DBA.PRODUTO_PRECO_DIA a
+        INNER JOIN (
+            SELECT IDPRODUTO, MAX(DTVIGENCIA) AS max_dt
+            FROM   DBA.PRODUTO_PRECO_DIA
+            WHERE  TIPOPRECO = 'V'
+            GROUP  BY IDPRODUTO
+        ) latest
+            ON  a.IDPRODUTO  = latest.IDPRODUTO
+            AND a.DTVIGENCIA = latest.max_dt
+        WHERE a.TIPOPRECO = 'V'
+    ) ppd
+        ON ppd.IDPRODUTO = p.IDPRODUTO
+    LEFT JOIN (
+        SELECT IDPRODUTO, SUM(QTDATUALESTOQUE) AS estoque_total
+        FROM   DBA.ESTOQUE_SALDO_ATUAL
+        GROUP  BY IDPRODUTO
+    ) est
+        ON est.IDPRODUTO = p.IDPRODUTO
+    WHERE COALESCE(ppd.PRECOVENDA, 0) >= {preco_min_centavos}
+      AND COALESCE(est.estoque_total, 0) > 0
+    ORDER BY v.faturamento_3m DESC, v.quantidade_vendida_3m DESC
+    FETCH FIRST {limit} ROWS ONLY
+    """
+
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    colunas = [col[0].lower() for col in cursor.description]
+    produtos = [dict(zip(colunas, row)) for row in cursor.fetchall()]
+    return len(produtos), produtos

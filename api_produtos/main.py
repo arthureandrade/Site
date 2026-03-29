@@ -29,7 +29,7 @@ from database import engine, get_db, get_db2, Base
 import models
 import schemas
 from auth import verify_api_key
-from db2_queries import listar_produtos_db2, buscar_produto_db2
+from db2_queries import listar_produtos_db2, buscar_produto_db2, listar_produtos_destaque_db2
 
 # Cria a tabela de fotos no SQLite local ao iniciar
 Base.metadata.create_all(bind=engine)
@@ -87,6 +87,8 @@ def _produto_dict_to_response(
         preco=float(dados.get("preco") or 0),
         marca=dados.get("marca") or "",
         estoque=int(dados.get("estoque") or 0),
+        faturamento_3m=float(dados.get("faturamento_3m") or 0),
+        quantidade_vendida_3m=float(dados.get("quantidade_vendida_3m") or 0),
         foto_url=foto_url,
         criado_em=None,
         atualizado_em=None,
@@ -104,6 +106,50 @@ def root():
         "mensagem": "API de Produtos — Galpão do Aço",
         "fonte_dados": "IBM DB2 / CISSERP",
     }
+
+
+@app.get(
+    "/produtos/destaques",
+    response_model=schemas.ProdutoListResponse,
+    tags=["Produtos"],
+    summary="Lista produtos em destaque por faturamento recente",
+)
+def listar_produtos_destaque(
+    limit: int = Query(8, ge=1, le=24, description="Quantidade maxima de produtos"),
+    meses: int = Query(3, ge=1, le=12, description="Janela de meses para faturamento"),
+    preco_min: float = Query(100, ge=0, description="Preco minimo atual do produto"),
+    db: Session = Depends(get_db),
+):
+    try:
+        with get_db2() as conn:
+            total, lista = listar_produtos_destaque_db2(
+                conn,
+                limit=limit,
+                meses=meses,
+                preco_min=preco_min,
+            )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"Erro ao conectar ao banco de dados (DB2): {e}",
+        )
+
+    ids = [p["id"] for p in lista]
+    fotos_locais: dict[int, str] = {}
+    if ids:
+        registros = (
+            db.query(models.FotoProduto)
+            .filter(models.FotoProduto.idproduto.in_(ids))
+            .all()
+        )
+        fotos_locais = {r.idproduto: r.foto_url for r in registros}
+
+    produtos_response = [
+        _produto_dict_to_response(p, fotos_locais.get(p["id"]))
+        for p in lista
+    ]
+
+    return {"total": total, "produtos": produtos_response}
 
 
 @app.get(
