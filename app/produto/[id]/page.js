@@ -34,6 +34,7 @@ export default async function ProdutoPage({ params }) {
   const produto = await getProduto(params.id)
   if (!produto) notFound()
 
+  const ocultarComercial = Number(produto.secao || 0) === 6
   const desconto = obterDescontoPromocional(produto)
   const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
   const foto = imagemUrl(produto.foto_url)
@@ -141,9 +142,9 @@ export default async function ProdutoPage({ params }) {
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
                 {[
-                  temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
+                  ocultarComercial ? 'Condicoes comerciais sob consulta' : temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
                   'Compra rapida pelo WhatsApp',
-                  'Parcelamento em 10x no valor cheio',
+                  ocultarComercial ? 'Atendimento para aco e estruturas' : 'Parcelamento em 10x no valor cheio',
                 ].map((item) => (
                   <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-slate-700">
                     {item}
@@ -157,9 +158,21 @@ export default async function ProdutoPage({ params }) {
 
               <div className="mt-7 rounded-[28px] border border-red-100 bg-gradient-to-br from-white via-white to-red-50 p-6 shadow-sm">
                 <div className="mb-1 text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
-                  Condicao comercial
+                  {ocultarComercial ? 'Atendimento comercial' : 'Condicao comercial'}
                 </div>
-                {desconto > 0 ? (
+                {ocultarComercial ? (
+                  <>
+                    <div className="mt-2 text-4xl font-black leading-tight text-gray-900">
+                      Preco sob consulta
+                    </div>
+                    <div className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
+                      Produto da secao 6 com atendimento consultivo
+                    </div>
+                    <div className="mt-4 text-base font-semibold text-slate-700">
+                      Fale com a equipe para cotacao, disponibilidade e prazo.
+                    </div>
+                  </>
+                ) : desconto > 0 ? (
                   <>
                     <div className="text-sm font-black uppercase tracking-[0.18em] text-gray-400 line-through">
                       De: {formatarPreco(produto.preco)}
@@ -185,21 +198,23 @@ export default async function ProdutoPage({ params }) {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center gap-3">
-                <div className={`h-3 w-3 rounded-full ${temEstoque ? 'bg-green-500' : 'bg-red-400'}`} />
-                <span className={`text-sm font-semibold ${temEstoque ? 'text-green-700' : 'text-red-600'}`}>
-                  {temEstoque
-                    ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponiveis`
-                    : 'Produto temporariamente indisponivel'}
-                </span>
-              </div>
+              {!ocultarComercial && (
+                <div className="mt-6 flex items-center gap-3">
+                  <div className={`h-3 w-3 rounded-full ${temEstoque ? 'bg-green-500' : 'bg-red-400'}`} />
+                  <span className={`text-sm font-semibold ${temEstoque ? 'text-green-700' : 'text-red-600'}`}>
+                    {temEstoque
+                      ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponiveis`
+                      : 'Produto temporariamente indisponivel'}
+                  </span>
+                </div>
+              )}
 
               <div className="mt-8">
-                {temEstoque && (
+                {(temEstoque || ocultarComercial) && (
                   <ProductPurchaseActions
                     produto={produto}
                     comprarHref={linkWpp}
-                    comprarLabel="Comprar"
+                    comprarLabel={ocultarComercial ? 'Solicitar cotacao' : 'Comprar'}
                     fullWidth
                   />
                 )}
@@ -239,7 +254,11 @@ export default async function ProdutoPage({ params }) {
           {similares.length ? (
             <div className="mt-6 grid grid-cols-2 gap-4 xl:grid-cols-4">
               {similares.map((item) => (
-                <ProductCard key={`similar-${item.id}`} produto={item} />
+                <ProductCard
+                  key={`similar-${item.id}`}
+                  produto={item}
+                  ocultarPreco={Number(item.secao || 0) === 6}
+                />
               ))}
             </div>
           ) : (

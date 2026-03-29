@@ -89,9 +89,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="tel:9532240115" className="hidden rounded-xl border border-primary px-6 py-4 text-base font-black uppercase tracking-wide text-primary transition hover:bg-red-50 lg:inline-flex">
-            {telefone}
-          </a>
+          <Link
+            href="/produtos?categoria=ferro_aco"
+            className="hidden items-center justify-center rounded-2xl bg-gradient-to-r from-primary via-red-600 to-red-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_16px_30px_rgba(185,28,28,0.28)] transition hover:scale-[1.02] hover:shadow-[0_20px_36px_rgba(185,28,28,0.34)] lg:inline-flex"
+          >
+            Comprar Aco
+          </Link>
           <button
             className="rounded-xl border border-gray-200 p-2.5 text-gray-700 md:hidden"
             onClick={() => setMenuOpen((value) => !value)}

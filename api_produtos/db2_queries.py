@@ -88,7 +88,7 @@ LEFT JOIN (
     ON pep.IDPRODUTO = p.IDPRODUTO
 -- Estoque total (soma de todas as empresas e locais)
 LEFT JOIN (
-    SELECT IDPRODUTO, SUM(QTDATUALESTOQUE) AS estoque_total
+    SELECT IDPRODUTO, DECIMAL(COALESCE(SUM(QTDATUALESTOQUE), 0) / 1000, 15, 3) AS estoque_total
     FROM   DBA.ESTOQUE_SALDO_ATUAL
     GROUP  BY IDPRODUTO
 ) est
@@ -97,7 +97,7 @@ LEFT JOIN (
 
 # Filtro de marca (adicionado dinamicamente)
 _FILTRO_MARCA      = " AND UPPER(p.FABRICANTE) LIKE UPPER(?)"
-_FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?))"
+_FILTRO_BUSCA      = " AND (UPPER(p.DESCRCOMPRODUTO) LIKE UPPER(?) OR UPPER(COALESCE(pg.SUBDESCRICAO, '')) LIKE UPPER(?) OR RTRIM(CHAR(p.IDPRODUTO)) LIKE ?)"
 _FILTRO_SECAO      = " AND COALESCE(p.IDSECAO, 0) = ?"
 _FILTRO_GRUPO      = " AND COALESCE(p.IDGRUPO, 0) = ?"
 _FILTRO_SUBGRUPO   = " AND COALESCE(p.IDSUBGRUPO, 0) = ?"
@@ -134,7 +134,7 @@ def _build_where_params(
 
     if busca:
         where += _FILTRO_BUSCA
-        params.extend([f"%{busca}%", f"%{busca}%"])
+        params.extend([f"%{busca}%", f"%{busca}%", f"%{busca}%"])
 
     if marca:
         where += _FILTRO_MARCA
@@ -314,7 +314,7 @@ def listar_produtos_destaque_db2(
         SELECT
             m.IDPRODUTO                                   AS idproduto,
             DECIMAL(SUM(m.VALVENDA) / 100.0, 15, 2)       AS faturamento_3m,
-            DECIMAL(SUM(m.QTDVENDA) / 1000.0, 15, 3)      AS quantidade_vendida_3m
+            DECIMAL(COALESCE(SUM(m.QTDVENDA), 0) / 1000, 15, 3) AS quantidade_vendida_3m
         FROM DBA.ESTOQUE_SINTETICO m
         WHERE m.DTMOVIMENTO >= CURRENT DATE - {meses} MONTHS
           AND m.IDLOCALESTOQUE IN (1, 2)
@@ -352,7 +352,7 @@ def listar_produtos_destaque_db2(
     ) ppd
         ON ppd.IDPRODUTO = p.IDPRODUTO
     LEFT JOIN (
-        SELECT IDPRODUTO, SUM(QTDATUALESTOQUE) AS estoque_total
+        SELECT IDPRODUTO, DECIMAL(COALESCE(SUM(QTDATUALESTOQUE), 0) / 1000, 15, 3) AS estoque_total
         FROM   DBA.ESTOQUE_SALDO_ATUAL
         GROUP  BY IDPRODUTO
     ) est

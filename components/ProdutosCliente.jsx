@@ -70,6 +70,10 @@ function calcularScoreComercial(produto) {
   return (preco + estoque) / 2
 }
 
+function buscaEhCodigo(busca) {
+  return /^\d+$/.test(String(busca || '').trim())
+}
+
 export default function ProdutosCliente({
   initialBusca = '',
   initialMarca = '',
@@ -103,6 +107,7 @@ export default function ProdutosCliente({
   const fetchProdutos = useCallback(async (_p = 0, busca_ = '', marca_ = '', est = true) => {
     setLoading(true)
     setErro(false)
+    const ignorarEstoquePorCodigo = buscaEhCodigo(busca_)
 
     try {
       if (categoriaEspecial === 'ferro_aco') {
@@ -112,7 +117,7 @@ export default function ProdutosCliente({
           com_preco: 'false',
           secao: String(SECAO_FERRO_ACO),
         })
-        if (est != null) qs.set('em_estoque', est)
+        if (!ignorarEstoquePorCodigo && est != null) qs.set('em_estoque', est)
 
         const res = await fetch(`${apiUrl}/produtos?${qs}`)
         if (!res.ok) throw new Error()
@@ -141,7 +146,7 @@ export default function ProdutosCliente({
         if (marca_) qs.set('marca', marca_)
         if (secaoEspecial) qs.set('secao', String(secaoEspecial))
         if (subgrupoEspecial) qs.set('subgrupo', String(subgrupoEspecial))
-        if (est != null) qs.set('em_estoque', est)
+        if (!ignorarEstoquePorCodigo && est != null) qs.set('em_estoque', est)
 
         const res = await fetch(`${apiUrl}/produtos?${qs}`)
         if (!res.ok) throw new Error()
