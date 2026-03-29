@@ -60,7 +60,7 @@ export default async function HomePage() {
   const [config, destaqueData, subgrupo24Data, estruturasData, ferragensData] = await Promise.all([
     getHomeConfig(),
     getProdutosDestaque({ limit: 12, meses: 3, preco_min: 100 }),
-    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: true, limit: 24 }),
+    getProdutos({ subgrupo: 24, em_estoque: true, com_preco: false, limit: 24 }),
     getProdutos({ busca: 'estrutura', em_estoque: true, com_preco: true, limit: 10 }),
     getProdutos({ busca: 'ferragem', em_estoque: true, com_preco: true, limit: 10 }),
   ])

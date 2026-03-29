@@ -37,11 +37,22 @@ SELECT
     COALESCE(ppd.PRECOVENDA, 0)                    AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
 FROM DBA.PRODUTO p
--- Somente o item principal de cada produto (IDSUBPRODUTO=1) e apenas ativos
-INNER JOIN DBA.PRODUTO_GRADE pg
-    ON  pg.IDPRODUTO    = p.IDPRODUTO
-    AND pg.IDSUBPRODUTO = 1
-    AND pg.FLAGINATIVO  = 'F'
+LEFT JOIN (
+    SELECT base.IDPRODUTO, base.SUBDESCRICAO
+    FROM (
+        SELECT
+            pg.IDPRODUTO,
+            pg.SUBDESCRICAO,
+            ROW_NUMBER() OVER (
+                PARTITION BY pg.IDPRODUTO
+                ORDER BY CASE WHEN pg.IDSUBPRODUTO = 1 THEN 0 ELSE 1 END, pg.IDSUBPRODUTO
+            ) AS rn
+        FROM DBA.PRODUTO_GRADE pg
+        WHERE pg.FLAGINATIVO <> 'T'
+    ) base
+    WHERE base.rn = 1
+) pg
+    ON pg.IDPRODUTO = p.IDPRODUTO
 -- Preço varejo mais recente
 LEFT JOIN (
     SELECT a.IDPRODUTO, a.PRECOVENDA
