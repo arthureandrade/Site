@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
-import { formatarPreco } from '@/lib/api'
+import { formatarPreco, getProdutos } from '@/lib/api'
 import { deveExibirNoVendedor, numeroSecao } from '@/lib/catalogo'
 
 const LIMIT = 100
@@ -670,8 +670,6 @@ function CatalogoCatalogo() {
   const [qtdMap, setQtdMap] = useState({})
   const [adicionados, setAdicionados] = useState({})
 
-  const apiUrl = (typeof window !== 'undefined' && window.__ENV_API_URL__) || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
-
   const aplicarFiltros = useCallback((catalogo, p = 0, buscaAtual = '', secaoAtual = '') => {
     const termo = String(buscaAtual || '').toLowerCase().trim()
     const filtrados = catalogo.filter((produto) => {
@@ -689,10 +687,12 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
-      const qs = new URLSearchParams({ skip: 0, limit: 5000, todas_secoes: '1' })
-      const res = await fetch(`${apiUrl}/produtos?${qs}`)
-      if (!res.ok) throw new Error()
-      const data = await res.json()
+      const data = await getProdutos({
+        skip: 0,
+        limit: 5000,
+        todas_secoes: 1,
+        noStore: true,
+      })
       const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
       setBase(catalogo)
       setSecoes([...new Set(catalogo.map((item) => numeroSecao(item.secao)).filter((secao) => secao != null))].sort((a, b) => a - b))
@@ -700,10 +700,24 @@ function CatalogoCatalogo() {
     } finally {
       setLoading(false)
     }
-  }, [apiUrl, aplicarFiltros])
+  }, [aplicarFiltros])
 
   useEffect(() => {
     fetchProdutos()
+  }, [fetchProdutos])
+
+  useEffect(() => {
+    function recarregarAoVoltar() {
+      if (document.visibilityState === 'hidden') return
+      fetchProdutos()
+    }
+
+    window.addEventListener('focus', recarregarAoVoltar)
+    document.addEventListener('visibilitychange', recarregarAoVoltar)
+    return () => {
+      window.removeEventListener('focus', recarregarAoVoltar)
+      document.removeEventListener('visibilitychange', recarregarAoVoltar)
+    }
   }, [fetchProdutos])
 
   useEffect(() => {
@@ -960,4 +974,5 @@ export default function VendedorView() {
     </VendedorProvider>
   )
 }
+
 
