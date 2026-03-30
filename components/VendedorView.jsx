@@ -689,8 +689,19 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
-      const qs = new URLSearchParams({ skip: 0, limit: 5000, todas_secoes: '1' })
-      const res = await fetch(`${apiUrl}/produtos?${qs}`)
+      const qs = new URLSearchParams({
+        skip: 0,
+        limit: 5000,
+        todas_secoes: '1',
+        _ts: String(Date.now()),
+      })
+      const res = await fetch(`${apiUrl}/produtos?${qs}`, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache',
+          Pragma: 'no-cache',
+        },
+      })
       if (!res.ok) throw new Error()
       const data = await res.json()
       const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
@@ -704,6 +715,20 @@ function CatalogoCatalogo() {
 
   useEffect(() => {
     fetchProdutos()
+  }, [fetchProdutos])
+
+  useEffect(() => {
+    function recarregarAoFocar() {
+      if (document.visibilityState && document.visibilityState !== 'visible') return
+      fetchProdutos()
+    }
+
+    window.addEventListener('focus', recarregarAoFocar)
+    document.addEventListener('visibilitychange', recarregarAoFocar)
+    return () => {
+      window.removeEventListener('focus', recarregarAoFocar)
+      document.removeEventListener('visibilitychange', recarregarAoFocar)
+    }
   }, [fetchProdutos])
 
   useEffect(() => {
