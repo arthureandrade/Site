@@ -106,6 +106,102 @@ function PainelOrcamento({ onClose }) {
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(montarMensagem())}`, '_blank')
   }
 
+  function gerarPdf() {
+    if (items.length === 0) return
+
+    const data = new Date().toLocaleDateString('pt-BR')
+    const linhas = items.map((item) => {
+      const desc = Math.max(item.desconto || 0, descontoGlobal)
+      const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
+      const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
+      return `
+        <tr>
+          <td>${item.id}</td>
+          <td>${item.nome}</td>
+          <td>${item.qty}${item.unidade || 'UN'}</td>
+          <td>${precoUnit}</td>
+          <td>${desc > 0 ? `${desc}%` : '-'}</td>
+          <td>${subtotal}</td>
+        </tr>
+      `
+    }).join('')
+
+    const html = `
+      <!doctype html>
+      <html lang="pt-BR">
+        <head>
+          <meta charset="utf-8" />
+          <title>Orcamento Galpao do Aco</title>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 32px; color: #111827; }
+            .topo { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+            .marca { font-size: 28px; font-weight: 800; color: #7f1d1d; text-transform: uppercase; }
+            .sub { color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+            .bloco { margin-bottom: 20px; }
+            table { width: 100%; border-collapse: collapse; font-size: 12px; }
+            th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; vertical-align: top; }
+            th { background: #f9fafb; text-transform: uppercase; font-size: 11px; letter-spacing: .08em; }
+            .totais { margin-top: 18px; margin-left: auto; width: 320px; }
+            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #e5e7eb; }
+            .totais div.total { font-weight: 800; font-size: 16px; color: #111827; }
+            .rodape { margin-top: 28px; color: #6b7280; font-size: 12px; }
+            @media print {
+              body { padding: 16px; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="topo">
+            <div>
+              <div class="marca">Galpao do Aco</div>
+              <div class="sub">Orcamento comercial</div>
+            </div>
+            <div class="sub">Data: ${data}</div>
+          </div>
+
+          <div class="bloco">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cod.</th>
+                  <th>Produto</th>
+                  <th>Qtd</th>
+                  <th>Unit.</th>
+                  <th>Desc.</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${linhas}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="totais">
+            <div><span>Subtotal</span><strong>${formatarPreco(subtotalSemDesc)}</strong></div>
+            ${totalDesconto > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(totalDesconto)}</strong></div>` : ''}
+            <div class="total"><span>Total</span><strong>${formatarPreco(totalComDesc)}</strong></div>
+          </div>
+
+          <div class="rodape">
+            Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.<br />
+            Galpao do Aco | (95) 3224-0115
+          </div>
+        </body>
+      </html>
+    `
+
+    const popup = window.open('', '_blank', 'width=980,height=720')
+    if (!popup) return
+    popup.document.open()
+    popup.document.write(html)
+    popup.document.close()
+    popup.focus()
+    setTimeout(() => {
+      popup.print()
+    }, 300)
+  }
+
   return (
     <div className="flex h-full flex-col">
       <div className="flex items-center justify-between border-b border-gray-800 bg-brand px-4 py-3">
@@ -257,6 +353,9 @@ function PainelOrcamento({ onClose }) {
           <div className="space-y-2 px-4 pb-4 pt-1">
             <button onClick={enviarOrcamento} className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 font-bold text-white transition-all hover:bg-[#1ebe5a] active:scale-95">
               Enviar orcamento
+            </button>
+            <button onClick={gerarPdf} className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
+              Gerar PDF
             </button>
             <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs text-gray-400 transition-colors hover:text-red-500">
               Limpar orcamento

@@ -88,7 +88,7 @@ export default async function HomePage() {
         descricao="Produtos do subgrupo 26 em destaque para dar mais velocidade na compra e trazer logo na entrada do site o que mais vende."
         href="/produtos?subgrupo=26"
         cta="Ver mais vendidos"
-        desconto={0}
+        desconto={12}
         badge="Giro forte"
         vazioTitulo="Nao ha item de giro forte no momento."
         resumo={`${produtosSubgrupo26.length} item${produtosSubgrupo26.length !== 1 ? 's' : ''} com giro forte em destaque para acelerar a compra.`}
@@ -109,7 +109,7 @@ export default async function HomePage() {
         descricao="Produtos do subgrupo 27 reunidos em uma vitrine mais robusta para destacar ferramentas de uso profissional."
         href="/produtos?subgrupo=27"
         cta="Ver ferramentas"
-        desconto={0}
+        desconto={12}
         badge="Profissional"
         vazioTitulo="Nao ha ferramenta profissional em destaque no momento."
         resumo={`${produtosSubgrupo27.length} ferramenta${produtosSubgrupo27.length !== 1 ? 's' : ''} profissional${produtosSubgrupo27.length !== 1 ? 'is' : ''} em destaque na vitrine.`}
