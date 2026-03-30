@@ -85,7 +85,7 @@ export default async function HomePage() {
         origem={origemSubgrupo26}
         label="Mais vendidos da obra 🔥"
         titulo="Os itens que mais giram para obra e reposicao rapida"
-        descricao="Produtos do subgrupo 26 em destaque para dar mais velocidade na compra e trazer logo na entrada do site o que mais vende."
+        descricao="Os produtos que mais saem para obra, reforma e manutencao, reunidos para facilitar sua compra."
         href="/produtos?subgrupo=26"
         cta="Ver mais vendidos"
         desconto={12}
@@ -97,6 +97,7 @@ export default async function HomePage() {
       <VitrineSubgrupo24
         produtos={produtosSubgrupo24}
         origem={origemSubgrupo24}
+        descricao="Ofertas online selecionadas para voce economizar e comprar com mais agilidade."
         resumo={`${produtosSubgrupo24.length} oferta${produtosSubgrupo24.length !== 1 ? 's' : ''} em destaque carregada${produtosSubgrupo24.length !== 1 ? 's' : ''} para compra online.`}
       />
 
@@ -106,7 +107,7 @@ export default async function HomePage() {
         origem={origemSubgrupo27}
         label="Ferramentas profissionais"
         titulo="Linha profissional para uso intenso e compra mais tecnica"
-        descricao="Produtos do subgrupo 27 reunidos em uma vitrine mais robusta para destacar ferramentas de uso profissional."
+        descricao="Ferramentas escolhidas para quem precisa de desempenho, durabilidade e resultado no dia a dia."
         href="/produtos?subgrupo=27"
         cta="Ver ferramentas"
         desconto={12}

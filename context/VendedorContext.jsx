@@ -41,16 +41,25 @@ function orcamentoReducer(state, action) {
       }
     case 'SET_DESCONTO_GLOBAL':
       return { ...state, descontoGlobal: Math.min(15, Math.max(0, Number(action.desconto) || 0)) }
+    case 'SET_OBSERVACAO':
+      return { ...state, observacao: String(action.observacao || '') }
     case 'CLEAR':
-      return { ...state, items: [] }
+      return { ...state, items: [], descontoGlobal: 0, observacao: '' }
     case 'INIT':
       return { ...initialState, ...action.state }
+    case 'LOAD_ORCAMENTO':
+      return {
+        ...state,
+        items: Array.isArray(action.orcamento?.items) ? action.orcamento.items : [],
+        descontoGlobal: Number(action.orcamento?.descontoGlobal) || 0,
+        observacao: String(action.orcamento?.observacao || ''),
+      }
     default:
       return state
   }
 }
 
-const initialState = { items: [], descontoGlobal: 0 }
+const initialState = { items: [], descontoGlobal: 0, observacao: '' }
 
 export function VendedorProvider({ children }) {
   const [state, dispatch] = useReducer(orcamentoReducer, initialState)

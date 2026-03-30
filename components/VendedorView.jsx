@@ -1,36 +1,127 @@
-'use client'
+﻿'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
 import { formatarPreco } from '@/lib/api'
 import { deveExibirNoVendedor, numeroSecao } from '@/lib/catalogo'
 
-const SENHA_CORRETA = 'venda123'
 const LIMIT = 100
+const STORAGE_USERS = 'vendedor_users'
+const STORAGE_SESSION = 'vendedor_session'
+const STORAGE_QUOTES = 'vendedor_orcamentos_salvos'
+const STORAGE_SEQ = 'vendedor_orcamentos_seq'
+
+function usuariosPadrao() {
+  return [{ login: 'vendedor', senha: 'venda123', nome: 'Vendedor Padrao' }]
+}
+
+function carregarUsuarios() {
+  try {
+    const raw = localStorage.getItem(STORAGE_USERS)
+    const lista = raw ? JSON.parse(raw) : []
+    if (Array.isArray(lista) && lista.length) return lista
+  } catch {}
+  const padrao = usuariosPadrao()
+  localStorage.setItem(STORAGE_USERS, JSON.stringify(padrao))
+  return padrao
+}
+
+function salvarUsuarios(usuarios) {
+  localStorage.setItem(STORAGE_USERS, JSON.stringify(usuarios))
+}
+
+function carregarOrcamentosSalvos() {
+  try {
+    const raw = localStorage.getItem(STORAGE_QUOTES)
+    const lista = raw ? JSON.parse(raw) : []
+    return Array.isArray(lista) ? lista : []
+  } catch {
+    return []
+  }
+}
+
+function salvarOrcamentosSalvos(lista) {
+  localStorage.setItem(STORAGE_QUOTES, JSON.stringify(lista))
+}
+
+function proximoNumeroOrcamento() {
+  const atual = Number(localStorage.getItem(STORAGE_SEQ) || '0') || 0
+  const proximo = atual + 1
+  localStorage.setItem(STORAGE_SEQ, String(proximo))
+  return proximo
+}
+
+function formatarNumeroOrcamento(numero) {
+  return String(numero).padStart(5, '0')
+}
+
+function dataHoraAtual() {
+  const agora = new Date()
+  return {
+    data: agora.toLocaleDateString('pt-BR'),
+    dataHora: agora.toLocaleString('pt-BR'),
+  }
+}
+
+function escaparHtml(texto) {
+  return String(texto || '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+}
 
 function TelaLogin({ onLogin }) {
+  const [modo, setModo] = useState('login')
+  const [login, setLogin] = useState('')
   const [senha, setSenha] = useState('')
-  const [erro, setErro] = useState(false)
+  const [nome, setNome] = useState('')
+  const [erro, setErro] = useState('')
   const inputRef = useRef(null)
 
   useEffect(() => {
     inputRef.current?.focus()
-  }, [])
+  }, [modo])
 
   function handleSubmit(e) {
     e.preventDefault()
-    if (senha === SENHA_CORRETA) {
-      onLogin()
+    const usuarioLogin = login.trim().toLowerCase()
+    if (!usuarioLogin || !senha.trim()) {
+      setErro('Preencha login e senha.')
       return
     }
-    setErro(true)
-    setSenha('')
-    setTimeout(() => setErro(false), 2000)
+
+    const usuarios = carregarUsuarios()
+    if (modo === 'login') {
+      const encontrado = usuarios.find((u) => u.login === usuarioLogin && u.senha === senha)
+      if (!encontrado) {
+        setErro('Login ou senha incorretos.')
+        setSenha('')
+        return
+      }
+      localStorage.setItem(STORAGE_SESSION, JSON.stringify(encontrado))
+      onLogin(encontrado)
+      return
+    }
+
+    if (!nome.trim()) {
+      setErro('Informe o nome do vendedor.')
+      return
+    }
+    if (usuarios.some((u) => u.login === usuarioLogin)) {
+      setErro('Esse login ja esta cadastrado.')
+      return
+    }
+    const novo = { login: usuarioLogin, senha, nome: nome.trim() }
+    salvarUsuarios([...usuarios, novo])
+    localStorage.setItem(STORAGE_SESSION, JSON.stringify(novo))
+    onLogin(novo)
   }
 
   return (
     <div className="flex min-h-[70vh] items-center justify-center px-4">
-      <div className="w-full max-w-sm rounded-2xl border border-gray-800 bg-brand p-8 shadow-2xl">
+      <div className="w-full max-w-md rounded-2xl border border-gray-800 bg-brand p-8 shadow-2xl">
         <div className="mb-6 flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded bg-primary">
             <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,13 +134,67 @@ function TelaLogin({ onLogin }) {
           </div>
         </div>
 
+        <div className="mb-5 flex rounded-xl border border-gray-800 bg-gray-900 p-1">
+          <button
+            type="button"
+            onClick={() => {
+              setModo('login')
+              setErro('')
+              setSenha('')
+              setNome('')
+            }}
+            className={`flex-1 rounded-lg px-3 py-2 text-xs font-black uppercase tracking-wide transition ${modo === 'login' ? 'bg-primary text-white' : 'text-gray-400'}`}
+          >
+            Login
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setModo('cadastro')
+              setErro('')
+              setSenha('')
+            }}
+            className={`flex-1 rounded-lg px-3 py-2 text-xs font-black uppercase tracking-wide transition ${modo === 'cadastro' ? 'bg-primary text-white' : 'text-gray-400'}`}
+          >
+            Cadastro
+          </button>
+        </div>
+
         <form onSubmit={handleSubmit} className="space-y-4">
+          {modo === 'cadastro' && (
+            <div>
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+                Nome do vendedor
+              </label>
+              <input
+                type="text"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                placeholder="Nome completo"
+                className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
+              />
+            </div>
+          )}
+
+          <div>
+            <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              Login
+            </label>
+            <input
+              ref={inputRef}
+              type="text"
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
+              placeholder="Digite o login"
+              className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
+            />
+          </div>
+
           <div>
             <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-gray-400">
               Senha de acesso
             </label>
             <input
-              ref={inputRef}
               type="password"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
@@ -58,14 +203,14 @@ function TelaLogin({ onLogin }) {
                 erro ? 'border-red-500' : 'border-gray-700 focus:border-primary'
               }`}
             />
-            {erro && <p className="mt-1.5 text-xs font-medium text-red-400">Senha incorreta. Tente novamente.</p>}
+            {erro && <p className="mt-1.5 text-xs font-medium text-red-400">{erro}</p>}
           </div>
 
           <button
             type="submit"
             className="w-full rounded-lg bg-primary py-3 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-red-700 active:scale-95"
           >
-            Entrar
+            {modo === 'login' ? 'Entrar' : 'Cadastrar e entrar'}
           </button>
         </form>
       </div>
@@ -73,13 +218,32 @@ function TelaLogin({ onLogin }) {
   )
 }
 
-function PainelOrcamento({ onClose }) {
-  const { items, dispatch, descontoGlobal, subtotalSemDesc, totalComDesc, totalDesconto, totalItens } = useVendedor()
+function PainelOrcamento({ onClose, usuario }) {
+  const { items, dispatch, descontoGlobal, subtotalSemDesc, totalComDesc, totalDesconto, totalItens, observacao } = useVendedor()
   const [wppDDD, setWppDDD] = useState('')
   const [wppNum, setWppNum] = useState('')
+  const [buscaSalva, setBuscaSalva] = useState('')
+  const [orcamentosSalvos, setOrcamentosSalvos] = useState([])
+  const [ultimoNumeroSalvo, setUltimoNumeroSalvo] = useState(null)
+
+  const orcamentosFiltrados = useMemo(() => {
+    const termo = String(buscaSalva || '').trim().toLowerCase()
+    const lista = usuario ? orcamentosSalvos.filter((orc) => orc.usuarioLogin === usuario.login) : orcamentosSalvos
+    if (!termo) return lista
+    return lista.filter((orc) =>
+      String(orc.numero).includes(termo) ||
+      String(orc.vendedorNome || '').toLowerCase().includes(termo) ||
+      String(orc.observacao || '').toLowerCase().includes(termo) ||
+      (orc.items || []).some((item) => String(item.nome || '').toLowerCase().includes(termo) || String(item.id || '').includes(termo))
+    )
+  }, [buscaSalva, orcamentosSalvos, usuario])
+
+  useEffect(() => {
+    setOrcamentosSalvos(carregarOrcamentosSalvos())
+  }, [])
 
   function montarMensagem() {
-    const data = new Date().toLocaleDateString('pt-BR')
+    const { data } = dataHoraAtual()
     const linhas = items.map((item) => {
       const desc = Math.max(item.desconto || 0, descontoGlobal)
       const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
@@ -89,39 +253,76 @@ function PainelOrcamento({ onClose }) {
 
     return (
       `*ORCAMENTO - GALPAO DO ACO*\n` +
-      `Data: ${data}\n\n` +
+      `Data: ${data}\n` +
+      `Vendedor: ${usuario?.nome || 'Equipe comercial'}\n\n` +
       `*Cod.* | *Produto* | *Qtd* | *Unit.* | *Desc.* | *Subtotal*\n` +
       linhas.join('\n') +
       `\n\n*Subtotal:* ${formatarPreco(subtotalSemDesc)}` +
       (totalDesconto > 0.01 ? `\n*Desconto:* ${formatarPreco(totalDesconto)}` : '') +
-      `\n*Total:* ${formatarPreco(totalComDesc)}\n\n` +
+      `\n*Total:* ${formatarPreco(totalComDesc)}` +
+      (observacao?.trim() ? `\n*Observacoes:* ${observacao.trim()}` : '') +
+      `\n\n` +
       `_Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque._\n` +
       `Galpao do Aco | (95) 3224-0115`
     )
   }
 
-  function enviarOrcamento() {
-    if (items.length === 0) return
-    const numero = wppDDD.length === 2 && wppNum.length >= 8 ? `55${wppDDD}${wppNum}` : '559532240115'
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(montarMensagem())}`, '_blank')
+  function salvarOrcamento() {
+    if (items.length === 0) return null
+    const numero = proximoNumeroOrcamento()
+    const payload = {
+      numero,
+      usuarioLogin: usuario?.login || '',
+      vendedorNome: usuario?.nome || 'Equipe comercial',
+      criadoEm: new Date().toISOString(),
+      items,
+      descontoGlobal,
+      subtotalSemDesc,
+      totalComDesc,
+      totalDesconto,
+      observacao,
+    }
+    const atualizados = [payload, ...carregarOrcamentosSalvos()]
+    salvarOrcamentosSalvos(atualizados)
+    setOrcamentosSalvos(atualizados)
+    setUltimoNumeroSalvo(numero)
+    return numero
   }
 
-  function gerarPdf() {
+  function enviarOrcamento() {
     if (items.length === 0) return
+    const numeroSalvo = salvarOrcamento()
+    const numero = wppDDD.length === 2 && wppNum.length >= 8 ? `55${wppDDD}${wppNum}` : '559532240115'
+    const mensagem = numeroSalvo ? `${montarMensagem()}\nNumero: ${formatarNumeroOrcamento(numeroSalvo)}` : montarMensagem()
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank')
+  }
 
-    const data = new Date().toLocaleDateString('pt-BR')
-    const linhas = items.map((item) => {
-      const desc = Math.max(item.desconto || 0, descontoGlobal)
+  function gerarPdf(orcamentoSalvo = null) {
+    if (!orcamentoSalvo && items.length === 0) return
+    const numero = orcamentoSalvo?.numero || salvarOrcamento()
+    const orcamento = orcamentoSalvo || {
+      numero,
+      vendedorNome: usuario?.nome || 'Equipe comercial',
+      items,
+      descontoGlobal,
+      subtotalSemDesc,
+      totalComDesc,
+      totalDesconto,
+      observacao,
+    }
+    const { data, dataHora } = dataHoraAtual()
+    const linhas = (orcamento.items || []).map((item) => {
+      const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
       const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
       const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
       return `
         <tr>
-          <td>${item.id}</td>
-          <td>${item.nome}</td>
-          <td>${item.qty}${item.unidade || 'UN'}</td>
-          <td>${precoUnit}</td>
-          <td>${desc > 0 ? `${desc}%` : '-'}</td>
-          <td>${subtotal}</td>
+          <td>${escaparHtml(item.id)}</td>
+          <td>${escaparHtml(item.nome)}</td>
+          <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
+          <td>${escaparHtml(precoUnit)}</td>
+          <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
+          <td>${escaparHtml(subtotal)}</td>
         </tr>
       `
     }).join('')
@@ -131,61 +332,67 @@ function PainelOrcamento({ onClose }) {
       <html lang="pt-BR">
         <head>
           <meta charset="utf-8" />
-          <title>Orcamento Galpao do Aco</title>
+          <title>Orcamento ${formatarNumeroOrcamento(numero)} - Galpao do Aco</title>
           <style>
-            body { font-family: Arial, sans-serif; padding: 32px; color: #111827; }
-            .topo { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
-            .marca { font-size: 28px; font-weight: 800; color: #7f1d1d; text-transform: uppercase; }
+            body { font-family: Arial, sans-serif; padding: 28px; color: #111827; }
+            .topo { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
+            .marca { display: flex; gap: 18px; align-items: center; }
+            .logo { width: 180px; object-fit: contain; }
+            .empresa { font-size: 28px; font-weight: 800; color: #7f1d1d; text-transform: uppercase; }
             .sub { color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
-            .bloco { margin-bottom: 20px; }
+            .dados { text-align: right; }
             table { width: 100%; border-collapse: collapse; font-size: 12px; }
             th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; vertical-align: top; }
             th { background: #f9fafb; text-transform: uppercase; font-size: 11px; letter-spacing: .08em; }
-            .totais { margin-top: 18px; margin-left: auto; width: 320px; }
-            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #e5e7eb; }
-            .totais div.total { font-weight: 800; font-size: 16px; color: #111827; }
+            .totais { margin-top: 18px; margin-left: auto; width: 360px; }
+            .totais div { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #e5e7eb; }
+            .totais .total { font-weight: 800; font-size: 16px; color: #111827; }
+            .obs { margin-top: 22px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; background: #fafafa; }
+            .obs h3 { margin: 0 0 8px 0; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: #7f1d1d; }
             .rodape { margin-top: 28px; color: #6b7280; font-size: 12px; }
-            @media print {
-              body { padding: 16px; }
-            }
           </style>
         </head>
         <body>
           <div class="topo">
-            <div>
-              <div class="marca">Galpao do Aco</div>
-              <div class="sub">Orcamento comercial</div>
+            <div class="marca">
+              <img src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" class="logo" />
+              <div>
+                <div class="empresa">Galpao do Aco</div>
+                <div class="sub">Orcamento comercial</div>
+              </div>
             </div>
-            <div class="sub">Data: ${data}</div>
+            <div class="dados">
+              <div class="sub">Orcamento #${formatarNumeroOrcamento(numero)}</div>
+              <div style="margin-top: 8px; font-size: 12px; color: #374151;">Data: ${escaparHtml(data)}</div>
+              <div style="margin-top: 4px; font-size: 12px; color: #374151;">Gerado em: ${escaparHtml(dataHora)}</div>
+              <div style="margin-top: 4px; font-size: 12px; color: #374151;">Vendedor: ${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</div>
+            </div>
           </div>
-
-          <div class="bloco">
-            <table>
-              <thead>
-                <tr>
-                  <th>Cod.</th>
-                  <th>Produto</th>
-                  <th>Qtd</th>
-                  <th>Unit.</th>
-                  <th>Desc.</th>
-                  <th>Subtotal</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${linhas}
-              </tbody>
-            </table>
-          </div>
-
+          <table>
+            <thead>
+              <tr>
+                <th>Cod.</th>
+                <th>Produto</th>
+                <th>Qtd</th>
+                <th>Unit.</th>
+                <th>Desc.</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>${linhas}</tbody>
+          </table>
           <div class="totais">
-            <div><span>Subtotal</span><strong>${formatarPreco(subtotalSemDesc)}</strong></div>
-            ${totalDesconto > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(totalDesconto)}</strong></div>` : ''}
-            <div class="total"><span>Total</span><strong>${formatarPreco(totalComDesc)}</strong></div>
+            <div><span>Subtotal</span><strong>${formatarPreco(orcamento.subtotalSemDesc || 0)}</strong></div>
+            ${(orcamento.totalDesconto || 0) > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(orcamento.totalDesconto || 0)}</strong></div>` : ''}
+            <div class="total"><span>Total</span><strong>${formatarPreco(orcamento.totalComDesc || 0)}</strong></div>
           </div>
-
+          <div class="obs">
+            <h3>Observacoes</h3>
+            <div>${escaparHtml(orcamento.observacao || 'Sem observacoes adicionais.').replaceAll('\n', '<br />')}</div>
+          </div>
           <div class="rodape">
             Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.<br />
-            Galpao do Aco | (95) 3224-0115
+            Galpao do Aco | (95) 3224-0115 | Av. Ataide Teive, 5928 e 4509
           </div>
         </body>
       </html>
@@ -197,9 +404,7 @@ function PainelOrcamento({ onClose }) {
     popup.document.write(html)
     popup.document.close()
     popup.focus()
-    setTimeout(() => {
-      popup.print()
-    }, 300)
+    setTimeout(() => popup.print(), 300)
   }
 
   return (
@@ -220,6 +425,11 @@ function PainelOrcamento({ onClose }) {
             </svg>
           </button>
         )}
+      </div>
+
+      <div className="border-b border-gray-100 bg-gray-50 px-4 py-3 text-xs text-gray-500">
+        <div className="font-bold text-gray-700">Vendedor: {usuario?.nome || 'Equipe comercial'}</div>
+        {ultimoNumeroSalvo && <div className="mt-1">Ultimo orcamento salvo: #{formatarNumeroOrcamento(ultimoNumeroSalvo)}</div>}
       </div>
 
       <div className="flex-1 overflow-y-auto">
@@ -327,6 +537,19 @@ function PainelOrcamento({ onClose }) {
 
           <div className="border-t border-gray-100 px-4 py-2">
             <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+              Observacao
+            </label>
+            <textarea
+              value={observacao}
+              onChange={(e) => dispatch({ type: 'SET_OBSERVACAO', observacao: e.target.value })}
+              rows={3}
+              placeholder="Prazo, entrega, retirada, condicoes e observacoes para o cliente..."
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
+            />
+          </div>
+
+          <div className="border-t border-gray-100 px-4 py-2">
+            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
               Enviar para (WhatsApp)
             </label>
             <div className="flex items-center gap-1.5">
@@ -357,12 +580,79 @@ function PainelOrcamento({ onClose }) {
             <button onClick={gerarPdf} className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
               Gerar PDF
             </button>
+            <button onClick={salvarOrcamento} className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-slate-50 py-3 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
+              Gravar orcamento
+            </button>
             <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs text-gray-400 transition-colors hover:text-red-500">
               Limpar orcamento
             </button>
           </div>
         </div>
       )}
+
+      <div className="border-t border-gray-200 bg-slate-50 px-4 py-3">
+        <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+          Orcamentos gravados
+        </div>
+        <input
+          type="text"
+          value={buscaSalva}
+          onChange={(e) => setBuscaSalva(e.target.value)}
+          placeholder="Pesquisar por numero, produto, observacao..."
+          className="mb-3 w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
+        />
+        <div className="max-h-52 space-y-2 overflow-y-auto pr-1">
+          {orcamentosFiltrados.length === 0 ? (
+            <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
+              Nenhum orcamento gravado encontrado.
+            </div>
+          ) : (
+            orcamentosFiltrados.map((orcamento) => (
+              <div key={orcamento.numero} className="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <div className="text-xs font-black uppercase tracking-wide text-primary">
+                      Orcamento #{formatarNumeroOrcamento(orcamento.numero)}
+                    </div>
+                    <div className="mt-1 text-[11px] text-gray-500">
+                      {new Date(orcamento.criadoEm).toLocaleString('pt-BR')}
+                    </div>
+                    <div className="mt-1 text-[11px] font-semibold text-gray-700">
+                      {orcamento.vendedorNome || 'Equipe comercial'}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[11px] text-gray-500">Total</div>
+                    <div className="text-sm font-black text-gray-900">{formatarPreco(orcamento.totalComDesc || 0)}</div>
+                  </div>
+                </div>
+                {orcamento.observacao && (
+                  <div className="mt-2 line-clamp-2 text-[11px] text-gray-500">{orcamento.observacao}</div>
+                )}
+                <div className="mt-3 grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch({ type: 'LOAD_ORCAMENTO', orcamento })
+                      setUltimoNumeroSalvo(orcamento.numero)
+                    }}
+                    className="rounded-lg border border-primary bg-white px-3 py-2 text-[11px] font-black uppercase tracking-wide text-primary transition hover:bg-red-50"
+                  >
+                    Carregar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => gerarPdf(orcamento)}
+                    className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-primary"
+                  >
+                    Reimprimir
+                  </button>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
   )
 }
@@ -586,11 +876,28 @@ function CatalogoCatalogo() {
 
 function VendedorContent() {
   const [autenticado, setAutenticado] = useState(false)
+  const [usuario, setUsuario] = useState(null)
   const [tab, setTab] = useState('catalogo')
   const { totalItens } = useVendedor()
 
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_SESSION)
+      if (raw) {
+        const session = JSON.parse(raw)
+        if (session?.login) {
+          setUsuario(session)
+          setAutenticado(true)
+        }
+      }
+    } catch {}
+  }, [])
+
   if (!autenticado) {
-    return <TelaLogin onLogin={() => setAutenticado(true)} />
+    return <TelaLogin onLogin={(session) => {
+      setUsuario(session)
+      setAutenticado(true)
+    }} />
   }
 
   return (
@@ -601,9 +908,18 @@ function VendedorContent() {
             <div className="h-1 w-6 rounded bg-primary" />
             <h1 className="font-display text-lg uppercase tracking-wide">Area do vendedor</h1>
           </div>
-          <p className="ml-8 mt-0.5 text-xs text-gray-400">Catalogo comercial sem produtos sem preco e sem secao 4</p>
+          <p className="ml-8 mt-0.5 text-xs text-gray-400">
+            {usuario?.nome ? `Logado como ${usuario.nome}` : 'Catalogo comercial sem produtos sem preco e sem secao 4'}
+          </p>
         </div>
-        <button onClick={() => setAutenticado(false)} className="flex items-center gap-1 text-xs text-gray-500 transition-colors hover:text-white">
+        <button
+          onClick={() => {
+            localStorage.removeItem(STORAGE_SESSION)
+            setUsuario(null)
+            setAutenticado(false)
+          }}
+          className="flex items-center gap-1 text-xs text-gray-500 transition-colors hover:text-white"
+        >
           Sair
         </button>
       </div>
@@ -630,7 +946,7 @@ function VendedorContent() {
         </div>
 
         <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-80 xl:w-96 ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
-          <PainelOrcamento onClose={() => setTab('catalogo')} />
+          <PainelOrcamento usuario={usuario} onClose={() => setTab('catalogo')} />
         </div>
       </div>
     </div>
@@ -644,3 +960,4 @@ export default function VendedorView() {
     </VendedorProvider>
   )
 }
+
