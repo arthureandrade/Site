@@ -31,7 +31,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
   const conteudo = (
     <>
       <Link href={`/produto/${produto.id}`} className="group block">
-        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white to-slate-100">
           {foto ? (
             <Image
               src={foto}
@@ -81,7 +81,8 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
       </Link>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
-        <div className="space-y-1">
+        <div className="flex items-start justify-between gap-3">
+          <div className="space-y-1">
           {produto.marca && produto.marca !== 'GERAL' && (
             <span className="block truncate text-[10px] font-black uppercase tracking-[0.24em] text-primary">
               {produto.marca}
@@ -89,14 +90,20 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
           )}
           <span className="text-[10px] font-mono text-gray-400">Cod. {produto.id}</span>
         </div>
+          {desconto > 0 && (
+            <span className="rounded-full border border-primary/15 bg-primary/5 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-primary">
+              Oferta online
+            </span>
+          )}
+        </div>
 
         <Link href={`/produto/${produto.id}`} className="group block">
-          <h3 className="line-clamp-3 min-h-[3.75rem] text-sm font-semibold leading-snug text-gray-900 transition-colors group-hover:text-primary">
+          <h3 className="line-clamp-3 min-h-[3.75rem] text-[15px] font-semibold leading-snug text-gray-900 transition-colors group-hover:text-primary">
             {produto.nome}
           </h3>
         </Link>
 
-        <div className="rounded-2xl border border-gray-100 bg-gray-50 p-3">
+        <div className="rounded-[22px] border border-gray-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-3 shadow-inner shadow-slate-100/70">
           {ocultarPreco ? (
             <>
               <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Preco sob consulta</span>

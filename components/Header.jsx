@@ -37,19 +37,24 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white shadow-sm">
-      <div className="border-b border-gray-100 bg-[#fafafa]">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-gray-500 sm:px-6 lg:px-8">
-          <a href="tel:9532240115" className="text-base text-primary sm:text-lg">{telefone}</a>
-          <span className="hidden text-base sm:inline">Av. Ataide Teive, 5928</span>
-          <span className="hidden text-base lg:inline">Av. Ataide Teive, 4509</span>
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 shadow-[0_10px_35px_rgba(15,23,42,0.08)] backdrop-blur-md">
+      <div className="border-b border-slate-200 bg-[#f8fafc]">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-slate-500 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3">
+            <a href="tel:9532240115" className="text-base text-primary sm:text-lg">{telefone}</a>
+            <span className="hidden rounded-full bg-green-50 px-3 py-1 text-[10px] text-green-700 lg:inline-flex">
+              Atendimento comercial rapido
+            </span>
+          </div>
+          <span className="hidden text-sm sm:inline">Av. Ataide Teive, 5928</span>
+          <span className="hidden text-sm lg:inline">Av. Ataide Teive, 4509</span>
         </div>
       </div>
 
-      <div className="mx-auto flex h-28 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-32 max-w-[1600px] items-center justify-between gap-5 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           {logoUrl ? (
-            <div className="relative h-16 w-[280px]">
+            <div className="relative h-[72px] w-[320px]">
               <Image src={logoUrl} alt="Galpao do Aco" fill unoptimized className="object-contain object-left" />
             </div>
           ) : (
@@ -65,18 +70,18 @@ export default function Header() {
           )}
         </Link>
 
-        <div className="hidden flex-1 px-8 md:block">
-          <form onSubmit={irParaBusca} className="mx-auto flex max-w-2xl items-center gap-2">
+        <div className="hidden flex-1 px-6 md:block">
+          <form onSubmit={irParaBusca} className="mx-auto flex max-w-3xl items-center gap-2 rounded-[24px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
             <input
               type="text"
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
               placeholder="Buscar produtos e ir para compras..."
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
+              className="w-full rounded-2xl border-0 bg-transparent px-4 py-3 text-sm font-semibold text-slate-700 outline-none transition focus:ring-0"
             />
             <button
               type="submit"
-              className="rounded-xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700"
+              className="rounded-2xl bg-brand px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-primary"
             >
               Buscar
             </button>
@@ -92,7 +97,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link
             href={whatsappAco}
-            className="hidden items-center justify-center rounded-2xl bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_16px_30px_rgba(22,163,74,0.28)] transition hover:scale-[1.02] hover:shadow-[0_20px_36px_rgba(22,163,74,0.34)] lg:inline-flex"
+            className="hidden items-center justify-center rounded-[22px] bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_18px_34px_rgba(22,163,74,0.32)] transition hover:scale-[1.02] hover:shadow-[0_22px_42px_rgba(22,163,74,0.36)] lg:inline-flex"
           >
             Comprar Aco
           </Link>
@@ -114,18 +119,18 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="border-t border-gray-100 bg-white px-4 py-3 md:hidden">
-        <form onSubmit={irParaBusca} className="flex items-center gap-2">
+      <div className="border-t border-slate-100 bg-white px-4 py-3 md:hidden">
+        <form onSubmit={irParaBusca} className="flex items-center gap-2 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
           <input
             type="text"
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
             placeholder="Buscar produtos..."
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm font-semibold text-gray-700 outline-none transition focus:border-primary"
+            className="w-full rounded-2xl border-0 bg-transparent px-4 py-3 text-sm font-semibold text-slate-700 outline-none transition"
           />
           <button
             type="submit"
-            className="rounded-xl bg-primary px-4 py-3 text-xs font-black uppercase tracking-wide text-white transition hover:bg-red-700"
+            className="rounded-2xl bg-brand px-4 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-primary"
           >
             Buscar
           </button>
@@ -142,8 +147,8 @@ export default function Header() {
         </div>
       )}
 
-      <div className="hidden border-t border-gray-200 bg-[#fff7f4] md:block">
-        <div className="mx-auto flex max-w-[1600px] items-center gap-2 overflow-x-auto px-4 py-2 sm:px-6 lg:px-8">
+      <div className="hidden border-t border-slate-200 bg-gradient-to-r from-[#fff7f4] via-white to-[#f7fafc] md:block">
+        <div className="mx-auto flex max-w-[1600px] items-center gap-2 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">
           <Link
             href="/produtos"
             className="whitespace-nowrap rounded-full border border-slate-300 bg-white px-5 py-2 text-sm font-black uppercase tracking-[0.18em] text-slate-700 transition hover:border-primary hover:text-primary"

@@ -18,7 +18,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
   }, [slides.length])
 
   return (
-    <section className="relative overflow-hidden border-b border-gray-200 bg-[#111]">
+    <section className="relative overflow-hidden border-b border-slate-200 bg-[#111]">
       <div className="absolute inset-0">
         {slides.map((image, index) => (
           <div
@@ -26,7 +26,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
             className="absolute inset-0 transition-opacity duration-700"
             style={{
               opacity: index === activeIndex ? 1 : 0,
-              backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.72) 38%, rgba(0,0,0,0.28) 72%, rgba(0,0,0,0.12) 100%), url('${image}')`,
+              backgroundImage: `linear-gradient(90deg, rgba(5,10,20,0.92) 0%, rgba(9,18,36,0.82) 32%, rgba(9,18,36,0.42) 68%, rgba(9,18,36,0.18) 100%), url('${image}')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -34,10 +34,12 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
         ))}
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.22),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_25%)]" />
+
+      <div className="relative mx-auto grid max-w-[1600px] gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:py-20 lg:px-8">
         <div className="relative z-10">
-          <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.28em] text-white">
-            Home comercial
+          <span className="trust-chip">
+            Operacao comercial com estoque real
           </span>
           <h1 className="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.96] text-white sm:text-5xl lg:text-6xl">
             {title}
@@ -45,15 +47,20 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-gray-200">
             {subtitle}
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <span className="trust-chip">Compra online</span>
+            <span className="trust-chip">Retirada rapida</span>
+            <span className="trust-chip">Atendimento no WhatsApp</span>
+          </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/produtos" className="rounded-2xl bg-primary px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-red-700">
+            <Link href="/produtos" className="rounded-[22px] bg-primary px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-white shadow-[0_18px_32px_rgba(185,28,28,0.3)] transition hover:bg-red-700">
               Comprar agora
             </Link>
             <a
               href={`https://wa.me/${WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl border border-white/20 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/10"
+              className="rounded-[22px] border border-white/20 bg-black/35 px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-white transition hover:bg-white/10"
             >
               Falar no WhatsApp
             </a>
@@ -76,14 +83,15 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
 
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            { titulo: '+ clientes atendidos', valor: 'Milhares' },
-            { titulo: 'Grande estoque', valor: 'Sempre ativo' },
-            { titulo: 'Parcelamento', valor: '10x sem juros' },
-            { titulo: 'Atendimento', valor: 'Resposta rapida' },
+            { titulo: '+ clientes atendidos', valor: 'Milhares', detalhe: 'Atuacao forte em obra, serralheria e manutencao' },
+            { titulo: 'Grande estoque', valor: 'Sempre ativo', detalhe: 'Mix amplo para compra rapida e recorrente' },
+            { titulo: 'Parcelamento', valor: '10x sem juros', detalhe: 'Condição clara para acelerar conversao' },
+            { titulo: 'Atendimento', valor: 'Resposta rapida', detalhe: 'Equipe comercial pronta no WhatsApp' },
           ].map((item) => (
-            <div key={item.titulo} className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+            <div key={item.titulo} className="rounded-[28px] border border-white/10 bg-white/10 p-5 shadow-[0_18px_34px_rgba(15,23,42,0.18)] backdrop-blur-sm">
               <div className="text-[11px] font-black uppercase tracking-[0.22em] text-gray-300">{item.titulo}</div>
-              <div className="mt-3 text-2xl font-black uppercase text-white">{item.valor}</div>
+              <div className="mt-3 text-3xl font-black uppercase leading-none text-white">{item.valor}</div>
+              <div className="mt-3 text-sm leading-relaxed text-gray-300">{item.detalhe}</div>
             </div>
           ))}
         </div>
