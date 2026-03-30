@@ -193,9 +193,11 @@ export default async function ProdutoPage({ params }) {
                 ) : (
                   <div className="mt-2 text-5xl font-black leading-none text-gray-900">{formatarPreco(produto.preco)}</div>
                 )}
-                <div className="mt-4 text-base font-semibold text-slate-700">
-                  ou {parcelamento} sem juros no valor cheio
-                </div>
+                {!ocultarComercial && (
+                  <div className="mt-4 text-base font-semibold text-slate-700">
+                    ou {parcelamento} sem juros no valor cheio
+                  </div>
+                )}
               </div>
 
               {!ocultarComercial && (

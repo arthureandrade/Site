@@ -2,33 +2,13 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
-import { formatarPreco, getProdutos } from '@/lib/api'
+import { formatarPreco, getProdutos, vendedorLogin, vendedorSolicitarCadastro } from '@/lib/api'
 import { deveExibirNoVendedor, numeroSecao } from '@/lib/catalogo'
 
 const LIMIT = 100
-const STORAGE_USERS = 'vendedor_users'
 const STORAGE_SESSION = 'vendedor_session'
 const STORAGE_QUOTES = 'vendedor_orcamentos_salvos'
 const STORAGE_SEQ = 'vendedor_orcamentos_seq'
-
-function usuariosPadrao() {
-  return [{ login: 'vendedor', senha: 'venda123', nome: 'Vendedor Padrao' }]
-}
-
-function carregarUsuarios() {
-  try {
-    const raw = localStorage.getItem(STORAGE_USERS)
-    const lista = raw ? JSON.parse(raw) : []
-    if (Array.isArray(lista) && lista.length) return lista
-  } catch {}
-  const padrao = usuariosPadrao()
-  localStorage.setItem(STORAGE_USERS, JSON.stringify(padrao))
-  return padrao
-}
-
-function salvarUsuarios(usuarios) {
-  localStorage.setItem(STORAGE_USERS, JSON.stringify(usuarios))
-}
 
 function carregarOrcamentosSalvos() {
   try {
@@ -77,14 +57,16 @@ function TelaLogin({ onLogin }) {
   const [login, setLogin] = useState('')
   const [senha, setSenha] = useState('')
   const [nome, setNome] = useState('')
+  const [mensagem, setMensagem] = useState('')
   const [erro, setErro] = useState('')
+  const [loading, setLoading] = useState(false)
   const inputRef = useRef(null)
 
   useEffect(() => {
     inputRef.current?.focus()
   }, [modo])
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     const usuarioLogin = login.trim().toLowerCase()
     if (!usuarioLogin || !senha.trim()) {
@@ -92,31 +74,42 @@ function TelaLogin({ onLogin }) {
       return
     }
 
-    const usuarios = carregarUsuarios()
+    setLoading(true)
+    setErro('')
+    setMensagem('')
+
     if (modo === 'login') {
-      const encontrado = usuarios.find((u) => u.login === usuarioLogin && u.senha === senha)
-      if (!encontrado) {
-        setErro('Login ou senha incorretos.')
+      const resposta = await vendedorLogin(usuarioLogin, senha)
+      setLoading(false)
+      if (!resposta?.ok || !resposta?.usuario) {
+        setErro(resposta?.detail || 'Login ou senha incorretos.')
         setSenha('')
         return
       }
-      localStorage.setItem(STORAGE_SESSION, JSON.stringify(encontrado))
-      onLogin(encontrado)
+      localStorage.setItem(STORAGE_SESSION, JSON.stringify(resposta.usuario))
+      onLogin(resposta.usuario)
       return
     }
 
     if (!nome.trim()) {
+      setLoading(false)
       setErro('Informe o nome do vendedor.')
       return
     }
-    if (usuarios.some((u) => u.login === usuarioLogin)) {
-      setErro('Esse login ja esta cadastrado.')
+    const resposta = await vendedorSolicitarCadastro({
+      nome: nome.trim(),
+      login: usuarioLogin,
+      senha,
+    })
+    setLoading(false)
+    if (!resposta?.ok) {
+      setErro(resposta?.detail || 'Nao foi possivel enviar o cadastro.')
       return
     }
-    const novo = { login: usuarioLogin, senha, nome: nome.trim() }
-    salvarUsuarios([...usuarios, novo])
-    localStorage.setItem(STORAGE_SESSION, JSON.stringify(novo))
-    onLogin(novo)
+    setMensagem('Cadastro enviado. Aguarde a liberacao no painel comercial.')
+    setSenha('')
+    setLogin('')
+    setNome('')
   }
 
   return (
@@ -140,6 +133,7 @@ function TelaLogin({ onLogin }) {
             onClick={() => {
               setModo('login')
               setErro('')
+              setMensagem('')
               setSenha('')
               setNome('')
             }}
@@ -152,6 +146,7 @@ function TelaLogin({ onLogin }) {
             onClick={() => {
               setModo('cadastro')
               setErro('')
+              setMensagem('')
               setSenha('')
             }}
             className={`flex-1 rounded-lg px-3 py-2 text-xs font-black uppercase tracking-wide transition ${modo === 'cadastro' ? 'bg-primary text-white' : 'text-gray-400'}`}
@@ -173,6 +168,9 @@ function TelaLogin({ onLogin }) {
                 placeholder="Nome completo"
                 className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
               />
+              <p className="mt-1.5 text-[11px] text-gray-500">
+                O cadastro entra como pendente e precisa ser liberado no painel comercial.
+              </p>
             </div>
           )}
 
@@ -204,13 +202,15 @@ function TelaLogin({ onLogin }) {
               }`}
             />
             {erro && <p className="mt-1.5 text-xs font-medium text-red-400">{erro}</p>}
+            {!erro && mensagem && <p className="mt-1.5 text-xs font-medium text-emerald-400">{mensagem}</p>}
           </div>
 
           <button
             type="submit"
+            disabled={loading}
             className="w-full rounded-lg bg-primary py-3 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-red-700 active:scale-95"
           >
-            {modo === 'login' ? 'Entrar' : 'Cadastrar e entrar'}
+            {loading ? 'Processando...' : modo === 'login' ? 'Entrar' : 'Solicitar cadastro'}
           </button>
         </form>
       </div>
