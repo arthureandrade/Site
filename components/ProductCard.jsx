@@ -55,6 +55,10 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
             </div>
           )}
 
+          <div className="absolute bottom-3 right-3 rounded-full bg-black/70 px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-white shadow">
+            Imagem ilustrativa
+          </div>
+
         <div className="absolute left-3 top-3 flex flex-wrap gap-2">
           {!ocultarEstoque && (
             <span className={temEstoque ? 'badge-green shadow' : 'badge-red shadow'}>

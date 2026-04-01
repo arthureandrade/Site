@@ -131,6 +131,10 @@ export default function OfertaCard({
               Sem foto
             </div>
           )}
+
+          <div className="absolute bottom-3 right-3 rounded-full bg-black/70 px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-white shadow">
+            Imagem ilustrativa
+          </div>
         </div>
       </Link>
 

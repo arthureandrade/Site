@@ -32,6 +32,7 @@ export default async function HomePage() {
   const produtosMaisVendidosMap = new Map()
   const produtosFazendaMap = new Map()
   const produtosFerramentasProfissionaisMap = new Map()
+  const produtosSoldaMap = new Map()
   const produtosSaldaoMap = new Map()
 
   for (const produto of [...(secao5Data?.produtos || []), ...(secao6Data?.produtos || [])]) {
@@ -52,6 +53,9 @@ export default async function HomePage() {
     if (subgrupo === 27) {
       produtosFerramentasProfissionaisMap.set(Number(produto.id), produto)
     }
+    if (subgrupo === 30) {
+      produtosSoldaMap.set(Number(produto.id), produto)
+    }
     if (subgrupo === 25) {
       produtosSaldaoMap.set(Number(produto.id), produto)
     }
@@ -62,6 +66,7 @@ export default async function HomePage() {
   const produtosSubgrupo24 = Array.from(produtosMap.values()).slice(0, 10)
   const produtosSubgrupo28 = Array.from(produtosFazendaMap.values()).slice(0, 10)
   const produtosSubgrupo27 = Array.from(produtosFerramentasProfissionaisMap.values()).slice(0, 10)
+  const produtosSubgrupo30 = Array.from(produtosSoldaMap.values()).slice(0, 10)
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
   const origemSubgrupo29 = produtosSubgrupo29.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
@@ -76,6 +81,9 @@ export default async function HomePage() {
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo27 = produtosSubgrupo27.length
+    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    : 'sem retorno'
+  const origemSubgrupo30 = produtosSubgrupo30.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
 
@@ -164,6 +172,21 @@ export default async function HomePage() {
         badge="Profissional"
         vazioTitulo="Nao ha ferramenta profissional em destaque no momento."
         resumo={`${produtosSubgrupo27.length} ferramenta${produtosSubgrupo27.length !== 1 ? 's' : ''} profissional${produtosSubgrupo27.length !== 1 ? 'is' : ''} em destaque na vitrine.`}
+      />
+
+      <VitrineSubgrupo24
+        sectionId="maquinas-de-solda"
+        produtos={produtosSubgrupo30}
+        origem={origemSubgrupo30}
+        label="Maquinas de solda"
+        titulo="Linha de solda com oferta online para acelerar a compra tecnica"
+        descricao="Selecionamos maquinas de solda para dar mais velocidade na escolha e destacar oportunidades com desconto direto no site."
+        href="/produtos?subgrupo=30"
+        cta="Ver maquinas de solda"
+        desconto={14}
+        badge="Solda"
+        vazioTitulo="Nao ha maquina de solda em destaque no momento."
+        resumo={`${produtosSubgrupo30.length} item${produtosSubgrupo30.length !== 1 ? 's' : ''} da linha de solda com 14% de desconto online.`}
       />
 
       <section className="bg-white py-4 sm:py-5">

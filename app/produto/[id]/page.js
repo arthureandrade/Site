@@ -90,6 +90,9 @@ export default async function ProdutoPage({ params }) {
                   {desconto}% OFF online
                 </div>
               )}
+              <div className="absolute bottom-4 right-4 z-10 rounded-full bg-black/75 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.18em] text-white shadow-lg">
+                Imagem ilustrativa
+              </div>
               {foto ? (
                 <Image
                   src={foto}
@@ -113,6 +116,9 @@ export default async function ProdutoPage({ params }) {
                   <span className="text-sm font-bold uppercase tracking-[0.25em]">Foto nao disponivel</span>
                 </div>
               )}
+            </div>
+            <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-[12px] font-semibold leading-relaxed text-amber-900 sm:text-[13px]">
+              A foto deste produto e ilustrativa e pode nao representar exatamente o item, acabamento, embalagem ou medidas entregues. Em caso de duvida, confirme com nossa equipe antes da compra.
             </div>
           </div>
 
