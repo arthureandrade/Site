@@ -353,6 +353,7 @@ function PainelOrcamento({ onClose, usuario }) {
   const [wppDDD, setWppDDD] = useState('')
   const [wppNum, setWppNum] = useState('')
   const [buscaSalva, setBuscaSalva] = useState('')
+  const [abaOrcamentos, setAbaOrcamentos] = useState('salvos')
   const [orcamentosSalvos, setOrcamentosSalvos] = useState([])
   const [orcamentosDb2, setOrcamentosDb2] = useState([])
   const [loadingDb2, setLoadingDb2] = useState(false)
@@ -392,6 +393,12 @@ function PainelOrcamento({ onClose, usuario }) {
     return () => {
       ativo = false
       clearTimeout(timer)
+    }
+  }, [buscaSalva])
+
+  useEffect(() => {
+    if (String(buscaSalva || '').trim()) {
+      setAbaOrcamentos('db2')
     }
   }, [buscaSalva])
 
@@ -534,8 +541,19 @@ function PainelOrcamento({ onClose, usuario }) {
 
   async function gerarPdf(orcamentoSalvo = null) {
     if (!orcamentoSalvo && items.length === 0) return
-    const numero = orcamentoSalvo?.numero || await salvarOrcamento()
-    const orcamento = orcamentoSalvo || {
+    let orcamento = orcamentoSalvo || null
+
+    if (
+      String(orcamentoSalvo?.fonte || '').toUpperCase() === 'DB2' &&
+      (!Array.isArray(orcamentoSalvo?.items) || orcamentoSalvo.items.length === 0)
+    ) {
+      const resposta = await vendedorObterOrcamentoDb2(orcamentoSalvo.empresa, orcamentoSalvo.numero)
+      if (!resposta?.ok || !resposta?.orcamento) return
+      orcamento = resposta.orcamento
+    }
+
+    const numero = orcamento?.numero || await salvarOrcamento()
+    orcamento = orcamento || {
       numero,
       vendedorNome: usuario?.nome || 'Equipe comercial',
       clienteNome,
@@ -547,6 +565,10 @@ function PainelOrcamento({ onClose, usuario }) {
       observacao,
     }
     const { data, dataHora } = dataHoraAtual()
+    const identificador = formatarIdentificadorOrcamento(orcamento)
+    const isDb2 = String(orcamento?.fonte || '').toUpperCase() === 'DB2'
+    const telefoneCliente = [orcamento?.fone1, orcamento?.foneCelular].filter(Boolean).join(' | ')
+    const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
     const linhas = (orcamento.items || []).map((item) => {
       const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
       const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
@@ -568,7 +590,7 @@ function PainelOrcamento({ onClose, usuario }) {
       <html lang="pt-BR">
         <head>
           <meta charset="utf-8" />
-          <title>Orcamento ${formatarNumeroOrcamento(numero)} - Galpao do Aco</title>
+          <title>Orcamento ${escaparHtml(identificador)} - Galpao do Aco</title>
           <style>
             body { font-family: Arial, sans-serif; padding: 28px; color: #111827; }
             .topo { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
@@ -577,6 +599,11 @@ function PainelOrcamento({ onClose, usuario }) {
             .empresa { font-size: 28px; font-weight: 800; color: #7f1d1d; text-transform: uppercase; }
             .sub { color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
             .dados { text-align: right; }
+            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+            .box { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; }
+            .box h3 { margin: 0 0 10px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #7f1d1d; }
+            .linha { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 12px; }
+            .linha span:first-child { color: #6b7280; }
             table { width: 100%; border-collapse: collapse; font-size: 12px; }
             th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; vertical-align: top; }
             th { background: #f9fafb; text-transform: uppercase; font-size: 11px; letter-spacing: .08em; }
@@ -594,15 +621,32 @@ function PainelOrcamento({ onClose, usuario }) {
               <img src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" class="logo" />
               <div>
                 <div class="empresa">Galpao do Aco</div>
-                <div class="sub">Orcamento comercial</div>
+                <div class="sub">${isDb2 ? 'Orcamento importado do sistema' : 'Orcamento comercial'}</div>
               </div>
             </div>
             <div class="dados">
-              <div class="sub">Orcamento #${formatarNumeroOrcamento(numero)}</div>
+              <div class="sub">Orcamento ${escaparHtml(identificador)}</div>
               <div style="margin-top: 8px; font-size: 12px; color: #374151;">Data: ${escaparHtml(data)}</div>
               <div style="margin-top: 4px; font-size: 12px; color: #374151;">Gerado em: ${escaparHtml(dataHora)}</div>
               <div style="margin-top: 4px; font-size: 12px; color: #374151;">Vendedor: ${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</div>
               ${orcamento.clienteNome ? `<div style="margin-top: 4px; font-size: 12px; color: #374151;">Cliente: ${escaparHtml(orcamento.clienteNome)}</div>` : ''}
+            </div>
+          </div>
+          <div class="grid-info">
+            <div class="box">
+              <h3>Dados do cliente</h3>
+              <div class="linha"><span>Nome</span><strong>${escaparHtml(orcamento.clienteNome || 'Nao informado')}</strong></div>
+              ${telefoneCliente ? `<div class="linha"><span>Telefone</span><strong>${escaparHtml(telefoneCliente)}</strong></div>` : ''}
+              ${orcamento.cnpjcpf ? `<div class="linha"><span>CPF/CNPJ</span><strong>${escaparHtml(orcamento.cnpjcpf)}</strong></div>` : ''}
+              ${enderecoCliente ? `<div class="linha"><span>Endereco</span><strong>${escaparHtml(enderecoCliente)}</strong></div>` : ''}
+            </div>
+            <div class="box">
+              <h3>Informacoes do orcamento</h3>
+              <div class="linha"><span>Origem</span><strong>${escaparHtml(isDb2 ? 'Sistema DB2' : 'Area do vendedor')}</strong></div>
+              ${orcamento.criadoEm ? `<div class="linha"><span>Data do sistema</span><strong>${escaparHtml(new Date(orcamento.criadoEm).toLocaleString('pt-BR'))}</strong></div>` : ''}
+              ${orcamento.dtValidade ? `<div class="linha"><span>Validade</span><strong>${escaparHtml(new Date(orcamento.dtValidade).toLocaleDateString('pt-BR'))}</strong></div>` : ''}
+              ${isDb2 ? `<div class="linha"><span>Status</span><strong>${escaparHtml(orcamento.flagCancelado === 'T' ? 'Cancelado' : orcamento.flagAprovado === 'T' ? 'Aprovado' : 'Em aberto')}</strong></div>` : ''}
+              ${isDb2 && orcamento.empresa ? `<div class="linha"><span>Empresa</span><strong>${escaparHtml(String(orcamento.empresa))}</strong></div>` : ''}
             </div>
           </div>
           <table>
@@ -628,7 +672,7 @@ function PainelOrcamento({ onClose, usuario }) {
             <div>${escaparHtml(orcamento.observacao || 'Sem observacoes adicionais.').replaceAll('\n', '<br />')}</div>
           </div>
           <div class="rodape">
-            Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.<br />
+            ${isDb2 ? 'Documento montado a partir do sistema DB2 para consulta e reimpressao.<br />' : 'Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.<br />'}
             Galpao do Aco | (95) 3224-0115 | Av. Ataide Teive, 5928 e 4509
           </div>
         </body>
@@ -841,143 +885,182 @@ function PainelOrcamento({ onClose, usuario }) {
         </div>
       )}
 
-      <div className="border-t border-gray-200 bg-slate-50 px-4 py-3">
-        <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-gray-500">
-          Orcamentos gravados
+      <div className="shrink-0 border-t border-gray-200 bg-slate-50 px-4 py-3">
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <div>
+            <div className="text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+              Central de orcamentos
+            </div>
+            <div className="mt-1 text-[11px] text-gray-500">
+              Pesquise orcamentos salvos ou consulte o sistema DB2 pelo numero e cliente.
+            </div>
+          </div>
+          <div className="rounded-full bg-white px-2 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-gray-400 shadow-sm">
+            {abaOrcamentos === 'db2' ? 'DB2' : 'Salvos'}
+          </div>
         </div>
         <input
           type="text"
           value={buscaSalva}
           onChange={(e) => setBuscaSalva(e.target.value)}
           placeholder="Pesquisar por numero, cliente, produto ou observacao..."
-          className="mb-3 w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
+          className="mb-3 w-full rounded-xl border border-gray-300 bg-white px-3 py-2.5 text-xs outline-none focus:border-primary"
         />
-        <div className="max-h-52 space-y-2 overflow-y-auto pr-1">
-          {orcamentosFiltrados.length === 0 ? (
-            <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
-              Nenhum orcamento gravado encontrado.
-            </div>
-          ) : (
-            orcamentosFiltrados.map((orcamento) => (
-              <div key={orcamento.numero} className="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <div className="text-xs font-black uppercase tracking-wide text-primary">
-                      {formatarIdentificadorOrcamento(orcamento)}
-                    </div>
-                    <div className="mt-1 text-[11px] text-gray-500">
-                      {new Date(orcamento.criadoEm).toLocaleString('pt-BR')}
-                    </div>
-                    <div className="mt-1 text-[11px] font-semibold text-gray-700">
-                      {orcamento.vendedorNome || 'Equipe comercial'}
-                    </div>
-                    {orcamento.clienteNome && (
-                      <div className="mt-1 text-[11px] text-gray-500">
-                        Cliente: {orcamento.clienteNome}
-                      </div>
-                    )}
-                  </div>
-                  <div className="text-right">
-                    <div className="text-[11px] text-gray-500">Total</div>
-                    <div className="text-sm font-black text-gray-900">{formatarPreco(orcamento.totalComDesc || 0)}</div>
-                  </div>
-                </div>
-                {orcamento.observacao && (
-                  <div className="mt-2 line-clamp-2 text-[11px] text-gray-500">{orcamento.observacao}</div>
-                )}
-                {orcamento.pendenteSync && (
-                  <div className="mt-2 inline-flex rounded-full bg-amber-50 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-amber-700">
-                    Pendente de sincronizacao
-                  </div>
-                )}
-                <div className="mt-3 grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      dispatch({ type: 'LOAD_ORCAMENTO', orcamento })
-                      setUltimoNumeroSalvo(orcamento.numero)
-                    }}
-                    className="rounded-lg border border-primary bg-white px-3 py-2 text-[11px] font-black uppercase tracking-wide text-primary transition hover:bg-red-50"
-                  >
-                    Carregar
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => gerarPdf(orcamento)}
-                    className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-primary"
-                  >
-                    Reimprimir
-                  </button>
-                </div>
-              </div>
-            ))
-          )}
-        </div>
-
-        <div className="mt-4">
-          <div className="mb-2 text-[10px] font-semibold uppercase tracking-wide text-gray-500">
-            Orcamentos do sistema (DB2)
+        <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+          <div className="grid grid-cols-2 border-b border-gray-200 bg-gray-50">
+            <button
+              type="button"
+              onClick={() => setAbaOrcamentos('salvos')}
+              className={`px-3 py-2.5 text-[11px] font-black uppercase tracking-[0.18em] transition ${
+                abaOrcamentos === 'salvos' ? 'bg-white text-primary shadow-[inset_0_-2px_0_0_#CC0000]' : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Gravados
+            </button>
+            <button
+              type="button"
+              onClick={() => setAbaOrcamentos('db2')}
+              className={`px-3 py-2.5 text-[11px] font-black uppercase tracking-[0.18em] transition ${
+                abaOrcamentos === 'db2' ? 'bg-white text-sky-700 shadow-[inset_0_-2px_0_0_#0369a1]' : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Sistema DB2
+            </button>
           </div>
-          {!String(buscaSalva || '').trim() ? (
-            <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
-              Digite o numero do orcamento ou o nome do cliente para buscar no sistema.
-            </div>
-          ) : loadingDb2 ? (
-            <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
-              Buscando orcamentos do sistema...
-            </div>
-          ) : orcamentosDb2.length === 0 ? (
-            <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
-              Nenhum orcamento do sistema encontrado.
-            </div>
-          ) : (
-            <div className="max-h-64 space-y-2 overflow-y-auto pr-1">
-              {orcamentosDb2.map((orcamento) => (
-                <div key={`${orcamento.empresa}-${orcamento.numero}`} className="rounded-xl border border-sky-100 bg-white p-3 shadow-sm">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <div className="text-xs font-black uppercase tracking-wide text-sky-700">
-                        {formatarIdentificadorOrcamento(orcamento)}
+
+          <div className="h-[320px] overflow-y-auto p-3">
+            {abaOrcamentos === 'salvos' ? (
+              orcamentosFiltrados.length === 0 ? (
+                <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
+                  Nenhum orcamento gravado encontrado.
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {orcamentosFiltrados.map((orcamento) => (
+                    <div key={orcamento.numero} className="rounded-xl border border-gray-200 bg-white p-3 shadow-sm">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <div className="text-xs font-black uppercase tracking-wide text-primary">
+                            {formatarIdentificadorOrcamento(orcamento)}
+                          </div>
+                          <div className="mt-1 text-[11px] text-gray-500">
+                            {new Date(orcamento.criadoEm).toLocaleString('pt-BR')}
+                          </div>
+                          <div className="mt-1 text-[11px] font-semibold text-gray-700">
+                            {orcamento.vendedorNome || 'Equipe comercial'}
+                          </div>
+                          {orcamento.clienteNome && (
+                            <div className="mt-1 text-[11px] text-gray-500">
+                              Cliente: {orcamento.clienteNome}
+                            </div>
+                          )}
+                        </div>
+                        <div className="text-right">
+                          <div className="text-[11px] text-gray-500">Total</div>
+                          <div className="text-sm font-black text-gray-900">{formatarPreco(orcamento.totalComDesc || 0)}</div>
+                        </div>
                       </div>
-                      <div className="mt-1 text-[11px] font-semibold text-gray-700">
-                        {orcamento.clienteNome || 'Cliente nao informado'}
-                      </div>
-                      <div className="mt-1 text-[11px] text-gray-500">
-                        {orcamento.criadoEm ? new Date(orcamento.criadoEm).toLocaleString('pt-BR') : 'Sem data'}
-                      </div>
-                      {orcamento.flagCancelado === 'T' && (
-                        <div className="mt-2 inline-flex rounded-full bg-red-50 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-red-700">
-                          Cancelado
+                      {orcamento.observacao && (
+                        <div className="mt-2 line-clamp-2 text-[11px] text-gray-500">{orcamento.observacao}</div>
+                      )}
+                      {orcamento.pendenteSync && (
+                        <div className="mt-2 inline-flex rounded-full bg-amber-50 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-amber-700">
+                          Pendente de sincronizacao
                         </div>
                       )}
+                      <div className="mt-3 grid grid-cols-2 gap-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            dispatch({ type: 'LOAD_ORCAMENTO', orcamento })
+                            setUltimoNumeroSalvo(orcamento.numero)
+                          }}
+                          className="rounded-lg border border-primary bg-white px-3 py-2 text-[11px] font-black uppercase tracking-wide text-primary transition hover:bg-red-50"
+                        >
+                          Carregar
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => gerarPdf(orcamento)}
+                          className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-primary"
+                        >
+                          Reimprimir
+                        </button>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-[11px] text-gray-500">Total</div>
-                      <div className="text-sm font-black text-gray-900">{formatarPreco(orcamento.totalComDesc || 0)}</div>
-                      <div className="mt-1 text-[10px] uppercase tracking-wide text-gray-400">
-                        {orcamento.qtdItens || 0} itens
+                  ))}
+                </div>
+              )
+            ) : !String(buscaSalva || '').trim() ? (
+              <div className="rounded-lg border border-dashed border-sky-200 bg-sky-50/50 px-3 py-4 text-center text-xs text-sky-800">
+                Digite o numero do orcamento ou o nome do cliente para buscar no sistema.
+              </div>
+            ) : loadingDb2 ? (
+              <div className="rounded-lg border border-dashed border-sky-200 bg-white px-3 py-4 text-center text-xs text-gray-500">
+                Buscando orcamentos do sistema...
+              </div>
+            ) : orcamentosDb2.length === 0 ? (
+              <div className="rounded-lg border border-dashed border-sky-200 bg-white px-3 py-4 text-center text-xs text-gray-500">
+                Nenhum orcamento do sistema encontrado.
+              </div>
+            ) : (
+              <div className="space-y-2">
+                {orcamentosDb2.map((orcamento) => (
+                  <div key={`${orcamento.empresa}-${orcamento.numero}`} className="rounded-xl border border-sky-100 bg-white p-3 shadow-sm">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <div className="text-xs font-black uppercase tracking-wide text-sky-700">
+                          {formatarIdentificadorOrcamento(orcamento)}
+                        </div>
+                        <div className="mt-1 text-[11px] font-semibold text-gray-700">
+                          {orcamento.clienteNome || 'Cliente nao informado'}
+                        </div>
+                        <div className="mt-1 text-[11px] text-gray-500">
+                          {orcamento.criadoEm ? new Date(orcamento.criadoEm).toLocaleString('pt-BR') : 'Sem data'}
+                        </div>
+                        {orcamento.flagCancelado === 'T' && (
+                          <div className="mt-2 inline-flex rounded-full bg-red-50 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-red-700">
+                            Cancelado
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-[11px] text-gray-500">Total</div>
+                        <div className="text-sm font-black text-gray-900">{formatarPreco(orcamento.totalComDesc || 0)}</div>
+                        <div className="mt-1 text-[10px] uppercase tracking-wide text-gray-400">
+                          {orcamento.qtdItens || 0} itens
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-3">
+                      <div className="grid grid-cols-2 gap-2">
+                        <button
+                          type="button"
+                          onClick={async () => {
+                            const resposta = await vendedorObterOrcamentoDb2(orcamento.empresa, orcamento.numero)
+                            if (!resposta?.ok || !resposta?.orcamento) return
+                            dispatch({ type: 'LOAD_ORCAMENTO', orcamento: resposta.orcamento })
+                            setUltimoNumeroSalvo(resposta.orcamento.numero)
+                          }}
+                          className="rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-[11px] font-black uppercase tracking-wide text-sky-700 transition hover:bg-sky-100"
+                        >
+                          Carregar
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => gerarPdf(orcamento)}
+                          className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-sky-700"
+                        >
+                          Reimprimir
+                        </button>
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-3">
-                    <button
-                      type="button"
-                      onClick={async () => {
-                        const resposta = await vendedorObterOrcamentoDb2(orcamento.empresa, orcamento.numero)
-                        if (!resposta?.ok || !resposta?.orcamento) return
-                        dispatch({ type: 'LOAD_ORCAMENTO', orcamento: resposta.orcamento })
-                        setUltimoNumeroSalvo(resposta.orcamento.numero)
-                      }}
-                      className="w-full rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-[11px] font-black uppercase tracking-wide text-sky-700 transition hover:bg-sky-100"
-                    >
-                      Carregar do sistema
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -1286,7 +1369,7 @@ function VendedorContent() {
           <CatalogoCatalogo />
         </div>
 
-        <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-80 xl:w-96 ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
+        <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-[28rem] xl:w-[34rem] 2xl:w-[38rem] ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
           <PainelOrcamento usuario={usuario} onClose={() => setTab('catalogo')} />
         </div>
       </div>
