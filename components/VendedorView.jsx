@@ -365,6 +365,7 @@ function PainelOrcamento({ onClose, usuario }) {
   const [orcamentosDb2, setOrcamentosDb2] = useState([])
   const [loadingDb2, setLoadingDb2] = useState(false)
   const [ultimoNumeroSalvo, setUltimoNumeroSalvo] = useState(null)
+  const [pdfModal, setPdfModal] = useState({ open: false, orcamento: null })
 
   const orcamentosFiltrados = useMemo(() => {
     const termo = String(buscaSalva || '').trim().toLowerCase()
@@ -546,7 +547,11 @@ function PainelOrcamento({ onClose, usuario }) {
     window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`, '_blank')
   }
 
-  async function gerarPdf(orcamentoSalvo = null) {
+  function abrirSeletorPdf(orcamentoSalvo = null) {
+    setPdfModal({ open: true, orcamento: orcamentoSalvo || null })
+  }
+
+  async function gerarPdf(orcamentoSalvo = null, formato = 'a4') {
     if (!orcamentoSalvo && items.length === 0) return
     const popup = window.open('', '_blank', 'width=980,height=720')
     if (!popup) return
@@ -632,6 +637,7 @@ function PainelOrcamento({ onClose, usuario }) {
       `
     }).join('')
 
+    const isTermica = formato === 'termica'
     const html = `
       <!doctype html>
       <html lang="pt-BR">
@@ -640,39 +646,44 @@ function PainelOrcamento({ onClose, usuario }) {
           <title>Orcamento ${escaparHtml(identificador)}</title>
           <style>
             * { box-sizing: border-box; }
-            body { font-family: Arial, sans-serif; margin: 0; background: #f3f4f6; color: #111827; }
-            .page { padding: 18px; }
-            .sheet { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
-            .hero { display: flex; justify-content: space-between; gap: 18px; padding: 18px 20px 16px; background: linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%); color: #fff; }
+            body { font-family: Arial, sans-serif; margin: 0; background: ${isTermica ? '#fff' : '#f3f4f6'}; color: #111827; }
+            .page { padding: ${isTermica ? '0' : '18px'}; }
+            .sheet { background: #ffffff; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; border-radius: ${isTermica ? '0' : '18px'}; overflow: hidden; box-shadow: ${isTermica ? 'none' : '0 10px 30px rgba(15, 23, 42, 0.08)'}; width: ${isTermica ? '80mm' : 'auto'}; margin: ${isTermica ? '0 auto' : '0'}; }
+            .hero { display: flex; justify-content: space-between; gap: ${isTermica ? '10px' : '18px'}; padding: ${isTermica ? '10px 12px' : '18px 20px 16px'}; background: ${isTermica ? '#111827' : 'linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%)'}; color: #fff; }
             .brand-wrap { display: flex; align-items: center; gap: 18px; }
-            .logo { width: 128px; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 12px; padding: 8px 10px; }
-            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: 5px 10px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-            .title { margin: 10px 0 0; font-size: 23px; font-weight: 800; letter-spacing: -.03em; }
-            .subtitle { margin: 6px 0 0; color: rgba(255,255,255,0.78); font-size: 11px; max-width: 460px; line-height: 1.45; }
-            .hero-side { min-width: 210px; max-width: 250px; border-radius: 14px; background: rgba(255,255,255,0.12); padding: 14px; backdrop-filter: blur(10px); }
-            .hero-label { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
-            .hero-number { margin-top: 6px; font-size: 22px; font-weight: 800; }
-            .hero-meta { margin-top: 6px; font-size: 11px; line-height: 1.5; color: rgba(255,255,255,0.86); }
-            .body { padding: 18px 20px 20px; }
-            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .logo { width: ${isTermica ? '72px' : '128px'}; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 12px; padding: ${isTermica ? '4px 6px' : '8px 10px'}; }
+            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+            .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; }
+            .subtitle { margin: 6px 0 0; color: rgba(255,255,255,0.78); font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
+            .hero-side { min-width: ${isTermica ? '112px' : '210px'}; max-width: ${isTermica ? '120px' : '250px'}; border-radius: 14px; background: rgba(255,255,255,0.12); padding: ${isTermica ? '8px' : '14px'}; backdrop-filter: blur(10px); }
+            .hero-label { font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+            .hero-number { margin-top: 6px; font-size: ${isTermica ? '13px' : '22px'}; font-weight: 800; }
+            .hero-meta { margin-top: 6px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.5; color: rgba(255,255,255,0.86); }
+            .body { padding: ${isTermica ? '10px 12px 12px' : '18px 20px 20px'}; }
+            .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: 10px; margin-bottom: 14px; }
+            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
             .box h3 { margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .linha { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: 11px; }
+            .linha { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: ${isTermica ? '9px' : '11px'}; }
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
-            table { width: 100%; border-collapse: collapse; font-size: 11px; overflow: hidden; border-radius: 14px; }
-            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: 9px; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: 9px 8px; text-align: left; }
-            tbody td { border-bottom: 1px solid #eef2f7; padding: 8px 8px; text-align: left; vertical-align: top; line-height: 1.35; }
+            table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '11px'}; overflow: hidden; border-radius: 14px; }
+            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '7px' : '9px'}; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '6px 4px' : '9px 8px'}; text-align: left; }
+            tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '5px 4px' : '8px 8px'}; text-align: left; vertical-align: top; line-height: 1.35; }
             tbody tr:nth-child(even) { background: #fcfcfd; }
-            .totais { margin-top: 14px; margin-left: auto; width: 320px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 10px 14px; background: #fff; }
-            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eef2f7; font-size: 12px; }
+            .totais { margin-top: 14px; margin-left: auto; width: ${isTermica ? '100%' : '320px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 14px'}; background: #fff; }
+            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '12px'}; }
             .totais div:last-child { border-bottom: 0; }
-            .totais .total { font-weight: 800; font-size: 16px; color: #991b1b; }
-            .obs { margin-top: 14px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .obs h3 { margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .obs p { margin: 0; font-size: 11px; line-height: 1.55; color: #374151; }
-            .rodape { margin-top: 16px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; color: #6b7280; font-size: 10px; line-height: 1.5; }
+            .totais .total { font-weight: 800; font-size: ${isTermica ? '12px' : '16px'}; color: #991b1b; }
+            .obs { margin-top: 14px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
+            .obs p { margin: 0; font-size: ${isTermica ? '9px' : '11px'}; line-height: 1.55; color: #374151; }
+            .rodape { margin-top: 16px; display: flex; justify-content: ${isTermica ? 'flex-start' : 'space-between'}; flex-direction: ${isTermica ? 'column' : 'row'}; gap: 10px; align-items: ${isTermica ? 'flex-start' : 'flex-end'}; color: #6b7280; font-size: ${isTermica ? '8px' : '10px'}; line-height: 1.5; }
             .rodape strong { color: #111827; }
+            @media print {
+              body { background: #fff; }
+              .page { padding: ${isTermica ? '0' : '8mm'}; }
+              .sheet { box-shadow: none; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; width: ${isTermica ? '80mm' : 'auto'}; }
+            }
           </style>
         </head>
         <body>
@@ -760,7 +771,7 @@ function PainelOrcamento({ onClose, usuario }) {
   }
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="relative flex h-full min-h-0 flex-col">
       <div className="flex items-center justify-between border-b border-gray-800 bg-brand px-4 py-3">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold uppercase tracking-wide text-white">Orcamento</span>
@@ -943,7 +954,7 @@ function PainelOrcamento({ onClose, usuario }) {
             <button onClick={() => enviarOrcamento()} className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 font-bold text-white transition-all hover:bg-[#1ebe5a] active:scale-95">
               Enviar orcamento
             </button>
-            <button onClick={() => gerarPdf()} className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
+            <button onClick={() => abrirSeletorPdf()} className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
               Gerar PDF
             </button>
             <button onClick={() => salvarOrcamento()} className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-slate-50 py-3 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
@@ -1052,7 +1063,7 @@ function PainelOrcamento({ onClose, usuario }) {
                         </button>
                         <button
                           type="button"
-                          onClick={() => gerarPdf(orcamento)}
+                          onClick={() => abrirSeletorPdf(orcamento)}
                           className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-primary"
                         >
                           Reimprimir
@@ -1120,7 +1131,7 @@ function PainelOrcamento({ onClose, usuario }) {
                         </button>
                         <button
                           type="button"
-                          onClick={() => gerarPdf(orcamento)}
+                          onClick={() => abrirSeletorPdf(orcamento)}
                           className="rounded-lg bg-brand px-3 py-2 text-[11px] font-black uppercase tracking-wide text-white transition hover:bg-sky-700"
                         >
                           Reimprimir
@@ -1134,6 +1145,49 @@ function PainelOrcamento({ onClose, usuario }) {
           </div>
         </div>
       </div>
+
+      {pdfModal.open && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-5 shadow-2xl">
+            <div className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">Formato de impressao</div>
+            <h3 className="mt-2 text-xl font-black text-gray-900">Como voce quer gerar este orçamento?</h3>
+            <p className="mt-2 text-sm text-gray-500">Escolha um formato mais detalhado para folha A4 ou uma versão compacta para impressora térmica Epson T20.</p>
+            <div className="mt-5 grid gap-3">
+              <button
+                type="button"
+                onClick={async () => {
+                  const alvo = pdfModal.orcamento
+                  setPdfModal({ open: false, orcamento: null })
+                  await gerarPdf(alvo, 'a4')
+                }}
+                className="rounded-2xl border border-primary bg-white px-4 py-4 text-left transition hover:bg-red-50"
+              >
+                <div className="text-sm font-black uppercase tracking-wide text-primary">A4</div>
+                <div className="mt-1 text-xs text-gray-500">Layout slim e mais completo para impressao em folha.</div>
+              </button>
+              <button
+                type="button"
+                onClick={async () => {
+                  const alvo = pdfModal.orcamento
+                  setPdfModal({ open: false, orcamento: null })
+                  await gerarPdf(alvo, 'termica')
+                }}
+                className="rounded-2xl border border-gray-300 bg-white px-4 py-4 text-left transition hover:bg-gray-50"
+              >
+                <div className="text-sm font-black uppercase tracking-wide text-gray-900">Epson T20</div>
+                <div className="mt-1 text-xs text-gray-500">Modelo compacto para impressora térmica.</div>
+              </button>
+            </div>
+            <button
+              type="button"
+              onClick={() => setPdfModal({ open: false, orcamento: null })}
+              className="mt-4 w-full rounded-xl px-4 py-3 text-sm font-semibold text-gray-500 transition hover:bg-gray-100"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
