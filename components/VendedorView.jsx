@@ -625,6 +625,29 @@ function PainelOrcamento({ onClose, usuario }) {
     const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
     const pixCnpj = '30.395.559/0001-29'
     const isTermica = formato === 'termica'
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : ''
+    const isAppleMobile =
+      /iPad|iPhone|iPod/i.test(ua) ||
+      (typeof navigator !== 'undefined' && navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    const isSafari =
+      /Safari/i.test(ua) &&
+      !/Chrome|CriOS|EdgiOS|Edg|FxiOS|Firefox|OPiOS|Opera|SamsungBrowser/i.test(ua)
+    const isA4MobileSafari = !isTermica && isAppleMobile && isSafari
+    const pagePadding = isTermica ? '0' : isA4MobileSafari ? '6px' : '18px'
+    const pagePrintMargin = isTermica ? '4mm' : isA4MobileSafari ? '4mm' : '8mm'
+    const bodyPadding = isTermica ? '10px 12px 12px' : isA4MobileSafari ? '12px 12px 12px' : '16px 18px 18px'
+    const heroPadding = isTermica ? '10px 12px' : isA4MobileSafari ? '12px 12px 10px' : '18px 20px 16px'
+    const heroGap = isTermica ? '10px' : isA4MobileSafari ? '12px' : '18px'
+    const boxPadding = isTermica ? '8px 10px' : isA4MobileSafari ? '7px 9px' : '9px 11px'
+    const obsPadding = isTermica ? '8px 10px' : isA4MobileSafari ? '8px 10px' : '10px 12px'
+    const totalBoxWidth = isTermica ? '100%' : isA4MobileSafari ? '280px' : '300px'
+    const totalPadding = isTermica ? '8px 10px' : isA4MobileSafari ? '7px 10px' : '8px 12px'
+    const tdPadding = isTermica ? '4px 3px' : isA4MobileSafari ? '5px 4px' : '6px 5px'
+    const thPadding = isTermica ? '5px 3px' : isA4MobileSafari ? '6px 5px' : '8px 6px'
+    const a4TableFont = isA4MobileSafari ? '9px' : '10px'
+    const a4ProdutoFont = isA4MobileSafari ? '8px' : '9px'
+    const a4LineFont = isA4MobileSafari ? '9px' : '10px'
+    const a4MetaFont = isA4MobileSafari ? '8px' : '9px'
     const linhas = (orcamento.items || []).map((item) => {
       const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
       const precoCheio = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
@@ -635,21 +658,23 @@ function PainelOrcamento({ onClose, usuario }) {
           <div class="ticket-item">
             <div class="ticket-codigo">Codigo ${escaparHtml(item.id)}</div>
             <div class="ticket-produto">${escaparHtml(item.nome)}</div>
-            <div class="ticket-linha">
-              <span>Qtd.</span>
-              <strong>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</strong>
-            </div>
-            <div class="ticket-linha">
-              <span>Vr unit.</span>
-              <strong>${escaparHtml(precoCheio)}</strong>
-            </div>
-            <div class="ticket-linha">
-              <span>Vr desc.</span>
-              <strong>${escaparHtml(precoComDesc)}</strong>
-            </div>
-            <div class="ticket-linha">
-              <span>Desc.</span>
-              <strong>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</strong>
+            <div class="ticket-grid">
+              <div class="ticket-cell">
+                <span>Qtd.</span>
+                <strong>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</strong>
+              </div>
+              <div class="ticket-cell">
+                <span>Vr unit.</span>
+                <strong>${escaparHtml(precoCheio)}</strong>
+              </div>
+              <div class="ticket-cell">
+                <span>Vr desc.</span>
+                <strong>${escaparHtml(precoComDesc)}</strong>
+              </div>
+              <div class="ticket-cell">
+                <span>Desc.</span>
+                <strong>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</strong>
+              </div>
             </div>
             <div class="ticket-total">
               <span>Vr total</span>
@@ -680,57 +705,61 @@ function PainelOrcamento({ onClose, usuario }) {
           <style>
             * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             body { font-family: Arial, sans-serif; margin: 0; background: ${isTermica ? '#fff' : '#f3f4f6'}; color: #111827; }
-            .page { padding: ${isTermica ? '0' : '18px'}; }
+            .page { padding: ${pagePadding}; }
             .sheet { background: #ffffff; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; border-radius: ${isTermica ? '0' : '18px'}; overflow: hidden; box-shadow: ${isTermica ? 'none' : '0 10px 30px rgba(15, 23, 42, 0.08)'}; width: ${isTermica ? '80mm' : 'auto'}; margin: ${isTermica ? '0 auto' : '0'}; }
-            .hero { display: flex; justify-content: space-between; gap: ${isTermica ? '10px' : '18px'}; padding: ${isTermica ? '10px 12px' : '18px 20px 16px'}; background: #ffffff; color: #111827; border-bottom: 1px solid #e5e7eb; }
+            .hero { display: flex; justify-content: space-between; gap: ${heroGap}; padding: ${heroPadding}; background: #ffffff; color: #111827; border-bottom: 1px solid #e5e7eb; }
             .brand-wrap { display: flex; align-items: center; gap: 18px; }
             .logo { width: ${isTermica ? '72px' : '128px'}; object-fit: contain; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: ${isTermica ? '4px 6px' : '8px 10px'}; }
             .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; background: #f8fafc; border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
             .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; color: #111827; }
             .subtitle { margin: 6px 0 0; color: #6b7280; font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
-            .hero-side { min-width: ${isTermica ? '108px' : '180px'}; max-width: ${isTermica ? '118px' : '210px'}; border-radius: 12px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '7px' : '10px 11px'}; }
-            .hero-label { font-size: ${isTermica ? '7px' : '9px'}; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6b7280; }
-            .hero-number { margin-top: 4px; font-size: ${isTermica ? '12px' : '16px'}; font-weight: 800; color: #111827; line-height: 1.1; }
-            .hero-meta { margin-top: 4px; font-size: ${isTermica ? '7px' : '9px'}; line-height: 1.3; color: #374151; }
-            .body { padding: ${isTermica ? '10px 12px 12px' : '16px 18px 18px'}; }
+            .hero-side { min-width: ${isTermica ? '108px' : '118px'}; max-width: ${isTermica ? '118px' : '132px'}; border-radius: 10px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '7px' : '6px 7px'}; }
+            .hero-label { font-size: ${isTermica ? '7px' : '7px'}; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #6b7280; }
+            .hero-number { margin-top: 3px; font-size: ${isTermica ? '12px' : '12px'}; font-weight: 800; color: #111827; line-height: 1.05; }
+            .hero-meta { margin-top: 4px; font-size: ${isTermica ? '7px' : a4MetaFont}; line-height: 1.3; color: #374151; }
+            .body { padding: ${bodyPadding}; }
             .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: ${isTermica ? '8px' : '8px'}; margin-bottom: 10px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '9px 11px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${boxPadding}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
             .box h3 { margin: 0 0 6px 0; font-size: ${isTermica ? '8px' : '9px'}; text-transform: uppercase; letter-spacing: .12em; color: #991b1b; }
-            .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '9px' : '10px'}; }
+            .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '9px' : a4LineFont}; }
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
             .linha-dupla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 2px 0; }
-            .linha-dupla .mini-linha { display: flex; justify-content: space-between; gap: 8px; min-width: 0; font-size: ${isTermica ? '9px' : '10px'}; }
+            .linha-dupla .mini-linha { display: flex; justify-content: space-between; gap: 8px; min-width: 0; font-size: ${isTermica ? '9px' : a4LineFont}; }
             .linha-dupla .mini-linha span { color: #6b7280; }
             .linha-dupla .mini-linha strong { text-align: right; min-width: 0; }
-            table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '10px'}; overflow: hidden; border-radius: 14px; }
-              thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '5px 3px' : '8px 6px'}; text-align: left; }
-              tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '4px 3px' : '6px 5px'}; text-align: left; vertical-align: top; line-height: 1.2; }
+            table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : a4TableFont}; overflow: hidden; border-radius: 14px; }
+              thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${thPadding}; text-align: left; }
+              tbody td { border-bottom: 1px solid #eef2f7; padding: ${tdPadding}; text-align: left; vertical-align: top; line-height: 1.2; }
               .col-codigo { width: ${isTermica ? '34px' : '52px'}; }
               .col-qtd { width: ${isTermica ? '42px' : '62px'}; }
               .col-preco { width: ${isTermica ? '54px' : '88px'}; }
               .col-desc { width: ${isTermica ? '34px' : '48px'}; }
               .col-total { width: ${isTermica ? '58px' : '92px'}; }
-              .produto-cell { font-size: ${isTermica ? '7px' : '9px'}; line-height: 1.12; }
+              .produto-cell { font-size: ${isTermica ? '7px' : a4ProdutoFont}; line-height: 1.12; }
               tbody tr:nth-child(even) { background: #fcfcfd; }
             .ticket-list { border-top: 1px dashed #cbd5e1; border-bottom: 1px dashed #cbd5e1; padding: 6px 0; }
             .ticket-item { padding: 7px 0 8px; border-bottom: 1px dashed #d1d5db; }
             .ticket-item:last-child { border-bottom: 0; }
             .ticket-codigo { font-size: 8px; font-weight: 700; color: #6b7280; }
             .ticket-produto { margin-top: 2px; font-size: 10px; line-height: 1.25; font-weight: 700; color: #111827; text-transform: uppercase; }
+            .ticket-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 4px; }
+            .ticket-cell { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+            .ticket-cell span { font-size: 8px; color: #6b7280; }
+            .ticket-cell strong { font-size: 9px; color: #111827; line-height: 1.2; word-break: break-word; }
             .ticket-linha, .ticket-total { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; line-height: 1.35; margin-top: 2px; }
             .ticket-linha span { color: #6b7280; }
             .ticket-linha strong, .ticket-total strong { font-weight: 700; color: #111827; text-align: right; }
             .ticket-total { margin-top: 4px; padding-top: 4px; border-top: 1px dotted #cbd5e1; font-size: 10px; }
             .ticket-total span { color: #111827; font-weight: 700; }
-            .totais { margin-top: 10px; margin-left: auto; width: ${isTermica ? '100%' : '300px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '8px 12px'}; background: #fff; }
+            .totais { margin-top: 10px; margin-left: auto; width: ${totalBoxWidth}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${totalPadding}; background: #fff; }
             .totais div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '11px'}; }
             .totais div:last-child { border-bottom: 0; }
             .totais .total { font-weight: 800; font-size: ${isTermica ? '12px' : '15px'}; color: #991b1b; }
-            .obs { margin-top: 10px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 12px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .obs { margin-top: 10px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${obsPadding}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
             .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
             .obs p { margin: 0; font-size: ${isTermica ? '9px' : '10px'}; line-height: 1.45; color: #374151; }
-            .pix-box { margin-top: 10px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 12px'}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
+            .pix-box { margin-top: 10px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${obsPadding}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
             .pix-box h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #1d4ed8; }
             .pix-key { font-size: ${isTermica ? '10px' : '13px'}; font-weight: 800; color: #0f172a; word-break: break-word; }
             .pix-note { margin-top: 4px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.45; color: #475569; }
@@ -742,6 +771,13 @@ function PainelOrcamento({ onClose, usuario }) {
               .page { padding: 0; }
               .sheet { box-shadow: none; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; width: ${isTermica ? '80mm' : 'auto'}; }
             }
+            ${isA4MobileSafari ? `
+              @media print {
+                @page { size: A4; margin: ${pagePrintMargin}; }
+                .page { padding: 0 !important; }
+                .sheet { border-radius: 12px; }
+              }
+            ` : ''}
           </style>
         </head>
         <body>
