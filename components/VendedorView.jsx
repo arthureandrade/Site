@@ -1681,16 +1681,14 @@ function VendedorContent() {
   }
 
   return (
-    <div className="flex flex-col" style={{ minHeight: 'calc(100vh - 64px)', height: 'calc(100vh - 64px)' }}>
-      <div className="flex shrink-0 items-start justify-between border-b-2 border-primary bg-brand px-3 py-3 text-white sm:px-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <div className="h-1 w-6 rounded bg-primary" />
-            <h1 className="font-display text-base uppercase tracking-wide sm:text-lg">Area do vendedor</h1>
-          </div>
-          <p className="ml-8 mt-1 max-w-[220px] text-[11px] leading-relaxed text-gray-400 sm:max-w-none sm:text-xs">
-            {usuario?.nome ? `Logado como ${usuario.nome}` : 'Catalogo comercial sem produtos sem preco e sem secao 4'}
-          </p>
+    <div className="flex flex-col" style={{ minHeight: 'calc(100vh - 12px)', height: 'calc(100vh - 12px)' }}>
+      <div className="flex shrink-0 items-center justify-between border-b border-primary/30 bg-brand px-2 py-1 text-white sm:px-3">
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="h-1 w-3 shrink-0 rounded bg-primary" />
+          <h1 className="shrink-0 font-display text-[11px] uppercase tracking-[0.22em] text-white sm:text-xs">Area do vendedor</h1>
+          {usuario?.nome ? (
+            <span className="truncate text-[10px] text-gray-400">{usuario.nome}</span>
+          ) : null}
         </div>
         <button
           onClick={() => {
@@ -1698,7 +1696,7 @@ function VendedorContent() {
             setUsuario(null)
             setAutenticado(false)
           }}
-          className="flex shrink-0 items-center gap-1 rounded-lg border border-white/10 px-2.5 py-1.5 text-[11px] text-gray-300 transition-colors hover:text-white"
+          className="flex shrink-0 items-center gap-1 rounded-md border border-white/10 px-1.5 py-0.5 text-[10px] text-gray-300 transition-colors hover:text-white"
         >
           Sair
         </button>
@@ -1707,16 +1705,16 @@ function VendedorContent() {
       <div className="flex shrink-0 border-b border-gray-200 bg-white lg:hidden">
         <button
           onClick={() => setTab('catalogo')}
-          className={`flex-1 py-3 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'catalogo' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`flex-1 py-2 text-[11px] font-bold uppercase tracking-wide transition-colors ${tab === 'catalogo' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Catalogo
         </button>
         <button
           onClick={() => setTab('orcamento')}
-          className={`relative flex-1 py-3 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'orcamento' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`relative flex-1 py-2 text-[11px] font-bold uppercase tracking-wide transition-colors ${tab === 'orcamento' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Orcamento
-          {totalItens > 0 && <span className="absolute right-5 top-2 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary px-1 text-[9px] font-black text-white">{totalItens > 9 ? '9+' : totalItens}</span>}
+          {totalItens > 0 && <span className="absolute right-5 top-1.5 flex h-4 min-w-[18px] items-center justify-center rounded-full bg-primary px-1 text-[9px] font-black text-white">{totalItens > 9 ? '9+' : totalItens}</span>}
         </button>
       </div>
 
