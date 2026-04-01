@@ -548,6 +548,32 @@ function PainelOrcamento({ onClose, usuario }) {
 
   async function gerarPdf(orcamentoSalvo = null) {
     if (!orcamentoSalvo && items.length === 0) return
+    const popup = window.open('', '_blank', 'width=980,height=720')
+    if (!popup) return
+    popup.document.open()
+    popup.document.write(`
+      <!doctype html>
+      <html lang="pt-BR">
+        <head>
+          <meta charset="utf-8" />
+          <title>Gerando PDF...</title>
+          <style>
+            body { font-family: Arial, sans-serif; padding: 32px; color: #111827; }
+            .box { max-width: 520px; margin: 40px auto; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; text-align: center; }
+            .title { font-size: 18px; font-weight: 800; color: #7f1d1d; margin-bottom: 8px; }
+            .text { color: #6b7280; font-size: 14px; }
+          </style>
+        </head>
+        <body>
+          <div class="box">
+            <div class="title">Gerando orçamento em PDF</div>
+            <div class="text">Aguarde alguns segundos enquanto carregamos os dados.</div>
+          </div>
+        </body>
+      </html>
+    `)
+    popup.document.close()
+
     let orcamento = orcamentoSalvo || null
 
     if (
@@ -555,7 +581,21 @@ function PainelOrcamento({ onClose, usuario }) {
       (!Array.isArray(orcamentoSalvo?.items) || orcamentoSalvo.items.length === 0)
     ) {
       const resposta = await vendedorObterOrcamentoDb2(orcamentoSalvo.empresa, orcamentoSalvo.numero)
-      if (!resposta?.ok || !resposta?.orcamento) return
+      if (!resposta?.ok || !resposta?.orcamento) {
+        popup.document.open()
+        popup.document.write(`
+          <!doctype html>
+          <html lang="pt-BR">
+            <head><meta charset="utf-8" /><title>Falha ao gerar PDF</title></head>
+            <body style="font-family: Arial, sans-serif; padding: 32px; color: #111827;">
+              <h2 style="color:#7f1d1d;">Nao foi possivel carregar o orçamento do sistema.</h2>
+              <p>Tente novamente em alguns instantes.</p>
+            </body>
+          </html>
+        `)
+        popup.document.close()
+        return
+      }
       orcamento = resposta.orcamento
     }
 
@@ -686,8 +726,6 @@ function PainelOrcamento({ onClose, usuario }) {
       </html>
     `
 
-    const popup = window.open('', '_blank', 'width=980,height=720')
-    if (!popup) return
     popup.document.open()
     popup.document.write(html)
     popup.document.close()
