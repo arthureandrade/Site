@@ -29,6 +29,7 @@ export default async function HomePage() {
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const produtosMap = new Map()
   const produtosMaisVendidosMap = new Map()
+  const produtosFazendaMap = new Map()
   const produtosFerramentasProfissionaisMap = new Map()
   const produtosSaldaoMap = new Map()
 
@@ -41,6 +42,9 @@ export default async function HomePage() {
     if (subgrupo === 26) {
       produtosMaisVendidosMap.set(Number(produto.id), produto)
     }
+    if (subgrupo === 28) {
+      produtosFazendaMap.set(Number(produto.id), produto)
+    }
     if (subgrupo === 27) {
       produtosFerramentasProfissionaisMap.set(Number(produto.id), produto)
     }
@@ -51,12 +55,16 @@ export default async function HomePage() {
 
   const produtosSubgrupo26 = Array.from(produtosMaisVendidosMap.values()).slice(0, 10)
   const produtosSubgrupo24 = Array.from(produtosMap.values()).slice(0, 10)
+  const produtosSubgrupo28 = Array.from(produtosFazendaMap.values()).slice(0, 10)
   const produtosSubgrupo27 = Array.from(produtosFerramentasProfissionaisMap.values()).slice(0, 10)
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
   const origemSubgrupo26 = produtosSubgrupo26.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo24 = produtosSubgrupo24.length
+    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    : 'sem retorno'
+  const origemSubgrupo28 = produtosSubgrupo28.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo27 = produtosSubgrupo27.length
@@ -99,6 +107,22 @@ export default async function HomePage() {
         origem={origemSubgrupo24}
         descricao="Ofertas online selecionadas para voce economizar e comprar com mais agilidade."
         resumo={`${produtosSubgrupo24.length} oferta${produtosSubgrupo24.length !== 1 ? 's' : ''} em destaque carregada${produtosSubgrupo24.length !== 1 ? 's' : ''} para compra online.`}
+      />
+
+      <VitrineSubgrupo24
+        sectionId="produtos-fazenda"
+        produtos={produtosSubgrupo28}
+        origem={origemSubgrupo28}
+        label="Produtos para fazenda"
+        titulo="Selecao comercial para fazenda, manejo e rotina do campo"
+        descricao="Itens escolhidos para facilitar a compra de produtos ligados ao trabalho rural e ao dia a dia da fazenda."
+        href="/produtos?subgrupo=28"
+        cta="Ver linha fazenda"
+        desconto={14}
+        badge="Campo"
+        vazioTitulo="Nao ha produto para fazenda em destaque no momento."
+        resumo={`${produtosSubgrupo28.length} item${produtosSubgrupo28.length !== 1 ? 's' : ''} da linha fazenda com 14% de desconto online.`}
+        tema="green"
       />
 
       <VitrineSubgrupo24
