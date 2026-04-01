@@ -21,6 +21,7 @@ export default function OfertaCard({
   const { dispatch } = useCart()
   const [adicionado, setAdicionado] = useState(false)
   const isMotor = variant === 'motor'
+  const isFarm = variant === 'farm'
 
   const styles = isMotor
     ? {
@@ -43,6 +44,28 @@ export default function OfertaCard({
         stock: 'border-sky-500/20 bg-sky-500/10 text-sky-100',
         buy: 'bg-[linear-gradient(90deg,#22c55e_0%,#16a34a_100%)] text-white shadow-[0_12px_30px_rgba(34,197,94,0.25)]',
         add: adicionado ? 'bg-emerald-100 text-emerald-700' : 'border border-sky-400/60 text-sky-100 hover:bg-sky-500/10',
+      }
+    : isFarm
+    ? {
+        card: 'border-emerald-900/40 bg-[linear-gradient(180deg,#153b26_0%,#0d2518_100%)] shadow-[0_20px_54px_rgba(5,46,22,0.3)] hover:border-lime-300/60 hover:shadow-[0_28px_60px_rgba(34,197,94,0.18)]',
+        top: 'bg-[linear-gradient(90deg,#14532d_0%,#15803d_48%,#65a30d_100%)]',
+        badge: 'bg-white/15 text-white',
+        imageWrap: 'border-emerald-900/40 bg-[radial-gradient(circle_at_top,#355f3d_0%,#163322_62%,#102418_100%)]',
+        brand: 'text-lime-300',
+        code: 'border-emerald-700/60 bg-emerald-950/55 text-emerald-100',
+        hint: 'text-lime-100/85',
+        title: 'text-white',
+        priceBox: 'border-emerald-800/70 bg-[linear-gradient(180deg,#102418_0%,#163322_100%)] shadow-inner shadow-emerald-950/50',
+        old: 'text-emerald-100/45',
+        save: 'bg-lime-400/12 text-lime-200',
+        currency: 'text-lime-300',
+        price: 'text-white',
+        vista: 'text-lime-300',
+        online: 'text-emerald-100',
+        parcel: 'text-emerald-50/90',
+        stock: 'border-lime-400/20 bg-lime-400/10 text-lime-100',
+        buy: 'bg-[linear-gradient(90deg,#84cc16_0%,#65a30d_100%)] text-emerald-950 shadow-[0_12px_30px_rgba(132,204,22,0.22)]',
+        add: adicionado ? 'bg-lime-100 text-lime-800' : 'border border-lime-300/60 text-lime-100 hover:bg-lime-300/10',
       }
     : {
         card: 'border-red-100 bg-white shadow-[0_16px_38px_rgba(15,23,42,0.08)] hover:border-primary/30 hover:shadow-[0_24px_48px_rgba(15,23,42,0.12)]',

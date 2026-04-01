@@ -148,6 +148,7 @@ export default async function HomePage() {
         vazioTitulo="Nao ha produto para fazenda em destaque no momento."
         resumo={`${produtosSubgrupo28.length} item${produtosSubgrupo28.length !== 1 ? 's' : ''} da linha fazenda com 14% de desconto online.`}
         tema="green"
+        cardVariant="farm"
       />
 
       <VitrineSubgrupo24
