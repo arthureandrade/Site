@@ -53,7 +53,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3 px-4 py-3 sm:gap-5 sm:px-6 sm:py-4 lg:h-32 lg:px-8 lg:py-0">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3 px-4 py-3 sm:gap-5 sm:px-6 sm:py-4 md:flex-wrap xl:flex-nowrap lg:h-32 lg:px-8 lg:py-0">
         <Link href="/" className="flex items-center gap-3">
           {logoUrl ? (
             <div className="relative h-[46px] w-[180px] sm:h-[56px] sm:w-[230px] lg:h-[72px] lg:w-[320px]">
@@ -72,18 +72,18 @@ export default function Header() {
           )}
         </Link>
 
-        <div className="hidden flex-1 px-6 md:block">
+        <div className="hidden md:order-3 md:block md:w-full md:basis-full md:px-0 md:pt-1 lg:pt-2 xl:order-none xl:w-auto xl:flex-1 xl:basis-auto xl:px-6 xl:pt-0">
           <form onSubmit={irParaBusca} className="mx-auto flex max-w-3xl items-center gap-2 rounded-[24px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
             <input
               type="text"
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
               placeholder="Buscar produtos e ir para compras..."
-              className="w-full rounded-2xl border-0 bg-transparent px-4 py-3 text-sm font-semibold text-slate-700 outline-none transition focus:ring-0"
+              className="w-full rounded-2xl border-0 bg-transparent px-4 py-3 text-sm font-semibold text-slate-700 outline-none transition focus:ring-0 lg:py-3.5"
             />
             <button
               type="submit"
-              className="rounded-2xl bg-brand px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-primary"
+              className="rounded-2xl bg-brand px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-primary lg:px-6 lg:py-3.5"
             >
               Buscar
             </button>

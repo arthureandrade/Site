@@ -623,6 +623,7 @@ function PainelOrcamento({ onClose, usuario }) {
     const isDb2 = String(orcamento?.fonte || '').toUpperCase() === 'DB2'
     const telefoneCliente = [orcamento?.fone1, orcamento?.foneCelular].filter(Boolean).join(' | ')
     const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
+    const pixCnpj = '30.395.559/0001-29'
       const linhas = (orcamento.items || []).map((item) => {
         const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
         const precoCheio = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
@@ -687,6 +688,10 @@ function PainelOrcamento({ onClose, usuario }) {
             .obs { margin-top: 14px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
             .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
             .obs p { margin: 0; font-size: ${isTermica ? '9px' : '11px'}; line-height: 1.55; color: #374151; }
+            .pix-box { margin-top: 14px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
+            .pix-box h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #1d4ed8; }
+            .pix-key { font-size: ${isTermica ? '10px' : '13px'}; font-weight: 800; color: #0f172a; word-break: break-word; }
+            .pix-note { margin-top: 4px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.45; color: #475569; }
             .rodape { margin-top: 16px; display: flex; justify-content: ${isTermica ? 'flex-start' : 'space-between'}; flex-direction: ${isTermica ? 'column' : 'row'}; gap: 10px; align-items: ${isTermica ? 'flex-start' : 'flex-end'}; color: #6b7280; font-size: ${isTermica ? '8px' : '10px'}; line-height: 1.5; }
             .rodape strong { color: #111827; }
             @media print {
@@ -761,11 +766,16 @@ function PainelOrcamento({ onClose, usuario }) {
                   <h3>Observacoes</h3>
                   <p>${escaparHtml(orcamento.observacao || 'Sem observacoes adicionais.').replaceAll('\n', '<br />')}</p>
                 </div>
+                <div class="pix-box">
+                  <h3>Pagamento por PIX</h3>
+                  <div class="pix-key">CNPJ PIX: ${escaparHtml(pixCnpj)}</div>
+                  <div class="pix-note">Chave PIX da empresa para pagamento e conferencia comercial.</div>
+                </div>
                 <div class="rodape">
                   <div>
                     ${isDb2 ? 'Documento montado a partir do sistema DB2 para consulta e reimpressao.' : 'Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.'}
                   </div>
-                  <div><strong>(95) 3224-0115</strong> | Av. Ataide Teive, 5928 e 4509</div>
+                  <div><strong>(95) 3224-0115</strong> | PIX CNPJ <strong>${escaparHtml(pixCnpj)}</strong> | Av. Ataide Teive, 5928 e 4509</div>
                 </div>
               </div>
             </div>
@@ -782,7 +792,7 @@ function PainelOrcamento({ onClose, usuario }) {
   }
 
   return (
-    <div className="relative flex h-full min-h-0 flex-col">
+    <div className="relative flex h-full min-h-0 flex-col overflow-hidden">
       <div className="flex items-center justify-between border-b border-gray-800 bg-brand px-4 py-3">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold uppercase tracking-wide text-white">Orcamento</span>
@@ -829,8 +839,8 @@ function PainelOrcamento({ onClose, usuario }) {
       </div>
 
       {painelSecao === 'resumo' ? (
-        <>
-          <div className="min-h-[320px] flex-1 overflow-y-auto">
+          <>
+            <div className="min-h-0 flex-1 overflow-y-auto">
             {items.length === 0 ? (
               <div className="flex h-40 flex-col items-center justify-center gap-2 text-sm text-gray-500">
                 <p>Nenhum item adicionado</p>
