@@ -1346,13 +1346,33 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
+      const lotes = []
+      const tamanhoLote = 5000
+      const maximo = 15000
+
+      for (let skip = 0; skip < maximo; skip += tamanhoLote) {
         const data = await getProdutos({
-          skip: 0,
-          limit: 15000,
+          skip,
+          limit: tamanhoLote,
           todas_secoes: 1,
           noStore: true,
         })
-      const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
+
+        const produtosLote = Array.isArray(data?.produtos) ? data.produtos : []
+        lotes.push(...produtosLote)
+
+        if (produtosLote.length < tamanhoLote) {
+          break
+        }
+      }
+
+      const catalogo = Array.from(
+        new Map(
+          lotes
+            .filter(deveExibirNoVendedor)
+            .map((produto) => [produto.id, produto])
+        ).values()
+      )
       setBase(catalogo)
       setSecoes([...new Set(catalogo.map((item) => numeroSecao(item.secao)).filter((secao) => secao != null))].sort((a, b) => a - b))
       aplicarFiltros(catalogo, 0, '', '')
