@@ -42,7 +42,6 @@ export default function OfertaCarouselRow({
 
   if (!produtos.length) return null
 
-  const itemWidth = `calc((100% - ${(visibleCount - 1) * 16}px) / ${visibleCount})`
   const duration = `${getDuration(produtos.length)}s`
 
   return (
@@ -56,8 +55,7 @@ export default function OfertaCarouselRow({
         {trackItems.map((produto, indice) => (
           <div
             key={`${itemKeyPrefix}-${produto.id}-${indice}`}
-            className="shrink-0"
-            style={{ width: itemWidth }}
+            className="w-[calc(50%_-_6px)] shrink-0 sm:w-[calc(33.333%_-_11px)] lg:w-[calc(25%_-_12px)] xl:w-[calc(20%_-_13px)]"
           >
             <OfertaCard
               produto={produto}
