@@ -53,7 +53,7 @@ export default function SaldaoCarousel({ produtos = [] }) {
         </>
       )}
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
         {paginaAtual.map((produto) => (
           <OfertaCard
             key={`saldao-${produto.id}`}

@@ -21,11 +21,11 @@ export default function ProdutosPage({ searchParams }) {
 
   return (
     <>
-      <div className="bg-brand border-b-2 border-primary px-4 py-10 text-white">
-        <div className="mx-auto max-w-[1600px]">
+      <div className="bg-brand border-b-2 border-primary px-4 py-6 text-white sm:py-8">
+        <div className="mx-auto max-w-[1760px]">
           <div className="h-1 w-10 bg-primary rounded mb-3" />
-          <h1 className="font-display text-4xl sm:text-5xl uppercase mb-2">Nossos Produtos</h1>
-          <p className="text-gray-400 text-sm">{descricao}</p>
+          <h1 className="font-display text-3xl uppercase mb-2 sm:text-4xl">Nossos Produtos</h1>
+          <p className="text-gray-400 text-[13px] sm:text-sm">{descricao}</p>
         </div>
       </div>
 
