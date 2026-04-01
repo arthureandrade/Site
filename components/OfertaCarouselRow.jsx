@@ -26,7 +26,7 @@ export default function OfertaCarouselRow({
   const duration = `${getDuration(produtos.length)}s`
 
   return (
-    <div className={autoScroll ? 'marquee-wrapper' : 'overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'}>
+    <div className={autoScroll ? 'marquee-wrapper' : 'overflow-x-auto pb-3'}>
       <div
         className={`${autoScroll ? 'marquee-track' : 'flex'} gap-3 sm:gap-4`}
         style={{
