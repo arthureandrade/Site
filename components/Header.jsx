@@ -73,7 +73,7 @@ export default function Header() {
         </Link>
 
         <div className="hidden md:order-3 md:block md:w-full md:basis-full md:px-0 md:pt-1 lg:pt-2 xl:order-none xl:w-auto xl:flex-1 xl:basis-auto xl:px-6 xl:pt-0">
-          <form onSubmit={irParaBusca} className="mx-auto flex max-w-3xl items-center gap-2 rounded-[24px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.06)]">
+          <form onSubmit={irParaBusca} className="mx-auto flex w-full max-w-none items-center gap-2 rounded-[24px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.06)] xl:max-w-3xl">
             <input
               type="text"
               value={busca}
