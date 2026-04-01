@@ -637,90 +637,116 @@ function PainelOrcamento({ onClose, usuario }) {
       <html lang="pt-BR">
         <head>
           <meta charset="utf-8" />
-          <title>Orcamento ${escaparHtml(identificador)} - Galpao do Aco</title>
+          <title>Orcamento ${escaparHtml(identificador)}</title>
           <style>
-            body { font-family: Arial, sans-serif; padding: 28px; color: #111827; }
-            .topo { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
-            .marca { display: flex; gap: 18px; align-items: center; }
-            .logo { width: 180px; object-fit: contain; }
-            .empresa { font-size: 28px; font-weight: 800; color: #7f1d1d; text-transform: uppercase; }
-            .sub { color: #6b7280; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
-            .dados { text-align: right; }
-            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; background: #fff; }
-            .box h3 { margin: 0 0 10px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: #7f1d1d; }
-            .linha { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 12px; }
+            * { box-sizing: border-box; }
+            body { font-family: Arial, sans-serif; margin: 0; background: #f3f4f6; color: #111827; }
+            .page { padding: 30px; }
+            .sheet { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); }
+            .hero { display: flex; justify-content: space-between; gap: 20px; padding: 28px 30px 22px; background: linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%); color: #fff; }
+            .brand-wrap { display: flex; align-items: center; gap: 18px; }
+            .logo { width: 168px; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 16px; padding: 10px 14px; }
+            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: 7px 12px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+            .title { margin: 14px 0 0; font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
+            .subtitle { margin: 8px 0 0; color: rgba(255,255,255,0.78); font-size: 13px; max-width: 520px; }
+            .hero-side { min-width: 240px; max-width: 280px; border-radius: 18px; background: rgba(255,255,255,0.12); padding: 18px; backdrop-filter: blur(10px); }
+            .hero-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+            .hero-number { margin-top: 8px; font-size: 28px; font-weight: 800; }
+            .hero-meta { margin-top: 8px; font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.86); }
+            .body { padding: 24px 30px 30px; }
+            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 22px; }
+            .box { border: 1px solid #e5e7eb; border-radius: 18px; padding: 16px 18px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .box h3 { margin: 0 0 12px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
+            .linha { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; font-size: 12px; }
             .linha span:first-child { color: #6b7280; }
-            table { width: 100%; border-collapse: collapse; font-size: 12px; }
-            th, td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; vertical-align: top; }
-            th { background: #f9fafb; text-transform: uppercase; font-size: 11px; letter-spacing: .08em; }
-            .totais { margin-top: 18px; margin-left: auto; width: 360px; }
-            .totais div { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #e5e7eb; }
-            .totais .total { font-weight: 800; font-size: 16px; color: #111827; }
-            .obs { margin-top: 22px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; background: #fafafa; }
-            .obs h3 { margin: 0 0 8px 0; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: #7f1d1d; }
-            .rodape { margin-top: 28px; color: #6b7280; font-size: 12px; }
+            .linha strong { text-align: right; }
+            table { width: 100%; border-collapse: collapse; font-size: 12px; overflow: hidden; border-radius: 18px; }
+            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: 10px; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: 12px 10px; text-align: left; }
+            tbody td { border-bottom: 1px solid #eef2f7; padding: 12px 10px; text-align: left; vertical-align: top; }
+            tbody tr:nth-child(even) { background: #fcfcfd; }
+            .totais { margin-top: 20px; margin-left: auto; width: 380px; border: 1px solid #e5e7eb; border-radius: 18px; padding: 14px 18px; background: #fff; }
+            .totais div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eef2f7; font-size: 13px; }
+            .totais div:last-child { border-bottom: 0; }
+            .totais .total { font-weight: 800; font-size: 19px; color: #991b1b; }
+            .obs { margin-top: 22px; border: 1px solid #e5e7eb; border-radius: 18px; padding: 16px 18px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .obs h3 { margin: 0 0 10px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
+            .obs p { margin: 0; font-size: 13px; line-height: 1.65; color: #374151; }
+            .rodape { margin-top: 22px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; color: #6b7280; font-size: 11px; line-height: 1.6; }
+            .rodape strong { color: #111827; }
           </style>
         </head>
         <body>
-          <div class="topo">
-            <div class="marca">
-              <img src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" class="logo" />
-              <div>
-                <div class="empresa">Galpao do Aco</div>
-                <div class="sub">${isDb2 ? 'Orcamento importado do sistema' : 'Orcamento comercial'}</div>
+          <div class="page">
+            <div class="sheet">
+              <div class="hero">
+                <div>
+                  <div class="eyebrow">${isDb2 ? 'Sistema DB2' : 'Area do vendedor'}</div>
+                  <div class="brand-wrap" style="margin-top: 18px;">
+                    <img src="${window.location.origin}/logo.jpeg" alt="Logo" class="logo" />
+                    <div>
+                      <div class="title">Orcamento comercial</div>
+                      <div class="subtitle">Documento gerado para consulta, aprovacao interna e reimpressao com base nas informacoes comerciais disponiveis.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero-side">
+                  <div class="hero-label">Identificacao</div>
+                  <div class="hero-number">${escaparHtml(identificador)}</div>
+                  <div class="hero-meta">
+                    <div><strong>Gerado:</strong> ${escaparHtml(dataHora)}</div>
+                    <div><strong>Cliente:</strong> ${escaparHtml(orcamento.clienteNome || 'Nao informado')}</div>
+                    <div><strong>Origem:</strong> ${escaparHtml(isDb2 ? 'Sistema DB2' : 'Area do vendedor')}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div class="grid-info">
+                  <div class="box">
+                    <h3>Dados do cliente</h3>
+                    <div class="linha"><span>Nome</span><strong>${escaparHtml(orcamento.clienteNome || 'Nao informado')}</strong></div>
+                    ${telefoneCliente ? `<div class="linha"><span>Telefone</span><strong>${escaparHtml(telefoneCliente)}</strong></div>` : ''}
+                    ${orcamento.cnpjcpf ? `<div class="linha"><span>CPF/CNPJ</span><strong>${escaparHtml(orcamento.cnpjcpf)}</strong></div>` : ''}
+                    ${enderecoCliente ? `<div class="linha"><span>Endereco</span><strong>${escaparHtml(enderecoCliente)}</strong></div>` : ''}
+                  </div>
+                  <div class="box">
+                    <h3>Informacoes do orcamento</h3>
+                    <div class="linha"><span>Data</span><strong>${escaparHtml(data)}</strong></div>
+                    <div class="linha"><span>Vendedor</span><strong>${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</strong></div>
+                    ${orcamento.criadoEm ? `<div class="linha"><span>Data do sistema</span><strong>${escaparHtml(new Date(orcamento.criadoEm).toLocaleString('pt-BR'))}</strong></div>` : ''}
+                    ${orcamento.dtValidade ? `<div class="linha"><span>Validade</span><strong>${escaparHtml(new Date(orcamento.dtValidade).toLocaleDateString('pt-BR'))}</strong></div>` : ''}
+                    ${isDb2 ? `<div class="linha"><span>Status</span><strong>${escaparHtml(orcamento.flagCancelado === 'T' ? 'Cancelado' : orcamento.flagAprovado === 'T' ? 'Aprovado' : 'Em aberto')}</strong></div>` : ''}
+                  </div>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Cod.</th>
+                      <th>Produto</th>
+                      <th>Qtd</th>
+                      <th>Unit.</th>
+                      <th>Desc.</th>
+                      <th>Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>${linhas}</tbody>
+                </table>
+                <div class="totais">
+                  <div><span>Subtotal</span><strong>${formatarPreco(orcamento.subtotalSemDesc || 0)}</strong></div>
+                  ${(orcamento.totalDesconto || 0) > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(orcamento.totalDesconto || 0)}</strong></div>` : ''}
+                  <div class="total"><span>Total</span><strong>${formatarPreco(orcamento.totalComDesc || 0)}</strong></div>
+                </div>
+                <div class="obs">
+                  <h3>Observacoes</h3>
+                  <p>${escaparHtml(orcamento.observacao || 'Sem observacoes adicionais.').replaceAll('\n', '<br />')}</p>
+                </div>
+                <div class="rodape">
+                  <div>
+                    ${isDb2 ? 'Documento montado a partir do sistema DB2 para consulta e reimpressao.' : 'Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.'}
+                  </div>
+                  <div><strong>(95) 3224-0115</strong> | Av. Ataide Teive, 5928 e 4509</div>
+                </div>
               </div>
             </div>
-            <div class="dados">
-              <div class="sub">Orcamento ${escaparHtml(identificador)}</div>
-              <div style="margin-top: 8px; font-size: 12px; color: #374151;">Data: ${escaparHtml(data)}</div>
-              <div style="margin-top: 4px; font-size: 12px; color: #374151;">Gerado em: ${escaparHtml(dataHora)}</div>
-              <div style="margin-top: 4px; font-size: 12px; color: #374151;">Vendedor: ${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</div>
-              ${orcamento.clienteNome ? `<div style="margin-top: 4px; font-size: 12px; color: #374151;">Cliente: ${escaparHtml(orcamento.clienteNome)}</div>` : ''}
-            </div>
-          </div>
-          <div class="grid-info">
-            <div class="box">
-              <h3>Dados do cliente</h3>
-              <div class="linha"><span>Nome</span><strong>${escaparHtml(orcamento.clienteNome || 'Nao informado')}</strong></div>
-              ${telefoneCliente ? `<div class="linha"><span>Telefone</span><strong>${escaparHtml(telefoneCliente)}</strong></div>` : ''}
-              ${orcamento.cnpjcpf ? `<div class="linha"><span>CPF/CNPJ</span><strong>${escaparHtml(orcamento.cnpjcpf)}</strong></div>` : ''}
-              ${enderecoCliente ? `<div class="linha"><span>Endereco</span><strong>${escaparHtml(enderecoCliente)}</strong></div>` : ''}
-            </div>
-            <div class="box">
-              <h3>Informacoes do orcamento</h3>
-              <div class="linha"><span>Origem</span><strong>${escaparHtml(isDb2 ? 'Sistema DB2' : 'Area do vendedor')}</strong></div>
-              ${orcamento.criadoEm ? `<div class="linha"><span>Data do sistema</span><strong>${escaparHtml(new Date(orcamento.criadoEm).toLocaleString('pt-BR'))}</strong></div>` : ''}
-              ${orcamento.dtValidade ? `<div class="linha"><span>Validade</span><strong>${escaparHtml(new Date(orcamento.dtValidade).toLocaleDateString('pt-BR'))}</strong></div>` : ''}
-              ${isDb2 ? `<div class="linha"><span>Status</span><strong>${escaparHtml(orcamento.flagCancelado === 'T' ? 'Cancelado' : orcamento.flagAprovado === 'T' ? 'Aprovado' : 'Em aberto')}</strong></div>` : ''}
-              ${isDb2 && orcamento.empresa ? `<div class="linha"><span>Empresa</span><strong>${escaparHtml(String(orcamento.empresa))}</strong></div>` : ''}
-            </div>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Cod.</th>
-                <th>Produto</th>
-                <th>Qtd</th>
-                <th>Unit.</th>
-                <th>Desc.</th>
-                <th>Subtotal</th>
-              </tr>
-            </thead>
-            <tbody>${linhas}</tbody>
-          </table>
-          <div class="totais">
-            <div><span>Subtotal</span><strong>${formatarPreco(orcamento.subtotalSemDesc || 0)}</strong></div>
-            ${(orcamento.totalDesconto || 0) > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(orcamento.totalDesconto || 0)}</strong></div>` : ''}
-            <div class="total"><span>Total</span><strong>${formatarPreco(orcamento.totalComDesc || 0)}</strong></div>
-          </div>
-          <div class="obs">
-            <h3>Observacoes</h3>
-            <div>${escaparHtml(orcamento.observacao || 'Sem observacoes adicionais.').replaceAll('\n', '<br />')}</div>
-          </div>
-          <div class="rodape">
-            ${isDb2 ? 'Documento montado a partir do sistema DB2 para consulta e reimpressao.<br />' : 'Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.<br />'}
-            Galpao do Aco | (95) 3224-0115 | Av. Ataide Teive, 5928 e 4509
           </div>
         </body>
       </html>
