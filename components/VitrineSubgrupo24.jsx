@@ -15,6 +15,7 @@ export default function VitrineSubgrupo24({
   vazioTitulo = 'Nao ha produto em destaque no momento.',
   resumo = '',
   tema = 'red',
+  cardVariant = 'default',
 }) {
   const temaClasses =
     tema === 'green'
@@ -25,6 +26,15 @@ export default function VitrineSubgrupo24({
           title: 'text-emerald-950',
           cta: 'border-emerald-700 text-emerald-700 hover:border-emerald-600 hover:text-emerald-600',
           resumo: 'bg-emerald-50 text-emerald-800',
+        }
+      : tema === 'motor'
+      ? {
+          section: 'bg-[linear-gradient(180deg,#dff6ff_0%,#eef9ff_30%,#ffffff_100%)]',
+          border: 'border-sky-300 bg-[linear-gradient(135deg,#f8fdff_0%,#eef8ff_52%,#ffffff_100%)]',
+          labelBg: 'bg-sky-700',
+          title: 'text-slate-950',
+          cta: 'border-sky-700 text-sky-800 hover:border-sky-600 hover:text-sky-600',
+          resumo: 'bg-sky-50 text-sky-900',
         }
       : {
           section: 'bg-gradient-to-b from-white via-[#fff7f4] to-white',
@@ -72,6 +82,7 @@ export default function VitrineSubgrupo24({
                     desconto={desconto}
                     badge={badge}
                     destaque={indice === 0}
+                    variant={cardVariant}
                   />
                 ))}
               </div>

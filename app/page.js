@@ -28,6 +28,7 @@ export default async function HomePage() {
   ])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const produtosMap = new Map()
+  const produtosMotorizadasMap = new Map()
   const produtosMaisVendidosMap = new Map()
   const produtosFazendaMap = new Map()
   const produtosFerramentasProfissionaisMap = new Map()
@@ -38,6 +39,9 @@ export default async function HomePage() {
     const subgrupo = Number(produto.subgrupo || 0)
     if (subgrupo === 24) {
       produtosMap.set(Number(produto.id), produto)
+    }
+    if (subgrupo === 29) {
+      produtosMotorizadasMap.set(Number(produto.id), produto)
     }
     if (subgrupo === 26) {
       produtosMaisVendidosMap.set(Number(produto.id), produto)
@@ -53,11 +57,15 @@ export default async function HomePage() {
     }
   }
 
+  const produtosSubgrupo29 = Array.from(produtosMotorizadasMap.values()).slice(0, 10)
   const produtosSubgrupo26 = Array.from(produtosMaisVendidosMap.values()).slice(0, 10)
   const produtosSubgrupo24 = Array.from(produtosMap.values()).slice(0, 10)
   const produtosSubgrupo28 = Array.from(produtosFazendaMap.values()).slice(0, 10)
   const produtosSubgrupo27 = Array.from(produtosFerramentasProfissionaisMap.values()).slice(0, 10)
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
+  const origemSubgrupo29 = produtosSubgrupo29.length
+    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    : 'sem retorno'
   const origemSubgrupo26 = produtosSubgrupo26.length
     ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
     : 'sem retorno'
@@ -85,6 +93,23 @@ export default async function HomePage() {
         images={heroSlides}
         title={config?.hero_title || 'Ofertas em aco para sua obra'}
         subtitle={config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
+      />
+
+      <VitrineSubgrupo24
+        sectionId="ferramentas-motorizadas"
+        produtos={produtosSubgrupo29}
+        origem={origemSubgrupo29}
+        label="Ferramentas motorizadas"
+        titulo="Potencia, torque e corte pesado para quem precisa produzir mais"
+        descricao="Uma vitrine mais tecnica para motores, cortes, impacto e equipamentos que pedem mais desempenho no trabalho pesado."
+        href="/produtos?subgrupo=29"
+        cta="Ver linha motorizada"
+        desconto={18}
+        badge="Alta potencia"
+        vazioTitulo="Nao ha ferramenta motorizada em destaque no momento."
+        resumo={`${produtosSubgrupo29.length} item${produtosSubgrupo29.length !== 1 ? 's' : ''} motorizado${produtosSubgrupo29.length !== 1 ? 's' : ''} reunido${produtosSubgrupo29.length !== 1 ? 's' : ''} em uma vitrine tecnica de alta demanda.`}
+        tema="motor"
+        cardVariant="motor"
       />
 
       <VitrineSubgrupo24
