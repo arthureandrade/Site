@@ -67,6 +67,13 @@ function formatarIdentificadorOrcamento(orcamento) {
   return `V${formatarNumeroOrcamento(orcamento?.numero || 0)}`
 }
 
+function normalizarBuscaCodigo(valor) {
+  return String(valor ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\D/g, '')
+}
+
 async function carregarOrcamentosServidor(usuarioLogin, busca = '') {
   const resposta = await vendedorListarOrcamentos(usuarioLogin, busca)
   if (!resposta?.ok || !Array.isArray(resposta.orcamentos)) return null
@@ -1082,10 +1089,16 @@ function CatalogoCatalogo() {
 
   const aplicarFiltros = useCallback((catalogo, p = 0, buscaAtual = '', secaoAtual = '') => {
     const termo = String(buscaAtual || '').toLowerCase().trim()
+    const termoCodigo = normalizarBuscaCodigo(buscaAtual)
     const filtrados = catalogo.filter((produto) => {
       const nome = String(produto.nome || '').toLowerCase()
       const codigo = String(produto.id || '').toLowerCase()
-      const casaBusca = !termo || nome.includes(termo) || codigo.includes(termo)
+      const codigoNormalizado = normalizarBuscaCodigo(produto.id)
+      const casaBusca =
+        !termo ||
+        nome.includes(termo) ||
+        codigo.includes(termo) ||
+        (termoCodigo && codigoNormalizado.includes(termoCodigo))
       const casaSecao = !secaoAtual || String(numeroSecao(produto.secao)) === String(secaoAtual)
       return casaBusca && casaSecao
     })
