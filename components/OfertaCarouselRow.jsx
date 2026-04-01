@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import OfertaCard from '@/components/OfertaCard'
 
 function getDuration(produtosLength) {
@@ -16,21 +16,51 @@ export default function OfertaCarouselRow({
   itemKeyPrefix = 'oferta',
   autoScroll = false,
 }) {
+  const [manualOverride, setManualOverride] = useState(false)
+  const resumeTimerRef = useRef(null)
+
+  const autoRunning = autoScroll && !manualOverride
+
   const trackItems = useMemo(() => {
     if (!produtos.length) return []
-    return autoScroll ? [...produtos, ...produtos] : produtos
-  }, [produtos, autoScroll])
+    return autoRunning ? [...produtos, ...produtos] : produtos
+  }, [produtos, autoRunning])
 
   if (!produtos.length) return null
 
   const duration = `${getDuration(produtos.length)}s`
 
+  useEffect(() => {
+    return () => {
+      if (resumeTimerRef.current) {
+        clearTimeout(resumeTimerRef.current)
+      }
+    }
+  }, [])
+
+  function ativarModoManualTemporario() {
+    if (!autoScroll) return
+    setManualOverride(true)
+    if (resumeTimerRef.current) {
+      clearTimeout(resumeTimerRef.current)
+    }
+    resumeTimerRef.current = setTimeout(() => {
+      setManualOverride(false)
+    }, 8000)
+  }
+
   return (
-    <div className={autoScroll ? 'marquee-wrapper' : 'overflow-x-auto pb-3'}>
+    <div
+      className={autoRunning ? 'marquee-wrapper' : 'overflow-x-auto pb-3'}
+      onWheel={ativarModoManualTemporario}
+      onTouchStart={ativarModoManualTemporario}
+      onMouseDown={ativarModoManualTemporario}
+      onScroll={ativarModoManualTemporario}
+    >
       <div
-        className={`${autoScroll ? 'marquee-track' : 'flex'} gap-3 sm:gap-4`}
+        className={`${autoRunning ? 'marquee-track' : 'flex'} gap-3 sm:gap-4`}
         style={{
-          animationDuration: autoScroll ? duration : undefined,
+          animationDuration: autoRunning ? duration : undefined,
         }}
       >
         {trackItems.map((produto, indice) => (
