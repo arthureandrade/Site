@@ -623,21 +623,23 @@ function PainelOrcamento({ onClose, usuario }) {
     const isDb2 = String(orcamento?.fonte || '').toUpperCase() === 'DB2'
     const telefoneCliente = [orcamento?.fone1, orcamento?.foneCelular].filter(Boolean).join(' | ')
     const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
-    const linhas = (orcamento.items || []).map((item) => {
-      const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
-      const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
-      const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
-      return `
-        <tr>
-          <td>${escaparHtml(item.id)}</td>
-          <td>${escaparHtml(item.nome)}</td>
-          <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
-          <td>${escaparHtml(precoUnit)}</td>
-          <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
-          <td>${escaparHtml(subtotal)}</td>
-        </tr>
-      `
-    }).join('')
+      const linhas = (orcamento.items || []).map((item) => {
+        const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
+        const precoCheio = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
+        const precoComDesc = item.preco > 0 ? formatarPreco(item.preco * (1 - desc / 100)) : 'Consultar'
+        const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
+        return `
+          <tr>
+            <td>${escaparHtml(item.id)}</td>
+            <td class="produto-cell">${escaparHtml(item.nome)}</td>
+            <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
+            <td>${escaparHtml(precoCheio)}</td>
+            <td>${escaparHtml(precoComDesc)}</td>
+            <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
+            <td>${escaparHtml(subtotal)}</td>
+          </tr>
+        `
+      }).join('')
 
     const isTermica = formato === 'termica'
     const html = `
@@ -669,9 +671,15 @@ function PainelOrcamento({ onClose, usuario }) {
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
             table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '11px'}; overflow: hidden; border-radius: 14px; }
-            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '7px' : '9px'}; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '6px 4px' : '9px 8px'}; text-align: left; }
-            tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '5px 4px' : '8px 8px'}; text-align: left; vertical-align: top; line-height: 1.35; }
-            tbody tr:nth-child(even) { background: #fcfcfd; }
+              thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '5px 3px' : '8px 6px'}; text-align: left; }
+              tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '4px 3px' : '7px 6px'}; text-align: left; vertical-align: top; line-height: 1.25; }
+              .col-codigo { width: ${isTermica ? '34px' : '52px'}; }
+              .col-qtd { width: ${isTermica ? '42px' : '62px'}; }
+              .col-preco { width: ${isTermica ? '54px' : '88px'}; }
+              .col-desc { width: ${isTermica ? '34px' : '48px'}; }
+              .col-total { width: ${isTermica ? '58px' : '92px'}; }
+              .produto-cell { font-size: ${isTermica ? '7px' : '10px'}; line-height: 1.2; }
+              tbody tr:nth-child(even) { background: #fcfcfd; }
             .totais { margin-top: 14px; margin-left: auto; width: ${isTermica ? '100%' : '320px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 14px'}; background: #fff; }
             .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '12px'}; }
             .totais div:last-child { border-bottom: 0; }
@@ -730,19 +738,20 @@ function PainelOrcamento({ onClose, usuario }) {
                     ${isDb2 ? `<div class="linha"><span>Status</span><strong>${escaparHtml(orcamento.flagCancelado === 'T' ? 'Cancelado' : orcamento.flagAprovado === 'T' ? 'Aprovado' : 'Em aberto')}</strong></div>` : ''}
                   </div>
                 </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Cod.</th>
-                      <th>Produto</th>
-                      <th>Qtd</th>
-                      <th>Unit.</th>
-                      <th>Desc.</th>
-                      <th>Subtotal</th>
-                    </tr>
-                  </thead>
-                  <tbody>${linhas}</tbody>
-                </table>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th class="col-codigo">Cod.</th>
+                        <th>Produto</th>
+                        <th class="col-qtd">Qtd</th>
+                        <th class="col-preco">Preco cheio</th>
+                        <th class="col-preco">Preco desc.</th>
+                        <th class="col-desc">Desc.</th>
+                        <th class="col-total">Subtotal</th>
+                      </tr>
+                    </thead>
+                    <tbody>${linhas}</tbody>
+                  </table>
                 <div class="totais">
                   <div><span>Subtotal</span><strong>${formatarPreco(orcamento.subtotalSemDesc || 0)}</strong></div>
                   ${(orcamento.totalDesconto || 0) > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(orcamento.totalDesconto || 0)}</strong></div>` : ''}
@@ -1320,8 +1329,9 @@ function CatalogoCatalogo() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="sticky top-0 z-10 flex flex-wrap items-center gap-2 border-b border-gray-200 bg-white px-4 py-2.5">
-        <div className="relative min-w-[180px] flex-1">
+      <div className="sticky top-0 z-10 border-b border-gray-200 bg-white px-3 py-3 sm:px-4 sm:py-2.5">
+        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
+        <div className="relative min-w-0 flex-1">
           <svg className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0" />
           </svg>
@@ -1330,26 +1340,35 @@ function CatalogoCatalogo() {
             placeholder="Buscar por codigo ou descricao..."
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 py-1.5 pl-8 pr-3 text-xs outline-none focus:border-primary"
+            className="w-full rounded-xl border border-gray-300 py-2.5 pl-9 pr-3 text-sm outline-none focus:border-primary sm:rounded-lg sm:py-1.5 sm:text-xs"
           />
         </div>
 
-        <select
-          value={secaoFiltro}
-          onChange={(e) => {
-            setSecaoFiltro(e.target.value)
-            setPage(0)
-          }}
-          className="min-w-[130px] rounded-lg border border-gray-300 bg-white px-2 py-1.5 text-xs outline-none focus:border-primary"
-        >
-          <option value="">Todas as secoes</option>
-          {secoes.map((secao) => (
-            <option key={secao} value={secao}>
-              Secao {secao}
-            </option>
-          ))}
-        </select>
+          <div className="flex items-center gap-2">
+            <select
+              value={secaoFiltro}
+              onChange={(e) => {
+                setSecaoFiltro(e.target.value)
+                setPage(0)
+              }}
+              className="min-w-0 flex-1 rounded-xl border border-gray-300 bg-white px-3 py-2.5 text-sm outline-none focus:border-primary sm:min-w-[130px] sm:flex-none sm:rounded-lg sm:px-2 sm:py-1.5 sm:text-xs"
+            >
+              <option value="">Todas as secoes</option>
+              {secoes.map((secao) => (
+                <option key={secao} value={secao}>
+                  Secao {secao}
+                </option>
+              ))}
+            </select>
 
+            <span className="shrink-0 rounded-full bg-slate-100 px-3 py-2 text-[11px] font-black uppercase tracking-wide text-slate-600 sm:hidden">
+              {total.toLocaleString('pt-BR')}
+            </span>
+          </div>
+        </div>
+        <span className="mt-2 block text-[11px] font-semibold text-gray-400 sm:hidden">
+          {total.toLocaleString('pt-BR')} produto{total !== 1 ? 's' : ''} disponiveis
+        </span>
         <span className="ml-auto hidden text-xs font-semibold text-gray-400 sm:block">
           {total.toLocaleString('pt-BR')} produto{total !== 1 ? 's' : ''}
         </span>
@@ -1364,7 +1383,61 @@ function CatalogoCatalogo() {
             </svg>
           </div>
         ) : (
-          <table className="w-full border-collapse text-xs">
+          <>
+          <div className="grid gap-3 p-3 md:hidden">
+            {produtos.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-4 py-10 text-center text-sm text-gray-400">
+                Nenhum produto encontrado
+              </div>
+            ) : (
+              produtos.map((prod) => (
+                <div key={prod.id} className="rounded-2xl border border-gray-200 bg-white p-3 shadow-sm">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
+                      <div className="font-mono text-[10px] uppercase tracking-wide text-gray-400">Cod. {prod.id}</div>
+                      <div className="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-gray-900">{prod.nome}</div>
+                    </div>
+                    <div className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-slate-600">
+                      {prod.unidade || 'UN'}
+                    </div>
+                  </div>
+
+                  <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                    <div className="rounded-xl bg-slate-50 px-3 py-2">
+                      <div className="text-[10px] uppercase tracking-wide text-gray-400">Preco</div>
+                      <div className="mt-1 text-sm font-black text-gray-900">{formatarPreco(prod.preco)}</div>
+                    </div>
+                    <div className="rounded-xl bg-slate-50 px-3 py-2 text-right">
+                      <div className="text-[10px] uppercase tracking-wide text-gray-400">Estoque</div>
+                      <div className={`mt-1 text-sm font-black ${prod.estoque > 0 ? 'text-green-600' : 'text-gray-400'}`}>
+                        {prod.estoque > 0 ? prod.estoque.toLocaleString('pt-BR', { maximumFractionDigits: 2 }) : '-'}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 flex items-center gap-2">
+                    <input
+                      type="number"
+                      min="1"
+                      value={getQtd(prod.id)}
+                      onChange={(e) => setQtdMap((prev) => ({ ...prev, [prod.id]: Math.max(1, Number(e.target.value) || 1) }))}
+                      className="w-20 rounded-xl border border-gray-300 px-3 py-2 text-center text-sm font-bold outline-none focus:border-primary"
+                    />
+                    <button
+                      onClick={() => handleAdicionar(prod)}
+                      className={`flex-1 rounded-xl py-2.5 text-sm font-black uppercase tracking-wide text-white transition-all active:scale-[0.98] ${
+                        adicionados[prod.id] ? 'bg-green-500' : 'bg-primary hover:bg-red-700'
+                      }`}
+                    >
+                      {adicionados[prod.id] ? 'Adicionado' : 'Adicionar'}
+                    </button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+
+          <table className="hidden w-full border-collapse text-xs md:table">
             <thead className="sticky top-0 z-10 bg-gray-50">
               <tr className="text-left text-[10px] font-bold uppercase tracking-wide text-gray-500">
                 <th className="w-20 border-b border-gray-200 px-3 py-2">Codigo</th>
@@ -1420,15 +1493,16 @@ function CatalogoCatalogo() {
               )}
             </tbody>
           </table>
+          </>
         )}
       </div>
 
       {totalPages > 1 && (
-        <div className="flex flex-wrap items-center justify-center gap-1.5 border-t border-gray-200 bg-white px-4 py-3">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 border-t border-gray-200 bg-white px-3 py-3 sm:px-4">
           <button
             disabled={page === 0}
             onClick={() => handlePage(page - 1)}
-            className="rounded border border-gray-300 px-3 py-1.5 text-xs font-bold transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
           >
             ← Ant.
           </button>
@@ -1438,7 +1512,7 @@ function CatalogoCatalogo() {
               <button
                 key={pg}
                 onClick={() => handlePage(pg)}
-                className={`h-8 w-8 rounded text-xs font-black transition-all ${
+                className={`h-9 w-9 rounded-xl text-xs font-black transition-all ${
                   pg === page ? 'bg-primary text-white' : 'border border-gray-300 text-gray-600 hover:bg-gray-100'
                 }`}
               >
@@ -1449,7 +1523,7 @@ function CatalogoCatalogo() {
           <button
             disabled={page >= totalPages - 1}
             onClick={() => handlePage(page + 1)}
-            className="rounded border border-gray-300 px-3 py-1.5 text-xs font-bold transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-xl border border-gray-300 px-3 py-2 text-xs font-bold transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
           >
             Prox. →
           </button>
@@ -1486,14 +1560,14 @@ function VendedorContent() {
   }
 
   return (
-    <div className="flex flex-col" style={{ height: 'calc(100vh - 64px)' }}>
-      <div className="flex shrink-0 items-center justify-between border-b-2 border-primary bg-brand px-4 py-3 text-white">
+    <div className="flex flex-col" style={{ minHeight: 'calc(100vh - 64px)', height: 'calc(100vh - 64px)' }}>
+      <div className="flex shrink-0 items-start justify-between border-b-2 border-primary bg-brand px-3 py-3 text-white sm:px-4">
         <div>
           <div className="flex items-center gap-2">
             <div className="h-1 w-6 rounded bg-primary" />
-            <h1 className="font-display text-lg uppercase tracking-wide">Area do vendedor</h1>
+            <h1 className="font-display text-base uppercase tracking-wide sm:text-lg">Area do vendedor</h1>
           </div>
-          <p className="ml-8 mt-0.5 text-xs text-gray-400">
+          <p className="ml-8 mt-1 max-w-[220px] text-[11px] leading-relaxed text-gray-400 sm:max-w-none sm:text-xs">
             {usuario?.nome ? `Logado como ${usuario.nome}` : 'Catalogo comercial sem produtos sem preco e sem secao 4'}
           </p>
         </div>
@@ -1503,7 +1577,7 @@ function VendedorContent() {
             setUsuario(null)
             setAutenticado(false)
           }}
-          className="flex items-center gap-1 text-xs text-gray-500 transition-colors hover:text-white"
+          className="flex shrink-0 items-center gap-1 rounded-lg border border-white/10 px-2.5 py-1.5 text-[11px] text-gray-300 transition-colors hover:text-white"
         >
           Sair
         </button>
@@ -1512,16 +1586,16 @@ function VendedorContent() {
       <div className="flex shrink-0 border-b border-gray-200 bg-white lg:hidden">
         <button
           onClick={() => setTab('catalogo')}
-          className={`flex-1 py-2.5 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'catalogo' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`flex-1 py-3 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'catalogo' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Catalogo
         </button>
         <button
           onClick={() => setTab('orcamento')}
-          className={`relative flex-1 py-2.5 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'orcamento' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
+          className={`relative flex-1 py-3 text-xs font-bold uppercase tracking-wide transition-colors ${tab === 'orcamento' ? 'border-b-2 border-primary text-primary' : 'text-gray-500 hover:text-gray-700'}`}
         >
           Orcamento
-          {totalItens > 0 && <span className="absolute right-6 top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[9px] font-black text-white">{totalItens > 9 ? '9+' : totalItens}</span>}
+          {totalItens > 0 && <span className="absolute right-5 top-2 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-primary px-1 text-[9px] font-black text-white">{totalItens > 9 ? '9+' : totalItens}</span>}
         </button>
       </div>
 
