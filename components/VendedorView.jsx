@@ -624,25 +624,53 @@ function PainelOrcamento({ onClose, usuario }) {
     const telefoneCliente = [orcamento?.fone1, orcamento?.foneCelular].filter(Boolean).join(' | ')
     const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
     const pixCnpj = '30.395.559/0001-29'
-      const linhas = (orcamento.items || []).map((item) => {
-        const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
-        const precoCheio = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
-        const precoComDesc = item.preco > 0 ? formatarPreco(item.preco * (1 - desc / 100)) : 'Consultar'
-        const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
-        return `
-          <tr>
-            <td>${escaparHtml(item.id)}</td>
-            <td class="produto-cell">${escaparHtml(item.nome)}</td>
-            <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
-            <td>${escaparHtml(precoCheio)}</td>
-            <td>${escaparHtml(precoComDesc)}</td>
-            <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
-            <td>${escaparHtml(subtotal)}</td>
-          </tr>
-        `
-      }).join('')
-
     const isTermica = formato === 'termica'
+    const linhas = (orcamento.items || []).map((item) => {
+      const desc = Math.max(item.desconto || 0, orcamento.descontoGlobal || 0)
+      const precoCheio = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
+      const precoComDesc = item.preco > 0 ? formatarPreco(item.preco * (1 - desc / 100)) : 'Consultar'
+      const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
+      if (isTermica) {
+        return `
+          <div class="ticket-item">
+            <div class="ticket-codigo">Codigo ${escaparHtml(item.id)}</div>
+            <div class="ticket-produto">${escaparHtml(item.nome)}</div>
+            <div class="ticket-linha">
+              <span>Qtd.</span>
+              <strong>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</strong>
+            </div>
+            <div class="ticket-linha">
+              <span>Vr unit.</span>
+              <strong>${escaparHtml(precoCheio)}</strong>
+            </div>
+            <div class="ticket-linha">
+              <span>Vr desc.</span>
+              <strong>${escaparHtml(precoComDesc)}</strong>
+            </div>
+            <div class="ticket-linha">
+              <span>Desc.</span>
+              <strong>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</strong>
+            </div>
+            <div class="ticket-total">
+              <span>Vr total</span>
+              <strong>${escaparHtml(subtotal)}</strong>
+            </div>
+          </div>
+        `
+      }
+      return `
+        <tr>
+          <td>${escaparHtml(item.id)}</td>
+          <td class="produto-cell">${escaparHtml(item.nome)}</td>
+          <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
+          <td>${escaparHtml(precoCheio)}</td>
+          <td>${escaparHtml(precoComDesc)}</td>
+          <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
+          <td>${escaparHtml(subtotal)}</td>
+        </tr>
+      `
+    }).join('')
+
     const html = `
       <!doctype html>
       <html lang="pt-BR">
@@ -660,10 +688,10 @@ function PainelOrcamento({ onClose, usuario }) {
             .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; background: #f8fafc; border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
             .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; color: #111827; }
             .subtitle { margin: 6px 0 0; color: #6b7280; font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
-            .hero-side { min-width: ${isTermica ? '112px' : '210px'}; max-width: ${isTermica ? '120px' : '250px'}; border-radius: 14px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '8px' : '14px'}; }
-            .hero-label { font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
-            .hero-number { margin-top: 6px; font-size: ${isTermica ? '13px' : '22px'}; font-weight: 800; color: #111827; }
-            .hero-meta { margin-top: 6px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.5; color: #374151; }
+            .hero-side { min-width: ${isTermica ? '108px' : '180px'}; max-width: ${isTermica ? '118px' : '210px'}; border-radius: 12px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '7px' : '10px 11px'}; }
+            .hero-label { font-size: ${isTermica ? '7px' : '9px'}; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6b7280; }
+            .hero-number { margin-top: 4px; font-size: ${isTermica ? '12px' : '16px'}; font-weight: 800; color: #111827; line-height: 1.1; }
+            .hero-meta { margin-top: 4px; font-size: ${isTermica ? '7px' : '9px'}; line-height: 1.3; color: #374151; }
             .body { padding: ${isTermica ? '10px 12px 12px' : '16px 18px 18px'}; }
             .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: ${isTermica ? '8px' : '8px'}; margin-bottom: 10px; }
             .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '9px 11px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
@@ -671,6 +699,10 @@ function PainelOrcamento({ onClose, usuario }) {
             .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '9px' : '10px'}; }
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
+            .linha-dupla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 2px 0; }
+            .linha-dupla .mini-linha { display: flex; justify-content: space-between; gap: 8px; min-width: 0; font-size: ${isTermica ? '9px' : '10px'}; }
+            .linha-dupla .mini-linha span { color: #6b7280; }
+            .linha-dupla .mini-linha strong { text-align: right; min-width: 0; }
             table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '10px'}; overflow: hidden; border-radius: 14px; }
               thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '5px 3px' : '8px 6px'}; text-align: left; }
               tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '4px 3px' : '6px 5px'}; text-align: left; vertical-align: top; line-height: 1.2; }
@@ -681,6 +713,16 @@ function PainelOrcamento({ onClose, usuario }) {
               .col-total { width: ${isTermica ? '58px' : '92px'}; }
               .produto-cell { font-size: ${isTermica ? '7px' : '9px'}; line-height: 1.12; }
               tbody tr:nth-child(even) { background: #fcfcfd; }
+            .ticket-list { border-top: 1px dashed #cbd5e1; border-bottom: 1px dashed #cbd5e1; padding: 6px 0; }
+            .ticket-item { padding: 7px 0 8px; border-bottom: 1px dashed #d1d5db; }
+            .ticket-item:last-child { border-bottom: 0; }
+            .ticket-codigo { font-size: 8px; font-weight: 700; color: #6b7280; }
+            .ticket-produto { margin-top: 2px; font-size: 10px; line-height: 1.25; font-weight: 700; color: #111827; text-transform: uppercase; }
+            .ticket-linha, .ticket-total { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; line-height: 1.35; margin-top: 2px; }
+            .ticket-linha span { color: #6b7280; }
+            .ticket-linha strong, .ticket-total strong { font-weight: 700; color: #111827; text-align: right; }
+            .ticket-total { margin-top: 4px; padding-top: 4px; border-top: 1px dotted #cbd5e1; font-size: 10px; }
+            .ticket-total span { color: #111827; font-weight: 700; }
             .totais { margin-top: 10px; margin-left: auto; width: ${isTermica ? '100%' : '300px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '8px 12px'}; background: #fff; }
             .totais div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '11px'}; }
             .totais div:last-child { border-bottom: 0; }
@@ -731,33 +773,45 @@ function PainelOrcamento({ onClose, usuario }) {
                   <div class="box">
                     <h3>Dados do cliente</h3>
                     <div class="linha"><span>Nome</span><strong>${escaparHtml(orcamento.clienteNome || 'Nao informado')}</strong></div>
-                    ${telefoneCliente ? `<div class="linha"><span>Telefone</span><strong>${escaparHtml(telefoneCliente)}</strong></div>` : ''}
-                    ${orcamento.cnpjcpf ? `<div class="linha"><span>CPF/CNPJ</span><strong>${escaparHtml(orcamento.cnpjcpf)}</strong></div>` : ''}
+                    ${(telefoneCliente || orcamento.cnpjcpf) ? `
+                      <div class="linha-dupla">
+                        ${telefoneCliente ? `<div class="mini-linha"><span>Telefone</span><strong>${escaparHtml(telefoneCliente)}</strong></div>` : '<div></div>'}
+                        ${orcamento.cnpjcpf ? `<div class="mini-linha"><span>CPF/CNPJ</span><strong>${escaparHtml(orcamento.cnpjcpf)}</strong></div>` : '<div></div>'}
+                      </div>
+                    ` : ''}
                     ${enderecoCliente ? `<div class="linha"><span>Endereco</span><strong>${escaparHtml(enderecoCliente)}</strong></div>` : ''}
                   </div>
                   <div class="box">
                     <h3>Informacoes do orcamento</h3>
-                    <div class="linha"><span>Data</span><strong>${escaparHtml(data)}</strong></div>
-                    <div class="linha"><span>Vendedor</span><strong>${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</strong></div>
-                    ${orcamento.criadoEm ? `<div class="linha"><span>Data do sistema</span><strong>${escaparHtml(new Date(orcamento.criadoEm).toLocaleString('pt-BR'))}</strong></div>` : ''}
-                    ${orcamento.dtValidade ? `<div class="linha"><span>Validade</span><strong>${escaparHtml(new Date(orcamento.dtValidade).toLocaleDateString('pt-BR'))}</strong></div>` : ''}
+                    <div class="linha-dupla">
+                      <div class="mini-linha"><span>Data</span><strong>${escaparHtml(data)}</strong></div>
+                      <div class="mini-linha"><span>Vendedor</span><strong>${escaparHtml(orcamento.vendedorNome || 'Equipe comercial')}</strong></div>
+                    </div>
+                    <div class="linha-dupla">
+                      ${orcamento.criadoEm ? `<div class="mini-linha"><span>Data do sistema</span><strong>${escaparHtml(new Date(orcamento.criadoEm).toLocaleString('pt-BR'))}</strong></div>` : '<div></div>'}
+                      ${orcamento.dtValidade ? `<div class="mini-linha"><span>Validade</span><strong>${escaparHtml(new Date(orcamento.dtValidade).toLocaleDateString('pt-BR'))}</strong></div>` : '<div></div>'}
+                    </div>
                     ${isDb2 ? `<div class="linha"><span>Status</span><strong>${escaparHtml(orcamento.flagCancelado === 'T' ? 'Cancelado' : orcamento.flagAprovado === 'T' ? 'Aprovado' : 'Em aberto')}</strong></div>` : ''}
                   </div>
                 </div>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th class="col-codigo">Cod.</th>
-                        <th>Produto</th>
-                        <th class="col-qtd">Qtd</th>
-                        <th class="col-preco">Preco cheio</th>
-                        <th class="col-preco">Preco desc.</th>
-                        <th class="col-desc">Desc.</th>
-                        <th class="col-total">Subtotal</th>
-                      </tr>
-                    </thead>
-                    <tbody>${linhas}</tbody>
-                  </table>
+                  ${isTermica ? `
+                    <div class="ticket-list">${linhas}</div>
+                  ` : `
+                    <table>
+                      <thead>
+                        <tr>
+                          <th class="col-codigo">Cod.</th>
+                          <th>Produto</th>
+                          <th class="col-qtd">Qtd</th>
+                          <th class="col-preco">Preco cheio</th>
+                          <th class="col-preco">Preco desc.</th>
+                          <th class="col-desc">Desc.</th>
+                          <th class="col-total">Subtotal</th>
+                        </tr>
+                      </thead>
+                      <tbody>${linhas}</tbody>
+                    </table>
+                  `}
                 <div class="totais">
                   <div><span>Subtotal</span><strong>${formatarPreco(orcamento.subtotalSemDesc || 0)}</strong></div>
                   ${(orcamento.totalDesconto || 0) > 0.01 ? `<div><span>Desconto</span><strong>- ${formatarPreco(orcamento.totalDesconto || 0)}</strong></div>` : ''}
@@ -1292,12 +1346,12 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
-      const data = await getProdutos({
-        skip: 0,
-        limit: 10000,
-        todas_secoes: 1,
-        noStore: true,
-      })
+        const data = await getProdutos({
+          skip: 0,
+          limit: 15000,
+          todas_secoes: 1,
+          noStore: true,
+        })
       const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
       setBase(catalogo)
       setSecoes([...new Set(catalogo.map((item) => numeroSecao(item.secao)).filter((secao) => secao != null))].sort((a, b) => a - b))
