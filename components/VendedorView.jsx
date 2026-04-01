@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
 import {
   formatarPreco,
-  getCatalogoCompletoComFallback,
+  getProdutos,
   vendedorListarOrcamentos,
   vendedorListarOrcamentosDb2,
   vendedorLogin,
@@ -359,6 +359,7 @@ function PainelOrcamento({ onClose, usuario }) {
   const { items, dispatch, descontoGlobal, subtotalSemDesc, totalComDesc, totalDesconto, totalItens, observacao, clienteNome } = useVendedor()
   const [wppDDD, setWppDDD] = useState('')
   const [wppNum, setWppNum] = useState('')
+  const [painelSecao, setPainelSecao] = useState('resumo')
   const [buscaSalva, setBuscaSalva] = useState('')
   const [abaOrcamentos, setAbaOrcamentos] = useState('salvos')
   const [orcamentosSalvos, setOrcamentosSalvos] = useState([])
@@ -406,6 +407,7 @@ function PainelOrcamento({ onClose, usuario }) {
 
   useEffect(() => {
     if (String(buscaSalva || '').trim()) {
+      setPainelSecao('historico')
       setAbaOrcamentos('db2')
     }
   }, [buscaSalva])
@@ -796,178 +798,209 @@ function PainelOrcamento({ onClose, usuario }) {
         {ultimoNumeroSalvo && <div className="mt-1">Ultimo orcamento salvo: #{formatarNumeroOrcamento(ultimoNumeroSalvo)}</div>}
       </div>
 
-      <div className="min-h-[220px] flex-1 overflow-y-auto">
-        {items.length === 0 ? (
-          <div className="flex h-40 flex-col items-center justify-center gap-2 text-sm text-gray-500">
-            <p>Nenhum item adicionado</p>
-          </div>
-        ) : (
-          <div className="divide-y divide-gray-100">
-            {items.map((item) => {
-              const descEfetiva = Math.max(item.desconto || 0, descontoGlobal)
-              const precoComDesc = item.preco * (1 - descEfetiva / 100)
-              return (
-                <div key={item.id} className="px-3 py-2.5">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="min-w-0 flex-1">
-                      <p className="font-mono text-[10px] text-gray-400">Cod. {item.id}</p>
-                      <p className="line-clamp-2 text-xs font-semibold leading-snug text-gray-800">{item.nome}</p>
-                    </div>
-                    <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="shrink-0 text-gray-300 transition-colors hover:text-red-500">
-                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div className="mt-1.5 flex items-center gap-2">
-                    <div className="flex items-center gap-1">
-                      <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
-                        -
-                      </button>
-                      <input
-                        type="number"
-                        min="1"
-                        value={item.qty}
-                        onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
-                        className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
-                      />
-                      <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
-                        +
-                      </button>
-                    </div>
-
-                    <div className="ml-auto flex items-center gap-1">
-                      <span className="text-[10px] text-gray-400">Desc.</span>
-                      <input
-                        type="number"
-                        min="0"
-                        max="15"
-                        value={item.desconto || 0}
-                        onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
-                        className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs outline-none focus:border-primary"
-                      />
-                      <span className="text-[10px] text-gray-400">%</span>
-                    </div>
-                  </div>
-
-                  {item.preco > 0 && (
-                    <div className="mt-1 flex items-center justify-end gap-2">
-                      {descEfetiva > 0 && <span className="text-[10px] text-gray-400 line-through">{formatarPreco(item.preco * item.qty)}</span>}
-                      <span className="text-xs font-black text-primary">{formatarPreco(precoComDesc * item.qty)}</span>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-        )}
+      <div className="grid shrink-0 grid-cols-2 border-b border-gray-200 bg-white">
+        <button
+          type="button"
+          onClick={() => setPainelSecao('resumo')}
+          className={`px-4 py-3 text-[11px] font-black uppercase tracking-[0.18em] transition ${
+            painelSecao === 'resumo' ? 'bg-white text-primary shadow-[inset_0_-2px_0_0_#CC0000]' : 'text-gray-500 hover:text-gray-700'
+          }`}
+        >
+          Resumo do orcamento
+        </button>
+        <button
+          type="button"
+          onClick={() => setPainelSecao('historico')}
+          className={`px-4 py-3 text-[11px] font-black uppercase tracking-[0.18em] transition ${
+            painelSecao === 'historico' ? 'bg-white text-sky-700 shadow-[inset_0_-2px_0_0_#0369a1]' : 'text-gray-500 hover:text-gray-700'
+          }`}
+        >
+          Buscar orcamentos
+        </button>
       </div>
 
-      {items.length > 0 && (
-        <div className="border-t border-gray-200 bg-white">
-          <div className="px-4 pb-2 pt-3">
-            <div className="mb-1 flex items-center justify-between">
-              <label className="text-xs font-semibold uppercase tracking-wide text-gray-600">Desconto geral</label>
-              <span className="text-xs font-black text-primary">{descontoGlobal}%</span>
-            </div>
-            <input
-              type="range"
-              min="0"
-              max="15"
-              step="1"
-              value={descontoGlobal}
-              onChange={(e) => dispatch({ type: 'SET_DESCONTO_GLOBAL', desconto: e.target.value })}
-              className="h-1.5 w-full accent-[#CC0000]"
-            />
-          </div>
+      {painelSecao === 'resumo' ? (
+        <>
+          <div className="min-h-[320px] flex-1 overflow-y-auto">
+            {items.length === 0 ? (
+              <div className="flex h-40 flex-col items-center justify-center gap-2 text-sm text-gray-500">
+                <p>Nenhum item adicionado</p>
+              </div>
+            ) : (
+              <div className="divide-y divide-gray-100">
+                {items.map((item) => {
+                  const descEfetiva = Math.max(item.desconto || 0, descontoGlobal)
+                  const precoComDesc = item.preco * (1 - descEfetiva / 100)
+                  return (
+                    <div key={item.id} className="px-3 py-2.5">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="min-w-0 flex-1">
+                          <p className="font-mono text-[10px] text-gray-400">Cod. {item.id}</p>
+                          <p className="line-clamp-2 text-xs font-semibold leading-snug text-gray-800">{item.nome}</p>
+                        </div>
+                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="shrink-0 text-gray-300 transition-colors hover:text-red-500">
+                          <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
 
-          <div className="space-y-1 border-t border-gray-100 px-4 py-2">
-            <div className="flex justify-between text-xs text-gray-500">
-              <span>Subtotal</span>
-              <span>{formatarPreco(subtotalSemDesc)}</span>
-            </div>
-            {totalDesconto > 0.01 && (
-              <div className="flex justify-between text-xs font-semibold text-green-600">
-                <span>Desconto</span>
-                <span>- {formatarPreco(totalDesconto)}</span>
+                      <div className="mt-1.5 flex items-center gap-2">
+                        <div className="flex items-center gap-1">
+                          <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
+                            -
+                          </button>
+                          <input
+                            type="number"
+                            min="1"
+                            value={item.qty}
+                            onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
+                            className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
+                          />
+                          <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
+                            +
+                          </button>
+                        </div>
+
+                        <div className="ml-auto flex items-center gap-1">
+                          <span className="text-[10px] text-gray-400">Desc.</span>
+                          <input
+                            type="number"
+                            min="0"
+                            max="15"
+                            value={item.desconto || 0}
+                            onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
+                            className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs outline-none focus:border-primary"
+                          />
+                          <span className="text-[10px] text-gray-400">%</span>
+                        </div>
+                      </div>
+
+                      {item.preco > 0 && (
+                        <div className="mt-1 flex items-center justify-end gap-2">
+                          {descEfetiva > 0 && <span className="text-[10px] text-gray-400 line-through">{formatarPreco(item.preco * item.qty)}</span>}
+                          <span className="text-xs font-black text-primary">{formatarPreco(precoComDesc * item.qty)}</span>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
               </div>
             )}
-            <div className="flex justify-between font-black text-gray-900">
-              <span className="text-sm">Total</span>
-              <span className="text-base">{formatarPreco(totalComDesc)}</span>
+          </div>
+
+          {items.length > 0 && (
+            <div className="shrink-0 border-t border-gray-200 bg-white">
+              <div className="grid gap-0 xl:grid-cols-[1.15fr_0.85fr]">
+                <div className="border-b border-gray-100 px-4 pb-2 pt-3 xl:border-b-0 xl:border-r">
+                  <div className="mb-1 flex items-center justify-between">
+                    <label className="text-xs font-semibold uppercase tracking-wide text-gray-600">Desconto geral</label>
+                    <span className="text-xs font-black text-primary">{descontoGlobal}%</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="15"
+                    step="1"
+                    value={descontoGlobal}
+                    onChange={(e) => dispatch({ type: 'SET_DESCONTO_GLOBAL', desconto: e.target.value })}
+                    className="h-1.5 w-full accent-[#CC0000]"
+                  />
+
+                  <div className="mt-3 space-y-1">
+                    <div className="flex justify-between text-xs text-gray-500">
+                      <span>Subtotal</span>
+                      <span>{formatarPreco(subtotalSemDesc)}</span>
+                    </div>
+                    {totalDesconto > 0.01 && (
+                      <div className="flex justify-between text-xs font-semibold text-green-600">
+                        <span>Desconto</span>
+                        <span>- {formatarPreco(totalDesconto)}</span>
+                      </div>
+                    )}
+                    <div className="flex justify-between font-black text-gray-900">
+                      <span className="text-sm">Total</span>
+                      <span className="text-base">{formatarPreco(totalComDesc)}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid gap-0">
+                  <div className="border-b border-gray-100 px-4 py-2">
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+                      Nome do cliente
+                    </label>
+                    <input
+                      type="text"
+                      value={clienteNome}
+                      onChange={(e) => dispatch({ type: 'SET_CLIENTE_NOME', clienteNome: e.target.value })}
+                      placeholder="Digite o nome do cliente"
+                      className="w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
+                    />
+                  </div>
+
+                  <div className="border-b border-gray-100 px-4 py-2">
+                    <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+                      Enviar para (WhatsApp)
+                    </label>
+                    <div className="flex items-center gap-1.5">
+                      <span className="rounded border border-gray-200 bg-gray-100 px-2 py-1.5 text-xs font-bold text-gray-400">+55</span>
+                      <input
+                        type="tel"
+                        maxLength={2}
+                        placeholder="DDD"
+                        value={wppDDD}
+                        onChange={(e) => setWppDDD(e.target.value.replace(/\D/g, '').slice(0, 2))}
+                        className="w-12 rounded border border-gray-300 py-1.5 text-center text-xs outline-none focus:border-primary"
+                      />
+                      <input
+                        type="tel"
+                        maxLength={9}
+                        placeholder="Numero"
+                        value={wppNum}
+                        onChange={(e) => setWppNum(e.target.value.replace(/\D/g, '').slice(0, 9))}
+                        className="flex-1 rounded border border-gray-300 py-1.5 text-center text-xs outline-none focus:border-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-gray-100 px-4 py-2">
+                <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
+                  Observacao
+                </label>
+                <textarea
+                  value={observacao}
+                  onChange={(e) => dispatch({ type: 'SET_OBSERVACAO', observacao: e.target.value })}
+                  rows={2}
+                  placeholder="Prazo, entrega, retirada, condicoes e observacoes para o cliente..."
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
+                />
+              </div>
+
+              <div className="grid gap-2 border-t border-gray-100 px-4 pb-4 pt-2 sm:grid-cols-3">
+                <button onClick={() => enviarOrcamento()} className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 font-bold text-white transition-all hover:bg-[#1ebe5a] active:scale-95">
+                  Enviar orcamento
+                </button>
+                <button onClick={() => abrirSeletorPdf()} className="flex items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
+                  Gerar PDF
+                </button>
+                <button onClick={() => salvarOrcamento()} className="flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-slate-50 py-3 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
+                  Gravar orcamento
+                </button>
+              </div>
+
+              <div className="px-4 pb-3">
+                <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs text-gray-400 transition-colors hover:text-red-500">
+                  Limpar orcamento
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="border-t border-gray-100 px-4 py-2">
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
-              Nome do cliente
-            </label>
-            <input
-              type="text"
-              value={clienteNome}
-              onChange={(e) => dispatch({ type: 'SET_CLIENTE_NOME', clienteNome: e.target.value })}
-              placeholder="Digite o nome do cliente"
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
-            />
-          </div>
-
-          <div className="border-t border-gray-100 px-4 py-2">
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
-              Observacao
-            </label>
-            <textarea
-              value={observacao}
-              onChange={(e) => dispatch({ type: 'SET_OBSERVACAO', observacao: e.target.value })}
-              rows={3}
-              placeholder="Prazo, entrega, retirada, condicoes e observacoes para o cliente..."
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-xs outline-none focus:border-primary"
-            />
-          </div>
-
-          <div className="border-t border-gray-100 px-4 py-2">
-            <label className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-gray-500">
-              Enviar para (WhatsApp)
-            </label>
-            <div className="flex items-center gap-1.5">
-              <span className="rounded border border-gray-200 bg-gray-100 px-2 py-1.5 text-xs font-bold text-gray-400">+55</span>
-              <input
-                type="tel"
-                maxLength={2}
-                placeholder="DDD"
-                value={wppDDD}
-                onChange={(e) => setWppDDD(e.target.value.replace(/\D/g, '').slice(0, 2))}
-                className="w-12 rounded border border-gray-300 py-1.5 text-center text-xs outline-none focus:border-primary"
-              />
-              <input
-                type="tel"
-                maxLength={9}
-                placeholder="Numero"
-                value={wppNum}
-                onChange={(e) => setWppNum(e.target.value.replace(/\D/g, '').slice(0, 9))}
-                className="flex-1 rounded border border-gray-300 py-1.5 text-center text-xs outline-none focus:border-primary"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-2 px-4 pb-4 pt-1">
-            <button onClick={() => enviarOrcamento()} className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 font-bold text-white transition-all hover:bg-[#1ebe5a] active:scale-95">
-              Enviar orcamento
-            </button>
-            <button onClick={() => abrirSeletorPdf()} className="flex w-full items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
-              Gerar PDF
-            </button>
-            <button onClick={() => salvarOrcamento()} className="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-slate-50 py-3 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
-              Gravar orcamento
-            </button>
-            <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs text-gray-400 transition-colors hover:text-red-500">
-              Limpar orcamento
-            </button>
-          </div>
-        </div>
-      )}
-
-      <div className="shrink-0 border-t border-gray-200 bg-slate-50 px-4 py-2.5">
+          )}
+        </>
+      ) : (
+      <div className="flex min-h-0 flex-1 flex-col border-t border-gray-200 bg-slate-50 px-4 py-2.5">
         <div className="mb-2 flex items-center justify-between gap-3">
           <div>
             <div className="text-[10px] font-semibold uppercase tracking-wide text-gray-500">
@@ -1145,6 +1178,7 @@ function PainelOrcamento({ onClose, usuario }) {
           </div>
         </div>
       </div>
+      )}
 
       {pdfModal.open && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
@@ -1238,8 +1272,13 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
-      const data = await getCatalogoCompletoComFallback({ noStore: true })
-      const catalogo = (data || []).filter(deveExibirNoVendedor)
+      const data = await getProdutos({
+        skip: 0,
+        limit: 10000,
+        todas_secoes: 1,
+        noStore: true,
+      })
+      const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
       setBase(catalogo)
       setSecoes([...new Set(catalogo.map((item) => numeroSecao(item.secao)).filter((secao) => secao != null))].sort((a, b) => a - b))
       aplicarFiltros(catalogo, 0, '', '')
@@ -1250,20 +1289,6 @@ function CatalogoCatalogo() {
 
   useEffect(() => {
     fetchProdutos()
-  }, [fetchProdutos])
-
-  useEffect(() => {
-    function recarregarAoVoltar() {
-      if (document.visibilityState === 'hidden') return
-      fetchProdutos()
-    }
-
-    window.addEventListener('focus', recarregarAoVoltar)
-    document.addEventListener('visibilitychange', recarregarAoVoltar)
-    return () => {
-      window.removeEventListener('focus', recarregarAoVoltar)
-      document.removeEventListener('visibilitychange', recarregarAoVoltar)
-    }
   }, [fetchProdutos])
 
   useEffect(() => {
