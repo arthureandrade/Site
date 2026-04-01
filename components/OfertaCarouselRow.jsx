@@ -1,15 +1,7 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import OfertaCard from '@/components/OfertaCard'
-
-function getVisibleCount() {
-  if (typeof window === 'undefined') return 5
-  if (window.innerWidth >= 1280) return 5
-  if (window.innerWidth >= 1024) return 4
-  if (window.innerWidth >= 640) return 3
-  return 2
-}
 
 function getDuration(produtosLength) {
   const base = Math.max(produtosLength, 5)
@@ -23,18 +15,6 @@ export default function OfertaCarouselRow({
   cardVariant = 'default',
   itemKeyPrefix = 'oferta',
 }) {
-  const [visibleCount, setVisibleCount] = useState(getVisibleCount)
-
-  useEffect(() => {
-    function handleResize() {
-      setVisibleCount(getVisibleCount())
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   const trackItems = useMemo(() => {
     if (!produtos.length) return []
     return [...produtos, ...produtos]
@@ -55,7 +35,7 @@ export default function OfertaCarouselRow({
         {trackItems.map((produto, indice) => (
           <div
             key={`${itemKeyPrefix}-${produto.id}-${indice}`}
-            className="w-[calc(50%_-_6px)] shrink-0 sm:w-[calc(33.333%_-_11px)] lg:w-[calc(25%_-_12px)] xl:w-[calc(20%_-_13px)]"
+            className="w-[168px] shrink-0 sm:w-[220px] lg:w-[250px] xl:w-[272px]"
           >
             <OfertaCard
               produto={produto}
