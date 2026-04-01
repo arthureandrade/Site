@@ -39,22 +39,24 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 shadow-[0_10px_35px_rgba(15,23,42,0.08)] backdrop-blur-md">
       <div className="border-b border-slate-200 bg-[#f8fafc]">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-4 px-4 py-3 text-sm font-black uppercase tracking-[0.16em] text-slate-500 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            <a href="tel:9532240115" className="text-base text-primary sm:text-lg">{telefone}</a>
-            <span className="hidden rounded-full bg-green-50 px-3 py-1 text-[10px] text-green-700 lg:inline-flex">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-2 px-4 py-2 text-[11px] font-black uppercase tracking-[0.14em] text-slate-500 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-4 lg:px-8 lg:text-sm lg:tracking-[0.16em]">
+          <div className="flex items-center justify-between gap-3">
+            <a href="tel:9532240115" className="text-sm text-primary sm:text-lg">{telefone}</a>
+            <span className="rounded-full bg-green-50 px-2.5 py-1 text-[9px] text-green-700 sm:px-3 sm:text-[10px] lg:inline-flex">
               Atendimento comercial rapido
             </span>
           </div>
-          <span className="hidden text-sm sm:inline">Av. Ataide Teive, 5928</span>
-          <span className="hidden text-sm lg:inline">Av. Ataide Teive, 4509</span>
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] font-bold tracking-[0.12em] sm:text-xs lg:text-sm">
+            <span>Av. Ataide Teive, 5928</span>
+            <span>Av. Ataide Teive, 4509</span>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto flex h-32 max-w-[1600px] items-center justify-between gap-5 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-3 px-4 py-3 sm:gap-5 sm:px-6 sm:py-4 lg:h-32 lg:px-8 lg:py-0">
         <Link href="/" className="flex items-center gap-3">
           {logoUrl ? (
-            <div className="relative h-[72px] w-[320px]">
+            <div className="relative h-[46px] w-[180px] sm:h-[56px] sm:w-[230px] lg:h-[72px] lg:w-[320px]">
               <Image src={logoUrl} alt="Galpao do Aco" fill unoptimized className="object-contain object-left" />
             </div>
           ) : (
@@ -97,7 +99,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <Link
             href={whatsappAco}
-            className="hidden items-center justify-center rounded-[22px] bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-7 py-4 text-base font-black uppercase tracking-[0.18em] text-white shadow-[0_18px_34px_rgba(22,163,74,0.32)] transition hover:scale-[1.02] hover:shadow-[0_22px_42px_rgba(22,163,74,0.36)] lg:inline-flex"
+            className="inline-flex items-center justify-center rounded-[18px] bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.14em] text-white shadow-[0_14px_24px_rgba(22,163,74,0.22)] transition hover:scale-[1.02] hover:shadow-[0_22px_42px_rgba(22,163,74,0.36)] sm:px-5 sm:py-3 sm:text-xs lg:rounded-[22px] lg:px-7 lg:py-4 lg:text-base lg:tracking-[0.18em]"
           >
             Comprar Aco
           </Link>
@@ -135,6 +137,32 @@ export default function Header() {
             Buscar
           </button>
         </form>
+        <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+          <Link
+            href="/produtos"
+            className="whitespace-nowrap rounded-full border border-slate-300 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate-700"
+          >
+            Catalogo
+          </Link>
+          <Link
+            href="/produtos?categoria=ferro_aco"
+            className="whitespace-nowrap rounded-full border border-green-600 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-green-700"
+          >
+            Catalogo Aco
+          </Link>
+          <Link
+            href="/#ofertas"
+            className="whitespace-nowrap rounded-full bg-primary px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-white"
+          >
+            Ofertas
+          </Link>
+          <Link
+            href="/#saldao"
+            className="whitespace-nowrap rounded-full border border-primary bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-primary"
+          >
+            Saldao
+          </Link>
+        </div>
       </div>
 
       {menuOpen && (

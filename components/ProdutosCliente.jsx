@@ -104,6 +104,7 @@ export default function ProdutosCliente({
   const [produtosPorPagina, setProdutosPorPagina] = useState(24)
   const [mostrarTodasCategorias, setMostrarTodasCategorias] = useState(false)
   const [mostrarTodasMarcas, setMostrarTodasMarcas] = useState(false)
+  const [mostrarFiltrosMobile, setMostrarFiltrosMobile] = useState(false)
 
   const apiUrl =
     (typeof window !== 'undefined' && window.__ENV_API_URL__) ||
@@ -268,12 +269,35 @@ export default function ProdutosCliente({
 
   return (
     <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mb-4 flex items-center justify-between gap-3 lg:hidden">
+        <button
+          type="button"
+          onClick={() => setMostrarFiltrosMobile((valor) => !valor)}
+          className="inline-flex items-center justify-center rounded-2xl border border-gray-300 bg-white px-4 py-3 text-xs font-black uppercase tracking-[0.16em] text-brand shadow-sm"
+        >
+          {mostrarFiltrosMobile ? 'Fechar filtros' : 'Abrir filtros'}
+        </button>
+        <div className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
+          {totalFiltrado.toLocaleString('pt-BR')} itens
+        </div>
+      </div>
       <div className="grid gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
-        <aside>
+        <aside className={`${mostrarFiltrosMobile ? 'block' : 'hidden'} lg:block`}>
           <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
             <div className="border-b border-white/10 bg-brand px-5 py-4">
-              <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Catalogo</p>
-              <h2 className="font-display text-2xl uppercase leading-none text-white">Filtros laterais</h2>
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Catalogo</p>
+                  <h2 className="font-display text-2xl uppercase leading-none text-white">Filtros laterais</h2>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setMostrarFiltrosMobile(false)}
+                  className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-white lg:hidden"
+                >
+                  Fechar
+                </button>
+              </div>
             </div>
 
             <div className="space-y-5 p-5">
@@ -438,11 +462,11 @@ export default function ProdutosCliente({
         </aside>
 
         <section>
-          <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+          <div className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:mb-6 sm:p-5">
             <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
               <div>
                 <div className="mb-3 h-1 w-12 rounded bg-primary" />
-                <h3 className="font-display text-3xl uppercase text-gray-900">Catalogo de Produtos</h3>
+                <h3 className="font-display text-2xl uppercase text-gray-900 sm:text-3xl">Catalogo de Produtos</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {categoriaEspecial === 'ferro_aco'
                     ? 'Catalogo de aco da secao 6. Exibicao sem preco e sem estoque, apenas para mostrar o mix disponivel.'

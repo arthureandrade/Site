@@ -80,7 +80,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col gap-3 p-4">
+      <div className="flex flex-1 flex-col gap-2.5 p-3 sm:gap-3 sm:p-4">
         <div className="flex items-start justify-between gap-3">
           <div className="space-y-1">
           {produto.marca && produto.marca !== 'GERAL' && (
@@ -98,12 +98,12 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
         </div>
 
         <Link href={`/produto/${produto.id}`} className="group block">
-          <h3 className="line-clamp-3 min-h-[3.75rem] text-[15px] font-semibold leading-snug text-gray-900 transition-colors group-hover:text-primary">
+          <h3 className="line-clamp-3 min-h-[3.35rem] text-[13px] font-semibold leading-snug text-gray-900 transition-colors group-hover:text-primary sm:min-h-[3.75rem] sm:text-[15px]">
             {produto.nome}
           </h3>
         </Link>
 
-        <div className="rounded-[22px] border border-gray-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-3 shadow-inner shadow-slate-100/70">
+        <div className="rounded-[18px] border border-gray-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-2.5 shadow-inner shadow-slate-100/70 sm:rounded-[22px] sm:p-3">
           {ocultarPreco ? (
             <>
               <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Preco sob consulta</span>
@@ -118,14 +118,14 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
                   De: {formatarPreco(precoOriginal)}
                 </span>
               )}
-              <span className="block text-2xl font-black leading-none text-gray-900">
+              <span className="block text-[1.35rem] font-black leading-none text-gray-900 sm:text-2xl">
                 {formatarPreco(desconto > 0 ? precoPromocional : precoOriginal)}
               </span>
-              <span className="mt-1 block text-[11px] font-bold uppercase tracking-wide text-primary">
+              <span className="mt-1 block text-[10px] font-bold uppercase tracking-wide text-primary sm:text-[11px]">
                 {desconto > 0 ? 'a vista no online' : `ou ${parcelamento}`}
               </span>
               {desconto > 0 && (
-                <span className="mt-1 block text-[11px] font-bold text-gray-600">
+                <span className="mt-1 block text-[10px] font-bold text-gray-600 sm:text-[11px]">
                   ou {parcelamento} sem juros no valor cheio
                 </span>
               )}
@@ -150,14 +150,14 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
               href={linkWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
-                className="rounded-xl bg-green-500 px-3 py-2 text-center text-xs font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-green-600"
+                className="rounded-xl bg-green-500 px-3 py-2 text-center text-[11px] font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-green-600 sm:text-xs"
               >
                 Comprar
               </a>
             ) : (
               <Link
                 href={`/produto/${produto.id}`}
-                className="rounded-xl bg-primary px-3 py-2 text-center text-xs font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-red-700"
+                className="rounded-xl bg-primary px-3 py-2 text-center text-[11px] font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-red-700 sm:text-xs"
               >
                 Comprar
               </Link>
@@ -165,7 +165,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
             <button
               type="button"
               onClick={handleAdicionar}
-              className={`rounded-xl px-3 py-2 text-xs font-black uppercase tracking-wide transition-all duration-200 active:scale-95 ${
+              className={`rounded-xl px-3 py-2 text-[11px] font-black uppercase tracking-wide transition-all duration-200 active:scale-95 sm:text-xs ${
                 adicionado
                   ? 'bg-green-100 text-green-700'
                   : 'border border-primary text-primary hover:bg-red-50'

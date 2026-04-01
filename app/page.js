@@ -116,7 +116,7 @@ export default async function HomePage() {
         resumo={`${produtosSubgrupo27.length} ferramenta${produtosSubgrupo27.length !== 1 ? 's' : ''} profissional${produtosSubgrupo27.length !== 1 ? 'is' : ''} em destaque na vitrine.`}
       />
 
-      <section className="bg-white py-5">
+      <section className="bg-white py-4 sm:py-5">
         <div className="mx-auto grid max-w-[1600px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: 'Operacao estruturada', texto: 'Mix amplo, condicao comercial clara e atendimento preparado para volume.' },
@@ -131,12 +131,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-10">
+      <section className="bg-white py-8 sm:py-10">
         <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <div className="eyebrow">Categorias principais</div>
-            <h2 className="mt-3 text-3xl font-black uppercase text-gray-900">Compre por linha de produto</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">
+            <h2 className="mt-3 text-2xl font-black uppercase text-gray-900 sm:text-3xl">Compre por linha de produto</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600 sm:mt-3">
               Organizamos o catalogo por frentes de compra para deixar a navegacao mais rapida e profissional.
             </p>
           </div>
@@ -146,11 +146,11 @@ export default async function HomePage() {
               <Link
                 key={categoria.nome}
                 href={categoria.href || `/produtos?busca=${encodeURIComponent(categoria.busca)}`}
-                className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.1)]"
+                className="group overflow-hidden rounded-[18px] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.1)] sm:rounded-[24px]"
               >
-                <div className={`h-24 bg-gradient-to-br ${categoria.cor}`} />
-                <div className="p-4">
-                  <div className="text-sm font-black uppercase tracking-[0.08em] text-gray-900">{categoria.nome}</div>
+                <div className={`h-16 bg-gradient-to-br ${categoria.cor} sm:h-24`} />
+                <div className="p-3 sm:p-4">
+                  <div className="text-[13px] font-black uppercase tracking-[0.06em] text-gray-900 sm:text-sm sm:tracking-[0.08em]">{categoria.nome}</div>
                   <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Ver produtos</div>
                 </div>
               </Link>
@@ -181,7 +181,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f6f7f8] py-14">
+      <section className="bg-[#f6f7f8] py-10 sm:py-14">
         <div className="mx-auto grid max-w-[1600px] gap-6 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rapido para obras, oficinas e serralherias.' },

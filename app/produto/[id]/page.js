@@ -69,8 +69,8 @@ export default async function ProdutoPage({ params }) {
 
   return (
     <div className="bg-[#f8f9fb]">
-      <div className="mx-auto max-w-[1600px] px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <nav className="mb-8 flex items-center gap-2 text-sm text-gray-500">
+      <div className="mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-12 lg:px-8">
+        <nav className="mb-5 flex items-center gap-2 overflow-x-auto text-xs text-gray-500 sm:mb-8 sm:text-sm">
           <Link href="/" className="transition-colors hover:text-primary">
             Inicio
           </Link>
@@ -82,9 +82,9 @@ export default async function ProdutoPage({ params }) {
           <span className="max-w-xs truncate font-medium text-gray-800">{produto.nome}</span>
         </nav>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] xl:gap-12">
-          <div className="rounded-[32px] border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
-            <div className="relative aspect-square overflow-hidden rounded-[28px] border border-gray-100 bg-gradient-to-br from-white to-gray-50">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1.08fr_0.92fr] xl:gap-12">
+          <div className="rounded-[24px] border border-gray-200 bg-white p-3 shadow-sm sm:rounded-[32px] sm:p-6">
+            <div className="relative aspect-square overflow-hidden rounded-[22px] border border-gray-100 bg-gradient-to-br from-white to-gray-50 sm:rounded-[28px]">
               {desconto > 0 && (
                 <div className="absolute left-4 top-4 z-10 rounded-2xl bg-primary px-4 py-2 text-sm font-black uppercase tracking-[0.16em] text-white shadow-lg">
                   {desconto}% OFF online
@@ -117,7 +117,7 @@ export default async function ProdutoPage({ params }) {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="rounded-[32px] border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="rounded-[24px] border border-gray-200 bg-white p-4 shadow-sm sm:rounded-[32px] sm:p-8">
               <div className="flex flex-wrap items-center gap-3">
                 {produto.marca && (
                   <span className="rounded-full bg-red-50 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-primary">
@@ -136,17 +136,17 @@ export default async function ProdutoPage({ params }) {
                 ) : null}
               </div>
 
-              <h1 className="mt-5 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl xl:text-[2.7rem]">
+              <h1 className="mt-4 text-[1.75rem] font-extrabold leading-tight text-gray-900 sm:mt-5 sm:text-4xl xl:text-[2.7rem]">
                 {produto.nome}
               </h1>
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              <div className="mt-4 grid gap-2 sm:mt-5 sm:gap-3 sm:grid-cols-3">
                 {[
                   ocultarComercial ? 'Condicoes comerciais sob consulta' : temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
                   'Compra rapida pelo WhatsApp',
                   ocultarComercial ? 'Atendimento para aco e estruturas' : 'Parcelamento em 10x no valor cheio',
                 ].map((item) => (
-                  <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-slate-700">
+                  <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-xs font-semibold text-slate-700 sm:px-4 sm:py-3 sm:text-sm">
                     {item}
                   </div>
                 ))}
@@ -156,13 +156,13 @@ export default async function ProdutoPage({ params }) {
                 <p className="mt-6 border-l-4 border-primary/30 pl-4 leading-relaxed text-gray-600">{produto.descricao}</p>
               )}
 
-              <div className="mt-7 rounded-[28px] border border-red-100 bg-gradient-to-br from-white via-white to-red-50 p-6 shadow-sm">
+              <div className="mt-6 rounded-[22px] border border-red-100 bg-gradient-to-br from-white via-white to-red-50 p-4 shadow-sm sm:mt-7 sm:rounded-[28px] sm:p-6">
                 <div className="mb-1 text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
                   {ocultarComercial ? 'Atendimento comercial' : 'Condicao comercial'}
                 </div>
                 {ocultarComercial ? (
                   <>
-                    <div className="mt-2 text-4xl font-black leading-tight text-gray-900">
+                    <div className="mt-2 text-3xl font-black leading-tight text-gray-900 sm:text-4xl">
                       Preco sob consulta
                     </div>
                     <div className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
@@ -178,8 +178,8 @@ export default async function ProdutoPage({ params }) {
                       De: {formatarPreco(produto.preco)}
                     </div>
                     <div className="mt-2 flex flex-wrap items-end gap-3">
-                      <span className="text-xl font-black text-primary">R$</span>
-                      <span className="text-5xl font-black leading-none text-gray-900">
+                      <span className="text-lg font-black text-primary sm:text-xl">R$</span>
+                      <span className="text-[2.2rem] font-black leading-none text-gray-900 sm:text-5xl">
                         {formatarPreco(precoPromocional).replace('R$', '').trim()}
                       </span>
                       <span className="pb-2 text-sm font-black uppercase tracking-[0.18em] text-primary">
@@ -191,7 +191,7 @@ export default async function ProdutoPage({ params }) {
                     </div>
                   </>
                 ) : (
-                  <div className="mt-2 text-5xl font-black leading-none text-gray-900">{formatarPreco(produto.preco)}</div>
+                  <div className="mt-2 text-[2.2rem] font-black leading-none text-gray-900 sm:text-5xl">{formatarPreco(produto.preco)}</div>
                 )}
                 {!ocultarComercial && (
                   <div className="mt-4 text-base font-semibold text-slate-700">
@@ -224,7 +224,7 @@ export default async function ProdutoPage({ params }) {
                 <div className="mt-3">
                   <Link
                     href="/produtos"
-                    className="flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 px-6 py-4 text-sm font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50"
+                    className="flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 px-5 py-3 text-sm font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 sm:px-6 sm:py-4"
                   >
                     Voltar ao catalogo
                   </Link>
@@ -238,7 +238,7 @@ export default async function ProdutoPage({ params }) {
           </div>
         </div>
 
-        <section className="mt-12 rounded-[32px] border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <section className="mt-8 rounded-[24px] border border-gray-200 bg-white p-4 shadow-sm sm:mt-12 sm:rounded-[32px] sm:p-8">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <div className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">
@@ -254,7 +254,7 @@ export default async function ProdutoPage({ params }) {
           </div>
 
           {similares.length ? (
-            <div className="mt-6 grid grid-cols-2 gap-4 xl:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:mt-6 sm:gap-4 xl:grid-cols-4">
               {similares.map((item) => (
                 <ProductCard
                   key={`similar-${item.id}`}
