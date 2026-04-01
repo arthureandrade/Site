@@ -43,8 +43,10 @@ function orcamentoReducer(state, action) {
       return { ...state, descontoGlobal: Math.min(15, Math.max(0, Number(action.desconto) || 0)) }
     case 'SET_OBSERVACAO':
       return { ...state, observacao: String(action.observacao || '') }
+    case 'SET_CLIENTE_NOME':
+      return { ...state, clienteNome: String(action.clienteNome || '') }
     case 'CLEAR':
-      return { ...state, items: [], descontoGlobal: 0, observacao: '' }
+      return { ...state, items: [], descontoGlobal: 0, observacao: '', clienteNome: '' }
     case 'INIT':
       return { ...initialState, ...action.state }
     case 'LOAD_ORCAMENTO':
@@ -53,13 +55,14 @@ function orcamentoReducer(state, action) {
         items: Array.isArray(action.orcamento?.items) ? action.orcamento.items : [],
         descontoGlobal: Number(action.orcamento?.descontoGlobal) || 0,
         observacao: String(action.orcamento?.observacao || ''),
+        clienteNome: String(action.orcamento?.clienteNome || ''),
       }
     default:
       return state
   }
 }
 
-const initialState = { items: [], descontoGlobal: 0, observacao: '' }
+const initialState = { items: [], descontoGlobal: 0, observacao: '', clienteNome: '' }
 
 export function VendedorProvider({ children }) {
   const [state, dispatch] = useReducer(orcamentoReducer, initialState)

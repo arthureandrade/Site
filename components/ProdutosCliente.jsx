@@ -5,6 +5,7 @@ import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
 import { normalizarCategoriaComercial, obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
+import { getProdutos } from '../lib/api'
 
 const CATEGORIAS_MARCA = [
   { nome: 'Ferro e Aco', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'chapa', 'tela'] },
@@ -106,11 +107,6 @@ export default function ProdutosCliente({
   const [mostrarTodasMarcas, setMostrarTodasMarcas] = useState(false)
   const [mostrarFiltrosMobile, setMostrarFiltrosMobile] = useState(false)
 
-  const apiUrl =
-    (typeof window !== 'undefined' && window.__ENV_API_URL__) ||
-    process.env.NEXT_PUBLIC_API_URL ||
-    'http://localhost:8000'
-
   const fetchProdutos = useCallback(async (_p = 0, busca_ = '', marca_ = '', est = true) => {
     setLoading(true)
     setErro(false)
@@ -118,17 +114,14 @@ export default function ProdutosCliente({
 
     try {
       if (categoriaEspecial === 'ferro_aco') {
-        const qs = new URLSearchParams({
+        const data = await getProdutos({
           skip: 0,
           limit: 5000,
-          com_preco: 'false',
+          com_preco: false,
           secao: String(SECAO_FERRO_ACO),
+          em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
+          noStore: true,
         })
-        if (!ignorarEstoquePorCodigo && est != null) qs.set('em_estoque', est)
-
-        const res = await fetch(`${apiUrl}/produtos?${qs}`)
-        if (!res.ok) throw new Error()
-        const data = await res.json()
 
         let filtrados = (data.produtos || []).filter(ehProdutoFerroAco)
         if (busca_) {
@@ -148,16 +141,17 @@ export default function ProdutosCliente({
           [...filtrados].sort((a, b) => calcularScoreFerroAco(b) - calcularScoreFerroAco(a))
         )
       } else {
-        const qs = new URLSearchParams({ skip: 0, limit: 5000, com_preco: 'true' })
-        if (busca_) qs.set('busca', busca_)
-        if (marca_) qs.set('marca', marca_)
-        if (secaoEspecial) qs.set('secao', String(secaoEspecial))
-        if (subgrupoEspecial) qs.set('subgrupo', String(subgrupoEspecial))
-        if (!ignorarEstoquePorCodigo && est != null) qs.set('em_estoque', est)
-
-        const res = await fetch(`${apiUrl}/produtos?${qs}`)
-        if (!res.ok) throw new Error()
-        const data = await res.json()
+        const data = await getProdutos({
+          busca: busca_ || undefined,
+          marca: marca_ || undefined,
+          secao: secaoEspecial || undefined,
+          subgrupo: subgrupoEspecial || undefined,
+          em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
+          com_preco: true,
+          skip: 0,
+          limit: 5000,
+          noStore: true,
+        })
         const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
         setTodosProdutos(
           [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
@@ -168,22 +162,25 @@ export default function ProdutosCliente({
     } finally {
       setLoading(false)
     }
-  }, [apiUrl, categoriaEspecial, secaoEspecial, subgrupoEspecial])
+  }, [categoriaEspecial, secaoEspecial, subgrupoEspecial])
 
   const fetchMarcas = useCallback(async () => {
     setLoadingMarcas(true)
     try {
-      const qs = new URLSearchParams({
+      const data = await getProdutos({
         skip: 0,
         limit: 5000,
-        com_preco: categoriaEspecial === 'ferro_aco' ? 'false' : 'true',
+        com_preco: categoriaEspecial === 'ferro_aco' ? false : true,
+        secao:
+          categoriaEspecial === 'ferro_aco'
+            ? String(SECAO_FERRO_ACO)
+            : secaoEspecial || undefined,
+        subgrupo:
+          categoriaEspecial === 'ferro_aco'
+            ? undefined
+            : subgrupoEspecial || undefined,
+        noStore: true,
       })
-      if (categoriaEspecial === 'ferro_aco') qs.set('secao', String(SECAO_FERRO_ACO))
-      if (secaoEspecial && categoriaEspecial !== 'ferro_aco') qs.set('secao', String(secaoEspecial))
-      if (subgrupoEspecial && categoriaEspecial !== 'ferro_aco') qs.set('subgrupo', String(subgrupoEspecial))
-      const res = await fetch(`${apiUrl}/produtos?${qs}`)
-      if (!res.ok) throw new Error()
-      const data = await res.json()
       const produtosValidos =
         categoriaEspecial === 'ferro_aco'
           ? (data.produtos || []).filter(ehProdutoFerroAco)
@@ -194,7 +191,7 @@ export default function ProdutosCliente({
     } finally {
       setLoadingMarcas(false)
     }
-  }, [apiUrl, categoriaEspecial, secaoEspecial, subgrupoEspecial])
+  }, [categoriaEspecial, secaoEspecial, subgrupoEspecial])
 
   useEffect(() => {
     fetchProdutos(0, initialBusca, initialMarca, true)
