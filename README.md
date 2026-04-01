@@ -1,194 +1,212 @@
-# API de Produtos — Galpão do Aço
+# Site Galpao do Aco
 
-API FastAPI que serve os produtos do ERP **CISSERP (IBM DB2)** para o site.
+Frontend comercial do Galpao do Aco, construido em Next.js, com foco em:
+
+- vitrine de produtos
+- catalogo comercial
+- catalogo de aco
+- pagina de produto
+- carrinho
+- area do vendedor
+- painel de liberacao comercial
 
 ---
 
-## Arquitetura
+## 1. Stack
 
+- Next.js App Router
+- React
+- Tailwind CSS
+- consumo da API publicada em `vendas.galpaodoaco.com/api`
+
+---
+
+## 2. Pastas principais
+
+```text
+app/
+  page.js                 -> home
+  produtos/page.js        -> catalogo
+  produto/[id]/page.js    -> detalhe do produto
+  vendedor/page.js        -> area do vendedor
+  acessovenda/page.js     -> painel de liberacao de vendedores
+
+components/
+  Header.jsx
+  HeroCarousel.jsx
+  ProductCard.jsx
+  OfertaCard.jsx
+  ProdutosCliente.jsx
+  VitrineSubgrupo24.jsx
+  SaldaoCarousel.jsx
+  VendedorView.jsx
+  AcessoVendaManager.jsx
+
+lib/
+  api.js                  -> cliente da API
+  ofertas.js              -> regras de desconto por subgrupo
+  catalogo.js             -> regras comerciais por secao
 ```
-Site / Frontend
-      │
-      ▼
-  FastAPI (esta API)
-      │
-      ├─► IBM DB2 (10.0.0.7:30152)  ← fonte real dos produtos
-      │    DBA.PRODUTO              → nome, fabricante/marca
-      │    DBA.PRODUTO_GRADE        → descrição, status ativo/inativo
-      │    DBA.PRODUTO_PRECO_DIA    → preço de varejo (mais recente)
-      │    DBA.ESTOQUE_SALDO_ATUAL  → estoque total
-      │
-      └─► SQLite local (fotos_local.db)  ← gerencia apenas fotos
-           fotos_produto             → idproduto + foto_url
+
+---
+
+## 3. Regras comerciais atuais
+
+### Vitrines
+
+- Subgrupo 24 -> Destaque -> 14%
+- Subgrupo 26 -> Mais vendidos da obra -> 12%
+- Subgrupo 27 -> Ferramentas profissionais -> 12%
+- Subgrupo 25 -> Saldao -> 18%
+
+### Produtos da secao 6
+
+- nao exibem preco no catalogo de aco
+- nao exibem estoque no catalogo de aco
+- pagina do produto mostra "Preco sob consulta"
+- CTA vai para atendimento comercial
+
+### Parcelamento
+
+- sempre calculado sobre o valor cheio
+- desconto vale apenas a vista
+
+---
+
+## 4. Hero
+
+O hero usa imagens locais em:
+
+```text
+public/Hero/hero1.jpeg
+public/Hero/hero2.jpeg
+public/Hero/hero3.jpeg
+```
+
+Recomendacao atual:
+
+- tamanho ideal: `1920 x 800`
+- formato: JPG ou WEBP
+- manter assunto principal centralizado
+
+Logo principal:
+
+```text
+public/logo.jpeg
 ```
 
 ---
 
-## Pré-requisitos
+## 5. Catalogo
 
-- Python 3.10+
-- **IBM DB2 ODBC Driver** instalado na máquina
-- Acesso à rede onde o DB2 está (`10.0.0.7:30152`)
+### Catalogo normal
+
+- exibe produtos com preco
+- permite filtro por marca, categoria, secao e disponibilidade
+- ordena pela media entre valor e estoque
+
+### Catalogo aco
+
+- rota baseada em `categoria=ferro_aco`
+- usa secao 6
+- oculta preco e estoque
+- prioriza nomes iniciando com `perfil`
 
 ---
 
-## Instalação
+## 6. Area do vendedor
+
+Rota:
+
+- `/vendedor`
+
+Funcoes:
+
+- login do vendedor via API
+- solicitacao de cadastro
+- carrinho comercial
+- orcamento com observacao
+- gravacao local de orcamentos
+- numeracao sequencial
+- pesquisa de orcamentos
+- PDF com logo da empresa
+
+---
+
+## 7. Painel de liberacao de vendedores
+
+Rota:
+
+- `/acessovenda`
+
+Objetivo:
+
+- aprovar ou rejeitar solicitacoes de acesso da area do vendedor
+
+Importante:
+
+- hoje ainda existe senha fixa no fluxo
+- isso deve ser endurecido com autenticacao real do lado do servidor
+
+---
+
+## 8. Fotos de produtos
+
+As fotos podem vir:
+
+1. da API de fotos do produto
+2. de regras de substituicao por prefixo do nome
+
+Regras atuais:
+
+- `cantoneira` -> foto do produto 44
+- `metalon` -> foto do produto 149
+- `perfil u` -> foto do produto 13244
+- `perfil c` -> foto do produto 231
+- `vergalhao` -> foto do produto 295
+- `chapa plana` -> foto do produto 2012
+
+---
+
+## 9. Como rodar localmente
 
 ```bash
-cd api_produtos
-pip install -r requirements.txt
+cd "C:\Users\Arthur Andrade\Documents\GitHub\Site"
+npm install
+npm run dev
 ```
 
----
+Abrir:
 
-## Iniciando a API
+- `http://localhost:3000`
+
+Se precisar apontar para API local:
 
 ```bash
-uvicorn main:app --reload
-```
-
-A API estará em: **http://localhost:8000**
-Documentação interativa: **http://localhost:8000/docs**
-
----
-
-## Variáveis de ambiente (produção)
-
-Defina para sobrescrever as credenciais padrão:
-
-```bash
-# Windows
-set DB2_HOSTNAME=10.0.0.7
-set DB2_PORT=30152
-set DB2_DATABASE=CISSERP
-set DB2_UID=consulta
-set DB2_PWD=sua-senha-aqui
-set API_KEY=sua-chave-admin-aqui
-
-# Linux / Mac
-export DB2_HOSTNAME=10.0.0.7
-export DB2_PORT=30152
-export DB2_DATABASE=CISSERP
-export DB2_UID=consulta
-export DB2_PWD=sua-senha-aqui
-export API_KEY=sua-chave-admin-aqui
+NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
 ---
 
-## Autenticação
+## 10. Publicacao
 
-Os endpoints de **upload de foto** exigem a API Key no header:
+Para o site refletir corretamente em producao, normalmente precisam subir juntos:
 
-```
-X-API-Key: minha-chave-secreta-123
-```
+- frontend do site
+- API publicada (`produtos_api.py`)
 
-> Troque pela variável de ambiente `API_KEY` em produção.
+Casos comuns de erro:
 
----
-
-## Endpoints
-
-### Públicos (sem autenticação)
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| GET | `/` | Status da API |
-| GET | `/produtos` | Lista produtos ativos do DB2 |
-| GET | `/produtos/{id}` | Produto por IDPRODUTO do DB2 |
-
-**Filtros disponíveis em `GET /produtos`:**
-
-| Parâmetro | Exemplo | Descrição |
-|---|---|---|
-| `marca` | `?marca=Votorantim` | Busca parcial no campo FABRICANTE |
-| `em_estoque` | `?em_estoque=true` | Apenas com estoque disponível |
-| `skip` / `limit` | `?skip=0&limit=20` | Paginação |
-
-### Protegidos (requerem `X-API-Key`)
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/produtos/{id}/foto` | Upload de foto para um produto |
-| DELETE | `/produtos/{id}/foto` | Remove foto de um produto |
+- frontend novo com API antiga
+- API nova com frontend antigo
+- cache do navegador em fotos e vitrines
 
 ---
 
-## Exemplos de uso
+## 11. Proximas melhorias sugeridas
 
-### Listar todos os produtos
-```bash
-curl http://localhost:8000/produtos
-```
-
-### Filtrar por marca com paginação
-```bash
-curl "http://localhost:8000/produtos?marca=Votorantim&em_estoque=true&limit=20"
-```
-
-### Buscar produto pelo ID do DB2
-```bash
-curl http://localhost:8000/produtos/12345
-```
-
-### Upload de foto
-```bash
-curl -X POST http://localhost:8000/produtos/12345/foto \
-  -H "X-API-Key: minha-chave-secreta-123" \
-  -F "foto=@caminho/para/foto.jpg"
-```
-
-### Remover foto
-```bash
-curl -X DELETE http://localhost:8000/produtos/12345/foto \
-  -H "X-API-Key: minha-chave-secreta-123"
-```
-
----
-
-## Estrutura de arquivos
-
-```
-api_produtos/
-├── main.py          # Aplicação principal e rotas
-├── database.py      # Conexão DB2 (pyodbc) + SQLite local
-├── models.py        # Modelo SQLite para fotos (FotoProduto)
-├── schemas.py       # Schemas de resposta (Pydantic)
-├── db2_queries.py   # Queries SQL para o DB2
-├── auth.py          # Autenticação por API Key
-├── requirements.txt # Dependências
-└── fotos/           # Criada automaticamente — armazena as imagens
-```
-
----
-
-## Resposta de exemplo
-
-```json
-{
-  "total": 1842,
-  "produtos": [
-    {
-      "id": 12345,
-      "nome": "CIMENTO VOTORAN CP II 50KG",
-      "descricao": "Saco de cimento 50kg",
-      "preco": 39.90,
-      "marca": "VOTORANTIM",
-      "estoque": 450,
-      "foto_url": "/fotos/produto_12345_abc123.jpg",
-      "criado_em": null,
-      "atualizado_em": null
-    }
-  ]
-}
-```
-
----
-
-## Observações
-
-- **Produtos são gerenciados no ERP (CISSERP).** Esta API não cria, edita ou apaga produtos — apenas lê do DB2.
-- **Fotos** são a única informação gerenciada localmente (SQLite `fotos_local.db`).
-- O arquivo `seed.py` original não é mais necessário (dados reais vêm do DB2).
-- O arquivo `produtos.db` original (SQLite) pode ser removido com segurança.
+1. Autenticacao real no painel `/acessovenda`
+2. Sessao segura para vendedor
+3. Revisao completa do mobile
+4. Monitoramento de publicacao site/API
+5. Painel de controle de vitrines sem depender de deploy
