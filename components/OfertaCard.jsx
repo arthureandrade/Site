@@ -149,24 +149,34 @@ export default function OfertaCard({
           </span>
         </div>
 
-        <div className={`font-semibold uppercase ${compacto ? 'mb-1.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'mb-2 text-[10px] tracking-[0.14em] sm:text-[11px] sm:tracking-[0.16em]'} ${styles.hint}`}>
-          Oferta valida para compras online
-        </div>
+        {!compacto && (
+          <div className={`mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-[11px] sm:tracking-[0.16em] ${styles.hint}`}>
+            Oferta valida para compras online
+          </div>
+        )}
 
         <Link href={`/produto/${produto.id}`} className="block">
-          <h3 className={`line-clamp-3 font-black leading-tight ${compacto ? 'min-h-[3rem] text-[12px] sm:min-h-[3.4rem] sm:text-[13px]' : 'min-h-[3.8rem] text-sm sm:min-h-[4.8rem] sm:text-[1.05rem]'} ${styles.title}`}>
+          <h3 className={`font-black leading-tight ${compacto ? 'line-clamp-2 min-h-[2.1rem] text-[11px] sm:min-h-[2.5rem] sm:text-[12px]' : 'line-clamp-3 min-h-[3.8rem] text-sm sm:min-h-[4.8rem] sm:text-[1.05rem]'} ${styles.title}`}>
             {produto.nome}
           </h3>
         </Link>
 
         <div className={`rounded-[18px] border ${compacto ? 'mt-2.5 p-2.5 sm:mt-3 sm:p-3' : 'mt-3 p-3 sm:mt-4 sm:rounded-[22px] sm:p-4'} ${styles.priceBox}`}>
           <div className="flex items-center justify-between gap-3">
-            <div className={`${compacto ? 'text-[9px] sm:text-[10px]' : 'text-[11px] sm:text-sm'} font-black uppercase line-through decoration-2 ${styles.old}`}>
-              De: {formatarPreco(precoOriginal)}
-            </div>
-            <span className={`rounded-full font-black uppercase ${compacto ? 'px-2 py-0.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'px-2 py-1 text-[9px] tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em]'} ${styles.save}`}>
-              economia imediata
-            </span>
+            {compacto ? (
+              <div className={`text-[8px] font-black uppercase tracking-[0.1em] ${styles.old}`}>
+                De: {formatarPreco(precoOriginal)}
+              </div>
+            ) : (
+              <>
+                <div className="text-[11px] font-black uppercase line-through decoration-2 sm:text-sm">
+                  <span className={styles.old}>De: {formatarPreco(precoOriginal)}</span>
+                </div>
+                <span className={`rounded-full px-2 py-1 text-[9px] font-black uppercase tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em] ${styles.save}`}>
+                  economia imediata
+                </span>
+              </>
+            )}
           </div>
           <div className={`flex items-end gap-1.5 ${compacto ? 'mt-1.5 sm:gap-1.5' : 'mt-2 sm:gap-2'}`}>
             <span className={`${compacto ? 'text-sm sm:text-base' : 'text-lg sm:text-xl'} font-black ${styles.currency}`}>R$</span>
@@ -177,17 +187,19 @@ export default function OfertaCard({
               a vista
             </span>
           </div>
-          <div className={`${compacto ? 'mt-1.5 text-[9px] sm:text-[10px]' : 'mt-2 text-[11px] sm:mt-3 sm:text-sm'} font-bold ${styles.online}`}>
-            Oferta valida para compras online
+          <div className={`${compacto ? 'mt-1 text-[8px] sm:text-[9px]' : 'mt-2 text-[11px] sm:mt-3 sm:text-sm'} font-bold ${styles.online}`}>
+            {compacto ? 'Online' : 'Oferta valida para compras online'}
           </div>
-          <div className={`${compacto ? 'mt-1 text-[9px] sm:text-[10px]' : 'mt-2 text-[11px] sm:text-sm'} font-semibold ${styles.parcel}`}>
+          <div className={`${compacto ? 'mt-1 text-[8px] sm:text-[9px]' : 'mt-2 text-[11px] sm:text-sm'} font-semibold ${styles.parcel}`}>
             ou {parcelamento} sem juros no valor cheio
           </div>
         </div>
 
-        <div className={`rounded-xl border font-bold uppercase ${compacto ? 'mt-2.5 px-3 py-1.5 text-[8px] tracking-[0.1em] sm:mt-3 sm:text-[9px]' : 'mt-3 px-3 py-2 text-[10px] tracking-[0.14em] sm:mt-4 sm:rounded-2xl sm:text-[11px] sm:tracking-[0.16em]'} ${styles.stock}`}>
-          Estoque real e retirada rapida
-        </div>
+        {!compacto && (
+          <div className={`mt-3 rounded-xl border px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] sm:mt-4 sm:rounded-2xl sm:text-[11px] sm:tracking-[0.16em] ${styles.stock}`}>
+            Estoque real e retirada rapida
+          </div>
+        )}
 
         <div className={`mt-auto grid grid-cols-1 gap-2 sm:grid-cols-2 ${compacto ? 'pt-3 sm:pt-4' : 'pt-4 sm:pt-5'}`}>
           <Link
