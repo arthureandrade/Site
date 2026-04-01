@@ -13,6 +13,7 @@ export default function OfertaCard({
   badge = 'Oferta online',
   destaque = false,
   variant = 'default',
+  compacto = false,
 }) {
   const foto = imagemUrlProduto(produto)
   const precoOriginal = Number(produto?.preco || 0)
@@ -100,30 +101,30 @@ export default function OfertaCard({
       className={`group flex h-full flex-col overflow-hidden rounded-[20px] border transition hover:-translate-y-1 sm:rounded-[26px] ${
         styles.card
       } ${
-        destaque ? 'lg:min-h-[540px]' : ''
+        destaque ? (compacto ? 'lg:min-h-[430px]' : 'lg:min-h-[540px]') : ''
       }`}
     >
-      <div className={`px-3 py-2.5 text-white sm:px-4 sm:py-3 ${styles.top}`}>
+      <div className={`text-white ${compacto ? 'px-3 py-2 sm:px-3.5 sm:py-2.5' : 'px-3 py-2.5 sm:px-4 sm:py-3'} ${styles.top}`}>
         <div className="flex items-start justify-between gap-3">
           <div className="leading-none">
-            <span className="text-[1.9rem] font-black sm:text-5xl">{desconto}%</span>
-            <span className="ml-1.5 inline-block text-xs font-black uppercase sm:ml-2 sm:text-lg">de desconto</span>
+            <span className={`${compacto ? 'text-[1.45rem] sm:text-[2.2rem]' : 'text-[1.9rem] sm:text-5xl'} font-black`}>{desconto}%</span>
+            <span className={`ml-1.5 inline-block font-black uppercase ${compacto ? 'text-[10px] sm:text-sm' : 'text-xs sm:ml-2 sm:text-lg'}`}>de desconto</span>
           </div>
-          <span className={`rounded-full px-2 py-1 text-[9px] font-black uppercase tracking-[0.18em] sm:px-3 sm:text-[10px] sm:tracking-[0.22em] ${styles.badge}`}>
+          <span className={`rounded-full font-black uppercase ${compacto ? 'px-2 py-1 text-[8px] tracking-[0.14em] sm:text-[9px]' : 'px-2 py-1 text-[9px] tracking-[0.18em] sm:px-3 sm:text-[10px] sm:tracking-[0.22em]'} ${styles.badge}`}>
             {badge}
           </span>
         </div>
       </div>
 
-      <Link href={`/produto/${produto.id}`} className={`relative mx-2 mt-2 block overflow-hidden rounded-xl border sm:mx-3 sm:mt-3 sm:rounded-2xl ${styles.imageWrap}`}>
-        <div className="relative aspect-[1.1/1]">
+      <Link href={`/produto/${produto.id}`} className={`relative block overflow-hidden rounded-xl border ${compacto ? 'mx-2 mt-2 sm:mx-2.5 sm:mt-2.5' : 'mx-2 mt-2 sm:mx-3 sm:mt-3'} sm:rounded-2xl ${styles.imageWrap}`}>
+        <div className={`relative ${compacto ? 'aspect-[1.28/1]' : 'aspect-[1.1/1]'}`}>
           {foto ? (
             <Image
               src={foto}
               alt={produto.nome}
               fill
               unoptimized
-              className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+              className={`object-contain transition-transform duration-300 group-hover:scale-105 ${compacto ? 'p-3' : 'p-4'}`}
               sizes="(max-width: 768px) 50vw, 20vw"
             />
           ) : (
@@ -132,73 +133,73 @@ export default function OfertaCard({
             </div>
           )}
 
-          <div className="absolute bottom-3 right-3 rounded-full bg-black/70 px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.18em] text-white shadow">
+          <div className={`absolute rounded-full bg-black/70 font-black uppercase text-white shadow ${compacto ? 'bottom-2 right-2 px-2 py-0.5 text-[8px] tracking-[0.14em]' : 'bottom-3 right-3 px-2.5 py-1 text-[9px] tracking-[0.18em]'}`}>
             Imagem ilustrativa
           </div>
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col px-3 pb-4 pt-3 text-slate-900 sm:px-4 sm:pb-5 sm:pt-4">
-        <div className="mb-2 flex items-center justify-between gap-2 sm:mb-3">
-          <div className={`text-[10px] font-black uppercase tracking-[0.22em] ${styles.brand}`}>
+      <div className={`flex flex-1 flex-col text-slate-900 ${compacto ? 'px-3 pb-3 pt-2.5 sm:px-3.5 sm:pb-4 sm:pt-3' : 'px-3 pb-4 pt-3 sm:px-4 sm:pb-5 sm:pt-4'}`}>
+        <div className={`flex items-center justify-between gap-2 ${compacto ? 'mb-1.5 sm:mb-2' : 'mb-2 sm:mb-3'}`}>
+          <div className={`${compacto ? 'text-[9px] tracking-[0.18em]' : 'text-[10px] tracking-[0.22em]'} font-black uppercase ${styles.brand}`}>
             {produto.marca || 'Galpao do Aco'}
           </div>
-          <span className={`rounded-full border px-2 py-1 text-[9px] font-black uppercase tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em] ${styles.code}`}>
+          <span className={`rounded-full border font-black uppercase ${compacto ? 'px-2 py-0.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'px-2 py-1 text-[9px] tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em]'} ${styles.code}`}>
             Cod. {produto.id}
           </span>
         </div>
 
-        <div className={`mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] sm:text-[11px] sm:tracking-[0.16em] ${styles.hint}`}>
+        <div className={`font-semibold uppercase ${compacto ? 'mb-1.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'mb-2 text-[10px] tracking-[0.14em] sm:text-[11px] sm:tracking-[0.16em]'} ${styles.hint}`}>
           Oferta valida para compras online
         </div>
 
         <Link href={`/produto/${produto.id}`} className="block">
-          <h3 className={`line-clamp-3 min-h-[3.8rem] text-sm font-black leading-tight sm:min-h-[4.8rem] sm:text-[1.05rem] ${styles.title}`}>
+          <h3 className={`line-clamp-3 font-black leading-tight ${compacto ? 'min-h-[3rem] text-[12px] sm:min-h-[3.4rem] sm:text-[13px]' : 'min-h-[3.8rem] text-sm sm:min-h-[4.8rem] sm:text-[1.05rem]'} ${styles.title}`}>
             {produto.nome}
           </h3>
         </Link>
 
-        <div className={`mt-3 rounded-[18px] border p-3 sm:mt-4 sm:rounded-[22px] sm:p-4 ${styles.priceBox}`}>
+        <div className={`rounded-[18px] border ${compacto ? 'mt-2.5 p-2.5 sm:mt-3 sm:p-3' : 'mt-3 p-3 sm:mt-4 sm:rounded-[22px] sm:p-4'} ${styles.priceBox}`}>
           <div className="flex items-center justify-between gap-3">
-            <div className={`text-[11px] font-black uppercase line-through decoration-2 sm:text-sm ${styles.old}`}>
+            <div className={`${compacto ? 'text-[9px] sm:text-[10px]' : 'text-[11px] sm:text-sm'} font-black uppercase line-through decoration-2 ${styles.old}`}>
               De: {formatarPreco(precoOriginal)}
             </div>
-            <span className={`rounded-full px-2 py-1 text-[9px] font-black uppercase tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em] ${styles.save}`}>
+            <span className={`rounded-full font-black uppercase ${compacto ? 'px-2 py-0.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'px-2 py-1 text-[9px] tracking-[0.12em] sm:px-2.5 sm:text-[10px] sm:tracking-[0.16em]'} ${styles.save}`}>
               economia imediata
             </span>
           </div>
-          <div className="mt-2 flex items-end gap-1.5 sm:gap-2">
-            <span className={`text-lg font-black sm:text-xl ${styles.currency}`}>R$</span>
-            <span className={`text-[1.9rem] font-black leading-none sm:text-4xl ${styles.price}`}>
+          <div className={`flex items-end gap-1.5 ${compacto ? 'mt-1.5 sm:gap-1.5' : 'mt-2 sm:gap-2'}`}>
+            <span className={`${compacto ? 'text-sm sm:text-base' : 'text-lg sm:text-xl'} font-black ${styles.currency}`}>R$</span>
+            <span className={`${compacto ? 'text-[1.35rem] sm:text-[1.7rem]' : 'text-[1.9rem] sm:text-4xl'} font-black leading-none ${styles.price}`}>
               {formatarPreco(precoComDesconto).replace('R$', '').trim()}
             </span>
-            <span className={`pb-1 text-[10px] font-black uppercase tracking-[0.14em] sm:text-xs sm:tracking-[0.18em] ${styles.vista}`}>
+            <span className={`${compacto ? 'pb-0.5 text-[8px] tracking-[0.1em] sm:text-[9px]' : 'pb-1 text-[10px] tracking-[0.14em] sm:text-xs sm:tracking-[0.18em]'} font-black uppercase ${styles.vista}`}>
               a vista
             </span>
           </div>
-          <div className={`mt-2 text-[11px] font-bold sm:mt-3 sm:text-sm ${styles.online}`}>
+          <div className={`${compacto ? 'mt-1.5 text-[9px] sm:text-[10px]' : 'mt-2 text-[11px] sm:mt-3 sm:text-sm'} font-bold ${styles.online}`}>
             Oferta valida para compras online
           </div>
-          <div className={`mt-2 text-[11px] font-semibold sm:text-sm ${styles.parcel}`}>
+          <div className={`${compacto ? 'mt-1 text-[9px] sm:text-[10px]' : 'mt-2 text-[11px] sm:text-sm'} font-semibold ${styles.parcel}`}>
             ou {parcelamento} sem juros no valor cheio
           </div>
         </div>
 
-        <div className={`mt-3 rounded-xl border px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] sm:mt-4 sm:rounded-2xl sm:text-[11px] sm:tracking-[0.16em] ${styles.stock}`}>
+        <div className={`rounded-xl border font-bold uppercase ${compacto ? 'mt-2.5 px-3 py-1.5 text-[8px] tracking-[0.1em] sm:mt-3 sm:text-[9px]' : 'mt-3 px-3 py-2 text-[10px] tracking-[0.14em] sm:mt-4 sm:rounded-2xl sm:text-[11px] sm:tracking-[0.16em]'} ${styles.stock}`}>
           Estoque real e retirada rapida
         </div>
 
-        <div className="mt-auto grid grid-cols-1 gap-2 pt-4 sm:grid-cols-2 sm:pt-5">
+        <div className={`mt-auto grid grid-cols-1 gap-2 sm:grid-cols-2 ${compacto ? 'pt-3 sm:pt-4' : 'pt-4 sm:pt-5'}`}>
           <Link
             href={`/produto/${produto.id}`}
-            className={`rounded-xl px-3 py-2.5 text-center text-[11px] font-black uppercase tracking-[0.16em] sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em] ${styles.buy}`}
+            className={`rounded-xl text-center font-black uppercase ${compacto ? 'px-3 py-2 text-[10px] tracking-[0.14em] sm:px-3.5 sm:text-[11px]' : 'px-3 py-2.5 text-[11px] tracking-[0.16em] sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em]'} ${styles.buy}`}
           >
             Comprar
           </Link>
           <button
             type="button"
             onClick={handleAdicionar}
-            className={`rounded-xl px-3 py-2.5 text-[11px] font-black uppercase tracking-[0.16em] transition sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em] ${styles.add}`}
+            className={`rounded-xl font-black uppercase transition ${compacto ? 'px-3 py-2 text-[10px] tracking-[0.14em] sm:px-3.5 sm:text-[11px]' : 'px-3 py-2.5 text-[11px] tracking-[0.16em] sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.2em]'} ${styles.add}`}
           >
             {adicionado ? 'Adicionado' : 'Adicionar'}
           </button>

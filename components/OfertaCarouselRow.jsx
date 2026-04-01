@@ -63,6 +63,7 @@ export default function OfertaCarouselRow({
               badge={badge}
               destaque={indice % produtos.length === 0}
               variant={cardVariant}
+              compacto
             />
           </div>
         ))}
