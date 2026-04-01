@@ -104,7 +104,7 @@ export default async function HomePage() {
         descricao="Uma vitrine mais tecnica para motores, cortes, impacto e equipamentos que pedem mais desempenho no trabalho pesado."
         href="/produtos?subgrupo=29"
         cta="Ver linha motorizada"
-        desconto={18}
+        desconto={14}
         badge="Alta potencia"
         vazioTitulo="Nao ha ferramenta motorizada em destaque no momento."
         resumo={`${produtosSubgrupo29.length} item${produtosSubgrupo29.length !== 1 ? 's' : ''} motorizado${produtosSubgrupo29.length !== 1 ? 's' : ''} reunido${produtosSubgrupo29.length !== 1 ? 's' : ''} em uma vitrine tecnica de alta demanda.`}
