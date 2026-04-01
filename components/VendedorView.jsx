@@ -671,10 +671,6 @@ function PainelOrcamento({ onClose, usuario }) {
                 <span>Vr desc.</span>
                 <strong>${escaparHtml(precoComDesc)}</strong>
               </div>
-              <div class="ticket-cell">
-                <span>Desc.</span>
-                <strong>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</strong>
-              </div>
             </div>
             <div class="ticket-total">
               <span>Vr total</span>
@@ -690,7 +686,6 @@ function PainelOrcamento({ onClose, usuario }) {
           <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
           <td>${escaparHtml(precoCheio)}</td>
           <td>${escaparHtml(precoComDesc)}</td>
-          <td>${escaparHtml(desc > 0 ? `${desc}%` : '-')}</td>
           <td>${escaparHtml(subtotal)}</td>
         </tr>
       `
@@ -706,27 +701,27 @@ function PainelOrcamento({ onClose, usuario }) {
             * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             body { font-family: Arial, sans-serif; margin: 0; background: ${isTermica ? '#fff' : '#f3f4f6'}; color: #111827; }
             .page { padding: ${pagePadding}; }
-            .sheet { background: #ffffff; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; border-radius: ${isTermica ? '0' : '18px'}; overflow: hidden; box-shadow: ${isTermica ? 'none' : '0 10px 30px rgba(15, 23, 42, 0.08)'}; width: ${isTermica ? '80mm' : 'auto'}; margin: ${isTermica ? '0 auto' : '0'}; }
-            .hero { display: flex; justify-content: space-between; gap: ${heroGap}; padding: ${heroPadding}; background: #ffffff; color: #111827; border-bottom: 1px solid #e5e7eb; }
-            .brand-wrap { display: flex; align-items: center; gap: 18px; }
-            .logo { width: ${isTermica ? '72px' : '128px'}; object-fit: contain; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: ${isTermica ? '4px 6px' : '8px 10px'}; }
-            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; background: #f8fafc; border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
-            .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; color: #111827; }
-            .subtitle { margin: 6px 0 0; color: #6b7280; font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
-            .hero-side { min-width: ${isTermica ? '108px' : '118px'}; max-width: ${isTermica ? '118px' : '132px'}; border-radius: 10px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '7px' : '6px 7px'}; }
-            .hero-label { font-size: ${isTermica ? '7px' : '7px'}; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #6b7280; }
-            .hero-number { margin-top: 3px; font-size: ${isTermica ? '12px' : '12px'}; font-weight: 800; color: #111827; line-height: 1.05; }
-            .hero-meta { margin-top: 4px; font-size: ${isTermica ? '7px' : a4MetaFont}; line-height: 1.3; color: #374151; }
+            .sheet { background: #ffffff; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; border-radius: ${isTermica ? '0' : '18px'}; overflow: hidden; box-shadow: ${isTermica ? 'none' : '0 10px 30px rgba(15, 23, 42, 0.08)'}; width: ${isTermica ? '78mm' : 'auto'}; margin: ${isTermica ? '0 auto' : '0'}; }
+            .hero { display: flex; justify-content: space-between; gap: ${heroGap}; padding: ${heroPadding}; background: #ffffff; color: #111827; border-bottom: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; }
+            .brand-wrap { display: flex; align-items: center; gap: ${isTermica ? '10px' : '18px'}; }
+            .logo { width: ${isTermica ? '62px' : '128px'}; object-fit: contain; background: #fff; border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; border-radius: ${isTermica ? '6px' : '12px'}; padding: ${isTermica ? '3px 4px' : '8px 10px'}; }
+            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; background: ${isTermica ? '#fff' : '#f8fafc'}; border-radius: ${isTermica ? '3px' : '999px'}; padding: ${isTermica ? '2px 5px' : '5px 10px'}; font-size: ${isTermica ? '9px' : '10px'}; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: ${isTermica ? '#111827' : '#6b7280'}; }
+            .title { margin: ${isTermica ? '6px 0 0' : '10px 0 0'}; font-size: ${isTermica ? '16px' : '23px'}; font-weight: 900; letter-spacing: ${isTermica ? '-0.01em' : '-.03em'}; color: #111827; }
+            .subtitle { margin: 4px 0 0; color: ${isTermica ? '#111827' : '#6b7280'}; font-size: ${isTermica ? '9px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: ${isTermica ? '1.35' : '1.45'}; font-weight: ${isTermica ? '700' : '400'}; }
+            .hero-side { min-width: ${isTermica ? '96px' : '118px'}; max-width: ${isTermica ? '104px' : '132px'}; border-radius: ${isTermica ? '6px' : '10px'}; background: ${isTermica ? '#fff' : '#f8fafc'}; border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; padding: ${isTermica ? '5px 6px' : '6px 7px'}; }
+            .hero-label { font-size: 7px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: ${isTermica ? '#111827' : '#6b7280'}; }
+            .hero-number { margin-top: 3px; font-size: ${isTermica ? '13px' : '12px'}; font-weight: 900; color: #111827; line-height: 1.05; }
+            .hero-meta { margin-top: 4px; font-size: ${isTermica ? '8px' : a4MetaFont}; line-height: ${isTermica ? '1.4' : '1.3'}; color: #111827; }
             .body { padding: ${bodyPadding}; }
             .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: ${isTermica ? '8px' : '8px'}; margin-bottom: 10px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${boxPadding}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .box h3 { margin: 0 0 6px 0; font-size: ${isTermica ? '8px' : '9px'}; text-transform: uppercase; letter-spacing: .12em; color: #991b1b; }
-            .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '9px' : a4LineFont}; }
-            .linha span:first-child { color: #6b7280; }
+            .box { border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; border-radius: ${isTermica ? '6px' : '14px'}; padding: ${boxPadding}; background: #fff; }
+            .box h3 { margin: 0 0 6px 0; font-size: ${isTermica ? '9px' : '9px'}; text-transform: uppercase; letter-spacing: .12em; color: ${isTermica ? '#111827' : '#991b1b'}; font-weight: 900; }
+            .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '10px' : a4LineFont}; }
+            .linha span:first-child { color: ${isTermica ? '#111827' : '#6b7280'}; font-weight: ${isTermica ? '700' : '400'}; }
             .linha strong { text-align: right; }
             .linha-dupla { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 2px 0; }
-            .linha-dupla .mini-linha { display: flex; justify-content: space-between; gap: 8px; min-width: 0; font-size: ${isTermica ? '9px' : a4LineFont}; }
-            .linha-dupla .mini-linha span { color: #6b7280; }
+            .linha-dupla .mini-linha { display: flex; justify-content: space-between; gap: 8px; min-width: 0; font-size: ${isTermica ? '10px' : a4LineFont}; }
+            .linha-dupla .mini-linha span { color: ${isTermica ? '#111827' : '#6b7280'}; font-weight: ${isTermica ? '700' : '400'}; }
             .linha-dupla .mini-linha strong { text-align: right; min-width: 0; }
             table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : a4TableFont}; overflow: hidden; border-radius: 14px; }
               thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${thPadding}; text-align: left; }
@@ -734,36 +729,35 @@ function PainelOrcamento({ onClose, usuario }) {
               .col-codigo { width: ${isTermica ? '34px' : '52px'}; }
               .col-qtd { width: ${isTermica ? '42px' : '62px'}; }
               .col-preco { width: ${isTermica ? '54px' : '88px'}; }
-              .col-desc { width: ${isTermica ? '34px' : '48px'}; }
               .col-total { width: ${isTermica ? '58px' : '92px'}; }
               .produto-cell { font-size: ${isTermica ? '7px' : a4ProdutoFont}; line-height: 1.12; }
               tbody tr:nth-child(even) { background: #fcfcfd; }
-            .ticket-list { border-top: 1px dashed #cbd5e1; border-bottom: 1px dashed #cbd5e1; padding: 6px 0; }
-            .ticket-item { padding: 7px 0 8px; border-bottom: 1px dashed #d1d5db; }
+            .ticket-list { border-top: 1px solid #111827; border-bottom: 1px solid #111827; padding: 6px 0; }
+            .ticket-item { padding: 8px 0 9px; border-bottom: 1px dashed #111827; }
             .ticket-item:last-child { border-bottom: 0; }
-            .ticket-codigo { font-size: 8px; font-weight: 700; color: #6b7280; }
-            .ticket-produto { margin-top: 2px; font-size: 10px; line-height: 1.25; font-weight: 700; color: #111827; text-transform: uppercase; }
-            .ticket-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 4px; }
+            .ticket-codigo { font-size: 9px; font-weight: 800; color: #111827; }
+            .ticket-produto { margin-top: 3px; font-size: 12px; line-height: 1.25; font-weight: 900; color: #111827; text-transform: uppercase; }
+            .ticket-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 6px; }
             .ticket-cell { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-            .ticket-cell span { font-size: 8px; color: #6b7280; }
-            .ticket-cell strong { font-size: 9px; color: #111827; line-height: 1.2; word-break: break-word; }
-            .ticket-linha, .ticket-total { display: flex; justify-content: space-between; gap: 8px; font-size: 9px; line-height: 1.35; margin-top: 2px; }
-            .ticket-linha span { color: #6b7280; }
+            .ticket-cell span { font-size: 9px; color: #111827; font-weight: 700; }
+            .ticket-cell strong { font-size: 11px; color: #111827; line-height: 1.2; word-break: break-word; font-weight: 900; }
+            .ticket-linha, .ticket-total { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; line-height: 1.35; margin-top: 2px; }
+            .ticket-linha span { color: #111827; }
             .ticket-linha strong, .ticket-total strong { font-weight: 700; color: #111827; text-align: right; }
-            .ticket-total { margin-top: 4px; padding-top: 4px; border-top: 1px dotted #cbd5e1; font-size: 10px; }
-            .ticket-total span { color: #111827; font-weight: 700; }
-            .totais { margin-top: 10px; margin-left: auto; width: ${totalBoxWidth}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${totalPadding}; background: #fff; }
-            .totais div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '11px'}; }
+            .ticket-total { margin-top: 6px; padding-top: 5px; border-top: 1px solid #111827; font-size: 12px; }
+            .ticket-total span { color: #111827; font-weight: 900; }
+            .totais { margin-top: 10px; margin-left: auto; width: ${totalBoxWidth}; border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; border-radius: ${isTermica ? '6px' : '14px'}; padding: ${totalPadding}; background: #fff; }
+            .totais div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid ${isTermica ? '#111827' : '#eef2f7'}; font-size: ${isTermica ? '11px' : '11px'}; }
             .totais div:last-child { border-bottom: 0; }
-            .totais .total { font-weight: 800; font-size: ${isTermica ? '12px' : '15px'}; color: #991b1b; }
-            .obs { margin-top: 10px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${obsPadding}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .obs p { margin: 0; font-size: ${isTermica ? '9px' : '10px'}; line-height: 1.45; color: #374151; }
-            .pix-box { margin-top: 10px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${obsPadding}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
-            .pix-box h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #1d4ed8; }
-            .pix-key { font-size: ${isTermica ? '10px' : '13px'}; font-weight: 800; color: #0f172a; word-break: break-word; }
-            .pix-note { margin-top: 4px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.45; color: #475569; }
-            .rodape { margin-top: 16px; display: flex; justify-content: ${isTermica ? 'flex-start' : 'space-between'}; flex-direction: ${isTermica ? 'column' : 'row'}; gap: 10px; align-items: ${isTermica ? 'flex-start' : 'flex-end'}; color: #6b7280; font-size: ${isTermica ? '8px' : '10px'}; line-height: 1.5; }
+            .totais .total { font-weight: 900; font-size: ${isTermica ? '14px' : '15px'}; color: ${isTermica ? '#111827' : '#991b1b'}; }
+            .obs { margin-top: 10px; border: 1px solid ${isTermica ? '#111827' : '#e5e7eb'}; border-radius: ${isTermica ? '6px' : '14px'}; padding: ${obsPadding}; background: #fff; }
+            .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '9px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: ${isTermica ? '#111827' : '#991b1b'}; font-weight: 900; }
+            .obs p { margin: 0; font-size: ${isTermica ? '10px' : '10px'}; line-height: 1.45; color: ${isTermica ? '#111827' : '#374151'}; font-weight: ${isTermica ? '700' : '400'}; }
+            .pix-box { margin-top: 10px; border: 1px solid ${isTermica ? '#111827' : '#dbeafe'}; border-radius: ${isTermica ? '6px' : '14px'}; padding: ${obsPadding}; background: #fff; }
+            .pix-box h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '9px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: ${isTermica ? '#111827' : '#1d4ed8'}; font-weight: 900; }
+            .pix-key { font-size: ${isTermica ? '11px' : '13px'}; font-weight: 900; color: #111827; word-break: break-word; }
+            .pix-note { margin-top: 4px; font-size: ${isTermica ? '9px' : '11px'}; line-height: 1.45; color: ${isTermica ? '#111827' : '#475569'}; font-weight: ${isTermica ? '700' : '400'}; }
+            .rodape { margin-top: 16px; display: flex; justify-content: ${isTermica ? 'flex-start' : 'space-between'}; flex-direction: ${isTermica ? 'column' : 'row'}; gap: 10px; align-items: ${isTermica ? 'flex-start' : 'flex-end'}; color: ${isTermica ? '#111827' : '#6b7280'}; font-size: ${isTermica ? '9px' : '10px'}; line-height: 1.5; font-weight: ${isTermica ? '700' : '400'}; }
             .rodape strong { color: #111827; }
             @media print {
               @page { size: ${isTermica ? '80mm auto' : 'A4'}; margin: ${isTermica ? '4mm' : '8mm'}; }
@@ -841,7 +835,6 @@ function PainelOrcamento({ onClose, usuario }) {
                           <th class="col-qtd">Qtd</th>
                           <th class="col-preco">Preco cheio</th>
                           <th class="col-preco">Preco desc.</th>
-                          <th class="col-desc">Desc.</th>
                           <th class="col-total">Subtotal</th>
                         </tr>
                       </thead>
