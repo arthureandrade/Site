@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-04-01T04:18:54.689Z",
+  "source_api": "https://vendas.galpaodoaco.com/api",
+  "data": {
+    "cidade": "Boa Vista, RR",
+    "clientes_atendidos": 3800,
+    "hero": {
+      "descricao": "Materiais de construcao, ferragens e acos com estoque real e precos atualizados direto do nosso sistema.",
+      "subtitulo": "A Solucao Certa Para Sua Obra!",
+      "titulo": "Galpao do Aco"
+    },
+    "instagram": "galpaodoacorr",
+    "secoes_home": [
+      {
+        "badge": "MAIS VENDIDOS",
+        "params": {
+          "em_estoque": true,
+          "limit": 8
+        },
+        "subtitulo": "Os produtos mais procurados da nossa loja",
+        "titulo": "Mais Vendidos"
+      },
+      {
+        "badge": "OFERTAS EM DESTAQUE",
+        "params": {
+          "com_preco": true,
+          "em_estoque": true,
+          "limit": 8
+        },
+        "subtitulo": "Precos especiais por tempo limitado",
+        "titulo": "Ofertas em Destaque"
+      }
+    ],
+    "whatsapp": "559532240115"
+  }
+}
