@@ -641,37 +641,37 @@ function PainelOrcamento({ onClose, usuario }) {
           <style>
             * { box-sizing: border-box; }
             body { font-family: Arial, sans-serif; margin: 0; background: #f3f4f6; color: #111827; }
-            .page { padding: 30px; }
-            .sheet { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); }
-            .hero { display: flex; justify-content: space-between; gap: 20px; padding: 28px 30px 22px; background: linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%); color: #fff; }
+            .page { padding: 18px; }
+            .sheet { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+            .hero { display: flex; justify-content: space-between; gap: 18px; padding: 18px 20px 16px; background: linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%); color: #fff; }
             .brand-wrap { display: flex; align-items: center; gap: 18px; }
-            .logo { width: 168px; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 16px; padding: 10px 14px; }
-            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: 7px 12px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-            .title { margin: 14px 0 0; font-size: 30px; font-weight: 800; letter-spacing: -.03em; }
-            .subtitle { margin: 8px 0 0; color: rgba(255,255,255,0.78); font-size: 13px; max-width: 520px; }
-            .hero-side { min-width: 240px; max-width: 280px; border-radius: 18px; background: rgba(255,255,255,0.12); padding: 18px; backdrop-filter: blur(10px); }
-            .hero-label { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
-            .hero-number { margin-top: 8px; font-size: 28px; font-weight: 800; }
-            .hero-meta { margin-top: 8px; font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.86); }
-            .body { padding: 24px 30px 30px; }
-            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-bottom: 22px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 18px; padding: 16px 18px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .box h3 { margin: 0 0 12px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .linha { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; font-size: 12px; }
+            .logo { width: 128px; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 12px; padding: 8px 10px; }
+            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: 5px 10px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+            .title { margin: 10px 0 0; font-size: 23px; font-weight: 800; letter-spacing: -.03em; }
+            .subtitle { margin: 6px 0 0; color: rgba(255,255,255,0.78); font-size: 11px; max-width: 460px; line-height: 1.45; }
+            .hero-side { min-width: 210px; max-width: 250px; border-radius: 14px; background: rgba(255,255,255,0.12); padding: 14px; backdrop-filter: blur(10px); }
+            .hero-label { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+            .hero-number { margin-top: 6px; font-size: 22px; font-weight: 800; }
+            .hero-meta { margin-top: 6px; font-size: 11px; line-height: 1.5; color: rgba(255,255,255,0.86); }
+            .body { padding: 18px 20px 20px; }
+            .grid-info { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .box h3 { margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
+            .linha { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: 11px; }
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
-            table { width: 100%; border-collapse: collapse; font-size: 12px; overflow: hidden; border-radius: 18px; }
-            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: 10px; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: 12px 10px; text-align: left; }
-            tbody td { border-bottom: 1px solid #eef2f7; padding: 12px 10px; text-align: left; vertical-align: top; }
+            table { width: 100%; border-collapse: collapse; font-size: 11px; overflow: hidden; border-radius: 14px; }
+            thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: 9px; letter-spacing: .12em; border-bottom: 1px solid #e5e7eb; padding: 9px 8px; text-align: left; }
+            tbody td { border-bottom: 1px solid #eef2f7; padding: 8px 8px; text-align: left; vertical-align: top; line-height: 1.35; }
             tbody tr:nth-child(even) { background: #fcfcfd; }
-            .totais { margin-top: 20px; margin-left: auto; width: 380px; border: 1px solid #e5e7eb; border-radius: 18px; padding: 14px 18px; background: #fff; }
-            .totais div { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eef2f7; font-size: 13px; }
+            .totais { margin-top: 14px; margin-left: auto; width: 320px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 10px 14px; background: #fff; }
+            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eef2f7; font-size: 12px; }
             .totais div:last-child { border-bottom: 0; }
-            .totais .total { font-weight: 800; font-size: 19px; color: #991b1b; }
-            .obs { margin-top: 22px; border: 1px solid #e5e7eb; border-radius: 18px; padding: 16px 18px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .obs h3 { margin: 0 0 10px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .obs p { margin: 0; font-size: 13px; line-height: 1.65; color: #374151; }
-            .rodape { margin-top: 22px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; color: #6b7280; font-size: 11px; line-height: 1.6; }
+            .totais .total { font-weight: 800; font-size: 16px; color: #991b1b; }
+            .obs { margin-top: 14px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 12px 14px; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .obs h3 { margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
+            .obs p { margin: 0; font-size: 11px; line-height: 1.55; color: #374151; }
+            .rodape { margin-top: 16px; display: flex; justify-content: space-between; gap: 16px; align-items: flex-end; color: #6b7280; font-size: 10px; line-height: 1.5; }
             .rodape strong { color: #111827; }
           </style>
         </head>
@@ -956,7 +956,7 @@ function PainelOrcamento({ onClose, usuario }) {
         </div>
       )}
 
-      <div className="shrink-0 border-t border-gray-200 bg-slate-50 px-4 py-3">
+      <div className="shrink-0 border-t border-gray-200 bg-slate-50 px-4 py-2.5">
         <div className="mb-2 flex items-center justify-between gap-3">
           <div>
             <div className="text-[10px] font-semibold uppercase tracking-wide text-gray-500">
@@ -999,7 +999,7 @@ function PainelOrcamento({ onClose, usuario }) {
             </button>
           </div>
 
-          <div className="h-[240px] overflow-y-auto p-3">
+          <div className="h-[180px] overflow-y-auto p-3">
             {abaOrcamentos === 'salvos' ? (
               orcamentosFiltrados.length === 0 ? (
                 <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
@@ -1165,6 +1165,16 @@ function CatalogoCatalogo() {
         (termoCodigo && codigoNormalizado.includes(termoCodigo))
       const casaSecao = !secaoAtual || String(numeroSecao(produto.secao)) === String(secaoAtual)
       return casaBusca && casaSecao
+    })
+    .sort((a, b) => {
+      if (termoCodigo) {
+        const aCodigo = normalizarBuscaCodigo(a.id)
+        const bCodigo = normalizarBuscaCodigo(b.id)
+        const aExact = aCodigo === termoCodigo ? 1 : 0
+        const bExact = bCodigo === termoCodigo ? 1 : 0
+        if (aExact !== bExact) return bExact - aExact
+      }
+      return String(a.nome || '').localeCompare(String(b.nome || ''), 'pt-BR')
     })
 
     setTotal(filtrados.length)
