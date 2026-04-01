@@ -80,7 +80,7 @@ export default function VitrineSubgrupo24({
                 badge={badge}
                 cardVariant={cardVariant}
                 itemKeyPrefix={sectionId}
-                accent={tema === 'green' ? 'green' : tema === 'motor' ? 'blue' : 'red'}
+                autoScroll={tema === 'motor'}
               />
             </>
           ) : (

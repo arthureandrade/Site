@@ -14,22 +14,23 @@ export default function OfertaCarouselRow({
   badge = 'Online',
   cardVariant = 'default',
   itemKeyPrefix = 'oferta',
+  autoScroll = false,
 }) {
   const trackItems = useMemo(() => {
     if (!produtos.length) return []
-    return [...produtos, ...produtos]
-  }, [produtos])
+    return autoScroll ? [...produtos, ...produtos] : produtos
+  }, [produtos, autoScroll])
 
   if (!produtos.length) return null
 
   const duration = `${getDuration(produtos.length)}s`
 
   return (
-    <div className="marquee-wrapper">
+    <div className={autoScroll ? 'marquee-wrapper' : 'overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'}>
       <div
-        className="marquee-track gap-3 sm:gap-4"
+        className={`${autoScroll ? 'marquee-track' : 'flex'} gap-3 sm:gap-4`}
         style={{
-          animationDuration: duration,
+          animationDuration: autoScroll ? duration : undefined,
         }}
       >
         {trackItems.map((produto, indice) => (
