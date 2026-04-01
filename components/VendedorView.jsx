@@ -734,7 +734,7 @@ function PainelOrcamento({ onClose, usuario }) {
   }
 
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full min-h-0 flex-col">
       <div className="flex items-center justify-between border-b border-gray-800 bg-brand px-4 py-3">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold uppercase tracking-wide text-white">Orcamento</span>
@@ -759,7 +759,7 @@ function PainelOrcamento({ onClose, usuario }) {
         {ultimoNumeroSalvo && <div className="mt-1">Ultimo orcamento salvo: #{formatarNumeroOrcamento(ultimoNumeroSalvo)}</div>}
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="min-h-[220px] flex-1 overflow-y-auto">
         {items.length === 0 ? (
           <div className="flex h-40 flex-col items-center justify-center gap-2 text-sm text-gray-500">
             <p>Nenhum item adicionado</p>
@@ -973,7 +973,7 @@ function PainelOrcamento({ onClose, usuario }) {
             </button>
           </div>
 
-          <div className="h-[320px] overflow-y-auto p-3">
+          <div className="h-[240px] overflow-y-auto p-3">
             {abaOrcamentos === 'salvos' ? (
               orcamentosFiltrados.length === 0 ? (
                 <div className="rounded-lg border border-dashed border-gray-300 bg-white px-3 py-4 text-center text-xs text-gray-500">
@@ -1420,7 +1420,7 @@ function VendedorContent() {
           <CatalogoCatalogo />
         </div>
 
-        <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-[28rem] xl:w-[34rem] 2xl:w-[38rem] ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
+        <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-[32rem] xl:w-[38rem] 2xl:w-[42rem] ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
           <PainelOrcamento usuario={usuario} onClose={() => setTab('catalogo')} />
         </div>
       </div>
