@@ -19,8 +19,8 @@ export default function VitrineSubgrupo24({
   const temaClasses =
     tema === 'green'
       ? {
-          section: 'bg-gradient-to-b from-white via-[#f4fff4] to-white',
-          border: 'border-emerald-200',
+          section: 'bg-[linear-gradient(180deg,#e7f8ea_0%,#f4fff4_42%,#ffffff_100%)]',
+          border: 'border-emerald-300 bg-[linear-gradient(180deg,#ffffff_0%,#f3fff4_100%)]',
           labelBg: 'bg-emerald-700',
           title: 'text-emerald-950',
           cta: 'border-emerald-700 text-emerald-700 hover:border-emerald-600 hover:text-emerald-600',
@@ -38,7 +38,7 @@ export default function VitrineSubgrupo24({
   return (
     <section id={sectionId} className={`${temaClasses.section} py-4 lg:py-6`}>
       <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
-        <div className={`rounded-[22px] border bg-white p-3 shadow-[0_16px_50px_rgba(15,23,42,0.06)] sm:rounded-[26px] sm:p-4 lg:p-5 ${temaClasses.border}`}>
+        <div className={`rounded-[22px] border p-3 shadow-[0_16px_50px_rgba(15,23,42,0.06)] sm:rounded-[26px] sm:p-4 lg:p-5 ${temaClasses.border}`}>
           <div className="mb-4 flex flex-col gap-3 lg:mb-4 lg:flex-row lg:items-start lg:justify-between lg:gap-4">
             <div>
               <div className={`inline-flex rounded-md px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white sm:px-4 sm:py-2 sm:text-sm ${temaClasses.labelBg}`}>
@@ -72,6 +72,7 @@ export default function VitrineSubgrupo24({
                     desconto={desconto}
                     badge={badge}
                     destaque={indice === 0}
+                    compacto
                   />
                 ))}
               </div>
