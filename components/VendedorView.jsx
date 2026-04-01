@@ -650,53 +650,54 @@ function PainelOrcamento({ onClose, usuario }) {
           <meta charset="utf-8" />
           <title>Orcamento ${escaparHtml(identificador)}</title>
           <style>
-            * { box-sizing: border-box; }
+            * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             body { font-family: Arial, sans-serif; margin: 0; background: ${isTermica ? '#fff' : '#f3f4f6'}; color: #111827; }
             .page { padding: ${isTermica ? '0' : '18px'}; }
             .sheet { background: #ffffff; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; border-radius: ${isTermica ? '0' : '18px'}; overflow: hidden; box-shadow: ${isTermica ? 'none' : '0 10px 30px rgba(15, 23, 42, 0.08)'}; width: ${isTermica ? '80mm' : 'auto'}; margin: ${isTermica ? '0 auto' : '0'}; }
-            .hero { display: flex; justify-content: space-between; gap: ${isTermica ? '10px' : '18px'}; padding: ${isTermica ? '10px 12px' : '18px 20px 16px'}; background: ${isTermica ? '#111827' : 'linear-gradient(135deg, #111827 0%, #1f2937 54%, #b91c1c 100%)'}; color: #fff; }
+            .hero { display: flex; justify-content: space-between; gap: ${isTermica ? '10px' : '18px'}; padding: ${isTermica ? '10px 12px' : '18px 20px 16px'}; background: #ffffff; color: #111827; border-bottom: 1px solid #e5e7eb; }
             .brand-wrap { display: flex; align-items: center; gap: 18px; }
-            .logo { width: ${isTermica ? '72px' : '128px'}; object-fit: contain; background: rgba(255,255,255,0.96); border-radius: 12px; padding: ${isTermica ? '4px 6px' : '8px 10px'}; }
-            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.08); border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-            .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; }
-            .subtitle { margin: 6px 0 0; color: rgba(255,255,255,0.78); font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
-            .hero-side { min-width: ${isTermica ? '112px' : '210px'}; max-width: ${isTermica ? '120px' : '250px'}; border-radius: 14px; background: rgba(255,255,255,0.12); padding: ${isTermica ? '8px' : '14px'}; backdrop-filter: blur(10px); }
-            .hero-label { font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
-            .hero-number { margin-top: 6px; font-size: ${isTermica ? '13px' : '22px'}; font-weight: 800; }
-            .hero-meta { margin-top: 6px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.5; color: rgba(255,255,255,0.86); }
-            .body { padding: ${isTermica ? '10px 12px 12px' : '18px 20px 20px'}; }
-            .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: 10px; margin-bottom: 14px; }
-            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
-            .box h3 { margin: 0 0 8px 0; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .linha { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: ${isTermica ? '9px' : '11px'}; }
+            .logo { width: ${isTermica ? '72px' : '128px'}; object-fit: contain; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: ${isTermica ? '4px 6px' : '8px 10px'}; }
+            .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #e5e7eb; background: #f8fafc; border-radius: 999px; padding: ${isTermica ? '3px 7px' : '5px 10px'}; font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
+            .title { margin: 10px 0 0; font-size: ${isTermica ? '14px' : '23px'}; font-weight: 800; letter-spacing: -.03em; color: #111827; }
+            .subtitle { margin: 6px 0 0; color: #6b7280; font-size: ${isTermica ? '8px' : '11px'}; max-width: ${isTermica ? 'none' : '460px'}; line-height: 1.45; }
+            .hero-side { min-width: ${isTermica ? '112px' : '210px'}; max-width: ${isTermica ? '120px' : '250px'}; border-radius: 14px; background: #f8fafc; border: 1px solid #e5e7eb; padding: ${isTermica ? '8px' : '14px'}; }
+            .hero-label { font-size: ${isTermica ? '8px' : '10px'}; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; }
+            .hero-number { margin-top: 6px; font-size: ${isTermica ? '13px' : '22px'}; font-weight: 800; color: #111827; }
+            .hero-meta { margin-top: 6px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.5; color: #374151; }
+            .body { padding: ${isTermica ? '10px 12px 12px' : '16px 18px 18px'}; }
+            .grid-info { display: grid; grid-template-columns: ${isTermica ? '1fr' : 'repeat(2, minmax(0, 1fr))'}; gap: ${isTermica ? '8px' : '8px'}; margin-bottom: 10px; }
+            .box { border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '9px 11px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .box h3 { margin: 0 0 6px 0; font-size: ${isTermica ? '8px' : '9px'}; text-transform: uppercase; letter-spacing: .12em; color: #991b1b; }
+            .linha { display: flex; justify-content: space-between; gap: 8px; padding: 2px 0; font-size: ${isTermica ? '9px' : '10px'}; }
             .linha span:first-child { color: #6b7280; }
             .linha strong { text-align: right; }
-            table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '11px'}; overflow: hidden; border-radius: 14px; }
+            table { width: 100%; border-collapse: collapse; font-size: ${isTermica ? '8px' : '10px'}; overflow: hidden; border-radius: 14px; }
               thead th { background: #f8fafc; color: #475569; text-transform: uppercase; font-size: ${isTermica ? '6px' : '8px'}; letter-spacing: .1em; border-bottom: 1px solid #e5e7eb; padding: ${isTermica ? '5px 3px' : '8px 6px'}; text-align: left; }
-              tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '4px 3px' : '7px 6px'}; text-align: left; vertical-align: top; line-height: 1.25; }
+              tbody td { border-bottom: 1px solid #eef2f7; padding: ${isTermica ? '4px 3px' : '6px 5px'}; text-align: left; vertical-align: top; line-height: 1.2; }
               .col-codigo { width: ${isTermica ? '34px' : '52px'}; }
               .col-qtd { width: ${isTermica ? '42px' : '62px'}; }
               .col-preco { width: ${isTermica ? '54px' : '88px'}; }
               .col-desc { width: ${isTermica ? '34px' : '48px'}; }
               .col-total { width: ${isTermica ? '58px' : '92px'}; }
-              .produto-cell { font-size: ${isTermica ? '7px' : '10px'}; line-height: 1.2; }
+              .produto-cell { font-size: ${isTermica ? '7px' : '9px'}; line-height: 1.12; }
               tbody tr:nth-child(even) { background: #fcfcfd; }
-            .totais { margin-top: 14px; margin-left: auto; width: ${isTermica ? '100%' : '320px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 14px'}; background: #fff; }
-            .totais div { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '12px'}; }
+            .totais { margin-top: 10px; margin-left: auto; width: ${isTermica ? '100%' : '300px'}; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '8px 12px'}; background: #fff; }
+            .totais div { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eef2f7; font-size: ${isTermica ? '10px' : '11px'}; }
             .totais div:last-child { border-bottom: 0; }
-            .totais .total { font-weight: 800; font-size: ${isTermica ? '12px' : '16px'}; color: #991b1b; }
-            .obs { margin-top: 14px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
+            .totais .total { font-weight: 800; font-size: ${isTermica ? '12px' : '15px'}; color: #991b1b; }
+            .obs { margin-top: 10px; border: 1px solid #e5e7eb; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 12px'}; background: linear-gradient(180deg, #fff 0%, #fafafa 100%); }
             .obs h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #991b1b; }
-            .obs p { margin: 0; font-size: ${isTermica ? '9px' : '11px'}; line-height: 1.55; color: #374151; }
-            .pix-box { margin-top: 14px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '12px 14px'}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
+            .obs p { margin: 0; font-size: ${isTermica ? '9px' : '10px'}; line-height: 1.45; color: #374151; }
+            .pix-box { margin-top: 10px; border: 1px solid #dbeafe; border-radius: 14px; padding: ${isTermica ? '8px 10px' : '10px 12px'}; background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%); }
             .pix-box h3 { margin: 0 0 8px 0; font-size: ${isTermica ? '8px' : '10px'}; text-transform: uppercase; letter-spacing: .14em; color: #1d4ed8; }
             .pix-key { font-size: ${isTermica ? '10px' : '13px'}; font-weight: 800; color: #0f172a; word-break: break-word; }
             .pix-note { margin-top: 4px; font-size: ${isTermica ? '8px' : '11px'}; line-height: 1.45; color: #475569; }
             .rodape { margin-top: 16px; display: flex; justify-content: ${isTermica ? 'flex-start' : 'space-between'}; flex-direction: ${isTermica ? 'column' : 'row'}; gap: 10px; align-items: ${isTermica ? 'flex-start' : 'flex-end'}; color: #6b7280; font-size: ${isTermica ? '8px' : '10px'}; line-height: 1.5; }
             .rodape strong { color: #111827; }
             @media print {
+              @page { size: ${isTermica ? '80mm auto' : 'A4'}; margin: ${isTermica ? '4mm' : '8mm'}; }
               body { background: #fff; }
-              .page { padding: ${isTermica ? '0' : '8mm'}; }
+              .page { padding: 0; }
               .sheet { box-shadow: none; border: ${isTermica ? '0' : '1px solid #e5e7eb'}; width: ${isTermica ? '80mm' : 'auto'}; }
             }
           </style>
