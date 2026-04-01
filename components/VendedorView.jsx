@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
 import {
   formatarPreco,
-  getProdutos,
+  getCatalogoCompletoComFallback,
   vendedorListarOrcamentos,
   vendedorListarOrcamentosDb2,
   vendedorLogin,
@@ -1238,13 +1238,8 @@ function CatalogoCatalogo() {
   const fetchProdutos = useCallback(async () => {
     setLoading(true)
     try {
-      const data = await getProdutos({
-        skip: 0,
-        limit: 5000,
-        todas_secoes: 1,
-        noStore: true,
-      })
-      const catalogo = (data.produtos || []).filter(deveExibirNoVendedor)
+      const data = await getCatalogoCompletoComFallback({ noStore: true })
+      const catalogo = (data || []).filter(deveExibirNoVendedor)
       setBase(catalogo)
       setSecoes([...new Set(catalogo.map((item) => numeroSecao(item.secao)).filter((secao) => secao != null))].sort((a, b) => a - b))
       aplicarFiltros(catalogo, 0, '', '')
