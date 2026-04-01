@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import OfertaCard from '@/components/OfertaCard'
+import OfertaCarouselRow from '@/components/OfertaCarouselRow'
 
 export default function VitrineSubgrupo24({
   produtos = [],
@@ -74,18 +74,14 @@ export default function VitrineSubgrupo24({
               <div className={`mb-3 rounded-2xl px-4 py-2.5 text-[12px] font-semibold sm:mb-4 sm:text-sm ${temaClasses.resumo}`}>
                 {resumo || `${produtos.length} item${produtos.length !== 1 ? 's' : ''} em destaque carregado${produtos.length !== 1 ? 's' : ''} para a vitrine.`}
               </div>
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
-                {produtos.map((produto, indice) => (
-                  <OfertaCard
-                    key={`${sectionId}-${produto.id}`}
-                    produto={produto}
-                    desconto={desconto}
-                    badge={badge}
-                    destaque={indice === 0}
-                    variant={cardVariant}
-                  />
-                ))}
-              </div>
+              <OfertaCarouselRow
+                produtos={produtos}
+                desconto={desconto}
+                badge={badge}
+                cardVariant={cardVariant}
+                itemKeyPrefix={sectionId}
+                accent={tema === 'green' ? 'green' : tema === 'motor' ? 'blue' : 'red'}
+              />
             </>
           ) : (
             <div className="rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center">
