@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-02T11:13:29.931Z",
+  "generated_at": "2026-04-02T12:01:34.588Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5691,
+  "total": 5694,
   "produtos": [
     {
       "descricao": "",
@@ -33339,7 +33339,7 @@
     },
     {
       "descricao": "",
-      "estoque": 42,
+      "estoque": 40,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5131.jpg",
       "grupo": 92,
       "id": 5131,
@@ -59800,6 +59800,34 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 42,
+      "id": 13818,
+      "marca": "CARBOGRAFITE",
+      "nome": "PORTA ELETRODO WELD 300",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 42,
+      "id": 13817,
+      "marca": "CARBOGRAFITE",
+      "nome": "PORTA ELETRODO WELD 500",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2611.jpg",
       "grupo": 43,
       "id": 2611,
@@ -65749,7 +65777,7 @@
     },
     {
       "descricao": "",
-      "estoque": 214,
+      "estoque": 212,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
@@ -69880,6 +69908,20 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 69,
+      "id": 13816,
+      "marca": "CARBOGRAFITE",
+      "nome": "SPRAY ANTIRRESPINGO SEM SILICONE",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1965.jpg",
       "grupo": 73,
       "id": 1965,
@@ -69960,48 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 11,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11669.jpg",
-      "grupo": 92,
-      "id": 11669,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE BASE DESTACAVEL C/ REFORCO FRONTAL",
-      "preco": 31,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11669.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 12,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11665.jpg",
-      "grupo": 92,
-      "id": 11665,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE DESTACAVEL P/ ENGATE 160MM",
-      "preco": 90,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11665.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 8,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11667.jpg",
-      "grupo": 92,
-      "id": 11667,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE DESTACAVEL P/ ENGATE 250MM",
-      "preco": 97,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11667.jpg"
     }
   ]
 }

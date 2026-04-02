@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T11:13:29.931Z",
+  "generated_at": "2026-04-02T12:01:34.588Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5408,
   "produtos": [
@@ -33339,7 +33339,7 @@
     },
     {
       "descricao": "",
-      "estoque": 42,
+      "estoque": 40,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5131.jpg",
       "grupo": 92,
       "id": 5131,
@@ -59786,6 +59786,34 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 42,
+      "id": 13818,
+      "marca": "CARBOGRAFITE",
+      "nome": "PORTA ELETRODO WELD 300",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 42,
+      "id": 13817,
+      "marca": "CARBOGRAFITE",
+      "nome": "PORTA ELETRODO WELD 500",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2611.jpg",
       "grupo": 43,
       "id": 2611,
@@ -65735,7 +65763,7 @@
     },
     {
       "descricao": "",
-      "estoque": 214,
+      "estoque": 212,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
@@ -69866,6 +69894,20 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 69,
+      "id": 13816,
+      "marca": "CARBOGRAFITE",
+      "nome": "SPRAY ANTIRRESPINGO SEM SILICONE",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1965.jpg",
       "grupo": 73,
       "id": 1965,
@@ -69946,48 +69988,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 11,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11669.jpg",
-      "grupo": 92,
-      "id": 11669,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE BASE DESTACAVEL C/ REFORCO FRONTAL",
-      "preco": 31,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11669.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 12,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11665.jpg",
-      "grupo": 92,
-      "id": 11665,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE DESTACAVEL P/ ENGATE 160MM",
-      "preco": 90,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11665.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 8,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11667.jpg",
-      "grupo": 92,
-      "id": 11667,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE DESTACAVEL P/ ENGATE 250MM",
-      "preco": 97,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11667.jpg"
     },
     {
       "descricao": "",
@@ -70285,7 +70285,7 @@
     },
     {
       "descricao": "",
-      "estoque": -640,
+      "estoque": -641,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -70397,7 +70397,7 @@
     },
     {
       "descricao": "",
-      "estoque": -4711,
+      "estoque": -4712,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg",
       "grupo": 6,
       "id": 117,
@@ -70579,7 +70579,7 @@
     },
     {
       "descricao": "",
-      "estoque": -134,
+      "estoque": 116,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/42.jpg",
       "grupo": 15,
       "id": 42,
@@ -70663,7 +70663,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2480.jpg",
       "grupo": 15,
       "id": 2480,
@@ -71251,7 +71251,7 @@
     },
     {
       "descricao": "",
-      "estoque": 33,
+      "estoque": 30,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/556.jpg",
       "grupo": 20,
       "id": 556,
@@ -71965,7 +71965,7 @@
     },
     {
       "descricao": "",
-      "estoque": 99,
+      "estoque": 97,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3.jpg",
       "grupo": 20,
       "id": 3,
@@ -72609,7 +72609,7 @@
     },
     {
       "descricao": "",
-      "estoque": 291,
+      "estoque": 288,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/20.jpg",
       "grupo": 60,
       "id": 20,
@@ -72847,7 +72847,7 @@
     },
     {
       "descricao": "",
-      "estoque": 369,
+      "estoque": 367,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/27.jpg",
       "grupo": 60,
       "id": 27,
