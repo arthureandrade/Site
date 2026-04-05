@@ -115,7 +115,12 @@ function dataHoraAtual() {
 }
 
 function gerarPanfletoProdutos(catalogoBase = []) {
-  const elegiveis = (catalogoBase || []).filter((produto) => Number(numeroSecao(produto?.secao)) !== 6 && Number(produto?.preco || 0) > 0)
+  const elegiveis = (catalogoBase || []).filter(
+    (produto) =>
+      Number(numeroSecao(produto?.secao)) !== 6 &&
+      Number(produto?.preco || 0) > 0 &&
+      Number(produto?.estoque || 0) > 0
+  )
   if (elegiveis.length === 0) return
 
   const embaralhados = [...elegiveis]
@@ -128,18 +133,22 @@ function gerarPanfletoProdutos(catalogoBase = []) {
   const telefoneDestaque = '(95) 3224-0115'
   const cards = embaralhados
     .map((produto) => {
-      const preco = formatarPreco(produto.preco || 0)
+      const precoCheio = Number(produto.preco || 0)
+      const precoOferta = precoCheio * 0.88
       const foto = imagemUrlProduto(produto) || `${window.location.origin}/logo.jpeg`
       return `
         <article class="card">
+          <div class="badge">12% OFF ONLINE</div>
           <div class="thumbWrap">
             <img class="thumb" src="${escaparHtml(foto)}" alt="${escaparHtml(produto.nome || 'Produto')}" />
           </div>
           <div class="info">
             <div class="cod">Cod. ${escaparHtml(produto.id)}</div>
             <h3>${escaparHtml(produto.nome || '')}</h3>
-            <div class="meta">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
-            <div class="price">${escaparHtml(preco)}</div>
+            <div class="meta">${escaparHtml(produto.marca || 'GALPAO DO ACO')} • Estoque disponivel</div>
+            <div class="oldPrice">De ${escaparHtml(formatarPreco(precoCheio))}</div>
+            <div class="price">Por ${escaparHtml(formatarPreco(precoOferta))}</div>
+            <div class="pix">a vista no Pix, boleto ou transferencia</div>
           </div>
         </article>
       `
@@ -156,10 +165,13 @@ function gerarPanfletoProdutos(catalogoBase = []) {
         <style>
           * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           @page { size: A4; margin: 7mm; }
-          body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f4f4f5; }
+          body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f3f4f6; }
           .page { padding: 0; }
           .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
-          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; padding: 14px 18px; background: linear-gradient(135deg, #b40000 0%, #e11d2e 100%); color: white; align-items: center; }
+          .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; padding: 14px 18px; background:
+            radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 34%),
+            linear-gradient(135deg, #7f0000 0%, #c1121f 55%, #ef4444 100%);
+            color: white; align-items: center; }
           .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
           .logo { width: 124px; max-height: 52px; object-fit: contain; background: white; border-radius: 12px; padding: 6px 10px; }
           .eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; opacity: .92; }
@@ -169,16 +181,19 @@ function gerarPanfletoProdutos(catalogoBase = []) {
           .phoneLabel { font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
           .phone { margin-top: 5px; font-size: 32px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
           .phoneNote { margin-top: 6px; font-size: 12px; font-weight: 700; }
-          .content { padding: 12px 14px 14px; }
+          .content { padding: 12px 14px 14px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
           .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
-          .card { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px; align-items: center; min-height: 103px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 9px 10px; background: white; overflow: hidden; }
-          .thumbWrap { width: 84px; height: 84px; border-radius: 12px; background: #f8fafc; border: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+          .card { position: relative; display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 10px; align-items: center; min-height: 112px; border: 1px solid #fecaca; border-radius: 16px; padding: 12px 10px 10px; background: linear-gradient(180deg, #ffffff 0%, #fff6f6 100%); overflow: hidden; box-shadow: 0 8px 18px rgba(127, 29, 29, 0.08); }
+          .badge { position: absolute; top: 0; right: 0; background: #b40000; color: white; font-size: 8px; font-weight: 900; letter-spacing: .16em; padding: 5px 8px; border-bottom-left-radius: 12px; }
+          .thumbWrap { width: 86px; height: 86px; border-radius: 12px; background: #ffffff; border: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
           .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
           .info { min-width: 0; display: flex; flex-direction: column; }
           .cod { font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9f1239; }
           .card h3 { margin: 5px 0 0; font-size: 14px; line-height: 1.1; font-weight: 900; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .meta { margin-top: 6px; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-          .price { margin-top: 4px; font-size: 22px; font-weight: 900; color: #b40000; letter-spacing: -.03em; line-height: 1; }
+          .meta { margin-top: 5px; font-size: 8px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .oldPrice { margin-top: 6px; font-size: 11px; font-weight: 800; color: #9ca3af; text-decoration: line-through; }
+          .price { margin-top: 2px; font-size: 23px; font-weight: 900; color: #b40000; letter-spacing: -.03em; line-height: 1; }
+          .pix { margin-top: 3px; font-size: 9px; font-weight: 800; letter-spacing: .04em; color: #166534; text-transform: uppercase; }
           .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 14px 12px; color: #6b7280; font-size: 10px; }
           @media print {
             body { background: white; }
@@ -194,14 +209,14 @@ function gerarPanfletoProdutos(catalogoBase = []) {
                 <img class="logo" src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" />
                 <div>
                   <div class="eyebrow">Panfleto comercial</div>
-                  <div class="title">Produtos para obra, ferragens e ferramentas</div>
-                  <div class="subtitle">Selecao pronta para impressao com 10 itens do catalogo geral para acelerar abordagem, balcao e envio no WhatsApp.</div>
+                  <div class="title">10 ofertas para acelerar sua compra</div>
+                  <div class="subtitle">Selecao com produtos em estoque, prontos para atendimento rapido no balcao, no telefone e no WhatsApp.</div>
                 </div>
               </div>
               <div class="phoneBox">
                 <div class="phoneLabel">Contato rapido</div>
                 <div class="phone">${telefoneDestaque}</div>
-                <div class="phoneNote">Peca seu orcamento no WhatsApp</div>
+                <div class="phoneNote">Todas as ofertas com 12% OFF online</div>
               </div>
             </section>
             <section class="content">
