@@ -5,6 +5,7 @@ import { VendedorProvider, useVendedor } from '@/context/VendedorContext'
 import {
   formatarPreco,
   getProdutos,
+  imagemUrlProduto,
   vendedorListarOrcamentos,
   vendedorListarOrcamentosDb2,
   vendedorLogin,
@@ -111,6 +112,114 @@ function dataHoraAtual() {
     data: agora.toLocaleDateString('pt-BR'),
     dataHora: agora.toLocaleString('pt-BR'),
   }
+}
+
+function gerarPanfletoProdutos(catalogoBase = []) {
+  const elegiveis = (catalogoBase || []).filter((produto) => Number(numeroSecao(produto?.secao)) !== 6 && Number(produto?.preco || 0) > 0)
+  if (elegiveis.length === 0) return
+
+  const embaralhados = [...elegiveis]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, Math.min(10, elegiveis.length))
+
+  const popup = window.open('', '_blank', 'width=1120,height=820')
+  if (!popup) return
+
+  const telefoneDestaque = '(95) 3224-0115'
+  const cards = embaralhados
+    .map((produto) => {
+      const preco = formatarPreco(produto.preco || 0)
+      const foto = imagemUrlProduto(produto) || `${window.location.origin}/logo.jpeg`
+      return `
+        <article class="card">
+          <div class="thumbWrap">
+            <img class="thumb" src="${escaparHtml(foto)}" alt="${escaparHtml(produto.nome || 'Produto')}" />
+          </div>
+          <div class="info">
+            <div class="cod">Cod. ${escaparHtml(produto.id)}</div>
+            <h3>${escaparHtml(produto.nome || '')}</h3>
+            <div class="meta">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
+            <div class="price">${escaparHtml(preco)}</div>
+          </div>
+        </article>
+      `
+    })
+    .join('')
+
+  popup.document.open()
+  popup.document.write(`
+    <!doctype html>
+    <html lang="pt-BR">
+      <head>
+        <meta charset="utf-8" />
+        <title>Panfleto comercial</title>
+        <style>
+          * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          @page { size: A4; margin: 7mm; }
+          body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f4f4f5; }
+          .page { padding: 0; }
+          .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
+          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; padding: 14px 18px; background: linear-gradient(135deg, #b40000 0%, #e11d2e 100%); color: white; align-items: center; }
+          .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+          .logo { width: 124px; max-height: 52px; object-fit: contain; background: white; border-radius: 12px; padding: 6px 10px; }
+          .eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; opacity: .92; }
+          .title { margin: 4px 0 0; font-size: 27px; font-weight: 900; letter-spacing: -.04em; line-height: 1.02; }
+          .subtitle { margin: 6px 0 0; font-size: 12px; opacity: .95; line-height: 1.25; max-width: 420px; }
+          .phoneBox { text-align: right; }
+          .phoneLabel { font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
+          .phone { margin-top: 5px; font-size: 32px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+          .phoneNote { margin-top: 6px; font-size: 12px; font-weight: 700; }
+          .content { padding: 12px 14px 14px; }
+          .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
+          .card { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 10px; align-items: center; min-height: 103px; border: 1px solid #e5e7eb; border-radius: 14px; padding: 9px 10px; background: white; overflow: hidden; }
+          .thumbWrap { width: 84px; height: 84px; border-radius: 12px; background: #f8fafc; border: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+          .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
+          .info { min-width: 0; display: flex; flex-direction: column; }
+          .cod { font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9f1239; }
+          .card h3 { margin: 5px 0 0; font-size: 14px; line-height: 1.1; font-weight: 900; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+          .meta { margin-top: 6px; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+          .price { margin-top: 4px; font-size: 22px; font-weight: 900; color: #b40000; letter-spacing: -.03em; line-height: 1; }
+          .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 14px 12px; color: #6b7280; font-size: 10px; }
+          @media print {
+            body { background: white; }
+            .sheet { border: 0; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="page">
+          <div class="sheet">
+            <section class="hero">
+              <div class="brand">
+                <img class="logo" src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" />
+                <div>
+                  <div class="eyebrow">Panfleto comercial</div>
+                  <div class="title">Produtos para obra, ferragens e ferramentas</div>
+                  <div class="subtitle">Selecao pronta para impressao com 10 itens do catalogo geral para acelerar abordagem, balcao e envio no WhatsApp.</div>
+                </div>
+              </div>
+              <div class="phoneBox">
+                <div class="phoneLabel">Contato rapido</div>
+                <div class="phone">${telefoneDestaque}</div>
+                <div class="phoneNote">Peca seu orcamento no WhatsApp</div>
+              </div>
+            </section>
+            <section class="content">
+              <div class="grid">${cards}</div>
+            </section>
+            <div class="footer">
+              <div>Galpao do Aco • atendimento comercial com estoque real</div>
+              <div>Panfleto gerado pela area do vendedor</div>
+            </div>
+          </div>
+        </div>
+        <script>
+          window.onload = () => setTimeout(() => window.print(), 250);
+        </script>
+      </body>
+    </html>
+  `)
+  popup.document.close()
 }
 
 function carregarUsuariosFallback() {
@@ -355,7 +464,7 @@ function TelaLogin({ onLogin }) {
   )
 }
 
-function PainelOrcamento({ onClose, usuario, catalogoBase = [] }) {
+function PainelOrcamento({ onClose, usuario }) {
   const { items, dispatch, descontoGlobal, subtotalSemDesc, totalComDesc, totalDesconto, totalItens, observacao, clienteNome } = useVendedor()
   const [wppDDD, setWppDDD] = useState('')
   const [wppNum, setWppNum] = useState('')
@@ -551,106 +660,6 @@ function PainelOrcamento({ onClose, usuario, catalogoBase = [] }) {
 
   function abrirSeletorPdf(orcamentoSalvo = null) {
     setPdfModal({ open: true, orcamento: orcamentoSalvo || null })
-  }
-
-  function gerarPanfleto() {
-    const elegiveis = (catalogoBase || []).filter((produto) => Number(numeroSecao(produto?.secao)) !== 6 && Number(produto?.preco || 0) > 0)
-    if (elegiveis.length === 0) return
-
-    const embaralhados = [...elegiveis]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, Math.min(10, elegiveis.length))
-
-    const popup = window.open('', '_blank', 'width=1100,height=820')
-    if (!popup) return
-
-    const telefoneDestaque = '(95) 3224-0115'
-    const cards = embaralhados
-      .map((produto) => {
-        const preco = formatarPreco(produto.preco || 0)
-        return `
-          <article class="card">
-            <div class="cod">Cod. ${escaparHtml(produto.id)}</div>
-            <h3>${escaparHtml(produto.nome || '')}</h3>
-            <div class="meta">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
-            <div class="price">${escaparHtml(preco)}</div>
-          </article>
-        `
-      })
-      .join('')
-
-    popup.document.open()
-    popup.document.write(`
-      <!doctype html>
-      <html lang="pt-BR">
-        <head>
-          <meta charset="utf-8" />
-          <title>Panfleto comercial</title>
-          <style>
-            * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            @page { size: A4; margin: 8mm; }
-            body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f4f4f5; }
-            .page { padding: 14px; }
-            .sheet { background: white; border: 1px solid #e5e7eb; border-radius: 22px; overflow: hidden; }
-            .hero { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; background: linear-gradient(135deg, #b40000 0%, #e11d2e 100%); color: white; }
-            .brand { display: flex; align-items: center; gap: 16px; }
-            .logo { width: 150px; max-height: 64px; object-fit: contain; background: white; border-radius: 14px; padding: 8px 12px; }
-            .eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; opacity: .9; }
-            .title { margin: 6px 0 0; font-size: 34px; font-weight: 900; letter-spacing: -.04em; line-height: 1.02; }
-            .subtitle { margin: 8px 0 0; font-size: 14px; opacity: .92; max-width: 460px; line-height: 1.35; }
-            .phoneBox { min-width: 280px; text-align: right; }
-            .phoneLabel { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
-            .phone { margin-top: 8px; font-size: 38px; font-weight: 900; letter-spacing: -.03em; line-height: 1; }
-            .phoneNote { margin-top: 8px; font-size: 13px; opacity: .95; }
-            .content { padding: 18px; }
-            .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-            .card { border: 1px solid #e5e7eb; border-radius: 18px; padding: 14px 16px; min-height: 128px; background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%); box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05); display: flex; flex-direction: column; }
-            .cod { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #9f1239; }
-            .card h3 { margin: 10px 0 0; font-size: 18px; line-height: 1.18; font-weight: 900; color: #111827; }
-            .meta { margin-top: auto; padding-top: 12px; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #6b7280; }
-            .price { margin-top: 6px; font-size: 28px; font-weight: 900; color: #b40000; letter-spacing: -.03em; }
-            .footer { display: flex; justify-content: space-between; gap: 12px; padding: 0 18px 18px; color: #6b7280; font-size: 11px; }
-            @media print {
-              body { background: white; }
-              .page { padding: 0; }
-              .sheet { border: 0; border-radius: 0; }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="page">
-            <div class="sheet">
-              <section class="hero">
-                <div class="brand">
-                  <img class="logo" src="/logo.jpeg" alt="Galpao do Aco" />
-                  <div>
-                    <div class="eyebrow">Panfleto comercial</div>
-                    <div class="title">Ofertas para obra e manutencao</div>
-                    <div class="subtitle">Selecao com 10 produtos do catalogo geral para acelerar atendimento, cotacao e venda no balcao ou no WhatsApp.</div>
-                  </div>
-                </div>
-                <div class="phoneBox">
-                  <div class="phoneLabel">Fale conosco</div>
-                  <div class="phone">${telefoneDestaque}</div>
-                  <div class="phoneNote">Atendimento rapido no WhatsApp</div>
-                </div>
-              </section>
-              <section class="content">
-                <div class="grid">${cards}</div>
-              </section>
-              <div class="footer">
-                <div>Galpao do Aco • material de construcao, ferragens e ferramentas</div>
-                <div>Gerado pela area do vendedor</div>
-              </div>
-            </div>
-          </div>
-          <script>
-            window.onload = () => setTimeout(() => window.print(), 300);
-          </script>
-        </body>
-      </html>
-    `)
-    popup.document.close()
   }
 
   async function gerarPdf(orcamentoSalvo = null, formato = 'a4') {
@@ -1182,18 +1191,12 @@ function PainelOrcamento({ onClose, usuario, catalogoBase = [] }) {
                 />
               </div>
 
-              <div className="grid gap-2 border-t border-gray-100 px-4 pb-4 pt-2 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="grid gap-2 border-t border-gray-100 px-4 pb-4 pt-2 sm:grid-cols-3">
                 <button onClick={() => enviarOrcamento()} className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] py-3 font-bold text-white transition-all hover:bg-[#1ebe5a] active:scale-95">
                   Enviar orcamento
                 </button>
                 <button onClick={() => abrirSeletorPdf()} className="flex items-center justify-center gap-2 rounded-xl border border-primary bg-white py-3 font-bold text-primary transition-all hover:bg-red-50 active:scale-95">
                   Gerar PDF
-                </button>
-                <button
-                  onClick={() => gerarPanfleto()}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-amber-300 bg-amber-50 py-3 font-bold text-amber-700 transition-all hover:bg-amber-100 active:scale-95"
-                >
-                  Panfleto
                 </button>
                 <button onClick={() => salvarOrcamento()} className="flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-slate-50 py-3 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
                   Gravar orcamento
@@ -1784,7 +1787,7 @@ function VendedorContent() {
   }
 
   return (
-    <div className="flex flex-col" style={{ minHeight: 'calc(100vh - 12px)', height: 'calc(100vh - 12px)' }}>
+      <div className="flex flex-col" style={{ minHeight: 'calc(100vh - 12px)', height: 'calc(100vh - 12px)' }}>
       <div className="flex shrink-0 items-center justify-between border-b border-primary/30 bg-brand px-2 py-1 text-white sm:px-3">
         <div className="flex min-w-0 items-center gap-2">
           <div className="h-1 w-3 shrink-0 rounded bg-primary" />
@@ -1793,16 +1796,25 @@ function VendedorContent() {
             <span className="truncate text-[10px] text-gray-400">{usuario.nome}</span>
           ) : null}
         </div>
-        <button
-          onClick={() => {
-            localStorage.removeItem(STORAGE_SESSION)
-            setUsuario(null)
-            setAutenticado(false)
-          }}
-          className="flex shrink-0 items-center gap-1 rounded-md border border-white/10 px-1.5 py-0.5 text-[10px] text-gray-300 transition-colors hover:text-white"
-        >
-          Sair
-        </button>
+        <div className="flex shrink-0 items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => gerarPanfletoProdutos(catalogoBase)}
+            className="rounded-md border border-amber-400/40 bg-amber-400/10 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-amber-200 transition-colors hover:bg-amber-400/20"
+          >
+            Panfleto
+          </button>
+          <button
+            onClick={() => {
+              localStorage.removeItem(STORAGE_SESSION)
+              setUsuario(null)
+              setAutenticado(false)
+            }}
+            className="flex shrink-0 items-center gap-1 rounded-md border border-white/10 px-1.5 py-0.5 text-[10px] text-gray-300 transition-colors hover:text-white"
+          >
+            Sair
+          </button>
+        </div>
       </div>
 
       <div className="flex shrink-0 border-b border-gray-200 bg-white lg:hidden">
@@ -1827,7 +1839,7 @@ function VendedorContent() {
         </div>
 
         <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-[32rem] xl:w-[38rem] 2xl:w-[42rem] ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
-          <PainelOrcamento usuario={usuario} onClose={() => setTab('catalogo')} catalogoBase={catalogoBase} />
+          <PainelOrcamento usuario={usuario} onClose={() => setTab('catalogo')} />
         </div>
       </div>
     </div>
