@@ -148,7 +148,7 @@ function gerarPanfletoProdutos(catalogoBase = []) {
           </div>
           <div class="info">
             <div class="topline">
-              <div class="brand">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
+              <div class="brandTag">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
               <div class="offerTag">Oferta online</div>
             </div>
             <div class="cod">Cod. ${escaparHtml(produto.id)}</div>
@@ -174,43 +174,40 @@ function gerarPanfletoProdutos(catalogoBase = []) {
         <style>
           * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
           @page { size: A4; margin: 7mm; }
-          body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f3f4f6; }
+          body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #ffffff; }
           .page { padding: 0; }
           .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
-          .hero { display: grid; grid-template-columns: 1.25fr .75fr; gap: 12px; padding: 10px 14px; background:
-            radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 34%),
-            linear-gradient(135deg, #7f0000 0%, #c1121f 55%, #ef4444 100%);
-            color: white; align-items: center; }
-          .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-          .logo { width: 96px; max-height: 42px; object-fit: contain; background: white; border-radius: 10px; padding: 5px 8px; }
-          .eyebrow { font-size: 8px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; opacity: .92; }
-          .title { margin: 3px 0 0; font-size: 20px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
-          .subtitle { margin: 4px 0 0; font-size: 10px; opacity: .95; line-height: 1.2; max-width: 360px; }
+          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 10px 14px 9px; background: linear-gradient(180deg, #ffffff 0%, #fff6f6 100%); border-bottom: 3px solid #cc0000; align-items: center; }
+          .brandBlock { display: flex; align-items: center; gap: 10px; min-width: 0; }
+          .logo { width: 94px; max-height: 40px; object-fit: contain; background: white; border-radius: 8px; padding: 4px 6px; border: 1px solid #e5e7eb; }
+          .eyebrow { font-size: 7px; font-weight: 900; letter-spacing: .24em; text-transform: uppercase; color: #b40000; }
+          .title { margin: 3px 0 0; font-size: 18px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: #111827; }
+          .subtitle { margin: 4px 0 0; font-size: 9px; line-height: 1.25; color: #475569; max-width: 370px; }
           .phoneBox { text-align: right; }
-          .phoneLabel { font-size: 8px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
-          .phone { margin-top: 4px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
-          .phoneNote { margin-top: 4px; font-size: 10px; font-weight: 700; }
-          .content { padding: 10px 10px 10px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
+          .phoneLabel { font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #b40000; }
+          .phone { margin-top: 3px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; color: #cc0000; }
+          .phoneNote { margin-top: 4px; font-size: 9px; font-weight: 800; color: #111827; }
+          .content { padding: 9px 10px 10px; }
           .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-          .card { overflow: hidden; border-radius: 14px; border: 2px solid #dc2626; background: #fff; box-shadow: 0 6px 14px rgba(127, 29, 29, 0.07); }
-          .thumbWrap { position: relative; height: 122px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
+          .card { overflow: hidden; border-radius: 14px; border: 1px solid #dbe3ef; background: #fff; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06); }
+          .thumbWrap { position: relative; height: 116px; overflow: hidden; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-bottom: 1px solid #edf2f7; }
           .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
-          .overlayNote { position: absolute; right: 6px; bottom: 6px; border-radius: 999px; background: rgba(0,0,0,.72); padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-          .badges { position: absolute; left: 6px; top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
-          .badge { border-radius: 999px; padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+          .overlayNote { position: absolute; right: 7px; bottom: 7px; border-radius: 999px; background: rgba(17,24,39,.74); padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+          .badges { position: absolute; left: 7px; top: 7px; display: flex; flex-wrap: wrap; gap: 4px; }
+          .badge { border-radius: 999px; padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
           .badge-green { background: #22c55e; }
-          .badge-red { background: #b40000; }
-          .info { padding: 7px 8px 8px; }
+          .badge-red { background: #cc0000; }
+          .info { padding: 8px 9px 9px; }
           .topline { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-          .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #b40000; }
-          .offerTag { border-radius: 999px; border: 1px solid rgba(180,0,0,.14); background: rgba(180,0,0,.05); padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #b40000; }
-          .cod { margin-top: 4px; font-size: 8px; font-family: monospace; color: #9ca3af; }
-          .card h3 { margin: 4px 0 0; min-height: 31px; font-size: 11px; line-height: 1.08; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .priceBox { margin-top: 6px; border-radius: 12px; border: 1px solid #f3f4f6; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); padding: 6px 7px; }
-          .oldPrice { font-size: 8px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #9ca3af; text-decoration: line-through; }
-          .price { margin-top: 2px; font-size: 16px; font-weight: 900; line-height: 1; color: #111827; }
-          .pix { margin-top: 3px; font-size: 8px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: #b40000; }
-          .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 10px 9px; color: #6b7280; font-size: 8px; }
+          .brandTag { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #cc0000; }
+          .offerTag { border-radius: 999px; background: #fef2f2; padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cc0000; }
+          .cod { margin-top: 4px; font-size: 7px; font-family: monospace; color: #94a3b8; }
+          .card h3 { margin: 4px 0 0; min-height: 34px; font-size: 11px; line-height: 1.12; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+          .priceBox { margin-top: 6px; border-radius: 14px; background: #f8fafc; padding: 7px 8px; }
+          .oldPrice { font-size: 7px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #94a3b8; text-decoration: line-through; }
+          .price { margin-top: 2px; font-size: 17px; font-weight: 900; line-height: 1; color: #111827; }
+          .pix { margin-top: 3px; font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #cc0000; }
+          .footer { display: flex; justify-content: space-between; gap: 8px; padding: 0 10px 9px; color: #64748b; font-size: 7px; }
           @media print {
             body { background: white; }
             .sheet { border: 0; }
@@ -221,7 +218,7 @@ function gerarPanfletoProdutos(catalogoBase = []) {
         <div class="page">
           <div class="sheet">
             <section class="hero">
-              <div class="brand">
+              <div class="brandBlock">
                 <img class="logo" src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" />
                 <div>
                   <div class="eyebrow">Panfleto comercial</div>
