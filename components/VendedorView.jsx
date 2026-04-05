@@ -177,37 +177,43 @@ function gerarPanfletoProdutos(catalogoBase = []) {
           body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #ffffff; }
           .page { padding: 0; }
           .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
-          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 10px 14px 9px; background: linear-gradient(180deg, #ffffff 0%, #fff6f6 100%); border-bottom: 3px solid #cc0000; align-items: center; }
+          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 10px 14px 9px; background:
+            radial-gradient(circle at top left, rgba(255,255,255,.22), transparent 30%),
+            linear-gradient(135deg, #7f0000 0%, #cc0000 62%, #ff4d4f 100%);
+            border-bottom: 3px solid #7f0000; align-items: center; }
           .brandBlock { display: flex; align-items: center; gap: 10px; min-width: 0; }
           .logo { width: 94px; max-height: 40px; object-fit: contain; background: white; border-radius: 8px; padding: 4px 6px; border: 1px solid #e5e7eb; }
-          .eyebrow { font-size: 7px; font-weight: 900; letter-spacing: .24em; text-transform: uppercase; color: #b40000; }
-          .title { margin: 3px 0 0; font-size: 18px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: #111827; }
-          .subtitle { margin: 4px 0 0; font-size: 9px; line-height: 1.25; color: #475569; max-width: 370px; }
+          .eyebrow { font-size: 7px; font-weight: 900; letter-spacing: .24em; text-transform: uppercase; color: #ffe0e0; }
+          .title { margin: 3px 0 0; font-size: 18px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: #ffffff; }
+          .subtitle { margin: 4px 0 0; font-size: 9px; line-height: 1.25; color: #ffe8e8; max-width: 370px; }
           .phoneBox { text-align: right; }
-          .phoneLabel { font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #b40000; }
-          .phone { margin-top: 3px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; color: #cc0000; }
-          .phoneNote { margin-top: 4px; font-size: 9px; font-weight: 800; color: #111827; }
-          .content { padding: 9px 10px 10px; }
+          .phoneLabel { font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #ffe0e0; }
+          .phone { margin-top: 3px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; color: #ffffff; }
+          .phoneNote { margin-top: 4px; font-size: 9px; font-weight: 800; color: #fff3f3; }
+          .content { padding: 9px 10px 10px; background: linear-gradient(180deg, #fff1f1 0%, #ffffff 22%, #fff7f7 100%); }
           .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-          .card { overflow: hidden; border-radius: 14px; border: 1px solid #dbe3ef; background: #fff; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06); }
-          .thumbWrap { position: relative; height: 116px; overflow: hidden; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-bottom: 1px solid #edf2f7; }
+          .card { overflow: hidden; border-radius: 14px; border: 1px solid #fecaca; background: linear-gradient(180deg, #ffffff 0%, #fffafa 100%); box-shadow: 0 6px 16px rgba(204, 0, 0, 0.12); }
+          .thumbWrap { position: relative; height: 116px; overflow: hidden; background:
+            radial-gradient(circle at top right, rgba(255,77,79,.12), transparent 28%),
+            linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border-bottom: 1px solid #fee2e2; }
           .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
           .overlayNote { position: absolute; right: 7px; bottom: 7px; border-radius: 999px; background: rgba(17,24,39,.74); padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
           .badges { position: absolute; left: 7px; top: 7px; display: flex; flex-wrap: wrap; gap: 4px; }
           .badge { border-radius: 999px; padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
           .badge-green { background: #22c55e; }
-          .badge-red { background: #cc0000; }
+          .badge-red { background: linear-gradient(135deg, #b40000 0%, #ef4444 100%); }
           .info { padding: 8px 9px 9px; }
           .topline { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
           .brandTag { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #cc0000; }
-          .offerTag { border-radius: 999px; background: #fef2f2; padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cc0000; }
+          .offerTag { border-radius: 999px; background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%); padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cc0000; }
           .cod { margin-top: 4px; font-size: 7px; font-family: monospace; color: #94a3b8; }
           .card h3 { margin: 4px 0 0; min-height: 34px; font-size: 11px; line-height: 1.12; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .priceBox { margin-top: 6px; border-radius: 14px; background: #f8fafc; padding: 7px 8px; }
+          .priceBox { margin-top: 6px; border-radius: 14px; background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%); border: 1px solid #fde68a; padding: 7px 8px; }
           .oldPrice { font-size: 7px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #94a3b8; text-decoration: line-through; }
           .price { margin-top: 2px; font-size: 17px; font-weight: 900; line-height: 1; color: #111827; }
           .pix { margin-top: 3px; font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #cc0000; }
-          .footer { display: flex; justify-content: space-between; gap: 8px; padding: 0 10px 9px; color: #64748b; font-size: 7px; }
+          .footer { display: flex; justify-content: space-between; gap: 8px; padding: 0 10px 9px; color: #64748b; font-size: 7px; background: linear-gradient(180deg, #ffffff 0%, #fff5f5 100%); }
           @media print {
             body { background: white; }
             .sheet { border: 0; }
