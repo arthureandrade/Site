@@ -125,7 +125,7 @@ function gerarPanfletoProdutos(catalogoBase = []) {
 
   const embaralhados = [...elegiveis]
     .sort(() => Math.random() - 0.5)
-    .slice(0, Math.min(10, elegiveis.length))
+    .slice(0, Math.min(12, elegiveis.length))
 
   const popup = window.open('', '_blank', 'width=1120,height=820')
   if (!popup) return
@@ -193,8 +193,8 @@ function gerarPanfletoProdutos(catalogoBase = []) {
           .content { padding: 10px 10px 10px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
           .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
           .card { overflow: hidden; border-radius: 14px; border: 2px solid #dc2626; background: #fff; box-shadow: 0 6px 14px rgba(127, 29, 29, 0.07); }
-          .thumbWrap { position: relative; height: 104px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
-          .thumb { width: 100%; height: 100%; object-fit: cover; background: white; }
+          .thumbWrap { position: relative; height: 122px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
+          .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
           .overlayNote { position: absolute; right: 6px; bottom: 6px; border-radius: 999px; background: rgba(0,0,0,.72); padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
           .badges { position: absolute; left: 6px; top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
           .badge { border-radius: 999px; padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
@@ -225,7 +225,7 @@ function gerarPanfletoProdutos(catalogoBase = []) {
                 <img class="logo" src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" />
                 <div>
                   <div class="eyebrow">Panfleto comercial</div>
-                  <div class="title">10 ofertas para acelerar sua compra</div>
+                  <div class="title">12 ofertas para acelerar sua compra</div>
                   <div class="subtitle">Selecao com produtos em estoque, prontos para atendimento rapido no balcao, no telefone e no WhatsApp.</div>
                 </div>
               </div>
