@@ -45,17 +45,27 @@ function gerarPanfletoCarrinho(items) {
       const qtd = Number(produto.qty || 1)
       return `
         <article class="card">
-          <div class="badge">12% OFF ONLINE</div>
           <div class="thumbWrap">
             <img class="thumb" src="${foto}" alt="${produto.nome || 'Produto'}" />
+            <div class="overlayNote">Imagem ilustrativa</div>
+            <div class="badges">
+              <span class="badge badge-green">Pronta entrega</span>
+              <span class="badge badge-red">12% OFF online</span>
+            </div>
           </div>
           <div class="info">
+            <div class="topline">
+              <div class="brand">${produto.marca || 'GALPAO DO ACO'}</div>
+              <div class="offerTag">Oferta online</div>
+            </div>
             <div class="cod">Cod. ${produto.id}</div>
             <h3>${produto.nome || ''}</h3>
-            <div class="meta">${produto.marca || 'GALPAO DO ACO'} • Qtd. ${qtd}</div>
-            <div class="oldPrice">${precoCheio > 0 ? `De ${formatarPreco(precoCheio)}` : 'Preco sob consulta'}</div>
-            <div class="price">${precoCheio > 0 ? `Por ${formatarPreco(precoOferta)}` : 'Sob consulta'}</div>
-            <div class="pix">${precoCheio > 0 ? 'a vista no Pix, boleto ou transferencia' : 'consulte nossa equipe comercial'}</div>
+            <div class="meta">Qtd. ${qtd}</div>
+            <div class="priceBox">
+              <div class="oldPrice">${precoCheio > 0 ? `De ${formatarPreco(precoCheio)}` : 'Preco sob consulta'}</div>
+              <div class="price">${precoCheio > 0 ? `Por ${formatarPreco(precoOferta)}` : 'Sob consulta'}</div>
+              <div class="pix">${precoCheio > 0 ? 'a vista' : 'consulte nossa equipe comercial'}</div>
+            </div>
           </div>
         </article>
       `
@@ -88,17 +98,25 @@ function gerarPanfletoCarrinho(items) {
           .phoneNote { margin-top: 6px; font-size: 12px; font-weight: 700; }
           .content { padding: 12px 14px 14px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
           .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
-          .card { position: relative; display: grid; grid-template-columns: 86px minmax(0, 1fr); gap: 10px; align-items: center; min-height: 112px; border: 1px solid #fecaca; border-radius: 16px; padding: 12px 10px 10px; background: linear-gradient(180deg, #ffffff 0%, #fff6f6 100%); overflow: hidden; box-shadow: 0 8px 18px rgba(127, 29, 29, 0.08); }
-          .badge { position: absolute; top: 0; right: 0; background: #b40000; color: white; font-size: 8px; font-weight: 900; letter-spacing: .16em; padding: 5px 8px; border-bottom-left-radius: 12px; }
-          .thumbWrap { width: 86px; height: 86px; border-radius: 12px; background: #ffffff; border: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-          .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
-          .info { min-width: 0; display: flex; flex-direction: column; }
-          .cod { font-size: 9px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #9f1239; }
-          .card h3 { margin: 5px 0 0; font-size: 14px; line-height: 1.1; font-weight: 900; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .meta { margin-top: 5px; font-size: 8px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-          .oldPrice { margin-top: 6px; font-size: 11px; font-weight: 800; color: #9ca3af; text-decoration: line-through; }
-          .price { margin-top: 2px; font-size: 23px; font-weight: 900; color: #b40000; letter-spacing: -.03em; line-height: 1; }
-          .pix { margin-top: 3px; font-size: 9px; font-weight: 800; letter-spacing: .04em; color: #166534; text-transform: uppercase; }
+          .card { overflow: hidden; border-radius: 16px; border: 2px solid #dc2626; background: #fff; box-shadow: 0 8px 18px rgba(127, 29, 29, 0.08); }
+          .thumbWrap { position: relative; height: 150px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
+          .thumb { width: 100%; height: 100%; object-fit: cover; background: white; }
+          .overlayNote { position: absolute; right: 8px; bottom: 8px; border-radius: 999px; background: rgba(0,0,0,.72); padding: 4px 8px; color: white; font-size: 8px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+          .badges { position: absolute; left: 8px; top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+          .badge { border-radius: 999px; padding: 4px 8px; color: white; font-size: 8px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+          .badge-green { background: #22c55e; }
+          .badge-red { background: #b40000; }
+          .info { padding: 10px 12px 12px; }
+          .topline { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+          .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 9px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; color: #b40000; }
+          .offerTag { border-radius: 999px; border: 1px solid rgba(180,0,0,.14); background: rgba(180,0,0,.05); padding: 4px 8px; font-size: 8px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #b40000; }
+          .cod { margin-top: 5px; font-size: 9px; font-family: monospace; color: #9ca3af; }
+          .card h3 { margin: 6px 0 0; min-height: 44px; font-size: 14px; line-height: 1.12; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+          .meta { margin-top: 5px; font-size: 8px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; color: #6b7280; }
+          .priceBox { margin-top: 8px; border-radius: 16px; border: 1px solid #f3f4f6; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); padding: 8px 10px; }
+          .oldPrice { font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #9ca3af; text-decoration: line-through; }
+          .price { margin-top: 3px; font-size: 22px; font-weight: 900; line-height: 1; color: #111827; }
+          .pix { margin-top: 4px; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #b40000; }
           .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 14px 12px; color: #6b7280; font-size: 10px; }
         </style>
       </head>
