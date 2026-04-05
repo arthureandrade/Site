@@ -177,40 +177,40 @@ function gerarPanfletoProdutos(catalogoBase = []) {
           body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #f3f4f6; }
           .page { padding: 0; }
           .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
-          .hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; padding: 14px 18px; background:
+          .hero { display: grid; grid-template-columns: 1.25fr .75fr; gap: 12px; padding: 10px 14px; background:
             radial-gradient(circle at top left, rgba(255,255,255,.18), transparent 34%),
             linear-gradient(135deg, #7f0000 0%, #c1121f 55%, #ef4444 100%);
             color: white; align-items: center; }
-          .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
-          .logo { width: 124px; max-height: 52px; object-fit: contain; background: white; border-radius: 12px; padding: 6px 10px; }
-          .eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; opacity: .92; }
-          .title { margin: 4px 0 0; font-size: 27px; font-weight: 900; letter-spacing: -.04em; line-height: 1.02; }
-          .subtitle { margin: 6px 0 0; font-size: 12px; opacity: .95; line-height: 1.25; max-width: 420px; }
+          .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+          .logo { width: 96px; max-height: 42px; object-fit: contain; background: white; border-radius: 10px; padding: 5px 8px; }
+          .eyebrow { font-size: 8px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; opacity: .92; }
+          .title { margin: 3px 0 0; font-size: 20px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+          .subtitle { margin: 4px 0 0; font-size: 10px; opacity: .95; line-height: 1.2; max-width: 360px; }
           .phoneBox { text-align: right; }
-          .phoneLabel { font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
-          .phone { margin-top: 5px; font-size: 32px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
-          .phoneNote { margin-top: 6px; font-size: 12px; font-weight: 700; }
-          .content { padding: 12px 14px 14px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
-          .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 12px; }
-          .card { overflow: hidden; border-radius: 16px; border: 2px solid #dc2626; background: #fff; box-shadow: 0 8px 18px rgba(127, 29, 29, 0.08); }
-          .thumbWrap { position: relative; height: 150px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
+          .phoneLabel { font-size: 8px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; opacity: .88; }
+          .phone { margin-top: 4px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; }
+          .phoneNote { margin-top: 4px; font-size: 10px; font-weight: 700; }
+          .content { padding: 10px 10px 10px; background: linear-gradient(180deg, #fff8f8 0%, #ffffff 26%); }
+          .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+          .card { overflow: hidden; border-radius: 14px; border: 2px solid #dc2626; background: #fff; box-shadow: 0 6px 14px rgba(127, 29, 29, 0.07); }
+          .thumbWrap { position: relative; height: 104px; overflow: hidden; background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
           .thumb { width: 100%; height: 100%; object-fit: cover; background: white; }
-          .overlayNote { position: absolute; right: 8px; bottom: 8px; border-radius: 999px; background: rgba(0,0,0,.72); padding: 4px 8px; color: white; font-size: 8px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
-          .badges { position: absolute; left: 8px; top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
-          .badge { border-radius: 999px; padding: 4px 8px; color: white; font-size: 8px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+          .overlayNote { position: absolute; right: 6px; bottom: 6px; border-radius: 999px; background: rgba(0,0,0,.72); padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+          .badges { position: absolute; left: 6px; top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+          .badge { border-radius: 999px; padding: 3px 6px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
           .badge-green { background: #22c55e; }
           .badge-red { background: #b40000; }
-          .info { padding: 10px 12px 12px; }
-          .topline { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-          .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 9px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; color: #b40000; }
-          .offerTag { border-radius: 999px; border: 1px solid rgba(180,0,0,.14); background: rgba(180,0,0,.05); padding: 4px 8px; font-size: 8px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: #b40000; }
-          .cod { margin-top: 5px; font-size: 9px; font-family: monospace; color: #9ca3af; }
-          .card h3 { margin: 6px 0 0; min-height: 44px; font-size: 14px; line-height: 1.12; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .priceBox { margin-top: 8px; border-radius: 16px; border: 1px solid #f3f4f6; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); padding: 8px 10px; }
-          .oldPrice { font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #9ca3af; text-decoration: line-through; }
-          .price { margin-top: 3px; font-size: 22px; font-weight: 900; line-height: 1; color: #111827; }
-          .pix { margin-top: 4px; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #b40000; }
-          .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 14px 12px; color: #6b7280; font-size: 10px; }
+          .info { padding: 7px 8px 8px; }
+          .topline { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+          .brand { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #b40000; }
+          .offerTag { border-radius: 999px; border: 1px solid rgba(180,0,0,.14); background: rgba(180,0,0,.05); padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #b40000; }
+          .cod { margin-top: 4px; font-size: 8px; font-family: monospace; color: #9ca3af; }
+          .card h3 { margin: 4px 0 0; min-height: 31px; font-size: 11px; line-height: 1.08; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+          .priceBox { margin-top: 6px; border-radius: 12px; border: 1px solid #f3f4f6; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); padding: 6px 7px; }
+          .oldPrice { font-size: 8px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #9ca3af; text-decoration: line-through; }
+          .price { margin-top: 2px; font-size: 16px; font-weight: 900; line-height: 1; color: #111827; }
+          .pix { margin-top: 3px; font-size: 8px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: #b40000; }
+          .footer { display: flex; justify-content: space-between; gap: 10px; padding: 0 10px 9px; color: #6b7280; font-size: 8px; }
           @media print {
             body { background: white; }
             .sheet { border: 0; }
