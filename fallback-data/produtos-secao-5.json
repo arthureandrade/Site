@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-06T16:28:24.976Z",
+  "generated_at": "2026-04-06T17:28:29.536Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5694,
+  "total": 5693,
   "produtos": [
     {
       "descricao": "",
@@ -3169,7 +3169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 487,
+      "estoque": 473,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -10869,7 +10869,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2839,
+      "estoque": 2819,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1668.jpg",
       "grupo": 64,
       "id": 1668,
@@ -12031,7 +12031,7 @@
     },
     {
       "descricao": "",
-      "estoque": 96,
+      "estoque": 95,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3677.jpg",
       "grupo": 41,
       "id": 3677,
@@ -38211,20 +38211,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5089.jpg",
-      "grupo": 42,
-      "id": 5089,
-      "marca": "LOTUS",
-      "nome": "INSETICIDA BAYGON AERO EUCALIPITO 360ML",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5089.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": -10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2199.jpg",
       "grupo": 59,
@@ -46485,7 +46471,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5,
+      "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5140.jpg",
       "grupo": 43,
       "id": 5140,
@@ -52533,7 +52519,7 @@
     },
     {
       "descricao": "",
-      "estoque": 104388,
+      "estoque": 104188,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -52561,7 +52547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7471,
+      "estoque": 7447,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10881.jpg",
       "grupo": 64,
       "id": 10881,
@@ -53499,7 +53485,7 @@
     },
     {
       "descricao": "",
-      "estoque": 106369,
+      "estoque": 106319,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4184.jpg",
       "grupo": 64,
       "id": 4184,
@@ -54129,7 +54115,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3930,
+      "estoque": 3910,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1757.jpg",
       "grupo": 64,
       "id": 1757,
@@ -56831,7 +56817,7 @@
     },
     {
       "descricao": "",
-      "estoque": 242,
+      "estoque": 241,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg",
       "grupo": 45,
       "id": 11483,
@@ -61213,7 +61199,7 @@
     },
     {
       "descricao": "",
-      "estoque": 37,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11142.jpg",
       "grupo": 69,
       "id": 11142,
@@ -62613,7 +62599,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4785,
+      "estoque": 4745,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1631.jpg",
       "grupo": 64,
       "id": 1631,
@@ -69613,7 +69599,7 @@
     },
     {
       "descricao": "",
-      "estoque": 58,
+      "estoque": 57,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1673.jpg",
       "grupo": 45,
       "id": 1673,
@@ -70002,6 +69988,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 11,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11669.jpg",
+      "grupo": 92,
+      "id": 11669,
+      "marca": "CARROCINHA",
+      "nome": "SUPORTE BASE DESTACAVEL C/ REFORCO FRONTAL",
+      "preco": 31.53,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11669.jpg"
     }
   ]
 }

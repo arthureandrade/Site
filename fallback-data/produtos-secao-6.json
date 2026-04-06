@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-06T16:28:24.976Z",
+  "generated_at": "2026-04-06T17:28:29.536Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 411,
+  "total": 409,
   "produtos": [
     {
       "descricao": "",
@@ -1097,7 +1097,7 @@
     },
     {
       "descricao": "",
-      "estoque": 157,
+      "estoque": 155,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2242.jpg",
       "grupo": 20,
       "id": 2242,
@@ -1195,7 +1195,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16,
+      "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/972.jpg",
       "grupo": 20,
       "id": 972,
@@ -1538,20 +1538,6 @@
       "marca": "GERAL",
       "nome": "CHAPA PLANA INTEIRA 6.35MM 6.00X1.20",
       "preco": 4554.7,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5588.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 7,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5588.jpg",
-      "grupo": 20,
-      "id": 5588,
-      "marca": "GERAL",
-      "nome": "CHAPA PLANA INTEIRA 6.35MM 6.00X1.20",
-      "preco": 45.54,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -3295,7 +3281,7 @@
     },
     {
       "descricao": "",
-      "estoque": 44,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4120.jpg",
       "grupo": 60,
       "id": 4120,
@@ -5031,7 +5017,7 @@
     },
     {
       "descricao": "",
-      "estoque": -5,
+      "estoque": -9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3152.jpg",
       "grupo": 85,
       "id": 3152,
@@ -5500,20 +5486,6 @@
       "marca": "GERAL",
       "nome": "VERGALHAO 10.00MM 3/8\" CA-50 12 MT (7,404KG)",
       "preco": 50.88,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/295.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 1534,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/295.jpg",
-      "grupo": 87,
-      "id": 295,
-      "marca": "GERAL",
-      "nome": "VERGALHAO 10.00MM 3/8\" CA-50 12 MT (7,404KG)",
-      "preco": 7.73,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
