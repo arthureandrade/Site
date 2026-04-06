@@ -125,7 +125,7 @@ function gerarPanfletoProdutos(catalogoBase = []) {
 
   const embaralhados = [...elegiveis]
     .sort(() => Math.random() - 0.5)
-    .slice(0, Math.min(12, elegiveis.length))
+    .slice(0, Math.min(9, elegiveis.length))
 
   const popup = window.open('', '_blank', 'width=1120,height=820')
   if (!popup) return
@@ -138,25 +138,24 @@ function gerarPanfletoProdutos(catalogoBase = []) {
       const foto = imagemUrlProduto(produto) || `${window.location.origin}/logo.jpeg`
       return `
         <article class="card">
+          <div class="cardTop">
+            <div class="badges">
+              <span class="badge badge-green">Pronta entrega</span>
+              <span class="badge badge-red">12% OFF</span>
+            </div>
+            <div class="brandTag">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
+          </div>
           <div class="thumbWrap">
             <img class="thumb" src="${escaparHtml(foto)}" alt="${escaparHtml(produto.nome || 'Produto')}" />
             <div class="overlayNote">Imagem ilustrativa</div>
-            <div class="badges">
-              <span class="badge badge-green">Pronta entrega</span>
-              <span class="badge badge-red">12% OFF online</span>
-            </div>
           </div>
           <div class="info">
-            <div class="topline">
-              <div class="brandTag">${escaparHtml(produto.marca || 'GALPAO DO ACO')}</div>
-              <div class="offerTag">Oferta online</div>
-            </div>
             <div class="cod">Cod. ${escaparHtml(produto.id)}</div>
             <h3>${escaparHtml(produto.nome || '')}</h3>
             <div class="priceBox">
               <div class="oldPrice">De ${escaparHtml(formatarPreco(precoCheio))}</div>
               <div class="price">${escaparHtml(formatarPreco(precoOferta))}</div>
-              <div class="pix">a vista</div>
+              <div class="pix">A vista</div>
             </div>
           </div>
         </article>
@@ -173,47 +172,49 @@ function gerarPanfletoProdutos(catalogoBase = []) {
         <title>Panfleto comercial</title>
         <style>
           * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-          @page { size: A4; margin: 7mm; }
+          @page { size: A4; margin: 6mm; }
           body { margin: 0; font-family: Arial, sans-serif; color: #111827; background: #ffffff; }
           .page { padding: 0; }
-          .sheet { background: white; border: 1px solid #e5e7eb; overflow: hidden; }
-          .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 14px; padding: 10px 14px 9px; background:
-            radial-gradient(circle at top left, rgba(255,255,255,.22), transparent 30%),
-            linear-gradient(135deg, #7f0000 0%, #cc0000 62%, #ff4d4f 100%);
-            border-bottom: 3px solid #7f0000; align-items: center; }
-          .brandBlock { display: flex; align-items: center; gap: 10px; min-width: 0; }
-          .logo { width: 94px; max-height: 40px; object-fit: contain; background: white; border-radius: 8px; padding: 4px 6px; border: 1px solid #e5e7eb; }
-          .eyebrow { font-size: 7px; font-weight: 900; letter-spacing: .24em; text-transform: uppercase; color: #ffe0e0; }
-          .title { margin: 3px 0 0; font-size: 18px; font-weight: 900; letter-spacing: -.03em; line-height: 1; color: #ffffff; }
-          .subtitle { margin: 4px 0 0; font-size: 9px; line-height: 1.25; color: #ffe8e8; max-width: 370px; }
-          .phoneBox { text-align: right; }
-          .phoneLabel { font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #ffe0e0; }
-          .phone { margin-top: 3px; font-size: 24px; font-weight: 900; letter-spacing: -.04em; line-height: 1; color: #ffffff; }
-          .phoneNote { margin-top: 4px; font-size: 9px; font-weight: 800; color: #fff3f3; }
-          .content { padding: 9px 10px 10px; background: linear-gradient(180deg, #fff1f1 0%, #ffffff 22%, #fff7f7 100%); }
-          .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-          .card { overflow: hidden; border-radius: 14px; border: 1px solid #fecaca; background: linear-gradient(180deg, #ffffff 0%, #fffafa 100%); box-shadow: 0 6px 16px rgba(204, 0, 0, 0.12); }
-          .thumbWrap { position: relative; height: 116px; overflow: hidden; background:
-            radial-gradient(circle at top right, rgba(255,77,79,.12), transparent 28%),
-            linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-            border-bottom: 1px solid #fee2e2; }
-          .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
-          .overlayNote { position: absolute; right: 7px; bottom: 7px; border-radius: 999px; background: rgba(17,24,39,.74); padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
-          .badges { position: absolute; left: 7px; top: 7px; display: flex; flex-wrap: wrap; gap: 4px; }
-          .badge { border-radius: 999px; padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+          .sheet { background: linear-gradient(180deg, #fff7ed 0%, #ffffff 12%, #fff5f5 100%); border: 1px solid #fed7aa; overflow: hidden; }
+          .topBar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; background: linear-gradient(135deg, #7f0000 0%, #cc0000 60%, #ff6b35 100%); color: white; }
+          .topBrand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+          .logo { width: 130px; max-height: 56px; object-fit: contain; background: white; border-radius: 14px; padding: 8px 10px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12); }
+          .eyebrow { font-size: 8px; font-weight: 900; letter-spacing: .28em; text-transform: uppercase; color: #ffe7c2; }
+          .title { margin: 4px 0 0; font-size: 24px; font-weight: 900; line-height: .98; letter-spacing: -.04em; color: #ffffff; }
+          .subtitle { margin: 5px 0 0; font-size: 10px; line-height: 1.25; color: #fff3e8; max-width: 360px; }
+          .contactBox { min-width: 220px; border-radius: 18px; background: rgba(255,255,255,0.14); padding: 10px 12px; text-align: right; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14); }
+          .contactLabel { font-size: 8px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; color: #ffe7c2; }
+          .contactPhone { margin-top: 4px; font-size: 29px; font-weight: 900; line-height: 1; letter-spacing: -.05em; color: #ffffff; }
+          .contactNote { margin-top: 4px; font-size: 9px; font-weight: 800; color: #fff8ef; }
+          .midBar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 14px; background: linear-gradient(90deg, #111827 0%, #374151 50%, #111827 100%); color: white; }
+          .midText { font-size: 8px; font-weight: 900; letter-spacing: .22em; text-transform: uppercase; color: #fef3c7; }
+          .midSeal { border-radius: 999px; background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); padding: 4px 10px; font-size: 8px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; color: white; }
+          .content { padding: 10px 10px 8px; }
+          .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+          .card { overflow: hidden; border-radius: 18px; border: 2px solid #fecaca; background: white; box-shadow: 0 10px 24px rgba(127, 29, 29, 0.1); }
+          .cardTop { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 7px 9px 0; }
+          .badges { display: flex; gap: 4px; flex-wrap: wrap; }
+          .badge { border-radius: 999px; padding: 4px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
           .badge-green { background: #22c55e; }
           .badge-red { background: linear-gradient(135deg, #b40000 0%, #ef4444 100%); }
-          .info { padding: 8px 9px 9px; }
-          .topline { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-          .brandTag { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #cc0000; }
-          .offerTag { border-radius: 999px; background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%); padding: 3px 6px; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cc0000; }
-          .cod { margin-top: 4px; font-size: 7px; font-family: monospace; color: #94a3b8; }
-          .card h3 { margin: 4px 0 0; min-height: 34px; font-size: 11px; line-height: 1.12; font-weight: 700; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-          .priceBox { margin-top: 6px; border-radius: 14px; background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%); border: 1px solid #fde68a; padding: 7px 8px; }
+          .brandTag { min-width: 0; max-width: 88px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 7px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; color: #cc0000; }
+          .thumbWrap { position: relative; height: 118px; margin: 6px 9px 0; overflow: hidden; border-radius: 14px; background:
+            radial-gradient(circle at top right, rgba(255,107,53,.18), transparent 28%),
+            linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+          .thumb { width: 100%; height: 100%; object-fit: contain; background: white; }
+          .overlayNote { position: absolute; right: 7px; bottom: 7px; border-radius: 999px; background: rgba(17,24,39,.76); padding: 3px 7px; color: white; font-size: 6px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+          .info { padding: 8px 9px 10px; }
+          .cod { font-size: 7px; font-family: monospace; color: #94a3b8; }
+          .card h3 { margin: 5px 0 0; min-height: 34px; font-size: 11px; line-height: 1.12; font-weight: 800; color: #111827; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+          .priceBox { margin-top: 7px; border-radius: 16px; background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%); border: 1px solid #fdba74; padding: 7px 8px; }
           .oldPrice { font-size: 7px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #94a3b8; text-decoration: line-through; }
-          .price { margin-top: 2px; font-size: 17px; font-weight: 900; line-height: 1; color: #111827; }
+          .price { margin-top: 3px; font-size: 18px; font-weight: 900; line-height: 1; color: #111827; }
           .pix { margin-top: 3px; font-size: 8px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #cc0000; }
-          .footer { display: flex; justify-content: space-between; gap: 8px; padding: 0 10px 9px; color: #64748b; font-size: 7px; background: linear-gradient(180deg, #ffffff 0%, #fff5f5 100%); }
+          .bottomBar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 10px 10px; border-radius: 16px; padding: 9px 12px; background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; }
+          .bottomLeft { font-size: 8px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; color: #fef3c7; }
+          .bottomRight { text-align: right; }
+          .bottomRight strong { display: block; font-size: 18px; line-height: 1; letter-spacing: -.04em; }
+          .bottomRight span { display: block; margin-top: 2px; font-size: 8px; font-weight: 800; color: #e5e7eb; }
           @media print {
             body { background: white; }
             .sheet { border: 0; }
@@ -223,28 +224,35 @@ function gerarPanfletoProdutos(catalogoBase = []) {
       <body>
         <div class="page">
           <div class="sheet">
-            <section class="hero">
-              <div class="brandBlock">
+            <section class="topBar">
+              <div class="topBrand">
                 <img class="logo" src="${window.location.origin}/logo.jpeg" alt="Galpao do Aco" />
                 <div>
                   <div class="eyebrow">Panfleto comercial</div>
-                  <div class="title">12 ofertas para acelerar sua compra</div>
-                  <div class="subtitle">Selecao com produtos em estoque, prontos para atendimento rapido no balcao, no telefone e no WhatsApp.</div>
+                  <div class="title">9 ofertas para chamar atencao na hora</div>
+                  <div class="subtitle">Peca pronta para story, status e divulgacao rapida com produtos em estoque e oferta a vista.</div>
                 </div>
               </div>
-              <div class="phoneBox">
-                <div class="phoneLabel">Contato rapido</div>
-                <div class="phone">${telefoneDestaque}</div>
-                <div class="phoneNote">Todas as ofertas com 12% OFF online</div>
+              <div class="contactBox">
+                <div class="contactLabel">Contato rapido</div>
+                <div class="contactPhone">${telefoneDestaque}</div>
+                <div class="contactNote">Chame no WhatsApp e compre com agilidade</div>
               </div>
+            </section>
+            <section class="midBar">
+              <div class="midText">Estoque real • selecao para postagem • 12% OFF online</div>
+              <div class="midSeal">Oferta da semana</div>
             </section>
             <section class="content">
               <div class="grid">${cards}</div>
             </section>
-            <div class="footer">
-              <div>Galpao do Aco • atendimento comercial com estoque real</div>
-              <div>Panfleto gerado pela area do vendedor</div>
-            </div>
+            <section class="bottomBar">
+              <div class="bottomLeft">Galpao do Aco • materiais, ferragens e ferramentas</div>
+              <div class="bottomRight">
+                <strong>${telefoneDestaque}</strong>
+                <span>Atendimento comercial rapido</span>
+              </div>
+            </section>
           </div>
         </div>
         <script>
