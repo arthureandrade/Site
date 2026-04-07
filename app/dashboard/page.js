@@ -1,3 +1,8 @@
+'use client'
+
+import { useEffect, useMemo, useState } from 'react'
+import { DASHBOARD_PASSWORD, lerDashboardCookie } from '@/lib/dashboardAuth'
+
 const DASHBOARD_API_BASE =
   process.env.NEXT_PUBLIC_DASHBOARD_API_URL?.replace(/\/$/, '') ||
   'https://vendas.galpaodoaco.com'
@@ -5,8 +10,6 @@ const DASHBOARD_API_BASE =
 const GITHUB_FALLBACK_BASE =
   process.env.NEXT_PUBLIC_GITHUB_FALLBACK_URL?.replace(/\/$/, '') ||
   'https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data'
-
-export const revalidate = 300
 
 const moeda = new Intl.NumberFormat('pt-BR', {
   style: 'currency',
@@ -36,8 +39,8 @@ function formatarData(valor) {
   }
 }
 
-async function fetchJson(url, init) {
-  const response = await fetch(url, init)
+async function fetchJson(url) {
+  const response = await fetch(url, { cache: 'no-store' })
   if (!response.ok) throw new Error(`HTTP ${response.status}`)
   return response.json()
 }
@@ -47,9 +50,9 @@ async function carregarSnapshot(nome) {
   const fallbackUrl = `${GITHUB_FALLBACK_BASE}/dashboard/${nome}.json`
 
   try {
-    return await fetchJson(liveUrl, { next: { revalidate: 300 } })
+    return await fetchJson(liveUrl)
   } catch {
-    return await fetchJson(fallbackUrl, { next: { revalidate: 300 } })
+    return await fetchJson(fallbackUrl)
   }
 }
 
@@ -67,9 +70,9 @@ function CardKpi({ titulo, valor, subtitulo, accent = 'from-red-600 to-red-700' 
 
 function SecaoTabela({ titulo, subtitulo, colunas, linhas, destaque = 'bg-slate-900' }) {
   return (
-    <section className="rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)] overflow-hidden">
+    <section className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
       <div className={`px-6 py-5 text-white ${destaque}`}>
-        <p className="text-[11px] font-black uppercase tracking-[0.3em] text-white/70">Painel de contingencia</p>
+        <p className="text-[11px] font-black uppercase tracking-[0.3em] text-white/70">Painel de contingência</p>
         <h2 className="mt-2 text-2xl font-black">{titulo}</h2>
         {subtitulo ? <p className="mt-2 max-w-3xl text-sm text-white/80">{subtitulo}</p> : null}
       </div>
@@ -135,12 +138,103 @@ function BarrasLista({ titulo, itens, chaveValor, chaveLabel, cor = 'bg-red-600'
   )
 }
 
-export default async function DashboardPage() {
-  const [vendas, cobranca, contasPagar] = await Promise.all([
-    carregarSnapshot('vendas'),
-    carregarSnapshot('cobranca'),
-    carregarSnapshot('contas-pagar'),
-  ])
+export default function DashboardPage() {
+  const [autorizado, setAutorizado] = useState(false)
+  const [carregandoAuth, setCarregandoAuth] = useState(true)
+  const [senha, setSenha] = useState('')
+  const [erro, setErro] = useState('')
+  const [dados, setDados] = useState({ vendas: null, cobranca: null, contasPagar: null })
+  const [carregandoDados, setCarregandoDados] = useState(false)
+
+  useEffect(() => {
+    const senhaSessao = typeof window !== 'undefined' ? window.sessionStorage.getItem('dashboard_password') || '' : ''
+    const senhaCookie = lerDashboardCookie()
+    const auth = senhaSessao || senhaCookie
+    setAutorizado(auth === DASHBOARD_PASSWORD)
+    setCarregandoAuth(false)
+  }, [])
+
+  useEffect(() => {
+    if (!autorizado) return
+    let ativo = true
+
+    async function carregar() {
+      setCarregandoDados(true)
+      try {
+        const [vendas, cobranca, contasPagar] = await Promise.all([
+          carregarSnapshot('vendas'),
+          carregarSnapshot('cobranca'),
+          carregarSnapshot('contas-pagar'),
+        ])
+        if (!ativo) return
+        setDados({ vendas, cobranca, contasPagar })
+      } finally {
+        if (ativo) setCarregandoDados(false)
+      }
+    }
+
+    carregar()
+    return () => {
+      ativo = false
+    }
+  }, [autorizado])
+
+  const periodoVendas = useMemo(() => {
+    const periodo = dados.vendas?.periodo
+    if (!periodo) return '—'
+    return `${periodo.rotulo || 'Período'} • ${periodo.data_de || '—'} até ${periodo.data_ate || '—'}`
+  }, [dados.vendas])
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setErro('')
+
+    if (senha.trim() !== DASHBOARD_PASSWORD) {
+      setErro('Senha incorreta.')
+      return
+    }
+
+    window.sessionStorage.setItem('dashboard_password', DASHBOARD_PASSWORD)
+    document.cookie = `dashboard_auth=${encodeURIComponent(DASHBOARD_PASSWORD)}; path=/; Max-Age=86400; SameSite=Lax`
+    setAutorizado(true)
+  }
+
+  if (carregandoAuth) {
+    return <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">Validando acesso...</div>
+  }
+
+  if (!autorizado) {
+    return (
+      <div className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4 py-10">
+        <div className="w-full max-w-md rounded-[2rem] border border-gray-200 bg-white p-8 shadow-xl">
+          <div className="text-[11px] font-black uppercase tracking-[0.28em] text-primary">Dashboard de contingência</div>
+          <h1 className="mt-3 text-3xl font-black uppercase text-gray-900">Entrar</h1>
+          <p className="mt-2 text-sm text-gray-500">Use a senha para acessar os painéis de vendas, cobrança e contas a pagar.</p>
+
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+            <input
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              placeholder="Digite a senha"
+              className="input"
+            />
+
+            {erro ? <div className="rounded-2xl bg-red-50 px-4 py-3 text-sm font-semibold text-primary">{erro}</div> : null}
+
+            <button
+              type="submit"
+              className="flex w-full items-center justify-center rounded-2xl bg-primary px-5 py-4 text-sm font-black uppercase tracking-wide text-white"
+            >
+              Acessar dashboard
+            </button>
+          </form>
+        </div>
+      </div>
+    )
+  }
+
+  const { vendas, cobranca, contasPagar } = dados
 
   return (
     <div className="bg-[radial-gradient(circle_at_top,#fff2f2_0%,#ffffff_42%,#f8fafc_100%)]">
@@ -150,11 +244,12 @@ export default async function DashboardPage() {
             <div className="bg-[linear-gradient(135deg,#8b0000_0%,#d11124_48%,#ff6b35_100%)] px-6 py-7 text-white sm:px-8">
               <p className="text-[11px] font-black uppercase tracking-[0.34em] text-white/70">Galpao do Aco</p>
               <h1 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-4xl">
-                Dashboard de contingencia com os painéis mais críticos da operação
+                Dashboard de contingência com os painéis mais críticos da operação
               </h1>
               <p className="mt-4 max-w-2xl text-sm text-white/85 sm:text-base">
-                Esta página usa dados resumidos de vendas, cobrança e contas a pagar. Quando o servidor principal cair, ela continua no ar com o último snapshot válido.
+                A página segue as mesmas regras-base do dashboard de vendas e mantém snapshots de vendas, cobrança e contas a pagar para contingência.
               </p>
+              <p className="mt-4 text-sm font-semibold text-white/90">Período padrão de vendas: {periodoVendas}</p>
             </div>
             <div className="flex flex-col justify-between bg-slate-950 px-6 py-7 text-white sm:px-8">
               <div>
@@ -175,7 +270,9 @@ export default async function DashboardPage() {
                 </div>
               </div>
               <p className="mt-5 text-xs text-white/55">
-                Atualização automática via GitHub. Se a origem online falhar, o último snapshot continua disponível.
+                {carregandoDados
+                  ? 'Atualizando snapshots...'
+                  : 'Atualização automática via GitHub. Se a origem online falhar, o último snapshot continua disponível.'}
               </p>
             </div>
           </div>
@@ -183,7 +280,7 @@ export default async function DashboardPage() {
 
         <section className="grid gap-4 xl:grid-cols-4">
           <CardKpi
-            titulo="Vendas no mês"
+            titulo="Vendas"
             valor={formatarMoeda(vendas?.kpis?.total_vendas)}
             subtitulo={`${formatarNumero(vendas?.kpis?.total_pedidos)} pedidos`}
             accent="from-red-600 to-orange-500"
@@ -191,7 +288,7 @@ export default async function DashboardPage() {
           <CardKpi
             titulo="Ticket médio"
             valor={formatarMoeda(vendas?.kpis?.ticket_medio)}
-            subtitulo={`${formatarNumero(vendas?.kpis?.total_vendedores)} vendedores ativos`}
+            subtitulo={`${formatarNumero(vendas?.kpis?.total_vendedores)} vendedores`}
             accent="from-slate-900 to-slate-700"
           />
           <CardKpi
@@ -212,7 +309,7 @@ export default async function DashboardPage() {
           <div className="grid gap-6 xl:grid-cols-[1.15fr_0.85fr]">
             <SecaoTabela
               titulo="Vendas"
-              subtitulo="Resumo do mês atual para acompanhamento comercial quando o dashboard principal estiver indisponível."
+              subtitulo="Resumo do período padrão do dashboard comercial, usando as mesmas regras de exclusão de vendedores."
               destaque="bg-[linear-gradient(135deg,#7f1d1d_0%,#b91c1c_55%,#f97316_100%)]"
               colunas={['Vendedor', 'Vendas', 'Pedidos']}
               linhas={(vendas?.top_vendedores || []).map((item) => ({

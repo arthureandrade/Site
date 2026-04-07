@@ -1,20 +1,17 @@
 {
-  "generated_at": "2026-04-07T18:16:50.650Z",
-  "source_api": "https://vendas.galpaodoaco.com",
+  "generated_at": "2026-04-07T14:33:34.520634",
+  "source": "local-bootstrap",
   "arquivos": [
     {
       "file": "vendas.json",
-      "changed": true,
       "ok": true
     },
     {
       "file": "cobranca.json",
-      "changed": true,
       "ok": true
     },
     {
       "file": "contas-pagar.json",
-      "changed": true,
       "ok": true
     }
   ]

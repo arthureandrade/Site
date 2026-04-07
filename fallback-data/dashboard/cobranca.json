@@ -1,171 +1,171 @@
 {
+  "ok": true,
+  "tipo": "cobranca",
+  "generated_at": "2026-04-07T14:33:34.753793",
+  "kpis": {
+    "total_aberto": 805749.0,
+    "total_atraso": 179542.0,
+    "total_vencer": 626207.0,
+    "clientes_atraso": 68
+  },
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 626207
+      "saldo": 626207.0
     },
     {
       "faixa": "180+ dias",
-      "saldo": 80845
+      "saldo": 80845.0
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 34524
+      "saldo": 34524.0
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 29226
+      "saldo": 29226.0
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 24638
+      "saldo": 23638.0
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 11309
+      "saldo": 11309.0
     }
   ],
-  "generated_at": "2026-04-07T14:16:50.223568",
-  "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 806749,
-    "total_atraso": 180542,
-    "total_vencer": 626207
-  },
-  "ok": true,
-  "proximos_vencimentos": [
-    {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 2370,
-      "vencimento": "2026-04-02T00:00:00"
-    },
-    {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 360,
-      "vencimento": "2026-04-02T00:00:00"
-    },
-    {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": 5,
-      "loja": "Loja 4",
-      "saldo": 180,
-      "vencimento": "2026-04-02T00:00:00"
-    },
-    {
-      "cliente": "QUADRILHA EVOLUCAO JUNINA THIANGUA",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 190,
-      "vencimento": "2026-04-04T00:00:00"
-    },
-    {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 30,
-      "vencimento": "2026-04-04T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": -1,
-      "loja": "Loja 1",
-      "saldo": 3250,
-      "vencimento": "2026-04-08T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": -1,
-      "loja": "Loja 4",
-      "saldo": 4250,
-      "vencimento": "2026-04-08T00:00:00"
-    },
-    {
-      "cliente": "ADEMIR DE OLIVEIRA LIRA",
-      "dias_atraso": -2,
-      "loja": "Loja 2",
-      "saldo": 1000,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -3,
-      "loja": "Loja 1",
-      "saldo": 36,
-      "vencimento": "2026-04-10T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": -3,
-      "loja": "Loja 2",
-      "saldo": 508,
-      "vencimento": "2026-04-10T00:00:00"
-    }
-  ],
-  "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 396,
+      "total_atraso": 38272.0,
       "titulos": 7,
-      "total_atraso": 38272
+      "maior_atraso": 396
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 678,
+      "total_atraso": 12302.0,
       "titulos": 16,
-      "total_atraso": 12302
+      "maior_atraso": 678
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 118,
+      "total_atraso": 11540.0,
       "titulos": 4,
-      "total_atraso": 11540
+      "maior_atraso": 118
     },
     {
       "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
-      "maior_atraso": 15,
+      "total_atraso": 7345.0,
       "titulos": 2,
-      "total_atraso": 7345
+      "maior_atraso": 15
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 159,
+      "total_atraso": 6905.0,
       "titulos": 2,
-      "total_atraso": 6905
+      "maior_atraso": 159
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 849,
+      "total_atraso": 6862.0,
       "titulos": 2,
-      "total_atraso": 6862
+      "maior_atraso": 849
     },
     {
       "cliente": "RODRYGO DE SOUSA OLIVEIRA",
-      "maior_atraso": 29,
+      "total_atraso": 6500.0,
       "titulos": 2,
-      "total_atraso": 6500
+      "maior_atraso": 29
     },
     {
       "cliente": "DOUGLAS SOARES DA CONCEICAO",
-      "maior_atraso": 99,
+      "total_atraso": 5950.0,
       "titulos": 2,
-      "total_atraso": 5950
+      "maior_atraso": 99
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 256,
+      "total_atraso": 5500.0,
       "titulos": 1,
-      "total_atraso": 5500
+      "maior_atraso": 256
     },
     {
       "cliente": "MADEREIRA LIDER",
-      "maior_atraso": 101,
+      "total_atraso": 5489.0,
       "titulos": 2,
-      "total_atraso": 5489
+      "maior_atraso": 101
+    }
+  ],
+  "proximos_vencimentos": [
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-02T00:00:00",
+      "saldo": 2370.0,
+      "dias_atraso": 5
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-02T00:00:00",
+      "saldo": 360.0,
+      "dias_atraso": 5
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "loja": "Loja 4",
+      "vencimento": "2026-04-02T00:00:00",
+      "saldo": 180.0,
+      "dias_atraso": 5
+    },
+    {
+      "cliente": "QUADRILHA EVOLUCAO JUNINA THIANGUA",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-04T00:00:00",
+      "saldo": 190.0,
+      "dias_atraso": 3
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-04T00:00:00",
+      "saldo": 30.0,
+      "dias_atraso": 3
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-08T00:00:00",
+      "saldo": 3250.0,
+      "dias_atraso": -1
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
+      "loja": "Loja 4",
+      "vencimento": "2026-04-08T00:00:00",
+      "saldo": 4250.0,
+      "dias_atraso": -1
+    },
+    {
+      "cliente": "ADEMIR DE OLIVEIRA LIRA",
+      "loja": "Loja 2",
+      "vencimento": "2026-04-09T00:00:00",
+      "saldo": 1000.0,
+      "dias_atraso": -2
+    },
+    {
+      "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
+      "loja": "Loja 1",
+      "vencimento": "2026-04-10T00:00:00",
+      "saldo": 36.0,
+      "dias_atraso": -3
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
+      "loja": "Loja 2",
+      "vencimento": "2026-04-10T00:00:00",
+      "saldo": 508.0,
+      "dias_atraso": -3
     }
   ]
 }
