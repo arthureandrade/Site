@@ -25,6 +25,11 @@ jobs:
         env:
           FALLBACK_SOURCE_API_URL: https://vendas.galpaodoaco.com/api
 
+      - name: Gerar snapshots do dashboard
+        run: node scripts/update-dashboard-fallback.mjs
+        env:
+          DASHBOARD_SOURCE_API_URL: https://vendas.galpaodoaco.com
+
       - name: Commitar alteracoes
         run: |
           git config user.name "github-actions[bot]"

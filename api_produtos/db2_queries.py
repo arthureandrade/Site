@@ -56,12 +56,23 @@ LEFT JOIN (
     ON pg.IDPRODUTO = p.IDPRODUTO
 -- Preço varejo mais recente
 LEFT JOIN (
-    SELECT ppp2.IDPRODUTO,
-           DOUBLE(CHAR(ppp2.VALPRECOVAREJO)) AS PRECOVENDA
-    FROM DBA.POLITICA_PRECO_PRODUTO ppp2
-    WHERE ppp2.IDEMPRESA = 1
+    SELECT base.IDPRODUTO, base.PRECOVENDA
+    FROM (
+        SELECT
+            ppp2.IDPRODUTO,
+            DOUBLE(CHAR(ppp2.VALPRECOVAREJO)) AS PRECOVENDA,
+            ROW_NUMBER() OVER (
+                PARTITION BY ppp2.IDPRODUTO, ppp2.IDEMPRESA
+                ORDER BY CASE WHEN COALESCE(ppp2.IDSUBPRODUTO, 0) = ppp2.IDPRODUTO THEN 0 ELSE 1 END,
+                         COALESCE(ppp2.DTALTERACAOVAR, ppp2.DTALTERACAO) DESC,
+                         COALESCE(ppp2.VALPRECOVAREJO, 0) DESC
+            ) AS rn
+        FROM DBA.POLITICA_PRECO_PRODUTO ppp2
+        WHERE ppp2.IDEMPRESA = 1
+    ) base
+    WHERE base.rn = 1
 ) ppd
-    ON ppd.IDPRODUTO = p.IDPRODUTO
+ON ppd.IDPRODUTO = p.IDPRODUTO
 LEFT JOIN (
     SELECT base.IDPRODUTO, base.VALPRECO
     FROM (
