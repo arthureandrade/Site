@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-07T16:31:41.209651",
+  "generated_at": "2026-04-07T17:28:12.517859",
   "kpis": {
-    "ticket_medio": 387.37895287958116,
-    "total_pedidos": 191,
-    "total_vendas": 73989.38,
+    "ticket_medio": 368.1154502369668,
+    "total_pedidos": 211,
+    "total_vendas": 77672.36,
     "total_vendedores": 8
   },
   "lojas": [
     {
-      "loja": "Loja 2",
-      "total_vendas": 35463
+      "loja": "Loja 1",
+      "total_vendas": 36211.68
     },
     {
-      "loja": "Loja 1",
-      "total_vendas": 35218.18
+      "loja": "Loja 2",
+      "total_vendas": 36053.1
     },
     {
       "loja": "4",
-      "total_vendas": 3308.2
+      "total_vendas": 5407.58
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-04-07",
-      "total_vendas": 73989.38
+      "total_vendas": 77672.36
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 25,
-      "total_vendas": 25076,
+      "pedidos": 28,
+      "total_vendas": 25830.48,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 30,
-      "total_vendas": 12286.060000000001,
+      "pedidos": 34,
+      "total_vendas": 12871.060000000001,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 39,
-      "total_vendas": 9388.949999999999,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 41,
-      "total_vendas": 8115.5,
+      "pedidos": 46,
+      "total_vendas": 9783.5,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 7,
-      "total_vendas": 7531,
+      "pedidos": 41,
+      "total_vendas": 9467.949999999999,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 8,
+      "total_vendas": 7573,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 21,
-      "total_vendas": 5825.37,
+      "pedidos": 23,
+      "total_vendas": 6112.87,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 23,
-      "total_vendas": 4991.5,
+      "pedidos": 26,
+      "total_vendas": 5258.5,
       "vendedor": "Adriano"
     },
     {

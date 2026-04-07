@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 84461
+      "saldo": 93335
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-07T16:31:42.088801",
+  "generated_at": "2026-04-07T17:28:13.419308",
   "kpis": {
     "a_vencer_7d": 480559,
     "juros_pagos": 71064,
-    "total_aberto": 2719739,
-    "total_pago_periodo": 3429046,
-    "total_vencido": 95268
+    "total_aberto": 2728613,
+    "total_pago_periodo": 3411298,
+    "total_vencido": 104142
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -154,9 +154,9 @@
       "total_aberto": 53262
     },
     {
-      "fornecedor": "AMATOOLS COMERCIAL E IMPORTADORA LTDA",
-      "titulos": 13,
-      "total_aberto": 38386
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 4,
+      "total_aberto": 39870
     }
   ]
 }
