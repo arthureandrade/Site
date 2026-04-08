@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-08T19:43:07.345Z",
+  "generated_at": "2026-04-08T20:26:02.488Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5693,
+  "total": 5694,
   "produtos": [
     {
       "descricao": "",
@@ -10856,7 +10856,7 @@
     {
       "descricao": "",
       "estoque": 97068,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1670.jpg",
+      "foto_url": null,
       "grupo": 64,
       "id": 1670,
       "marca": "JOMARCA",
@@ -10865,7 +10865,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1670.jpg"
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -10884,7 +10884,7 @@
     {
       "descricao": "",
       "estoque": 117134,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1669.jpg",
+      "foto_url": null,
       "grupo": 64,
       "id": 1669,
       "marca": "JOMARCA",
@@ -10893,7 +10893,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1669.jpg"
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -11933,7 +11933,7 @@
     },
     {
       "descricao": "",
-      "estoque": 40,
+      "estoque": 39,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/578.jpg",
       "grupo": 11,
       "id": 578,
@@ -11975,7 +11975,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3,
+      "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1474.jpg",
       "grupo": 11,
       "id": 1474,
@@ -12882,6 +12882,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5169.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13277.jpg",
+      "grupo": 94,
+      "id": 13277,
+      "marca": "",
+      "nome": "CAMISA FEMININA SOCIAL MANGA 3/4 VIVO NO PUNHO TAMANHO:G",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13277.jpg"
     },
     {
       "descricao": "",
@@ -24603,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2677,
+      "estoque": 2673,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -25275,7 +25289,7 @@
     },
     {
       "descricao": "",
-      "estoque": -95,
+      "estoque": -96,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1144.jpg",
       "grupo": 30,
       "id": 1144,
@@ -26549,7 +26563,7 @@
     },
     {
       "descricao": "",
-      "estoque": -187,
+      "estoque": -189,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13344.jpg",
       "grupo": 32,
       "id": 13344,
@@ -26787,7 +26801,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2939,
+      "estoque": 2937,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -27235,7 +27249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3626,
+      "estoque": 3623,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -27277,7 +27291,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10798.jpg",
       "grupo": 33,
       "id": 10798,
@@ -27291,7 +27305,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4742,
+      "estoque": 4741,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -32163,7 +32177,7 @@
     },
     {
       "descricao": "",
-      "estoque": -172,
+      "estoque": -173,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -33619,7 +33633,7 @@
     },
     {
       "descricao": "",
-      "estoque": 269,
+      "estoque": 268,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -33647,7 +33661,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1189,
+      "estoque": 1188,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/82.jpg",
       "grupo": 41,
       "id": 82,
@@ -38099,7 +38113,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5431.jpg",
       "grupo": 69,
       "id": 5431,
@@ -62011,7 +62025,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12588.jpg",
       "grupo": 64,
       "id": 12588,
@@ -62599,7 +62613,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4645,
+      "estoque": 4629,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1631.jpg",
       "grupo": 64,
       "id": 1631,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 11,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11669.jpg",
-      "grupo": 92,
-      "id": 11669,
-      "marca": "CARROCINHA",
-      "nome": "SUPORTE BASE DESTACAVEL C/ REFORCO FRONTAL",
-      "preco": 31.53,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11669.jpg"
     }
   ]
 }
