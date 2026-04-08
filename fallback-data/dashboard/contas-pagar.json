@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 222597
+      "saldo": 220852
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-08T14:13:16.307016",
+  "generated_at": "2026-04-08T15:43:08.436989",
   "kpis": {
     "a_vencer_7d": 472915,
     "juros_pagos": 71064,
-    "total_aberto": 2882679,
-    "total_pago_periodo": 3160595,
-    "total_vencido": 233404
+    "total_aberto": 2880934,
+    "total_pago_periodo": 3165830,
+    "total_vencido": 231659
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -102,7 +102,7 @@
       "dias_atraso": 28,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 46670,
+      "saldo": 6135,
       "vencimento": "2026-03-11T00:00:00"
     }
   ],
