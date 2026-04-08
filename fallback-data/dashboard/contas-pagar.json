@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 91727
+      "saldo": 222597
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-08T10:16:01.005688",
+  "generated_at": "2026-04-08T11:50:56.628040",
   "kpis": {
     "a_vencer_7d": 472915,
     "juros_pagos": 71064,
-    "total_aberto": 2736809,
-    "total_pago_periodo": 3424822,
-    "total_vencido": 102534
+    "total_aberto": 2867679,
+    "total_pago_periodo": 3160595,
+    "total_vencido": 233404
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -99,24 +99,24 @@
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 23,
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "dias_atraso": 28,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 8400,
-      "vencimento": "2026-03-16T00:00:00"
+      "saldo": 46670,
+      "vencimento": "2026-03-11T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 48,
-      "total_aberto": 940813
+      "titulos": 50,
+      "total_aberto": 993618
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 23,
-      "total_aberto": 581386
+      "titulos": 25,
+      "total_aberto": 634320
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 5,
-      "total_aberto": 116674
+      "titulos": 6,
+      "total_aberto": 141805
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
