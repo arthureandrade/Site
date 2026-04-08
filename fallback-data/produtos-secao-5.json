@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T21:24:53.302Z",
+  "generated_at": "2026-04-08T23:01:37.285Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5694,
   "produtos": [
@@ -10856,7 +10856,7 @@
     {
       "descricao": "",
       "estoque": 97068,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1670.jpg",
       "grupo": 64,
       "id": 1670,
       "marca": "JOMARCA",
@@ -10865,7 +10865,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1670.jpg"
     },
     {
       "descricao": "",
@@ -10884,7 +10884,7 @@
     {
       "descricao": "",
       "estoque": 117128,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1669.jpg",
       "grupo": 64,
       "id": 1669,
       "marca": "JOMARCA",
@@ -10893,7 +10893,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1669.jpg"
     },
     {
       "descricao": "",
@@ -24617,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2673,
+      "estoque": 2670,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -27249,7 +27249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3623,
+      "estoque": 3622,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -27571,7 +27571,7 @@
     },
     {
       "descricao": "",
-      "estoque": 187,
+      "estoque": 192,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1941.jpg",
       "grupo": 33,
       "id": 1941,
@@ -37063,7 +37063,7 @@
     },
     {
       "descricao": "",
-      "estoque": 39,
+      "estoque": 31,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2096.jpg",
       "grupo": 32,
       "id": 2096,
@@ -52533,7 +52533,7 @@
     },
     {
       "descricao": "",
-      "estoque": 100823,
+      "estoque": 100743,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -54564,7 +54564,7 @@
     {
       "descricao": "",
       "estoque": 12106,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1880.jpg",
       "grupo": 64,
       "id": 1880,
       "marca": "JOMARCA",
@@ -54573,7 +54573,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1880.jpg"
     },
     {
       "descricao": "",
@@ -65777,7 +65777,7 @@
     },
     {
       "descricao": "",
-      "estoque": 192,
+      "estoque": 190,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
