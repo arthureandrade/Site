@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2585056
+      "saldo": 2519422
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-09T08:47:44.168868",
+  "generated_at": "2026-04-09T10:46:38.865528",
   "kpis": {
     "a_vencer_7d": 420209,
     "juros_pagos": 71064,
-    "total_aberto": 2880934,
-    "total_pago_periodo": 3074453,
+    "total_aberto": 2815300,
+    "total_pago_periodo": 2976002,
     "total_vencido": 295878
   },
   "ok": true,
@@ -102,7 +102,7 @@
       "dias_atraso": 29,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 46670,
+      "saldo": 6135,
       "vencimento": "2026-03-11T00:00:00"
     }
   ],
@@ -124,11 +124,6 @@
       "total_aberto": 209880
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 11,
-      "total_aberto": 142631
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 141805
@@ -137,6 +132,11 @@
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 4,
       "total_aberto": 82969
+    },
+    {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 9,
+      "total_aberto": 76997
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
