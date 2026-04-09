@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-09T20:42:16.095Z",
+  "generated_at": "2026-04-09T21:34:44.595Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5694,
+  "total": 5695,
   "produtos": [
     {
       "descricao": "",
@@ -887,7 +887,7 @@
     },
     {
       "descricao": "",
-      "estoque": 21,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11584.jpg",
       "grupo": 2,
       "id": 11584,
@@ -3603,7 +3603,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2902,
+      "estoque": 2898,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1647.jpg",
       "grupo": 64,
       "id": 1647,
@@ -4345,7 +4345,7 @@
     },
     {
       "descricao": "",
-      "estoque": 465,
+      "estoque": 464,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1641.jpg",
       "grupo": 64,
       "id": 1641,
@@ -24617,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2543,
+      "estoque": 2531,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -27460,7 +27460,7 @@
     {
       "descricao": "",
       "estoque": 7981,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/691.jpg",
+      "foto_url": null,
       "grupo": 33,
       "id": 691,
       "marca": "DENVER",
@@ -27469,7 +27469,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/691.jpg"
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -32457,7 +32457,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 16,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/286.jpg",
       "grupo": 41,
       "id": 286,
@@ -32989,7 +32989,7 @@
     },
     {
       "descricao": "",
-      "estoque": 719,
+      "estoque": 718,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/907.jpg",
       "grupo": 41,
       "id": 907,
@@ -33003,7 +33003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 726,
+      "estoque": 725,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11552.jpg",
       "grupo": 40,
       "id": 11552,
@@ -33339,7 +33339,7 @@
     },
     {
       "descricao": "",
-      "estoque": 90,
+      "estoque": 88,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5130.jpg",
       "grupo": 92,
       "id": 5130,
@@ -36979,7 +36979,7 @@
     },
     {
       "descricao": "",
-      "estoque": 418,
+      "estoque": 414,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/488.jpg",
       "grupo": 32,
       "id": 488,
@@ -37063,7 +37063,7 @@
     },
     {
       "descricao": "",
-      "estoque": 29,
+      "estoque": 25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2096.jpg",
       "grupo": 32,
       "id": 2096,
@@ -39569,7 +39569,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": -1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12826.jpg",
       "grupo": 45,
       "id": 12826,
@@ -52421,7 +52421,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10390,
+      "estoque": 10340,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4193.jpg",
       "grupo": 64,
       "id": 4193,
@@ -52533,8 +52533,8 @@
     },
     {
       "descricao": "",
-      "estoque": 100149,
-      "foto_url": null,
+      "estoque": 99999,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
       "marca": "ANFIX",
@@ -52543,7 +52543,7 @@
       "secao": 5,
       "subgrupo": 26,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/109.jpg"
     },
     {
       "descricao": "",
@@ -56831,7 +56831,7 @@
     },
     {
       "descricao": "",
-      "estoque": 240,
+      "estoque": 238,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg",
       "grupo": 45,
       "id": 11483,
@@ -58287,7 +58287,7 @@
     },
     {
       "descricao": "",
-      "estoque": 717,
+      "estoque": 709,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/104.jpg",
       "grupo": 66,
       "id": 104,
@@ -58343,7 +58343,7 @@
     },
     {
       "descricao": "",
-      "estoque": 246,
+      "estoque": 244,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/410.jpg",
       "grupo": 66,
       "id": 410,
@@ -59085,7 +59085,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3221,
+      "estoque": 3217,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2149.jpg",
       "grupo": 64,
       "id": 2149,
@@ -61140,6 +61140,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1409.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13837,
+      "marca": "RAMASSOL",
+      "nome": "PTA ALMOF C/FRIZO INOX PUX400 LAT FIXA VD CINZA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "PC",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -69585,7 +69599,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3397.jpg",
       "grupo": 43,
       "id": 3397,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1362.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4613.jpg",
-      "grupo": 26,
-      "id": 4613,
-      "marca": "ASTRA",
-      "nome": "SUPER BALDE 12 LITROS",
-      "preco": 46.86,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
     }
   ]
 }
