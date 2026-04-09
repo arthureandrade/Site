@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2607746
+      "saldo": 2868834
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 154201
+      "saldo": 156489
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-09T15:50:06.862068",
+  "generated_at": "2026-04-09T16:42:17.025305",
   "kpis": {
     "a_vencer_7d": 420209,
     "juros_pagos": 71064,
-    "total_aberto": 2772754,
+    "total_aberto": 3036130,
     "total_pago_periodo": 3491901,
-    "total_vencido": 165008
+    "total_vencido": 167296
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 48,
-      "total_aberto": 940813
+      "titulos": 51,
+      "total_aberto": 1112661
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -134,6 +134,11 @@
       "total_aberto": 116674
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 8,
+      "total_aberto": 106040
+    },
+    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 4,
       "total_aberto": 82969
@@ -152,11 +157,6 @@
       "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
       "titulos": 3,
       "total_aberto": 53262
-    },
-    {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 4,
-      "total_aberto": 39870
     }
   ]
 }
