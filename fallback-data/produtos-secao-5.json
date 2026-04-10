@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-10T13:45:10.997Z",
+  "generated_at": "2026-04-10T14:40:02.407Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5695,
+  "total": 5700,
   "produtos": [
     {
       "descricao": "",
@@ -3169,7 +3169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 444,
+      "estoque": 443,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -3197,7 +3197,7 @@
     },
     {
       "descricao": "",
-      "estoque": -698,
+      "estoque": -699,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/911.jpg",
       "grupo": 3,
       "id": 911,
@@ -4485,7 +4485,7 @@
     },
     {
       "descricao": "",
-      "estoque": -606,
+      "estoque": -607,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1975.jpg",
       "grupo": 33,
       "id": 1975,
@@ -6557,7 +6557,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13,
+      "estoque": 12,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2224.jpg",
       "grupo": 34,
       "id": 2224,
@@ -23833,7 +23833,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5,
+      "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11072.jpg",
       "grupo": 69,
       "id": 11072,
@@ -24617,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2529,
+      "estoque": 2527,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -25051,7 +25051,7 @@
     },
     {
       "descricao": "",
-      "estoque": 138,
+      "estoque": 137,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11878.jpg",
       "grupo": 30,
       "id": 11878,
@@ -26787,7 +26787,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5009,
+      "estoque": 5007,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/63.jpg",
       "grupo": 32,
       "id": 63,
@@ -26801,7 +26801,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2909,
+      "estoque": 2902,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -26815,7 +26815,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1131,
+      "estoque": 1129,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -27249,7 +27249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3585,
+      "estoque": 3573,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -27557,7 +27557,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1146,
+      "estoque": 1141,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1942.jpg",
       "grupo": 33,
       "id": 1942,
@@ -29797,7 +29797,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2623.jpg",
       "grupo": 43,
       "id": 2623,
@@ -32177,7 +32177,7 @@
     },
     {
       "descricao": "",
-      "estoque": -177,
+      "estoque": -180,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -32415,7 +32415,7 @@
     },
     {
       "descricao": "",
-      "estoque": 143,
+      "estoque": 142,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -33633,7 +33633,7 @@
     },
     {
       "descricao": "",
-      "estoque": 266,
+      "estoque": 265,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -35103,7 +35103,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2586.jpg",
       "grupo": 48,
       "id": 2586,
@@ -56117,7 +56117,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4655.jpg",
       "grupo": 36,
       "id": 4655,
@@ -61148,7 +61148,49 @@
       "grupo": 98,
       "id": 13837,
       "marca": "RAMASSOL",
-      "nome": "PTA ALMOF C/FRIZO INOX PUX400 LAT FIXA VD CINZA",
+      "nome": "PTA ALMOF C/FRIZO INOX PUX400 LAT FIXA VD CZ DIR",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "PC",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13838,
+      "marca": "RAMASSOL",
+      "nome": "PTA ALMOF C/FRIZO INOX PUX400 LAT FIXA VD CZ ESQ",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "PC",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13840,
+      "marca": "RAMASSOL",
+      "nome": "PTA ALMOF C/FRIZO INOX PUX400 QS 100X215 R12 DIR",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "PC",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13839,
+      "marca": "RAMASSOL",
+      "nome": "PTA ALMOF C/FRIZO INOX PUX400 QS 100X215 R12 ESQ",
       "preco": 0,
       "secao": 5,
       "subgrupo": 9999,
@@ -61168,6 +61210,34 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13766.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13841,
+      "marca": "RAMASSOL",
+      "nome": "PTA CORRER 3F LISO QUALITY SOL 1.52 R14 DIR",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 13842,
+      "marca": "RAMASSOL",
+      "nome": "PTA CORRER 3F LISO QUALITY SOL 1.52 R14 ESQ",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -62039,7 +62109,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12588.jpg",
       "grupo": 64,
       "id": 12588,
@@ -65609,7 +65679,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6,
+      "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/91.jpg",
       "grupo": 71,
       "id": 91,
@@ -65861,7 +65931,7 @@
     },
     {
       "descricao": "",
-      "estoque": 74,
+      "estoque": 72,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/98.jpg",
       "grupo": 71,
       "id": 98,
@@ -69613,7 +69683,7 @@
     },
     {
       "descricao": "",
-      "estoque": 67,
+      "estoque": 66,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3395.jpg",
       "grupo": 43,
       "id": 3395,
@@ -69932,76 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1965.jpg",
-      "grupo": 73,
-      "id": 1965,
-      "marca": "ORBI",
-      "nome": "SPRAY TINTA ALUMINIO ORBI 340ML/190G",
-      "preco": 18.42,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1965.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1968.jpg",
-      "grupo": 73,
-      "id": 1968,
-      "marca": "ORBI",
-      "nome": "SPRAY TINTA BRANCO FOSCO ORBI 340ML/190G",
-      "preco": 17.47,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1968.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1962.jpg",
-      "grupo": 73,
-      "id": 1962,
-      "marca": "ORBI",
-      "nome": "SPRAY TINTA PRETO BRILHANTE ORBI 340ML/190G",
-      "preco": 17.12,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1962.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11328.jpg",
-      "grupo": 13,
-      "id": 11328,
-      "marca": "KALA",
-      "nome": "SQUEEZE TERMICO ACO INOX - 750ML - KALA",
-      "preco": 119.32,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11328.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1362.jpg",
-      "grupo": 63,
-      "id": 1362,
-      "marca": "GERAL",
-      "nome": "SSD BEST MEMORY 120GB 2.5 SATA III",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1362.jpg"
     }
   ]
 }

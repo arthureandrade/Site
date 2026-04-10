@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 624234
+      "saldo": 628895
     },
     {
       "faixa": "180+ dias",
@@ -14,23 +14,23 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 29526
+      "saldo": 22319
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 22828
+      "saldo": 21160
     },
     {
       "faixa": "31–60 dias",
       "saldo": 17289
     }
   ],
-  "generated_at": "2026-04-10T09:45:08.367032",
+  "generated_at": "2026-04-10T10:39:59.915202",
   "kpis": {
     "clientes_atraso": 70,
-    "total_aberto": 810649,
-    "total_atraso": 186415,
-    "total_vencer": 624234
+    "total_aberto": 806435,
+    "total_atraso": 177540,
+    "total_vencer": 628895
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -113,12 +113,6 @@
       "total_atraso": 12302
     },
     {
-      "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 121,
-      "titulos": 4,
-      "total_atraso": 11540
-    },
-    {
       "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
       "maior_atraso": 18,
       "titulos": 2,
@@ -159,6 +153,12 @@
       "maior_atraso": 104,
       "titulos": 2,
       "total_atraso": 5489
+    },
+    {
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 275,
+      "titulos": 5,
+      "total_atraso": 4825
     }
   ]
 }
