@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2783005
+      "saldo": 2949801
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-10T13:34:08.017638",
+  "generated_at": "2026-04-10T14:32:37.249418",
   "kpis": {
     "a_vencer_7d": 357696,
     "juros_pagos": 71064,
-    "total_aberto": 3037091,
+    "total_aberto": 3203887,
     "total_pago_periodo": 3437003,
     "total_vencido": 254086
   },
@@ -124,6 +124,11 @@
       "total_aberto": 209880
     },
     {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 6,
+      "total_aberto": 166796
+    },
+    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 11,
       "total_aberto": 142631
@@ -152,11 +157,6 @@
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 2,
       "total_aberto": 60499
-    },
-    {
-      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
-      "titulos": 3,
-      "total_aberto": 53262
     }
   ]
 }
