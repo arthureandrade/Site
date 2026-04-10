@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3093620
+      "saldo": 3060011
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-10T17:50:17.151000",
+  "generated_at": "2026-04-10T18:30:32.575707",
   "kpis": {
-    "a_vencer_7d": 351200,
+    "a_vencer_7d": 317869,
     "juros_pagos": 71064,
-    "total_aberto": 3516240,
-    "total_pago_periodo": 2828900,
+    "total_aberto": 3482631,
+    "total_pago_periodo": 2929171,
     "total_vencido": 422620
   },
   "ok": true,
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 26,
-      "total_aberto": 746181
+      "titulos": 24,
+      "total_aberto": 712850
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
