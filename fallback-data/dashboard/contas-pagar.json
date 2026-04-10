@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2987977
+      "saldo": 3093560
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 242213
+      "saldo": 380498
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-10T16:05:52.084619",
+  "generated_at": "2026-04-10T16:55:56.142126",
   "kpis": {
-    "a_vencer_7d": 357696,
+    "a_vencer_7d": 351418,
     "juros_pagos": 71064,
-    "total_aberto": 3242063,
-    "total_pago_periodo": 3437003,
-    "total_vencido": 254086
+    "total_aberto": 3485931,
+    "total_pago_periodo": 2919647,
+    "total_vencido": 392371
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -99,24 +99,24 @@
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 25,
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "dias_atraso": 30,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 8400,
-      "vencimento": "2026-03-16T00:00:00"
+      "saldo": 46670,
+      "vencimento": "2026-03-11T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 51,
-      "total_aberto": 1112661
+      "titulos": 53,
+      "total_aberto": 1165466
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 23,
-      "total_aberto": 581386
+      "titulos": 26,
+      "total_aberto": 746181
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -135,13 +135,13 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 5,
-      "total_aberto": 116674
+      "titulos": 6,
+      "total_aberto": 141805
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 8,
-      "total_aberto": 106040
+      "titulos": 9,
+      "total_aberto": 114440
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
