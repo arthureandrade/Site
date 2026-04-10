@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2949801
+      "saldo": 2987977
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 2008
     }
   ],
-  "generated_at": "2026-04-10T14:32:37.249418",
+  "generated_at": "2026-04-10T15:30:10.116778",
   "kpis": {
     "a_vencer_7d": 357696,
     "juros_pagos": 71064,
-    "total_aberto": 3203887,
+    "total_aberto": 3242063,
     "total_pago_periodo": 3437003,
     "total_vencido": 254086
   },
@@ -125,8 +125,8 @@
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 6,
-      "total_aberto": 166796
+      "titulos": 32,
+      "total_aberto": 204972
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",

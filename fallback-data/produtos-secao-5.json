@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-10T18:32:36.185Z",
+  "generated_at": "2026-04-10T19:30:08.163Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5699,
+  "total": 5700,
   "produtos": [
     {
       "descricao": "",
@@ -20683,7 +20683,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2637.jpg",
       "grupo": 43,
       "id": 2637,
@@ -23105,7 +23105,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11152.jpg",
       "grupo": 92,
       "id": 11152,
@@ -24617,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2522,
+      "estoque": 2519,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -26549,7 +26549,7 @@
     },
     {
       "descricao": "",
-      "estoque": -348,
+      "estoque": -351,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3963.jpg",
       "grupo": 32,
       "id": 3963,
@@ -26815,7 +26815,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1129,
+      "estoque": 1116,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -27249,7 +27249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3545,
+      "estoque": 3535,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -32163,7 +32163,7 @@
     },
     {
       "descricao": "",
-      "estoque": -165,
+      "estoque": -166,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11293.jpg",
       "grupo": 40,
       "id": 11293,
@@ -32415,7 +32415,7 @@
     },
     {
       "descricao": "",
-      "estoque": 142,
+      "estoque": 141,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -33353,7 +33353,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38,
+      "estoque": 36,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5131.jpg",
       "grupo": 92,
       "id": 5131,
@@ -38702,7 +38702,7 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13843.jpg",
       "grupo": 98,
       "id": 13843,
       "marca": "RAMASSOL",
@@ -38711,12 +38711,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13843.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13844.jpg",
       "grupo": 98,
       "id": 13844,
       "marca": "RAMASSOL",
@@ -38725,7 +38725,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13844.jpg"
     },
     {
       "descricao": "",
@@ -52715,7 +52715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6921,
+      "estoque": 6891,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10066.jpg",
       "grupo": 64,
       "id": 10066,
@@ -53625,7 +53625,7 @@
     },
     {
       "descricao": "",
-      "estoque": 819,
+      "estoque": 814,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2155.jpg",
       "grupo": 64,
       "id": 2155,
@@ -58301,7 +58301,7 @@
     },
     {
       "descricao": "",
-      "estoque": 317,
+      "estoque": 289,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4141.jpg",
       "grupo": 66,
       "id": 4141,
@@ -59394,7 +59394,7 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13839.jpg",
       "grupo": 98,
       "id": 13839,
       "marca": "RAMASSOL",
@@ -59403,12 +59403,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13839.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13837.jpg",
       "grupo": 98,
       "id": 13837,
       "marca": "RAMASSOL",
@@ -59417,12 +59417,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13837.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13838.jpg",
       "grupo": 98,
       "id": 13838,
       "marca": "RAMASSOL",
@@ -59431,7 +59431,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13838.jpg"
     },
     {
       "descricao": "",
@@ -59632,7 +59632,21 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13857.jpg",
+      "grupo": 98,
+      "id": 13857,
+      "marca": "RAMASSOL",
+      "nome": "PORTA CORR 3F LISO MASTER PT 2.00L X 2.15A ESQ",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13857.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13841.jpg",
       "grupo": 98,
       "id": 13841,
       "marca": "RAMASSOL",
@@ -59641,12 +59655,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13841.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13842.jpg",
       "grupo": 98,
       "id": 13842,
       "marca": "RAMASSOL",
@@ -59655,7 +59669,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13842.jpg"
     },
     {
       "descricao": "",
@@ -59940,7 +59954,7 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13846.jpg",
       "grupo": 98,
       "id": 13846,
       "marca": "RAMASSOL",
@@ -59949,12 +59963,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13846.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13845.jpg",
       "grupo": 98,
       "id": 13845,
       "marca": "RAMASSOL",
@@ -59963,7 +59977,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13845.jpg"
     },
     {
       "descricao": "",
@@ -62655,7 +62669,7 @@
     },
     {
       "descricao": "",
-      "estoque": 966,
+      "estoque": 916,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1630.jpg",
       "grupo": 64,
       "id": 1630,
@@ -65973,7 +65987,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1400.jpg",
       "grupo": 71,
       "id": 1400,
@@ -66029,7 +66043,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5669.jpg",
       "grupo": 71,
       "id": 5669,
@@ -67849,7 +67863,7 @@
     },
     {
       "descricao": "",
-      "estoque": -12,
+      "estoque": -13,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3755.jpg",
       "grupo": 33,
       "id": 3755,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1965.jpg",
-      "grupo": 73,
-      "id": 1965,
-      "marca": "ORBI",
-      "nome": "SPRAY TINTA ALUMINIO ORBI 340ML/190G",
-      "preco": 18.42,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1965.jpg"
     }
   ]
 }
