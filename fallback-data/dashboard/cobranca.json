@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 42044
+      "saldo": 40745
     },
     {
       "faixa": "61–90 dias",
@@ -22,14 +22,14 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 14389
+      "saldo": 13389
     }
   ],
-  "generated_at": "2026-04-11T09:17:48.684299",
+  "generated_at": "2026-04-11T10:04:25.167330",
   "kpis": {
     "clientes_atraso": 70,
-    "total_aberto": 805240,
-    "total_atraso": 184357,
+    "total_aberto": 802941,
+    "total_atraso": 182058,
     "total_vencer": 620883
   },
   "ok": true,
@@ -51,15 +51,8 @@
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
       "dias_atraso": 1,
-      "loja": "Loja 2",
-      "saldo": 508,
-      "vencimento": "2026-04-10T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 1,
       "loja": "Loja 4",
-      "saldo": 1591,
+      "saldo": 800,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
