@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 624602
+      "saldo": 620972
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 42274
+      "saldo": 30130
     },
     {
       "faixa": "61–90 dias",
@@ -25,12 +25,12 @@
       "saldo": 14857
     }
   ],
-  "generated_at": "2026-04-13T08:08:45.993263",
+  "generated_at": "2026-04-13T10:08:48.235633",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 809657,
-    "total_atraso": 185055,
-    "total_vencer": 624602
+    "clientes_atraso": 67,
+    "total_aberto": 793883,
+    "total_atraso": 172911,
+    "total_vencer": 620972
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -126,12 +126,6 @@
       "total_atraso": 7345
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 3,
-      "titulos": 1,
-      "total_atraso": 7117
-    },
-    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 165,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 107,
       "titulos": 2,
       "total_atraso": 5489
+    },
+    {
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 278,
+      "titulos": 5,
+      "total_atraso": 4825
     }
   ]
 }
