@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2884240
+      "saldo": 2879243
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 425870
+      "saldo": 423408
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 3074
     }
   ],
-  "generated_at": "2026-04-13T13:56:39.633466",
+  "generated_at": "2026-04-13T15:25:01.921062",
   "kpis": {
     "a_vencer_7d": 438795,
     "juros_pagos": 71064,
-    "total_aberto": 3328118,
-    "total_pago_periodo": 2792648,
-    "total_vencido": 443878
+    "total_aberto": 3320659,
+    "total_pago_periodo": 2805031,
+    "total_vencido": 441416
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -129,14 +129,14 @@
       "total_aberto": 204972
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 11,
-      "total_aberto": 142631
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 141805
+    },
+    {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 10,
+      "total_aberto": 140169
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
@@ -155,8 +155,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 4,
-      "total_aberto": 70004
+      "titulos": 3,
+      "total_aberto": 65007
     }
   ]
 }
