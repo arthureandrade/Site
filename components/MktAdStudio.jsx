@@ -8,7 +8,19 @@ const ENDERECO_1 = 'Av. Gen. Ataide Teive, 4495 - Asa Branca'
 const ENDERECO_2 = 'Av. Gen. Ataide Teive, 5928 - Santa Tereza'
 
 function formatarPreco(valor) {
-  const numero = Number(String(valor || '').replace(/[^\d,.-]/g, '').replace('.', '').replace(',', '.'))
+  const texto = String(valor ?? '').trim()
+  if (!texto) return ''
+
+  const apenasNumeros = texto.replace(/[^\d]/g, '')
+  const temSeparadorDecimal = /[.,]\d{1,2}$/.test(texto)
+  let numero = 0
+
+  if (temSeparadorDecimal) {
+    numero = Number(texto.replace(/\./g, '').replace(',', '.').replace(/[^\d.-]/g, ''))
+  } else if (apenasNumeros) {
+    numero = Number(apenasNumeros)
+  }
+
   if (!Number.isFinite(numero) || numero <= 0) return ''
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -75,7 +87,10 @@ function quebrarTitulo(texto) {
 }
 
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
-  const [baseImage, logoImage] = await Promise.all([carregarImagem(baseImageSrc), carregarImagem('/api/mkt/logo')])
+  const [baseImage, logoImage] = await Promise.all([
+    carregarImagem(baseImageSrc),
+    carregarImagem(`/api/mkt/logo?v=${Date.now()}`),
+  ])
   const canvas = document.createElement('canvas')
   canvas.width = 1080
   canvas.height = 1920
@@ -322,6 +337,7 @@ export default function MktAdStudio() {
       setResultado(finalDataUrl)
     } catch (error) {
       setErro(error instanceof Error ? error.message : 'Falha inesperada ao gerar anuncio.')
+      setDetalhes(null)
     } finally {
       setGerando(false)
     }
