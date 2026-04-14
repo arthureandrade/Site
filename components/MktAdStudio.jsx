@@ -325,6 +325,7 @@ export default function MktAdStudio() {
   const [erro, setErro] = useState('')
   const [resultado, setResultado] = useState('')
   const [arteBase, setArteBase] = useState('')
+  const [copyTexto, setCopyTexto] = useState('')
   const [detalhes, setDetalhes] = useState(null)
 
   useEffect(() => {
@@ -359,6 +360,7 @@ export default function MktAdStudio() {
     setGerando(true)
     setResultado('')
     setArteBase('')
+    setCopyTexto('')
 
     try {
       const formData = new FormData()
@@ -387,6 +389,7 @@ export default function MktAdStudio() {
         codigoProduto: data.codigoProduto || codigoProduto,
         descontoPercentual: data.descontoPercentual || 0,
       })
+      setCopyTexto(data.copy || '')
 
       const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
         nomeProduto: data.nomeProduto || nomeProduto,
@@ -596,15 +599,25 @@ export default function MktAdStudio() {
                     {gerando ? 'Gerando anuncio...' : 'Gerar anuncio'}
                   </button>
 
-                  {resultado ? (
-                    <button
-                      type="button"
+                    {resultado ? (
+                      <button
+                        type="button"
                       onClick={baixarImagem}
                       className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
                     >
-                      Baixar PNG
-                    </button>
-                  ) : null}
+                        Baixar PNG
+                      </button>
+                    ) : null}
+
+                    {copyTexto ? (
+                      <button
+                        type="button"
+                        onClick={() => navigator.clipboard.writeText(copyTexto)}
+                        className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
+                      >
+                        Copiar copy
+                      </button>
+                    ) : null}
                 </div>
               </form>
             </div>
@@ -638,6 +651,22 @@ export default function MktAdStudio() {
           </div>
 
           <div className="grid gap-6">
+            <div className="rounded-[34px] border border-white/10 bg-white/95 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.16)]">
+              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Copy para postagem</p>
+              <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">Legenda curta para acompanhar a arte</h2>
+              <div className="mt-5 rounded-[26px] border border-slate-200 bg-[linear-gradient(180deg,#fff5f5_0%,#ffffff_100%)] p-5">
+                {copyTexto ? (
+                  <pre className="whitespace-pre-wrap font-sans text-base font-semibold leading-8 text-slate-800">
+                    {copyTexto}
+                  </pre>
+                ) : (
+                  <div className="text-sm font-semibold leading-relaxed text-slate-500">
+                    Depois que o anuncio for gerado, o painel cria aqui uma copy curta de 3 linhas para voce postar junto com a imagem.
+                  </div>
+                )}
+              </div>
+            </div>
+
             <div className="rounded-[34px] border border-white/10 bg-white/95 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.16)]">
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Base criativa</p>
               <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">Como o anuncio e montado</h2>
