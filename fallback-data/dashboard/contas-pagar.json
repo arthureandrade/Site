@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2821123
+      "saldo": 2770260
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 391662
+      "saldo": 385652
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 3074
     }
   ],
-  "generated_at": "2026-04-14T17:01:32.114845",
+  "generated_at": "2026-04-14T18:01:52.799940",
   "kpis": {
-    "a_vencer_7d": 336729,
+    "a_vencer_7d": 285866,
     "juros_pagos": 71064,
-    "total_aberto": 3230793,
-    "total_pago_periodo": 3217509,
-    "total_vencido": 409670
+    "total_aberto": 3173920,
+    "total_pago_periodo": 3393195,
+    "total_vencido": 403660
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 50,
-      "total_aberto": 1025454
+      "titulos": 47,
+      "total_aberto": 1017755
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -144,11 +144,6 @@
       "total_aberto": 140169
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 4,
-      "total_aberto": 82969
-    },
-    {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
       "titulos": 3,
       "total_aberto": 65007
@@ -157,6 +152,11 @@
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 2,
       "total_aberto": 60499
+    },
+    {
+      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
+      "titulos": 3,
+      "total_aberto": 53262
     }
   ]
 }
