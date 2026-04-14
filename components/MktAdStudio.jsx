@@ -89,7 +89,7 @@ function quebrarTitulo(texto) {
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
   const [baseImage, logoImage] = await Promise.all([
     carregarImagem(baseImageSrc),
-    carregarImagem(`/api/mkt/logo?v=${Date.now()}`),
+    carregarImagem(`/logofundo.png?v=${Date.now()}`),
   ])
   const canvas = document.createElement('canvas')
   canvas.width = 1080
@@ -597,7 +597,7 @@ export default function MktAdStudio() {
                   <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Direcao comercial</p>
                   <h2 className="mt-2 text-2xl font-black uppercase">Padrao visual do painel MKT</h2>
                 </div>
-                <img src="/api/mkt/logo" alt="Logo Galpao do Aco" className="h-14 w-auto shrink-0 rounded-xl bg-white/10 p-1.5" />
+                <img src="/logofundo.png" alt="Logo Galpao do Aco" className="h-14 w-auto shrink-0 rounded-xl bg-white/10 p-1.5" />
               </div>
               <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/85">
                 <p>- visual forte, industrial e vendedor</p>
