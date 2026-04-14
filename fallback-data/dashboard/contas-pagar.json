@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2869399
+      "saldo": 2779054
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 413481
+      "saldo": 503826
     },
     {
       "faixa": "31–60 dias",
@@ -21,85 +21,85 @@
       "saldo": 3074
     }
   ],
-  "generated_at": "2026-04-13T23:43:15.117001",
+  "generated_at": "2026-04-14T01:52:16.034314",
   "kpis": {
-    "a_vencer_7d": 428951,
+    "a_vencer_7d": 338606,
     "juros_pagos": 71064,
     "total_aberto": 3300888,
     "total_pago_periodo": 2879717,
-    "total_vencido": 431489
+    "total_vencido": 521834
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-04-13",
-    "data_de": "2026-03-14"
+    "data_ate": "2026-04-14",
+    "data_de": "2026-03-15"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 137,
+      "dias_atraso": 138,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 99,
+      "dias_atraso": 100,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2879,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 88,
+      "dias_atraso": 89,
       "fornecedor": "MERCANTIL NOVA ERA LTDA",
       "loja": "Loja 1",
       "saldo": 619,
       "vencimento": "2026-01-15T00:00:00"
     },
     {
-      "dias_atraso": 72,
+      "dias_atraso": 73,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 70,
+      "dias_atraso": 71,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 62,
+      "dias_atraso": 63,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-02-10T00:00:00"
     },
     {
-      "dias_atraso": 52,
+      "dias_atraso": 53,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 354,
       "vencimento": "2026-02-20T00:00:00"
     },
     {
-      "dias_atraso": 45,
+      "dias_atraso": 46,
       "fornecedor": "TECHFRIO E MOBILI IMPORTACAO E COMERCIO LTDA",
       "loja": "Loja 1",
       "saldo": 1500,
       "vencimento": "2026-02-27T00:00:00"
     },
     {
-      "dias_atraso": 34,
+      "dias_atraso": 35,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 33,
+      "dias_atraso": 34,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 6135,
