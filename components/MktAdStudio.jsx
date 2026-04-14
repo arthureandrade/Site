@@ -52,6 +52,15 @@ function desenharCover(ctx, image, targetWidth, targetHeight, options = {}) {
   ctx.drawImage(image, x, y, width, height)
 }
 
+function desenharContain(ctx, image, targetX, targetY, targetWidth, targetHeight) {
+  const scale = Math.min(targetWidth / image.width, targetHeight / image.height)
+  const width = image.width * scale
+  const height = image.height * scale
+  const x = targetX + (targetWidth - width) / 2
+  const y = targetY + (targetHeight - height) / 2
+  ctx.drawImage(image, x, y, width, height)
+}
+
 function quebrarPreco(precoTexto) {
   const texto = String(precoTexto || '').replace(/\s+/g, ' ').trim()
   const semMoeda = texto.replace(/^R\$\s*/, '')
@@ -128,27 +137,14 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
 
   const logoCardX = 598
-  const logoCardY = 42
-  const logoCardW = 414
-  const logoCardH = 214
+  const logoCardY = 46
+  const logoCardW = 360
+  const logoCardH = 156
 
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.42)'
-  ctx.shadowBlur = 36
-  ctx.fillStyle = 'rgba(255,255,255,0.06)'
-  ctx.strokeStyle = 'rgba(255,255,255,0.18)'
-  ctx.lineWidth = 2
-  ctx.beginPath()
-  ctx.roundRect(logoCardX, logoCardY, logoCardW, logoCardH, 28)
-  ctx.fill()
-  ctx.stroke()
-  ctx.restore()
-
-  ctx.save()
-  ctx.beginPath()
-  ctx.roundRect(logoCardX + 16, logoCardY + 16, logoCardW - 32, logoCardH - 32, 24)
-  ctx.clip()
-  ctx.drawImage(logoImage, logoCardX + 6, logoCardY + 4, logoCardW - 12, logoCardH - 8)
+  ctx.shadowColor = 'rgba(0,0,0,0.28)'
+  ctx.shadowBlur = 24
+  desenharContain(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
   ctx.restore()
 
   ctx.save()
@@ -183,9 +179,9 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
     ctx.shadowColor = 'rgba(0,0,0,0.38)'
     ctx.shadowBlur = 18
     ctx.fillStyle = '#ffffff'
-    ctx.font = '900 74px Arial'
-    let y = 318
-    for (const linha of linhasTitulo) {
+  ctx.font = '900 74px Arial'
+  let y = 318
+  for (const linha of linhasTitulo) {
       ctx.fillText(linha.toUpperCase(), 76, y)
       y += 78
     }
@@ -217,17 +213,44 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.font = '700 30px Arial'
   ctx.fillText('POR APENAS:', 84, 1454)
 
+  const precoPrefixo = 'R$'
+  let fontePreco = 124
+  let fonteDecimal = 64
+  ctx.textBaseline = 'alphabetic'
+  ctx.font = `900 ${fontePreco}px Arial`
+  let larguraInteira = ctx.measureText(inteira).width
+  ctx.font = `900 ${fonteDecimal}px Arial`
+  let larguraDecimal = ctx.measureText(`,${decimal}`).width
+  const larguraPrefixo = 104
+  const larguraMaximaPreco = 700
+
+  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > 96) {
+    fontePreco -= 6
+    fonteDecimal -= 3
+    ctx.font = `900 ${fontePreco}px Arial`
+    larguraInteira = ctx.measureText(inteira).width
+    ctx.font = `900 ${fonteDecimal}px Arial`
+    larguraDecimal = ctx.measureText(`,${decimal}`).width
+  }
+
+  const precoX = 84
+  const precoBaseY = 1578
+
   ctx.font = '900 86px Arial'
-  ctx.fillText('R$', 84, 1548)
+  ctx.fillText(precoPrefixo, precoX, precoBaseY - 18)
 
-  ctx.font = '900 128px Arial'
-  ctx.fillText(inteira, 190, 1568)
+  const inteiroX = precoX + larguraPrefixo
+  ctx.font = `900 ${fontePreco}px Arial`
+  ctx.fillText(inteira, inteiroX, precoBaseY)
 
-  ctx.font = '900 68px Arial'
-  ctx.fillText(`,${decimal}`, 690, 1548)
+  const decimalX = inteiroX + larguraInteira + 8
+  ctx.font = `900 ${fonteDecimal}px Arial`
+  ctx.fillText(`,${decimal}`, decimalX, precoBaseY - 20)
 
-  ctx.font = '800 48px Arial'
-  ctx.fillText('A VISTA', 790, 1568)
+  ctx.font = '800 44px Arial'
+  const avista = 'A VISTA'
+  const avistaWidth = ctx.measureText(avista).width
+  ctx.fillText(avista, 1038 - avistaWidth - 36, precoBaseY - 6)
 
   ctx.save()
   const footerGradient = ctx.createLinearGradient(0, 1688, 1080, 1920)
