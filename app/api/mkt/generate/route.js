@@ -1,4 +1,5 @@
 import { normalizarPrecoMkt, montarPromptMkt, sanitizarTextoCurto, aplicarDescontoMkt } from '@/lib/mktPrompt'
+import sharp from 'sharp'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -8,6 +9,19 @@ const API_URL =
 
 function jsonErro(message, status = 400) {
   return Response.json({ error: message }, { status })
+}
+
+async function normalizarImagemParaOpenAI(buffer) {
+  return sharp(buffer)
+    .rotate()
+    .resize({
+      width: 1536,
+      height: 1536,
+      fit: 'inside',
+      withoutEnlargement: true,
+    })
+    .png()
+    .toBuffer()
 }
 
 function montarFotoProdutoUrl(produto) {
@@ -98,14 +112,15 @@ export async function POST(request) {
       codigoProduto,
     })
 
-    const buffer = Buffer.from(await arquivoImagem.arrayBuffer())
+    const bufferOriginal = Buffer.from(await arquivoImagem.arrayBuffer())
+    const buffer = await normalizarImagemParaOpenAI(bufferOriginal)
     const payload = new FormData()
     payload.append('model', model)
     payload.append('prompt', prompt)
     payload.append('size', '1024x1536')
     payload.append('quality', 'high')
     payload.append('background', 'opaque')
-    payload.append('image', new Blob([buffer], { type: arquivoImagem.type }), arquivoImagem.name || 'produto.png')
+    payload.append('image', new Blob([buffer], { type: 'image/png' }), `${codigoProduto || 'produto'}.png`)
 
     const resposta = await fetch('https://api.openai.com/v1/images/edits', {
       method: 'POST',
