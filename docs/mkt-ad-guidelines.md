@@ -27,6 +27,7 @@ Gerar uma arte promocional vertical para produtos da Galpao do Aco, pronta para 
 - Headline curta e forte em segundo lugar.
 - Area inferior organizada para placa de preco.
 - Area superior direita limpa para receber a logo real da loja.
+- O produto precisa parecer grande, dominante e claramente mais importante do que qualquer texto.
 
 ## Regras de texto
 
@@ -39,6 +40,7 @@ Gerar uma arte promocional vertical para produtos da Galpao do Aco, pronta para 
 
 - Manter o canto superior direito visualmente limpo para a aplicacao da logo real.
 - Manter a parte inferior com area limpa e contraste suficiente para a placa de preco aplicada depois pelo sistema.
+- Nao desenhar caixa vazia, retangulo vermelho ou placeholder onde o preco sera aplicado pelo sistema.
 
 ## Regras de fidelidade
 
@@ -47,6 +49,7 @@ Gerar uma arte promocional vertical para produtos da Galpao do Aco, pronta para 
 - Nao duplicar unidades do produto sem necessidade.
 - Nao cortar partes importantes do produto.
 - Nao inventar logotipos falsos.
+- Nao transformar o produto em elemento pequeno ou perdido no layout.
 
 ## Resultado esperado
 

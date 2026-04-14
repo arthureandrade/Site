@@ -26,16 +26,55 @@ function carregarImagem(src) {
   })
 }
 
-function desenharCover(ctx, image, targetWidth, targetHeight) {
-  const scale = Math.max(targetWidth / image.width, targetHeight / image.height)
+function desenharCover(ctx, image, targetWidth, targetHeight, options = {}) {
+  const zoom = options.zoom || 1
+  const focalX = options.focalX ?? 0.5
+  const focalY = options.focalY ?? 0.5
+  const scale = Math.max(targetWidth / image.width, targetHeight / image.height) * zoom
   const width = image.width * scale
   const height = image.height * scale
-  const x = (targetWidth - width) / 2
-  const y = (targetHeight - height) / 2
+  const overflowX = width - targetWidth
+  const overflowY = height - targetHeight
+  const x = -(overflowX * focalX)
+  const y = -(overflowY * focalY)
   ctx.drawImage(image, x, y, width, height)
 }
 
-async function comporAnuncioFinal(baseImageSrc, precoTexto) {
+function quebrarPreco(precoTexto) {
+  const texto = String(precoTexto || '').replace(/\s+/g, ' ').trim()
+  const semMoeda = texto.replace(/^R\$\s*/, '')
+  const [inteira, decimal = '00'] = semMoeda.split(',')
+  return {
+    inteira: inteira || '0',
+    decimal,
+  }
+}
+
+function quebrarTitulo(texto) {
+  const partes = String(texto || '')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+
+  if (!partes.length) return []
+  const linhas = []
+  let atual = ''
+
+  for (const parte of partes) {
+    const tentativa = atual ? `${atual} ${parte}` : parte
+    if (tentativa.length <= 16) {
+      atual = tentativa
+    } else {
+      if (atual) linhas.push(atual)
+      atual = parte
+    }
+  }
+
+  if (atual) linhas.push(atual)
+  return linhas.slice(0, 4)
+}
+
+async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
   const [baseImage, logoImage] = await Promise.all([carregarImagem(baseImageSrc), carregarImagem('/logo.jpeg')])
   const canvas = document.createElement('canvas')
   canvas.width = 1080
@@ -45,32 +84,48 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto) {
   ctx.imageSmoothingEnabled = true
   ctx.imageSmoothingQuality = 'high'
 
-  desenharCover(ctx, baseImage, canvas.width, canvas.height)
+  ctx.fillStyle = '#130607'
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+  desenharCover(ctx, baseImage, canvas.width, canvas.height, {
+    zoom: 1.14,
+    focalX: 0.5,
+    focalY: 0.42,
+  })
 
   const topGradient = ctx.createLinearGradient(0, 0, 0, 420)
-  topGradient.addColorStop(0, 'rgba(0,0,0,0.76)')
+  topGradient.addColorStop(0, 'rgba(0,0,0,0.84)')
   topGradient.addColorStop(1, 'rgba(0,0,0,0)')
   ctx.fillStyle = topGradient
   ctx.fillRect(0, 0, canvas.width, 420)
 
-  const bottomGradient = ctx.createLinearGradient(0, canvas.height - 700, 0, canvas.height)
-  bottomGradient.addColorStop(0, 'rgba(0,0,0,0)')
-  bottomGradient.addColorStop(0.35, 'rgba(0,0,0,0.28)')
-  bottomGradient.addColorStop(1, 'rgba(24,0,0,0.92)')
-  ctx.fillStyle = bottomGradient
-  ctx.fillRect(0, canvas.height - 700, canvas.width, 700)
+  const vignette = ctx.createRadialGradient(540, 980, 280, 540, 980, 1080)
+  vignette.addColorStop(0, 'rgba(0,0,0,0)')
+  vignette.addColorStop(1, 'rgba(0,0,0,0.34)')
+  ctx.fillStyle = vignette
+  ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-  const logoCardX = 640
-  const logoCardY = 68
-  const logoCardW = 360
-  const logoCardH = 226
+  const bottomGradient = ctx.createLinearGradient(0, canvas.height - 760, 0, canvas.height)
+  bottomGradient.addColorStop(0, 'rgba(0,0,0,0)')
+  bottomGradient.addColorStop(0.3, 'rgba(0,0,0,0.24)')
+  bottomGradient.addColorStop(1, 'rgba(22,4,4,0.95)')
+  ctx.fillStyle = bottomGradient
+  ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
+
+  const logoCardX = 592
+  const logoCardY = 54
+  const logoCardW = 430
+  const logoCardH = 246
 
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.35)'
-  ctx.shadowBlur = 30
-  ctx.fillStyle = 'rgba(35, 6, 6, 0.92)'
-  ctx.strokeStyle = '#ff5038'
-  ctx.lineWidth = 5
+  ctx.shadowColor = 'rgba(0,0,0,0.42)'
+  ctx.shadowBlur = 36
+  const logoGradient = ctx.createLinearGradient(logoCardX, logoCardY, logoCardX + logoCardW, logoCardY + logoCardH)
+  logoGradient.addColorStop(0, 'rgba(32,8,8,0.96)')
+  logoGradient.addColorStop(1, 'rgba(108,14,14,0.96)')
+  ctx.fillStyle = logoGradient
+  ctx.strokeStyle = '#ff6a4b'
+  ctx.lineWidth = 6
   ctx.beginPath()
   ctx.roundRect(logoCardX, logoCardY, logoCardW, logoCardH, 28)
   ctx.fill()
@@ -81,54 +136,120 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto) {
   ctx.beginPath()
   ctx.roundRect(logoCardX + 16, logoCardY + 16, logoCardW - 32, logoCardH - 32, 24)
   ctx.clip()
-  ctx.drawImage(logoImage, logoCardX + 22, logoCardY + 22, logoCardW - 44, logoCardH - 44)
+  ctx.drawImage(logoImage, logoCardX + 18, logoCardY + 18, logoCardW - 36, logoCardH - 36)
   ctx.restore()
 
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.3)'
-  ctx.shadowBlur = 24
-  ctx.fillStyle = '#cf111f'
+  ctx.shadowColor = 'rgba(0,0,0,0.22)'
+  ctx.shadowBlur = 20
+  ctx.fillStyle = 'rgba(255,255,255,0.12)'
   ctx.beginPath()
-  ctx.roundRect(42, 1420, 996, 236, 28)
+  ctx.roundRect(54, 70, 330, 76, 20)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 34px Arial'
-  ctx.fillText('POR APENAS:', 84, 1498)
+  ctx.font = '700 28px Arial'
+  ctx.fillText('OFERTA ESPECIAL', 86, 118)
 
-  ctx.font = '900 94px Arial'
-  ctx.fillText('R$', 84, 1608)
+  if (codigoProduto) {
+    ctx.save()
+    ctx.fillStyle = 'rgba(255,255,255,0.14)'
+    ctx.beginPath()
+    ctx.roundRect(54, 160, 206, 54, 18)
+    ctx.fill()
+    ctx.restore()
 
-  ctx.font = '900 118px Arial'
-  ctx.fillText(precoTexto.replace('R$', '').trim(), 200, 1618)
+    ctx.fillStyle = '#ffffff'
+    ctx.font = '700 24px Arial'
+    ctx.fillText(`COD. ${codigoProduto}`, 82, 196)
+  }
 
-  ctx.font = '700 44px Arial'
-  ctx.fillText('A VISTA', 838, 1608)
+  const linhasTitulo = quebrarTitulo(nomeProduto)
+  if (linhasTitulo.length) {
+    ctx.save()
+    ctx.shadowColor = 'rgba(0,0,0,0.38)'
+    ctx.shadowBlur = 18
+    ctx.fillStyle = '#ffffff'
+    ctx.font = '900 74px Arial'
+    let y = 318
+    for (const linha of linhasTitulo) {
+      ctx.fillText(linha.toUpperCase(), 76, y)
+      y += 78
+    }
+    ctx.restore()
+  }
+
+  const { inteira, decimal } = quebrarPreco(precoTexto)
 
   ctx.save()
-  ctx.fillStyle = '#9a0b16'
+  ctx.shadowColor = 'rgba(0,0,0,0.34)'
+  ctx.shadowBlur = 30
+  const precoGradient = ctx.createLinearGradient(42, 0, 1038, 0)
+  precoGradient.addColorStop(0, '#b80713')
+  precoGradient.addColorStop(0.55, '#eb0c16')
+  precoGradient.addColorStop(1, '#ff4021')
+  ctx.fillStyle = precoGradient
   ctx.beginPath()
-  ctx.roundRect(0, 1724, 1080, 196, 0)
+  ctx.roundRect(42, 1380, 996, 260, 30)
+  ctx.fill()
+  ctx.restore()
+
+  ctx.strokeStyle = 'rgba(255,255,255,0.18)'
+  ctx.lineWidth = 2
+  ctx.beginPath()
+  ctx.roundRect(42, 1380, 996, 260, 30)
+  ctx.stroke()
+
+  ctx.fillStyle = '#ffffff'
+  ctx.font = '700 30px Arial'
+  ctx.fillText('POR APENAS:', 84, 1454)
+
+  ctx.font = '900 86px Arial'
+  ctx.fillText('R$', 84, 1548)
+
+  ctx.font = '900 128px Arial'
+  ctx.fillText(inteira, 190, 1568)
+
+  ctx.font = '900 68px Arial'
+  ctx.fillText(`,${decimal}`, 690, 1548)
+
+  ctx.font = '800 48px Arial'
+  ctx.fillText('A VISTA', 790, 1568)
+
+  ctx.save()
+  const footerGradient = ctx.createLinearGradient(0, 1688, 1080, 1920)
+  footerGradient.addColorStop(0, '#8f0d15')
+  footerGradient.addColorStop(1, '#5a0409')
+  ctx.fillStyle = footerGradient
+  ctx.beginPath()
+  ctx.roundRect(0, 1702, 1080, 218, 0)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 42px Arial'
-  ctx.fillText(WHATSAPP_COMERCIAL, 72, 1798)
-  ctx.fillText(TELEFONE_PRINCIPAL, 624, 1798)
+  ctx.font = '700 40px Arial'
+  ctx.fillText(WHATSAPP_COMERCIAL, 72, 1782)
+  ctx.fillText(TELEFONE_PRINCIPAL, 628, 1782)
 
-  ctx.font = '600 26px Arial'
-  ctx.fillText(`Loja Matriz  ${ENDERECO_1}`, 72, 1854)
-  ctx.fillText(`Loja Filial  ${ENDERECO_2}`, 72, 1892)
+  ctx.font = '700 20px Arial'
+  ctx.fillText('LOJA MATRIZ', 72, 1838)
+  ctx.fillText('LOJA FILIAL', 72, 1882)
+
+  ctx.font = '600 22px Arial'
+  ctx.fillText(ENDERECO_1, 218, 1838)
+  ctx.fillText(ENDERECO_2, 218, 1882)
 
   return canvas.toDataURL('image/png')
 }
 
 export default function MktAdStudio() {
+  const [modo, setModo] = useState('manual')
   const [arquivo, setArquivo] = useState(null)
   const [previewProduto, setPreviewProduto] = useState('')
   const [valor, setValor] = useState('')
+  const [nomeProduto, setNomeProduto] = useState('')
+  const [codigoProduto, setCodigoProduto] = useState('')
   const [gerando, setGerando] = useState(false)
   const [erro, setErro] = useState('')
   const [resultado, setResultado] = useState('')
@@ -149,13 +270,18 @@ export default function MktAdStudio() {
     event.preventDefault()
     setErro('')
 
-    if (!arquivo) {
+    if (modo === 'manual' && !arquivo) {
       setErro('Envie uma imagem do produto para gerar o anuncio.')
       return
     }
 
-    if (!valorFormatado) {
+    if (modo === 'manual' && !valorFormatado) {
       setErro('Informe um valor valido para a oferta.')
+      return
+    }
+
+    if (modo === 'site' && !codigoProduto.trim()) {
+      setErro('Informe o codigo do produto do site.')
       return
     }
 
@@ -165,8 +291,11 @@ export default function MktAdStudio() {
 
     try {
       const formData = new FormData()
-      formData.append('image', arquivo)
-      formData.append('price', valor)
+      formData.append('mode', modo)
+      if (arquivo) formData.append('image', arquivo)
+      if (valor) formData.append('price', valor)
+      if (codigoProduto) formData.append('productCode', codigoProduto)
+      if (nomeProduto) formData.append('productName', nomeProduto)
 
       const response = await fetch('/api/mkt/generate', {
         method: 'POST',
@@ -182,9 +311,14 @@ export default function MktAdStudio() {
       setDetalhes({
         model: data.model,
         preco: data.precoFormatado,
+        nomeProduto: data.nomeProduto || nomeProduto,
+        codigoProduto: data.codigoProduto || codigoProduto,
       })
 
-      const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado)
+      const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+        nomeProduto: data.nomeProduto || nomeProduto,
+        codigoProduto: data.codigoProduto || codigoProduto,
+      })
       setResultado(finalDataUrl)
     } catch (error) {
       setErro(error instanceof Error ? error.message : 'Falha inesperada ao gerar anuncio.')
@@ -255,14 +389,71 @@ export default function MktAdStudio() {
                         <img src={previewProduto} alt="Preview do produto" className="h-full max-h-[420px] w-full object-contain p-4" />
                       ) : (
                         <div className="max-w-sm px-6 text-center text-sm font-semibold text-slate-500">
-                          Arraste ou selecione uma foto do produto em boa qualidade.
+                          {modo === 'manual'
+                            ? 'Arraste ou selecione uma foto do produto em boa qualidade.'
+                            : 'No modo site, a imagem sera puxada automaticamente pelo codigo do produto.'}
                         </div>
                       )}
                     </div>
-                    <input type="file" accept="image/*" onChange={handleFileChange} className="mt-4 block w-full text-sm" />
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleFileChange}
+                      className="mt-4 block w-full text-sm"
+                      disabled={modo !== 'manual'}
+                    />
                   </label>
 
                   <div className="grid gap-4">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Modo de geracao</p>
+                      <div className="mt-4 grid gap-3">
+                        <button
+                          type="button"
+                          onClick={() => setModo('manual')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            modo === 'manual'
+                              ? 'bg-red-600 text-white shadow-[0_16px_34px_rgba(185,28,28,0.28)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Upload manual
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setModo('site')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            modo === 'site'
+                              ? 'bg-red-600 text-white shadow-[0_16px_34px_rgba(185,28,28,0.28)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Gerar com imagem do site
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Informacoes do produto</p>
+                      <div className="mt-4 grid gap-3">
+                        <input
+                          type="text"
+                          value={codigoProduto}
+                          onChange={(event) => setCodigoProduto(event.target.value)}
+                          placeholder={modo === 'site' ? 'Codigo do produto no site' : 'Codigo para aparecer no anuncio'}
+                          className="w-full rounded-[18px] border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-900 outline-none focus:border-red-500"
+                        />
+                        <input
+                          type="text"
+                          value={nomeProduto}
+                          onChange={(event) => setNomeProduto(event.target.value)}
+                          placeholder={modo === 'site' ? 'Opcional: nome manual para sobrepor' : 'Nome do produto para headline'}
+                          className="w-full rounded-[18px] border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-900 outline-none focus:border-red-500"
+                          disabled={modo === 'site' && !codigoProduto.trim() ? false : false}
+                        />
+                      </div>
+                    </div>
+
                     <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Valor da oferta</p>
                       <input
@@ -270,11 +461,14 @@ export default function MktAdStudio() {
                         inputMode="decimal"
                         value={valor}
                         onChange={(event) => setValor(event.target.value)}
-                        placeholder="Ex: 4450,50"
-                        className="mt-4 w-full rounded-[20px] border border-slate-200 px-4 py-4 text-2xl font-black text-slate-950 outline-none focus:border-red-500"
+                        placeholder={modo === 'site' ? 'No modo site, o preco vem do catalogo' : 'Ex: 4450,50'}
+                        className="mt-4 w-full rounded-[20px] border border-slate-200 px-4 py-4 text-2xl font-black text-slate-950 outline-none focus:border-red-500 disabled:bg-slate-100 disabled:text-slate-400"
+                        disabled={modo === 'site'}
                       />
                       <p className="mt-3 text-sm text-slate-500">
-                        Preco final aplicado na placa vermelha do anuncio.
+                        {modo === 'site'
+                          ? 'Neste modo, o sistema usa o valor cadastrado no produto do site.'
+                          : 'Preco final aplicado na placa vermelha do anuncio.'}
                       </p>
                       {valorFormatado ? (
                         <div className="mt-4 rounded-[20px] bg-red-50 px-4 py-4">
@@ -291,6 +485,7 @@ export default function MktAdStudio() {
                         <p>- logo oficial da loja aplicada automaticamente</p>
                         <p>- preco exato em destaque forte</p>
                         <p>- visual promocional inspirado nas referencias enviadas</p>
+                        <p>- headline com nome e codigo do produto</p>
                       </div>
                     </div>
                   </div>
@@ -337,9 +532,9 @@ export default function MktAdStudio() {
               ) : null}
             </div>
 
-            <div className="mt-6 flex min-h-[560px] items-center justify-center rounded-[28px] bg-[linear-gradient(180deg,#140606_0%,#2a0a0a_100%)] p-4">
+            <div className="mt-6 flex min-h-[720px] items-center justify-center rounded-[28px] bg-[linear-gradient(180deg,#140606_0%,#2a0a0a_100%)] p-5">
               {resultado ? (
-                <img src={resultado} alt="Anuncio gerado" className="max-h-[780px] w-auto rounded-[24px] shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
+                <img src={resultado} alt="Anuncio gerado" className="max-h-[1120px] w-auto rounded-[26px] shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
               ) : (
                 <div className="max-w-md text-center text-sm font-semibold leading-relaxed text-white/70">
                   A arte final vai aparecer aqui depois da geracao. O sistema aplica a placa de preco e a logo oficial automaticamente.

@@ -1,10 +1,35 @@
-import { normalizarPrecoMkt, montarPromptMkt } from '@/lib/mktPrompt'
+import { normalizarPrecoMkt, montarPromptMkt, sanitizarTextoCurto } from '@/lib/mktPrompt'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '') || 'http://localhost:8000'
+
 function jsonErro(message, status = 400) {
   return Response.json({ error: message }, { status })
+}
+
+function montarFotoProdutoUrl(produto) {
+  if (!produto?.foto_url) return null
+  if (String(produto.foto_url).startsWith('http')) return produto.foto_url
+  return `${API_URL}${produto.foto_url}`
+}
+
+async function buscarProdutoDoSite(codigoProduto) {
+  const response = await fetch(`${API_URL}/produtos/${encodeURIComponent(codigoProduto)}`, {
+    cache: 'no-store',
+  })
+  if (!response.ok) {
+    throw new Error('Nao foi possivel buscar esse codigo no catalogo do site.')
+  }
+
+  const produto = await response.json()
+  if (!produto?.id) {
+    throw new Error('O codigo informado nao retornou um produto valido.')
+  }
+
+  return produto
 }
 
 export async function POST(request) {
@@ -14,36 +39,72 @@ export async function POST(request) {
 
   try {
     const formData = await request.formData()
+    const modo = String(formData.get('mode') || 'manual')
     const imagem = formData.get('image')
     const valor = formData.get('price')
+    const codigoInformado = sanitizarTextoCurto(formData.get('productCode'))
+    const nomeInformado = sanitizarTextoCurto(formData.get('productName'))
 
-    if (!imagem || typeof imagem === 'string') {
+    let arquivoImagem = imagem
+    let precoFonte = valor
+    let nomeProduto = nomeInformado
+    let codigoProduto = codigoInformado
+
+    if (modo === 'site') {
+      if (!codigoProduto) {
+        return jsonErro('Informe o codigo do produto para gerar com a imagem do site.')
+      }
+
+      const produto = await buscarProdutoDoSite(codigoProduto)
+      const fotoUrl = montarFotoProdutoUrl(produto)
+
+      if (!fotoUrl) {
+        return jsonErro('Esse produto do site nao tem imagem cadastrada para gerar o anuncio.')
+      }
+
+      const respostaFoto = await fetch(fotoUrl, { cache: 'no-store' })
+      if (!respostaFoto.ok) {
+        return jsonErro('Nao foi possivel baixar a imagem do produto no site.')
+      }
+
+      const fotoBuffer = Buffer.from(await respostaFoto.arrayBuffer())
+      arquivoImagem = new File([fotoBuffer], `${produto.id}.jpg`, {
+        type: respostaFoto.headers.get('content-type') || 'image/jpeg',
+      })
+      precoFonte = produto.preco
+      nomeProduto = nomeProduto || sanitizarTextoCurto(produto.nome, `Produto ${produto.id}`)
+      codigoProduto = String(produto.id)
+    }
+
+    if (!arquivoImagem || typeof arquivoImagem === 'string') {
       return jsonErro('Envie uma imagem do produto.')
     }
 
-    if (!imagem.type?.startsWith('image/')) {
+    if (!arquivoImagem.type?.startsWith('image/')) {
       return jsonErro('O arquivo enviado precisa ser uma imagem valida.')
     }
 
     const limiteBytes = 15 * 1024 * 1024
-    if (imagem.size > limiteBytes) {
+    if (arquivoImagem.size > limiteBytes) {
       return jsonErro('A imagem excede o limite de 15 MB.')
     }
 
-    const { precoFormatado, model } = normalizarPrecoMkt(valor)
+    const { precoFormatado, model } = normalizarPrecoMkt(precoFonte)
     const prompt = await montarPromptMkt({
       precoFormatado,
-      nomeArquivo: imagem.name,
+      nomeArquivo: arquivoImagem.name,
+      nomeProduto,
+      codigoProduto,
     })
 
-    const buffer = Buffer.from(await imagem.arrayBuffer())
+    const buffer = Buffer.from(await arquivoImagem.arrayBuffer())
     const payload = new FormData()
     payload.append('model', model)
     payload.append('prompt', prompt)
     payload.append('size', '1024x1536')
     payload.append('quality', 'high')
     payload.append('background', 'opaque')
-    payload.append('image', new Blob([buffer], { type: imagem.type }), imagem.name || 'produto.png')
+    payload.append('image', new Blob([buffer], { type: arquivoImagem.type }), arquivoImagem.name || 'produto.png')
 
     const resposta = await fetch('https://api.openai.com/v1/images/edits', {
       method: 'POST',
@@ -69,6 +130,8 @@ export async function POST(request) {
       imageDataUrl: `data:image/png;base64,${b64}`,
       promptPreview: prompt.slice(0, 1000),
       precoFormatado,
+      nomeProduto,
+      codigoProduto,
       model,
     })
   } catch (error) {
