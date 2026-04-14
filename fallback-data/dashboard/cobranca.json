@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 624602
+      "saldo": 629406
     },
     {
       "faixa": "180+ dias",
@@ -10,162 +10,162 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 42274
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 24760
+      "saldo": 26117
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 22319
+      "saldo": 24219
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 22860
     },
     {
       "faixa": "31–60 dias",
       "saldo": 14857
     }
   ],
-  "generated_at": "2026-04-13T08:08:45.993263",
+  "generated_at": "2026-04-14T13:19:33.611467",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 809657,
-    "total_atraso": 185055,
-    "total_vencer": 624602
+    "clientes_atraso": 64,
+    "total_aberto": 798304,
+    "total_atraso": 168898,
+    "total_vencer": 629406
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "ADEMIR DE OLIVEIRA LIRA",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 2",
       "saldo": 1000,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
       "saldo": 36,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
       "saldo": 800,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 50,
       "vencimento": "2026-04-12T00:00:00"
     },
     {
       "cliente": "JOSE LEANDRO COSTA FILHO",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 2",
       "saldo": 111,
       "vencimento": "2026-04-12T00:00:00"
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 4373,
       "vencimento": "2026-04-14T00:00:00"
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 4",
       "saldo": 2293,
       "vencimento": "2026-04-14T00:00:00"
     },
     {
       "cliente": "ANTONIO ANTENOR RODRIGUES LOPES NETO",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 20000,
       "vencimento": "2026-04-16T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
-      "loja": "Loja 1",
-      "saldo": 840,
-      "vencimento": "2026-04-16T00:00:00"
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 42000,
       "vencimento": "2026-04-17T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 1708,
+      "vencimento": "2026-04-18T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 402,
+      "maior_atraso": 403,
       "titulos": 7,
       "total_atraso": 38272
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 684,
+      "maior_atraso": 685,
       "titulos": 16,
       "total_atraso": 12302
     },
     {
       "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
-      "maior_atraso": 21,
+      "maior_atraso": 22,
       "titulos": 2,
       "total_atraso": 7345
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 3,
-      "titulos": 1,
-      "total_atraso": 7117
-    },
-    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 165,
+      "maior_atraso": 166,
       "titulos": 2,
       "total_atraso": 6905
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 855,
+      "maior_atraso": 856,
       "titulos": 2,
       "total_atraso": 6862
     },
     {
       "cliente": "RODRYGO DE SOUSA OLIVEIRA",
-      "maior_atraso": 35,
+      "maior_atraso": 36,
       "titulos": 2,
       "total_atraso": 6500
     },
     {
       "cliente": "DOUGLAS SOARES DA CONCEICAO",
-      "maior_atraso": 105,
+      "maior_atraso": 106,
       "titulos": 2,
       "total_atraso": 5950
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 262,
+      "maior_atraso": 263,
       "titulos": 1,
       "total_atraso": 5500
     },
     {
       "cliente": "MADEREIRA LIDER",
-      "maior_atraso": 107,
+      "maior_atraso": 108,
       "titulos": 2,
       "total_atraso": 5489
+    },
+    {
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 279,
+      "titulos": 5,
+      "total_atraso": 4825
     }
   ]
 }
