@@ -8,19 +8,34 @@ const ENDERECO_1 = 'Av. Gen. Ataide Teive, 4495 - Asa Branca'
 const ENDERECO_2 = 'Av. Gen. Ataide Teive, 5928 - Santa Tereza'
 
 function formatarPreco(valor) {
+  if (typeof valor === 'number' && Number.isFinite(valor)) {
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    }).format(valor)
+  }
+
   const texto = String(valor ?? '').trim()
   if (!texto) return ''
 
-  const apenasNumeros = texto.replace(/[^\d]/g, '')
-  const temSeparadorDecimal = /[.,]\d{1,2}$/.test(texto)
-  let numero = 0
+  const limpo = texto.replace(/[^\d,.-]/g, '')
+  const separadores = [...limpo.matchAll(/[.,]/g)].map((match) => match.index)
+  let normalizado = limpo
 
-  if (temSeparadorDecimal) {
-    numero = Number(texto.replace(/\./g, '').replace(',', '.').replace(/[^\d.-]/g, ''))
-  } else if (apenasNumeros) {
-    numero = Number(apenasNumeros)
+  if (separadores.length) {
+    const ultimoSeparador = separadores[separadores.length - 1]
+    const casas = limpo.length - ultimoSeparador - 1
+
+    if (casas >= 1 && casas <= 2) {
+      const parteInteira = limpo.slice(0, ultimoSeparador).replace(/[.,]/g, '')
+      const parteDecimal = limpo.slice(ultimoSeparador + 1).replace(/[.,]/g, '')
+      normalizado = `${parteInteira}.${parteDecimal}`
+    } else {
+      normalizado = limpo.replace(/[.,]/g, '')
+    }
   }
 
+  const numero = Number(normalizado)
   if (!Number.isFinite(numero) || numero <= 0) return ''
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -138,14 +153,10 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 
   const logoCardX = 598
   const logoCardY = 46
-  const logoCardW = 360
-  const logoCardH = 156
+  const logoCardW = 300
+  const logoCardH = 124
 
-  ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.28)'
-  ctx.shadowBlur = 24
   desenharContain(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
-  ctx.restore()
 
   ctx.save()
   ctx.shadowColor = 'rgba(0,0,0,0.22)'
