@@ -115,32 +115,13 @@ function quebrarTitulo(texto) {
   return linhas.slice(0, 4)
 }
 
-function desenharPlacaLogo(ctx, logoImage, x, y, width, height) {
+function desenharLogoComSombra(ctx, logoImage, x, y, width, height) {
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.36)'
-  ctx.shadowBlur = 26
-  const bg = ctx.createLinearGradient(x, y, x + width, y + height)
-  bg.addColorStop(0, 'rgba(58,22,18,0.96)')
-  bg.addColorStop(1, 'rgba(26,10,9,0.98)')
-  ctx.fillStyle = bg
-  roundedRectPath(ctx, x, y, width, height, 18)
-  ctx.fill()
+  ctx.shadowColor = 'rgba(0,0,0,0.34)'
+  ctx.shadowBlur = 22
+  ctx.shadowOffsetY = 8
+  desenharContain(ctx, logoImage, x, y, width, height)
   ctx.restore()
-
-  ctx.save()
-  ctx.strokeStyle = '#ef7b4e'
-  ctx.lineWidth = 3
-  roundedRectPath(ctx, x, y, width, height, 18)
-  ctx.stroke()
-  ctx.restore()
-
-  ctx.save()
-  ctx.fillStyle = 'rgba(255,255,255,0.08)'
-  roundedRectPath(ctx, x + 10, y + 10, width - 20, 24, 10)
-  ctx.fill()
-  ctx.restore()
-
-  desenharContain(ctx, logoImage, x + 14, y + 10, width - 28, height - 20)
 }
 
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
@@ -184,12 +165,12 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.fillStyle = bottomGradient
   ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
 
-  const logoCardX = 690
-  const logoCardY = 44
-  const logoCardW = 286
-  const logoCardH = 132
+  const logoCardX = 640
+  const logoCardY = 36
+  const logoCardW = 360
+  const logoCardH = 186
 
-  desenharPlacaLogo(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
+  desenharLogoComSombra(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
 
   ctx.save()
   ctx.fillStyle = 'rgba(255,255,255,0.14)'
@@ -674,9 +655,7 @@ export default function MktAdStudio() {
                   <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Direcao comercial</p>
                   <h2 className="mt-2 text-2xl font-black uppercase">Padrao visual do painel MKT</h2>
                 </div>
-                <div className="rounded-xl border border-[#ef7b4e]/60 bg-[linear-gradient(135deg,#3a1612_0%,#1a0a09_100%)] px-2 py-1.5 shadow-[0_14px_26px_rgba(0,0,0,0.25)]">
-                  <img src="/logofundo.png" alt="Logo Galpao do Aco" className="h-11 w-auto shrink-0" />
-                </div>
+                <img src="/logofundo.png" alt="Logo Galpao do Aco" className="h-14 w-auto shrink-0 drop-shadow-[0_10px_16px_rgba(0,0,0,0.22)]" />
               </div>
               <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/85">
                 <p>- visual forte, industrial e vendedor</p>
