@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import CartIcon from '@/components/CartIcon'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 import { CartProvider } from '@/context/CartContext'
+import Script from 'next/script'
 
 export const metadata = {
   title: {
@@ -21,9 +22,29 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
   return (
     <html lang="pt-BR">
       <body className="min-h-screen flex flex-col">
+        {gaId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        ) : null}
         <CartProvider>
           <Header />
           <main className="flex-1">{children}</main>

@@ -1,4 +1,4 @@
-import { normalizarPrecoMkt, montarPromptMkt, sanitizarTextoCurto } from '@/lib/mktPrompt'
+import { normalizarPrecoMkt, montarPromptMkt, sanitizarTextoCurto, aplicarDescontoMkt } from '@/lib/mktPrompt'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -44,6 +44,7 @@ export async function POST(request) {
     const valor = formData.get('price')
     const codigoInformado = sanitizarTextoCurto(formData.get('productCode'))
     const nomeInformado = sanitizarTextoCurto(formData.get('productName'))
+    const descontoInformado = Number(formData.get('discountPercent') || 0)
 
     let arquivoImagem = imagem
     let precoFonte = valor
@@ -71,7 +72,7 @@ export async function POST(request) {
       arquivoImagem = new File([fotoBuffer], `${produto.id}.jpg`, {
         type: respostaFoto.headers.get('content-type') || 'image/jpeg',
       })
-      precoFonte = produto.preco
+      precoFonte = aplicarDescontoMkt(produto.preco, descontoInformado)
       nomeProduto = nomeProduto || sanitizarTextoCurto(produto.nome, `Produto ${produto.id}`)
       codigoProduto = String(produto.id)
     }
@@ -132,6 +133,7 @@ export async function POST(request) {
       precoFormatado,
       nomeProduto,
       codigoProduto,
+      descontoPercentual: descontoInformado,
       model,
     })
   } catch (error) {

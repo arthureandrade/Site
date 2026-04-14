@@ -75,7 +75,7 @@ function quebrarTitulo(texto) {
 }
 
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
-  const [baseImage, logoImage] = await Promise.all([carregarImagem(baseImageSrc), carregarImagem('/logo.jpeg')])
+  const [baseImage, logoImage] = await Promise.all([carregarImagem(baseImageSrc), carregarImagem('/api/mkt/logo')])
   const canvas = document.createElement('canvas')
   canvas.width = 1080
   canvas.height = 1920
@@ -112,20 +112,17 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.fillStyle = bottomGradient
   ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
 
-  const logoCardX = 592
-  const logoCardY = 54
-  const logoCardW = 430
-  const logoCardH = 246
+  const logoCardX = 598
+  const logoCardY = 42
+  const logoCardW = 414
+  const logoCardH = 214
 
   ctx.save()
   ctx.shadowColor = 'rgba(0,0,0,0.42)'
   ctx.shadowBlur = 36
-  const logoGradient = ctx.createLinearGradient(logoCardX, logoCardY, logoCardX + logoCardW, logoCardY + logoCardH)
-  logoGradient.addColorStop(0, 'rgba(32,8,8,0.96)')
-  logoGradient.addColorStop(1, 'rgba(108,14,14,0.96)')
-  ctx.fillStyle = logoGradient
-  ctx.strokeStyle = '#ff6a4b'
-  ctx.lineWidth = 6
+  ctx.fillStyle = 'rgba(255,255,255,0.06)'
+  ctx.strokeStyle = 'rgba(255,255,255,0.18)'
+  ctx.lineWidth = 2
   ctx.beginPath()
   ctx.roundRect(logoCardX, logoCardY, logoCardW, logoCardH, 28)
   ctx.fill()
@@ -136,7 +133,7 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.beginPath()
   ctx.roundRect(logoCardX + 16, logoCardY + 16, logoCardW - 32, logoCardH - 32, 24)
   ctx.clip()
-  ctx.drawImage(logoImage, logoCardX + 18, logoCardY + 18, logoCardW - 36, logoCardH - 36)
+  ctx.drawImage(logoImage, logoCardX + 6, logoCardY + 4, logoCardW - 12, logoCardH - 8)
   ctx.restore()
 
   ctx.save()
@@ -250,6 +247,7 @@ export default function MktAdStudio() {
   const [valor, setValor] = useState('')
   const [nomeProduto, setNomeProduto] = useState('')
   const [codigoProduto, setCodigoProduto] = useState('')
+  const [descontoSite, setDescontoSite] = useState('0')
   const [gerando, setGerando] = useState(false)
   const [erro, setErro] = useState('')
   const [resultado, setResultado] = useState('')
@@ -296,6 +294,7 @@ export default function MktAdStudio() {
       if (valor) formData.append('price', valor)
       if (codigoProduto) formData.append('productCode', codigoProduto)
       if (nomeProduto) formData.append('productName', nomeProduto)
+      if (modo === 'site') formData.append('discountPercent', descontoSite)
 
       const response = await fetch('/api/mkt/generate', {
         method: 'POST',
@@ -313,6 +312,7 @@ export default function MktAdStudio() {
         preco: data.precoFormatado,
         nomeProduto: data.nomeProduto || nomeProduto,
         codigoProduto: data.codigoProduto || codigoProduto,
+        descontoPercentual: data.descontoPercentual || 0,
       })
 
       const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
@@ -478,6 +478,26 @@ export default function MktAdStudio() {
                       ) : null}
                     </div>
 
+                    {modo === 'site' ? (
+                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                        <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Desconto no anuncio</p>
+                        <select
+                          value={descontoSite}
+                          onChange={(event) => setDescontoSite(event.target.value)}
+                          className="mt-4 w-full rounded-[18px] border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-900 outline-none focus:border-red-500"
+                        >
+                          {[0, 5, 8, 10, 12, 15, 18, 20].map((item) => (
+                            <option key={item} value={String(item)}>
+                              {item}% de desconto
+                            </option>
+                          ))}
+                        </select>
+                        <p className="mt-3 text-sm text-slate-500">
+                          O preco do site sera reduzido por esse percentual antes de entrar na arte.
+                        </p>
+                      </div>
+                    ) : null}
+
                     <div className="rounded-[30px] border border-slate-200 bg-slate-950 p-5 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/55">Saida do anuncio</p>
                       <div className="mt-4 space-y-3 text-sm text-white/82">
@@ -556,13 +576,19 @@ export default function MktAdStudio() {
             </div>
 
             <div className="rounded-[34px] border border-red-300/40 bg-[linear-gradient(135deg,#2b0000_0%,#65070d_45%,#b80f1d_100%)] p-6 text-white shadow-[0_28px_70px_rgba(127,29,29,0.26)]">
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Direcao comercial</p>
-              <h2 className="mt-2 text-2xl font-black uppercase">Padrao visual do painel MKT</h2>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Direcao comercial</p>
+                  <h2 className="mt-2 text-2xl font-black uppercase">Padrao visual do painel MKT</h2>
+                </div>
+                <img src="/api/mkt/logo" alt="Logo Galpao do Aco" className="h-14 w-auto shrink-0 rounded-xl bg-white/10 p-1.5" />
+              </div>
               <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/85">
                 <p>- visual forte, industrial e vendedor</p>
                 <p>- foco quase total no produto e no preco</p>
                 <p>- identidade da Galpao do Aco clara e chamativa</p>
                 <p>- pronta para publicacao imediata no WhatsApp e Instagram</p>
+                {modo === 'site' ? <p>- desconto aplicado no preco do site: {descontoSite}%</p> : null}
               </div>
 
               {arteBase ? (
