@@ -115,6 +115,34 @@ function quebrarTitulo(texto) {
   return linhas.slice(0, 4)
 }
 
+function desenharPlacaLogo(ctx, logoImage, x, y, width, height) {
+  ctx.save()
+  ctx.shadowColor = 'rgba(0,0,0,0.36)'
+  ctx.shadowBlur = 26
+  const bg = ctx.createLinearGradient(x, y, x + width, y + height)
+  bg.addColorStop(0, 'rgba(58,22,18,0.96)')
+  bg.addColorStop(1, 'rgba(26,10,9,0.98)')
+  ctx.fillStyle = bg
+  roundedRectPath(ctx, x, y, width, height, 18)
+  ctx.fill()
+  ctx.restore()
+
+  ctx.save()
+  ctx.strokeStyle = '#ef7b4e'
+  ctx.lineWidth = 3
+  roundedRectPath(ctx, x, y, width, height, 18)
+  ctx.stroke()
+  ctx.restore()
+
+  ctx.save()
+  ctx.fillStyle = 'rgba(255,255,255,0.08)'
+  roundedRectPath(ctx, x + 10, y + 10, width - 20, 24, 10)
+  ctx.fill()
+  ctx.restore()
+
+  desenharContain(ctx, logoImage, x + 14, y + 10, width - 28, height - 20)
+}
+
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
   const [baseImage, logoImage] = await Promise.all([
     carregarImagem(baseImageSrc),
@@ -156,12 +184,12 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.fillStyle = bottomGradient
   ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
 
-  const logoCardX = 598
-  const logoCardY = 42
-  const logoCardW = 310
-  const logoCardH = 118
+  const logoCardX = 690
+  const logoCardY = 44
+  const logoCardW = 286
+  const logoCardH = 132
 
-  desenharContain(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
+  desenharPlacaLogo(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
 
   ctx.save()
   ctx.fillStyle = 'rgba(255,255,255,0.14)'
@@ -201,11 +229,38 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   }
 
   const { inteira, decimal } = quebrarPreco(precoTexto)
-
-  const precoBoxX = 58
   const precoBoxY = 1362
-  const precoBoxW = 964
   const precoBoxH = 220
+
+  const precoPrefixo = 'R$'
+  let fontePreco = 124
+  let fonteDecimal = 64
+  ctx.textBaseline = 'alphabetic'
+  ctx.font = `900 ${fontePreco}px Arial`
+  let larguraInteira = ctx.measureText(inteira).width
+  ctx.font = `900 ${fonteDecimal}px Arial`
+  let larguraDecimal = ctx.measureText(`,${decimal}`).width
+  ctx.font = '900 82px Arial'
+  const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
+  ctx.font = '800 42px Arial'
+  const larguraAvista = ctx.measureText('A VISTA').width
+  const larguraMaximaPreco = 760 - larguraAvista
+
+  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > 96) {
+    fontePreco -= 6
+    fonteDecimal -= 3
+    ctx.font = `900 ${fontePreco}px Arial`
+    larguraInteira = ctx.measureText(inteira).width
+    ctx.font = `900 ${fonteDecimal}px Arial`
+    larguraDecimal = ctx.measureText(`,${decimal}`).width
+  }
+
+  const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
+  const blocoTotal = totalPreco + 48 + larguraAvista
+  const precoBoxW = Math.min(948, Math.max(560, blocoTotal + 136))
+  const precoBoxX = (1080 - precoBoxW) / 2
+  const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
+  const precoBaseY = 1538
 
   ctx.save()
   ctx.shadowColor = 'rgba(0,0,0,0.28)'
@@ -228,35 +283,7 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 
   ctx.fillStyle = '#ffffff'
   ctx.font = '700 28px Arial'
-  ctx.fillText('POR APENAS:', 92, 1434)
-
-  const precoPrefixo = 'R$'
-  let fontePreco = 124
-  let fonteDecimal = 64
-  ctx.textBaseline = 'alphabetic'
-  ctx.font = `900 ${fontePreco}px Arial`
-  let larguraInteira = ctx.measureText(inteira).width
-  ctx.font = `900 ${fonteDecimal}px Arial`
-  let larguraDecimal = ctx.measureText(`,${decimal}`).width
-  ctx.font = '900 82px Arial'
-  const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
-  ctx.font = '800 42px Arial'
-  const larguraAvista = ctx.measureText('A VISTA').width
-  const larguraMaximaPreco = 820 - larguraAvista
-
-  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > 96) {
-    fontePreco -= 6
-    fonteDecimal -= 3
-    ctx.font = `900 ${fontePreco}px Arial`
-    larguraInteira = ctx.measureText(inteira).width
-    ctx.font = `900 ${fonteDecimal}px Arial`
-    larguraDecimal = ctx.measureText(`,${decimal}`).width
-  }
-
-  const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
-  const blocoTotal = totalPreco + 48 + larguraAvista
-  const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
-  const precoBaseY = 1538
+  ctx.fillText('POR APENAS:', precoBoxX + 34, 1434)
 
   ctx.font = '900 82px Arial'
   ctx.fillText(precoPrefixo, precoX, precoBaseY - 18)
@@ -647,7 +674,9 @@ export default function MktAdStudio() {
                   <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/60">Direcao comercial</p>
                   <h2 className="mt-2 text-2xl font-black uppercase">Padrao visual do painel MKT</h2>
                 </div>
-                <img src="/logofundo.png" alt="Logo Galpao do Aco" className="h-14 w-auto shrink-0 rounded-xl bg-white/10 p-1.5" />
+                <div className="rounded-xl border border-[#ef7b4e]/60 bg-[linear-gradient(135deg,#3a1612_0%,#1a0a09_100%)] px-2 py-1.5 shadow-[0_14px_26px_rgba(0,0,0,0.25)]">
+                  <img src="/logofundo.png" alt="Logo Galpao do Aco" className="h-11 w-auto shrink-0" />
+                </div>
               </div>
               <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/85">
                 <p>- visual forte, industrial e vendedor</p>
