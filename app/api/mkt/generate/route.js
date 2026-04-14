@@ -6,6 +6,8 @@ export const dynamic = 'force-dynamic'
 
 const API_URL =
   process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '') || 'http://localhost:8000'
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://www.galpaodoaco.com'
 
 function jsonErro(message, status = 400) {
   return Response.json({ error: message }, { status })
@@ -22,6 +24,13 @@ async function normalizarImagemParaOpenAI(buffer) {
     })
     .png()
     .toBuffer()
+}
+
+async function obterLogoReferenciaBuffer() {
+  const response = await fetch(`${SITE_URL}/logofundo.png`, { cache: 'no-store' }).catch(() => null)
+  if (!response?.ok) return null
+  const buffer = Buffer.from(await response.arrayBuffer())
+  return normalizarImagemParaOpenAI(buffer)
 }
 
 function montarFotoProdutoUrl(produto) {
@@ -121,6 +130,10 @@ export async function POST(request) {
     payload.append('quality', 'high')
     payload.append('background', 'opaque')
     payload.append('image', new Blob([buffer], { type: 'image/png' }), `${codigoProduto || 'produto'}.png`)
+    const logoBuffer = await obterLogoReferenciaBuffer()
+    if (logoBuffer) {
+      payload.append('image', new Blob([logoBuffer], { type: 'image/png' }), 'logo-referencia.png')
+    }
 
     const resposta = await fetch('https://api.openai.com/v1/images/edits', {
       method: 'POST',

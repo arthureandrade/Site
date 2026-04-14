@@ -76,6 +76,11 @@ function desenharContain(ctx, image, targetX, targetY, targetWidth, targetHeight
   ctx.drawImage(image, x, y, width, height)
 }
 
+function roundedRectPath(ctx, x, y, width, height, radius) {
+  ctx.beginPath()
+  ctx.roundRect(x, y, width, height, radius)
+}
+
 function quebrarPreco(precoTexto) {
   const texto = String(precoTexto || '').replace(/\s+/g, ' ').trim()
   const semMoeda = texto.replace(/^R\$\s*/, '')
@@ -152,36 +157,32 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
 
   const logoCardX = 598
-  const logoCardY = 46
-  const logoCardW = 300
-  const logoCardH = 124
+  const logoCardY = 42
+  const logoCardW = 310
+  const logoCardH = 118
 
   desenharContain(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
 
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.22)'
-  ctx.shadowBlur = 20
-  ctx.fillStyle = 'rgba(255,255,255,0.12)'
-  ctx.beginPath()
-  ctx.roundRect(54, 70, 330, 76, 20)
+  ctx.fillStyle = 'rgba(255,255,255,0.14)'
+  roundedRectPath(ctx, 54, 70, 296, 64, 20)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 28px Arial'
-  ctx.fillText('OFERTA ESPECIAL', 86, 118)
+  ctx.font = '700 26px Arial'
+  ctx.fillText('OFERTA ESPECIAL', 82, 112)
 
   if (codigoProduto) {
     ctx.save()
-    ctx.fillStyle = 'rgba(255,255,255,0.14)'
-    ctx.beginPath()
-    ctx.roundRect(54, 160, 206, 54, 18)
-    ctx.fill()
-    ctx.restore()
+      ctx.fillStyle = 'rgba(255,255,255,0.12)'
+      roundedRectPath(ctx, 54, 150, 184, 48, 16)
+      ctx.fill()
+      ctx.restore()
 
-    ctx.fillStyle = '#ffffff'
-    ctx.font = '700 24px Arial'
-    ctx.fillText(`COD. ${codigoProduto}`, 82, 196)
+      ctx.fillStyle = '#ffffff'
+      ctx.font = '700 21px Arial'
+      ctx.fillText(`COD. ${codigoProduto}`, 76, 182)
   }
 
   const linhasTitulo = quebrarTitulo(nomeProduto)
@@ -201,28 +202,33 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 
   const { inteira, decimal } = quebrarPreco(precoTexto)
 
+  const precoBoxX = 58
+  const precoBoxY = 1362
+  const precoBoxW = 964
+  const precoBoxH = 220
+
   ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.34)'
-  ctx.shadowBlur = 30
-  const precoGradient = ctx.createLinearGradient(42, 0, 1038, 0)
-  precoGradient.addColorStop(0, '#b80713')
-  precoGradient.addColorStop(0.55, '#eb0c16')
-  precoGradient.addColorStop(1, '#ff4021')
+  ctx.shadowColor = 'rgba(0,0,0,0.28)'
+  ctx.shadowBlur = 34
+  const precoGradient = ctx.createLinearGradient(precoBoxX, precoBoxY, precoBoxX + precoBoxW, precoBoxY + precoBoxH)
+  precoGradient.addColorStop(0, '#980b12')
+  precoGradient.addColorStop(0.45, '#d90f18')
+  precoGradient.addColorStop(1, '#ff5331')
   ctx.fillStyle = precoGradient
-  ctx.beginPath()
-  ctx.roundRect(42, 1380, 996, 260, 30)
+  roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
   ctx.fill()
   ctx.restore()
 
-  ctx.strokeStyle = 'rgba(255,255,255,0.18)'
+  ctx.save()
+  ctx.strokeStyle = 'rgba(255,255,255,0.14)'
   ctx.lineWidth = 2
-  ctx.beginPath()
-  ctx.roundRect(42, 1380, 996, 260, 30)
+  roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
   ctx.stroke()
+  ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 30px Arial'
-  ctx.fillText('POR APENAS:', 84, 1454)
+  ctx.font = '700 28px Arial'
+  ctx.fillText('POR APENAS:', 92, 1434)
 
   const precoPrefixo = 'R$'
   let fontePreco = 124
@@ -232,8 +238,11 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   let larguraInteira = ctx.measureText(inteira).width
   ctx.font = `900 ${fonteDecimal}px Arial`
   let larguraDecimal = ctx.measureText(`,${decimal}`).width
-  const larguraPrefixo = 104
-  const larguraMaximaPreco = 700
+  ctx.font = '900 82px Arial'
+  const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
+  ctx.font = '800 42px Arial'
+  const larguraAvista = ctx.measureText('A VISTA').width
+  const larguraMaximaPreco = 820 - larguraAvista
 
   while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > 96) {
     fontePreco -= 6
@@ -244,10 +253,12 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
     larguraDecimal = ctx.measureText(`,${decimal}`).width
   }
 
-  const precoX = 84
-  const precoBaseY = 1578
+  const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
+  const blocoTotal = totalPreco + 48 + larguraAvista
+  const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
+  const precoBaseY = 1538
 
-  ctx.font = '900 86px Arial'
+  ctx.font = '900 82px Arial'
   ctx.fillText(precoPrefixo, precoX, precoBaseY - 18)
 
   const inteiroX = precoX + larguraPrefixo
@@ -258,33 +269,38 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.font = `900 ${fonteDecimal}px Arial`
   ctx.fillText(`,${decimal}`, decimalX, precoBaseY - 20)
 
-  ctx.font = '800 44px Arial'
+  ctx.font = '800 42px Arial'
   const avista = 'A VISTA'
   const avistaWidth = ctx.measureText(avista).width
-  ctx.fillText(avista, 1038 - avistaWidth - 36, precoBaseY - 6)
+  ctx.fillText(avista, decimalX + larguraDecimal + 48, precoBaseY - 8)
+
+  const footerY = 1700
+  const footerGradient = ctx.createLinearGradient(0, footerY, 1080, 1920)
+  footerGradient.addColorStop(0, '#6f0910')
+  footerGradient.addColorStop(1, '#310306')
+  ctx.fillStyle = footerGradient
+  ctx.fillRect(0, footerY, 1080, 220)
 
   ctx.save()
-  const footerGradient = ctx.createLinearGradient(0, 1688, 1080, 1920)
-  footerGradient.addColorStop(0, '#8f0d15')
-  footerGradient.addColorStop(1, '#5a0409')
-  ctx.fillStyle = footerGradient
-  ctx.beginPath()
-  ctx.roundRect(0, 1702, 1080, 218, 0)
+  ctx.fillStyle = 'rgba(255,255,255,0.06)'
+  roundedRectPath(ctx, 56, 1732, 430, 82, 26)
+  ctx.fill()
+  roundedRectPath(ctx, 594, 1732, 430, 82, 26)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 40px Arial'
-  ctx.fillText(WHATSAPP_COMERCIAL, 72, 1782)
-  ctx.fillText(TELEFONE_PRINCIPAL, 628, 1782)
+  ctx.font = '800 36px Arial'
+  ctx.fillText(WHATSAPP_COMERCIAL, 86, 1786)
+  ctx.fillText(TELEFONE_PRINCIPAL, 626, 1786)
 
-  ctx.font = '700 20px Arial'
-  ctx.fillText('LOJA MATRIZ', 72, 1838)
-  ctx.fillText('LOJA FILIAL', 72, 1882)
+  ctx.font = '700 17px Arial'
+  ctx.fillText('LOJA MATRIZ', 74, 1856)
+  ctx.fillText('LOJA FILIAL', 74, 1890)
 
-  ctx.font = '600 22px Arial'
-  ctx.fillText(ENDERECO_1, 218, 1838)
-  ctx.fillText(ENDERECO_2, 218, 1882)
+  ctx.font = '600 18px Arial'
+  ctx.fillText(ENDERECO_1, 204, 1856)
+  ctx.fillText(ENDERECO_2, 204, 1890)
 
   return canvas.toDataURL('image/png')
 }
