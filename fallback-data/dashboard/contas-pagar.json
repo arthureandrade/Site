@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2779054
+      "saldo": 2827054
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 503826
+      "saldo": 391662
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 3074
     }
   ],
-  "generated_at": "2026-04-14T08:50:21.846628",
+  "generated_at": "2026-04-14T10:46:51.916869",
   "kpis": {
     "a_vencer_7d": 338606,
     "juros_pagos": 71064,
-    "total_aberto": 3300888,
-    "total_pago_periodo": 2879717,
-    "total_vencido": 521834
+    "total_aberto": 3236724,
+    "total_pago_periodo": 3216209,
+    "total_vencido": 409670
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 24,
-      "total_aberto": 712850
+      "titulos": 21,
+      "total_aberto": 630935
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -129,6 +129,11 @@
       "total_aberto": 204972
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 18,
+      "total_aberto": 162440
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 141805
@@ -139,16 +144,6 @@
       "total_aberto": 140169
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 9,
-      "total_aberto": 114440
-    },
-    {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 3,
-      "total_aberto": 90748
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 4,
       "total_aberto": 82969
@@ -157,6 +152,11 @@
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
       "titulos": 3,
       "total_aberto": 65007
+    },
+    {
+      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
+      "titulos": 2,
+      "total_aberto": 60499
     }
   ]
 }

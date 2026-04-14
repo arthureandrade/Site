@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 645831
+      "saldo": 642581
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 34045
+      "saldo": 26865
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 14857
     }
   ],
-  "generated_at": "2026-04-14T08:50:21.212292",
+  "generated_at": "2026-04-14T10:46:51.166211",
   "kpis": {
-    "clientes_atraso": 70,
-    "total_aberto": 822657,
-    "total_atraso": 176826,
-    "total_vencer": 645831
+    "clientes_atraso": 66,
+    "total_aberto": 812227,
+    "total_atraso": 169646,
+    "total_vencer": 642581
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -91,18 +91,18 @@
       "vencimento": "2026-04-16T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -2,
-      "loja": "Loja 1",
-      "saldo": 840,
-      "vencimento": "2026-04-16T00:00:00"
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 42000,
       "vencimento": "2026-04-17T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 1708,
+      "vencimento": "2026-04-18T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -124,12 +124,6 @@
       "maior_atraso": 22,
       "titulos": 2,
       "total_atraso": 7345
-    },
-    {
-      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 263,
-      "titulos": 2,
-      "total_atraso": 7015
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
@@ -154,6 +148,12 @@
       "maior_atraso": 106,
       "titulos": 2,
       "total_atraso": 5950
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 263,
+      "titulos": 1,
+      "total_atraso": 5500
     },
     {
       "cliente": "MADEREIRA LIDER",
