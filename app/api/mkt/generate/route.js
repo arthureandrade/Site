@@ -129,10 +129,10 @@ export async function POST(request) {
     payload.append('size', '1024x1536')
     payload.append('quality', 'high')
     payload.append('background', 'opaque')
-    payload.append('image', new Blob([buffer], { type: 'image/png' }), `${codigoProduto || 'produto'}.png`)
+    payload.append('image[]', new Blob([buffer], { type: 'image/png' }), `${codigoProduto || 'produto'}.png`)
     const logoBuffer = await obterLogoReferenciaBuffer()
     if (logoBuffer) {
-      payload.append('image', new Blob([logoBuffer], { type: 'image/png' }), 'logo-referencia.png')
+      payload.append('image[]', new Blob([logoBuffer], { type: 'image/png' }), 'logo-referencia.png')
     }
 
     const resposta = await fetch('https://api.openai.com/v1/images/edits', {
