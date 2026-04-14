@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-14T14:42:47.381849",
+  "generated_at": "2026-04-14T15:54:45.527813",
   "kpis": {
-    "ticket_medio": 304.7933333333334,
-    "total_pedidos": 126,
-    "total_vendas": 38403.96000000001,
+    "ticket_medio": 349.680522875817,
+    "total_pedidos": 153,
+    "total_vendas": 53501.12,
     "total_vendedores": 8
   },
   "lojas": [
     {
-      "loja": "Loja 1",
-      "total_vendas": 19791.46
+      "loja": "Loja 2",
+      "total_vendas": 24085.66
     },
     {
-      "loja": "Loja 2",
-      "total_vendas": 15762.5
+      "loja": "Loja 1",
+      "total_vendas": 23365.46
     },
     {
       "loja": "4",
-      "total_vendas": 2850
+      "total_vendas": 6050
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-04-14",
-      "total_vendas": 38403.96
+      "total_vendas": 53501.12
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 19,
-      "total_vendas": 7915.7,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 12,
-      "total_vendas": 7482,
+      "pedidos": 18,
+      "total_vendas": 16575,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 22,
-      "total_vendas": 7348.82,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 24,
-      "total_vendas": 6718.5,
+      "pedidos": 30,
+      "total_vendas": 8761.16,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 7,
-      "total_vendas": 5185,
+      "pedidos": 9,
+      "total_vendas": 8615,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 21,
-      "total_vendas": 2052.44,
+      "pedidos": 22,
+      "total_vendas": 8153.7,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 25,
+      "total_vendas": 7195.82,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 22,
+      "total_vendas": 2111.44,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 17,
-      "total_vendas": 982,
+      "pedidos": 23,
+      "total_vendas": 1369.5,
       "vendedor": "Claudia"
     },
     {
