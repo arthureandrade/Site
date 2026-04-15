@@ -76,6 +76,8 @@ export async function POST(request) {
     const postFormatRaw = String(formData.get('postFormat') || 'stories').toLowerCase()
     const postFormat =
       postFormatRaw === 'feed' || postFormatRaw === 'both' ? postFormatRaw : 'stories'
+    const priceMode = String(formData.get('priceMode') || 'with-price').toLowerCase()
+    const withPrice = priceMode !== 'without-price'
 
     let arquivoImagem = imagem
     let precoFonte = valor
@@ -121,13 +123,16 @@ export async function POST(request) {
       return jsonErro('A imagem excede o limite de 15 MB.')
     }
 
-    const { precoFormatado, model } = normalizarPrecoMkt(precoFonte)
+    const { precoFormatado, model } = withPrice
+      ? normalizarPrecoMkt(precoFonte)
+      : { precoFormatado: '', model: process.env.OPENAI_MKT_MODEL || 'gpt-image-1' }
     const prompt = await montarPromptMkt({
       precoFormatado,
       nomeArquivo: arquivoImagem.name,
       nomeProduto,
       codigoProduto,
       postFormat,
+      withPrice,
     })
 
     const bufferOriginal = Buffer.from(await arquivoImagem.arrayBuffer())
@@ -172,6 +177,7 @@ export async function POST(request) {
       codigoProduto,
       descontoPercentual: descontoInformado,
       postFormat,
+      withPrice,
       model,
     })
   } catch (error) {

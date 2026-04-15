@@ -81,7 +81,7 @@ function montarCandidatos(produtos) {
         flag_potencial: potencial === 1,
       }
     })
-    .filter((item) => item.id > 0 && item.nome && item.preco >= 20 && item.estoque > 0)
+    .filter((item) => item.id > 0 && item.nome && item.preco >= 20 && item.estoque > 0 && item.secao === 5)
 
   const campeoesVenda = [...base]
     .filter((item) => item.quantidade_vendida_3m > 0 || item.faturamento_3m > 0)
@@ -99,27 +99,6 @@ function montarCandidatos(produtos) {
   }
 
   return Array.from(mapa.values()).slice(0, 60)
-}
-
-function fallbackRecomendacoes(candidatos) {
-  return candidatos
-    .sort((a, b) => {
-      if (b.quantidade_vendida_3m !== a.quantidade_vendida_3m) {
-        return b.quantidade_vendida_3m - a.quantidade_vendida_3m
-      }
-      if (b.estoque !== a.estoque) {
-        return b.estoque - a.estoque
-      }
-      return b.preco - a.preco
-    })
-    .slice(0, 10)
-    .map((item) => ({
-      codigo: item.id,
-      descricao: item.nome,
-      motivo: item.flag_potencial
-        ? 'Bom estoque e potencial de giro para postagem.'
-        : 'Boa venda recente com estoque para sustentar campanha.',
-    }))
 }
 
 export async function POST() {
@@ -168,11 +147,8 @@ export async function POST() {
     }).catch(() => null)
 
     if (!response?.ok) {
-      return Response.json({
-        ok: true,
-        produtos: fallbackRecomendacoes(candidatos),
-        origem: 'fallback',
-      })
+      const erro = await response?.json().catch(() => null)
+      return jsonErro(erro?.error?.message || 'A IA nao conseguiu gerar recomendacoes agora.', response?.status || 502)
     }
 
     const data = await response.json().catch(() => null)
@@ -199,11 +175,7 @@ export async function POST() {
       .slice(0, 10)
 
     if (!produtosNormalizados.length) {
-      return Response.json({
-        ok: true,
-        produtos: fallbackRecomendacoes(candidatos),
-        origem: 'fallback',
-      })
+      return jsonErro('A IA nao retornou uma lista valida de 10 produtos para recomendar.', 502)
     }
 
     return Response.json({

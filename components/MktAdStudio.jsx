@@ -144,7 +144,11 @@ function extrairListaCodigos(texto) {
   )
 }
 
-async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto, postFormat = 'stories' } = {}) {
+async function comporAnuncioFinal(
+  baseImageSrc,
+  precoTexto,
+  { nomeProduto, codigoProduto, postFormat = 'stories', withPrice = true } = {},
+) {
   const [baseImage, logoImage] = await Promise.all([
     carregarImagem(baseImageSrc),
     carregarImagem(`/logofundo.png?v=${Date.now()}`),
@@ -244,74 +248,76 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
     ctx.restore()
   }
 
-  const { inteira, decimal } = quebrarPreco(precoTexto)
+  if (withPrice && precoTexto) {
+    const { inteira, decimal } = quebrarPreco(precoTexto)
 
-  const precoPrefixo = 'R$'
-  let fontePreco = isFeed ? 102 : 124
-  let fonteDecimal = isFeed ? 54 : 64
-  ctx.textBaseline = 'alphabetic'
-  ctx.font = `900 ${fontePreco}px Arial`
-  let larguraInteira = ctx.measureText(inteira).width
-  ctx.font = `900 ${fonteDecimal}px Arial`
-  let larguraDecimal = ctx.measureText(`,${decimal}`).width
-  ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
-  const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
-  ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
-  const larguraAvista = ctx.measureText('A VISTA').width
-  const larguraMaximaPreco = (isFeed ? 684 : 760) - larguraAvista
-
-  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > (isFeed ? 78 : 96)) {
-    fontePreco -= 6
-    fonteDecimal -= 3
+    const precoPrefixo = 'R$'
+    let fontePreco = isFeed ? 102 : 124
+    let fonteDecimal = isFeed ? 54 : 64
+    ctx.textBaseline = 'alphabetic'
     ctx.font = `900 ${fontePreco}px Arial`
-    larguraInteira = ctx.measureText(inteira).width
+    let larguraInteira = ctx.measureText(inteira).width
     ctx.font = `900 ${fonteDecimal}px Arial`
-    larguraDecimal = ctx.measureText(`,${decimal}`).width
+    let larguraDecimal = ctx.measureText(`,${decimal}`).width
+    ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
+    const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
+    ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
+    const larguraAvista = ctx.measureText('A VISTA').width
+    const larguraMaximaPreco = (isFeed ? 684 : 760) - larguraAvista
+
+    while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > (isFeed ? 78 : 96)) {
+      fontePreco -= 6
+      fonteDecimal -= 3
+      ctx.font = `900 ${fontePreco}px Arial`
+      larguraInteira = ctx.measureText(inteira).width
+      ctx.font = `900 ${fonteDecimal}px Arial`
+      larguraDecimal = ctx.measureText(`,${decimal}`).width
+    }
+
+    const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
+    const blocoTotal = totalPreco + 48 + larguraAvista
+    const precoBoxW = Math.min(isFeed ? 930 : 948, Math.max(isFeed ? 620 : 560, blocoTotal + 136))
+    const precoBoxX = (canvasW - precoBoxW) / 2
+    const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
+
+    ctx.save()
+    ctx.shadowColor = 'rgba(0,0,0,0.28)'
+    ctx.shadowBlur = 34
+    const precoGradient = ctx.createLinearGradient(precoBoxX, precoBoxY, precoBoxX + precoBoxW, precoBoxY + precoBoxH)
+    precoGradient.addColorStop(0, '#980b12')
+    precoGradient.addColorStop(0.45, '#d90f18')
+    precoGradient.addColorStop(1, '#ff5331')
+    ctx.fillStyle = precoGradient
+    roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
+    ctx.fill()
+    ctx.restore()
+
+    ctx.save()
+    ctx.strokeStyle = 'rgba(255,255,255,0.14)'
+    ctx.lineWidth = 2
+    roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
+    ctx.stroke()
+    ctx.restore()
+
+    ctx.fillStyle = '#ffffff'
+    ctx.font = `700 ${isFeed ? 24 : 28}px Arial`
+    ctx.fillText('POR APENAS:', precoBoxX + 34, precoBoxY + 64)
+
+    ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
+    ctx.fillText(precoPrefixo, precoX, precoBaseY - (isFeed ? 14 : 18))
+
+    const inteiroX = precoX + larguraPrefixo
+    ctx.font = `900 ${fontePreco}px Arial`
+    ctx.fillText(inteira, inteiroX, precoBaseY)
+
+    const decimalX = inteiroX + larguraInteira + 8
+    ctx.font = `900 ${fonteDecimal}px Arial`
+    ctx.fillText(`,${decimal}`, decimalX, precoBaseY - (isFeed ? 16 : 20))
+
+    ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
+    const avista = 'A VISTA'
+    ctx.fillText(avista, decimalX + larguraDecimal + 48, precoBaseY - (isFeed ? 4 : 8))
   }
-
-  const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
-  const blocoTotal = totalPreco + 48 + larguraAvista
-  const precoBoxW = Math.min(isFeed ? 930 : 948, Math.max(isFeed ? 620 : 560, blocoTotal + 136))
-  const precoBoxX = (canvasW - precoBoxW) / 2
-  const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
-
-  ctx.save()
-  ctx.shadowColor = 'rgba(0,0,0,0.28)'
-  ctx.shadowBlur = 34
-  const precoGradient = ctx.createLinearGradient(precoBoxX, precoBoxY, precoBoxX + precoBoxW, precoBoxY + precoBoxH)
-  precoGradient.addColorStop(0, '#980b12')
-  precoGradient.addColorStop(0.45, '#d90f18')
-  precoGradient.addColorStop(1, '#ff5331')
-  ctx.fillStyle = precoGradient
-  roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
-  ctx.fill()
-  ctx.restore()
-
-  ctx.save()
-  ctx.strokeStyle = 'rgba(255,255,255,0.14)'
-  ctx.lineWidth = 2
-  roundedRectPath(ctx, precoBoxX, precoBoxY, precoBoxW, precoBoxH, 34)
-  ctx.stroke()
-  ctx.restore()
-
-  ctx.fillStyle = '#ffffff'
-  ctx.font = `700 ${isFeed ? 24 : 28}px Arial`
-  ctx.fillText('POR APENAS:', precoBoxX + 34, precoBoxY + 64)
-
-  ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
-  ctx.fillText(precoPrefixo, precoX, precoBaseY - (isFeed ? 14 : 18))
-
-  const inteiroX = precoX + larguraPrefixo
-  ctx.font = `900 ${fontePreco}px Arial`
-  ctx.fillText(inteira, inteiroX, precoBaseY)
-
-  const decimalX = inteiroX + larguraInteira + 8
-  ctx.font = `900 ${fonteDecimal}px Arial`
-  ctx.fillText(`,${decimal}`, decimalX, precoBaseY - (isFeed ? 16 : 20))
-
-  ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
-  const avista = 'A VISTA'
-  ctx.fillText(avista, decimalX + larguraDecimal + 48, precoBaseY - (isFeed ? 4 : 8))
 
   const footerGradient = ctx.createLinearGradient(0, footerY, canvasW, canvasH)
   footerGradient.addColorStop(0, '#6f0910')
@@ -349,6 +355,7 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 export default function MktAdStudio() {
   const [modo, setModo] = useState('manual')
   const [postFormat, setPostFormat] = useState('stories')
+  const [priceMode, setPriceMode] = useState('with-price')
   const [arquivo, setArquivo] = useState(null)
   const [previewProduto, setPreviewProduto] = useState('')
   const [valor, setValor] = useState('')
@@ -390,7 +397,7 @@ export default function MktAdStudio() {
       return
     }
 
-    if (modo === 'manual' && !valorFormatado) {
+    if (modo === 'manual' && priceMode === 'with-price' && !valorFormatado) {
       setErro('Informe um valor valido para a oferta.')
       return
     }
@@ -416,6 +423,7 @@ export default function MktAdStudio() {
       if (nomeProduto) formData.append('productName', nomeProduto)
       if (modo === 'site') formData.append('discountPercent', descontoSite)
       formData.append('postFormat', postFormat)
+      formData.append('priceMode', priceMode)
 
       const response = await fetch('/api/mkt/generate', {
         method: 'POST',
@@ -436,6 +444,7 @@ export default function MktAdStudio() {
         codigoProduto: data.codigoProduto || codigoProduto,
         descontoPercentual: data.descontoPercentual || 0,
         postFormat: data.postFormat || postFormat,
+        withPrice: data.withPrice !== false,
       })
 
       const nomeFinal = data.nomeProduto || nomeProduto
@@ -448,11 +457,13 @@ export default function MktAdStudio() {
             nomeProduto: nomeFinal,
             codigoProduto: codigoFinal,
             postFormat: 'stories',
+            withPrice: data.withPrice !== false,
           }),
           comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
             nomeProduto: nomeFinal,
             codigoProduto: codigoFinal,
             postFormat: 'feed',
+            withPrice: data.withPrice !== false,
           }),
         ])
 
@@ -466,6 +477,7 @@ export default function MktAdStudio() {
           nomeProduto: nomeFinal,
           codigoProduto: codigoFinal,
           postFormat: formatoFinal,
+          withPrice: data.withPrice !== false,
         })
         setResultados({
           stories: formatoFinal === 'stories' ? finalDataUrl : '',
@@ -523,6 +535,7 @@ export default function MktAdStudio() {
     if (nomeProduto) formData.append('productName', nomeProduto)
     formData.append('discountPercent', descontoSite)
     formData.append('postFormat', postFormat)
+    formData.append('priceMode', priceMode)
 
     const response = await fetch('/api/mkt/generate', {
       method: 'POST',
@@ -546,11 +559,13 @@ export default function MktAdStudio() {
           nomeProduto: nomeFinal,
           codigoProduto: codigoFinal,
           postFormat: 'stories',
+          withPrice: data.withPrice !== false,
         }),
         comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
           nomeProduto: nomeFinal,
           codigoProduto: codigoFinal,
           postFormat: 'feed',
+          withPrice: data.withPrice !== false,
         }),
       ])
       imagens = { stories: storiesDataUrl, feed: feedDataUrl }
@@ -559,6 +574,7 @@ export default function MktAdStudio() {
         nomeProduto: nomeFinal,
         codigoProduto: codigoFinal,
         postFormat: formatoFinal,
+        withPrice: data.withPrice !== false,
       })
       imagens = {
         stories: formatoFinal === 'stories' ? finalDataUrl : '',
@@ -723,7 +739,7 @@ export default function MktAdStudio() {
 
             <div className="bg-white px-6 py-8 sm:px-8">
               <form onSubmit={handleSubmit} className="grid gap-6">
-                <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+                <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
                   <label className="block rounded-[30px] border border-dashed border-red-300 bg-[linear-gradient(180deg,#fff5f5_0%,#ffffff_100%)] p-5">
                     <span className="text-[11px] font-black uppercase tracking-[0.28em] text-red-700">Imagem do produto</span>
                     <div className="mt-4 flex min-h-[280px] items-center justify-center overflow-hidden rounded-[24px] bg-slate-100">
@@ -746,7 +762,7 @@ export default function MktAdStudio() {
                     />
                   </label>
 
-                  <div className="grid gap-4">
+                  <div className="grid gap-4 sm:grid-cols-2 xl:sticky xl:top-6 xl:self-start">
                     <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Modo de geracao</p>
                       <div className="mt-4 grid gap-3">
@@ -822,6 +838,39 @@ export default function MktAdStudio() {
                     </div>
 
                     <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Exibicao do preco</p>
+                      <div className="mt-4 grid gap-3">
+                        <button
+                          type="button"
+                          onClick={() => setPriceMode('with-price')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            priceMode === 'with-price'
+                              ? 'bg-red-600 text-white shadow-[0_16px_34px_rgba(185,28,28,0.28)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Com preco
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setPriceMode('without-price')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            priceMode === 'without-price'
+                              ? 'bg-red-600 text-white shadow-[0_16px_34px_rgba(185,28,28,0.28)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Sem preco
+                        </button>
+                      </div>
+                      <p className="mt-3 text-sm text-slate-500">
+                        {priceMode === 'without-price'
+                          ? 'A arte sai sem a caixa vermelha de valor.'
+                          : 'A arte sai com a placa vermelha de preco.'}
+                      </p>
+                    </div>
+
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Informacoes do produto</p>
                       <div className="mt-4 grid gap-3">
                         <input
@@ -854,11 +903,13 @@ export default function MktAdStudio() {
                         disabled={modo === 'site'}
                       />
                       <p className="mt-3 text-sm text-slate-500">
-                        {modo === 'site'
+                        {priceMode === 'without-price'
+                          ? 'Neste modo, a arte sera gerada sem exibir valor.'
+                          : modo === 'site'
                           ? 'Neste modo, o sistema usa o valor cadastrado no produto do site.'
                           : 'Preco final aplicado na placa vermelha do anuncio.'}
                       </p>
-                      {valorFormatado ? (
+                      {priceMode === 'with-price' && valorFormatado ? (
                         <div className="mt-4 rounded-[20px] bg-red-50 px-4 py-4">
                           <div className="text-[11px] font-black uppercase tracking-[0.24em] text-red-600">Pre-visualizacao</div>
                           <div className="mt-2 text-3xl font-black text-red-700">{valorFormatado}</div>
@@ -867,7 +918,7 @@ export default function MktAdStudio() {
                     </div>
 
                     {modo === 'site' ? (
-                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                         <div className="flex items-start justify-between gap-4">
                           <div>
                             <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Sugestao inteligente do dia</p>
@@ -875,7 +926,7 @@ export default function MktAdStudio() {
                           </div>
                           {origemRecomendacoes ? (
                             <div className="rounded-[16px] bg-red-50 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-red-600">
-                              {origemRecomendacoes === 'ia' ? 'Curadoria IA' : 'Curadoria fallback'}
+                              Curadoria IA
                             </div>
                           ) : null}
                         </div>
@@ -906,7 +957,7 @@ export default function MktAdStudio() {
 
                         {recomendacoesDia.length ? (
                           <div className="mt-5 rounded-[22px] border border-slate-200 bg-slate-50 p-4">
-                            <div className="space-y-3">
+                            <div className="grid gap-3 lg:grid-cols-2">
                               {recomendacoesDia.map((item, index) => (
                                 <div key={`${item.codigo}-${index}`} className="rounded-[18px] bg-white px-4 py-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
                                   <div className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">Codigo {item.codigo}</div>
@@ -921,7 +972,7 @@ export default function MktAdStudio() {
                     ) : null}
 
                     {modo === 'site' ? (
-                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                         <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Desconto no anuncio</p>
                         <select
                           value={descontoSite}
@@ -981,12 +1032,12 @@ export default function MktAdStudio() {
                       </div>
                     ) : null}
 
-                    <div className="rounded-[30px] border border-slate-200 bg-slate-950 p-5 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-slate-950 p-5 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/55">Saida do anuncio</p>
                       <div className="mt-4 space-y-3 text-sm text-white/82">
                         <p>- formato vertical pensado para a publicacao escolhida</p>
                         <p>- logo oficial da loja aplicada automaticamente</p>
-                        <p>- preco exato em destaque forte</p>
+                        <p>{priceMode === 'without-price' ? '- arte limpa sem bloco de preco' : '- preco exato em destaque forte'}</p>
                         <p>- visual promocional inspirado nas referencias enviadas</p>
                         <p>- headline com nome e codigo do produto</p>
                         <p>
