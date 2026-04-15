@@ -133,6 +133,17 @@ function parseRespostaJsonSegura(raw) {
   }
 }
 
+function extrairListaCodigos(texto) {
+  return Array.from(
+    new Set(
+      String(texto || '')
+        .split(/[\s,;\n\r\t]+/)
+        .map((item) => item.trim())
+        .filter(Boolean),
+    ),
+  )
+}
+
 async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto, postFormat = 'stories' } = {}) {
   const [baseImage, logoImage] = await Promise.all([
     carregarImagem(baseImageSrc),
@@ -352,6 +363,10 @@ export default function MktAdStudio() {
   const [copyTexto, setCopyTexto] = useState('')
   const [detalhes, setDetalhes] = useState(null)
   const [gerandoCopy, setGerandoCopy] = useState(false)
+  const [codigosLote, setCodigosLote] = useState('')
+  const [gerandoLote, setGerandoLote] = useState(false)
+  const [progressoLote, setProgressoLote] = useState({ atual: 0, total: 0 })
+  const [resultadosLote, setResultadosLote] = useState([])
 
   useEffect(() => {
     return () => {
@@ -387,6 +402,7 @@ export default function MktAdStudio() {
     setResultados({ stories: '', feed: '' })
     setArteBase('')
     setCopyTexto('')
+    setResultadosLote([])
 
     try {
       const formData = new FormData()
@@ -497,6 +513,93 @@ export default function MktAdStudio() {
     }
   }
 
+  async function gerarAnuncioPorCodigo(codigo) {
+    const formData = new FormData()
+    formData.append('mode', 'site')
+    formData.append('productCode', codigo)
+    if (nomeProduto) formData.append('productName', nomeProduto)
+    formData.append('discountPercent', descontoSite)
+    formData.append('postFormat', postFormat)
+
+    const response = await fetch('/api/mkt/generate', {
+      method: 'POST',
+      body: formData,
+    })
+
+    const raw = await response.text()
+    const data = parseRespostaJsonSegura(raw)
+    if (!response.ok) {
+      throw new Error(data?.error || `Nao foi possivel gerar o anuncio do codigo ${codigo}.`)
+    }
+
+    const nomeFinal = data.nomeProduto || nomeProduto || `Produto ${codigo}`
+    const codigoFinal = data.codigoProduto || codigo
+    const formatoFinal = data.postFormat || postFormat
+    let imagens = { stories: '', feed: '' }
+
+    if (formatoFinal === 'both') {
+      const [storiesDataUrl, feedDataUrl] = await Promise.all([
+        comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+          nomeProduto: nomeFinal,
+          codigoProduto: codigoFinal,
+          postFormat: 'stories',
+        }),
+        comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+          nomeProduto: nomeFinal,
+          codigoProduto: codigoFinal,
+          postFormat: 'feed',
+        }),
+      ])
+      imagens = { stories: storiesDataUrl, feed: feedDataUrl }
+    } else {
+      const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+        nomeProduto: nomeFinal,
+        codigoProduto: codigoFinal,
+        postFormat: formatoFinal,
+      })
+      imagens = {
+        stories: formatoFinal === 'stories' ? finalDataUrl : '',
+        feed: formatoFinal === 'feed' ? finalDataUrl : '',
+      }
+    }
+
+    return {
+      codigo: codigoFinal,
+      nomeProduto: nomeFinal,
+      preco: data.precoFormatado,
+      imagens,
+    }
+  }
+
+  async function handleGerarLote() {
+    const listaCodigos = extrairListaCodigos(codigosLote)
+    if (!listaCodigos.length) {
+      setErro('Informe pelo menos um codigo para gerar em lote.')
+      return
+    }
+
+    setErro('')
+    setGerandoLote(true)
+    setResultadosLote([])
+    setProgressoLote({ atual: 0, total: listaCodigos.length })
+
+    const acumulados = []
+
+    try {
+      for (let index = 0; index < listaCodigos.length; index += 1) {
+        const codigo = listaCodigos[index]
+        const item = await gerarAnuncioPorCodigo(codigo)
+        acumulados.push(item)
+        setResultadosLote([...acumulados])
+        setProgressoLote({ atual: index + 1, total: listaCodigos.length })
+      }
+    } catch (error) {
+      setErro(error instanceof Error ? error.message : 'Falha ao gerar o lote de anuncios.')
+    } finally {
+      setGerandoLote(false)
+    }
+  }
+
   function handleFileChange(event) {
     const nextFile = event.target.files?.[0]
     if (!nextFile) return
@@ -529,8 +632,33 @@ export default function MktAdStudio() {
     link.click()
   }
 
+  function baixarResultadoLote(item, formato) {
+    const url = item?.imagens?.[formato]
+    if (!url) return
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `anuncio-galpao-do-aco-${item.codigo}-${formato}.png`
+    link.click()
+  }
+
+  async function baixarLoteCompleto() {
+    for (const item of resultadosLote) {
+      const formatos = postFormat === 'both' ? ['stories', 'feed'] : [postFormat]
+      for (const formato of formatos) {
+        const url = item?.imagens?.[formato]
+        if (!url) continue
+        const link = document.createElement('a')
+        link.href = url
+        link.download = `anuncio-galpao-do-aco-${item.codigo}-${formato}.png`
+        link.click()
+        await new Promise((resolve) => window.setTimeout(resolve, 180))
+      }
+    }
+  }
+
   const possuiResultado = Boolean(resultado)
   const exibindoAmbos = postFormat === 'both' && (resultados.stories || resultados.feed)
+  const quantidadeCodigosLote = extrairListaCodigos(codigosLote).length
 
   return (
     <div className="bg-[radial-gradient(circle_at_top,#3b0000_0%,#140606_42%,#090909_100%)]">
@@ -726,6 +854,47 @@ export default function MktAdStudio() {
                       </div>
                     ) : null}
 
+                    {modo === 'site' ? (
+                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                        <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Geracao em lote</p>
+                        <textarea
+                          value={codigosLote}
+                          onChange={(event) => setCodigosLote(event.target.value)}
+                          placeholder="Cole varios codigos aqui, separados por virgula, espaco ou quebra de linha"
+                          className="mt-4 min-h-[140px] w-full rounded-[18px] border border-slate-200 px-4 py-4 text-sm font-semibold text-slate-900 outline-none focus:border-red-500"
+                        />
+                        <p className="mt-3 text-sm text-slate-500">
+                          {quantidadeCodigosLote
+                            ? `${quantidadeCodigosLote} codigo(s) identificado(s) para gerar em bloco.`
+                            : 'Use esse campo quando quiser gerar varios anuncios de uma vez a partir dos codigos do site.'}
+                        </p>
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <button
+                            type="button"
+                            onClick={handleGerarLote}
+                            disabled={gerandoLote}
+                            className="inline-flex items-center justify-center rounded-[18px] bg-slate-950 px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-white disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            {gerandoLote ? 'Gerando lote...' : 'Gerar lote'}
+                          </button>
+                          {resultadosLote.length ? (
+                            <button
+                              type="button"
+                              onClick={baixarLoteCompleto}
+                              className="inline-flex items-center justify-center rounded-[18px] border border-slate-300 bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-slate-800"
+                            >
+                              Baixar lote
+                            </button>
+                          ) : null}
+                        </div>
+                        {gerandoLote ? (
+                          <div className="mt-4 rounded-[18px] bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-700">
+                            Gerando {progressoLote.atual}/{progressoLote.total}...
+                          </div>
+                        ) : null}
+                      </div>
+                    ) : null}
+
                     <div className="rounded-[30px] border border-slate-200 bg-slate-950 p-5 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/55">Saida do anuncio</p>
                       <div className="mt-4 space-y-3 text-sm text-white/82">
@@ -855,6 +1024,63 @@ export default function MktAdStudio() {
           </div>
 
           <div className="grid gap-6">
+            {resultadosLote.length ? (
+              <div className="rounded-[34px] border border-white/10 bg-white/95 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.16)]">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div>
+                    <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Lote gerado</p>
+                    <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">Anuncios em bloco para baixar</h2>
+                  </div>
+                  <div className="rounded-[20px] bg-red-50 px-4 py-3 text-right">
+                    <div className="text-[10px] font-black uppercase tracking-[0.22em] text-red-600">Total pronto</div>
+                    <div className="mt-1 text-lg font-black text-red-700">{resultadosLote.length} anuncio(s)</div>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid gap-5 md:grid-cols-2 2xl:grid-cols-3">
+                  {resultadosLote.map((item) => (
+                    <div key={item.codigo} className="rounded-[26px] border border-slate-200 bg-white p-4 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+                      <div className="mb-3">
+                        <div className="text-[11px] font-black uppercase tracking-[0.22em] text-slate-500">Cod. {item.codigo}</div>
+                        <div className="mt-1 text-base font-black uppercase text-slate-950">{item.nomeProduto}</div>
+                        <div className="mt-1 text-sm font-bold text-red-700">{item.preco}</div>
+                      </div>
+
+                      <div className="grid gap-4">
+                        {item.imagens.stories ? (
+                          <div className="rounded-[20px] bg-[linear-gradient(180deg,#140606_0%,#2a0a0a_100%)] p-3">
+                            <div className="mb-2 text-[11px] font-black uppercase tracking-[0.22em] text-white/60">Stories</div>
+                            <img src={item.imagens.stories} alt={`Stories ${item.codigo}`} className="w-full rounded-[18px]" />
+                            <button
+                              type="button"
+                              onClick={() => baixarResultadoLote(item, 'stories')}
+                              className="mt-3 inline-flex w-full items-center justify-center rounded-[16px] border border-white/15 bg-white px-4 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-800"
+                            >
+                              Baixar stories
+                            </button>
+                          </div>
+                        ) : null}
+
+                        {item.imagens.feed ? (
+                          <div className="rounded-[20px] bg-[linear-gradient(180deg,#140606_0%,#2a0a0a_100%)] p-3">
+                            <div className="mb-2 text-[11px] font-black uppercase tracking-[0.22em] text-white/60">Feed</div>
+                            <img src={item.imagens.feed} alt={`Feed ${item.codigo}`} className="w-full rounded-[18px]" />
+                            <button
+                              type="button"
+                              onClick={() => baixarResultadoLote(item, 'feed')}
+                              className="mt-3 inline-flex w-full items-center justify-center rounded-[16px] border border-white/15 bg-white px-4 py-3 text-xs font-black uppercase tracking-[0.16em] text-slate-800"
+                            >
+                              Baixar feed
+                            </button>
+                          </div>
+                        ) : null}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
             <div className="rounded-[34px] border border-white/10 bg-white/95 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.16)]">
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Copy para postagem</p>
               <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">
