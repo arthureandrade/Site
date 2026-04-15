@@ -347,6 +347,7 @@ export default function MktAdStudio() {
   const [gerando, setGerando] = useState(false)
   const [erro, setErro] = useState('')
   const [resultado, setResultado] = useState('')
+  const [resultados, setResultados] = useState({ stories: '', feed: '' })
   const [arteBase, setArteBase] = useState('')
   const [copyTexto, setCopyTexto] = useState('')
   const [detalhes, setDetalhes] = useState(null)
@@ -383,6 +384,7 @@ export default function MktAdStudio() {
 
     setGerando(true)
     setResultado('')
+    setResultados({ stories: '', feed: '' })
     setArteBase('')
     setCopyTexto('')
 
@@ -417,12 +419,41 @@ export default function MktAdStudio() {
         postFormat: data.postFormat || postFormat,
       })
 
-      const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
-        nomeProduto: data.nomeProduto || nomeProduto,
-        codigoProduto: data.codigoProduto || codigoProduto,
-        postFormat: data.postFormat || postFormat,
-      })
-      setResultado(finalDataUrl)
+      const nomeFinal = data.nomeProduto || nomeProduto
+      const codigoFinal = data.codigoProduto || codigoProduto
+      const formatoFinal = data.postFormat || postFormat
+
+      if (formatoFinal === 'both') {
+        const [storiesDataUrl, feedDataUrl] = await Promise.all([
+          comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+            nomeProduto: nomeFinal,
+            codigoProduto: codigoFinal,
+            postFormat: 'stories',
+          }),
+          comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+            nomeProduto: nomeFinal,
+            codigoProduto: codigoFinal,
+            postFormat: 'feed',
+          }),
+        ])
+
+        setResultados({
+          stories: storiesDataUrl,
+          feed: feedDataUrl,
+        })
+        setResultado(storiesDataUrl)
+      } else {
+        const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
+          nomeProduto: nomeFinal,
+          codigoProduto: codigoFinal,
+          postFormat: formatoFinal,
+        })
+        setResultados({
+          stories: formatoFinal === 'stories' ? finalDataUrl : '',
+          feed: formatoFinal === 'feed' ? finalDataUrl : '',
+        })
+        setResultado(finalDataUrl)
+      }
     } catch (error) {
       setErro(error instanceof Error ? error.message : 'Falha inesperada ao gerar anuncio.')
       setDetalhes(null)
@@ -445,7 +476,10 @@ export default function MktAdStudio() {
           nomeProduto: detalhes?.nomeProduto || nomeProduto,
           codigoProduto: detalhes?.codigoProduto || codigoProduto,
           precoFormatado: detalhes?.preco,
-          postFormat: detalhes?.postFormat || postFormat,
+          postFormat:
+            (detalhes?.postFormat || postFormat) === 'both'
+              ? 'feed'
+              : (detalhes?.postFormat || postFormat),
         }),
       })
 
@@ -485,6 +519,18 @@ export default function MktAdStudio() {
     link.download = `anuncio-galpao-do-aco-${Date.now()}.png`
     link.click()
   }
+
+  function baixarImagemPorFormato(formato) {
+    const url = resultados?.[formato]
+    if (!url) return
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `anuncio-galpao-do-aco-${formato}-${Date.now()}.png`
+    link.click()
+  }
+
+  const possuiResultado = Boolean(resultado)
+  const exibindoAmbos = postFormat === 'both' && (resultados.stories || resultados.feed)
 
   return (
     <div className="bg-[radial-gradient(circle_at_top,#3b0000_0%,#140606_42%,#090909_100%)]">
@@ -594,11 +640,24 @@ export default function MktAdStudio() {
                         >
                           Post para feed
                         </button>
+                        <button
+                          type="button"
+                          onClick={() => setPostFormat('both')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            postFormat === 'both'
+                              ? 'bg-slate-950 text-white shadow-[0_16px_34px_rgba(15,23,42,0.24)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Gerar ambos
+                        </button>
                       </div>
                       <p className="mt-3 text-sm text-slate-500">
                         {postFormat === 'feed'
                           ? 'Arte mais compacta, pensada para feed vertical 4:5.'
-                          : 'Arte alta e impactante, pensada para status e stories.'}
+                          : postFormat === 'both'
+                            ? 'O painel vai montar duas versoes finais: uma para stories e outra para feed.'
+                            : 'Arte alta e impactante, pensada para status e stories.'}
                       </p>
                     </div>
 
@@ -670,12 +729,19 @@ export default function MktAdStudio() {
                     <div className="rounded-[30px] border border-slate-200 bg-slate-950 p-5 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-white/55">Saida do anuncio</p>
                       <div className="mt-4 space-y-3 text-sm text-white/82">
-                        <p>- formato vertical para story/status</p>
+                        <p>- formato vertical pensado para a publicacao escolhida</p>
                         <p>- logo oficial da loja aplicada automaticamente</p>
                         <p>- preco exato em destaque forte</p>
                         <p>- visual promocional inspirado nas referencias enviadas</p>
                         <p>- headline com nome e codigo do produto</p>
-                        <p>- formato atual: {postFormat === 'feed' ? 'feed 4:5' : 'stories/status'}</p>
+                        <p>
+                          - formato atual:{' '}
+                          {postFormat === 'feed'
+                            ? 'feed 4:5'
+                            : postFormat === 'both'
+                              ? 'stories + feed'
+                              : 'stories/status'}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -692,17 +758,36 @@ export default function MktAdStudio() {
                     {gerando ? 'Gerando anuncio...' : 'Gerar anuncio'}
                   </button>
 
-                    {resultado ? (
+                    {possuiResultado && !exibindoAmbos ? (
                       <button
                         type="button"
-                      onClick={baixarImagem}
-                      className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
-                    >
+                        onClick={baixarImagem}
+                        className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
+                      >
                         Baixar PNG
                       </button>
                     ) : null}
 
-                    {resultado ? (
+                    {exibindoAmbos ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => baixarImagemPorFormato('stories')}
+                          className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
+                        >
+                          Baixar stories
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => baixarImagemPorFormato('feed')}
+                          className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
+                        >
+                          Baixar feed
+                        </button>
+                      </>
+                    ) : null}
+
+                    {possuiResultado ? (
                       <button
                         type="button"
                         onClick={handleGerarCopy}
@@ -744,7 +829,22 @@ export default function MktAdStudio() {
             </div>
 
             <div className="mt-6 flex min-h-[720px] items-center justify-center rounded-[28px] bg-[linear-gradient(180deg,#140606_0%,#2a0a0a_100%)] p-5">
-              {resultado ? (
+              {exibindoAmbos ? (
+                <div className="grid w-full gap-5 xl:grid-cols-2">
+                  {resultados.stories ? (
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="text-[11px] font-black uppercase tracking-[0.24em] text-white/60">Stories</div>
+                      <img src={resultados.stories} alt="Anuncio stories gerado" className="max-h-[960px] w-auto rounded-[26px] shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
+                    </div>
+                  ) : null}
+                  {resultados.feed ? (
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="text-[11px] font-black uppercase tracking-[0.24em] text-white/60">Feed</div>
+                      <img src={resultados.feed} alt="Anuncio feed gerado" className="max-h-[960px] w-auto rounded-[26px] shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
+                    </div>
+                  ) : null}
+                </div>
+              ) : resultado ? (
                 <img src={resultado} alt="Anuncio gerado" className="max-h-[1120px] w-auto rounded-[26px] shadow-[0_25px_80px_rgba(0,0,0,0.45)]" />
               ) : (
                 <div className="max-w-md text-center text-sm font-semibold leading-relaxed text-white/70">
@@ -757,7 +857,9 @@ export default function MktAdStudio() {
           <div className="grid gap-6">
             <div className="rounded-[34px] border border-white/10 bg-white/95 p-6 shadow-[0_28px_70px_rgba(15,23,42,0.16)]">
               <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Copy para postagem</p>
-              <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">Legenda curta para acompanhar a arte</h2>
+              <h2 className="mt-2 text-2xl font-black uppercase text-slate-950">
+                {postFormat === 'feed' ? 'Legenda comercial para o feed' : 'Legenda curta para acompanhar a arte'}
+              </h2>
               <div className="mt-5 rounded-[26px] border border-slate-200 bg-[linear-gradient(180deg,#fff5f5_0%,#ffffff_100%)] p-5">
                 {copyTexto ? (
                   <pre className="whitespace-pre-wrap font-sans text-base font-semibold leading-8 text-slate-800">
@@ -765,7 +867,9 @@ export default function MktAdStudio() {
                   </pre>
                 ) : (
                   <div className="text-sm font-semibold leading-relaxed text-slate-500">
-                    Depois que a arte ficar pronta, clique em Gerar copy para montar aqui uma legenda curta de 3 linhas.
+                    {postFormat === 'feed'
+                      ? 'Depois que a arte ficar pronta, clique em Gerar copy para montar aqui uma legenda completa no padrao comercial do feed.'
+                      : 'Depois que a arte ficar pronta, clique em Gerar copy para montar aqui uma legenda curta de 3 linhas.'}
                   </div>
                 )}
               </div>
@@ -779,7 +883,7 @@ export default function MktAdStudio() {
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Produto em escala heroica e com mais volume visual</div>
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Headlines curtas e promocionais</div>
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">
-                  Acabamento pensado para {postFormat === 'feed' ? 'feed 4:5' : 'status e stories'}
+                  Acabamento pensado para {postFormat === 'feed' ? 'feed 4:5' : postFormat === 'both' ? 'stories e feed' : 'status e stories'}
                 </div>
               </div>
             </div>

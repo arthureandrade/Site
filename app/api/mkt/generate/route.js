@@ -73,7 +73,9 @@ export async function POST(request) {
     const codigoInformado = sanitizarTextoCurto(formData.get('productCode'))
     const nomeInformado = sanitizarTextoCurto(formData.get('productName'))
     const descontoInformado = Number(formData.get('discountPercent') || 0)
-    const postFormat = String(formData.get('postFormat') || 'stories').toLowerCase() === 'feed' ? 'feed' : 'stories'
+    const postFormatRaw = String(formData.get('postFormat') || 'stories').toLowerCase()
+    const postFormat =
+      postFormatRaw === 'feed' || postFormatRaw === 'both' ? postFormatRaw : 'stories'
 
     let arquivoImagem = imagem
     let precoFonte = valor

@@ -72,12 +72,12 @@ export async function POST(request) {
     }
 
     const data = await response.json().catch(() => null)
-    const texto = extrairTextoResponses(data)
+    const linhas = extrairTextoResponses(data)
       .split(/\r?\n/)
       .map((linha) => linha.trim())
       .filter(Boolean)
-      .slice(0, 3)
-      .join('\n')
+
+    const texto = (postFormat === 'feed' ? linhas : linhas.slice(0, 3)).join('\n')
 
     if (!texto) {
       return jsonErro('A IA nao retornou uma copy valida para esta arte.', 502)
