@@ -6,6 +6,47 @@ const TELEFONE_PRINCIPAL = '(95) 3224-0115'
 const WHATSAPP_COMERCIAL = '(95) 99165-0808'
 const ENDERECO_1 = 'Av. Gen. Ataide Teive, 4495 - Asa Branca'
 const ENDERECO_2 = 'Av. Gen. Ataide Teive, 5928 - Santa Tereza'
+const MKT_RECOMENDACOES_STORAGE_KEY = 'galpao-mkt-recomendacoes-v1'
+
+function lerHistoricoRecomendacoesLocal() {
+  if (typeof window === 'undefined') return []
+
+  try {
+    const bruto = window.localStorage.getItem(MKT_RECOMENDACOES_STORAGE_KEY)
+    const lista = JSON.parse(bruto || '[]')
+    return Array.isArray(lista) ? lista : []
+  } catch {
+    return []
+  }
+}
+
+function salvarHistoricoRecomendacoesLocal(lista) {
+  if (typeof window === 'undefined') return
+
+  try {
+    window.localStorage.setItem(MKT_RECOMENDACOES_STORAGE_KEY, JSON.stringify(lista))
+  } catch {}
+}
+
+function registrarHistoricoRecomendacoesLocal(produtos) {
+  const agora = new Date().toISOString()
+  const historicoAtual = lerHistoricoRecomendacoesLocal()
+  const novos = (Array.isArray(produtos) ? produtos : [])
+    .map((item) => ({
+      codigo: String(item?.codigo || '').trim(),
+      descricao: String(item?.descricao || '').trim(),
+      recomendadoEm: agora,
+    }))
+    .filter((item) => item.codigo)
+
+  const limiteMs = 1000 * 60 * 60 * 24 * 21
+  const base = [...novos, ...historicoAtual].filter((item) => {
+    const ts = new Date(item?.recomendadoEm || '').getTime()
+    return Number.isFinite(ts) && Date.now() - ts <= limiteMs
+  })
+
+  salvarHistoricoRecomendacoesLocal(base.slice(0, 300))
+}
 
 function formatarPreco(valor) {
   if (typeof valor === 'number' && Number.isFinite(valor)) {
@@ -624,8 +665,15 @@ export default function MktAdStudio() {
     setErro('')
 
     try {
+      const historico = lerHistoricoRecomendacoesLocal()
       const response = await fetch('/api/mkt/recomendacoes', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          historicoRecomendacoes: historico,
+        }),
       })
 
       const raw = await response.text()
@@ -634,8 +682,10 @@ export default function MktAdStudio() {
         throw new Error(data?.error || 'Nao foi possivel gerar as recomendacoes de postagem.')
       }
 
-      setRecomendacoesDia(Array.isArray(data?.produtos) ? data.produtos : [])
+      const produtos = Array.isArray(data?.produtos) ? data.produtos : []
+      setRecomendacoesDia(produtos)
       setOrigemRecomendacoes(String(data?.origem || ''))
+      registrarHistoricoRecomendacoesLocal(produtos)
     } catch (error) {
       setErro(error instanceof Error ? error.message : 'Falha ao gerar as recomendacoes.')
     } finally {

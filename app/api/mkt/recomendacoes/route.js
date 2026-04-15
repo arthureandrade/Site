@@ -146,6 +146,48 @@ function tentarExtrairJson(texto) {
   return null
 }
 
+function normalizarHistoricoRecomendacoes(lista) {
+  const itens = Array.isArray(lista) ? lista : []
+
+  return itens
+    .map((item) => ({
+      codigo: normalizarNumero(item?.codigo),
+      recomendadoEm: String(item?.recomendadoEm || ''),
+    }))
+    .filter((item) => item.codigo > 0 && item.recomendadoEm)
+}
+
+function montarMapaHistorico(historico) {
+  const agora = Date.now()
+  const mapa = new Map()
+
+  for (const item of historico) {
+    const ts = new Date(item.recomendadoEm).getTime()
+    if (!Number.isFinite(ts)) continue
+
+    const horas = (agora - ts) / (1000 * 60 * 60)
+    if (horas < 0 || horas > 24 * 21) continue
+
+    const atual = mapa.get(item.codigo) || {
+      repeticoes3d: 0,
+      repeticoes7d: 0,
+      repeticoes14d: 0,
+      horasDesdeUltima: null,
+    }
+
+    if (horas <= 24 * 3) atual.repeticoes3d += 1
+    if (horas <= 24 * 7) atual.repeticoes7d += 1
+    if (horas <= 24 * 14) atual.repeticoes14d += 1
+    if (atual.horasDesdeUltima == null || horas < atual.horasDesdeUltima) {
+      atual.horasDesdeUltima = horas
+    }
+
+    mapa.set(item.codigo, atual)
+  }
+
+  return mapa
+}
+
 async function buscarCatalogoCompleto() {
   const response = await fetch(`${API_URL}/produtos?skip=0&limit=15000&todas_secoes=1`, {
     cache: 'no-store',
@@ -159,13 +201,28 @@ async function buscarCatalogoCompleto() {
   return Array.isArray(data?.produtos) ? data.produtos : []
 }
 
-function montarCandidatos(produtos) {
+function montarCandidatos(produtos, historicoMap = new Map()) {
   const base = produtos
     .map((item) => {
       const preco = normalizarNumero(item?.preco)
       const estoque = normalizarNumero(item?.estoque)
       const faturamento3m = normalizarNumero(item?.faturamento_3m)
       const qtd3m = normalizarNumero(item?.quantidade_vendida_3m)
+      const historico = historicoMap.get(normalizarNumero(item?.id)) || {
+        repeticoes3d: 0,
+        repeticoes7d: 0,
+        repeticoes14d: 0,
+        horasDesdeUltima: null,
+      }
+      const horasDesdeUltima = historico.horasDesdeUltima ?? 9999
+      const cooldownCurtoAtivo = horasDesdeUltima < 48
+      const cooldownMedioAtivo = horasDesdeUltima < 96
+      const penalidadeVariacao =
+        historico.repeticoes3d * 28 +
+        historico.repeticoes7d * 14 +
+        historico.repeticoes14d * 6 +
+        (cooldownCurtoAtivo ? 20 : 0) +
+        (cooldownMedioAtivo ? 10 : 0)
       const scoreBase =
         faturamento3m * 0.55 +
         qtd3m * 0.3 +
@@ -186,23 +243,31 @@ function montarCandidatos(produtos) {
         marca: normalizarTexto(item?.marca),
         secao: normalizarNumero(item?.secao),
         score_base: Number((scoreBase + potencial * 18).toFixed(2)),
+        score_ajustado: Number((scoreBase + potencial * 18 - penalidadeVariacao).toFixed(2)),
         flag_potencial: potencial === 1,
+        repeticoes_3d: historico.repeticoes3d,
+        repeticoes_7d: historico.repeticoes7d,
+        repeticoes_14d: historico.repeticoes14d,
+        horas_desde_ultima_recomendacao:
+          horasDesdeUltima === 9999 ? null : Number(horasDesdeUltima.toFixed(1)),
+        cooldown_curto_ativo: cooldownCurtoAtivo,
+        cooldown_medio_ativo: cooldownMedioAtivo,
       }
     })
     .filter((item) => item.id > 0 && item.nome && item.preco >= 20 && item.estoque > 0 && item.secao === 5)
 
   const campeoesVenda = [...base]
     .filter((item) => item.quantidade_vendida_3m > 0 || item.faturamento_3m > 0)
-    .sort((a, b) => b.score_base - a.score_base)
+    .sort((a, b) => b.score_ajustado - a.score_ajustado || b.score_base - a.score_base)
     .slice(0, 120)
 
   const apostas = [...base]
     .filter((item) => item.flag_potencial)
-    .sort((a, b) => b.estoque - a.estoque || b.preco - a.preco)
+    .sort((a, b) => b.score_ajustado - a.score_ajustado || b.estoque - a.estoque || b.preco - a.preco)
     .slice(0, 80)
 
   const reforcoGeral = [...base]
-    .sort((a, b) => b.score_base - a.score_base || b.estoque - a.estoque)
+    .sort((a, b) => b.score_ajustado - a.score_ajustado || b.score_base - a.score_base || b.estoque - a.estoque)
     .slice(0, 200)
 
   const mapa = new Map()
@@ -213,14 +278,17 @@ function montarCandidatos(produtos) {
   return Array.from(mapa.values()).slice(0, 220)
 }
 
-export async function POST() {
+export async function POST(request) {
   if (!process.env.OPENAI_API_KEY) {
     return jsonErro('OPENAI_API_KEY nao configurada no servidor.', 500)
   }
 
   try {
+    const body = await request.json().catch(() => null)
+    const historicoRecebido = normalizarHistoricoRecomendacoes(body?.historicoRecomendacoes)
+    const historicoMap = montarMapaHistorico(historicoRecebido)
     const produtos = await buscarCatalogoCompleto()
-    const candidatos = montarCandidatos(produtos)
+    const candidatos = montarCandidatos(produtos, historicoMap)
     const candidatosPorCodigo = new Map(candidatos.map((item) => [item.id, item]))
 
     if (!candidatos.length) {
@@ -238,6 +306,10 @@ export async function POST() {
       '- misturar itens fortes e alguns itens com potencial de crescer mais',
       '- evitar escolher 10 itens quase iguais',
       '- nao escolha itens da secao 6 ou fora da secao 5',
+      '- variar a lista usando o historico recente de recomendacoes',
+      '- evitar repetir item recomendado nas ultimas 48 horas, salvo se ele for realmente muito forte',
+      '- evitar insistir nos mesmos itens varias vezes na mesma semana',
+      '- ainda assim, nao deixe os itens obvios e fortes de fora so por variedade',
       '',
       'Retorne somente JSON valido, sem markdown, sem texto antes ou depois, neste formato:',
       '{"produtos":[{"codigo":123,"descricao":"NOME DO PRODUTO","motivo":"frase curta"}]}',
