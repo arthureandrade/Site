@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 387575
+      "saldo": 379175
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 3074
     }
   ],
-  "generated_at": "2026-04-15T17:34:59.705739",
+  "generated_at": "2026-04-15T18:26:24.054794",
   "kpis": {
     "a_vencer_7d": 311803,
-    "juros_pagos": 71064,
-    "total_aberto": 3198862,
-    "total_pago_periodo": 3398134,
-    "total_vencido": 405583
+    "juros_pagos": 71565,
+    "total_aberto": 3190462,
+    "total_pago_periodo": 3423334,
+    "total_vencido": 397183
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 18,
-      "total_aberto": 162440
+      "titulos": 17,
+      "total_aberto": 154040
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
