@@ -367,6 +367,9 @@ export default function MktAdStudio() {
   const [gerandoLote, setGerandoLote] = useState(false)
   const [progressoLote, setProgressoLote] = useState({ atual: 0, total: 0 })
   const [resultadosLote, setResultadosLote] = useState([])
+  const [gerandoRecomendacoes, setGerandoRecomendacoes] = useState(false)
+  const [recomendacoesDia, setRecomendacoesDia] = useState([])
+  const [origemRecomendacoes, setOrigemRecomendacoes] = useState('')
 
   useEffect(() => {
     return () => {
@@ -598,6 +601,35 @@ export default function MktAdStudio() {
     } finally {
       setGerandoLote(false)
     }
+  }
+
+  async function handleGerarRecomendacoes() {
+    setGerandoRecomendacoes(true)
+    setErro('')
+
+    try {
+      const response = await fetch('/api/mkt/recomendacoes', {
+        method: 'POST',
+      })
+
+      const raw = await response.text()
+      const data = parseRespostaJsonSegura(raw)
+      if (!response.ok) {
+        throw new Error(data?.error || 'Nao foi possivel gerar as recomendacoes de postagem.')
+      }
+
+      setRecomendacoesDia(Array.isArray(data?.produtos) ? data.produtos : [])
+      setOrigemRecomendacoes(String(data?.origem || ''))
+    } catch (error) {
+      setErro(error instanceof Error ? error.message : 'Falha ao gerar as recomendacoes.')
+    } finally {
+      setGerandoRecomendacoes(false)
+    }
+  }
+
+  function usarRecomendacoesNoLote() {
+    if (!recomendacoesDia.length) return
+    setCodigosLote(recomendacoesDia.map((item) => item.codigo).join('\n'))
   }
 
   function handleFileChange(event) {
@@ -833,6 +865,60 @@ export default function MktAdStudio() {
                         </div>
                       ) : null}
                     </div>
+
+                    {modo === 'site' ? (
+                      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Sugestao inteligente do dia</p>
+                            <h3 className="mt-2 text-lg font-black uppercase text-slate-950">10 produtos para postar hoje</h3>
+                          </div>
+                          {origemRecomendacoes ? (
+                            <div className="rounded-[16px] bg-red-50 px-3 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-red-600">
+                              {origemRecomendacoes === 'ia' ? 'Curadoria IA' : 'Curadoria fallback'}
+                            </div>
+                          ) : null}
+                        </div>
+
+                        <p className="mt-3 text-sm text-slate-500">
+                          Analisa vendas dos ultimos 3 meses, estoque, preco acima de R$ 20 e potencial comercial para sugerir o que vale postar.
+                        </p>
+
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          <button
+                            type="button"
+                            onClick={handleGerarRecomendacoes}
+                            disabled={gerandoRecomendacoes}
+                            className="inline-flex items-center justify-center rounded-[18px] bg-red-600 px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-white disabled:cursor-not-allowed disabled:opacity-60"
+                          >
+                            {gerandoRecomendacoes ? 'Analisando...' : 'Gerar 10 sugestoes'}
+                          </button>
+                          {recomendacoesDia.length ? (
+                            <button
+                              type="button"
+                              onClick={usarRecomendacoesNoLote}
+                              className="inline-flex items-center justify-center rounded-[18px] border border-slate-300 bg-white px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-slate-800"
+                            >
+                              Jogar no lote
+                            </button>
+                          ) : null}
+                        </div>
+
+                        {recomendacoesDia.length ? (
+                          <div className="mt-5 rounded-[22px] border border-slate-200 bg-slate-50 p-4">
+                            <div className="space-y-3">
+                              {recomendacoesDia.map((item, index) => (
+                                <div key={`${item.codigo}-${index}`} className="rounded-[18px] bg-white px-4 py-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
+                                  <div className="text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">Codigo {item.codigo}</div>
+                                  <div className="mt-1 text-sm font-black uppercase text-slate-950">{item.descricao}</div>
+                                  {item.motivo ? <div className="mt-1 text-xs font-semibold text-slate-500">{item.motivo}</div> : null}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+                      </div>
+                    ) : null}
 
                     {modo === 'site' ? (
                       <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
