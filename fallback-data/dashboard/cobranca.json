@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 630545
+      "saldo": 630801
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15023
     }
   ],
-  "generated_at": "2026-04-15T10:21:12.165276",
+  "generated_at": "2026-04-15T11:45:41.281040",
   "kpis": {
     "clientes_atraso": 65,
-    "total_aberto": 802466,
+    "total_aberto": 802722,
     "total_atraso": 171921,
-    "total_vencer": 630545
+    "total_vencer": 630801
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -94,7 +94,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -3,
       "loja": "Loja 1",
-      "saldo": 1708,
+      "saldo": 1000,
       "vencimento": "2026-04-18T00:00:00"
     },
     {
