@@ -86,6 +86,66 @@ function extrairRecomendacoesTextoLivre(texto) {
   return Array.from(unicos.values())
 }
 
+function normalizarProdutosResposta(itens, candidatosPorCodigo) {
+  const lista = Array.isArray(itens) ? itens : []
+  const unicos = new Map()
+
+  for (const item of lista) {
+    const codigo = normalizarNumero(item?.codigo)
+    const candidato = candidatosPorCodigo.get(codigo)
+    if (!codigo || !candidato || unicos.has(codigo)) continue
+
+    unicos.set(codigo, {
+      codigo,
+      descricao: normalizarTexto(item?.descricao) || candidato.descricao || candidato.nome,
+      motivo: normalizarTexto(item?.motivo),
+    })
+  }
+
+  return Array.from(unicos.values())
+}
+
+async function chamarOpenAIJson(prompt, maxOutputTokens = 1600) {
+  const response = await fetch('https://api.openai.com/v1/responses', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'gpt-5.4-mini',
+      input: prompt,
+      reasoning: { effort: 'medium' },
+      max_output_tokens: maxOutputTokens,
+    }),
+  }).catch(() => null)
+
+  if (!response?.ok) {
+    const erro = await response?.json().catch(() => null)
+    throw new Error(erro?.error?.message || 'A IA nao conseguiu gerar recomendacoes agora.')
+  }
+
+  const data = await response.json().catch(() => null)
+  return extrairTextoResponses(data)
+}
+
+function tentarExtrairJson(texto) {
+  if (!texto) return null
+
+  try {
+    return JSON.parse(texto)
+  } catch {}
+
+  const match = texto.match(/\{[\s\S]*\}/)
+  if (match) {
+    try {
+      return JSON.parse(match[0])
+    } catch {}
+  }
+
+  return null
+}
+
 async function buscarCatalogoCompleto() {
   const response = await fetch(`${API_URL}/produtos?skip=0&limit=15000&todas_secoes=1`, {
     cache: 'no-store',
@@ -134,19 +194,23 @@ function montarCandidatos(produtos) {
   const campeoesVenda = [...base]
     .filter((item) => item.quantidade_vendida_3m > 0 || item.faturamento_3m > 0)
     .sort((a, b) => b.score_base - a.score_base)
-    .slice(0, 50)
+    .slice(0, 120)
 
   const apostas = [...base]
     .filter((item) => item.flag_potencial)
     .sort((a, b) => b.estoque - a.estoque || b.preco - a.preco)
-    .slice(0, 20)
+    .slice(0, 80)
+
+  const reforcoGeral = [...base]
+    .sort((a, b) => b.score_base - a.score_base || b.estoque - a.estoque)
+    .slice(0, 200)
 
   const mapa = new Map()
-  for (const item of [...campeoesVenda, ...apostas]) {
+  for (const item of [...campeoesVenda, ...apostas, ...reforcoGeral]) {
     mapa.set(item.id, item)
   }
 
-  return Array.from(mapa.values()).slice(0, 60)
+  return Array.from(mapa.values()).slice(0, 220)
 }
 
 export async function POST() {
@@ -157,6 +221,7 @@ export async function POST() {
   try {
     const produtos = await buscarCatalogoCompleto()
     const candidatos = montarCandidatos(produtos)
+    const candidatosPorCodigo = new Map(candidatos.map((item) => [item.id, item]))
 
     if (!candidatos.length) {
       return jsonErro('Nao encontrei produtos suficientes para recomendar.', 404)
@@ -182,50 +247,45 @@ export async function POST() {
       JSON.stringify(candidatos, null, 2),
     ].join('\n')
 
-    const response = await fetch('https://api.openai.com/v1/responses', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'gpt-5.4-mini',
-        input: prompt,
-        reasoning: { effort: 'medium' },
-        max_output_tokens: 1200,
-      }),
-    }).catch(() => null)
+    const texto = await chamarOpenAIJson(prompt, 1400)
+    const json = tentarExtrairJson(texto)
 
-    if (!response?.ok) {
-      const erro = await response?.json().catch(() => null)
-      return jsonErro(erro?.error?.message || 'A IA nao conseguiu gerar recomendacoes agora.', response?.status || 502)
-    }
-
-    const data = await response.json().catch(() => null)
-    const texto = extrairTextoResponses(data)
-    let json = null
-
-    try {
-      json = JSON.parse(texto)
-    } catch {
-      const match = texto.match(/\{[\s\S]*\}/)
-      if (match) {
-        json = JSON.parse(match[0])
-      }
-    }
-
-    let produtosResposta = Array.isArray(json?.produtos) ? json.produtos : []
-    let produtosNormalizados = produtosResposta
-      .map((item) => ({
-        codigo: normalizarNumero(item?.codigo),
-        descricao: normalizarTexto(item?.descricao),
-        motivo: normalizarTexto(item?.motivo),
-      }))
-      .filter((item) => item.codigo > 0 && item.descricao)
-      .slice(0, 10)
+    let produtosNormalizados = normalizarProdutosResposta(json?.produtos, candidatosPorCodigo)
 
     if (!produtosNormalizados.length) {
-      produtosNormalizados = extrairRecomendacoesTextoLivre(texto).slice(0, 10)
+      produtosNormalizados = normalizarProdutosResposta(
+        extrairRecomendacoesTextoLivre(texto),
+        candidatosPorCodigo,
+      )
+    }
+
+    if (produtosNormalizados.length !== 10) {
+      const repararPrompt = [
+        'Voce vai corrigir uma recomendacao comercial que veio incompleta.',
+        'Use apenas os produtos da lista de candidatos abaixo.',
+        'Retorne somente JSON valido, sem markdown, sem comentarios, neste formato:',
+        '{"produtos":[{"codigo":123,"descricao":"NOME DO PRODUTO","motivo":"frase curta"}]}',
+        'A resposta precisa conter exatamente 10 itens unicos.',
+        'Todos os codigos precisam existir na lista de candidatos.',
+        '',
+        'Resposta anterior da IA:',
+        texto || '(vazio)',
+        '',
+        'Candidatos validos:',
+        JSON.stringify(candidatos, null, 2),
+      ].join('\n')
+
+      const textoReparado = await chamarOpenAIJson(repararPrompt, 1800)
+      const jsonReparado = tentarExtrairJson(textoReparado)
+
+      produtosNormalizados = normalizarProdutosResposta(jsonReparado?.produtos, candidatosPorCodigo)
+
+      if (produtosNormalizados.length !== 10) {
+        produtosNormalizados = normalizarProdutosResposta(
+          extrairRecomendacoesTextoLivre(textoReparado),
+          candidatosPorCodigo,
+        )
+      }
     }
 
     if (produtosNormalizados.length !== 10) {
