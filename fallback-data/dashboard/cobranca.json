@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 630545
+      "saldo": 634586
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 32707
+      "saldo": 32407
     },
     {
       "faixa": "91–180 dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 21016
+      "saldo": 19266
     },
     {
       "faixa": "31–60 dias",
       "saldo": 15023
     }
   ],
-  "generated_at": "2026-04-15T10:21:12.165276",
+  "generated_at": "2026-04-15T13:55:49.025984",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 802466,
-    "total_atraso": 171921,
-    "total_vencer": 630545
+    "clientes_atraso": 64,
+    "total_aberto": 804457,
+    "total_atraso": 169871,
+    "total_vencer": 634586
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -94,7 +94,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -3,
       "loja": "Loja 1",
-      "saldo": 1708,
+      "saldo": 1000,
       "vencimento": "2026-04-18T00:00:00"
     },
     {
@@ -150,12 +150,6 @@
       "total_atraso": 6500
     },
     {
-      "cliente": "DOUGLAS SOARES DA CONCEICAO",
-      "maior_atraso": 107,
-      "titulos": 2,
-      "total_atraso": 5950
-    },
-    {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
       "maior_atraso": 264,
       "titulos": 1,
@@ -166,6 +160,12 @@
       "maior_atraso": 109,
       "titulos": 2,
       "total_atraso": 5489
+    },
+    {
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 280,
+      "titulos": 5,
+      "total_atraso": 4825
     }
   ]
 }
