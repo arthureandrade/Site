@@ -38,6 +38,54 @@ function extrairTextoResponses(data) {
   return partes.join('\n').trim()
 }
 
+function limparTextoRecomendacao(texto) {
+  return normalizarTexto(
+    String(texto || '')
+      .replace(/^[-*•\d.\)\s]+/, '')
+      .replace(/^codigo[:\s-]*/i, '')
+      .replace(/^cod[:.\s-]*/i, ''),
+  )
+}
+
+function extrairRecomendacoesTextoLivre(texto) {
+  const linhas = String(texto || '')
+    .split(/\r?\n/)
+    .map((linha) => linha.trim())
+    .filter(Boolean)
+
+  const itens = []
+
+  for (const linha of linhas) {
+    const match = linha.match(/(?:cod(?:igo)?[:.\s-]*)?(\d{1,6})\s*[-–:|]\s*(.+)$/i)
+    if (match) {
+      itens.push({
+        codigo: normalizarNumero(match[1]),
+        descricao: limparTextoRecomendacao(match[2]),
+        motivo: '',
+      })
+      continue
+    }
+
+    const matchCodigoInicio = linha.match(/^(\d{1,6})\s+(.+)$/)
+    if (matchCodigoInicio) {
+      itens.push({
+        codigo: normalizarNumero(matchCodigoInicio[1]),
+        descricao: limparTextoRecomendacao(matchCodigoInicio[2]),
+        motivo: '',
+      })
+    }
+  }
+
+  const unicos = new Map()
+  for (const item of itens) {
+    if (item.codigo > 0 && item.descricao && !unicos.has(item.codigo)) {
+      unicos.set(item.codigo, item)
+    }
+  }
+
+  return Array.from(unicos.values())
+}
+
 async function buscarCatalogoCompleto() {
   const response = await fetch(`${API_URL}/produtos?skip=0&limit=15000&todas_secoes=1`, {
     cache: 'no-store',
@@ -124,9 +172,11 @@ export async function POST() {
       '- produtos que ja trazem vendas',
       '- misturar itens fortes e alguns itens com potencial de crescer mais',
       '- evitar escolher 10 itens quase iguais',
+      '- nao escolha itens da secao 6 ou fora da secao 5',
       '',
-      'Retorne somente JSON valido neste formato:',
+      'Retorne somente JSON valido, sem markdown, sem texto antes ou depois, neste formato:',
       '{"produtos":[{"codigo":123,"descricao":"NOME DO PRODUTO","motivo":"frase curta"}]}',
+      'A resposta precisa conter exatamente 10 itens em "produtos".',
       '',
       'Candidatos:',
       JSON.stringify(candidatos, null, 2),
@@ -164,8 +214,8 @@ export async function POST() {
       }
     }
 
-    const produtosResposta = Array.isArray(json?.produtos) ? json.produtos : []
-    const produtosNormalizados = produtosResposta
+    let produtosResposta = Array.isArray(json?.produtos) ? json.produtos : []
+    let produtosNormalizados = produtosResposta
       .map((item) => ({
         codigo: normalizarNumero(item?.codigo),
         descricao: normalizarTexto(item?.descricao),
@@ -175,7 +225,11 @@ export async function POST() {
       .slice(0, 10)
 
     if (!produtosNormalizados.length) {
-      return jsonErro('A IA nao retornou uma lista valida de 10 produtos para recomendar.', 502)
+      produtosNormalizados = extrairRecomendacoesTextoLivre(texto).slice(0, 10)
+    }
+
+    if (produtosNormalizados.length !== 10) {
+      return jsonErro('A IA nao retornou uma lista valida com 10 produtos para recomendar.', 502)
     }
 
     return Response.json({

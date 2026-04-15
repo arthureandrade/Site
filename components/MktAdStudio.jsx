@@ -712,13 +712,13 @@ export default function MktAdStudio() {
     <div className="bg-[radial-gradient(circle_at_top,#3b0000_0%,#140606_42%,#090909_100%)]">
       <div className="mx-auto flex w-full max-w-[1720px] flex-col gap-8 px-4 py-8 sm:px-6 xl:px-10">
         <section className="overflow-hidden rounded-[36px] border border-red-400/30 bg-white/95 shadow-[0_35px_100px_rgba(127,29,29,0.35)]">
-          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid gap-0 lg:grid-cols-[0.72fr_1.28fr]">
             <div className="bg-[linear-gradient(135deg,#7f0000_0%,#d10921_50%,#ff6b1a_100%)] px-6 py-8 text-white sm:px-8">
               <p className="text-[11px] font-black uppercase tracking-[0.34em] text-white/70">Painel MKT</p>
               <h1 className="mt-3 text-3xl font-black uppercase leading-tight sm:text-5xl">
                 Gere anuncios prontos para stories e feed
               </h1>
-              <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/88 sm:text-base">
+              <p className="mt-4 max-w-lg text-sm leading-relaxed text-white/88 sm:text-base">
                 Envie a foto do produto, informe o valor e deixe o painel montar uma arte promocional inspirada no estilo comercial da Galpao do Aco.
               </p>
               <div className="mt-8 grid gap-3 text-sm font-semibold sm:grid-cols-2">
@@ -742,9 +742,9 @@ export default function MktAdStudio() {
                 <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
                   <label className="block rounded-[30px] border border-dashed border-red-300 bg-[linear-gradient(180deg,#fff5f5_0%,#ffffff_100%)] p-5">
                     <span className="text-[11px] font-black uppercase tracking-[0.28em] text-red-700">Imagem do produto</span>
-                    <div className="mt-4 flex min-h-[280px] items-center justify-center overflow-hidden rounded-[24px] bg-slate-100">
+                    <div className="mt-4 flex min-h-[220px] items-center justify-center overflow-hidden rounded-[24px] bg-slate-100">
                       {previewProduto ? (
-                        <img src={previewProduto} alt="Preview do produto" className="h-full max-h-[420px] w-full object-contain p-4" />
+                        <img src={previewProduto} alt="Preview do produto" className="h-full max-h-[320px] w-full object-contain p-4" />
                       ) : (
                         <div className="max-w-sm px-6 text-center text-sm font-semibold text-slate-500">
                           {modo === 'manual'
@@ -763,9 +763,9 @@ export default function MktAdStudio() {
                   </label>
 
                   <div className="grid gap-4 sm:grid-cols-2 xl:sticky xl:top-6 xl:self-start">
-                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Modo de geracao</p>
-                      <div className="mt-4 grid gap-3">
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         <button
                           type="button"
                           onClick={() => setModo('manual')}
@@ -791,9 +791,9 @@ export default function MktAdStudio() {
                       </div>
                     </div>
 
-                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Formato da postagem</p>
-                      <div className="mt-4 grid gap-3">
+                      <div className="mt-4 grid gap-3 sm:grid-cols-3">
                         <button
                           type="button"
                           onClick={() => setPostFormat('stories')}
@@ -828,7 +828,7 @@ export default function MktAdStudio() {
                           Gerar ambos
                         </button>
                       </div>
-                      <p className="mt-3 text-sm text-slate-500">
+                      <p className="mt-3 max-w-xl text-sm text-slate-500">
                         {postFormat === 'feed'
                           ? 'Arte mais compacta, pensada para feed vertical 4:5.'
                           : postFormat === 'both'
@@ -837,9 +837,9 @@ export default function MktAdStudio() {
                       </p>
                     </div>
 
-                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Exibicao do preco</p>
-                      <div className="mt-4 grid gap-3">
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         <button
                           type="button"
                           onClick={() => setPriceMode('with-price')}
@@ -863,14 +863,14 @@ export default function MktAdStudio() {
                           Sem preco
                         </button>
                       </div>
-                      <p className="mt-3 text-sm text-slate-500">
+                      <p className="mt-3 max-w-xl text-sm text-slate-500">
                         {priceMode === 'without-price'
                           ? 'A arte sai sem a caixa vermelha de valor.'
                           : 'A arte sai com a placa vermelha de preco.'}
                       </p>
                     </div>
 
-                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Informacoes do produto</p>
                       <div className="mt-4 grid gap-3">
                         <input
@@ -891,7 +891,7 @@ export default function MktAdStudio() {
                       </div>
                     </div>
 
-                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:col-span-2">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Valor da oferta</p>
                       <input
                         type="text"
@@ -902,7 +902,7 @@ export default function MktAdStudio() {
                         className="mt-4 w-full rounded-[20px] border border-slate-200 px-4 py-4 text-2xl font-black text-slate-950 outline-none focus:border-red-500 disabled:bg-slate-100 disabled:text-slate-400"
                         disabled={modo === 'site'}
                       />
-                      <p className="mt-3 text-sm text-slate-500">
+                      <p className="mt-3 max-w-xl text-sm text-slate-500">
                         {priceMode === 'without-price'
                           ? 'Neste modo, a arte sera gerada sem exibir valor.'
                           : modo === 'site'
@@ -931,7 +931,7 @@ export default function MktAdStudio() {
                           ) : null}
                         </div>
 
-                        <p className="mt-3 text-sm text-slate-500">
+                        <p className="mt-3 max-w-2xl text-sm text-slate-500">
                           Analisa vendas dos ultimos 3 meses, estoque, preco acima de R$ 20 e potencial comercial para sugerir o que vale postar.
                         </p>
 
@@ -985,7 +985,7 @@ export default function MktAdStudio() {
                             </option>
                           ))}
                         </select>
-                        <p className="mt-3 text-sm text-slate-500">
+                        <p className="mt-3 max-w-xl text-sm text-slate-500">
                           O preco do site sera reduzido por esse percentual antes de entrar na arte.
                         </p>
                       </div>
@@ -1000,7 +1000,7 @@ export default function MktAdStudio() {
                           placeholder="Cole varios codigos aqui, separados por virgula, espaco ou quebra de linha"
                           className="mt-4 min-h-[140px] w-full rounded-[18px] border border-slate-200 px-4 py-4 text-sm font-semibold text-slate-900 outline-none focus:border-red-500"
                         />
-                        <p className="mt-3 text-sm text-slate-500">
+                        <p className="mt-3 max-w-xl text-sm text-slate-500">
                           {quantidadeCodigosLote
                             ? `${quantidadeCodigosLote} codigo(s) identificado(s) para gerar em bloco.`
                             : 'Use esse campo quando quiser gerar varios anuncios de uma vez a partir dos codigos do site.'}
@@ -1055,7 +1055,7 @@ export default function MktAdStudio() {
 
                 {erro ? <div className="rounded-[24px] bg-red-50 px-5 py-4 text-sm font-semibold text-red-700">{erro}</div> : null}
 
-                <div className="flex flex-wrap items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3 rounded-[26px] border border-slate-200 bg-slate-50 px-4 py-4 shadow-[0_16px_36px_rgba(15,23,42,0.06)]">
                   <button
                     type="submit"
                     disabled={gerando}
