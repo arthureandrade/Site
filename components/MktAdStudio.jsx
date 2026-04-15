@@ -124,74 +124,98 @@ function desenharLogoComSombra(ctx, logoImage, x, y, width, height) {
   ctx.restore()
 }
 
-async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto } = {}) {
+function parseRespostaJsonSegura(raw) {
+  if (!raw) return {}
+  try {
+    return JSON.parse(raw)
+  } catch {
+    return { error: raw }
+  }
+}
+
+async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codigoProduto, postFormat = 'stories' } = {}) {
   const [baseImage, logoImage] = await Promise.all([
     carregarImagem(baseImageSrc),
     carregarImagem(`/logofundo.png?v=${Date.now()}`),
   ])
   const canvas = document.createElement('canvas')
+  const isFeed = postFormat === 'feed'
   canvas.width = 1080
-  canvas.height = 1920
+  canvas.height = isFeed ? 1350 : 1920
 
   const ctx = canvas.getContext('2d')
   ctx.imageSmoothingEnabled = true
   ctx.imageSmoothingQuality = 'high'
 
-  ctx.fillStyle = '#130607'
-  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  const canvasW = canvas.width
+  const canvasH = canvas.height
+  const footerHeight = isFeed ? 150 : 220
+  const topGradientHeight = isFeed ? 320 : 420
+  const bottomOverlayHeight = isFeed ? 480 : 760
+  const logoCardX = isFeed ? 690 : 640
+  const logoCardY = isFeed ? 26 : 36
+  const logoCardW = isFeed ? 300 : 360
+  const logoCardH = isFeed ? 154 : 186
+  const titleStartY = isFeed ? 236 : 318
+  const titleLineHeight = isFeed ? 66 : 78
+  const titleFont = isFeed ? 62 : 74
+  const precoBoxH = isFeed ? 182 : 220
+  const precoBoxY = isFeed ? canvasH - footerHeight - precoBoxH - 34 : 1362
+  const precoBaseY = isFeed ? precoBoxY + 132 : 1538
+  const headerBadgeY = isFeed ? 58 : 70
+  const headerCodeY = isFeed ? 128 : 150
+  const footerY = canvasH - footerHeight
 
-  desenharCover(ctx, baseImage, canvas.width, canvas.height, {
-    zoom: 1.14,
+  ctx.fillStyle = '#130607'
+  ctx.fillRect(0, 0, canvasW, canvasH)
+
+  desenharCover(ctx, baseImage, canvasW, canvasH, {
+    zoom: isFeed ? 1.08 : 1.14,
     focalX: 0.5,
-    focalY: 0.42,
+    focalY: isFeed ? 0.4 : 0.42,
   })
 
-  const topGradient = ctx.createLinearGradient(0, 0, 0, 420)
+  const topGradient = ctx.createLinearGradient(0, 0, 0, topGradientHeight)
   topGradient.addColorStop(0, 'rgba(0,0,0,0.84)')
   topGradient.addColorStop(1, 'rgba(0,0,0,0)')
   ctx.fillStyle = topGradient
-  ctx.fillRect(0, 0, canvas.width, 420)
+  ctx.fillRect(0, 0, canvasW, topGradientHeight)
 
-  const vignette = ctx.createRadialGradient(540, 980, 280, 540, 980, 1080)
+  const vignette = ctx.createRadialGradient(canvasW / 2, canvasH * 0.52, 280, canvasW / 2, canvasH * 0.52, canvasW)
   vignette.addColorStop(0, 'rgba(0,0,0,0)')
   vignette.addColorStop(1, 'rgba(0,0,0,0.34)')
   ctx.fillStyle = vignette
-  ctx.fillRect(0, 0, canvas.width, canvas.height)
+  ctx.fillRect(0, 0, canvasW, canvasH)
 
-  const bottomGradient = ctx.createLinearGradient(0, canvas.height - 760, 0, canvas.height)
+  const bottomGradient = ctx.createLinearGradient(0, canvasH - bottomOverlayHeight, 0, canvasH)
   bottomGradient.addColorStop(0, 'rgba(0,0,0,0)')
   bottomGradient.addColorStop(0.3, 'rgba(0,0,0,0.24)')
   bottomGradient.addColorStop(1, 'rgba(22,4,4,0.95)')
   ctx.fillStyle = bottomGradient
-  ctx.fillRect(0, canvas.height - 760, canvas.width, 760)
-
-  const logoCardX = 640
-  const logoCardY = 36
-  const logoCardW = 360
-  const logoCardH = 186
+  ctx.fillRect(0, canvasH - bottomOverlayHeight, canvasW, bottomOverlayHeight)
 
   desenharLogoComSombra(ctx, logoImage, logoCardX, logoCardY, logoCardW, logoCardH)
 
   ctx.save()
   ctx.fillStyle = 'rgba(255,255,255,0.14)'
-  roundedRectPath(ctx, 54, 70, 296, 64, 20)
+  roundedRectPath(ctx, 54, headerBadgeY, 296, 64, 20)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
   ctx.font = '700 26px Arial'
-  ctx.fillText('OFERTA ESPECIAL', 82, 112)
+  ctx.fillText('OFERTA ESPECIAL', 82, headerBadgeY + 42)
 
   if (codigoProduto) {
     ctx.save()
       ctx.fillStyle = 'rgba(255,255,255,0.12)'
-      roundedRectPath(ctx, 54, 150, 184, 48, 16)
+      roundedRectPath(ctx, 54, headerCodeY, 184, 48, 16)
       ctx.fill()
       ctx.restore()
 
       ctx.fillStyle = '#ffffff'
       ctx.font = '700 21px Arial'
-      ctx.fillText(`COD. ${codigoProduto}`, 76, 182)
+      ctx.fillText(`COD. ${codigoProduto}`, 76, headerCodeY + 32)
   }
 
   const linhasTitulo = quebrarTitulo(nomeProduto)
@@ -200,34 +224,32 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
     ctx.shadowColor = 'rgba(0,0,0,0.38)'
     ctx.shadowBlur = 18
     ctx.fillStyle = '#ffffff'
-  ctx.font = '900 74px Arial'
-  let y = 318
+    ctx.font = `900 ${titleFont}px Arial`
+    let y = titleStartY
   for (const linha of linhasTitulo) {
       ctx.fillText(linha.toUpperCase(), 76, y)
-      y += 78
+      y += titleLineHeight
     }
     ctx.restore()
   }
 
   const { inteira, decimal } = quebrarPreco(precoTexto)
-  const precoBoxY = 1362
-  const precoBoxH = 220
 
   const precoPrefixo = 'R$'
-  let fontePreco = 124
-  let fonteDecimal = 64
+  let fontePreco = isFeed ? 102 : 124
+  let fonteDecimal = isFeed ? 54 : 64
   ctx.textBaseline = 'alphabetic'
   ctx.font = `900 ${fontePreco}px Arial`
   let larguraInteira = ctx.measureText(inteira).width
   ctx.font = `900 ${fonteDecimal}px Arial`
   let larguraDecimal = ctx.measureText(`,${decimal}`).width
-  ctx.font = '900 82px Arial'
+  ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
   const larguraPrefixo = ctx.measureText(precoPrefixo).width + 18
-  ctx.font = '800 42px Arial'
+  ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
   const larguraAvista = ctx.measureText('A VISTA').width
-  const larguraMaximaPreco = 760 - larguraAvista
+  const larguraMaximaPreco = (isFeed ? 684 : 760) - larguraAvista
 
-  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > 96) {
+  while (larguraPrefixo + larguraInteira + larguraDecimal > larguraMaximaPreco && fontePreco > (isFeed ? 78 : 96)) {
     fontePreco -= 6
     fonteDecimal -= 3
     ctx.font = `900 ${fontePreco}px Arial`
@@ -238,10 +260,9 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 
   const totalPreco = larguraPrefixo + larguraInteira + larguraDecimal
   const blocoTotal = totalPreco + 48 + larguraAvista
-  const precoBoxW = Math.min(948, Math.max(560, blocoTotal + 136))
-  const precoBoxX = (1080 - precoBoxW) / 2
+  const precoBoxW = Math.min(isFeed ? 930 : 948, Math.max(isFeed ? 620 : 560, blocoTotal + 136))
+  const precoBoxX = (canvasW - precoBoxW) / 2
   const precoX = precoBoxX + (precoBoxW - blocoTotal) / 2
-  const precoBaseY = 1538
 
   ctx.save()
   ctx.shadowColor = 'rgba(0,0,0,0.28)'
@@ -263,11 +284,11 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '700 28px Arial'
-  ctx.fillText('POR APENAS:', precoBoxX + 34, 1434)
+  ctx.font = `700 ${isFeed ? 24 : 28}px Arial`
+  ctx.fillText('POR APENAS:', precoBoxX + 34, precoBoxY + 64)
 
-  ctx.font = '900 82px Arial'
-  ctx.fillText(precoPrefixo, precoX, precoBaseY - 18)
+  ctx.font = `900 ${isFeed ? 70 : 82}px Arial`
+  ctx.fillText(precoPrefixo, precoX, precoBaseY - (isFeed ? 14 : 18))
 
   const inteiroX = precoX + larguraPrefixo
   ctx.font = `900 ${fontePreco}px Arial`
@@ -275,46 +296,48 @@ async function comporAnuncioFinal(baseImageSrc, precoTexto, { nomeProduto, codig
 
   const decimalX = inteiroX + larguraInteira + 8
   ctx.font = `900 ${fonteDecimal}px Arial`
-  ctx.fillText(`,${decimal}`, decimalX, precoBaseY - 20)
+  ctx.fillText(`,${decimal}`, decimalX, precoBaseY - (isFeed ? 16 : 20))
 
-  ctx.font = '800 42px Arial'
+  ctx.font = `800 ${isFeed ? 36 : 42}px Arial`
   const avista = 'A VISTA'
-  const avistaWidth = ctx.measureText(avista).width
-  ctx.fillText(avista, decimalX + larguraDecimal + 48, precoBaseY - 8)
+  ctx.fillText(avista, decimalX + larguraDecimal + 48, precoBaseY - (isFeed ? 4 : 8))
 
-  const footerY = 1700
-  const footerGradient = ctx.createLinearGradient(0, footerY, 1080, 1920)
+  const footerGradient = ctx.createLinearGradient(0, footerY, canvasW, canvasH)
   footerGradient.addColorStop(0, '#6f0910')
   footerGradient.addColorStop(1, '#310306')
   ctx.fillStyle = footerGradient
-  ctx.fillRect(0, footerY, 1080, 220)
+  ctx.fillRect(0, footerY, canvasW, footerHeight)
 
   ctx.save()
   ctx.fillStyle = 'rgba(255,255,255,0.06)'
-  roundedRectPath(ctx, 56, 1732, 430, 82, 26)
+  const phoneCardY = footerY + (isFeed ? 20 : 32)
+  const phoneCardH = isFeed ? 62 : 82
+  roundedRectPath(ctx, 56, phoneCardY, 430, phoneCardH, 26)
   ctx.fill()
-  roundedRectPath(ctx, 594, 1732, 430, 82, 26)
+  roundedRectPath(ctx, 594, phoneCardY, 430, phoneCardH, 26)
   ctx.fill()
   ctx.restore()
 
   ctx.fillStyle = '#ffffff'
-  ctx.font = '800 36px Arial'
-  ctx.fillText(WHATSAPP_COMERCIAL, 86, 1786)
-  ctx.fillText(TELEFONE_PRINCIPAL, 626, 1786)
+  ctx.font = `800 ${isFeed ? 30 : 36}px Arial`
+  ctx.fillText(WHATSAPP_COMERCIAL, 86, phoneCardY + (isFeed ? 40 : 54))
+  ctx.fillText(TELEFONE_PRINCIPAL, 626, phoneCardY + (isFeed ? 40 : 54))
 
-  ctx.font = '700 17px Arial'
-  ctx.fillText('LOJA MATRIZ', 74, 1856)
-  ctx.fillText('LOJA FILIAL', 74, 1890)
+  ctx.font = `700 ${isFeed ? 14 : 17}px Arial`
+  const infoBaseY = footerY + (isFeed ? 100 : 156)
+  ctx.fillText('LOJA MATRIZ', 74, infoBaseY)
+  ctx.fillText('LOJA FILIAL', 74, infoBaseY + (isFeed ? 28 : 34))
 
-  ctx.font = '600 18px Arial'
-  ctx.fillText(ENDERECO_1, 204, 1856)
-  ctx.fillText(ENDERECO_2, 204, 1890)
+  ctx.font = `600 ${isFeed ? 15 : 18}px Arial`
+  ctx.fillText(ENDERECO_1, 204, infoBaseY)
+  ctx.fillText(ENDERECO_2, 204, infoBaseY + (isFeed ? 28 : 34))
 
   return canvas.toDataURL('image/png')
 }
 
 export default function MktAdStudio() {
   const [modo, setModo] = useState('manual')
+  const [postFormat, setPostFormat] = useState('stories')
   const [arquivo, setArquivo] = useState(null)
   const [previewProduto, setPreviewProduto] = useState('')
   const [valor, setValor] = useState('')
@@ -327,6 +350,7 @@ export default function MktAdStudio() {
   const [arteBase, setArteBase] = useState('')
   const [copyTexto, setCopyTexto] = useState('')
   const [detalhes, setDetalhes] = useState(null)
+  const [gerandoCopy, setGerandoCopy] = useState(false)
 
   useEffect(() => {
     return () => {
@@ -370,13 +394,15 @@ export default function MktAdStudio() {
       if (codigoProduto) formData.append('productCode', codigoProduto)
       if (nomeProduto) formData.append('productName', nomeProduto)
       if (modo === 'site') formData.append('discountPercent', descontoSite)
+      formData.append('postFormat', postFormat)
 
       const response = await fetch('/api/mkt/generate', {
         method: 'POST',
         body: formData,
       })
 
-      const data = await response.json()
+      const raw = await response.text()
+      const data = parseRespostaJsonSegura(raw)
       if (!response.ok) {
         throw new Error(data?.error || 'Nao foi possivel gerar o anuncio.')
       }
@@ -388,12 +414,13 @@ export default function MktAdStudio() {
         nomeProduto: data.nomeProduto || nomeProduto,
         codigoProduto: data.codigoProduto || codigoProduto,
         descontoPercentual: data.descontoPercentual || 0,
+        postFormat: data.postFormat || postFormat,
       })
-      setCopyTexto(data.copy || '')
 
       const finalDataUrl = await comporAnuncioFinal(data.imageDataUrl, data.precoFormatado, {
         nomeProduto: data.nomeProduto || nomeProduto,
         codigoProduto: data.codigoProduto || codigoProduto,
+        postFormat: data.postFormat || postFormat,
       })
       setResultado(finalDataUrl)
     } catch (error) {
@@ -401,6 +428,38 @@ export default function MktAdStudio() {
       setDetalhes(null)
     } finally {
       setGerando(false)
+    }
+  }
+
+  async function handleGerarCopy() {
+    if (!detalhes?.preco || !resultado) return
+
+    setGerandoCopy(true)
+    setErro('')
+
+    try {
+      const response = await fetch('/api/mkt/copy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nomeProduto: detalhes?.nomeProduto || nomeProduto,
+          codigoProduto: detalhes?.codigoProduto || codigoProduto,
+          precoFormatado: detalhes?.preco,
+          postFormat: detalhes?.postFormat || postFormat,
+        }),
+      })
+
+      const raw = await response.text()
+      const data = parseRespostaJsonSegura(raw)
+      if (!response.ok) {
+        throw new Error(data?.error || 'Nao foi possivel gerar a copy.')
+      }
+
+      setCopyTexto(data.copy || '')
+    } catch (error) {
+      setErro(error instanceof Error ? error.message : 'Falha ao gerar a copy.')
+    } finally {
+      setGerandoCopy(false)
     }
   }
 
@@ -435,7 +494,7 @@ export default function MktAdStudio() {
             <div className="bg-[linear-gradient(135deg,#7f0000_0%,#d10921_50%,#ff6b1a_100%)] px-6 py-8 text-white sm:px-8">
               <p className="text-[11px] font-black uppercase tracking-[0.34em] text-white/70">Painel MKT</p>
               <h1 className="mt-3 text-3xl font-black uppercase leading-tight sm:text-5xl">
-                Gere anuncios prontos para status e stories
+                Gere anuncios prontos para stories e feed
               </h1>
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/88 sm:text-base">
                 Envie a foto do produto, informe o valor e deixe o painel montar uma arte promocional inspirada no estilo comercial da Galpao do Aco.
@@ -511,6 +570,39 @@ export default function MktAdStudio() {
                     </div>
 
                     <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+                      <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Formato da postagem</p>
+                      <div className="mt-4 grid gap-3">
+                        <button
+                          type="button"
+                          onClick={() => setPostFormat('stories')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            postFormat === 'stories'
+                              ? 'bg-slate-950 text-white shadow-[0_16px_34px_rgba(15,23,42,0.24)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Post para stories
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setPostFormat('feed')}
+                          className={`rounded-[20px] px-4 py-4 text-left text-sm font-black uppercase tracking-[0.14em] transition ${
+                            postFormat === 'feed'
+                              ? 'bg-slate-950 text-white shadow-[0_16px_34px_rgba(15,23,42,0.24)]'
+                              : 'border border-slate-200 bg-white text-slate-700'
+                          }`}
+                        >
+                          Post para feed
+                        </button>
+                      </div>
+                      <p className="mt-3 text-sm text-slate-500">
+                        {postFormat === 'feed'
+                          ? 'Arte mais compacta, pensada para feed vertical 4:5.'
+                          : 'Arte alta e impactante, pensada para status e stories.'}
+                      </p>
+                    </div>
+
+                    <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                       <p className="text-[11px] font-black uppercase tracking-[0.28em] text-slate-500">Informacoes do produto</p>
                       <div className="mt-4 grid gap-3">
                         <input
@@ -583,6 +675,7 @@ export default function MktAdStudio() {
                         <p>- preco exato em destaque forte</p>
                         <p>- visual promocional inspirado nas referencias enviadas</p>
                         <p>- headline com nome e codigo do produto</p>
+                        <p>- formato atual: {postFormat === 'feed' ? 'feed 4:5' : 'stories/status'}</p>
                       </div>
                     </div>
                   </div>
@@ -606,6 +699,17 @@ export default function MktAdStudio() {
                       className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800"
                     >
                         Baixar PNG
+                      </button>
+                    ) : null}
+
+                    {resultado ? (
+                      <button
+                        type="button"
+                        onClick={handleGerarCopy}
+                        disabled={gerandoCopy}
+                        className="inline-flex items-center justify-center rounded-[22px] border border-slate-300 bg-white px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+                      >
+                        {gerandoCopy ? 'Gerando copy...' : 'Gerar copy'}
                       </button>
                     ) : null}
 
@@ -661,7 +765,7 @@ export default function MktAdStudio() {
                   </pre>
                 ) : (
                   <div className="text-sm font-semibold leading-relaxed text-slate-500">
-                    Depois que o anuncio for gerado, o painel cria aqui uma copy curta de 3 linhas para voce postar junto com a imagem.
+                    Depois que a arte ficar pronta, clique em Gerar copy para montar aqui uma legenda curta de 3 linhas.
                   </div>
                 )}
               </div>
@@ -674,7 +778,9 @@ export default function MktAdStudio() {
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Fundo contextual coerente com o produto</div>
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Produto em escala heroica e com mais volume visual</div>
                 <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Headlines curtas e promocionais</div>
-                <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">Acabamento pensado para status e stories</div>
+                <div className="rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4">
+                  Acabamento pensado para {postFormat === 'feed' ? 'feed 4:5' : 'status e stories'}
+                </div>
               </div>
             </div>
 

@@ -3,7 +3,6 @@ import {
   montarPromptMkt,
   sanitizarTextoCurto,
   aplicarDescontoMkt,
-  montarPromptCopyMkt,
 } from '@/lib/mktPrompt'
 import sharp from 'sharp'
 
@@ -37,32 +36,6 @@ async function obterLogoReferenciaBuffer() {
   if (!response?.ok) return null
   const buffer = Buffer.from(await response.arrayBuffer())
   return normalizarImagemParaOpenAI(buffer)
-}
-
-async function gerarCopyPromocional({ nomeProduto, precoFormatado, codigoProduto }) {
-  const response = await fetch('https://api.openai.com/v1/responses', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'gpt-5.4-mini',
-      input: montarPromptCopyMkt({ nomeProduto, precoFormatado, codigoProduto }),
-      reasoning: { effort: 'low' },
-      max_output_tokens: 180,
-    }),
-  }).catch(() => null)
-
-  if (!response?.ok) return ''
-  const data = await response.json().catch(() => null)
-  const texto = String(data?.output_text || '').trim()
-  return texto
-    .split(/\r?\n/)
-    .map((linha) => linha.trim())
-    .filter(Boolean)
-    .slice(0, 3)
-    .join('\n')
 }
 
 function montarFotoProdutoUrl(produto) {
@@ -100,6 +73,7 @@ export async function POST(request) {
     const codigoInformado = sanitizarTextoCurto(formData.get('productCode'))
     const nomeInformado = sanitizarTextoCurto(formData.get('productName'))
     const descontoInformado = Number(formData.get('discountPercent') || 0)
+    const postFormat = String(formData.get('postFormat') || 'stories').toLowerCase() === 'feed' ? 'feed' : 'stories'
 
     let arquivoImagem = imagem
     let precoFonte = valor
@@ -151,6 +125,7 @@ export async function POST(request) {
       nomeArquivo: arquivoImagem.name,
       nomeProduto,
       codigoProduto,
+      postFormat,
     })
 
     const bufferOriginal = Buffer.from(await arquivoImagem.arrayBuffer())
@@ -186,12 +161,6 @@ export async function POST(request) {
       return jsonErro('A OpenAI nao retornou imagem para este anuncio.', 502)
     }
 
-    const copy = await gerarCopyPromocional({
-      nomeProduto,
-      precoFormatado,
-      codigoProduto,
-    })
-
     return Response.json({
       ok: true,
       imageDataUrl: `data:image/png;base64,${b64}`,
@@ -200,7 +169,7 @@ export async function POST(request) {
       nomeProduto,
       codigoProduto,
       descontoPercentual: descontoInformado,
-      copy,
+      postFormat,
       model,
     })
   } catch (error) {
