@@ -7,6 +7,26 @@ function jsonErro(message, status = 400) {
   return Response.json({ error: message }, { status })
 }
 
+function extrairTextoResponses(data) {
+  const textoDireto = String(data?.output_text || '').trim()
+  if (textoDireto) return textoDireto
+
+  const itens = Array.isArray(data?.output) ? data.output : []
+  const partes = []
+
+  for (const item of itens) {
+    const conteudos = Array.isArray(item?.content) ? item.content : []
+    for (const conteudo of conteudos) {
+      if (conteudo?.type === 'output_text' && typeof conteudo?.text === 'string') {
+        const texto = conteudo.text.trim()
+        if (texto) partes.push(texto)
+      }
+    }
+  }
+
+  return partes.join('\n').trim()
+}
+
 export async function POST(request) {
   if (!process.env.OPENAI_API_KEY) {
     return jsonErro('OPENAI_API_KEY nao configurada no servidor.', 500)
@@ -52,7 +72,7 @@ export async function POST(request) {
     }
 
     const data = await response.json().catch(() => null)
-    const texto = String(data?.output_text || '')
+    const texto = extrairTextoResponses(data)
       .split(/\r?\n/)
       .map((linha) => linha.trim())
       .filter(Boolean)
