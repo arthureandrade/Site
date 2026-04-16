@@ -10,26 +10,26 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 53642
+      "saldo": 53382
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 19500
+      "saldo": 19229
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 19231
+      "saldo": 18332
     },
     {
       "faixa": "31–60 dias",
       "saldo": 14593
     }
   ],
-  "generated_at": "2026-04-16T17:25:33.136277",
+  "generated_at": "2026-04-16T18:09:31.356166",
   "kpis": {
-    "clientes_atraso": 64,
-    "total_aberto": 809803,
-    "total_atraso": 184578,
+    "clientes_atraso": 63,
+    "total_aberto": 808373,
+    "total_atraso": 183148,
     "total_vencer": 625225
   },
   "ok": true,
@@ -148,10 +148,10 @@
       "total_atraso": 5500
     },
     {
-      "cliente": "MADEREIRA LIDER",
-      "maior_atraso": 110,
-      "titulos": 2,
-      "total_atraso": 5489
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 281,
+      "titulos": 5,
+      "total_atraso": 4825
     }
   ]
 }
