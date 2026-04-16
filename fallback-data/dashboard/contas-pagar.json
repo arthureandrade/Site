@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2800831
+      "saldo": 2829077
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 325907
+      "saldo": 427808
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 9055
+      "saldo": 64125
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 2455
     }
   ],
-  "generated_at": "2026-04-16T11:03:27.807368",
+  "generated_at": "2026-04-16T12:47:32.105603",
   "kpis": {
-    "a_vencer_7d": 343360,
-    "juros_pagos": 71565,
-    "total_aberto": 3144746,
-    "total_pago_periodo": 2762478,
-    "total_vencido": 343915
+    "a_vencer_7d": 331344,
+    "juros_pagos": 71064,
+    "total_aberto": 3329963,
+    "total_pago_periodo": 2662678,
+    "total_vencido": 500886
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -102,7 +102,7 @@
       "dias_atraso": 36,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 6135,
+      "saldo": 46670,
       "vencimento": "2026-03-11T00:00:00"
     }
   ],
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 47,
-      "total_aberto": 1017755
+      "titulos": 50,
+      "total_aberto": 1157767
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 16,
-      "total_aberto": 145640
+      "titulos": 18,
+      "total_aberto": 162440
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
@@ -149,14 +149,14 @@
       "total_aberto": 65007
     },
     {
+      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
+      "titulos": 2,
+      "total_aberto": 60499
+    },
+    {
       "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
       "titulos": 3,
       "total_aberto": 53262
-    },
-    {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 2,
-      "total_aberto": 41485
     }
   ]
 }
