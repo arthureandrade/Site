@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2829077
+      "saldo": 2900421
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 2455
     }
   ],
-  "generated_at": "2026-04-16T12:47:32.105603",
+  "generated_at": "2026-04-16T14:00:07.399238",
   "kpis": {
     "a_vencer_7d": 331344,
     "juros_pagos": 71064,
-    "total_aberto": 3329963,
+    "total_aberto": 3401307,
     "total_pago_periodo": 2662678,
     "total_vencido": 500886
   },
@@ -119,6 +119,11 @@
       "total_aberto": 630935
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 9,
+      "total_aberto": 213149
+    },
+    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 60,
       "total_aberto": 209880
@@ -132,11 +137,6 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 18,
       "total_aberto": 162440
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 6,
-      "total_aberto": 141805
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
