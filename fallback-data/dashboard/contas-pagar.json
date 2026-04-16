@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2790131
+      "saldo": 2800831
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 382323
+      "saldo": 325907
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 2455
     }
   ],
-  "generated_at": "2026-04-16T08:55:43.906966",
+  "generated_at": "2026-04-16T11:03:27.807368",
   "kpis": {
     "a_vencer_7d": 343360,
     "juros_pagos": 71565,
-    "total_aberto": 3190462,
-    "total_pago_periodo": 2604311,
-    "total_vencido": 400331
+    "total_aberto": 3144746,
+    "total_pago_periodo": 2762478,
+    "total_vencido": 343915
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 17,
-      "total_aberto": 154040
+      "titulos": 16,
+      "total_aberto": 145640
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
@@ -149,14 +149,14 @@
       "total_aberto": 65007
     },
     {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 2,
-      "total_aberto": 60499
+      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
+      "titulos": 3,
+      "total_aberto": 53262
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 5,
-      "total_aberto": 60240
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 2,
+      "total_aberto": 41485
     }
   ]
 }
