@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2900421
+      "saldo": 2898812
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 427808
+      "saldo": 424375
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 64125
+      "saldo": 62271
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 6498
+      "saldo": 5519
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 2455
+      "saldo": 1389
     }
   ],
-  "generated_at": "2026-04-16T15:36:18.251941",
+  "generated_at": "2026-04-16T16:29:57.105873",
   "kpis": {
-    "a_vencer_7d": 331344,
+    "a_vencer_7d": 330065,
     "juros_pagos": 71064,
-    "total_aberto": 3401307,
-    "total_pago_periodo": 2662678,
-    "total_vencido": 500886
+    "total_aberto": 3392366,
+    "total_pago_periodo": 2693395,
+    "total_vencido": 493554
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -46,15 +46,8 @@
       "dias_atraso": 102,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
-      "saldo": 2879,
+      "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
-    },
-    {
-      "dias_atraso": 91,
-      "fornecedor": "MERCANTIL NOVA ERA LTDA",
-      "loja": "Loja 1",
-      "saldo": 619,
-      "vencimento": "2026-01-15T00:00:00"
     },
     {
       "dias_atraso": 75,
@@ -71,27 +64,6 @@
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 65,
-      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
-      "loja": "Loja 2",
-      "saldo": 1066,
-      "vencimento": "2026-02-10T00:00:00"
-    },
-    {
-      "dias_atraso": 55,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 354,
-      "vencimento": "2026-02-20T00:00:00"
-    },
-    {
-      "dias_atraso": 48,
-      "fornecedor": "TECHFRIO E MOBILI IMPORTACAO E COMERCIO LTDA",
-      "loja": "Loja 1",
-      "saldo": 1500,
-      "vencimento": "2026-02-27T00:00:00"
-    },
-    {
       "dias_atraso": 37,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
@@ -104,6 +76,34 @@
       "loja": "Loja 4",
       "saldo": 6135,
       "vencimento": "2026-03-11T00:00:00"
+    },
+    {
+      "dias_atraso": 36,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 46670,
+      "vencimento": "2026-03-11T00:00:00"
+    },
+    {
+      "dias_atraso": 31,
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "loja": "Loja 4",
+      "saldo": 8400,
+      "vencimento": "2026-03-16T00:00:00"
+    },
+    {
+      "dias_atraso": 20,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 7267,
+      "vencimento": "2026-03-27T00:00:00"
+    },
+    {
+      "dias_atraso": 20,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 14804,
+      "vencimento": "2026-03-27T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
