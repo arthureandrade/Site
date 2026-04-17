@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-17T15:18:10.511Z",
+  "generated_at": "2026-04-17T16:28:42.653Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5712,
+  "total": 5713,
   "produtos": [
     {
       "descricao": "",
@@ -3575,7 +3575,7 @@
     },
     {
       "descricao": "",
-      "estoque": -1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10347.jpg",
       "grupo": 3,
       "id": 10347,
@@ -3813,7 +3813,7 @@
     },
     {
       "descricao": "",
-      "estoque": -944,
+      "estoque": -946,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/911.jpg",
       "grupo": 3,
       "id": 911,
@@ -12409,7 +12409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 45,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4210.jpg",
       "grupo": 11,
       "id": 4210,
@@ -13123,7 +13123,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3897.jpg",
       "grupo": 43,
       "id": 3897,
@@ -14327,7 +14327,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": -2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5351.jpg",
       "grupo": 14,
       "id": 5351,
@@ -24673,7 +24673,7 @@
     },
     {
       "descricao": "",
-      "estoque": -10,
+      "estoque": -11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12852.jpg",
       "grupo": 30,
       "id": 12852,
@@ -24981,7 +24981,7 @@
     },
     {
       "descricao": "",
-      "estoque": 508,
+      "estoque": 506,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/625.jpg",
       "grupo": 30,
       "id": 625,
@@ -25205,7 +25205,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2070,
+      "estoque": 2042,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -27389,7 +27389,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2547,
+      "estoque": 2571,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -27403,7 +27403,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1009,
+      "estoque": 1007,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -27837,7 +27837,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2105,
+      "estoque": 2104,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -27949,7 +27949,7 @@
     },
     {
       "descricao": "",
-      "estoque": 367,
+      "estoque": 365,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10793.jpg",
       "grupo": 33,
       "id": 10793,
@@ -28033,7 +28033,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13082,
+      "estoque": 13070,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg",
       "grupo": 33,
       "id": 3933,
@@ -28159,7 +28159,7 @@
     },
     {
       "descricao": "",
-      "estoque": 186,
+      "estoque": 184,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1941.jpg",
       "grupo": 33,
       "id": 1941,
@@ -33003,7 +33003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 125,
+      "estoque": 123,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -33143,7 +33143,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16,
+      "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/349.jpg",
       "grupo": 41,
       "id": 349,
@@ -39037,7 +39037,21 @@
     },
     {
       "descricao": "",
-      "estoque": 5,
+      "estoque": 3,
+      "foto_url": null,
+      "grupo": 58,
+      "id": 13874,
+      "marca": "DENVER",
+      "nome": "INVERSORA 140A AGILLE SUPER - BIVOLT 110/220V",
+      "preco": 938.55,
+      "secao": 5,
+      "subgrupo": 30,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2932.jpg",
       "grupo": 58,
       "id": 2932,
@@ -41025,7 +41039,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11480.jpg",
       "grupo": 2,
       "id": 11480,
@@ -41375,7 +41389,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5162.jpg",
       "grupo": 42,
       "id": 5162,
@@ -46653,7 +46667,7 @@
     },
     {
       "descricao": "",
-      "estoque": -49,
+      "estoque": -51,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/771.jpg",
       "grupo": 25,
       "id": 771,
@@ -52953,7 +52967,7 @@
     },
     {
       "descricao": "",
-      "estoque": 93992,
+      "estoque": 93872,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -56733,7 +56747,7 @@
     },
     {
       "descricao": "",
-      "estoque": 279,
+      "estoque": 239,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1677.jpg",
       "grupo": 64,
       "id": 1677,
@@ -58609,7 +58623,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1125,
+      "estoque": 1100,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/412.jpg",
       "grupo": 66,
       "id": 412,
@@ -58637,7 +58651,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3352,
+      "estoque": 3330,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/512.jpg",
       "grupo": 66,
       "id": 512,
@@ -60681,7 +60695,7 @@
     },
     {
       "descricao": "",
-      "estoque": 82,
+      "estoque": 81,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1514.jpg",
       "grupo": 64,
       "id": 1514,
@@ -60989,7 +61003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 204,
+      "estoque": 202,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2487.jpg",
       "grupo": 64,
       "id": 2487,
@@ -65693,7 +65707,7 @@
     },
     {
       "descricao": "",
-      "estoque": 27,
+      "estoque": 25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/659.jpg",
       "grupo": 71,
       "id": 659,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11776.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11777.jpg",
-      "grupo": 45,
-      "id": 11777,
-      "marca": "AMATOOLS",
-      "nome": "SOQUETE TORX 1/2\" - BIT: E24 - NOLL",
-      "preco": 12.78,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11777.jpg"
     }
   ]
 }

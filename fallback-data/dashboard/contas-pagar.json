@@ -2,11 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2888423
+      "saldo": 2776877
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 204749
+      "saldo": 207210
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 5988
     },
     {
       "faixa": "91–180 dias",
@@ -15,19 +19,15 @@
     {
       "faixa": "61–90 dias",
       "saldo": 1389
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-17T11:18:08.986323",
+  "generated_at": "2026-04-17T12:28:44.183709",
   "kpis": {
-    "a_vencer_7d": 340749,
+    "a_vencer_7d": 228888,
     "juros_pagos": 71565,
-    "total_aberto": 3101146,
-    "total_pago_periodo": 3283378,
-    "total_vencido": 212723
+    "total_aberto": 2996983,
+    "total_pago_periodo": 3373090,
+    "total_vencido": 220106
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -64,11 +64,32 @@
       "vencimento": "2026-02-02T00:00:00"
     },
     {
+      "dias_atraso": 42,
+      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
+      "loja": "Loja 1",
+      "saldo": 2461,
+      "vencimento": "2026-03-06T00:00:00"
+    },
+    {
       "dias_atraso": 38,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
+    },
+    {
+      "dias_atraso": 35,
+      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
+      "loja": "Loja 1",
+      "saldo": 2461,
+      "vencimento": "2026-03-13T00:00:00"
+    },
+    {
+      "dias_atraso": 28,
+      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
+      "loja": "Loja 1",
+      "saldo": 2461,
+      "vencimento": "2026-03-20T00:00:00"
     },
     {
       "dias_atraso": 13,
@@ -83,27 +104,6 @@
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
-    },
-    {
-      "dias_atraso": 8,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 3765,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 8,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 56330,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 8,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 13353,
-      "vencimento": "2026-04-09T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 19,
-      "total_aberto": 578001
+      "titulos": 18,
+      "total_aberto": 466140
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
