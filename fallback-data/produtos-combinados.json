@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T18:31:30.746Z",
+  "generated_at": "2026-04-17T19:42:16.748Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5409,
   "produtos": [
@@ -3547,7 +3547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 82,
+      "estoque": 80,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12745.jpg",
       "grupo": 3,
       "id": 12745,
@@ -3813,7 +3813,7 @@
     },
     {
       "descricao": "",
-      "estoque": -1051,
+      "estoque": -1101,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/911.jpg",
       "grupo": 3,
       "id": 911,
@@ -4205,7 +4205,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4300,
+      "estoque": 4296,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1026.jpg",
       "grupo": 64,
       "id": 1026,
@@ -4454,20 +4454,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1269.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11692.jpg",
-      "grupo": 92,
-      "id": 11692,
-      "marca": "CARROCINHA",
-      "nome": "ARRUELA PONTEIRA 3/4\"",
-      "preco": 2.95,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11692.jpg"
     },
     {
       "descricao": "",
@@ -11471,7 +11457,7 @@
     },
     {
       "descricao": "",
-      "estoque": 97012,
+      "estoque": 97008,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1670.jpg",
       "grupo": 64,
       "id": 1670,
@@ -22937,7 +22923,7 @@
     },
     {
       "descricao": "",
-      "estoque": 701,
+      "estoque": 682,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11380.jpg",
       "grupo": 27,
       "id": 11380,
@@ -25205,7 +25191,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2042,
+      "estoque": 2035,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -27403,7 +27389,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1007,
+      "estoque": 1004,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -32639,7 +32625,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4197.jpg",
       "grupo": 41,
       "id": 4197,
@@ -33003,7 +32989,7 @@
     },
     {
       "descricao": "",
-      "estoque": 122,
+      "estoque": 120,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -37805,7 +37791,7 @@
     },
     {
       "descricao": "",
-      "estoque": -220,
+      "estoque": -222,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11290.jpg",
       "grupo": 64,
       "id": 11290,
@@ -53373,7 +53359,7 @@
     },
     {
       "descricao": "",
-      "estoque": 162,
+      "estoque": 158,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1609.jpg",
       "grupo": 64,
       "id": 1609,
@@ -54647,7 +54633,7 @@
     },
     {
       "descricao": "",
-      "estoque": -55,
+      "estoque": -205,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4337.jpg",
       "grupo": 64,
       "id": 4337,
@@ -58665,7 +58651,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1045,
+      "estoque": 1030,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4140.jpg",
       "grupo": 66,
       "id": 4140,
@@ -62445,7 +62431,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1610,
+      "estoque": 1560,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11334.jpg",
       "grupo": 64,
       "id": 11334,
@@ -64685,7 +64671,7 @@
     },
     {
       "descricao": "",
-      "estoque": 35,
+      "estoque": 31,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10659.jpg",
       "grupo": 70,
       "id": 10659,
@@ -69851,7 +69837,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3397.jpg",
       "grupo": 43,
       "id": 3397,
@@ -70005,7 +69991,21 @@
     },
     {
       "descricao": "",
-      "estoque": -45,
+      "estoque": 2,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11777.jpg",
+      "grupo": 45,
+      "id": 11777,
+      "marca": "AMATOOLS",
+      "nome": "SOQUETE TORX 1/2\" - BIT: E24 - NOLL",
+      "preco": 12.78,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11777.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": -47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/118.jpg",
       "grupo": 6,
       "id": 118,
@@ -70481,7 +70481,7 @@
     },
     {
       "descricao": "",
-      "estoque": 633,
+      "estoque": 603,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/293.jpg",
       "grupo": 15,
       "id": 293,
@@ -71013,7 +71013,7 @@
     },
     {
       "descricao": "",
-      "estoque": 83,
+      "estoque": 82,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2602.jpg",
       "grupo": 20,
       "id": 2602,
@@ -71321,7 +71321,7 @@
     },
     {
       "descricao": "",
-      "estoque": 281,
+      "estoque": 541,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1750.jpg",
       "grupo": 20,
       "id": 1750,
@@ -71685,7 +71685,7 @@
     },
     {
       "descricao": "",
-      "estoque": 500,
+      "estoque": 847,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/39.jpg",
       "grupo": 20,
       "id": 39,
@@ -72525,7 +72525,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1666,
+      "estoque": 1665,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -72623,7 +72623,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1236,
+      "estoque": 1235,
       "foto_url": null,
       "grupo": 60,
       "id": 20,
@@ -73841,7 +73841,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1133,
+      "estoque": 1113,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
