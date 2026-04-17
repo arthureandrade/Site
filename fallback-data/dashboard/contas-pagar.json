@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2752083
+      "saldo": 2748329
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-17T16:29:46.359348",
+  "generated_at": "2026-04-17T17:24:14.762758",
   "kpis": {
-    "a_vencer_7d": 204094,
+    "a_vencer_7d": 200340,
     "juros_pagos": 71565,
-    "total_aberto": 2964806,
-    "total_pago_periodo": 3467608,
+    "total_aberto": 2961052,
+    "total_pago_periodo": 3474118,
     "total_vencido": 212723
   },
   "ok": true,
@@ -102,7 +102,7 @@
       "dias_atraso": 8,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13342,
+      "saldo": 13353,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
