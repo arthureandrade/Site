@@ -99,7 +99,7 @@ export default function Header() {
               type="text"
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
-              placeholder={isVendedorArea ? 'Buscar produtos...' : 'Buscar produtos e ir para compras...'}
+              placeholder={isVendedorArea ? 'Buscar por nome, código ou marca...' : 'Buscar por nome, código ou marca...'}
               className={`w-full border-0 bg-transparent font-semibold text-slate-700 outline-none transition focus:ring-0 ${
                 isVendedorArea ? 'rounded-xl px-3 py-2 text-xs' : 'rounded-2xl px-4 py-3 text-sm lg:py-3.5'
               }`}
@@ -162,7 +162,7 @@ export default function Header() {
             type="text"
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
-            placeholder="Buscar produtos..."
+            placeholder="Buscar por nome, código ou marca..."
             className={`w-full border-0 bg-transparent font-semibold text-slate-700 outline-none transition ${
               isVendedorArea ? 'rounded-xl px-3 py-2 text-xs' : 'rounded-2xl px-4 py-3 text-sm'
             }`}

@@ -65,6 +65,20 @@ function montarMarcasCatalogo(produtos) {
     .sort((a, b) => b.quantidade - a.quantidade || a.marca.localeCompare(b.marca, 'pt-BR'))
 }
 
+function produtoCasaBuscaCatalogo(produto, busca) {
+  const buscaNormalizada = normalizarTexto(busca)
+  const nome = normalizarTexto(produto?.nome || '')
+  const descricao = normalizarTexto(produto?.descricao || '')
+  const marca = normalizarTexto(produto?.marca || '')
+  const codigo = String(produto?.id || '')
+  return (
+    nome.includes(buscaNormalizada) ||
+    descricao.includes(buscaNormalizada) ||
+    marca.includes(buscaNormalizada) ||
+    codigo.includes(buscaNormalizada)
+  )
+}
+
 function calcularScoreComercial(produto) {
   const preco = Number(produto?.preco || 0)
   const estoque = Number(produto?.estoque || 0)
@@ -125,10 +139,7 @@ export default function ProdutosCliente({
 
         let filtrados = (data.produtos || []).filter(ehProdutoFerroAco)
         if (busca_) {
-          const buscaNormalizada = normalizarTexto(busca_)
-          filtrados = filtrados.filter((produto) =>
-            normalizarTexto(`${produto.nome || ''} ${produto.descricao || ''}`).includes(buscaNormalizada)
-          )
+          filtrados = filtrados.filter((produto) => produtoCasaBuscaCatalogo(produto, busca_))
         }
         if (marca_) {
           const marcaNormalizada = normalizarTexto(marca_)
@@ -304,11 +315,14 @@ export default function ProdutosCliente({
                 </label>
                 <input
                   type="text"
-                  placeholder="Ex: parafuso, ferragem, perfil..."
+                  placeholder="Ex: parafuso, 295, ramassol..."
                   value={busca}
                   onChange={(e) => setBusca(e.target.value)}
                   className="input text-sm"
                 />
+                <p className="mt-2 text-[11px] font-medium text-gray-400">
+                  Busque por nome, código ou marca.
+                </p>
               </div>
 
               <div>
