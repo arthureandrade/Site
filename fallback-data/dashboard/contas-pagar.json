@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2776877
+      "saldo": 2752083
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-17T15:42:17.807390",
+  "generated_at": "2026-04-17T16:29:46.359348",
   "kpis": {
-    "a_vencer_7d": 228888,
+    "a_vencer_7d": 204094,
     "juros_pagos": 71565,
-    "total_aberto": 2989600,
-    "total_pago_periodo": 3395239,
+    "total_aberto": 2964806,
+    "total_pago_periodo": 3467608,
     "total_vencido": 212723
   },
   "ok": true,
@@ -102,7 +102,7 @@
       "dias_atraso": 8,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13353,
+      "saldo": 13342,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -149,14 +149,14 @@
       "total_aberto": 65007
     },
     {
-      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
-      "titulos": 3,
-      "total_aberto": 53262
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 2,
       "total_aberto": 41485
+    },
+    {
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 3,
+      "total_aberto": 40305
     }
   ]
 }
