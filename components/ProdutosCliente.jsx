@@ -83,6 +83,10 @@ function ehProdutoRamassolCatalogo(produto) {
   return normalizarTexto(produto?.marca || '').includes('ramassol')
 }
 
+function buscaEhRamassol(busca) {
+  return normalizarTexto(busca).includes('ramassol')
+}
+
 function calcularScoreComercial(produto) {
   const preco = Number(produto?.preco || 0)
   const estoque = Number(produto?.estoque || 0)
@@ -156,20 +160,42 @@ export default function ProdutosCliente({
           [...filtrados].sort((a, b) => calcularScoreFerroAco(b) - calcularScoreFerroAco(a))
         )
       } else {
-        const data = await getProdutos({
-          busca: busca_ || undefined,
-          marca: marca_ || undefined,
-          secao: secaoEspecial || undefined,
-          subgrupo: subgrupoEspecial || undefined,
-          em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
-          com_preco: true,
-          skip: 0,
-          limit: 5000,
-          noStore: true,
-        })
-        const produtosValidos = (data.produtos || []).filter(
+        const buscaMarcaRamassol = buscaEhRamassol(busca_) || buscaEhRamassol(marca_)
+        const data = await getProdutos(
+          buscaMarcaRamassol
+            ? {
+                marca: 'ramassol',
+                todas_secoes: true,
+                com_preco: false,
+                skip: 0,
+                limit: 5000,
+                noStore: true,
+              }
+            : {
+                busca: busca_ || undefined,
+                marca: marca_ || undefined,
+                secao: secaoEspecial || undefined,
+                subgrupo: subgrupoEspecial || undefined,
+                em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
+                com_preco: true,
+                skip: 0,
+                limit: 5000,
+                noStore: true,
+              }
+        )
+        let produtosValidos = (data.produtos || []).filter(
           (produto) => Number(produto.preco) > 0 || ehProdutoRamassolCatalogo(produto)
         )
+        if (busca_) {
+          produtosValidos = produtosValidos.filter((produto) => produtoCasaBuscaCatalogo(produto, busca_))
+        }
+        if (marca_) {
+          const marcaNormalizada = normalizarTexto(marca_)
+          produtosValidos = produtosValidos.filter(
+            (produto) =>
+              normalizarTexto(produto.marca || '').includes(marcaNormalizada) || ehProdutoRamassolCatalogo(produto)
+          )
+        }
         setTodosProdutos(
           [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
         )
