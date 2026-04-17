@@ -79,6 +79,10 @@ function produtoCasaBuscaCatalogo(produto, busca) {
   )
 }
 
+function ehProdutoRamassolCatalogo(produto) {
+  return normalizarTexto(produto?.marca || '').includes('ramassol')
+}
+
 function calcularScoreComercial(produto) {
   const preco = Number(produto?.preco || 0)
   const estoque = Number(produto?.estoque || 0)
@@ -163,7 +167,9 @@ export default function ProdutosCliente({
           limit: 5000,
           noStore: true,
         })
-        const produtosValidos = (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
+        const produtosValidos = (data.produtos || []).filter(
+          (produto) => Number(produto.preco) > 0 || ehProdutoRamassolCatalogo(produto)
+        )
         setTodosProdutos(
           [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
         )
@@ -195,7 +201,9 @@ export default function ProdutosCliente({
       const produtosValidos =
         categoriaEspecial === 'ferro_aco'
           ? (data.produtos || []).filter(ehProdutoFerroAco)
-          : (data.produtos || []).filter((produto) => Number(produto.preco) > 0)
+          : (data.produtos || []).filter(
+              (produto) => Number(produto.preco) > 0 || ehProdutoRamassolCatalogo(produto)
+            )
       setMarcasCatalogo(montarMarcasCatalogo(produtosValidos))
     } catch {
       setMarcasCatalogo([])
@@ -485,7 +493,7 @@ export default function ProdutosCliente({
                       ? `Exibindo produtos da secao ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
                       : subgrupoEspecial
                         ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
-                        : 'Exibindo apenas produtos com preco. Use a lateral para navegar por categorias e marcas.'}
+                        : 'Exibindo produtos com preco e itens estrategicos de marca. Use a lateral para navegar por categorias e marcas.'}
                 </p>
               </div>
 
