@@ -114,14 +114,15 @@ async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true })
   await mkdir(OUTPUT_FOTOS_DIR, { recursive: true })
 
-  const [homeConfig, secao5, secao6] = await Promise.all([
+  const [homeConfig, secao5, secao6, secao14] = await Promise.all([
     fetchJson('/home-config'),
     fetchJson('/produtos?secao=5&skip=0&limit=5000&com_preco=false'),
     fetchJson('/produtos?secao=6&skip=0&limit=5000&com_preco=false'),
+    fetchJson('/produtos?secao=14&skip=0&limit=5000&com_preco=false'),
   ])
 
   const combinadosMap = new Map()
-  for (const produto of [...(secao5?.produtos || []), ...(secao6?.produtos || [])]) {
+  for (const produto of [...(secao5?.produtos || []), ...(secao14?.produtos || []), ...(secao6?.produtos || [])]) {
     if (!produto?.id) continue
     combinadosMap.set(Number(produto.id), produto)
   }
@@ -148,6 +149,13 @@ async function main() {
     produtos: secao6?.produtos || [],
   }
 
+  const snapshotSecao14 = {
+    generated_at: generatedAt,
+    source_api: API_BASE,
+    total: Number(secao14?.total || (secao14?.produtos || []).length || 0),
+    produtos: secao14?.produtos || [],
+  }
+
   const snapshotCombinado = {
     generated_at: generatedAt,
     source_api: API_BASE,
@@ -157,16 +165,19 @@ async function main() {
 
   const produtosSecao5 = await enriquecerProdutosComFotos(snapshotSecao5.produtos)
   const produtosSecao6 = await enriquecerProdutosComFotos(snapshotSecao6.produtos)
+  const produtosSecao14 = await enriquecerProdutosComFotos(snapshotSecao14.produtos)
   const produtosCombinados = await enriquecerProdutosComFotos(snapshotCombinado.produtos)
 
   snapshotSecao5.produtos = produtosSecao5
   snapshotSecao6.produtos = produtosSecao6
+  snapshotSecao14.produtos = produtosSecao14
   snapshotCombinado.produtos = produtosCombinados
 
   const changed = await Promise.all([
     writeIfChanged(join(OUTPUT_DIR, 'home-config.json'), snapshotHome),
     writeIfChanged(join(OUTPUT_DIR, 'produtos-secao-5.json'), snapshotSecao5),
     writeIfChanged(join(OUTPUT_DIR, 'produtos-secao-6.json'), snapshotSecao6),
+    writeIfChanged(join(OUTPUT_DIR, 'produtos-secao-14.json'), snapshotSecao14),
     writeIfChanged(join(OUTPUT_DIR, 'produtos-combinados.json'), snapshotCombinado),
   ])
 
@@ -176,6 +187,7 @@ async function main() {
         api: API_BASE,
         generated_at: generatedAt,
         secao_5: snapshotSecao5.total,
+        secao_14: snapshotSecao14.total,
         secao_6: snapshotSecao6.total,
         combinados: snapshotCombinado.total,
         changed: changed.some(Boolean),
