@@ -21,10 +21,12 @@ const CATEGORIAS = [
 ]
 
 export default async function HomePage() {
-  const [config, secao5Data, secao6Data] = await Promise.all([
+  const [config, secao5Data, secao6Data, secao14Data, ramassolData] = await Promise.all([
     getHomeConfig(),
     getProdutos({ secao: 5, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
     getProdutos({ secao: 6, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
+    getProdutos({ secao: 14, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
+    getProdutos({ marca: 'ramassol', todas_secoes: true, com_preco: false, limit: 5000, noStore: true }),
   ])
   const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
   const produtosMap = new Map()
@@ -35,7 +37,12 @@ export default async function HomePage() {
   const produtosSoldaMap = new Map()
   const produtosSaldaoMap = new Map()
 
-  for (const produto of [...(secao5Data?.produtos || []), ...(secao6Data?.produtos || [])]) {
+  for (const produto of [
+    ...(secao5Data?.produtos || []),
+    ...(secao6Data?.produtos || []),
+    ...(secao14Data?.produtos || []),
+    ...(ramassolData?.produtos || []),
+  ]) {
     if (!produto?.id) continue
     const subgrupo = Number(produto.subgrupo || 0)
     if (subgrupo === 24) {
@@ -68,23 +75,28 @@ export default async function HomePage() {
   const produtosSubgrupo27 = Array.from(produtosFerramentasProfissionaisMap.values()).slice(0, 10)
   const produtosSubgrupo30 = Array.from(produtosSoldaMap.values()).slice(0, 10)
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
+  const totalCatalogoBase =
+    (secao5Data?.produtos || []).length +
+    (secao6Data?.produtos || []).length +
+    (secao14Data?.produtos || []).length +
+    (ramassolData?.produtos || []).length
   const origemSubgrupo29 = produtosSubgrupo29.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo26 = produtosSubgrupo26.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo24 = produtosSubgrupo24.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo28 = produtosSubgrupo28.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo27 = produtosSubgrupo27.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
   const origemSubgrupo30 = produtosSubgrupo30.length
-    ? `base secoes 5 e 6 (${(secao5Data?.produtos || []).length + (secao6Data?.produtos || []).length} itens analisados)`
+    ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
 
   return (

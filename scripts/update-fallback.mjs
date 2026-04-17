@@ -114,15 +114,21 @@ async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true })
   await mkdir(OUTPUT_FOTOS_DIR, { recursive: true })
 
-  const [homeConfig, secao5, secao6, secao14] = await Promise.all([
+  const [homeConfig, secao5, secao6, secao14, ramassol] = await Promise.all([
     fetchJson('/home-config'),
     fetchJson('/produtos?secao=5&skip=0&limit=5000&com_preco=false'),
     fetchJson('/produtos?secao=6&skip=0&limit=5000&com_preco=false'),
     fetchJson('/produtos?secao=14&skip=0&limit=5000&com_preco=false'),
+    fetchJson('/produtos?marca=ramassol&todas_secoes=1&skip=0&limit=5000&com_preco=false'),
   ])
 
   const combinadosMap = new Map()
-  for (const produto of [...(secao5?.produtos || []), ...(secao14?.produtos || []), ...(secao6?.produtos || [])]) {
+  for (const produto of [
+    ...(secao5?.produtos || []),
+    ...(secao14?.produtos || []),
+    ...(secao6?.produtos || []),
+    ...(ramassol?.produtos || []),
+  ]) {
     if (!produto?.id) continue
     combinadosMap.set(Number(produto.id), produto)
   }
@@ -189,6 +195,7 @@ async function main() {
         secao_5: snapshotSecao5.total,
         secao_14: snapshotSecao14.total,
         secao_6: snapshotSecao6.total,
+        ramassol: Number(ramassol?.total || (ramassol?.produtos || []).length || 0),
         combinados: snapshotCombinado.total,
         changed: changed.some(Boolean),
       },
