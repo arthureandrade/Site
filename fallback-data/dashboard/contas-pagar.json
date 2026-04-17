@@ -2,121 +2,126 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2793279
+      "saldo": 2858173
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 387575
+      "saldo": 484868
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 9055
+      "saldo": 62271
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 5879
+      "saldo": 5519
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 3074
+      "saldo": 1389
     }
   ],
-  "generated_at": "2026-04-15T17:34:59.705739",
+  "generated_at": "2026-04-17T08:42:54.251264",
   "kpis": {
-    "a_vencer_7d": 311803,
+    "a_vencer_7d": 340749,
     "juros_pagos": 71064,
-    "total_aberto": 3198862,
-    "total_pago_periodo": 3398134,
-    "total_vencido": 405583
+    "total_aberto": 3412220,
+    "total_pago_periodo": 2231012,
+    "total_vencido": 554047
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-04-15",
-    "data_de": "2026-03-16"
+    "data_ate": "2026-04-17",
+    "data_de": "2026-03-18"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 139,
+      "dias_atraso": 141,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 101,
+      "dias_atraso": 103,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
-      "saldo": 2879,
+      "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 90,
-      "fornecedor": "MERCANTIL NOVA ERA LTDA",
-      "loja": "Loja 1",
-      "saldo": 619,
-      "vencimento": "2026-01-15T00:00:00"
-    },
-    {
-      "dias_atraso": 74,
+      "dias_atraso": 76,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 72,
+      "dias_atraso": 74,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 64,
-      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
-      "loja": "Loja 2",
-      "saldo": 1066,
-      "vencimento": "2026-02-10T00:00:00"
-    },
-    {
-      "dias_atraso": 54,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 354,
-      "vencimento": "2026-02-20T00:00:00"
-    },
-    {
-      "dias_atraso": 47,
-      "fornecedor": "TECHFRIO E MOBILI IMPORTACAO E COMERCIO LTDA",
-      "loja": "Loja 1",
-      "saldo": 1500,
-      "vencimento": "2026-02-27T00:00:00"
-    },
-    {
-      "dias_atraso": 36,
+      "dias_atraso": 38,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 35,
+      "dias_atraso": 37,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 6135,
       "vencimento": "2026-03-11T00:00:00"
+    },
+    {
+      "dias_atraso": 37,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 46670,
+      "vencimento": "2026-03-11T00:00:00"
+    },
+    {
+      "dias_atraso": 32,
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "loja": "Loja 4",
+      "saldo": 8400,
+      "vencimento": "2026-03-16T00:00:00"
+    },
+    {
+      "dias_atraso": 21,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 7267,
+      "vencimento": "2026-03-27T00:00:00"
+    },
+    {
+      "dias_atraso": 21,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 17831,
+      "vencimento": "2026-03-27T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 47,
-      "total_aberto": 1017755
+      "titulos": 50,
+      "total_aberto": 1157767
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 21,
-      "total_aberto": 630935
+      "titulos": 25,
+      "total_aberto": 710224
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 9,
+      "total_aberto": 213149
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -134,11 +139,6 @@
       "total_aberto": 162440
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 6,
-      "total_aberto": 141805
-    },
-    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 10,
       "total_aberto": 140169
@@ -149,14 +149,14 @@
       "total_aberto": 65007
     },
     {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 2,
-      "total_aberto": 60499
+      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
+      "titulos": 3,
+      "total_aberto": 53262
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 5,
-      "total_aberto": 60240
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 2,
+      "total_aberto": 41485
     }
   ]
 }
