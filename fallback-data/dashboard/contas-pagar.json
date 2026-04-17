@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2899876
+      "saldo": 2888423
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 503664
+      "saldo": 515117
     },
     {
       "faixa": "31–60 dias",
@@ -21,85 +21,85 @@
       "saldo": 1389
     }
   ],
-  "generated_at": "2026-04-16T23:36:06.647222",
+  "generated_at": "2026-04-17T01:52:23.182390",
   "kpis": {
-    "a_vencer_7d": 330065,
+    "a_vencer_7d": 340749,
     "juros_pagos": 71064,
     "total_aberto": 3472719,
-    "total_pago_periodo": 2455528,
-    "total_vencido": 572843
+    "total_pago_periodo": 2321759,
+    "total_vencido": 584296
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-04-16",
-    "data_de": "2026-03-17"
+    "data_ate": "2026-04-17",
+    "data_de": "2026-03-18"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 140,
+      "dias_atraso": 141,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 102,
+      "dias_atraso": 103,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 75,
+      "dias_atraso": 76,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 73,
+      "dias_atraso": 74,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 37,
+      "dias_atraso": 38,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 36,
+      "dias_atraso": 37,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 6135,
       "vencimento": "2026-03-11T00:00:00"
     },
     {
-      "dias_atraso": 36,
+      "dias_atraso": 37,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 46670,
       "vencimento": "2026-03-11T00:00:00"
     },
     {
-      "dias_atraso": 31,
+      "dias_atraso": 32,
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "loja": "Loja 4",
       "saldo": 8400,
       "vencimento": "2026-03-16T00:00:00"
     },
     {
-      "dias_atraso": 20,
+      "dias_atraso": 21,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 7267,
       "vencimento": "2026-03-27T00:00:00"
     },
     {
-      "dias_atraso": 20,
+      "dias_atraso": 21,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 17831,
