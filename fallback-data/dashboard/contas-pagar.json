@@ -6,11 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 207210
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 5988
+      "saldo": 204749
     },
     {
       "faixa": "91–180 dias",
@@ -19,15 +15,19 @@
     {
       "faixa": "61–90 dias",
       "saldo": 1389
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-17T13:28:10.031031",
+  "generated_at": "2026-04-17T14:31:32.158978",
   "kpis": {
     "a_vencer_7d": 228888,
     "juros_pagos": 71565,
-    "total_aberto": 2996983,
-    "total_pago_periodo": 3373090,
-    "total_vencido": 220106
+    "total_aberto": 2989600,
+    "total_pago_periodo": 3395239,
+    "total_vencido": 212723
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -64,32 +64,11 @@
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 42,
-      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
-      "loja": "Loja 1",
-      "saldo": 2461,
-      "vencimento": "2026-03-06T00:00:00"
-    },
-    {
       "dias_atraso": 38,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
-    },
-    {
-      "dias_atraso": 35,
-      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
-      "loja": "Loja 1",
-      "saldo": 2461,
-      "vencimento": "2026-03-13T00:00:00"
-    },
-    {
-      "dias_atraso": 28,
-      "fornecedor": "KALIPSO EQUIPAMENTOS INDIVIDUAIS DE PROTECAO LTDA",
-      "loja": "Loja 1",
-      "saldo": 2461,
-      "vencimento": "2026-03-20T00:00:00"
     },
     {
       "dias_atraso": 13,
@@ -104,6 +83,27 @@
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
+    },
+    {
+      "dias_atraso": 8,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 3765,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 8,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 56330,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 8,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 13353,
+      "vencimento": "2026-04-09T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
