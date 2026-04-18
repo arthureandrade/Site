@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2748210
+      "saldo": 2755988
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-18T07:49:50.503355",
+  "generated_at": "2026-04-18T08:42:46.859076",
   "kpis": {
     "a_vencer_7d": 232162,
     "juros_pagos": 71565,
-    "total_aberto": 2961052,
+    "total_aberto": 2968830,
     "total_pago_periodo": 3472074,
     "total_vencido": 212842
   },
@@ -88,13 +88,6 @@
       "dias_atraso": 9,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 3765,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 9,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
       "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     },
@@ -102,7 +95,14 @@
       "dias_atraso": 9,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13353,
+      "saldo": 3765,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 9,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 13342,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 3,
-      "total_aberto": 65007
+      "titulos": 4,
+      "total_aberto": 68337
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",

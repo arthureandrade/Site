@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-18T11:49:52.232Z",
+  "generated_at": "2026-04-18T12:42:48.425Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5409,
+  "total": 5404,
   "produtos": [
     {
       "descricao": "",
@@ -4219,7 +4219,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2888,
+      "estoque": 2848,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1647.jpg",
       "grupo": 64,
       "id": 1647,
@@ -12549,7 +12549,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 16,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/580.jpg",
       "grupo": 11,
       "id": 580,
@@ -23189,7 +23189,7 @@
     },
     {
       "descricao": "",
-      "estoque": 259,
+      "estoque": 256,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11827.jpg",
       "grupo": 28,
       "id": 11827,
@@ -23679,7 +23679,7 @@
     },
     {
       "descricao": "",
-      "estoque": 39,
+      "estoque": 37,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11152.jpg",
       "grupo": 92,
       "id": 11152,
@@ -25191,7 +25191,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2020,
+      "estoque": 2010,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -28019,7 +28019,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13070,
+      "estoque": 13050,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg",
       "grupo": 33,
       "id": 3933,
@@ -37483,7 +37483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 366,
+      "estoque": 364,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/809.jpg",
       "grupo": 46,
       "id": 809,
@@ -43951,7 +43951,7 @@
     },
     {
       "descricao": "",
-      "estoque": 267,
+      "estoque": 264,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4671.jpg",
       "grupo": 30,
       "id": 4671,
@@ -47098,6 +47098,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5331.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 13876,
+      "marca": "MAKITA",
+      "nome": "MARTELETE ROTA/ROMPEDO SDS PLUS - 127V / 800W",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -52295,7 +52309,7 @@
     },
     {
       "descricao": "",
-      "estoque": 79,
+      "estoque": 78,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3508.jpg",
       "grupo": 43,
       "id": 3508,
@@ -53989,7 +54003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 199,
+      "estoque": 159,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4917.jpg",
       "grupo": 64,
       "id": 4917,
@@ -69991,20 +70005,6 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11819.jpg",
-      "grupo": 45,
-      "id": 11819,
-      "marca": "AMATOOLS",
-      "nome": "SOQUETE TORX 1/2\" NOLL - T60",
-      "preco": 11.93,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11819.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": -47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/118.jpg",
       "grupo": 6,
@@ -70425,7 +70425,7 @@
     },
     {
       "descricao": "",
-      "estoque": -159,
+      "estoque": -167,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/245.jpg",
       "grupo": 6,
       "id": 245,
@@ -70439,7 +70439,7 @@
     },
     {
       "descricao": "",
-      "estoque": 767,
+      "estoque": 766,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/44.jpg",
       "grupo": 15,
       "id": 44,
@@ -70901,7 +70901,7 @@
     },
     {
       "descricao": "",
-      "estoque": 191,
+      "estoque": 189,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/31.jpg",
       "grupo": 20,
       "id": 31,
@@ -71181,7 +71181,7 @@
     },
     {
       "descricao": "",
-      "estoque": 192,
+      "estoque": 188,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/836.jpg",
       "grupo": 20,
       "id": 836,
@@ -72091,7 +72091,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2331.jpg",
       "grupo": 20,
       "id": 2331,
@@ -72441,7 +72441,7 @@
     },
     {
       "descricao": "",
-      "estoque": 271,
+      "estoque": 254,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13.jpg",
       "grupo": 60,
       "id": 13,
@@ -72539,7 +72539,7 @@
     },
     {
       "descricao": "",
-      "estoque": 406,
+      "estoque": 404,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/17.jpg",
       "grupo": 60,
       "id": 17,
@@ -72721,7 +72721,7 @@
     },
     {
       "descricao": "",
-      "estoque": 421,
+      "estoque": 418,
       "foto_url": null,
       "grupo": 60,
       "id": 22,
@@ -72791,7 +72791,7 @@
     },
     {
       "descricao": "",
-      "estoque": 273,
+      "estoque": 271,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/470.jpg",
       "grupo": 60,
       "id": 470,
@@ -73183,7 +73183,7 @@
     },
     {
       "descricao": "",
-      "estoque": 136,
+      "estoque": 133,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/323.jpg",
       "grupo": 60,
       "id": 323,
@@ -73771,7 +73771,7 @@
     },
     {
       "descricao": "",
-      "estoque": -55,
+      "estoque": -67,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/229.jpg",
       "grupo": 65,
       "id": 229,
@@ -73841,7 +73841,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1095,
+      "estoque": 1087,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -75563,20 +75563,6 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13384.jpg",
-      "grupo": 8,
-      "id": 13384,
-      "marca": "TAMBASA",
-      "nome": "ZINCO GALV. 30CM X 0.35MM (25MRL 21KG)",
-      "preco": 20.56,
-      "secao": 6,
-      "subgrupo": 12,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13384.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10258.jpg",
       "grupo": 8,
@@ -75588,20 +75574,6 @@
       "subgrupo": 12,
       "unidade": "MT",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10258.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 7,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13387.jpg",
-      "grupo": 8,
-      "id": 13387,
-      "marca": "TAMBASA",
-      "nome": "ZINCO GALV. 40CM X 0.35MM (25MRL 28KG)",
-      "preco": 26.89,
-      "secao": 6,
-      "subgrupo": 12,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13387.jpg"
     },
     {
       "descricao": "",
@@ -75619,20 +75591,6 @@
     },
     {
       "descricao": "",
-      "estoque": 37,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13385.jpg",
-      "grupo": 8,
-      "id": 13385,
-      "marca": "TAMBASA",
-      "nome": "ZINCO GALV. 50CM X 0.35MM (25MRL 35KG)",
-      "preco": 33.25,
-      "secao": 6,
-      "subgrupo": 12,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13385.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10256.jpg",
       "grupo": 8,
@@ -75647,20 +75605,6 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13386.jpg",
-      "grupo": 8,
-      "id": 13386,
-      "marca": "TAMBASA",
-      "nome": "ZINCO GALV. 60CM X 0.35MM (25MRL 42KG",
-      "preco": 39.32,
-      "secao": 6,
-      "subgrupo": 12,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13386.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10262.jpg",
       "grupo": 8,
@@ -75672,20 +75616,6 @@
       "subgrupo": 12,
       "unidade": "MT",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10262.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 7,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13388.jpg",
-      "grupo": 8,
-      "id": 13388,
-      "marca": "TAMBASA",
-      "nome": "ZINCO GALV. 70CM X 0.35MM (25MRL 49KG",
-      "preco": 42.61,
-      "secao": 6,
-      "subgrupo": 12,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13388.jpg"
     },
     {
       "descricao": "",

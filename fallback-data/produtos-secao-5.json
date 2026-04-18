@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-18T11:49:52.232Z",
+  "generated_at": "2026-04-18T12:42:48.425Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5702,
+  "total": 5708,
   "produtos": [
     {
       "descricao": "",
@@ -4219,7 +4219,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2888,
+      "estoque": 2848,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1647.jpg",
       "grupo": 64,
       "id": 1647,
@@ -12549,7 +12549,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 16,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/580.jpg",
       "grupo": 11,
       "id": 580,
@@ -23189,7 +23189,7 @@
     },
     {
       "descricao": "",
-      "estoque": 259,
+      "estoque": 256,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11827.jpg",
       "grupo": 28,
       "id": 11827,
@@ -23679,7 +23679,7 @@
     },
     {
       "descricao": "",
-      "estoque": 39,
+      "estoque": 37,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11152.jpg",
       "grupo": 92,
       "id": 11152,
@@ -25191,7 +25191,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2020,
+      "estoque": 2010,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -28019,7 +28019,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13070,
+      "estoque": 13050,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg",
       "grupo": 33,
       "id": 3933,
@@ -37483,7 +37483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 366,
+      "estoque": 364,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/809.jpg",
       "grupo": 46,
       "id": 809,
@@ -43951,7 +43951,7 @@
     },
     {
       "descricao": "",
-      "estoque": 267,
+      "estoque": 264,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4671.jpg",
       "grupo": 30,
       "id": 4671,
@@ -47098,6 +47098,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5331.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 13876,
+      "marca": "MAKITA",
+      "nome": "MARTELETE ROTA/ROMPEDO SDS PLUS - 127V / 800W",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -52295,7 +52309,7 @@
     },
     {
       "descricao": "",
-      "estoque": 79,
+      "estoque": 78,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3508.jpg",
       "grupo": 43,
       "id": 3508,
@@ -53989,7 +54003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 199,
+      "estoque": 159,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4917.jpg",
       "grupo": 64,
       "id": 4917,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11818.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11819.jpg",
-      "grupo": 45,
-      "id": 11819,
-      "marca": "AMATOOLS",
-      "nome": "SOQUETE TORX 1/2\" NOLL - T60",
-      "preco": 11.93,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11819.jpg"
     }
   ]
 }
