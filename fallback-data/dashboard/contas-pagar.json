@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2722210
+      "saldo": 2882240
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-20T10:16:29.579831",
+  "generated_at": "2026-04-20T11:48:47.694119",
   "kpis": {
-    "a_vencer_7d": 341045,
+    "a_vencer_7d": 351572,
     "juros_pagos": 71565,
-    "total_aberto": 2969076,
+    "total_aberto": 3129106,
     "total_pago_periodo": 3288716,
     "total_vencido": 246866
   },
@@ -129,6 +129,11 @@
       "total_aberto": 204972
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 5,
+      "total_aberto": 190988
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 8,
       "total_aberto": 188018
@@ -149,14 +154,9 @@
       "total_aberto": 68337
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 2,
-      "total_aberto": 41485
-    },
-    {
       "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 3,
-      "total_aberto": 40305
+      "titulos": 4,
+      "total_aberto": 46904
     }
   ]
 }

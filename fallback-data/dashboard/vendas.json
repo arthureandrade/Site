@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-20T10:16:28.714799",
+  "generated_at": "2026-04-20T11:48:46.713689",
   "kpis": {
-    "ticket_medio": 296.6462857142857,
-    "total_pedidos": 35,
-    "total_vendas": 10382.619999999999,
-    "total_vendedores": 6
+    "ticket_medio": 265.70874999999995,
+    "total_pedidos": 80,
+    "total_vendas": 21256.699999999997,
+    "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 5698.75
+      "total_vendas": 9368.25
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 3222.62
+      "total_vendas": 7943.2
     },
     {
-      "loja": "4",
-      "total_vendas": 1461.25
+      "loja": "Loja 4",
+      "total_vendas": 3945.25
     }
   ],
   "ok": true,
@@ -31,40 +31,50 @@
   "serie_diaria": [
     {
       "data": "2026-04-20",
-      "total_vendas": 10382.62
+      "total_vendas": 21256.7
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 10,
-      "total_vendas": 3242,
+      "pedidos": 20,
+      "total_vendas": 5659,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 4,
-      "total_vendas": 3197,
+      "pedidos": 14,
+      "total_vendas": 5618.5,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 6,
-      "total_vendas": 1767.05,
+      "pedidos": 14,
+      "total_vendas": 4447,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 8,
+      "total_vendas": 1999.05,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 7,
-      "total_vendas": 1311.57,
+      "pedidos": 10,
+      "total_vendas": 1589.15,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 721,
+      "pedidos": 11,
+      "total_vendas": 1496,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 3,
-      "total_vendas": 144,
-      "vendedor": "Rafael"
+      "pedidos": 2,
+      "total_vendas": 278,
+      "vendedor": "Matheus"
+    },
+    {
+      "pedidos": 1,
+      "total_vendas": 170,
+      "vendedor": "Juan"
     }
   ]
 }

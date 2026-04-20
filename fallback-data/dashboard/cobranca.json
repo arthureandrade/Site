@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 556335
+      "saldo": 560279
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 148526
+      "saldo": 147426
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15530
     }
   ],
-  "generated_at": "2026-04-20T10:16:29.122998",
+  "generated_at": "2026-04-20T11:48:47.226835",
   "kpis": {
-    "clientes_atraso": 75,
-    "total_aberto": 836368,
-    "total_atraso": 280033,
-    "total_vencer": 556335
+    "clientes_atraso": 73,
+    "total_aberto": 839212,
+    "total_atraso": 278933,
+    "total_vencer": 560279
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -47,13 +47,6 @@
       "loja": "Loja 1",
       "saldo": 42000,
       "vencimento": "2026-04-17T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 1000,
-      "vencimento": "2026-04-18T00:00:00"
     },
     {
       "cliente": "ROBERIO SILVA FARIAS",
@@ -74,13 +67,6 @@
       "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 1085,
-      "vencimento": "2026-04-22T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -2,
-      "loja": "Loja 1",
-      "saldo": 2152,
       "vencimento": "2026-04-22T00:00:00"
     },
     {
