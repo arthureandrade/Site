@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2882240
+      "saldo": 2887467
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-20T15:21:15.995257",
+  "generated_at": "2026-04-20T17:02:41.903382",
   "kpis": {
     "a_vencer_7d": 351572,
     "juros_pagos": 71565,
-    "total_aberto": 3129106,
+    "total_aberto": 3134333,
     "total_pago_periodo": 3288716,
     "total_vencido": 246866
   },
@@ -102,7 +102,7 @@
       "dias_atraso": 11,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13342,
+      "saldo": 13353,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 4,
-      "total_aberto": 68337
+      "titulos": 5,
+      "total_aberto": 71007
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
