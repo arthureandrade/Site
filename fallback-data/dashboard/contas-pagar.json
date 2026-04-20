@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2887467
+      "saldo": 2877201
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 238892
+      "saldo": 244154
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-20T17:02:41.903382",
+  "generated_at": "2026-04-20T17:59:42.645507",
   "kpis": {
-    "a_vencer_7d": 351572,
+    "a_vencer_7d": 341306,
     "juros_pagos": 71565,
-    "total_aberto": 3134333,
-    "total_pago_periodo": 3288716,
-    "total_vencido": 246866
+    "total_aberto": 3129329,
+    "total_pago_periodo": 3345249,
+    "total_vencido": 252128
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -71,6 +71,13 @@
       "vencimento": "2026-03-10T00:00:00"
     },
     {
+      "dias_atraso": 18,
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "loja": "Loja 4",
+      "saldo": 37727,
+      "vencimento": "2026-04-02T00:00:00"
+    },
+    {
       "dias_atraso": 16,
       "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
       "loja": "Loja 1",
@@ -88,13 +95,6 @@
       "dias_atraso": 11,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 56330,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 11,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
       "saldo": 3765,
       "vencimento": "2026-04-09T00:00:00"
     },
@@ -102,7 +102,7 @@
       "dias_atraso": 11,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13353,
+      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 18,
-      "total_aberto": 466140
+      "titulos": 19,
+      "total_aberto": 503867
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 10,
-      "total_aberto": 140169
+      "titulos": 9,
+      "total_aberto": 120847
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -154,9 +154,9 @@
       "total_aberto": 71007
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 4,
-      "total_aberto": 46904
+      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
+      "titulos": 2,
+      "total_aberto": 38125
     }
   ]
 }
