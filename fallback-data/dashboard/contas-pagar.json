@@ -2,15 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2888423
+      "saldo": 2804534
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 483806
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 9466
+      "saldo": 316821
     },
     {
       "faixa": "91–180 dias",
@@ -19,109 +15,108 @@
     {
       "faixa": "61–90 dias",
       "saldo": 1389
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-17T10:10:40.594982",
+  "generated_at": "2026-04-21T09:02:26.397495",
   "kpis": {
-    "a_vencer_7d": 340749,
-    "juros_pagos": 71064,
-    "total_aberto": 3388603,
-    "total_pago_periodo": 2421007,
-    "total_vencido": 500180
+    "a_vencer_7d": 344181,
+    "juros_pagos": 71565,
+    "total_aberto": 3129329,
+    "total_pago_periodo": 3344466,
+    "total_vencido": 324795
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-04-17",
-    "data_de": "2026-03-18"
+    "data_ate": "2026-04-21",
+    "data_de": "2026-03-22"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 141,
+      "dias_atraso": 145,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 103,
+      "dias_atraso": 107,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 76,
+      "dias_atraso": 80,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 74,
+      "dias_atraso": 78,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 38,
+      "dias_atraso": 42,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 32,
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "loja": "Loja 4",
-      "saldo": 8400,
-      "vencimento": "2026-03-16T00:00:00"
-    },
-    {
-      "dias_atraso": 20,
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "loja": "Loja 4",
-      "saldo": 30249,
-      "vencimento": "2026-03-28T00:00:00"
-    },
-    {
-      "dias_atraso": 18,
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "loja": "Loja 4",
-      "saldo": 8400,
-      "vencimento": "2026-03-30T00:00:00"
-    },
-    {
-      "dias_atraso": 15,
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "loja": "Loja 4",
-      "saldo": 15207,
-      "vencimento": "2026-04-02T00:00:00"
-    },
-    {
-      "dias_atraso": 15,
+      "dias_atraso": 19,
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "loja": "Loja 4",
       "saldo": 37727,
       "vencimento": "2026-04-02T00:00:00"
+    },
+    {
+      "dias_atraso": 17,
+      "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
+      "loja": "Loja 1",
+      "saldo": 100,
+      "vencimento": "2026-04-04T00:00:00"
+    },
+    {
+      "dias_atraso": 14,
+      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
+      "loja": "Loja 1",
+      "saldo": 23125,
+      "vencimento": "2026-04-07T00:00:00"
+    },
+    {
+      "dias_atraso": 12,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 3765,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 12,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 56330,
+      "vencimento": "2026-04-09T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 44,
-      "total_aberto": 1057316
+      "titulos": 42,
+      "total_aberto": 1004511
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 25,
-      "total_aberto": 710224
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 9,
-      "total_aberto": 213149
+      "titulos": 19,
+      "total_aberto": 503867
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -134,29 +129,34 @@
       "total_aberto": 204972
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 5,
+      "total_aberto": 190988
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 8,
+      "total_aberto": 188018
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 18,
-      "total_aberto": 162440
+      "titulos": 16,
+      "total_aberto": 145640
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 10,
-      "total_aberto": 140169
-    },
-    {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 3,
-      "total_aberto": 90748
+      "titulos": 9,
+      "total_aberto": 120847
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 3,
-      "total_aberto": 65007
+      "titulos": 5,
+      "total_aberto": 71007
     },
     {
-      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
-      "titulos": 3,
-      "total_aberto": 53262
+      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
+      "titulos": 2,
+      "total_aberto": 38125
     }
   ]
 }
