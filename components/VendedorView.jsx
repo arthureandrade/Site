@@ -21,6 +21,9 @@ const STORAGE_QUOTES = 'vendedor_orcamentos_salvos'
 const STORAGE_QUOTES_PENDING = 'vendedor_orcamentos_pendentes_sync'
 const STORAGE_SEQ = 'vendedor_orcamentos_seq'
 const STORAGE_VENDEDORES_FALLBACK = 'vendedor_usuarios_fallback'
+const DESCONTO_MAXIMO = 15
+const PASSO_QUANTIDADE = 0.5
+const QUANTIDADE_MINIMA = 0.5
 
 function carregarOrcamentosSalvos() {
   try {
@@ -73,6 +76,75 @@ function normalizarBuscaCodigo(valor) {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/\D/g, '')
+}
+
+function limitarNumero(valor, minimo, maximo) {
+  return Math.min(maximo, Math.max(minimo, valor))
+}
+
+function parseNumeroEntrada(valor) {
+  const texto = String(valor ?? '').trim()
+  if (!texto) return Number.NaN
+
+  const limpo = texto.replace(/[^\d,.-]/g, '')
+  if (!limpo) return Number.NaN
+
+  const normalizado = limpo.includes(',')
+    ? limpo.replace(/\./g, '').replace(',', '.')
+    : limpo
+
+  return Number(normalizado)
+}
+
+function normalizarQuantidade(valor) {
+  const numero = parseNumeroEntrada(valor)
+  if (!Number.isFinite(numero)) return QUANTIDADE_MINIMA
+  return Math.max(QUANTIDADE_MINIMA, Math.round(numero / PASSO_QUANTIDADE) * PASSO_QUANTIDADE)
+}
+
+function formatarQuantidade(valor) {
+  const numero = Number(valor || 0)
+  return numero.toLocaleString('pt-BR', {
+    minimumFractionDigits: Number.isInteger(numero) ? 0 : 1,
+    maximumFractionDigits: 2,
+  })
+}
+
+function formatarPercentual(valor) {
+  return Number(valor || 0).toLocaleString('pt-BR', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  })
+}
+
+function calcularTotalComDescontoGlobal(items, descontoGlobal) {
+  return (items || []).reduce((acc, item) => {
+    const desc = Math.max(Number(item?.desconto) || 0, descontoGlobal)
+    return acc + (Number(item?.preco) || 0) * (Number(item?.qty) || 0) * (1 - desc / 100)
+  }, 0)
+}
+
+function encontrarDescontoParaTotal(items, totalDesejado) {
+  const totalMaximo = calcularTotalComDescontoGlobal(items, 0)
+  const totalMinimo = calcularTotalComDescontoGlobal(items, DESCONTO_MAXIMO)
+
+  if (totalDesejado >= totalMaximo) return 0
+  if (totalDesejado <= totalMinimo) return DESCONTO_MAXIMO
+
+  let baixo = 0
+  let alto = DESCONTO_MAXIMO
+
+  for (let i = 0; i < 30; i += 1) {
+    const meio = (baixo + alto) / 2
+    const totalAtual = calcularTotalComDescontoGlobal(items, meio)
+    if (totalAtual > totalDesejado) {
+      baixo = meio
+    } else {
+      alto = meio
+    }
+  }
+
+  return Number(alto.toFixed(2))
 }
 
 async function carregarOrcamentosServidor(usuarioLogin, busca = '') {
@@ -521,6 +593,20 @@ function PainelOrcamento({ onClose, usuario }) {
   const [loadingDb2, setLoadingDb2] = useState(false)
   const [ultimoNumeroSalvo, setUltimoNumeroSalvo] = useState(null)
   const [pdfModal, setPdfModal] = useState({ open: false, orcamento: null })
+  const [totalEditavel, setTotalEditavel] = useState('')
+
+  const totalMaximoEditavel = useMemo(
+    () => calcularTotalComDescontoGlobal(items, 0),
+    [items]
+  )
+  const totalMinimoEditavel = useMemo(
+    () => calcularTotalComDescontoGlobal(items, DESCONTO_MAXIMO),
+    [items]
+  )
+
+  useEffect(() => {
+    setTotalEditavel(totalComDesc > 0 ? totalComDesc.toFixed(2).replace('.', ',') : '')
+  }, [totalComDesc])
 
   const orcamentosFiltrados = useMemo(() => {
     const termo = String(buscaSalva || '').trim().toLowerCase()
@@ -628,13 +714,44 @@ function PainelOrcamento({ onClose, usuario }) {
     }
   }, [usuario])
 
+  function aplicarTotalEditavel(valor) {
+    setTotalEditavel(valor)
+
+    if (!items.length) return
+
+    const totalDesejado = parseNumeroEntrada(valor)
+    if (!Number.isFinite(totalDesejado)) return
+
+    const totalLimitado = limitarNumero(totalDesejado, totalMinimoEditavel, totalMaximoEditavel)
+    const descontoCalculado = encontrarDescontoParaTotal(items, totalLimitado)
+    dispatch({ type: 'SET_DESCONTO_GLOBAL', desconto: descontoCalculado })
+  }
+
+  function finalizarTotalEditavel() {
+    if (!items.length) {
+      setTotalEditavel('')
+      return
+    }
+
+    const totalDesejado = parseNumeroEntrada(totalEditavel)
+    if (!Number.isFinite(totalDesejado)) {
+      setTotalEditavel(totalComDesc.toFixed(2).replace('.', ','))
+      return
+    }
+
+    const totalLimitado = limitarNumero(totalDesejado, totalMinimoEditavel, totalMaximoEditavel)
+    const descontoCalculado = encontrarDescontoParaTotal(items, totalLimitado)
+    dispatch({ type: 'SET_DESCONTO_GLOBAL', desconto: descontoCalculado })
+    setTotalEditavel(totalLimitado.toFixed(2).replace('.', ','))
+  }
+
   function montarMensagem() {
     const { data } = dataHoraAtual()
     const linhas = items.map((item) => {
       const desc = Math.max(item.desconto || 0, descontoGlobal)
       const precoUnit = item.preco > 0 ? formatarPreco(item.preco) : 'Consultar'
       const subtotal = item.preco > 0 ? formatarPreco(item.preco * item.qty * (1 - desc / 100)) : 'Consultar'
-      return `${item.id} | ${item.nome} | ${item.qty}${item.unidade || 'UN'} | ${precoUnit} | ${desc > 0 ? `${desc}%` : '-'} | ${subtotal}`
+      return `${item.id} | ${item.nome} | ${formatarQuantidade(item.qty)}${item.unidade || 'UN'} | ${precoUnit} | ${desc > 0 ? `${formatarPercentual(desc)}%` : '-'} | ${subtotal}`
     })
 
     return (
@@ -815,7 +932,7 @@ function PainelOrcamento({ onClose, usuario }) {
             <div class="ticket-grid">
               <div class="ticket-cell">
                 <span>Qtd.</span>
-                <strong>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</strong>
+                <strong>${escaparHtml(`${formatarQuantidade(item.qty)}${item.unidade || 'UN'}`)}</strong>
               </div>
               <div class="ticket-cell">
                 <span>Vr unit.</span>
@@ -837,7 +954,7 @@ function PainelOrcamento({ onClose, usuario }) {
         <tr>
           <td>${escaparHtml(item.id)}</td>
           <td class="produto-cell">${escaparHtml(item.nome)}</td>
-          <td>${escaparHtml(`${item.qty}${item.unidade || 'UN'}`)}</td>
+          <td>${escaparHtml(`${formatarQuantidade(item.qty)}${item.unidade || 'UN'}`)}</td>
           <td>${escaparHtml(precoCheio)}</td>
           <td>${escaparHtml(precoComDesc)}</td>
           <td>${escaparHtml(subtotal)}</td>
@@ -1109,10 +1226,12 @@ function PainelOrcamento({ onClose, usuario }) {
                           </button>
                           <input
                             type="number"
-                            min="1"
+                            min="0.5"
+                            step="0.5"
+                            inputMode="decimal"
                             value={item.qty}
                             onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
-                            className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
+                            className="w-14 rounded border border-gray-300 py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
                           />
                           <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
                             +
@@ -1125,6 +1244,7 @@ function PainelOrcamento({ onClose, usuario }) {
                             type="number"
                             min="0"
                             max="15"
+                            step="0.1"
                             value={item.desconto || 0}
                             onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
                             className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs outline-none focus:border-primary"
@@ -1152,19 +1272,19 @@ function PainelOrcamento({ onClose, usuario }) {
                 <div className="border-b border-gray-100 px-4 pb-2 pt-3 xl:border-b-0 xl:border-r">
                   <div className="mb-1 flex items-center justify-between">
                     <label className="text-xs font-semibold uppercase tracking-wide text-gray-600">Desconto geral</label>
-                    <span className="text-xs font-black text-primary">{descontoGlobal}%</span>
+                    <span className="text-xs font-black text-primary">{formatarPercentual(descontoGlobal)}%</span>
                   </div>
                   <input
                     type="range"
                     min="0"
                     max="15"
-                    step="1"
+                    step="0.1"
                     value={descontoGlobal}
                     onChange={(e) => dispatch({ type: 'SET_DESCONTO_GLOBAL', desconto: e.target.value })}
                     className="h-1.5 w-full accent-[#CC0000]"
                   />
 
-                  <div className="mt-3 space-y-1">
+                  <div className="mt-3 space-y-2">
                     <div className="flex justify-between text-xs text-gray-500">
                       <span>Subtotal</span>
                       <span>{formatarPreco(subtotalSemDesc)}</span>
@@ -1178,6 +1298,29 @@ function PainelOrcamento({ onClose, usuario }) {
                     <div className="flex justify-between font-black text-gray-900">
                       <span className="text-sm">Total</span>
                       <span className="text-base">{formatarPreco(totalComDesc)}</span>
+                    </div>
+                    <div className="space-y-1 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2">
+                      <div className="flex items-center justify-between gap-2">
+                        <label className="text-[10px] font-semibold uppercase tracking-wide text-amber-900">
+                          Total editavel
+                        </label>
+                        <span className="text-[10px] text-amber-700">
+                          Ate {formatarPercentual(DESCONTO_MAXIMO)}% de desconto
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        value={totalEditavel}
+                        onChange={(e) => aplicarTotalEditavel(e.target.value)}
+                        onBlur={finalizarTotalEditavel}
+                        placeholder="0,00"
+                        className="w-full rounded-lg border border-amber-200 bg-white px-3 py-2 text-sm font-black text-gray-900 outline-none focus:border-primary"
+                      />
+                      <div className="flex justify-between gap-3 text-[10px] text-amber-700">
+                        <span>Minimo: {formatarPreco(totalMinimoEditavel)}</span>
+                        <span>Maximo: {formatarPreco(totalMaximoEditavel)}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1538,6 +1681,7 @@ function CatalogoCatalogo({ onCatalogoBase }) {
           skip,
           limit: tamanhoLote,
           todas_secoes: 1,
+          com_preco: false,
           noStore: true,
         })
 
@@ -1689,9 +1833,11 @@ function CatalogoCatalogo({ onCatalogoBase }) {
                   <div className="mt-3 flex items-center gap-2">
                     <input
                       type="number"
-                      min="1"
+                      min="0.5"
+                      step="0.5"
+                      inputMode="decimal"
                       value={getQtd(prod.id)}
-                      onChange={(e) => setQtdMap((prev) => ({ ...prev, [prod.id]: Math.max(1, Number(e.target.value) || 1) }))}
+                      onChange={(e) => setQtdMap((prev) => ({ ...prev, [prod.id]: normalizarQuantidade(e.target.value) }))}
                       className="w-20 rounded-xl border border-gray-300 px-3 py-2 text-center text-sm font-bold outline-none focus:border-primary"
                     />
                     <button
@@ -1742,9 +1888,11 @@ function CatalogoCatalogo({ onCatalogoBase }) {
                     <td className="px-3 py-2 text-center">
                       <input
                         type="number"
-                        min="1"
+                        min="0.5"
+                        step="0.5"
+                        inputMode="decimal"
                         value={getQtd(prod.id)}
-                        onChange={(e) => setQtdMap((prev) => ({ ...prev, [prod.id]: Math.max(1, Number(e.target.value) || 1) }))}
+                        onChange={(e) => setQtdMap((prev) => ({ ...prev, [prod.id]: normalizarQuantidade(e.target.value) }))}
                         className="w-14 rounded border border-gray-300 py-1 text-center text-xs outline-none focus:border-primary"
                       />
                     </td>

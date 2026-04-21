@@ -3,11 +3,53 @@
 import { createContext, useContext, useReducer, useEffect } from 'react'
 
 const VendedorContext = createContext(null)
+const DESCONTO_MAXIMO = 15
+const QUANTIDADE_MINIMA = 0.5
+const PASSO_QUANTIDADE = 0.5
+
+function limitarNumero(valor, minimo, maximo) {
+  return Math.min(maximo, Math.max(minimo, valor))
+}
+
+function normalizarNumeroEntrada(valor) {
+  const texto = String(valor ?? '').trim()
+  if (!texto) return Number.NaN
+
+  const limpo = texto.replace(/[^\d,.-]/g, '')
+  if (!limpo) return Number.NaN
+
+  const normalizado = limpo.includes(',')
+    ? limpo.replace(/\./g, '').replace(',', '.')
+    : limpo
+
+  return Number(normalizado)
+}
+
+function normalizarQuantidade(valor) {
+  const numero = normalizarNumeroEntrada(valor)
+  if (!Number.isFinite(numero)) return QUANTIDADE_MINIMA
+  return Math.max(QUANTIDADE_MINIMA, Math.round(numero / PASSO_QUANTIDADE) * PASSO_QUANTIDADE)
+}
+
+function normalizarDesconto(valor) {
+  const numero = normalizarNumeroEntrada(valor)
+  if (!Number.isFinite(numero)) return 0
+  return limitarNumero(numero, 0, DESCONTO_MAXIMO)
+}
+
+function normalizarItems(items) {
+  if (!Array.isArray(items)) return []
+  return items.map((item) => ({
+    ...item,
+    qty: normalizarQuantidade(item?.qty),
+    desconto: normalizarDesconto(item?.desconto),
+  }))
+}
 
 function orcamentoReducer(state, action) {
   switch (action.type) {
     case 'ADD': {
-      const qty = Math.max(1, Number(action.qty) || 1)
+      const qty = normalizarQuantidade(action.qty)
       const existing = state.items.find(i => i.id === action.produto.id)
       if (existing) {
         return {
@@ -25,22 +67,22 @@ function orcamentoReducer(state, action) {
     case 'REMOVE':
       return { ...state, items: state.items.filter(i => i.id !== action.id) }
     case 'INC':
-      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: i.qty + 1 } : i) }
+      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: normalizarQuantidade(i.qty + PASSO_QUANTIDADE) } : i) }
     case 'DEC':
-      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: Math.max(1, i.qty - 1) } : i) }
+      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: normalizarQuantidade(Math.max(QUANTIDADE_MINIMA, i.qty - PASSO_QUANTIDADE)) } : i) }
     case 'SET_QTY':
-      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: Math.max(1, Number(action.qty) || 1) } : i) }
+      return { ...state, items: state.items.map(i => i.id === action.id ? { ...i, qty: normalizarQuantidade(action.qty) } : i) }
     case 'SET_DESCONTO':
       return {
         ...state,
         items: state.items.map(i =>
           i.id === action.id
-            ? { ...i, desconto: Math.min(15, Math.max(0, Number(action.desconto) || 0)) }
+            ? { ...i, desconto: normalizarDesconto(action.desconto) }
             : i
         ),
       }
     case 'SET_DESCONTO_GLOBAL':
-      return { ...state, descontoGlobal: Math.min(15, Math.max(0, Number(action.desconto) || 0)) }
+      return { ...state, descontoGlobal: normalizarDesconto(action.desconto) }
     case 'SET_OBSERVACAO':
       return { ...state, observacao: String(action.observacao || '') }
     case 'SET_CLIENTE_NOME':
@@ -48,12 +90,17 @@ function orcamentoReducer(state, action) {
     case 'CLEAR':
       return { ...state, items: [], descontoGlobal: 0, observacao: '', clienteNome: '' }
     case 'INIT':
-      return { ...initialState, ...action.state }
+      return {
+        ...initialState,
+        ...action.state,
+        items: normalizarItems(action.state?.items),
+        descontoGlobal: normalizarDesconto(action.state?.descontoGlobal),
+      }
     case 'LOAD_ORCAMENTO':
       return {
         ...state,
-        items: Array.isArray(action.orcamento?.items) ? action.orcamento.items : [],
-        descontoGlobal: Number(action.orcamento?.descontoGlobal) || 0,
+        items: normalizarItems(action.orcamento?.items),
+        descontoGlobal: normalizarDesconto(action.orcamento?.descontoGlobal),
         observacao: String(action.orcamento?.observacao || ''),
         clienteNome: String(action.orcamento?.clienteNome || ''),
       }
