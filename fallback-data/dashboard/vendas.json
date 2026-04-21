@@ -1,15 +1,19 @@
 {
-  "generated_at": "2026-04-21T09:02:25.543161",
+  "generated_at": "2026-04-21T10:53:16.056750",
   "kpis": {
-    "ticket_medio": 80.6,
-    "total_pedidos": 10,
-    "total_vendas": 806,
-    "total_vendedores": 2
+    "ticket_medio": 592.3222727272728,
+    "total_pedidos": 44,
+    "total_vendas": 26062.18,
+    "total_vendedores": 4
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 806
+      "total_vendas": 15562.18
+    },
+    {
+      "loja": "Loja 4",
+      "total_vendas": 10500
     }
   ],
   "ok": true,
@@ -23,20 +27,30 @@
   "serie_diaria": [
     {
       "data": "2026-04-21",
-      "total_vendas": 806
+      "total_vendas": 26062.18
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 5,
-      "total_vendas": 668,
+      "pedidos": 4,
+      "total_vendas": 19550,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 23,
+      "total_vendas": 4263.5,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 138,
+      "pedidos": 16,
+      "total_vendas": 2187.68,
       "vendedor": "Claudia"
+    },
+    {
+      "pedidos": 1,
+      "total_vendas": 61,
+      "vendedor": "Matheus"
     }
   ]
 }
