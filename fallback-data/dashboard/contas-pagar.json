@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 227032
+      "saldo": 227564
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-22T16:37:22.305142",
+  "generated_at": "2026-04-22T17:36:51.622916",
   "kpis": {
     "a_vencer_7d": 333491,
     "juros_pagos": 71565,
-    "total_aberto": 3015688,
+    "total_aberto": 3016220,
     "total_pago_periodo": 3687285,
-    "total_vencido": 235006
+    "total_vencido": 235538
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -88,21 +88,21 @@
       "dias_atraso": 13,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 56330,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 13,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 3765,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 13,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
       "saldo": 13353,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 13,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 13342,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 13,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
