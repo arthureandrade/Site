@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-22T12:48:42.668Z",
+  "generated_at": "2026-04-22T14:28:49.578Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5710,
+  "total": 5704,
   "produtos": [
     {
       "descricao": "",
@@ -1769,7 +1769,7 @@
     },
     {
       "descricao": "",
-      "estoque": 196,
+      "estoque": 194,
       "foto_url": null,
       "grupo": 92,
       "id": 12112,
@@ -4331,7 +4331,7 @@
     },
     {
       "descricao": "",
-      "estoque": 499,
+      "estoque": 495,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1657.jpg",
       "grupo": 64,
       "id": 1657,
@@ -5045,7 +5045,7 @@
     },
     {
       "descricao": "",
-      "estoque": 995,
+      "estoque": 994,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1769.jpg",
       "grupo": 64,
       "id": 1769,
@@ -12409,7 +12409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38,
+      "estoque": 37,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4211.jpg",
       "grupo": 11,
       "id": 4211,
@@ -13697,7 +13697,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5573.jpg",
       "grupo": 34,
       "id": 5573,
@@ -18160,62 +18160,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3274.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": -10,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1698.jpg",
-      "grupo": 43,
-      "id": 1698,
-      "marca": "GERAL",
-      "nome": "CHAVE HEX L IRW 83MM X 5/64",
-      "preco": 5.37,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1698.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": -9,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1702.jpg",
-      "grupo": 43,
-      "id": 1702,
-      "marca": "GERAL",
-      "nome": "CHAVE HEX L IRW 88MM X 3/32",
-      "preco": 5.65,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1702.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": -10,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1715.jpg",
-      "grupo": 43,
-      "id": 1715,
-      "marca": "GERAL",
-      "nome": "CHAVE HEX L IRW 90MM X 1.5MM",
-      "preco": 5.61,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1715.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": -10,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1708.jpg",
-      "grupo": 43,
-      "id": 1708,
-      "marca": "GERAL",
-      "nome": "CHAVE HEX L IRW 93MM X 7/64",
-      "preco": 4.88,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1708.jpg"
     },
     {
       "descricao": "",
@@ -25093,7 +25037,7 @@
     },
     {
       "descricao": "",
-      "estoque": 185,
+      "estoque": 182,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12441.jpg",
       "grupo": 30,
       "id": 12441,
@@ -25205,7 +25149,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1730,
+      "estoque": 1725,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -25877,7 +25821,7 @@
     },
     {
       "descricao": "",
-      "estoque": 32,
+      "estoque": 31,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1144.jpg",
       "grupo": 30,
       "id": 1144,
@@ -26185,7 +26129,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": 14,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12687.jpg",
       "grupo": 30,
       "id": 12687,
@@ -27375,7 +27319,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4962,
+      "estoque": 4946,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/63.jpg",
       "grupo": 32,
       "id": 63,
@@ -27403,7 +27347,7 @@
     },
     {
       "descricao": "",
-      "estoque": 974,
+      "estoque": 970,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -27837,7 +27781,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2009,
+      "estoque": 2006,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -31492,20 +31436,6 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4048.jpg",
-      "grupo": 62,
-      "id": 4048,
-      "marca": "IRWIN",
-      "nome": "EXPOSITOR DE BROCAS MAST ER/MEGA BR",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4048.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1828.jpg",
       "grupo": 63,
       "id": 1828,
@@ -34375,7 +34305,7 @@
     },
     {
       "descricao": "",
-      "estoque": 113,
+      "estoque": 105,
       "foto_url": null,
       "grupo": 41,
       "id": 85,
@@ -40997,7 +40927,7 @@
     },
     {
       "descricao": "",
-      "estoque": 125,
+      "estoque": 121,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5132.jpg",
       "grupo": 92,
       "id": 5132,
@@ -42817,20 +42747,6 @@
     },
     {
       "descricao": "",
-      "estoque": 50,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5023.jpg",
-      "grupo": 26,
-      "id": 5023,
-      "marca": "IRWIN",
-      "nome": "LAPIS CARPINTEIRO IRWIN",
-      "preco": 2.34,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5023.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1692.jpg",
       "grupo": 63,
@@ -44525,7 +44441,7 @@
     },
     {
       "descricao": "",
-      "estoque": 81,
+      "estoque": 80,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4134.jpg",
       "grupo": 34,
       "id": 4134,
@@ -47689,7 +47605,7 @@
     },
     {
       "descricao": "",
-      "estoque": 41,
+      "estoque": 40,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3366.jpg",
       "grupo": 34,
       "id": 3366,
@@ -48221,7 +48137,7 @@
     },
     {
       "descricao": "",
-      "estoque": 402,
+      "estoque": 400,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg",
       "grupo": 60,
       "id": 3658,
@@ -52883,7 +52799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 90967,
+      "estoque": 90667,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -54773,7 +54689,7 @@
     },
     {
       "descricao": "",
-      "estoque": 564,
+      "estoque": 559,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1760.jpg",
       "grupo": 64,
       "id": 1760,
@@ -57153,7 +57069,7 @@
     },
     {
       "descricao": "",
-      "estoque": 830,
+      "estoque": 829,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg",
       "grupo": 45,
       "id": 11483,
@@ -58525,7 +58441,7 @@
     },
     {
       "descricao": "",
-      "estoque": 786,
+      "estoque": 764,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2093.jpg",
       "grupo": 66,
       "id": 2093,
@@ -58861,7 +58777,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3590.jpg",
       "grupo": 66,
       "id": 3590,
@@ -59225,7 +59141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 193,
+      "estoque": 189,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5646.jpg",
       "grupo": 64,
       "id": 5646,
@@ -59295,7 +59211,7 @@
     },
     {
       "descricao": "",
-      "estoque": 356,
+      "estoque": 352,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1280.jpg",
       "grupo": 63,
       "id": 1280,
@@ -61619,7 +61535,7 @@
     },
     {
       "descricao": "",
-      "estoque": 380,
+      "estoque": 379,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12382.jpg",
       "grupo": 71,
       "id": 12382,
@@ -65273,7 +65189,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11176,
+      "estoque": 11166,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/88.jpg",
       "grupo": 71,
       "id": 88,
@@ -69767,7 +69683,7 @@
     },
     {
       "descricao": "",
-      "estoque": 47,
+      "estoque": 43,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1673.jpg",
       "grupo": 45,
       "id": 1673,
@@ -70002,6 +69918,90 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11817.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 8,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11818.jpg",
+      "grupo": 45,
+      "id": 11818,
+      "marca": "AMATOOLS",
+      "nome": "SOQUETE TORX 1/2\" NOLL - T55",
+      "preco": 10.22,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11818.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 2,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11819.jpg",
+      "grupo": 45,
+      "id": 11819,
+      "marca": "AMATOOLS",
+      "nome": "SOQUETE TORX 1/2\" NOLL - T60",
+      "preco": 11.93,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11819.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 13,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11771.jpg",
+      "grupo": 45,
+      "id": 11771,
+      "marca": "AMATOOLS",
+      "nome": "SOQUETE UNIVERSAL  7-19MM C/ADAPTADOR - NOLL",
+      "preco": 64.4,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11771.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 8,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4959.jpg",
+      "grupo": 69,
+      "id": 4959,
+      "marca": "WORKER",
+      "nome": "SPRAY ANTIRESPINGO C/ SILICONE 400ML - WORKER",
+      "preco": 35.66,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4959.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 69,
+      "id": 13816,
+      "marca": "CARBOGRAFITE",
+      "nome": "SPRAY ANTIRRESPINGO SEM SILICONE",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1965.jpg",
+      "grupo": 73,
+      "id": 1965,
+      "marca": "ORBI",
+      "nome": "SPRAY TINTA ALUMINIO ORBI 340ML/190G",
+      "preco": 18.42,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1965.jpg"
     }
   ]
 }

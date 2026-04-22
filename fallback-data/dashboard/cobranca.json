@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 546463
+      "saldo": 548161
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 175209
+      "saldo": 135190
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 16166
     }
   ],
-  "generated_at": "2026-04-22T08:48:40.442575",
+  "generated_at": "2026-04-22T10:28:46.904509",
   "kpis": {
-    "clientes_atraso": 77,
-    "total_aberto": 854015,
-    "total_atraso": 307552,
-    "total_vencer": 546463
+    "clientes_atraso": 72,
+    "total_aberto": 815694,
+    "total_atraso": 267533,
+    "total_vencer": 548161
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -118,22 +118,10 @@
       "total_atraso": 20000
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 16750
-    },
-    {
       "cliente": "FABIANO CANTAL DE SOUZA",
       "maior_atraso": 693,
       "titulos": 16,
       "total_atraso": 12302
-    },
-    {
-      "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 3,
-      "titulos": 1,
-      "total_atraso": 11750
     },
     {
       "cliente": "CONSPRO CONSTRUCOES LTDA",
@@ -142,16 +130,28 @@
       "total_atraso": 11300
     },
     {
-      "cliente": "PROMIX LTDA",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 10860
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 20,
       "titulos": 5,
       "total_atraso": 9272
+    },
+    {
+      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
+      "maior_atraso": 3,
+      "titulos": 1,
+      "total_atraso": 8400
+    },
+    {
+      "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
+      "maior_atraso": 30,
+      "titulos": 2,
+      "total_atraso": 7345
+    },
+    {
+      "cliente": "EDVALDO CASTRO NASCIMENTO",
+      "maior_atraso": 174,
+      "titulos": 2,
+      "total_atraso": 6905
     }
   ]
 }
