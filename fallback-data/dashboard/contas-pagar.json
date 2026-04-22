@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2784164
+      "saldo": 2778182
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-22T10:28:47.352574",
+  "generated_at": "2026-04-22T11:53:15.335328",
   "kpis": {
-    "a_vencer_7d": 336143,
+    "a_vencer_7d": 333491,
     "juros_pagos": 71565,
-    "total_aberto": 3056662,
-    "total_pago_periodo": 3558210,
+    "total_aberto": 3050680,
+    "total_pago_periodo": 3574104,
     "total_vencido": 272498
   },
   "ok": true,
@@ -95,14 +95,14 @@
       "dias_atraso": 13,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 56330,
+      "saldo": 3765,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
       "dias_atraso": 13,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 3765,
+      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 5,
-      "total_aberto": 71007
+      "titulos": 4,
+      "total_aberto": 67677
     },
     {
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-22T14:28:49.578Z",
+  "generated_at": "2026-04-22T15:53:13.565Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5704,
+  "total": 5700,
   "produtos": [
     {
       "descricao": "",
@@ -3813,7 +3813,7 @@
     },
     {
       "descricao": "",
-      "estoque": -1122,
+      "estoque": -1128,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/911.jpg",
       "grupo": 3,
       "id": 911,
@@ -4093,7 +4093,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26,
+      "estoque": 266,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2086.jpg",
       "grupo": 26,
       "id": 2086,
@@ -13697,7 +13697,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5,
+      "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5573.jpg",
       "grupo": 34,
       "id": 5573,
@@ -25149,7 +25149,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1725,
+      "estoque": 1625,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -25667,7 +25667,7 @@
     },
     {
       "descricao": "",
-      "estoque": 572,
+      "estoque": 571,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11879.jpg",
       "grupo": 30,
       "id": 11879,
@@ -26955,7 +26955,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 44,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3438.jpg",
       "grupo": 32,
       "id": 3438,
@@ -27291,7 +27291,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1499,
+      "estoque": 7539,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/60.jpg",
       "grupo": 32,
       "id": 60,
@@ -27319,7 +27319,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4946,
+      "estoque": 8546,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/63.jpg",
       "grupo": 32,
       "id": 63,
@@ -27333,7 +27333,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2437,
+      "estoque": 9637,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -27347,7 +27347,7 @@
     },
     {
       "descricao": "",
-      "estoque": 970,
+      "estoque": 2986,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -27585,7 +27585,7 @@
     },
     {
       "descricao": "",
-      "estoque": 490,
+      "estoque": 1570,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10196.jpg",
       "grupo": 32,
       "id": 10196,
@@ -32877,7 +32877,7 @@
     },
     {
       "descricao": "",
-      "estoque": 108,
+      "estoque": 107,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -33298,20 +33298,6 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3668.jpg",
-      "grupo": 41,
-      "id": 3668,
-      "marca": "STAM",
-      "nome": "FECH STAM 800/21 TETRA ESP INOX 37682",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3668.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1781.jpg",
       "grupo": 41,
       "id": 1781,
@@ -33350,34 +33336,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/78.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/554.jpg",
-      "grupo": 41,
-      "id": 554,
-      "marca": "STAM",
-      "nome": "FECH STAM EXT 1801/21 ESP ANTIQUE***",
-      "preco": 62.5,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/554.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/256.jpg",
-      "grupo": 41,
-      "id": 256,
-      "marca": "STAM",
-      "nome": "FECH STAM EXT 1801/21 ESP ESCOVADO***",
-      "preco": 56.82,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/256.jpg"
     },
     {
       "descricao": "",
@@ -33451,7 +33409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 690,
+      "estoque": 689,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/907.jpg",
       "grupo": 41,
       "id": 907,
@@ -34053,7 +34011,7 @@
     },
     {
       "descricao": "",
-      "estoque": 689,
+      "estoque": 737,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1827.jpg",
       "grupo": 41,
       "id": 1827,
@@ -34081,7 +34039,7 @@
     },
     {
       "descricao": "",
-      "estoque": 149,
+      "estoque": 146,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10434.jpg",
       "grupo": 41,
       "id": 10434,
@@ -34235,7 +34193,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1993,
+      "estoque": 2041,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1467.jpg",
       "grupo": 41,
       "id": 1467,
@@ -34291,7 +34249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1296,
+      "estoque": 1344,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1268.jpg",
       "grupo": 41,
       "id": 1268,
@@ -35831,7 +35789,7 @@
     },
     {
       "descricao": "",
-      "estoque": 21,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12449.jpg",
       "grupo": 45,
       "id": 12449,
@@ -41375,20 +41333,6 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1468.jpg",
-      "grupo": 41,
-      "id": 1468,
-      "marca": "STAM",
-      "nome": "KIT1",
-      "preco": 238.63,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1468.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12246.jpg",
       "grupo": 100,
@@ -42747,6 +42691,20 @@
     },
     {
       "descricao": "",
+      "estoque": 50,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5023.jpg",
+      "grupo": 26,
+      "id": 5023,
+      "marca": "IRWIN",
+      "nome": "LAPIS CARPINTEIRO IRWIN",
+      "preco": 2.34,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5023.jpg"
+    },
+    {
+      "descricao": "",
       "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1692.jpg",
       "grupo": 63,
@@ -42943,7 +42901,7 @@
     },
     {
       "descricao": "",
-      "estoque": 62,
+      "estoque": 58,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/901.jpg",
       "grupo": 34,
       "id": 901,
@@ -46863,7 +46821,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/799.jpg",
       "grupo": 43,
       "id": 799,
@@ -50335,7 +50293,7 @@
     },
     {
       "descricao": "",
-      "estoque": 104,
+      "estoque": 103,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11520.jpg",
       "grupo": 34,
       "id": 11520,
@@ -52687,7 +52645,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10190,
+      "estoque": 9490,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4193.jpg",
       "grupo": 64,
       "id": 4193,
@@ -53093,7 +53051,7 @@
     },
     {
       "descricao": "",
-      "estoque": 871,
+      "estoque": 867,
       "foto_url": null,
       "grupo": 64,
       "id": 2545,
@@ -59169,7 +59127,7 @@
     },
     {
       "descricao": "",
-      "estoque": 399,
+      "estoque": 395,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1771.jpg",
       "grupo": 64,
       "id": 1771,
@@ -65889,7 +65847,7 @@
     },
     {
       "descricao": "",
-      "estoque": 177,
+      "estoque": 175,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/93.jpg",
       "grupo": 71,
       "id": 93,
@@ -70002,6 +69960,48 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1965.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1968.jpg",
+      "grupo": 73,
+      "id": 1968,
+      "marca": "ORBI",
+      "nome": "SPRAY TINTA BRANCO FOSCO ORBI 340ML/190G",
+      "preco": 17.47,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1968.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1962.jpg",
+      "grupo": 73,
+      "id": 1962,
+      "marca": "ORBI",
+      "nome": "SPRAY TINTA PRETO BRILHANTE ORBI 340ML/190G",
+      "preco": 17.12,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1962.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 4,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11328.jpg",
+      "grupo": 13,
+      "id": 11328,
+      "marca": "KALA",
+      "nome": "SQUEEZE TERMICO ACO INOX - 750ML - KALA",
+      "preco": 119.32,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11328.jpg"
     }
   ]
 }
