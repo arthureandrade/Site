@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 337191
+      "saldo": 264524
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-22T07:43:53.114925",
+  "generated_at": "2026-04-22T08:48:40.955505",
   "kpis": {
     "a_vencer_7d": 336143,
     "juros_pagos": 71565,
-    "total_aberto": 3129329,
-    "total_pago_periodo": 3340209,
-    "total_vencido": 345165
+    "total_aberto": 3056662,
+    "total_pago_periodo": 3558210,
+    "total_vencido": 272498
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -95,14 +95,14 @@
       "dias_atraso": 13,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 3765,
+      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
       "dias_atraso": 13,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 56330,
+      "saldo": 3765,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 42,
-      "total_aberto": 1004511
+      "titulos": 41,
+      "total_aberto": 964521
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -135,8 +135,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 8,
-      "total_aberto": 188018
+      "titulos": 7,
+      "total_aberto": 162887
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
