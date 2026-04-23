@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 558217
+      "saldo": 558797
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 155356
+      "saldo": 134366
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 16159
     }
   ],
-  "generated_at": "2026-04-23T13:51:16.878390",
+  "generated_at": "2026-04-23T15:03:13.113344",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 844749,
-    "total_atraso": 286532,
-    "total_vencer": 558217
+    "clientes_atraso": 65,
+    "total_aberto": 824339,
+    "total_atraso": 265542,
+    "total_vencer": 558797
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -118,12 +118,6 @@
       "total_atraso": 20894
     },
     {
-      "cliente": "ANTONIO ANTENOR RODRIGUES LOPES NETO",
-      "maior_atraso": 7,
-      "titulos": 1,
-      "total_atraso": 20000
-    },
-    {
       "cliente": "FABIANO CANTAL DE SOUZA",
       "maior_atraso": 694,
       "titulos": 16,
@@ -152,6 +146,12 @@
       "maior_atraso": 865,
       "titulos": 2,
       "total_atraso": 6862
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 45,
+      "titulos": 2,
+      "total_atraso": 6500
     }
   ]
 }
