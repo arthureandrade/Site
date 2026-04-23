@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 538527
+      "saldo": 555995
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 172091
+      "saldo": 158146
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 16159
     }
   ],
-  "generated_at": "2026-04-23T08:38:03.742934",
+  "generated_at": "2026-04-23T10:24:57.893315",
   "kpis": {
-    "clientes_atraso": 75,
-    "total_aberto": 842326,
-    "total_atraso": 303799,
-    "total_vencer": 538527
+    "clientes_atraso": 72,
+    "total_aberto": 845849,
+    "total_atraso": 289854,
+    "total_vencer": 555995
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -130,12 +130,6 @@
       "total_atraso": 12302
     },
     {
-      "cliente": "CONSPRO CONSTRUCOES LTDA",
-      "maior_atraso": 6,
-      "titulos": 1,
-      "total_atraso": 11300
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 21,
       "titulos": 5,
@@ -152,6 +146,12 @@
       "maior_atraso": 175,
       "titulos": 2,
       "total_atraso": 6905
+    },
+    {
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 865,
+      "titulos": 2,
+      "total_atraso": 6862
     }
   ]
 }
