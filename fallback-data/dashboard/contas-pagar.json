@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 231106
+      "saldo": 233971
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-23T12:17:43.776511",
+  "generated_at": "2026-04-23T13:51:17.321081",
   "kpis": {
     "a_vencer_7d": 374704,
     "juros_pagos": 71565,
-    "total_aberto": 3019728,
+    "total_aberto": 3022593,
     "total_pago_periodo": 3470697,
-    "total_vencido": 239080
+    "total_vencido": 241945
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -71,6 +71,13 @@
       "vencimento": "2026-03-10T00:00:00"
     },
     {
+      "dias_atraso": 23,
+      "fornecedor": "PORTO COMERCIO DE CAMINHOES LTDA",
+      "loja": "Loja 1",
+      "saldo": 2865,
+      "vencimento": "2026-03-31T00:00:00"
+    },
+    {
       "dias_atraso": 19,
       "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
       "loja": "Loja 1",
@@ -88,21 +95,14 @@
       "dias_atraso": 14,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13353,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 14,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 13342,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 14,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
       "saldo": 56330,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 14,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 3765,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
