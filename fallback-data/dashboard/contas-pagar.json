@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2804360
+      "saldo": 2826461
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-24T14:31:10.766099",
+  "generated_at": "2026-04-24T15:35:42.563146",
   "kpis": {
-    "a_vencer_7d": 343476,
-    "juros_pagos": 71565,
-    "total_aberto": 3043440,
-    "total_pago_periodo": 3423766,
+    "a_vencer_7d": 339978,
+    "juros_pagos": 142629,
+    "total_aberto": 3065541,
+    "total_pago_periodo": 3752578,
     "total_vencido": 239080
   },
   "ok": true,
@@ -120,8 +120,8 @@
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 60,
-      "total_aberto": 209880
+      "titulos": 59,
+      "total_aberto": 206382
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
@@ -149,14 +149,14 @@
       "total_aberto": 120847
     },
     {
+      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
+      "titulos": 5,
+      "total_aberto": 61107
+    },
+    {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
       "titulos": 4,
       "total_aberto": 50498
-    },
-    {
-      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
-      "titulos": 2,
-      "total_aberto": 38125
     }
   ]
 }
