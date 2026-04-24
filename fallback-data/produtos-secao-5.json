@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-24T17:39:59.049Z",
+  "generated_at": "2026-04-24T18:31:09.735Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5698,
+  "total": 5699,
   "produtos": [
     {
       "descricao": "",
@@ -3729,7 +3729,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13545.jpg",
       "grupo": 33,
       "id": 13545,
@@ -3785,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 382,
+      "estoque": 381,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -23665,7 +23665,7 @@
     },
     {
       "descricao": "",
-      "estoque": 47,
+      "estoque": 45,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11688.jpg",
       "grupo": 92,
       "id": 11688,
@@ -24603,7 +24603,7 @@
     },
     {
       "descricao": "",
-      "estoque": 86,
+      "estoque": 82,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4664.jpg",
       "grupo": 30,
       "id": 4664,
@@ -24701,7 +24701,7 @@
     },
     {
       "descricao": "",
-      "estoque": 820,
+      "estoque": 818,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11875.jpg",
       "grupo": 30,
       "id": 11875,
@@ -25163,7 +25163,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1758,
+      "estoque": 1745,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -25233,7 +25233,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2670,
+      "estoque": 2668,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -27795,7 +27795,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1794,
+      "estoque": 1789,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -28369,7 +28369,7 @@
     },
     {
       "descricao": "",
-      "estoque": 21,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5014.jpg",
       "grupo": 92,
       "id": 5014,
@@ -37343,7 +37343,7 @@
     },
     {
       "descricao": "",
-      "estoque": 274,
+      "estoque": 271,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/407.jpg",
       "grupo": 32,
       "id": 407,
@@ -41165,7 +41165,7 @@
     },
     {
       "descricao": "",
-      "estoque": 165,
+      "estoque": 164,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/72.jpg",
       "grupo": 41,
       "id": 72,
@@ -48109,7 +48109,7 @@
     },
     {
       "descricao": "",
-      "estoque": 394,
+      "estoque": 393,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg",
       "grupo": 60,
       "id": 3658,
@@ -50713,7 +50713,7 @@
     },
     {
       "descricao": "",
-      "estoque": 71,
+      "estoque": 70,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11481.jpg",
       "grupo": 102,
       "id": 11481,
@@ -52771,7 +52771,7 @@
     },
     {
       "descricao": "",
-      "estoque": 88348,
+      "estoque": 88198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -53653,7 +53653,7 @@
     },
     {
       "descricao": "",
-      "estoque": 192,
+      "estoque": 184,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11156.jpg",
       "grupo": 92,
       "id": 11156,
@@ -61437,7 +61437,7 @@
     },
     {
       "descricao": "",
-      "estoque": 379,
+      "estoque": 377,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/315.jpg",
       "grupo": 71,
       "id": 315,
@@ -64055,6 +64055,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 58,
+      "id": 13887,
+      "marca": "TOYAMA",
+      "nome": "ROCADEIRA RT55L-B, 2T, 52CC, 2.0HP GASOLINA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 15,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10268.jpg",
       "grupo": 58,
@@ -65119,7 +65133,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11132,
+      "estoque": 11120,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/88.jpg",
       "grupo": 71,
       "id": 88,
@@ -65777,7 +65791,7 @@
     },
     {
       "descricao": "",
-      "estoque": 157,
+      "estoque": 156,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
@@ -67625,7 +67639,7 @@
     },
     {
       "descricao": "",
-      "estoque": 77,
+      "estoque": 75,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5484.jpg",
       "grupo": 92,
       "id": 5484,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1362.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4613.jpg",
-      "grupo": 26,
-      "id": 4613,
-      "marca": "ASTRA",
-      "nome": "SUPER BALDE 12 LITROS",
-      "preco": 46.86,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4613.jpg"
     }
   ]
 }

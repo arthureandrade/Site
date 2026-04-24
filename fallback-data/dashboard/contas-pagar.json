@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2748095
+      "saldo": 2804360
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-24T13:40:01.007253",
+  "generated_at": "2026-04-24T14:31:10.766099",
   "kpis": {
     "a_vencer_7d": 343476,
     "juros_pagos": 71565,
-    "total_aberto": 2987175,
+    "total_aberto": 3043440,
     "total_pago_periodo": 3423766,
     "total_vencido": 239080
   },
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 3,
-      "total_aberto": 46008
+      "titulos": 4,
+      "total_aberto": 50498
     },
     {
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
