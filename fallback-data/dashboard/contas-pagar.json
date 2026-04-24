@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3025376
+      "saldo": 3224840
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-24T16:28:54.612660",
+  "generated_at": "2026-04-24T17:28:55.490074",
   "kpis": {
     "a_vencer_7d": 339978,
     "juros_pagos": 142629,
-    "total_aberto": 3264456,
+    "total_aberto": 3463920,
     "total_pago_periodo": 3752578,
     "total_vencido": 239080
   },
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 41,
-      "total_aberto": 964521
+      "titulos": 44,
+      "total_aberto": 1146596
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -139,14 +139,14 @@
       "total_aberto": 190988
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 19,
+      "total_aberto": 163029
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 7,
       "total_aberto": 162887
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 16,
-      "total_aberto": 145640
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",

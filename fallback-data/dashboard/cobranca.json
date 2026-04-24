@@ -2,35 +2,35 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 527644
+      "saldo": 528324.37
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 171272
+      "saldo": 174124.57
     },
     {
       "faixa": "180+ dias",
-      "saldo": 77080
+      "saldo": 99083.11
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 20876
+      "saldo": 22595.08
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 16159
+      "saldo": 16565.28
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 13424
+      "saldo": 13686.87
     }
   ],
-  "generated_at": "2026-04-24T16:28:54.058878",
+  "generated_at": "2026-04-24T17:28:54.823513",
   "kpis": {
     "clientes_atraso": 67,
-    "total_aberto": 826455,
-    "total_atraso": 298811,
-    "total_vencer": 527644
+    "total_aberto": 854379.28,
+    "total_atraso": 326054.91000000003,
+    "total_vencer": 528324.3700000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -38,21 +38,21 @@
       "cliente": "ROBERIO SILVA FARIAS",
       "dias_atraso": 5,
       "loja": "Loja 1",
-      "saldo": 920,
+      "saldo": 924.6,
       "vencimento": "2026-04-19T00:00:00"
     },
     {
       "cliente": "GRUPO FOLCLORICO QUADRILHA AMOR CAIPIRA FERQUAJ",
       "dias_atraso": 2,
       "loja": "Loja 1",
-      "saldo": 1506,
+      "saldo": 1087.17,
       "vencimento": "2026-04-22T00:00:00"
     },
     {
       "cliente": "GRUPO FOLCLORICO QUADRILHA AMOR CAIPIRA FERQUAJ",
       "dias_atraso": 2,
       "loja": "Loja 1",
-      "saldo": 1085,
+      "saldo": 1509.01,
       "vencimento": "2026-04-22T00:00:00"
     },
     {
@@ -66,21 +66,21 @@
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
       "dias_atraso": 1,
       "loja": "Loja 2",
-      "saldo": 429,
+      "saldo": 429.99,
       "vencimento": "2026-04-23T00:00:00"
     },
     {
       "cliente": "ESDRAS MATUZALEM DA SILVA",
       "dias_atraso": -3,
       "loja": "Loja 1",
-      "saldo": 226,
+      "saldo": 226.2,
       "vencimento": "2026-04-27T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
       "dias_atraso": -4,
       "loja": "Loja 4",
-      "saldo": 1583,
+      "saldo": 1583.33,
       "vencimento": "2026-04-28T00:00:00"
     }
   ],
@@ -90,25 +90,31 @@
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 370,
       "titulos": 2,
-      "total_atraso": 43368
+      "total_atraso": 44168.16
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
       "maior_atraso": 5,
       "titulos": 2,
-      "total_atraso": 40311
+      "total_atraso": 41466.89
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
       "maior_atraso": 413,
       "titulos": 7,
-      "total_atraso": 38272
+      "total_atraso": 39519.07
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
       "maior_atraso": 9,
       "titulos": 1,
-      "total_atraso": 20894
+      "total_atraso": 21933.07
+    },
+    {
+      "cliente": "FABIANO CANTAL DE SOUZA",
+      "maior_atraso": 695,
+      "titulos": 16,
+      "total_atraso": 20542.82
     },
     {
       "cliente": "PROMIX LTDA",
@@ -120,31 +126,25 @@
       "cliente": "CONSTRUTORA PORTO S.A.",
       "maior_atraso": 1,
       "titulos": 1,
-      "total_atraso": 14705
+      "total_atraso": 14705.9
     },
     {
-      "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 695,
-      "titulos": 16,
-      "total_atraso": 12302
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 866,
+      "titulos": 2,
+      "total_atraso": 12110.32
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 22,
       "titulos": 5,
-      "total_atraso": 9272
-    },
-    {
-      "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
-      "maior_atraso": 32,
-      "titulos": 2,
-      "total_atraso": 7345
+      "total_atraso": 9394.17
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 176,
       "titulos": 2,
-      "total_atraso": 6905
+      "total_atraso": 8112
     }
   ]
 }
