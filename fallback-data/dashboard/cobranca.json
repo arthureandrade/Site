@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 513651
+      "saldo": 502788
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 172229
+      "saldo": 171986
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 16159
     }
   ],
-  "generated_at": "2026-04-24T08:11:45.493984",
+  "generated_at": "2026-04-24T10:10:28.104452",
   "kpis": {
     "clientes_atraso": 70,
-    "total_aberto": 816649,
-    "total_atraso": 302998,
-    "total_vencer": 513651
+    "total_aberto": 805543,
+    "total_atraso": 302755,
+    "total_vencer": 502788
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -68,13 +68,6 @@
       "loja": "Loja 2",
       "saldo": 429,
       "vencimento": "2026-04-23T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
-      "loja": "Loja 1",
-      "saldo": 2296,
-      "vencimento": "2026-04-25T00:00:00"
     },
     {
       "cliente": "ESDRAS MATUZALEM DA SILVA",
