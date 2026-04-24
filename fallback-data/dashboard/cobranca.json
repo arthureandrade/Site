@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 551514
+      "saldo": 513651
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 134366
+      "saldo": 172229
     },
     {
       "faixa": "180+ dias",
@@ -14,78 +14,78 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 20292
+      "saldo": 21206
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 17645
+      "saldo": 16324
     },
     {
       "faixa": "31–60 dias",
       "saldo": 16159
     }
   ],
-  "generated_at": "2026-04-23T23:45:39.494802",
+  "generated_at": "2026-04-24T02:00:23.197953",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 817056,
-    "total_atraso": 265542,
-    "total_vencer": 551514
+    "clientes_atraso": 70,
+    "total_aberto": 816649,
+    "total_atraso": 302998,
+    "total_vencer": 513651
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "ROBERIO SILVA FARIAS",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 1",
       "saldo": 920,
       "vencimento": "2026-04-19T00:00:00"
     },
     {
       "cliente": "GRUPO FOLCLORICO QUADRILHA AMOR CAIPIRA FERQUAJ",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 1506,
       "vencimento": "2026-04-22T00:00:00"
     },
     {
       "cliente": "GRUPO FOLCLORICO QUADRILHA AMOR CAIPIRA FERQUAJ",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 1085,
       "vencimento": "2026-04-22T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 1790,
       "vencimento": "2026-04-23T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 429,
       "vencimento": "2026-04-23T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 2296,
       "vencimento": "2026-04-25T00:00:00"
     },
     {
       "cliente": "ESDRAS MATUZALEM DA SILVA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 226,
       "vencimento": "2026-04-27T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": -5,
+      "dias_atraso": -4,
       "loja": "Loja 4",
       "saldo": 1583,
       "vencimento": "2026-04-28T00:00:00"
@@ -95,63 +95,63 @@
   "top_clientes": [
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 369,
+      "maior_atraso": 370,
       "titulos": 2,
       "total_atraso": 43368
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 4,
+      "maior_atraso": 5,
       "titulos": 2,
       "total_atraso": 40311
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 412,
+      "maior_atraso": 413,
       "titulos": 7,
       "total_atraso": 38272
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
-      "maior_atraso": 8,
+      "maior_atraso": 9,
       "titulos": 1,
       "total_atraso": 20894
     },
     {
+      "cliente": "PROMIX LTDA",
+      "maior_atraso": 1,
+      "titulos": 2,
+      "total_atraso": 17700
+    },
+    {
+      "cliente": "CONSTRUTORA PORTO S.A.",
+      "maior_atraso": 1,
+      "titulos": 1,
+      "total_atraso": 14705
+    },
+    {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 694,
+      "maior_atraso": 695,
       "titulos": 16,
       "total_atraso": 12302
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 21,
+      "maior_atraso": 22,
       "titulos": 5,
       "total_atraso": 9272
     },
     {
       "cliente": "E D S CONTRUCOES E SERVICOS LTDA",
-      "maior_atraso": 31,
+      "maior_atraso": 32,
       "titulos": 2,
       "total_atraso": 7345
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 175,
+      "maior_atraso": 176,
       "titulos": 2,
       "total_atraso": 6905
-    },
-    {
-      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 865,
-      "titulos": 2,
-      "total_atraso": 6862
-    },
-    {
-      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
-      "maior_atraso": 45,
-      "titulos": 2,
-      "total_atraso": 6500
     }
   ]
 }
