@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T19:35:40.810Z",
+  "generated_at": "2026-04-24T20:28:49.581Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 445,
   "produtos": [
@@ -412,7 +412,7 @@
     {
       "descricao": "",
       "estoque": 3,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3860.jpg",
       "grupo": 61,
       "id": 3860,
       "marca": "RAMASSOL",
@@ -421,7 +421,7 @@
       "secao": 14,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3860.jpg"
     },
     {
       "descricao": "",
@@ -915,7 +915,7 @@
     },
     {
       "descricao": "",
-      "estoque": 501,
+      "estoque": 500,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -1055,7 +1055,7 @@
     },
     {
       "descricao": "",
-      "estoque": 979,
+      "estoque": 978,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/44.jpg",
       "grupo": 15,
       "id": 44,
@@ -3029,7 +3029,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2241,
+      "estoque": 2233,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -3351,7 +3351,7 @@
     },
     {
       "descricao": "",
-      "estoque": 269,
+      "estoque": 267,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/230.jpg",
       "grupo": 60,
       "id": 230,
@@ -4219,7 +4219,7 @@
     },
     {
       "descricao": "",
-      "estoque": 152,
+      "estoque": 151,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/119.jpg",
       "grupo": 65,
       "id": 119,
@@ -5045,7 +5045,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11722,
+      "estoque": 11744,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5114.jpg",
       "grupo": 80,
       "id": 5114,
