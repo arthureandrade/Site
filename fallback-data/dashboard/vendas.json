@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-25T10:07:38.097499",
+  "generated_at": "2026-04-25T11:00:45.376526",
   "kpis": {
-    "ticket_medio": 346.27591836734695,
-    "total_pedidos": 49,
-    "total_vendas": 16967.52,
-    "total_vendedores": 7
+    "ticket_medio": 281.6515294117647,
+    "total_pedidos": 85,
+    "total_vendas": 23940.38,
+    "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 4",
-      "total_vendas": 6911.52
+      "total_vendas": 10639.52
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 5612.5
+      "total_vendas": 6900.51
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 4443.5
+      "total_vendas": 6400.35
     }
   ],
   "ok": true,
@@ -31,45 +31,50 @@
   "serie_diaria": [
     {
       "data": "2026-04-25",
-      "total_vendas": 16967.52
+      "total_vendas": 23940.38
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 7,
-      "total_vendas": 7400.02,
+      "pedidos": 13,
+      "total_vendas": 7810.030000000001,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 13,
-      "total_vendas": 3006,
+      "pedidos": 21,
+      "total_vendas": 7204,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 11,
-      "total_vendas": 2519.5,
+      "pedidos": 17,
+      "total_vendas": 3094,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 4,
-      "total_vendas": 2096,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 11,
-      "total_vendas": 1633,
+      "pedidos": 17,
+      "total_vendas": 2477,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 2,
-      "total_vendas": 225,
-      "vendedor": "Juan"
+      "pedidos": 5,
+      "total_vendas": 2119,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 6,
+      "total_vendas": 1497,
+      "vendedor": "Rafael"
     },
     {
       "pedidos": 1,
       "total_vendas": 88,
       "vendedor": "Matheus"
+    },
+    {
+      "pedidos": 5,
+      "total_vendas": -348.65,
+      "vendedor": "Juan"
     }
   ]
 }

@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 229354
+      "saldo": 229857
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-25T10:07:39.099278",
+  "generated_at": "2026-04-25T11:00:46.276477",
   "kpis": {
     "a_vencer_7d": 335960,
     "juros_pagos": 142629,
-    "total_aberto": 3433469,
+    "total_aberto": 3433972,
     "total_pago_periodo": 3680194,
-    "total_vencido": 237328
+    "total_vencido": 237831
   },
   "ok": true,
   "periodo_pagamentos": {
