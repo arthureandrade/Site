@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3203301
+      "saldo": 3200631
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 253243
+      "saldo": 252258
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-25T07:52:10.659090",
+  "generated_at": "2026-04-25T09:02:05.215243",
   "kpis": {
     "a_vencer_7d": 335960,
     "juros_pagos": 142629,
-    "total_aberto": 3464518,
-    "total_pago_periodo": 3600931,
-    "total_vencido": 261217
+    "total_aberto": 3460863,
+    "total_pago_periodo": 3608526,
+    "total_vencido": 260232
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -88,21 +88,21 @@
       "dias_atraso": 16,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 56330,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 16,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 3765,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 16,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
       "saldo": 13353,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 16,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 13342,
+      "vencimento": "2026-04-09T00:00:00"
+    },
+    {
+      "dias_atraso": 16,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -120,8 +120,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 7,
-      "total_aberto": 249413
+      "titulos": 6,
+      "total_aberto": 246743
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
