@@ -895,6 +895,7 @@ function PainelOrcamento({ onClose, usuario }) {
     const telefoneCliente = [orcamento?.fone1, orcamento?.foneCelular].filter(Boolean).join(' | ')
     const enderecoCliente = [orcamento?.endereco, orcamento?.bairro].filter(Boolean).join(' - ')
     const pixCnpj = '30.395.559/0001-29'
+    const pixFilial = '30.395.559/0002-00'
     const isTermica = formato === 'termica'
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : ''
     const isAppleMobile =
@@ -1123,14 +1124,15 @@ function PainelOrcamento({ onClose, usuario }) {
                 </div>
                 <div class="pix-box">
                   <h3>Pagamento por PIX</h3>
-                  <div class="pix-key">CNPJ PIX: ${escaparHtml(pixCnpj)}</div>
-                  <div class="pix-note">Chave PIX da empresa para pagamento e conferencia comercial.</div>
+                  <div class="pix-key">CNPJ PIX matriz: ${escaparHtml(pixCnpj)}</div>
+                  <div class="pix-key" style="margin-top: 6px;">CNPJ PIX filial: ${escaparHtml(pixFilial)}</div>
+                  <div class="pix-note">Chaves PIX da empresa para pagamento e conferencia comercial.</div>
                 </div>
                 <div class="rodape">
                   <div>
                     ${isDb2 ? 'Documento montado a partir do sistema DB2 para consulta e reimpressao.' : 'Orcamento valido por 24 horas. Sujeito a disponibilidade de estoque.'}
                   </div>
-                  <div><strong>(95) 3224-0115</strong> | PIX CNPJ <strong>${escaparHtml(pixCnpj)}</strong> | Av. Ataide Teive, 5928 e 4509</div>
+                  <div><strong>(95) 3224-0115</strong> | PIX matriz <strong>${escaparHtml(pixCnpj)}</strong> | PIX filial <strong>${escaparHtml(pixFilial)}</strong> | Av. Ataide Teive, 5928 e 4509</div>
                 </div>
               </div>
             </div>
@@ -1172,7 +1174,7 @@ function PainelOrcamento({ onClose, usuario }) {
         {ultimoNumeroSalvo && <div className="mt-1">Ultimo orcamento salvo: #{formatarNumeroOrcamento(ultimoNumeroSalvo)}</div>}
       </div>
 
-      <div className="grid shrink-0 grid-cols-2 border-b border-gray-200 bg-white">
+      <div className="grid shrink-0 grid-cols-3 border-b border-gray-200 bg-white">
         <button
           type="button"
           onClick={() => setPainelSecao('resumo')}
@@ -1180,7 +1182,16 @@ function PainelOrcamento({ onClose, usuario }) {
             painelSecao === 'resumo' ? 'bg-white text-primary shadow-[inset_0_-2px_0_0_#CC0000]' : 'text-gray-500 hover:text-gray-700'
           }`}
         >
-          Resumo do orcamento
+          Orcamento
+        </button>
+        <button
+          type="button"
+          onClick={() => setPainelSecao('financeiro')}
+          className={`px-4 py-3 text-[11px] font-black uppercase tracking-[0.18em] transition ${
+            painelSecao === 'financeiro' ? 'bg-white text-amber-700 shadow-[inset_0_-2px_0_0_#b45309]' : 'text-gray-500 hover:text-gray-700'
+          }`}
+        >
+          Financeiro
         </button>
         <button
           type="button"
@@ -1195,39 +1206,39 @@ function PainelOrcamento({ onClose, usuario }) {
 
       {painelSecao === 'resumo' ? (
           <>
-            <div className="min-h-0 flex-1 overflow-y-auto bg-gradient-to-b from-slate-50 via-white to-white">
+            <div className="min-h-0 flex-1 overflow-y-auto bg-gradient-to-b from-slate-50 via-white to-white lg:bg-white">
             {items.length === 0 ? (
-              <div className="m-4 flex h-48 flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-slate-300 bg-white text-sm text-gray-500 shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
-                <p className="text-base font-semibold text-slate-700">Nenhum item adicionado</p>
-                <p className="max-w-[220px] text-center text-xs text-slate-400">Escolha produtos no catálogo para começar a montar este orçamento.</p>
+              <div className="m-4 flex h-48 flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-slate-300 bg-white text-sm text-gray-500 shadow-[0_20px_40px_rgba(15,23,42,0.05)] lg:m-0 lg:h-40 lg:rounded-none lg:border-0 lg:border-b lg:border-dashed lg:border-gray-200 lg:bg-transparent lg:shadow-none">
+                <p className="text-base font-semibold text-slate-700 lg:text-sm lg:font-normal lg:text-gray-500">Nenhum item adicionado</p>
+                <p className="max-w-[220px] text-center text-xs text-slate-400 lg:hidden">Escolha produtos no catálogo para começar a montar este orçamento.</p>
               </div>
             ) : (
-              <div className="space-y-3 p-3">
+              <div className="space-y-3 p-3 lg:space-y-0 lg:p-0 lg:divide-y lg:divide-gray-100">
                 {items.map((item) => {
                   const descEfetiva = Math.max(item.desconto || 0, descontoGlobal)
                   const precoComDesc = item.preco * (1 - descEfetiva / 100)
                   return (
-                    <div key={item.id} className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]">
-                      <div className="flex items-start justify-between gap-3">
+                    <div key={item.id} className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)] lg:rounded-none lg:border-0 lg:bg-transparent lg:px-3 lg:py-2.5 lg:shadow-none lg:hover:shadow-none">
+                      <div className="flex items-start justify-between gap-3 lg:gap-2">
                         <div className="min-w-0 flex-1">
-                          <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500">
+                          <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500 lg:mb-0 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-gray-400">
                             Cod. {item.id}
                           </div>
-                          <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900">{item.nome}</p>
+                          <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 lg:text-xs lg:text-gray-800">{item.nome}</p>
                         </div>
-                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500">
+                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500 lg:h-auto lg:w-auto lg:rounded-none lg:border-0 lg:bg-transparent lg:text-gray-300">
                           <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </button>
                       </div>
 
-                      <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3">
-                        <div className="flex items-center justify-between gap-3">
+                      <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3 lg:mt-1.5 lg:flex lg:items-center lg:gap-2 lg:rounded-none lg:bg-transparent lg:p-0">
+                        <div className="flex items-center justify-between gap-3 lg:flex-none">
                           <div>
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Quantidade</div>
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 lg:hidden">Quantidade</div>
                             <div className="mt-1 flex items-center gap-1">
-                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary">
+                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary lg:h-6 lg:w-6 lg:rounded lg:border-gray-300">
                             -
                               </button>
                               <input
@@ -1237,16 +1248,16 @@ function PainelOrcamento({ onClose, usuario }) {
                                 inputMode="decimal"
                                 value={item.qty}
                                 onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
-                                className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
+                                className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary lg:h-auto lg:w-14 lg:rounded lg:border-gray-300"
                               />
-                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary">
+                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary lg:h-6 lg:w-6 lg:rounded lg:border-gray-300">
                             +
                               </button>
                             </div>
                           </div>
 
-                          <div className="text-right">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Desconto</div>
+                          <div className="text-right lg:ml-auto">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 lg:hidden">Desconto</div>
                             <div className="mt-1 flex items-center justify-end gap-1">
                               <input
                                 type="number"
@@ -1255,28 +1266,27 @@ function PainelOrcamento({ onClose, usuario }) {
                                 step="0.1"
                                 value={item.desconto || 0}
                                 onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
-                                className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary"
+                                className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary lg:h-auto lg:w-10 lg:rounded lg:border-gray-300"
                               />
-                              <span className="text-[11px] font-bold text-slate-500">%</span>
+                              <span className="text-[11px] font-bold text-slate-500 lg:text-[10px] lg:text-gray-400">%</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2">
-                          <div className="rounded-2xl bg-white px-3 py-2">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">Unitario</div>
-                            <div className="mt-1 text-sm font-black text-slate-900">{formatarPreco(item.preco)}</div>
+                        <div className="grid grid-cols-2 gap-2 lg:ml-auto lg:flex lg:items-center lg:gap-2">
+                          <div className="rounded-2xl bg-white px-3 py-2 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 lg:hidden">Unitario</div>
+                            <div className="mt-1 text-sm font-black text-slate-900 lg:mt-0 lg:text-[10px] lg:text-gray-400 lg:line-through">{formatarPreco(item.preco * item.qty)}</div>
                           </div>
-                          <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100">Subtotal</div>
-                            <div className="mt-1 text-sm font-black">{formatarPreco(precoComDesc * item.qty)}</div>
+                          <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-primary">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100 lg:hidden">Subtotal</div>
+                            <div className="mt-1 text-sm font-black lg:mt-0 lg:text-xs">{formatarPreco(precoComDesc * item.qty)}</div>
                           </div>
                         </div>
                       </div>
 
                       {item.preco > 0 && descEfetiva > 0 && (
-                        <div className="mt-3 flex items-center justify-end gap-2">
-                          <span className="text-[10px] text-slate-400 line-through">{formatarPreco(item.preco * item.qty)}</span>
+                        <div className="mt-3 flex items-center justify-end gap-2 lg:mt-1">
                           <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-emerald-700">
                             {formatarPercentual(descEfetiva)}% aplicado
                           </span>
@@ -1289,11 +1299,11 @@ function PainelOrcamento({ onClose, usuario }) {
             )}
 
           {items.length > 0 && (
-            <div className="shrink-0 border-t border-slate-200 bg-white/95 backdrop-blur">
+            <div className="shrink-0 border-t border-slate-200 bg-white/95 backdrop-blur lg:border-t lg:border-gray-200 lg:bg-white lg:backdrop-blur-0">
               <div className="grid gap-0 xl:grid-cols-[1.15fr_0.85fr]">
-                <div className="border-b border-slate-100 bg-gradient-to-br from-slate-50 to-white px-4 pb-3 pt-4 xl:border-b-0 xl:border-r">
+                <div className="border-b border-slate-100 bg-gradient-to-br from-slate-50 to-white px-4 pb-3 pt-4 xl:border-b-0 xl:border-r lg:border-gray-100 lg:bg-white lg:px-4 lg:pb-2 lg:pt-3">
                   <div className="mb-1 flex items-center justify-between">
-                    <label className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Desconto geral</label>
+                    <label className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 lg:tracking-wide lg:text-gray-600">Desconto geral</label>
                     <span className="text-xs font-black text-primary">{formatarPercentual(descontoGlobal)}%</span>
                   </div>
                   <input
@@ -1306,8 +1316,8 @@ function PainelOrcamento({ onClose, usuario }) {
                     className="h-1.5 w-full accent-[#CC0000]"
                   />
 
-                  <div className="mt-4 space-y-2 rounded-3xl border border-slate-200 bg-white p-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
-                    <div className="flex justify-between text-xs text-slate-500">
+                  <div className="mt-4 space-y-2 rounded-3xl border border-slate-200 bg-white p-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)] lg:mt-3 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+                    <div className="flex justify-between text-xs text-slate-500 lg:text-gray-500">
                       <span>Subtotal</span>
                       <span className="font-semibold text-slate-700">{formatarPreco(subtotalSemDesc)}</span>
                     </div>
@@ -1317,11 +1327,11 @@ function PainelOrcamento({ onClose, usuario }) {
                         <span>- {formatarPreco(totalDesconto)}</span>
                       </div>
                     )}
-                    <div className="flex items-end justify-between rounded-2xl bg-gradient-to-r from-slate-950 via-slate-800 to-primary px-3 py-3 font-black text-white">
+                    <div className="flex items-end justify-between rounded-2xl bg-gradient-to-r from-slate-950 via-slate-800 to-primary px-3 py-3 font-black text-white lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-gray-900">
                       <span className="text-sm">Total</span>
-                      <span className="text-lg">{formatarPreco(totalComDesc)}</span>
+                      <span className="text-lg lg:text-base">{formatarPreco(totalComDesc)}</span>
                     </div>
-                    <div className="space-y-1 rounded-2xl border border-amber-200 bg-amber-50 px-3 py-3">
+                    <div className="space-y-1 rounded-2xl border border-amber-200 bg-amber-50 px-3 py-3 lg:rounded-xl">
                       <div className="flex items-center justify-between gap-2">
                         <label className="text-[10px] font-semibold uppercase tracking-wide text-amber-900">
                           Total editavel
@@ -1348,8 +1358,8 @@ function PainelOrcamento({ onClose, usuario }) {
                 </div>
 
                 <div className="grid gap-0">
-                  <div className="border-b border-slate-100 px-4 py-3">
-                    <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                  <div className="border-b border-slate-100 px-4 py-3 lg:border-gray-100 lg:px-4 lg:py-2">
+                    <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 lg:mb-1 lg:tracking-wide lg:text-gray-500">
                       Nome do cliente
                     </label>
                     <input
@@ -1357,23 +1367,23 @@ function PainelOrcamento({ onClose, usuario }) {
                       value={clienteNome}
                       onChange={(e) => dispatch({ type: 'SET_CLIENTE_NOME', clienteNome: e.target.value })}
                       placeholder="Digite o nome do cliente"
-                      className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-3 py-2.5 text-xs outline-none focus:border-primary"
+                      className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-3 py-2.5 text-xs outline-none focus:border-primary lg:rounded-lg lg:border-gray-300 lg:bg-white lg:px-3 lg:py-2"
                     />
                   </div>
 
-                  <div className="border-b border-slate-100 px-4 py-3">
-                    <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                  <div className="border-b border-slate-100 px-4 py-3 lg:border-gray-100 lg:px-4 lg:py-2">
+                    <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 lg:mb-1 lg:tracking-wide lg:text-gray-500">
                       Enviar para (WhatsApp)
                     </label>
                     <div className="flex items-center gap-1.5">
-                      <span className="rounded-xl border border-slate-200 bg-slate-100 px-2 py-2 text-xs font-bold text-slate-500">+55</span>
+                      <span className="rounded-xl border border-slate-200 bg-slate-100 px-2 py-2 text-xs font-bold text-slate-500 lg:rounded lg:border-gray-200 lg:bg-gray-100 lg:px-2 lg:py-1.5 lg:text-gray-400">+55</span>
                       <input
                         type="tel"
                         maxLength={2}
                         placeholder="DDD"
                         value={wppDDD}
                         onChange={(e) => setWppDDD(e.target.value.replace(/\D/g, '').slice(0, 2))}
-                        className="w-12 rounded-2xl border border-slate-300 bg-slate-50 py-2 text-center text-xs outline-none focus:border-primary"
+                        className="w-12 rounded-2xl border border-slate-300 bg-slate-50 py-2 text-center text-xs outline-none focus:border-primary lg:rounded lg:border-gray-300 lg:bg-white lg:py-1.5"
                       />
                       <input
                         type="tel"
@@ -1381,15 +1391,15 @@ function PainelOrcamento({ onClose, usuario }) {
                         placeholder="Numero"
                         value={wppNum}
                         onChange={(e) => setWppNum(e.target.value.replace(/\D/g, '').slice(0, 9))}
-                        className="flex-1 rounded-2xl border border-slate-300 bg-slate-50 py-2 text-center text-xs outline-none focus:border-primary"
+                        className="flex-1 rounded-2xl border border-slate-300 bg-slate-50 py-2 text-center text-xs outline-none focus:border-primary lg:rounded lg:border-gray-300 lg:bg-white lg:py-1.5"
                       />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="border-t border-slate-100 px-4 py-3">
-                <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+              <div className="border-t border-slate-100 px-4 py-3 lg:border-gray-100 lg:px-4 lg:py-2">
+                <label className="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 lg:mb-1 lg:tracking-wide lg:text-gray-500">
                   Observacao
                 </label>
                 <textarea
@@ -1397,24 +1407,24 @@ function PainelOrcamento({ onClose, usuario }) {
                   onChange={(e) => dispatch({ type: 'SET_OBSERVACAO', observacao: e.target.value })}
                   rows={2}
                   placeholder="Prazo, entrega, retirada, condicoes e observacoes para o cliente..."
-                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-3 py-2.5 text-xs outline-none focus:border-primary"
+                  className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-3 py-2.5 text-xs outline-none focus:border-primary lg:rounded-lg lg:border-gray-300 lg:bg-white lg:px-3 lg:py-2"
                 />
               </div>
 
-              <div className="grid gap-2 border-t border-slate-100 bg-slate-50 px-4 pb-4 pt-3 sm:grid-cols-3">
-                <button onClick={() => enviarOrcamento()} className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 font-bold text-white shadow-[0_14px_30px_rgba(37,211,102,0.22)] transition-all hover:bg-[#1ebe5a] active:scale-95">
+              <div className="grid gap-2 border-t border-slate-100 bg-slate-50 px-4 pb-4 pt-3 sm:grid-cols-3 lg:border-gray-100 lg:bg-white lg:px-4 lg:pb-4 lg:pt-2">
+                <button onClick={() => enviarOrcamento()} className="flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 font-bold text-white shadow-[0_14px_30px_rgba(37,211,102,0.22)] transition-all hover:bg-[#1ebe5a] active:scale-95 lg:rounded-xl lg:py-3 lg:shadow-none">
                   Enviar orcamento
                 </button>
-                <button onClick={() => abrirSeletorPdf()} className="flex items-center justify-center gap-2 rounded-2xl border border-primary bg-white py-3.5 font-bold text-primary shadow-[0_10px_24px_rgba(204,0,0,0.08)] transition-all hover:bg-red-50 active:scale-95">
+                <button onClick={() => abrirSeletorPdf()} className="flex items-center justify-center gap-2 rounded-2xl border border-primary bg-white py-3.5 font-bold text-primary shadow-[0_10px_24px_rgba(204,0,0,0.08)] transition-all hover:bg-red-50 active:scale-95 lg:rounded-xl lg:py-3 lg:shadow-none">
                   Gerar PDF
                 </button>
-                <button onClick={() => salvarOrcamento()} className="flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white py-3.5 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95">
+                <button onClick={() => salvarOrcamento()} className="flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white py-3.5 font-bold text-slate-700 transition-all hover:bg-slate-100 active:scale-95 lg:rounded-xl lg:border-slate-300 lg:bg-slate-50 lg:py-3">
                   Gravar orcamento
                 </button>
               </div>
 
               <div className="px-4 pb-3">
-                <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs font-medium text-slate-400 transition-colors hover:text-red-500">
+                <button onClick={() => dispatch({ type: 'CLEAR' })} className="w-full py-1 text-xs font-medium text-slate-400 transition-colors hover:text-red-500 lg:font-normal lg:text-gray-400">
                   Limpar orcamento
                 </button>
               </div>
