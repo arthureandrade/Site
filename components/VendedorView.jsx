@@ -1952,6 +1952,91 @@ function CatalogoCatalogo({ onCatalogoBase }) {
   )
 }
 
+function OrcamentoMobilePreview({ onAbrir }) {
+  const { items, totalItens, totalComDesc, descontoGlobal } = useVendedor()
+  const [aberto, setAberto] = useState(true)
+
+  useEffect(() => {
+    if (items.length === 0) {
+      setAberto(true)
+    }
+  }, [items.length])
+
+  if (items.length === 0) return null
+
+  return (
+    <div className="border-t border-primary/10 bg-white/95 backdrop-blur lg:hidden">
+      <button
+        type="button"
+        onClick={() => setAberto((valor) => !valor)}
+        className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left"
+      >
+        <div className="min-w-0">
+          <div className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Itens selecionados</div>
+          <div className="mt-1 text-sm font-semibold text-gray-900">
+            {formatarQuantidade(totalItens)} item{totalItens > 1 ? 's' : ''} no orcamento
+          </div>
+          <div className="text-xs text-gray-500">Total parcial: {formatarPreco(totalComDesc)}</div>
+        </div>
+        <div className="flex shrink-0 items-center gap-2">
+          <span className="rounded-full bg-primary px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-white">
+            {totalItens > 99 ? '99+' : formatarQuantidade(totalItens)}
+          </span>
+          <svg
+            className={`h-4 w-4 text-gray-500 transition-transform ${aberto ? 'rotate-180' : ''}`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+
+      {aberto && (
+        <div className="border-t border-gray-100 px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-3">
+          <div className="max-h-48 space-y-2 overflow-y-auto pr-1">
+            {items.map((item) => (
+              <div key={item.id} className="rounded-2xl border border-gray-200 bg-gray-50 px-3 py-2 shadow-sm">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="font-mono text-[10px] uppercase tracking-wide text-gray-400">Cod. {item.id}</div>
+                    <div className="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-gray-900">{item.nome}</div>
+                  </div>
+                  <div className="rounded-full bg-white px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-slate-600 shadow-sm">
+                    {formatarQuantidade(item.qty)} {item.unidade || 'UN'}
+                  </div>
+                </div>
+
+                <div className="mt-3 flex items-center justify-between gap-3 text-xs">
+                  <div>
+                    <div className="text-[10px] uppercase tracking-wide text-gray-400">Unitario</div>
+                    <div className="mt-1 font-black text-gray-900">{formatarPreco(item.preco)}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-[10px] uppercase tracking-wide text-gray-400">Subtotal</div>
+                    <div className="mt-1 font-black text-primary">
+                      {formatarPreco((item.preco || 0) * (item.qty || 0) * (1 - Math.max(item.desconto || 0, descontoGlobal || 0) / 100))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={onAbrir}
+            className="mt-3 w-full rounded-2xl bg-primary px-4 py-3 text-sm font-black uppercase tracking-wide text-white transition-colors hover:bg-red-700"
+          >
+            Abrir orcamento completo
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function VendedorContent() {
   const [autenticado, setAutenticado] = useState(false)
   const [usuario, setUsuario] = useState(null)
@@ -2029,6 +2114,7 @@ function VendedorContent() {
       <div className="flex flex-1 overflow-hidden">
         <div className={`flex flex-1 flex-col overflow-hidden ${tab === 'orcamento' ? 'hidden lg:flex' : 'flex'}`}>
           <CatalogoCatalogo onCatalogoBase={setCatalogoBase} />
+          {tab === 'catalogo' && <OrcamentoMobilePreview onAbrir={() => setTab('orcamento')} />}
         </div>
 
         <div className={`flex w-full shrink-0 flex-col overflow-hidden border-l border-gray-200 bg-white lg:w-[32rem] xl:w-[38rem] 2xl:w-[42rem] ${tab === 'catalogo' ? 'hidden lg:flex' : 'flex'}`}>
