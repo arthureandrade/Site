@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T13:02:28.356Z",
+  "generated_at": "2026-04-25T23:49:35.270Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 44,
   "produtos": [
@@ -412,7 +412,7 @@
     {
       "descricao": "",
       "estoque": 3,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3860.jpg",
       "grupo": 61,
       "id": 3860,
       "marca": "RAMASSOL",
@@ -421,7 +421,7 @@
       "secao": 14,
       "subgrupo": 9999,
       "unidade": "PC",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3860.jpg"
     },
     {
       "descricao": "",
