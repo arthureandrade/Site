@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3196460
+      "saldo": 3168017
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 229857
+      "saldo": 258300
     },
     {
       "faixa": "91–180 dias",
@@ -21,85 +21,85 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-25T19:49:35.772140",
+  "generated_at": "2026-04-26T09:40:01.848084",
   "kpis": {
-    "a_vencer_7d": 335960,
-    "juros_pagos": 142629,
+    "a_vencer_7d": 318257,
+    "juros_pagos": 71565,
     "total_aberto": 3434291,
-    "total_pago_periodo": 3680194,
-    "total_vencido": 237831
+    "total_pago_periodo": 3344947,
+    "total_vencido": 266274
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-04-25",
-    "data_de": "2026-03-26"
+    "data_ate": "2026-04-26",
+    "data_de": "2026-03-27"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 149,
+      "dias_atraso": 150,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 111,
+      "dias_atraso": 112,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 84,
+      "dias_atraso": 85,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 82,
+      "dias_atraso": 83,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 46,
+      "dias_atraso": 47,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 21,
+      "dias_atraso": 22,
       "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 100,
       "vencimento": "2026-04-04T00:00:00"
     },
     {
-      "dias_atraso": 18,
+      "dias_atraso": 19,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 16,
+      "dias_atraso": 17,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 13353,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
-      "dias_atraso": 16,
+      "dias_atraso": 17,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 13342,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
-      "dias_atraso": 16,
+      "dias_atraso": 17,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 56330,
