@@ -1204,41 +1204,42 @@ function PainelOrcamento({ onClose, usuario }) {
         </button>
       </div>
 
-      {painelSecao === 'resumo' ? (
+      {painelSecao === 'resumo' || painelSecao === 'financeiro' ? (
           <>
-            <div className="min-h-0 flex-1 overflow-y-auto bg-gradient-to-b from-slate-50 via-white to-white lg:bg-white">
+            {painelSecao === 'resumo' ? (
+            <div className="min-h-0 flex-1 overflow-y-auto bg-gradient-to-b from-slate-50 via-white to-white md:bg-white">
             {items.length === 0 ? (
-              <div className="m-4 flex h-48 flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-slate-300 bg-white text-sm text-gray-500 shadow-[0_20px_40px_rgba(15,23,42,0.05)] lg:m-0 lg:h-40 lg:rounded-none lg:border-0 lg:border-b lg:border-dashed lg:border-gray-200 lg:bg-transparent lg:shadow-none">
-                <p className="text-base font-semibold text-slate-700 lg:text-sm lg:font-normal lg:text-gray-500">Nenhum item adicionado</p>
-                <p className="max-w-[220px] text-center text-xs text-slate-400 lg:hidden">Escolha produtos no catálogo para começar a montar este orçamento.</p>
+              <div className="m-4 flex h-48 flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-slate-300 bg-white text-sm text-gray-500 shadow-[0_20px_40px_rgba(15,23,42,0.05)] md:m-0 md:h-40 md:rounded-none md:border-0 md:border-b md:border-dashed md:border-gray-200 md:bg-transparent md:shadow-none">
+                <p className="text-base font-semibold text-slate-700 md:text-sm md:font-normal md:text-gray-500">Nenhum item adicionado</p>
+                <p className="max-w-[220px] text-center text-xs text-slate-400 md:hidden">Escolha produtos no catálogo para começar a montar este orçamento.</p>
               </div>
             ) : (
-              <div className="space-y-3 p-3 lg:space-y-0 lg:p-0 lg:divide-y lg:divide-gray-100">
+              <div className="space-y-3 p-3 md:space-y-0 md:p-0 md:divide-y md:divide-gray-100">
                 {items.map((item) => {
                   const descEfetiva = Math.max(item.desconto || 0, descontoGlobal)
                   const precoComDesc = item.preco * (1 - descEfetiva / 100)
                   return (
-                    <div key={item.id} className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)] lg:rounded-none lg:border-0 lg:bg-transparent lg:px-3 lg:py-2.5 lg:shadow-none lg:hover:shadow-none">
-                      <div className="flex items-start justify-between gap-3 lg:gap-2">
+                    <div key={item.id} className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)] md:rounded-none md:border-0 md:bg-transparent md:px-3 md:py-2.5 md:shadow-none md:hover:shadow-none">
+                      <div className="flex items-start justify-between gap-3 md:gap-2">
                         <div className="min-w-0 flex-1">
-                          <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500 lg:mb-0 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-gray-400">
+                          <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500 md:mb-0 md:rounded-none md:bg-transparent md:px-0 md:py-0 md:text-gray-400">
                             Cod. {item.id}
                           </div>
-                          <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 lg:text-xs lg:text-gray-800">{item.nome}</p>
+                          <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 md:text-xs md:text-gray-800">{item.nome}</p>
                         </div>
-                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500 lg:h-auto lg:w-auto lg:rounded-none lg:border-0 lg:bg-transparent lg:text-gray-300">
+                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500 md:h-auto md:w-auto md:rounded-none md:border-0 md:bg-transparent md:text-gray-300">
                           <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </button>
                       </div>
 
-                      <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3 lg:mt-1.5 lg:flex lg:items-center lg:gap-2 lg:rounded-none lg:bg-transparent lg:p-0">
-                        <div className="flex items-center justify-between gap-3 lg:flex-none">
+                      <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3 md:mt-1.5 md:flex md:items-center md:gap-2 md:rounded-none md:bg-transparent md:p-0">
+                        <div className="flex items-center justify-between gap-3 md:flex-none">
                           <div>
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 lg:hidden">Quantidade</div>
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 md:hidden">Quantidade</div>
                             <div className="mt-1 flex items-center gap-1">
-                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary lg:h-6 lg:w-6 lg:rounded lg:border-gray-300">
+                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary md:h-6 md:w-6 md:rounded md:border-gray-300">
                             -
                               </button>
                               <input
@@ -1248,16 +1249,16 @@ function PainelOrcamento({ onClose, usuario }) {
                                 inputMode="decimal"
                                 value={item.qty}
                                 onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
-                                className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary lg:h-auto lg:w-14 lg:rounded lg:border-gray-300"
+                                className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary md:h-auto md:w-14 md:rounded md:border-gray-300"
                               />
-                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary lg:h-6 lg:w-6 lg:rounded lg:border-gray-300">
+                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary md:h-6 md:w-6 md:rounded md:border-gray-300">
                             +
                               </button>
                             </div>
                           </div>
 
-                          <div className="text-right lg:ml-auto">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 lg:hidden">Desconto</div>
+                          <div className="text-right md:ml-auto">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 md:hidden">Desconto</div>
                             <div className="mt-1 flex items-center justify-end gap-1">
                               <input
                                 type="number"
@@ -1266,27 +1267,27 @@ function PainelOrcamento({ onClose, usuario }) {
                                 step="0.1"
                                 value={item.desconto || 0}
                                 onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
-                                className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary lg:h-auto lg:w-10 lg:rounded lg:border-gray-300"
+                                className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary md:h-auto md:w-10 md:rounded md:border-gray-300"
                               />
-                              <span className="text-[11px] font-bold text-slate-500 lg:text-[10px] lg:text-gray-400">%</span>
+                              <span className="text-[11px] font-bold text-slate-500 md:text-[10px] md:text-gray-400">%</span>
                             </div>
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 lg:ml-auto lg:flex lg:items-center lg:gap-2">
-                          <div className="rounded-2xl bg-white px-3 py-2 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 lg:hidden">Unitario</div>
-                            <div className="mt-1 text-sm font-black text-slate-900 lg:mt-0 lg:text-[10px] lg:text-gray-400 lg:line-through">{formatarPreco(item.preco * item.qty)}</div>
+                        <div className="grid grid-cols-2 gap-2 md:ml-auto md:flex md:items-center md:gap-2">
+                          <div className="rounded-2xl bg-white px-3 py-2 md:rounded-none md:bg-transparent md:px-0 md:py-0">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 md:hidden">Unitario</div>
+                            <div className="mt-1 text-sm font-black text-slate-900 md:mt-0 md:text-[10px] md:text-gray-400 md:line-through">{formatarPreco(item.preco * item.qty)}</div>
                           </div>
-                          <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white lg:rounded-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-primary">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100 lg:hidden">Subtotal</div>
-                            <div className="mt-1 text-sm font-black lg:mt-0 lg:text-xs">{formatarPreco(precoComDesc * item.qty)}</div>
+                          <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white md:rounded-none md:bg-transparent md:px-0 md:py-0 md:text-primary">
+                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100 md:hidden">Subtotal</div>
+                            <div className="mt-1 text-sm font-black md:mt-0 md:text-xs">{formatarPreco(precoComDesc * item.qty)}</div>
                           </div>
                         </div>
                       </div>
 
                       {item.preco > 0 && descEfetiva > 0 && (
-                        <div className="mt-3 flex items-center justify-end gap-2 lg:mt-1">
+                        <div className="mt-3 flex items-center justify-end gap-2 md:mt-1">
                           <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-emerald-700">
                             {formatarPercentual(descEfetiva)}% aplicado
                           </span>
@@ -1297,8 +1298,11 @@ function PainelOrcamento({ onClose, usuario }) {
                 })}
               </div>
             )}
+            </div>
+            ) : null}
 
-          {items.length > 0 && (
+          {painelSecao === 'financeiro' ? (
+            items.length > 0 ? (
             <div className="shrink-0 border-t border-slate-200 bg-white/95 backdrop-blur lg:border-t lg:border-gray-200 lg:bg-white lg:backdrop-blur-0">
               <div className="grid gap-0 xl:grid-cols-[1.15fr_0.85fr]">
                 <div className="border-b border-slate-100 bg-gradient-to-br from-slate-50 to-white px-4 pb-3 pt-4 xl:border-b-0 xl:border-r lg:border-gray-100 lg:bg-white lg:px-4 lg:pb-2 lg:pt-3">
@@ -1429,8 +1433,13 @@ function PainelOrcamento({ onClose, usuario }) {
                 </button>
               </div>
             </div>
-          )}
-          </div>
+            ) : (
+              <div className="m-4 flex h-48 flex-col items-center justify-center gap-2 rounded-3xl border border-dashed border-slate-300 bg-white text-sm text-gray-500 shadow-[0_20px_40px_rgba(15,23,42,0.05)]">
+                <p className="text-base font-semibold text-slate-700">Nenhum item no orcamento</p>
+                <p className="max-w-[220px] text-center text-xs text-slate-400">Adicione produtos no catálogo para liberar a parte financeira.</p>
+              </div>
+            )
+          ) : null}
         </>
       ) : (
       <div className="flex min-h-0 flex-1 flex-col border-t border-gray-200 bg-slate-50 px-4 py-2.5">
