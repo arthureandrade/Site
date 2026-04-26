@@ -1219,28 +1219,94 @@ function PainelOrcamento({ onClose, usuario }) {
                   const descEfetiva = Math.max(item.desconto || 0, descontoGlobal)
                   const precoComDesc = item.preco * (1 - descEfetiva / 100)
                   return (
-                    <div key={item.id} className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)] md:rounded-none md:border-0 md:bg-transparent md:px-3 md:py-2.5 md:shadow-none md:hover:shadow-none">
-                      <div className="flex items-start justify-between gap-3 md:gap-2">
-                        <div className="min-w-0 flex-1">
-                          <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500 md:mb-0 md:rounded-none md:bg-transparent md:px-0 md:py-0 md:text-gray-400">
-                            Cod. {item.id}
+                    <div key={item.id}>
+                      <div className="rounded-3xl border border-slate-200 bg-white px-3 py-3 shadow-[0_14px_32px_rgba(15,23,42,0.06)] transition-shadow hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)] md:hidden">
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="min-w-0 flex-1">
+                            <div className="mb-1 inline-flex rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wide text-slate-500">
+                              Cod. {item.id}
+                            </div>
+                            <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900">{item.nome}</p>
                           </div>
-                          <p className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 md:text-xs md:text-gray-800">{item.nome}</p>
+                          <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500">
+                            <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
                         </div>
-                        <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-300 transition-colors hover:border-red-200 hover:text-red-500 md:h-auto md:w-auto md:rounded-none md:border-0 md:bg-transparent md:text-gray-300">
-                          <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
+
+                        <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3">
+                          <div className="flex items-center justify-between gap-3">
+                            <div>
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Quantidade</div>
+                              <div className="mt-1 flex items-center gap-1">
+                                <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary">
+                                  -
+                                </button>
+                                <input
+                                  type="number"
+                                  min="0.5"
+                                  step="0.5"
+                                  inputMode="decimal"
+                                  value={item.qty}
+                                  onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
+                                  className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
+                                />
+                                <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary">
+                                  +
+                                </button>
+                              </div>
+                            </div>
+
+                            <div className="text-right">
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Desconto</div>
+                              <div className="mt-1 flex items-center justify-end gap-1">
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="15"
+                                  step="0.1"
+                                  value={item.desconto || 0}
+                                  onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
+                                  className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary"
+                                />
+                                <span className="text-[11px] font-bold text-slate-500">%</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-2">
+                            <div className="rounded-2xl bg-white px-3 py-2">
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">Unitario</div>
+                              <div className="mt-1 text-sm font-black text-slate-900">{formatarPreco(item.preco)}</div>
+                            </div>
+                            <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white">
+                              <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100">Subtotal</div>
+                              <div className="mt-1 text-sm font-black">{formatarPreco(precoComDesc * item.qty)}</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {item.preco > 0 && descEfetiva > 0 && (
+                          <div className="mt-3 flex items-center justify-end gap-2">
+                            <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-emerald-700">
+                              {formatarPercentual(descEfetiva)}% aplicado
+                            </span>
+                          </div>
+                        )}
                       </div>
 
-                      <div className="mt-3 grid gap-3 rounded-2xl bg-slate-50 p-3 md:mt-1.5 md:flex md:items-center md:gap-2 md:rounded-none md:bg-transparent md:p-0">
-                        <div className="flex items-center justify-between gap-3 md:flex-none">
-                          <div>
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 md:hidden">Quantidade</div>
-                            <div className="mt-1 flex items-center gap-1">
-                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary md:h-6 md:w-6 md:rounded md:border-gray-300">
-                            -
+                      <div className="hidden px-3 py-2.5 md:block">
+                        <div className="flex items-start gap-3">
+                          <div className="min-w-0 flex-1">
+                            <p className="font-mono text-[10px] text-gray-400">Cod. {item.id}</p>
+                            <p className="line-clamp-2 text-xs font-semibold leading-snug text-gray-800">{item.nome}</p>
+                          </div>
+
+                          <div className="flex shrink-0 items-center gap-3">
+                            <div className="flex items-center gap-1">
+                              <button onClick={() => dispatch({ type: 'DEC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
+                                -
                               </button>
                               <input
                                 type="number"
@@ -1249,17 +1315,14 @@ function PainelOrcamento({ onClose, usuario }) {
                                 inputMode="decimal"
                                 value={item.qty}
                                 onChange={(e) => dispatch({ type: 'SET_QTY', id: item.id, qty: e.target.value })}
-                                className="h-8 w-16 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs font-bold outline-none focus:border-primary md:h-auto md:w-14 md:rounded md:border-gray-300"
+                                className="w-16 rounded border border-gray-300 py-0.5 text-center text-xs font-bold outline-none focus:border-primary"
                               />
-                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-300 bg-white text-sm font-bold text-slate-600 transition-colors hover:border-primary hover:text-primary md:h-6 md:w-6 md:rounded md:border-gray-300">
-                            +
+                              <button onClick={() => dispatch({ type: 'INC', id: item.id })} className="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-sm font-bold text-gray-600 transition-colors hover:border-primary hover:text-primary">
+                                +
                               </button>
                             </div>
-                          </div>
 
-                          <div className="text-right md:ml-auto">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 md:hidden">Desconto</div>
-                            <div className="mt-1 flex items-center justify-end gap-1">
+                            <div className="flex w-16 items-center justify-end gap-1">
                               <input
                                 type="number"
                                 min="0"
@@ -1267,32 +1330,26 @@ function PainelOrcamento({ onClose, usuario }) {
                                 step="0.1"
                                 value={item.desconto || 0}
                                 onChange={(e) => dispatch({ type: 'SET_DESCONTO', id: item.id, desconto: e.target.value })}
-                                className="h-8 w-12 rounded-xl border border-slate-300 bg-white py-0.5 text-center text-xs outline-none focus:border-primary md:h-auto md:w-10 md:rounded md:border-gray-300"
+                                className="w-10 rounded border border-gray-300 py-0.5 text-center text-xs outline-none focus:border-primary"
                               />
-                              <span className="text-[11px] font-bold text-slate-500 md:text-[10px] md:text-gray-400">%</span>
+                              <span className="text-[10px] text-gray-400">%</span>
                             </div>
-                          </div>
-                        </div>
 
-                        <div className="grid grid-cols-2 gap-2 md:ml-auto md:flex md:items-center md:gap-2">
-                          <div className="rounded-2xl bg-white px-3 py-2 md:rounded-none md:bg-transparent md:px-0 md:py-0">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400 md:hidden">Unitario</div>
-                            <div className="mt-1 text-sm font-black text-slate-900 md:mt-0 md:text-[10px] md:text-gray-400 md:line-through">{formatarPreco(item.preco * item.qty)}</div>
-                          </div>
-                          <div className="rounded-2xl bg-gradient-to-br from-primary to-red-700 px-3 py-2 text-white md:rounded-none md:bg-transparent md:px-0 md:py-0 md:text-primary">
-                            <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-red-100 md:hidden">Subtotal</div>
-                            <div className="mt-1 text-sm font-black md:mt-0 md:text-xs">{formatarPreco(precoComDesc * item.qty)}</div>
+                            <div className="w-28 text-right">
+                              {descEfetiva > 0 && (
+                                <div className="text-[10px] text-gray-400 line-through">{formatarPreco(item.preco * item.qty)}</div>
+                              )}
+                              <div className="text-xs font-black text-primary">{formatarPreco(precoComDesc * item.qty)}</div>
+                            </div>
+
+                            <button onClick={() => dispatch({ type: 'REMOVE', id: item.id })} className="shrink-0 text-gray-300 transition-colors hover:text-red-500">
+                              <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
-
-                      {item.preco > 0 && descEfetiva > 0 && (
-                        <div className="mt-3 flex items-center justify-end gap-2 md:mt-1">
-                          <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-black uppercase tracking-wide text-emerald-700">
-                            {formatarPercentual(descEfetiva)}% aplicado
-                          </span>
-                        </div>
-                      )}
                     </div>
                   )
                 })}
