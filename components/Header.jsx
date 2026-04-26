@@ -154,10 +154,11 @@ export default function Header() {
         </div>
       </div>
 
-      <div className={`border-t border-slate-100 bg-white px-4 md:hidden ${isVendedorArea ? 'py-2' : 'py-3'}`}>
-        <form onSubmit={irParaBusca} className={`flex items-center gap-2 border border-slate-200 bg-white shadow-[0_10px_24px_rgba(15,23,42,0.05)] ${
-          isVendedorArea ? 'rounded-[18px] p-1.5' : 'rounded-[22px] p-2'
-        }`}>
+      <div className={`${isVendedorArea ? 'hidden' : 'border-t border-slate-100 bg-white px-4 py-3'} md:hidden`}>
+        {!isVendedorArea ? (
+          <form onSubmit={irParaBusca} className={`flex items-center gap-2 border border-slate-200 bg-white shadow-[0_10px_24px_rgba(15,23,42,0.05)] ${
+            isVendedorArea ? 'rounded-[18px] p-1.5' : 'rounded-[22px] p-2'
+          }`}>
           <input
             type="text"
             value={busca}
@@ -175,7 +176,8 @@ export default function Header() {
           >
             Buscar
           </button>
-        </form>
+          </form>
+        ) : null}
         {!isVendedorArea ? (
           <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
             <Link
