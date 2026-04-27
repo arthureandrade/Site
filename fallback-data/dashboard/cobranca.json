@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 548905.98
+      "saldo": 549773.78
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 182699.17
+      "saldo": 181499.17
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7358.990000000001
     }
   ],
-  "generated_at": "2026-04-27T14:59:23.096086",
+  "generated_at": "2026-04-27T16:16:40.861275",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 884369.3899999999,
-    "total_atraso": 335463.41000000003,
-    "total_vencer": 548905.98
+    "clientes_atraso": 70,
+    "total_aberto": 884037.19,
+    "total_atraso": 334263.41000000003,
+    "total_vencer": 549773.78
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -61,13 +61,6 @@
       "loja": "Loja 2",
       "saldo": 431.71,
       "vencimento": "2026-04-23T00:00:00"
-    },
-    {
-      "cliente": "ESDRAS MATUZALEM DA SILVA",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 226.2,
-      "vencimento": "2026-04-27T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",

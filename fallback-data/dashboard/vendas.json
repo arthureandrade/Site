@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-04-27T14:59:22.659517",
+  "generated_at": "2026-04-27T16:16:40.322013",
   "kpis": {
-    "ticket_medio": 365.10063829787237,
-    "total_pedidos": 141,
-    "total_vendas": 51479.19,
+    "ticket_medio": 452.2265317919075,
+    "total_pedidos": 173,
+    "total_vendas": 78235.19,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 28352.03
+      "total_vendas": 45060.53
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 13879
+      "total_vendas": 23043.5
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 9248.16
+      "total_vendas": 10131.16
     }
   ],
   "ok": true,
@@ -31,29 +31,39 @@
   "serie_diaria": [
     {
       "data": "2026-04-27",
-      "total_vendas": 51479.19
+      "total_vendas": 78235.19
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 27,
-      "total_vendas": 32309.26,
+      "pedidos": 30,
+      "total_vendas": 32973.26,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 26,
-      "total_vendas": 10970.89,
+      "pedidos": 32,
+      "total_vendas": 11192.39,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 22,
-      "total_vendas": 5676,
+      "pedidos": 17,
+      "total_vendas": 10464.01,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 30,
+      "total_vendas": 8612.5,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 19,
-      "total_vendas": 5633.5,
+      "pedidos": 28,
+      "total_vendas": 6307.380000000001,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 25,
+      "total_vendas": 4394.5,
       "vendedor": "Claudia"
     },
     {
@@ -62,19 +72,9 @@
       "vendedor": "Juan"
     },
     {
-      "pedidos": 15,
-      "total_vendas": 3314.01,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 1,
-      "total_vendas": 480,
+      "pedidos": 2,
+      "total_vendas": 579,
       "vendedor": "Matheus"
-    },
-    {
-      "pedidos": 22,
-      "total_vendas": -10616.619999999999,
-      "vendedor": "Rafael"
     }
   ]
 }
