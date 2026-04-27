@@ -1,8 +1,22 @@
 {
-  "generated_at": "2026-04-27T14:27:56.997Z",
+  "generated_at": "2026-04-27T16:11:44.304Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 44,
+  "total": 45,
   "produtos": [
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 97,
+      "id": 13907,
+      "marca": "RAMASSOL",
+      "nome": "EXPOSITOR EXCLUSIVO - RAMASSOL",
+      "preco": 0,
+      "secao": 14,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
     {
       "descricao": "",
       "estoque": 0,
