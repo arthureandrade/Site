@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 510819.47
+      "saldo": 527430.18
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 196661.46
+      "saldo": 184204.17
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7358.990000000001
     }
   ],
-  "generated_at": "2026-04-27T08:09:01.679130",
+  "generated_at": "2026-04-27T10:27:54.206549",
   "kpis": {
-    "clientes_atraso": 76,
-    "total_aberto": 860245.17,
-    "total_atraso": 349425.7,
-    "total_vencer": 510819.47
+    "clientes_atraso": 74,
+    "total_aberto": 864398.5900000001,
+    "total_atraso": 336968.41000000003,
+    "total_vencer": 527430.18
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -156,16 +156,16 @@
       "total_atraso": 12130.91
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 4,
-      "titulos": 4,
-      "total_atraso": 10045.22
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 25,
-      "titulos": 5,
-      "total_atraso": 9421.99
+      "titulos": 4,
+      "total_atraso": 8360.67
+    },
+    {
+      "cliente": "EDVALDO CASTRO NASCIMENTO",
+      "maior_atraso": 179,
+      "titulos": 2,
+      "total_atraso": 8132.72
     }
   ]
 }
