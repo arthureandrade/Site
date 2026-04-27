@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 549773.78
+      "saldo": 553907.78
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 181499.17
+      "saldo": 165749.56
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7358.990000000001
     }
   ],
-  "generated_at": "2026-04-27T16:16:40.861275",
+  "generated_at": "2026-04-27T17:31:20.370950",
   "kpis": {
-    "clientes_atraso": 70,
-    "total_aberto": 884037.19,
-    "total_atraso": 334263.41000000003,
-    "total_vencer": 549773.78
+    "clientes_atraso": 68,
+    "total_aberto": 872421.58,
+    "total_atraso": 318513.8,
+    "total_vencer": 553907.78
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -137,12 +137,6 @@
       "total_atraso": 18398.940000000002
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 4,
-      "titulos": 1,
-      "total_atraso": 15019.61
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 869,
       "titulos": 2,
@@ -159,6 +153,12 @@
       "maior_atraso": 179,
       "titulos": 2,
       "total_atraso": 8132.72
+    },
+    {
+      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
+      "maior_atraso": 3,
+      "titulos": 3,
+      "total_atraso": 7880
     }
   ]
 }
