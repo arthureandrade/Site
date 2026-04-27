@@ -1,7 +1,18 @@
 {
-  "erro": "Sem dados disponíveis",
-  "generated_at": "2026-04-27T06:25:08.649567",
-  "ok": false,
+  "generated_at": "2026-04-27T08:09:01.147660",
+  "kpis": {
+    "ticket_medio": 104,
+    "total_pedidos": 1,
+    "total_vendas": 104,
+    "total_vendedores": 1
+  },
+  "lojas": [
+    {
+      "loja": "Loja 2",
+      "total_vendas": 104
+    }
+  ],
+  "ok": true,
   "periodo": {
     "ano_selecionado": 2026,
     "data_ate": "2026-04-27",
@@ -9,5 +20,18 @@
     "mes_selecionado": 13,
     "rotulo": "Hoje"
   },
-  "tipo": "vendas"
+  "serie_diaria": [
+    {
+      "data": "2026-04-27",
+      "total_vendas": 104
+    }
+  ],
+  "tipo": "vendas",
+  "top_vendedores": [
+    {
+      "pedidos": 1,
+      "total_vendas": 104,
+      "vendedor": "Lucas"
+    }
+  ]
 }
