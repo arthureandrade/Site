@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3069316
+      "saldo": 3006061
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-28T17:14:08.910814",
+  "generated_at": "2026-04-28T18:14:14.065219",
   "kpis": {
-    "a_vencer_7d": 423059,
+    "a_vencer_7d": 359804,
     "juros_pagos": 71565,
-    "total_aberto": 3429975,
-    "total_pago_periodo": 3470681,
+    "total_aberto": 3366720,
+    "total_pago_periodo": 3851069,
     "total_vencido": 360659
   },
   "ok": true,
@@ -88,14 +88,14 @@
       "dias_atraso": 19,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13353,
+      "saldo": 13342,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
       "dias_atraso": 19,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 13342,
+      "saldo": 13353,
       "vencimento": "2026-04-09T00:00:00"
     },
     {
@@ -129,11 +129,6 @@
       "total_aberto": 206382
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 32,
-      "total_aberto": 204972
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 5,
       "total_aberto": 190988
@@ -142,6 +137,11 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 19,
       "total_aberto": 163029
+    },
+    {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 27,
+      "total_aberto": 141717
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
