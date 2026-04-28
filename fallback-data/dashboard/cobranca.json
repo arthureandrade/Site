@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 541758.06
+      "saldo": 540321.23
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 161038.39
+      "saldo": 160266.39
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7362.46
     }
   ],
-  "generated_at": "2026-04-28T14:06:54.862500",
+  "generated_at": "2026-04-28T15:56:21.067083",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 855677.6599999999,
-    "total_atraso": 313919.6,
-    "total_vencer": 541758.0599999999
+    "clientes_atraso": 64,
+    "total_aberto": 853468.83,
+    "total_atraso": 313147.6,
+    "total_vencer": 540321.23
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -74,13 +74,6 @@
       "dias_atraso": -3,
       "loja": "Loja 2",
       "saldo": 6140,
-      "vencimento": "2026-05-01T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
-      "loja": "Loja 1",
-      "saldo": 2276,
       "vencimento": "2026-05-01T00:00:00"
     }
   ],
