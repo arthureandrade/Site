@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 539045.72
+      "saldo": 531577.56
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 165565.91
+      "saldo": 158133.08
     },
     {
       "faixa": "180+ dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 16437.76
+      "saldo": 16340.11
     },
     {
       "faixa": "61–90 dias",
       "saldo": 7365.94
     }
   ],
-  "generated_at": "2026-04-29T08:22:54.165930",
+  "generated_at": "2026-04-29T10:37:34.370228",
   "kpis": {
-    "clientes_atraso": 68,
-    "total_aberto": 856757.83,
-    "total_atraso": 317712.11,
-    "total_vencer": 539045.7200000001
+    "clientes_atraso": 65,
+    "total_aberto": 841759.19,
+    "total_atraso": 310181.62999999995,
+    "total_vencer": 531577.56
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -120,10 +120,10 @@
       "total_atraso": 8146.52
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 5,
-      "titulos": 3,
-      "total_atraso": 8067.34
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 278,
+      "titulos": 1,
+      "total_atraso": 7029
     }
   ]
 }
