@@ -2,76 +2,62 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 543489.73
+      "saldo": 538490.72
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 160266.39
+      "saldo": 165565.91
     },
     {
       "faixa": "180+ dias",
-      "saldo": 99243.44
+      "saldo": 104178.77
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 29046.690000000002
+      "saldo": 24163.73
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 16428.62
+      "saldo": 16437.76
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 7362.46
+      "saldo": 7365.94
     }
   ],
-  "generated_at": "2026-04-28T20:10:45.085425",
+  "generated_at": "2026-04-29T00:04:57.299507",
   "kpis": {
-    "clientes_atraso": 63,
-    "total_aberto": 855837.3300000001,
-    "total_atraso": 312347.6,
-    "total_vencer": 543489.73
+    "clientes_atraso": 68,
+    "total_aberto": 856202.83,
+    "total_atraso": 317712.11,
+    "total_vencer": 538490.7200000001
   },
   "ok": true,
   "proximos_vencimentos": [
     {
-      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 1798.95,
-      "vencimento": "2026-04-23T00:00:00"
-    },
-    {
-      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 432.14,
-      "vencimento": "2026-04-23T00:00:00"
-    },
-    {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 4",
       "saldo": 1583.33,
       "vencimento": "2026-04-28T00:00:00"
     },
     {
       "cliente": "QUADRILHA TRADICAO MACUXI FERQUAJ",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 1635,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 4",
       "saldo": 5700,
       "vencimento": "2026-05-01T00:00:00"
     },
     {
       "cliente": "CENTRO DO FORRO LTDA",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 2",
       "saldo": 6140,
       "vencimento": "2026-05-01T00:00:00"
@@ -80,64 +66,64 @@
   "tipo": "cobranca",
   "top_clientes": [
     {
-      "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 374,
-      "titulos": 2,
-      "total_atraso": 44341.63
+      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
+      "maior_atraso": 10,
+      "titulos": 3,
+      "total_atraso": 44446.97
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 9,
-      "titulos": 3,
-      "total_atraso": 44306.579999999994
+      "cliente": "JOSE ALVES DE MORAIS",
+      "maior_atraso": 375,
+      "titulos": 2,
+      "total_atraso": 44385
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 417,
+      "maior_atraso": 418,
       "titulos": 7,
-      "total_atraso": 39524.09
+      "total_atraso": 39525.34
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
-      "maior_atraso": 13,
+      "maior_atraso": 14,
       "titulos": 1,
-      "total_atraso": 22208.88
+      "total_atraso": 22277.83
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 699,
+      "maior_atraso": 700,
       "titulos": 16,
-      "total_atraso": 20592.09
+      "total_atraso": 20604.4
     },
     {
       "cliente": "PROMIX LTDA",
-      "maior_atraso": 5,
+      "maior_atraso": 6,
       "titulos": 3,
-      "total_atraso": 18428.93
+      "total_atraso": 18453.74
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 870,
+      "maior_atraso": 871,
       "titulos": 2,
-      "total_atraso": 12137.77
+      "total_atraso": 12144.64
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 26,
+      "maior_atraso": 27,
       "titulos": 4,
-      "total_atraso": 8367.380000000001
+      "total_atraso": 8377.220000000001
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 180,
+      "maior_atraso": 181,
       "titulos": 2,
-      "total_atraso": 8139.620000000001
+      "total_atraso": 8146.52
     },
     {
       "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 4,
+      "maior_atraso": 5,
       "titulos": 3,
-      "total_atraso": 8060.63
+      "total_atraso": 8067.34
     }
   ]
 }
