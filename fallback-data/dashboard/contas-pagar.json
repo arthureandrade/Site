@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3013605
+      "saldo": 3003830
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 357906
+      "saldo": 355444
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-04-29T16:45:29.726386",
+  "generated_at": "2026-04-29T17:46:20.016355",
   "kpis": {
-    "a_vencer_7d": 368512,
-    "juros_pagos": 71565,
-    "total_aberto": 3379485,
-    "total_pago_periodo": 3851436,
-    "total_vencido": 365880
+    "a_vencer_7d": 358737,
+    "juros_pagos": 71580,
+    "total_aberto": 3367248,
+    "total_pago_periodo": 3895802,
+    "total_vencido": 363418
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 7,
-      "total_aberto": 98467
+      "titulos": 6,
+      "total_aberto": 96005
     },
     {
       "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
