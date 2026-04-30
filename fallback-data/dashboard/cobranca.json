@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 550829.93
+      "saldo": 549657.93
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 159228.11
+      "saldo": 157070.81
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 25194.38
+      "saldo": 22804.38
     },
     {
       "faixa": "31–60 dias",
@@ -25,22 +25,15 @@
       "saldo": 5956.94
     }
   ],
-  "generated_at": "2026-04-30T09:07:43.105823",
+  "generated_at": "2026-04-30T11:22:33.478052",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 861781.3200000001,
-    "total_atraso": 310951.39,
-    "total_vencer": 550829.9299999999
+    "clientes_atraso": 61,
+    "total_aberto": 856062.02,
+    "total_atraso": 306404.08999999997,
+    "total_vencer": 549657.9299999999
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 1586.5,
-      "vencimento": "2026-04-28T00:00:00"
-    },
     {
       "cliente": "QUADRILHA TRADICAO MACUXI FERQUAJ",
       "dias_atraso": 0,
