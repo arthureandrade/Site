@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-30T12:56:45.508161",
+  "generated_at": "2026-04-30T14:17:45.491670",
   "kpis": {
-    "ticket_medio": 472.20494845360827,
-    "total_pedidos": 97,
-    "total_vendas": 45803.880000000005,
+    "ticket_medio": 447.15282051282054,
+    "total_pedidos": 117,
+    "total_vendas": 52316.880000000005,
     "total_vendedores": 8
   },
   "lojas": [
     {
-      "loja": "Loja 1",
-      "total_vendas": 20512.38
+      "loja": "Loja 2",
+      "total_vendas": 21260.5
     },
     {
-      "loja": "Loja 2",
-      "total_vendas": 15344.5
+      "loja": "Loja 1",
+      "total_vendas": 21109.38
     },
     {
       "loja": "Loja 4",
@@ -31,40 +31,40 @@
   "serie_diaria": [
     {
       "data": "2026-04-30",
-      "total_vendas": 45803.88
+      "total_vendas": 52316.88
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 7,
-      "total_vendas": 9223.61,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 10,
-      "total_vendas": 7808,
+      "pedidos": 15,
+      "total_vendas": 12150,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 12,
-      "total_vendas": 7082,
+      "pedidos": 9,
+      "total_vendas": 9449.61,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 23,
+      "total_vendas": 8222.5,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 13,
+      "total_vendas": 7106,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 18,
-      "total_vendas": 6779.77,
+      "pedidos": 20,
+      "total_vendas": 6841.77,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 18,
-      "total_vendas": 6691,
+      "pedidos": 19,
+      "total_vendas": 6721,
       "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 17,
-      "total_vendas": 6672.5,
-      "vendedor": "Lucas"
     },
     {
       "pedidos": 2,
@@ -72,8 +72,8 @@
       "vendedor": "Matheus"
     },
     {
-      "pedidos": 13,
-      "total_vendas": 568,
+      "pedidos": 16,
+      "total_vendas": 847,
       "vendedor": "Gloria"
     }
   ]
