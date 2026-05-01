@@ -1,80 +1,13 @@
 {
-  "generated_at": "2026-04-30T20:07:41.727522",
-  "kpis": {
-    "ticket_medio": 345.97526570048313,
-    "total_pedidos": 207,
-    "total_vendas": 71616.88,
-    "total_vendedores": 9
-  },
-  "lojas": [
-    {
-      "loja": "Loja 2",
-      "total_vendas": 30876.989999999998
-    },
-    {
-      "loja": "Loja 1",
-      "total_vendas": 29869.52
-    },
-    {
-      "loja": "Loja 4",
-      "total_vendas": 10870.37
-    }
-  ],
-  "ok": true,
+  "erro": "Sem dados disponíveis",
+  "generated_at": "2026-05-01T00:17:42.988616",
+  "ok": false,
   "periodo": {
     "ano_selecionado": 2026,
-    "data_ate": "2026-04-30",
-    "data_de": "2026-04-30",
+    "data_ate": "2026-05-01",
+    "data_de": "2026-05-01",
     "mes_selecionado": 13,
     "rotulo": "Hoje"
   },
-  "serie_diaria": [
-    {
-      "data": "2026-04-30",
-      "total_vendas": 71616.88
-    }
-  ],
-  "tipo": "vendas",
-  "top_vendedores": [
-    {
-      "pedidos": 25,
-      "total_vendas": 13839,
-      "vendedor": "Claudia"
-    },
-    {
-      "pedidos": 27,
-      "total_vendas": 12000,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 39,
-      "total_vendas": 10960.99,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 13,
-      "total_vendas": 10763.61,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 32,
-      "total_vendas": 10726.79,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 37,
-      "total_vendas": 8346.5,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 31,
-      "total_vendas": 3976.99,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 2,
-      "total_vendas": 979,
-      "vendedor": "Matheus"
-    }
-  ]
+  "tipo": "vendas"
 }

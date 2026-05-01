@@ -2,121 +2,135 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 565708.2
+      "saldo": 552455.82
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 156382.81
+      "saldo": 169826.66
     },
     {
       "faixa": "180+ dias",
-      "saldo": 104222.99
+      "saldo": 104267.21
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 22804.38
+      "saldo": 22812.96
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 16348.97
+      "saldo": 16357.82
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 5956.94
+      "saldo": 5959.96
     }
   ],
-  "generated_at": "2026-04-30T20:07:42.254415",
+  "generated_at": "2026-05-01T00:17:43.478979",
   "kpis": {
-    "clientes_atraso": 59,
-    "total_aberto": 871424.29,
-    "total_atraso": 305716.08999999997,
-    "total_vencer": 565708.2
+    "clientes_atraso": 66,
+    "total_aberto": 871680.4299999999,
+    "total_atraso": 319224.61000000004,
+    "total_vencer": 552455.82
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "QUADRILHA TRADICAO MACUXI FERQUAJ",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 1635,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 4",
       "saldo": 5700,
       "vencimento": "2026-05-01T00:00:00"
     },
     {
       "cliente": "CENTRO DO FORRO LTDA",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 2",
       "saldo": 6140,
       "vencimento": "2026-05-01T00:00:00"
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (PR.CRISTIANO)",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 1647.5,
+      "vencimento": "2026-05-06T00:00:00"
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "dias_atraso": -5,
+      "loja": "Loja 4",
+      "saldo": 1313.45,
+      "vencimento": "2026-05-06T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 11,
+      "maior_atraso": 12,
       "titulos": 3,
-      "total_atraso": 44587.369999999995
+      "total_atraso": 44727.77
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 376,
+      "maior_atraso": 377,
       "titulos": 2,
-      "total_atraso": 44428.37
+      "total_atraso": 44471.74
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 419,
+      "maior_atraso": 420,
       "titulos": 7,
-      "total_atraso": 39526.6
+      "total_atraso": 39527.85
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
-      "maior_atraso": 15,
+      "maior_atraso": 16,
       "titulos": 1,
-      "total_atraso": 22346.79
+      "total_atraso": 22415.74
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 701,
+      "maior_atraso": 702,
       "titulos": 16,
-      "total_atraso": 20616.72
+      "total_atraso": 20629.010000000002
     },
     {
       "cliente": "PROMIX LTDA",
-      "maior_atraso": 7,
+      "maior_atraso": 8,
       "titulos": 3,
-      "total_atraso": 18478.55
+      "total_atraso": 18503.37
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 872,
+      "maior_atraso": 873,
       "titulos": 2,
-      "total_atraso": 12151.5
+      "total_atraso": 12158.36
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 28,
+      "maior_atraso": 29,
       "titulos": 4,
-      "total_atraso": 8385.49
+      "total_atraso": 8393.78
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 182,
+      "maior_atraso": 183,
       "titulos": 2,
-      "total_atraso": 8153.43
+      "total_atraso": 8160.34
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 279,
+      "maior_atraso": 280,
       "titulos": 1,
-      "total_atraso": 7034.5
+      "total_atraso": 7040
     }
   ]
 }
