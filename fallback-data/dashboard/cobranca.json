@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 533007.82
+      "saldo": 535987.87
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 186841.49
+      "saldo": 183553.66
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 10263
     }
   ],
-  "generated_at": "2026-05-02T08:01:28.205686",
+  "generated_at": "2026-05-02T09:44:07.048883",
   "kpis": {
     "clientes_atraso": 69,
-    "total_aberto": 869311.98,
-    "total_atraso": 336304.16,
-    "total_vencer": 533007.8200000001
+    "total_aberto": 869004.2000000001,
+    "total_atraso": 333016.32999999996,
+    "total_vencer": 535987.87
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -39,6 +39,20 @@
       "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 1638.27,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 2,
+      "loja": "Loja 1",
+      "saldo": 57.62,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 2,
+      "loja": "Loja 1",
+      "saldo": 245.55,
       "vencimento": "2026-04-30T00:00:00"
     },
     {

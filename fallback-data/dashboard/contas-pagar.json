@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2973982
+      "saldo": 3129640
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 404919
+      "saldo": 379815
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1000
     }
   ],
-  "generated_at": "2026-05-02T08:01:28.684797",
+  "generated_at": "2026-05-02T09:44:07.717821",
   "kpis": {
     "a_vencer_7d": 356499,
     "juros_pagos": 71580,
-    "total_aberto": 3386875,
-    "total_pago_periodo": 3624309,
-    "total_vencido": 412893
+    "total_aberto": 3517429,
+    "total_pago_periodo": 3699019,
+    "total_vencido": 387789
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -154,9 +154,9 @@
       "total_aberto": 96005
     },
     {
-      "fornecedor": "FABRICA MINEIRA DE ELETRODOS E SOLDAS DENVER SA",
-      "titulos": 5,
-      "total_aberto": 61107
+      "fornecedor": "GERDAU ACOS LONGOS SA",
+      "titulos": 4,
+      "total_aberto": 85593
     }
   ]
 }
