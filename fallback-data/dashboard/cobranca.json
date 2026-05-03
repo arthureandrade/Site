@@ -2,149 +2,163 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 555291.18
+      "saldo": 547315.37
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 179588.49
+      "saldo": 186292.01
     },
     {
       "faixa": "180+ dias",
-      "saldo": 107570.97
+      "saldo": 107617.93000000001
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 19562.02
+      "saldo": 19567.87
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 12066.68
+      "saldo": 13661.66
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 10263
+      "saldo": 10266.029999999999
     }
   ],
-  "generated_at": "2026-05-02T19:56:25.441820",
+  "generated_at": "2026-05-03T00:03:09.778924",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 884342.34,
-    "total_atraso": 329051.16000000003,
-    "total_vencer": 555291.1799999999
+    "clientes_atraso": 70,
+    "total_aberto": 884720.87,
+    "total_atraso": 337405.5,
+    "total_vencer": 547315.3699999999
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "QUADRILHA TRADICAO MACUXI FERQUAJ",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 1",
-      "saldo": 1638.27,
+      "saldo": 1639.9,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 4",
       "saldo": 5700,
       "vencimento": "2026-05-01T00:00:00"
     },
     {
       "cliente": "CENTRO DO FORRO LTDA",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 2",
       "saldo": 6140,
       "vencimento": "2026-05-01T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (PR.CRISTIANO)",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 1647.5,
       "vencimento": "2026-05-06T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 4",
       "saldo": 1313.45,
       "vencimento": "2026-05-06T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -5,
+      "dias_atraso": -4,
       "loja": "Loja 1",
       "saldo": 550,
       "vencimento": "2026-05-07T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": -5,
+      "dias_atraso": -4,
       "loja": "Loja 4",
       "saldo": 550,
       "vencimento": "2026-05-07T00:00:00"
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
+      "dias_atraso": -5,
+      "loja": "Loja 4",
+      "saldo": 4250,
+      "vencimento": "2026-05-08T00:00:00"
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 3250,
+      "vencimento": "2026-05-08T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 13,
+      "maior_atraso": 14,
       "titulos": 3,
-      "total_atraso": 44868.170000000006
+      "total_atraso": 45008.56
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 378,
+      "maior_atraso": 379,
       "titulos": 2,
-      "total_atraso": 44515.1
+      "total_atraso": 44558.47
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 421,
+      "maior_atraso": 422,
       "titulos": 7,
-      "total_atraso": 39529.1
+      "total_atraso": 39530.36
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
-      "maior_atraso": 17,
+      "maior_atraso": 18,
       "titulos": 1,
-      "total_atraso": 22484.69
+      "total_atraso": 22553.64
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 703,
+      "maior_atraso": 704,
       "titulos": 16,
-      "total_atraso": 20641.33
+      "total_atraso": 20653.62
     },
     {
       "cliente": "PROMIX LTDA",
-      "maior_atraso": 9,
+      "maior_atraso": 10,
       "titulos": 3,
-      "total_atraso": 18528.2
+      "total_atraso": 18553.01
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 874,
+      "maior_atraso": 875,
       "titulos": 2,
-      "total_atraso": 12165.22
+      "total_atraso": 12172.09
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 30,
+      "maior_atraso": 31,
       "titulos": 4,
-      "total_atraso": 8402.04
+      "total_atraso": 8410.31
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 184,
+      "maior_atraso": 185,
       "titulos": 2,
-      "total_atraso": 8167.24
+      "total_atraso": 8174.139999999999
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 281,
+      "maior_atraso": 282,
       "titulos": 1,
-      "total_atraso": 7045.5
+      "total_atraso": 7051
     }
   ]
 }
