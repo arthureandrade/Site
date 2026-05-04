@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 545557.37
+      "saldo": 560556.19
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 180967.45
+      "saldo": 155552.62
     },
     {
       "faixa": "180+ dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 13672.09
+      "saldo": 13620.28
     },
     {
       "faixa": "61–90 dias",
       "saldo": 10269.060000000001
     }
   ],
-  "generated_at": "2026-05-04T07:16:20.747387",
+  "generated_at": "2026-05-04T11:16:31.021945",
   "kpis": {
-    "clientes_atraso": 68,
-    "total_aberto": 877704.64,
-    "total_atraso": 332147.27,
-    "total_vencer": 545557.3700000001
+    "clientes_atraso": 64,
+    "total_aberto": 867236.82,
+    "total_atraso": 306680.63,
+    "total_vencer": 560556.19
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -131,12 +131,6 @@
       "total_atraso": 20665.95
     },
     {
-      "cliente": "PROMIX LTDA",
-      "maior_atraso": 11,
-      "titulos": 3,
-      "total_atraso": 18577.82
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 876,
       "titulos": 2,
@@ -159,6 +153,12 @@
       "maior_atraso": 283,
       "titulos": 1,
       "total_atraso": 7056.5
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 56,
+      "titulos": 2,
+      "total_atraso": 6864
     }
   ]
 }

@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3099886
+      "saldo": 3138188
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 409339
+      "saldo": 429757
     },
     {
       "faixa": "91–180 dias",
@@ -17,13 +17,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-05-04T07:16:21.245590",
+  "generated_at": "2026-05-04T11:16:31.748131",
   "kpis": {
     "a_vencer_7d": 559557,
     "juros_pagos": 71580,
-    "total_aberto": 3517199,
+    "total_aberto": 3575919,
     "total_pago_periodo": 3626256,
-    "total_vencido": 417313
+    "total_vencido": 437731
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,6 +130,11 @@
       "total_aberto": 190988
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 9,
+      "total_aberto": 179052
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 19,
       "total_aberto": 163029
@@ -138,11 +143,6 @@
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 27,
       "total_aberto": 141717
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 6,
-      "total_aberto": 140750
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
