@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2872467
+      "saldo": 2897251
     },
     {
       "faixa": "1–30 dias",
@@ -14,16 +14,16 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 1166
+      "saldo": 1180
     }
   ],
-  "generated_at": "2026-05-06T08:01:11.998925",
+  "generated_at": "2026-05-06T10:42:16.215198",
   "kpis": {
     "a_vencer_7d": 399472,
     "juros_pagos": 71580,
-    "total_aberto": 3339133,
+    "total_aberto": 3363931,
     "total_pago_periodo": 4386487,
-    "total_vencido": 466666
+    "total_vencido": 466680
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -67,6 +67,13 @@
       "vencimento": "2026-03-10T00:00:00"
     },
     {
+      "dias_atraso": 34,
+      "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
+      "loja": "Loja 1",
+      "saldo": 14,
+      "vencimento": "2026-04-02T00:00:00"
+    },
+    {
       "dias_atraso": 32,
       "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
       "loja": "Loja 1",
@@ -92,13 +99,6 @@
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 13342,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
-      "dias_atraso": 27,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 56330,
       "vencimento": "2026-04-09T00:00:00"
     }
   ],
@@ -130,14 +130,14 @@
       "total_aberto": 190988
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 23,
+      "total_aberto": 166931
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 8,
       "total_aberto": 153921
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 17,
-      "total_aberto": 148922
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
