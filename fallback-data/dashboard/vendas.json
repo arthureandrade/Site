@@ -1,37 +1,13 @@
 {
-  "generated_at": "2026-05-05T08:09:33.345197",
-  "kpis": {
-    "ticket_medio": 415,
-    "total_pedidos": 1,
-    "total_vendas": 415,
-    "total_vendedores": 1
-  },
-  "lojas": [
-    {
-      "loja": "Loja 1",
-      "total_vendas": 415
-    }
-  ],
-  "ok": true,
+  "erro": "Sem dados disponíveis",
+  "generated_at": "2026-05-06T00:46:27.420738",
+  "ok": false,
   "periodo": {
     "ano_selecionado": 2026,
-    "data_ate": "2026-05-05",
-    "data_de": "2026-05-05",
+    "data_ate": "2026-05-06",
+    "data_de": "2026-05-06",
     "mes_selecionado": 13,
     "rotulo": "Hoje"
   },
-  "serie_diaria": [
-    {
-      "data": "2026-05-05",
-      "total_vendas": 415
-    }
-  ],
-  "tipo": "vendas",
-  "top_vendedores": [
-    {
-      "pedidos": 1,
-      "total_vendas": 415,
-      "vendedor": "Guilherme"
-    }
-  ]
+  "tipo": "vendas"
 }
