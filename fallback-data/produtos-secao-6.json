@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-06T19:58:45.782Z",
+  "generated_at": "2026-05-06T21:18:26.519Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 446,
+  "total": 449,
   "produtos": [
     {
       "descricao": "",
@@ -929,7 +929,7 @@
     },
     {
       "descricao": "",
-      "estoque": 474,
+      "estoque": 484,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -1223,7 +1223,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2261,
+      "estoque": 2257,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/42.jpg",
       "grupo": 15,
       "id": 42,
@@ -2385,7 +2385,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/927.jpg",
       "grupo": 20,
       "id": 927,
@@ -2861,6 +2861,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 31,
+      "id": 13948,
+      "marca": "GERAL",
+      "nome": "MAQUINA PLASMA EXPORT",
+      "preco": 0,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 1532,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11179.jpg",
       "grupo": 86,
@@ -3127,7 +3141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2734,
+      "estoque": 2732,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -3533,7 +3547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 249,
+      "estoque": 250,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/28.jpg",
       "grupo": 60,
       "id": 28,
@@ -4345,7 +4359,7 @@
     },
     {
       "descricao": "",
-      "estoque": 632,
+      "estoque": 631,
       "foto_url": null,
       "grupo": 65,
       "id": 4,
@@ -4373,7 +4387,7 @@
     },
     {
       "descricao": "",
-      "estoque": 679,
+      "estoque": 647,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3979.jpg",
       "grupo": 65,
       "id": 3979,
@@ -4794,6 +4808,20 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 31,
+      "id": 13946,
+      "marca": "GERAL",
+      "nome": "PERFILADEIRA EXPORT",
+      "preco": 0,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12321.jpg",
       "grupo": 72,
       "id": 12321,
@@ -4860,6 +4888,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11795.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 31,
+      "id": 13944,
+      "marca": "GERAL",
+      "nome": "TALHA DE MOTOR ELETRICO -10T/ELEV10M 220V",
+      "preco": 0,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
