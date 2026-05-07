@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T15:40:45.510Z",
+  "generated_at": "2026-05-07T17:27:09.207Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 448,
   "produtos": [
@@ -915,7 +915,7 @@
     },
     {
       "descricao": "",
-      "estoque": 222,
+      "estoque": 221,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/423.jpg",
       "grupo": 87,
       "id": 423,
@@ -929,7 +929,7 @@
     },
     {
       "descricao": "",
-      "estoque": 474,
+      "estoque": 473,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -1041,7 +1041,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3033,
+      "estoque": 3030,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg",
       "grupo": 6,
       "id": 117,
@@ -1069,7 +1069,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1099,
+      "estoque": 1097,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/44.jpg",
       "grupo": 15,
       "id": 44,
@@ -1153,7 +1153,7 @@
     },
     {
       "descricao": "",
-      "estoque": 378,
+      "estoque": 377,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/425.jpg",
       "grupo": 15,
       "id": 425,
@@ -1181,7 +1181,7 @@
     },
     {
       "descricao": "",
-      "estoque": 383,
+      "estoque": 382,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/41.jpg",
       "grupo": 15,
       "id": 41,
@@ -1881,7 +1881,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10729.jpg",
       "grupo": 20,
       "id": 10729,
@@ -2371,7 +2371,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11,
+      "estoque": 10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10667.jpg",
       "grupo": 20,
       "id": 10667,
@@ -2861,6 +2861,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 31,
+      "id": 13946,
+      "marca": "GERAL",
+      "nome": "MAQUINA LAMINADORA DE METAIS DE CILINDROLISOS, ESPESSURA DE",
+      "preco": 0,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 1532,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11179.jpg",
       "grupo": 86,
@@ -3043,7 +3057,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4073,
+      "estoque": 4072,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -3127,7 +3141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2684,
+      "estoque": 2627,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -3155,7 +3169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13,
+      "estoque": -7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/655.jpg",
       "grupo": 60,
       "id": 655,
@@ -3197,7 +3211,7 @@
     },
     {
       "descricao": "",
-      "estoque": 250,
+      "estoque": 217,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/468.jpg",
       "grupo": 60,
       "id": 468,
@@ -3365,7 +3379,7 @@
     },
     {
       "descricao": "",
-      "estoque": 200,
+      "estoque": 190,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/230.jpg",
       "grupo": 60,
       "id": 230,
@@ -3687,7 +3701,7 @@
     },
     {
       "descricao": "",
-      "estoque": 973,
+      "estoque": 968,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/16.jpg",
       "grupo": 60,
       "id": 16,
@@ -4373,7 +4387,7 @@
     },
     {
       "descricao": "",
-      "estoque": 643,
+      "estoque": 636,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3979.jpg",
       "grupo": 65,
       "id": 3979,
@@ -4429,7 +4443,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1452,
+      "estoque": 1425,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -4794,20 +4808,6 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
-      "grupo": 31,
-      "id": 13946,
-      "marca": "GERAL",
-      "nome": "PERFILADEIRA EXPORT",
-      "preco": 0,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12321.jpg",
       "grupo": 72,
       "id": 12321,
@@ -4882,7 +4882,7 @@
       "grupo": 31,
       "id": 13944,
       "marca": "GERAL",
-      "nome": "TALHA DE MOTOR ELETRICO -10T/ELEV10M 220V",
+      "nome": "TALHA DE MOTOR ELETRICO -10T/ELEV10M 220V.",
       "preco": 0,
       "secao": 6,
       "subgrupo": 9999,
@@ -5339,7 +5339,7 @@
     },
     {
       "descricao": "",
-      "estoque": 509,
+      "estoque": 489,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/186.jpg",
       "grupo": 85,
       "id": 186,

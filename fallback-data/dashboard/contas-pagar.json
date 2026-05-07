@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3050057
+      "saldo": 3044073
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 1180
     }
   ],
-  "generated_at": "2026-05-07T11:40:47.365715",
+  "generated_at": "2026-05-07T13:27:10.319490",
   "kpis": {
     "a_vencer_7d": 435288,
     "juros_pagos": 74916,
-    "total_aberto": 3388871,
+    "total_aberto": 3382887,
     "total_pago_periodo": 4246393,
     "total_vencido": 338814
   },
@@ -147,7 +147,7 @@
     {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
       "titulos": 1,
-      "total_aberto": 137609
+      "total_aberto": 131625
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
