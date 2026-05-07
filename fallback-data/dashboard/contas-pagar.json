@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2912448
+      "saldo": 3050057
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 386443
+      "saldo": 330726
     },
     {
       "faixa": "91–180 dias",
@@ -17,13 +17,13 @@
       "saldo": 1180
     }
   ],
-  "generated_at": "2026-05-07T09:17:48.225346",
+  "generated_at": "2026-05-07T11:40:47.365715",
   "kpis": {
     "a_vencer_7d": 435288,
     "juros_pagos": 74916,
-    "total_aberto": 3306979,
-    "total_pago_periodo": 4076112,
-    "total_vencido": 394531
+    "total_aberto": 3388871,
+    "total_pago_periodo": 4246393,
+    "total_vencido": 338814
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -106,8 +106,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 42,
-      "total_aberto": 1090099
+      "titulos": 41,
+      "total_aberto": 1032817
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -145,14 +145,14 @@
       "total_aberto": 141717
     },
     {
+      "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
+      "titulos": 1,
+      "total_aberto": 137609
+    },
+    {
       "fornecedor": "GERDAU ACOS LONGOS SA",
       "titulos": 4,
       "total_aberto": 85593
-    },
-    {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 10,
-      "total_aberto": 75711
     }
   ]
 }
