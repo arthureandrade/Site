@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 578147.6
+      "saldo": 574923.6
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 160759.65
+      "saldo": 157759.65
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7487.42
     }
   ],
-  "generated_at": "2026-05-07T15:17:06.279934",
+  "generated_at": "2026-05-07T16:43:31.320168",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 889723.71,
-    "total_atraso": 311576.11000000004,
-    "total_vencer": 578147.6000000001
+    "clientes_atraso": 68,
+    "total_aberto": 883499.71,
+    "total_atraso": 308576.11000000004,
+    "total_vencer": 574923.6000000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -53,13 +53,6 @@
       "dias_atraso": -1,
       "loja": "Loja 4",
       "saldo": 4250,
-      "vencimento": "2026-05-08T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": -1,
-      "loja": "Loja 1",
-      "saldo": 3250,
       "vencimento": "2026-05-08T00:00:00"
     },
     {

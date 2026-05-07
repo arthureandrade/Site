@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3166701
+      "saldo": 3238286
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 330726
+      "saldo": 342022
     },
     {
       "faixa": "91–180 dias",
@@ -17,13 +17,13 @@
       "saldo": 1180
     }
   ],
-  "generated_at": "2026-05-07T15:17:06.941481",
+  "generated_at": "2026-05-07T16:43:31.976147",
   "kpis": {
     "a_vencer_7d": 435288,
     "juros_pagos": 74916,
-    "total_aberto": 3505515,
+    "total_aberto": 3588396,
     "total_pago_periodo": 4246393,
-    "total_vencido": 338814
+    "total_vencido": 350110
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -150,9 +150,9 @@
       "total_aberto": 131625
     },
     {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 4,
-      "total_aberto": 85593
+      "fornecedor": "HENAN FINEWORK CRANE CO LTD",
+      "titulos": 2,
+      "total_aberto": 95856
     }
   ]
 }
