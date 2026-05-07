@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-07T11:28:01.743Z",
+  "generated_at": "2026-05-07T13:17:49.781Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5404,
+  "total": 5403,
   "produtos": [
     {
       "descricao": "",
@@ -1405,7 +1405,7 @@
     },
     {
       "descricao": "",
-      "estoque": 44,
+      "estoque": 43,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11577.jpg",
       "grupo": 2,
       "id": 11577,
@@ -1755,7 +1755,7 @@
     },
     {
       "descricao": "",
-      "estoque": 150,
+      "estoque": 146,
       "foto_url": null,
       "grupo": 92,
       "id": 12112,
@@ -4975,7 +4975,7 @@
     },
     {
       "descricao": "",
-      "estoque": 31,
+      "estoque": 29,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12015.jpg",
       "grupo": 92,
       "id": 12015,
@@ -5994,6 +5994,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4739.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 115,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10476.jpg",
+      "grupo": 34,
+      "id": 10476,
+      "marca": "IDERE",
+      "nome": "BOTA",
+      "preco": 211.36,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "PR",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10476.jpg"
     },
     {
       "descricao": "",
@@ -8895,7 +8909,7 @@
     },
     {
       "descricao": "",
-      "estoque": 29,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12882.jpg",
       "grupo": 10,
       "id": 12882,
@@ -8951,7 +8965,7 @@
     },
     {
       "descricao": "",
-      "estoque": 30,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12778.jpg",
       "grupo": 10,
       "id": 12778,
@@ -25765,7 +25779,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2842,
+      "estoque": 2839,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -26157,7 +26171,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1430,
+      "estoque": 1428,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -41011,7 +41025,7 @@
     },
     {
       "descricao": "",
-      "estoque": 232,
+      "estoque": 230,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4675.jpg",
       "grupo": 30,
       "id": 4675,
@@ -41935,7 +41949,7 @@
     },
     {
       "descricao": "",
-      "estoque": 419,
+      "estoque": 414,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11491.jpg",
       "grupo": 34,
       "id": 11491,
@@ -44343,7 +44357,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4,
+      "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10680.jpg",
       "grupo": 42,
       "id": 10680,
@@ -49943,7 +49957,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3072,
+      "estoque": 2922,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10065.jpg",
       "grupo": 64,
       "id": 10065,
@@ -56075,7 +56089,7 @@
     },
     {
       "descricao": "",
-      "estoque": 164,
+      "estoque": 156,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5646.jpg",
       "grupo": 64,
       "id": 5646,
@@ -59589,7 +59603,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4597,
+      "estoque": 4577,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1632.jpg",
       "grupo": 64,
       "id": 1632,
@@ -59701,7 +59715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6636,
+      "estoque": 6596,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1244.jpg",
       "grupo": 64,
       "id": 1244,
@@ -62361,7 +62375,7 @@
     },
     {
       "descricao": "",
-      "estoque": 190,
+      "estoque": 189,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/386.jpg",
       "grupo": 71,
       "id": 386,
@@ -62585,7 +62599,7 @@
     },
     {
       "descricao": "",
-      "estoque": 379,
+      "estoque": 377,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/95.jpg",
       "grupo": 71,
       "id": 95,
@@ -69865,7 +69879,7 @@
     },
     {
       "descricao": "",
-      "estoque": 137,
+      "estoque": 136,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1812.jpg",
       "grupo": 82,
       "id": 1812,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1339.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11108.jpg",
-      "grupo": 83,
-      "id": 11108,
-      "marca": "CORALIT",
-      "nome": "TINTA CORAL ESM AZUL DEL REY 3,6L",
-      "preco": 125,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "GL",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11108.jpg"
     },
     {
       "descricao": "",
@@ -70299,7 +70299,7 @@
     },
     {
       "descricao": "",
-      "estoque": 484,
+      "estoque": 481,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -70411,7 +70411,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3050,
+      "estoque": 3049,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg",
       "grupo": 6,
       "id": 117,
@@ -70425,7 +70425,7 @@
     },
     {
       "descricao": "",
-      "estoque": 406,
+      "estoque": 405,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/245.jpg",
       "grupo": 6,
       "id": 245,
@@ -70439,7 +70439,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1106,
+      "estoque": 1105,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/44.jpg",
       "grupo": 15,
       "id": 44,
@@ -70467,7 +70467,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1679,
+      "estoque": 1674,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/43.jpg",
       "grupo": 15,
       "id": 43,
@@ -70593,7 +70593,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2257,
+      "estoque": 2255,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/42.jpg",
       "grupo": 15,
       "id": 42,
@@ -72231,20 +72231,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 31,
-      "id": 13948,
-      "marca": "GERAL",
-      "nome": "MAQUINA PLASMA EXPORT",
-      "preco": 0,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
       "estoque": 1532,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11179.jpg",
       "grupo": 86,
@@ -72427,7 +72413,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4109,
+      "estoque": 4107,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -72511,7 +72497,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2731,
+      "estoque": 2730,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -73281,7 +73267,7 @@
     },
     {
       "descricao": "",
-      "estoque": 284,
+      "estoque": 281,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/741.jpg",
       "grupo": 60,
       "id": 741,
@@ -73729,7 +73715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 630,
+      "estoque": 624,
       "foto_url": null,
       "grupo": 65,
       "id": 4,
@@ -73813,7 +73799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1477,
+      "estoque": 1467,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
