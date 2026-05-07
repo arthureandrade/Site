@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 575794.6
+      "saldo": 578147.6
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 162836.05
+      "saldo": 160759.65
     },
     {
       "faixa": "180+ dias",
@@ -25,22 +25,15 @@
       "saldo": 7487.42
     }
   ],
-  "generated_at": "2026-05-07T13:27:09.817485",
+  "generated_at": "2026-05-07T15:17:06.279934",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 889447.11,
-    "total_atraso": 313652.51,
-    "total_vencer": 575794.6
+    "clientes_atraso": 69,
+    "total_aberto": 889723.71,
+    "total_atraso": 311576.11000000004,
+    "total_vencer": 578147.6000000001
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (PR.CRISTIANO)",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 1647.5,
-      "vencimento": "2026-05-06T00:00:00"
-    },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "dias_atraso": 1,
