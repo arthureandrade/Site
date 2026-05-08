@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3243490
+      "saldo": 3401688
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 6908
     }
   ],
-  "generated_at": "2026-05-08T14:59:33.480035",
+  "generated_at": "2026-05-08T16:14:02.579538",
   "kpis": {
     "a_vencer_7d": 477715,
     "juros_pagos": 74916,
-    "total_aberto": 3518803,
+    "total_aberto": 3677001,
     "total_pago_periodo": 4430931,
     "total_vencido": 275313
   },
@@ -106,8 +106,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 38,
-      "total_aberto": 959380
+      "titulos": 47,
+      "total_aberto": 1117578
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
