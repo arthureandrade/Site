@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3401688
+      "saldo": 3393156
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 244100
+      "saldo": 243115
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6908
     }
   ],
-  "generated_at": "2026-05-08T16:14:02.579538",
+  "generated_at": "2026-05-08T17:30:29.653249",
   "kpis": {
-    "a_vencer_7d": 477715,
+    "a_vencer_7d": 463465,
     "juros_pagos": 74916,
-    "total_aberto": 3677001,
-    "total_pago_periodo": 4430931,
-    "total_vencido": 275313
+    "total_aberto": 3667484,
+    "total_pago_periodo": 4450106,
+    "total_vencido": 274328
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -96,9 +96,9 @@
     },
     {
       "dias_atraso": 28,
-      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
-      "loja": "Loja 2",
-      "saldo": 1066,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 25980,
       "vencimento": "2026-04-10T00:00:00"
     }
   ],
