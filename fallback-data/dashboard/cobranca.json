@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 665715.07
+      "saldo": 665963.07
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 175282.19999999998
+      "saldo": 173782.19999999998
     },
     {
       "faixa": "180+ dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 7873.05
+      "saldo": 7049.05
     }
   ],
-  "generated_at": "2026-05-11T15:18:36.248244",
+  "generated_at": "2026-05-11T16:57:51.113363",
   "kpis": {
     "clientes_atraso": 66,
-    "total_aberto": 992940.49,
-    "total_atraso": 327225.42000000004,
-    "total_vencer": 665715.0700000001
+    "total_aberto": 990864.4900000001,
+    "total_atraso": 324901.42,
+    "total_vencer": 665963.0700000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -59,7 +59,7 @@
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
       "dias_atraso": 1,
       "loja": "Loja 4",
-      "saldo": 1591.67,
+      "saldo": 91.67,
       "vencimento": "2026-05-10T00:00:00"
     },
     {
@@ -84,13 +84,6 @@
       "vencimento": "2026-05-13T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
-      "loja": "Loja 1",
-      "saldo": 2605,
-      "vencimento": "2026-05-14T00:00:00"
-    },
-    {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "dias_atraso": -3,
       "loja": "Loja 4",
@@ -102,6 +95,13 @@
       "dias_atraso": -3,
       "loja": "Loja 4",
       "saldo": 2293.34,
+      "vencimento": "2026-05-14T00:00:00"
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 4373.34,
       "vencimento": "2026-05-14T00:00:00"
     }
   ],
