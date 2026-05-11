@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 632087.46
+      "saldo": 642324.33
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 184250.19999999998
+      "saldo": 175962.19999999998
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 7873.05
     }
   ],
-  "generated_at": "2026-05-11T07:56:08.627261",
+  "generated_at": "2026-05-11T11:31:21.693300",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 968280.88,
-    "total_atraso": 336193.42,
-    "total_vencer": 632087.46
+    "clientes_atraso": 67,
+    "total_aberto": 970229.75,
+    "total_atraso": 327905.42000000004,
+    "total_vencer": 642324.3300000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
       "maior_atraso": 22,
-      "titulos": 5,
-      "total_atraso": 55797.24
+      "titulos": 4,
+      "total_atraso": 53249.24
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
