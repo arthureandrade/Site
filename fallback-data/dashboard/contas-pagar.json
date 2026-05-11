@@ -6,11 +6,11 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 244534
+      "saldo": 163577
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 63638
+      "saldo": 50285
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-05-11T11:31:22.240674",
+  "generated_at": "2026-05-11T13:34:39.419726",
   "kpis": {
     "a_vencer_7d": 576512,
     "juros_pagos": 74916,
-    "total_aberto": 3667484,
-    "total_pago_periodo": 4105843,
-    "total_vencido": 316146
+    "total_aberto": 3573174,
+    "total_pago_periodo": 4388773,
+    "total_vencido": 221836
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -92,17 +92,17 @@
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 32,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 13353,
-      "vencimento": "2026-04-09T00:00:00"
-    },
-    {
       "dias_atraso": 31,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
       "saldo": 25980,
+      "vencimento": "2026-04-10T00:00:00"
+    },
+    {
+      "dias_atraso": 31,
+      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
+      "loja": "Loja 2",
+      "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     }
   ],
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 47,
-      "total_aberto": 1117578
+      "titulos": 45,
+      "total_aberto": 1044937
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -120,8 +120,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 5,
-      "total_aberto": 242253
+      "titulos": 4,
+      "total_aberto": 220584
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
