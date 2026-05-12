@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-05-12T15:07:41.752612",
+  "generated_at": "2026-05-12T16:49:48.503912",
   "kpis": {
-    "ticket_medio": 474.7282051282051,
-    "total_pedidos": 117,
-    "total_vendas": 55543.2,
+    "ticket_medio": 459.97317073170734,
+    "total_pedidos": 164,
+    "total_vendas": 75435.6,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 26979.83
+      "total_vendas": 30544.37
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 21249.12
+      "total_vendas": 30004.98
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 7314.25
+      "total_vendas": 14886.25
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-05-12",
-      "total_vendas": 55543.2
+      "total_vendas": 75435.6
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 26,
-      "total_vendas": 21599,
+      "pedidos": 39,
+      "total_vendas": 23229.29,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 20,
-      "total_vendas": 14475.25,
+      "pedidos": 28,
+      "total_vendas": 18606.79,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 12,
-      "total_vendas": 9074.5,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 14,
-      "total_vendas": 5346,
-      "vendedor": "Claudia"
-    },
-    {
-      "pedidos": 5,
-      "total_vendas": 2364,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 37,
-      "total_vendas": 1527.1200000000001,
+      "pedidos": 47,
+      "total_vendas": 10908.69,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 2,
-      "total_vendas": 1214,
+      "pedidos": 16,
+      "total_vendas": 10298.5,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 20,
+      "total_vendas": 6607,
+      "vendedor": "Claudia"
+    },
+    {
+      "pedidos": 10,
+      "total_vendas": 4607,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 3,
+      "total_vendas": 1235,
       "vendedor": "Igor"
     },
     {
