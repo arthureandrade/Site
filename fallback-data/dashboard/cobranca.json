@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 647137.07
+      "saldo": 646688.72
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 194509.05
+      "saldo": 126358.84
     },
     {
       "faixa": "180+ dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 7053.18
+      "saldo": 6029.53
     }
   ],
-  "generated_at": "2026-05-12T08:08:51.993063",
+  "generated_at": "2026-05-12T10:50:58.952805",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 992831.6399999999,
-    "total_atraso": 345694.56999999995,
-    "total_vencer": 647137.0700000001
+    "clientes_atraso": 66,
+    "total_aberto": 923209.4299999999,
+    "total_atraso": 276520.70999999996,
+    "total_vencer": 646688.72
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -108,12 +108,6 @@
   "tipo": "cobranca",
   "top_clientes": [
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 23,
-      "titulos": 4,
-      "total_atraso": 53578.96
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 388,
       "titulos": 2,
@@ -144,18 +138,6 @@
       "total_atraso": 12233.85
     },
     {
-      "cliente": "DANIEL GARRIDO",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 8986
-    },
-    {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 40,
-      "titulos": 4,
-      "total_atraso": 8484.77
-    },
-    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 194,
       "titulos": 2,
@@ -166,6 +148,24 @@
       "maior_atraso": 3,
       "titulos": 3,
       "total_atraso": 7833.6
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "maior_atraso": 40,
+      "titulos": 4,
+      "total_atraso": 7461.12
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 291,
+      "titulos": 1,
+      "total_atraso": 7100.5
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 64,
+      "titulos": 2,
+      "total_atraso": 6916
     }
   ]
 }

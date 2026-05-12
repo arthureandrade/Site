@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3215831
+      "saldo": 3249582
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 374617
+      "saldo": 259030
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-05-12T08:08:52.479367",
+  "generated_at": "2026-05-12T10:50:59.689662",
   "kpis": {
-    "a_vencer_7d": 445041,
+    "a_vencer_7d": 444383,
     "juros_pagos": 74916,
-    "total_aberto": 3648707,
-    "total_pago_periodo": 4426101,
-    "total_vencido": 432876
+    "total_aberto": 3566871,
+    "total_pago_periodo": 4762325,
+    "total_vencido": 317289
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,13 +110,13 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 45,
-      "total_aberto": 1044937
+      "titulos": 43,
+      "total_aberto": 992129
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 15,
-      "total_aberto": 380059
+      "titulos": 14,
+      "total_aberto": 372346
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -135,18 +135,18 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 23,
-      "total_aberto": 166931
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 8,
-      "total_aberto": 153921
+      "titulos": 22,
+      "total_aberto": 142892
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 27,
       "total_aberto": 141717
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 7,
+      "total_aberto": 131784
     },
     {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
