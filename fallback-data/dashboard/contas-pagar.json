@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3256108
+      "saldo": 3192270
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 256175
+      "saldo": 190969
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 50285
+      "saldo": 24305
     },
     {
       "faixa": "91–180 dias",
@@ -21,102 +21,102 @@
       "saldo": 1066
     }
   ],
-  "generated_at": "2026-05-12T21:21:20.631242",
+  "generated_at": "2026-05-13T18:51:12.168240",
   "kpis": {
-    "a_vencer_7d": 444383,
+    "a_vencer_7d": 338554,
     "juros_pagos": 74937,
-    "total_aberto": 3570542,
-    "total_pago_periodo": 4770294,
-    "total_vencido": 314434
+    "total_aberto": 3415518,
+    "total_pago_periodo": 5356681,
+    "total_vencido": 223248
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-05-12",
-    "data_de": "2026-04-12"
+    "data_ate": "2026-05-13",
+    "data_de": "2026-04-13"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 166,
+      "dias_atraso": 167,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 128,
+      "dias_atraso": 129,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2519,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 101,
+      "dias_atraso": 102,
       "fornecedor": "REZENDE CAMINHOES COMERCIO E REPRESENTACAO LTDA - ME",
       "loja": "Loja 1",
       "saldo": 389,
       "vencimento": "2026-01-31T00:00:00"
     },
     {
-      "dias_atraso": 99,
+      "dias_atraso": 100,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 63,
+      "dias_atraso": 64,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-03-10T00:00:00"
     },
     {
-      "dias_atraso": 40,
+      "dias_atraso": 41,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 38,
+      "dias_atraso": 39,
       "fornecedor": "NOVO TEMPO COMERCIO DE ALIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 100,
       "vencimento": "2026-04-04T00:00:00"
     },
     {
-      "dias_atraso": 35,
+      "dias_atraso": 36,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 32,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 25980,
-      "vencimento": "2026-04-10T00:00:00"
-    },
-    {
-      "dias_atraso": 32,
+      "dias_atraso": 33,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
+    },
+    {
+      "dias_atraso": 22,
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "loja": "Loja 1",
+      "saldo": 20370,
+      "vencimento": "2026-04-21T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 43,
-      "total_aberto": 992129
+      "titulos": 35,
+      "total_aberto": 910805
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 14,
-      "total_aberto": 372346
+      "titulos": 11,
+      "total_aberto": 290430
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -134,11 +134,6 @@
       "total_aberto": 190988
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 22,
-      "total_aberto": 142892
-    },
-    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 27,
       "total_aberto": 141717
@@ -152,6 +147,11 @@
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
       "titulos": 1,
       "total_aberto": 131625
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 19,
+      "total_aberto": 126892
     },
     {
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
