@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3154917
+      "saldo": 3171580
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 161315
+      "saldo": 157006
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-15T10:39:39.444741",
+  "generated_at": "2026-05-15T12:28:30.275388",
   "kpis": {
     "a_vencer_7d": 443777,
     "juros_pagos": 75165,
-    "total_aberto": 3346596,
-    "total_pago_periodo": 5004408,
-    "total_vencido": 191679
+    "total_aberto": 3358950,
+    "total_pago_periodo": 5017335,
+    "total_vencido": 187370
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -81,13 +81,6 @@
       "vencimento": "2026-04-21T00:00:00"
     },
     {
-      "dias_atraso": 20,
-      "fornecedor": "CARBOGRAFITE EQUIPAMENTOS INDUSTRIAIS LTDA",
-      "loja": "Loja 1",
-      "saldo": 924,
-      "vencimento": "2026-04-25T00:00:00"
-    },
-    {
       "dias_atraso": 19,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
@@ -100,6 +93,13 @@
       "loja": "Loja 1",
       "saldo": 6599,
       "vencimento": "2026-04-27T00:00:00"
+    },
+    {
+      "dias_atraso": 15,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
+      "vencimento": "2026-04-30T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
