@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3146587
+      "saldo": 3154917
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 231900
+      "saldo": 161315
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-15T08:12:28.924652",
+  "generated_at": "2026-05-15T10:39:39.444741",
   "kpis": {
     "a_vencer_7d": 443777,
-    "juros_pagos": 74937,
-    "total_aberto": 3408851,
-    "total_pago_periodo": 4792211,
-    "total_vencido": 262264
+    "juros_pagos": 75165,
+    "total_aberto": 3346596,
+    "total_pago_periodo": 5004408,
+    "total_vencido": 191679
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -111,8 +111,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 11,
-      "total_aberto": 290430
+      "titulos": 10,
+      "total_aberto": 264812
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -126,8 +126,8 @@
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 5,
-      "total_aberto": 190988
+      "titulos": 3,
+      "total_aberto": 149503
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",

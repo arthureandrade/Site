@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 642160.5
+      "saldo": 647236.96
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 132265.49
+      "saldo": 115741.62
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 11518.08
     }
   ],
-  "generated_at": "2026-05-15T08:12:28.298754",
+  "generated_at": "2026-05-15T10:39:38.820239",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 931313.82,
-    "total_atraso": 289153.32000000007,
-    "total_vencer": 642160.5
+    "clientes_atraso": 65,
+    "total_aberto": 919866.4099999999,
+    "total_atraso": 272629.45000000007,
+    "total_vencer": 647236.96
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -91,17 +91,17 @@
       "vencimento": "2026-05-14T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 424,
-      "vencimento": "2026-05-15T00:00:00"
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "dias_atraso": 0,
       "loja": "Loja 4",
       "saldo": 3600,
+      "vencimento": "2026-05-15T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": 0,
+      "loja": "Loja 1",
+      "saldo": 424,
       "vencimento": "2026-05-15T00:00:00"
     }
   ],
@@ -132,12 +132,6 @@
       "total_atraso": 20801.34
     },
     {
-      "cliente": "50.285.484 EDIVAN ASSUNCAO DOS SANTOS",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 15549.85
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 43,
       "titulos": 6,
@@ -166,6 +160,12 @@
       "maior_atraso": 67,
       "titulos": 2,
       "total_atraso": 6935.5
+    },
+    {
+      "cliente": "LUIS DE CARVALHO MARTINS",
+      "maior_atraso": 4,
+      "titulos": 1,
+      "total_atraso": 6500
     }
   ]
 }
