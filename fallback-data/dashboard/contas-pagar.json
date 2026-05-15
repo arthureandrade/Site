@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3160210
+      "saldo": 3130542
     },
     {
       "faixa": "1–30 dias",
@@ -17,12 +17,12 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-15T17:11:20.830060",
+  "generated_at": "2026-05-15T18:12:56.052848",
   "kpis": {
-    "a_vencer_7d": 432407,
+    "a_vencer_7d": 402739,
     "juros_pagos": 75165,
-    "total_aberto": 3347950,
-    "total_pago_periodo": 5075205,
+    "total_aberto": 3318282,
+    "total_pago_periodo": 5163822,
     "total_vencido": 187740
   },
   "ok": true,
@@ -135,19 +135,19 @@
       "total_aberto": 141717
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 7,
-      "total_aberto": 131784
-    },
-    {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
       "titulos": 1,
       "total_aberto": 131625
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 19,
-      "total_aberto": 126892
+      "titulos": 18,
+      "total_aberto": 121185
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 6,
+      "total_aberto": 108002
     },
     {
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
