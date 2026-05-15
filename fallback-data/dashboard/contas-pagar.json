@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3173959
+      "saldo": 3160210
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 158398
+      "saldo": 157376
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-15T15:54:48.420187",
+  "generated_at": "2026-05-15T17:11:20.830060",
   "kpis": {
-    "a_vencer_7d": 446156,
+    "a_vencer_7d": 432407,
     "juros_pagos": 75165,
-    "total_aberto": 3362721,
-    "total_pago_periodo": 5029205,
-    "total_vencido": 188762
+    "total_aberto": 3347950,
+    "total_pago_periodo": 5075205,
+    "total_vencido": 187740
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -98,7 +98,7 @@
       "dias_atraso": 15,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
-      "saldo": 419,
+      "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     }
   ],
