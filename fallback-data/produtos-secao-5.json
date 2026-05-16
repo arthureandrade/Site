@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-16T14:01:14.082Z",
+  "generated_at": "2026-05-16T15:12:06.856Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5511,
+  "total": 5515,
   "produtos": [
     {
       "descricao": "",
@@ -3785,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 290,
+      "estoque": 281,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -4650,6 +4650,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4730.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14001,
+      "marca": "NEGREIRA",
+      "nome": "BALA SAMS SAMBOL 500G HORTELA PC QTD. 1.00 PC",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -6025,7 +6039,7 @@
     },
     {
       "descricao": "",
-      "estoque": 114,
+      "estoque": 113,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10476.jpg",
       "grupo": 34,
       "id": 10476,
@@ -8265,7 +8279,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10046.jpg",
       "grupo": 10,
       "id": 10046,
@@ -19017,7 +19031,7 @@
     },
     {
       "descricao": "",
-      "estoque": 85,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3654.jpg",
       "grupo": 48,
       "id": 3654,
@@ -23427,7 +23441,7 @@
     },
     {
       "descricao": "",
-      "estoque": 810,
+      "estoque": 805,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11875.jpg",
       "grupo": 30,
       "id": 11875,
@@ -23889,7 +23903,7 @@
     },
     {
       "descricao": "",
-      "estoque": 524,
+      "estoque": 527,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -23903,7 +23917,7 @@
     },
     {
       "descricao": "",
-      "estoque": 168,
+      "estoque": 167,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10174.jpg",
       "grupo": 30,
       "id": 10174,
@@ -24785,7 +24799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12687.jpg",
       "grupo": 30,
       "id": 12687,
@@ -25877,7 +25891,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8625,
+      "estoque": 8624,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -25891,7 +25905,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2647,
+      "estoque": 2641,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -26129,7 +26143,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1435,
+      "estoque": 1438,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10195.jpg",
       "grupo": 32,
       "id": 10195,
@@ -26283,7 +26297,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2058,
+      "estoque": 2057,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -29461,7 +29475,7 @@
     },
     {
       "descricao": "",
-      "estoque": 114,
+      "estoque": 113,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2039.jpg",
       "grupo": 43,
       "id": 2039,
@@ -30791,7 +30805,7 @@
     },
     {
       "descricao": "",
-      "estoque": 210,
+      "estoque": 209,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/76.jpg",
       "grupo": 41,
       "id": 76,
@@ -33101,6 +33115,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14004,
+      "marca": "NEGREIRA",
+      "nome": "FLV UVA VITORIA 500G BANDEJA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2581.jpg",
       "grupo": 48,
@@ -33563,7 +33591,7 @@
     },
     {
       "descricao": "",
-      "estoque": 196,
+      "estoque": 153,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11264.jpg",
       "grupo": 20,
       "id": 11264,
@@ -35075,7 +35103,7 @@
     },
     {
       "descricao": "",
-      "estoque": 834,
+      "estoque": 854,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/840.jpg",
       "grupo": 39,
       "id": 840,
@@ -35803,7 +35831,7 @@
     },
     {
       "descricao": "",
-      "estoque": 58,
+      "estoque": 57,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10977.jpg",
       "grupo": 69,
       "id": 10977,
@@ -42187,7 +42215,7 @@
     },
     {
       "descricao": "",
-      "estoque": 377,
+      "estoque": 376,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11491.jpg",
       "grupo": 34,
       "id": 11491,
@@ -49342,6 +49370,20 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14002,
+      "marca": "NEGREIRA",
+      "nome": "PASTILHA DOCILE MINTY 12UN MENTA HORTELA UND QTD. 1.00 DP",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1126.jpg",
       "grupo": 63,
       "id": 1126,
@@ -50475,7 +50517,7 @@
     },
     {
       "descricao": "",
-      "estoque": 679,
+      "estoque": 659,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1608.jpg",
       "grupo": 64,
       "id": 1608,
@@ -51791,7 +51833,7 @@
     },
     {
       "descricao": "",
-      "estoque": 916,
+      "estoque": 936,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4886.jpg",
       "grupo": 64,
       "id": 4886,
@@ -53454,6 +53496,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1443.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14003,
+      "marca": "NEGREIRA",
+      "nome": "PIRUL SAMS CHERRY POP 700G 50UN MORANGO PC QTD. 1.00 PC",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -57727,7 +57783,7 @@
     },
     {
       "descricao": "",
-      "estoque": 51,
+      "estoque": 50,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1111.jpg",
       "grupo": 64,
       "id": 1111,
@@ -58105,7 +58161,7 @@
     },
     {
       "descricao": "",
-      "estoque": 158,
+      "estoque": 160,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10180.jpg",
       "grupo": 64,
       "id": 10180,
@@ -59827,7 +59883,7 @@
     },
     {
       "descricao": "",
-      "estoque": 829,
+      "estoque": 734,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5039.jpg",
       "grupo": 64,
       "id": 5039,
@@ -59883,7 +59939,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4479,
+      "estoque": 4499,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1632.jpg",
       "grupo": 64,
       "id": 1632,
@@ -60793,7 +60849,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5388.jpg",
       "grupo": 26,
       "id": 5388,
@@ -63131,7 +63187,7 @@
     },
     {
       "descricao": "",
-      "estoque": 980,
+      "estoque": 977,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3771.jpg",
       "grupo": 66,
       "id": 3771,
@@ -63145,7 +63201,7 @@
     },
     {
       "descricao": "",
-      "estoque": 84,
+      "estoque": 82,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
@@ -63369,7 +63425,7 @@
     },
     {
       "descricao": "",
-      "estoque": 14,
+      "estoque": 13,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/96.jpg",
       "grupo": 71,
       "id": 96,
@@ -68255,7 +68311,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 16,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12458.jpg",
       "grupo": 10,
       "id": 12458,
@@ -69557,7 +69613,7 @@
     },
     {
       "descricao": "",
-      "estoque": 498,
+      "estoque": 496,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2443.jpg",
       "grupo": 79,
       "id": 2443,
@@ -69946,62 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "MT",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4256.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4258.jpg",
-      "grupo": 79,
-      "id": 4258,
-      "marca": "COMEP",
-      "nome": "TELA SOLDADA ZN 1,65MM FURO 10X5 1,50M ALT.",
-      "preco": 27.23,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4258.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 59,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2112.jpg",
-      "grupo": 79,
-      "id": 2112,
-      "marca": "COMEP",
-      "nome": "TELA SOLDADA ZN 1,9MM FURO 10X5 1,00M ALT.",
-      "preco": 27.28,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2112.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 79,
-      "id": 13924,
-      "marca": "COMEP",
-      "nome": "TELA SOLDADA ZN 1,9MM FURO 10X5 1,20M ALT.",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 6,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2113.jpg",
-      "grupo": 79,
-      "id": 2113,
-      "marca": "COMEP",
-      "nome": "TELA SOLDADA ZN 1,9MM FURO 10X5 1,50M ALT.",
-      "preco": 35.23,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2113.jpg"
     }
   ]
 }

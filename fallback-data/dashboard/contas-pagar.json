@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2980039
+      "saldo": 3130296
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 159826
+      "saldo": 160867
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-16T10:01:12.302099",
+  "generated_at": "2026-05-16T11:12:08.784326",
   "kpis": {
-    "a_vencer_7d": 385254,
+    "a_vencer_7d": 435088,
     "juros_pagos": 74664,
-    "total_aberto": 3170229,
+    "total_aberto": 3321527,
     "total_pago_periodo": 5096902,
-    "total_vencido": 190190
+    "total_vencido": 191231
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -98,7 +98,7 @@
       "dias_atraso": 16,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
-      "saldo": 83,
+      "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     }
   ],
@@ -125,6 +125,11 @@
       "total_aberto": 206382
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 3,
+      "total_aberto": 149503
+    },
+    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 27,
       "total_aberto": 141717
@@ -148,11 +153,6 @@
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
       "titulos": 2,
       "total_aberto": 95856
-    },
-    {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 3,
-      "total_aberto": 85332
     }
   ]
 }
