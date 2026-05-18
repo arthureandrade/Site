@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3099484
+      "saldo": 3258911
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-18T06:42:39.275219",
+  "generated_at": "2026-05-18T10:20:20.282152",
   "kpis": {
     "a_vencer_7d": 471628,
     "juros_pagos": 74664,
-    "total_aberto": 3321527,
+    "total_aberto": 3480954,
     "total_pago_periodo": 4825575,
     "total_vencido": 222043
   },
@@ -89,9 +89,9 @@
     },
     {
       "dias_atraso": 18,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 419,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 2",
+      "saldo": 1088,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
@@ -110,6 +110,11 @@
       "total_aberto": 910805
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 6,
+      "total_aberto": 287249
+    },
+    {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "titulos": 10,
       "total_aberto": 264812
@@ -123,11 +128,6 @@
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 59,
       "total_aberto": 206382
-    },
-    {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 3,
-      "total_aberto": 149503
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",

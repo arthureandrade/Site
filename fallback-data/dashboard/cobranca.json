@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 632269.93
+      "saldo": 634803.97
     },
     {
       "faixa": "180+ dias",
@@ -10,27 +10,27 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 78433.51000000001
+      "saldo": 77350.18
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 62347.73
+      "saldo": 57860.23
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 20760.67
+      "saldo": 19264.56
     },
     {
       "faixa": "61–90 dias",
       "saldo": 14215.01
     }
   ],
-  "generated_at": "2026-05-18T06:42:38.791942",
+  "generated_at": "2026-05-18T10:20:19.639243",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 918211.58,
-    "total_atraso": 285941.64999999997,
-    "total_vencer": 632269.9299999999
+    "clientes_atraso": 68,
+    "total_aberto": 913678.6799999999,
+    "total_atraso": 278874.71,
+    "total_vencer": 634803.97
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -77,20 +77,6 @@
       "vencimento": "2026-05-15T00:00:00"
     },
     {
-      "cliente": "LEONARDO JOSE DA SILVA",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 3191.5,
-      "vencimento": "2026-05-16T00:00:00"
-    },
-    {
-      "cliente": "LEONARDO JOSE DA SILVA",
-      "dias_atraso": 2,
-      "loja": "Loja 2",
-      "saldo": 525,
-      "vencimento": "2026-05-16T00:00:00"
-    },
-    {
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": 1,
       "loja": "Loja 1",
@@ -102,6 +88,20 @@
       "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 1915,
+      "vencimento": "2026-05-20T00:00:00"
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -2,
+      "loja": "Loja 4",
+      "saldo": 4650,
+      "vencimento": "2026-05-20T00:00:00"
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 3505,
       "vencimento": "2026-05-20T00:00:00"
     }
   ],
@@ -133,9 +133,9 @@
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 46,
-      "titulos": 6,
-      "total_atraso": 14198.68
+      "maior_atraso": 34,
+      "titulos": 4,
+      "total_atraso": 13115.35
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
