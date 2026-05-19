@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 630500.89
+      "saldo": 620123.52
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 75467.65
+      "saldo": 50210.66
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15423.04
     }
   ],
-  "generated_at": "2026-05-19T07:54:25.596678",
+  "generated_at": "2026-05-19T11:35:04.560508",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 927257.0900000001,
-    "total_atraso": 296756.2,
-    "total_vencer": 630500.89
+    "clientes_atraso": 62,
+    "total_aberto": 891622.73,
+    "total_atraso": 271499.21,
+    "total_vencer": 620123.52
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -138,12 +138,6 @@
       "total_atraso": 13126.41
     },
     {
-      "cliente": "50.285.484 EDIVAN ASSUNCAO DOS SANTOS",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 12340
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 891,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 71,
       "titulos": 2,
       "total_atraso": 6961.5
+    },
+    {
+      "cliente": "LUIS DE CARVALHO MARTINS",
+      "maior_atraso": 8,
+      "titulos": 1,
+      "total_atraso": 6500
     }
   ]
 }

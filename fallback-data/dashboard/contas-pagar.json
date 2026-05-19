@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3156112
+      "saldo": 3135586
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 259587
+      "saldo": 187871
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-19T07:54:26.053856",
+  "generated_at": "2026-05-19T11:35:05.112545",
   "kpis": {
-    "a_vencer_7d": 464225,
+    "a_vencer_7d": 453962,
     "juros_pagos": 74664,
-    "total_aberto": 3446063,
-    "total_pago_periodo": 4937237,
-    "total_vencido": 289951
+    "total_aberto": 3353821,
+    "total_pago_periodo": 5180489,
+    "total_vencido": 218235
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -98,7 +98,7 @@
       "dias_atraso": 19,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
-      "saldo": 419,
+      "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     }
   ],
@@ -116,8 +116,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 10,
-      "total_aberto": 264812
+      "titulos": 9,
+      "total_aberto": 231665
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -140,14 +140,14 @@
       "total_aberto": 131625
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 18,
-      "total_aberto": 121185
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 108002
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 17,
+      "total_aberto": 97146
     },
     {
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
