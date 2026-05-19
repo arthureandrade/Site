@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3135586
+      "saldo": 3159296
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 187871
+      "saldo": 199701
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-19T11:35:05.112545",
+  "generated_at": "2026-05-19T13:52:23.427637",
   "kpis": {
-    "a_vencer_7d": 453962,
+    "a_vencer_7d": 464225,
     "juros_pagos": 74664,
-    "total_aberto": 3353821,
+    "total_aberto": 3389361,
     "total_pago_periodo": 5180489,
-    "total_vencido": 218235
+    "total_vencido": 230065
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -82,16 +82,9 @@
     },
     {
       "dias_atraso": 19,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 419,
-      "vencimento": "2026-04-30T00:00:00"
-    },
-    {
-      "dias_atraso": 19,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 419,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 2",
+      "saldo": 1088,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
@@ -99,6 +92,13 @@
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "dias_atraso": 19,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     }
   ],
