@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 284021
+      "saldo": 247949
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-20T08:24:57.620917",
+  "generated_at": "2026-05-20T12:06:49.933526",
   "kpis": {
     "a_vencer_7d": 387521,
     "juros_pagos": 74664,
-    "total_aberto": 3391498,
-    "total_pago_periodo": 5226222,
-    "total_vencido": 314385
+    "total_aberto": 3355426,
+    "total_pago_periodo": 5428045,
+    "total_vencido": 278313
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,14 +130,14 @@
       "total_aberto": 206382
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 27,
-      "total_aberto": 141717
-    },
-    {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
       "titulos": 1,
       "total_aberto": 131625
+    },
+    {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 23,
+      "total_aberto": 113641
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
@@ -145,14 +145,14 @@
       "total_aberto": 108002
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 17,
-      "total_aberto": 97146
-    },
-    {
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
       "titulos": 2,
       "total_aberto": 95856
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 16,
+      "total_aberto": 91350
     }
   ]
 }
