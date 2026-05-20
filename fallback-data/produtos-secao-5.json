@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-20T18:30:54.924Z",
+  "generated_at": "2026-05-20T20:36:49.070Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5527,
+  "total": 5535,
   "produtos": [
     {
       "descricao": "",
@@ -2469,7 +2469,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1816.jpg",
       "grupo": 82,
       "id": 1816,
@@ -4135,7 +4135,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2341,
+      "estoque": 2333,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1071.jpg",
       "grupo": 64,
       "id": 1071,
@@ -4177,7 +4177,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2286,
+      "estoque": 2266,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1647.jpg",
       "grupo": 64,
       "id": 1647,
@@ -4835,7 +4835,7 @@
     },
     {
       "descricao": "",
-      "estoque": 427,
+      "estoque": 426,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1641.jpg",
       "grupo": 64,
       "id": 1641,
@@ -4877,7 +4877,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3254,
+      "estoque": 3253,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1642.jpg",
       "grupo": 64,
       "id": 1642,
@@ -4947,7 +4947,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1063,
+      "estoque": 1013,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1975.jpg",
       "grupo": 33,
       "id": 1975,
@@ -7215,7 +7215,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": -1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3941.jpg",
       "grupo": 34,
       "id": 3941,
@@ -8965,7 +8965,7 @@
     },
     {
       "descricao": "",
-      "estoque": 19,
+      "estoque": 18,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12775.jpg",
       "grupo": 10,
       "id": 12775,
@@ -11919,7 +11919,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4213.jpg",
       "grupo": 11,
       "id": 4213,
@@ -11947,7 +11947,7 @@
     },
     {
       "descricao": "",
-      "estoque": 51,
+      "estoque": 50,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4215.jpg",
       "grupo": 11,
       "id": 4215,
@@ -12720,6 +12720,48 @@
       "estoque": 0,
       "foto_url": null,
       "grupo": 13,
+      "id": 14023,
+      "marca": "MOR",
+      "nome": "CAIXA TERMICA MOR 26L PRETO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14022,
+      "marca": "MOR",
+      "nome": "CAIXA TERMICA MOR 26L VERDE C/ PRETO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14021,
+      "marca": "MOR",
+      "nome": "CAIXA TERMICA MOR 26L VERMELHA C/ PRETO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
       "id": 14018,
       "marca": "MOR",
       "nome": "CAIXA TERMICA MOR 34L AZUL C/ PRETO",
@@ -12737,6 +12779,20 @@
       "id": 14019,
       "marca": "MOR",
       "nome": "CAIXA TERMICA MOR 34L PRETO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14020,
+      "marca": "MOR",
+      "nome": "CAIXA TERMICA MOR 34L VERMELHA",
       "preco": 0,
       "secao": 5,
       "subgrupo": 9999,
@@ -15293,7 +15349,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": 14,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4545.jpg",
       "grupo": 45,
       "id": 4545,
@@ -16203,7 +16259,7 @@
     },
     {
       "descricao": "",
-      "estoque": 37,
+      "estoque": 36,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11792.jpg",
       "grupo": 45,
       "id": 11792,
@@ -16217,7 +16273,7 @@
     },
     {
       "descricao": "",
-      "estoque": 43,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12022.jpg",
       "grupo": 45,
       "id": 12022,
@@ -18695,7 +18751,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1108,
+      "estoque": 1099,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/590.jpg",
       "grupo": 64,
       "id": 590,
@@ -20893,7 +20949,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12586.jpg",
       "grupo": 2,
       "id": 12586,
@@ -21971,7 +22027,7 @@
     },
     {
       "descricao": "",
-      "estoque": 438,
+      "estoque": 416,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11830.jpg",
       "grupo": 28,
       "id": 11830,
@@ -23287,7 +23343,7 @@
     },
     {
       "descricao": "",
-      "estoque": 60,
+      "estoque": 59,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4665.jpg",
       "grupo": 30,
       "id": 4665,
@@ -23819,7 +23875,7 @@
     },
     {
       "descricao": "",
-      "estoque": 86,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12441.jpg",
       "grupo": 30,
       "id": 12441,
@@ -23917,7 +23973,7 @@
     },
     {
       "descricao": "",
-      "estoque": 642,
+      "estoque": 638,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg",
       "grupo": 30,
       "id": 12330,
@@ -24001,7 +24057,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1587,
+      "estoque": 1576,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -25919,7 +25975,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8452,
+      "estoque": 8449,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -26325,7 +26381,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1867,
+      "estoque": 1852,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26381,7 +26437,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4351,
+      "estoque": 4348,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -26507,7 +26563,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5319,
+      "estoque": 5318,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11598.jpg",
       "grupo": 33,
       "id": 11598,
@@ -28957,7 +29013,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3036.jpg",
       "grupo": 43,
       "id": 3036,
@@ -33913,7 +33969,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 6,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11918.jpg",
       "grupo": 44,
       "id": 11918,
@@ -34558,6 +34614,48 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14024,
+      "marca": "MOR",
+      "nome": "GARRAFA TERM  3L AZUL",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14025,
+      "marca": "MOR",
+      "nome": "GARRAFA TERM  3L VERMELHO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14026,
+      "marca": "MOR",
+      "nome": "GARRAFA TERM  5L AZUL",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5255.jpg",
       "grupo": 13,
       "id": 5255,
@@ -34596,6 +34694,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5254.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 13,
+      "id": 14027,
+      "marca": "MOR",
+      "nome": "GARRAFA TERM  5L VERMELHO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -34907,7 +35019,7 @@
     },
     {
       "descricao": "",
-      "estoque": 93,
+      "estoque": 87,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/407.jpg",
       "grupo": 32,
       "id": 407,
@@ -35257,7 +35369,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11970.jpg",
       "grupo": 102,
       "id": 11970,
@@ -38281,7 +38393,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11480.jpg",
       "grupo": 2,
       "id": 11480,
@@ -42271,7 +42383,7 @@
     },
     {
       "descricao": "",
-      "estoque": 353,
+      "estoque": 352,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11491.jpg",
       "grupo": 34,
       "id": 11491,
@@ -43629,7 +43741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 358,
+      "estoque": 348,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10596.jpg",
       "grupo": 57,
       "id": 10596,
@@ -43643,7 +43755,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4384.jpg",
       "grupo": 57,
       "id": 4384,
@@ -49999,7 +50111,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38607,
+      "estoque": 38487,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5581.jpg",
       "grupo": 64,
       "id": 5581,
@@ -50181,7 +50293,7 @@
     },
     {
       "descricao": "",
-      "estoque": 69492,
+      "estoque": 68842,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -50377,7 +50489,7 @@
     },
     {
       "descricao": "",
-      "estoque": 822,
+      "estoque": 814,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1618.jpg",
       "grupo": 64,
       "id": 1618,
@@ -51161,7 +51273,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17314,
+      "estoque": 17287,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4185.jpg",
       "grupo": 64,
       "id": 4185,
@@ -55963,7 +56075,7 @@
     },
     {
       "descricao": "",
-      "estoque": 323,
+      "estoque": 315,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4145.jpg",
       "grupo": 66,
       "id": 4145,
@@ -56621,7 +56733,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2123,
+      "estoque": 2115,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1252.jpg",
       "grupo": 64,
       "id": 1252,
@@ -56663,7 +56775,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2715,
+      "estoque": 2695,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2149.jpg",
       "grupo": 64,
       "id": 2149,
@@ -56705,7 +56817,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4764,
+      "estoque": 4759,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1644.jpg",
       "grupo": 64,
       "id": 1644,
@@ -57055,7 +57167,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3603,
+      "estoque": 3583,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/105.jpg",
       "grupo": 2,
       "id": 105,
@@ -59967,7 +60079,7 @@
     },
     {
       "descricao": "",
-      "estoque": 671,
+      "estoque": 641,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1630.jpg",
       "grupo": 64,
       "id": 1630,
@@ -61731,7 +61843,7 @@
     },
     {
       "descricao": "",
-      "estoque": 50,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3874.jpg",
       "grupo": 70,
       "id": 3874,
@@ -62445,7 +62557,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10472,
+      "estoque": 10072,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/88.jpg",
       "grupo": 71,
       "id": 88,
@@ -63117,7 +63229,7 @@
     },
     {
       "descricao": "",
-      "estoque": 68,
+      "estoque": 64,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4319.jpg",
       "grupo": 71,
       "id": 4319,
@@ -63229,7 +63341,7 @@
     },
     {
       "descricao": "",
-      "estoque": 50,
+      "estoque": 48,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/95.jpg",
       "grupo": 71,
       "id": 95,
@@ -69890,118 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "MT",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4389.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 28,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4654.jpg",
-      "grupo": 79,
-      "id": 4654,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO VD 1;20MX50M MALHA14X14 - WORKER",
-      "preco": 9.35,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4654.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/912.jpg",
-      "grupo": 79,
-      "id": 912,
-      "marca": "BELGO",
-      "nome": "TELA PINTINTEIRO 1.00X50M F22 BELGO",
-      "preco": 534.1,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/912.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/914.jpg",
-      "grupo": 79,
-      "id": 914,
-      "marca": "BELGO",
-      "nome": "TELA PINTINTEIRO 1.50X50M F22 BELGO",
-      "preco": 700,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/914.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 79,
-      "id": 13879,
-      "marca": "GERAL",
-      "nome": "TELA QUAD 50X50MM FIO 2,8MM 25M PVC VERDE",
-      "preco": 170.45,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 5,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13575.jpg",
-      "grupo": 79,
-      "id": 13575,
-      "marca": "RED DIAMOND",
-      "nome": "TELA REBOCO ZINC 1,24MM  25X25 0,50M X 25M RED",
-      "preco": 664.6,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13575.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 79,
-      "id": 11017,
-      "marca": "COMEP",
-      "nome": "TELA REBOCO ZINC 1,24MM  25X25 1,00M X 25M",
-      "preco": 602.27,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 1999,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13576.jpg",
-      "grupo": 79,
-      "id": 13576,
-      "marca": "RED DIAMOND",
-      "nome": "TELA REBOCO ZINC 1,24MM  25X25 12CMX50CM RED",
-      "preco": 4,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13576.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 20,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11136.jpg",
-      "grupo": 79,
-      "id": 11136,
-      "marca": "ACEROSID",
-      "nome": "TELA SERRALHEIRO 25X25X2,00MM 1,52M - 15M ROLO",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11136.jpg"
     }
   ]
 }

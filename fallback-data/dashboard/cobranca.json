@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 653879.93
+      "saldo": 657803.4
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 48493.21
+      "saldo": 47961.77
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15906.07
     }
   ],
-  "generated_at": "2026-05-20T14:30:55.379396",
+  "generated_at": "2026-05-20T16:36:49.186308",
   "kpis": {
-    "clientes_atraso": 57,
-    "total_aberto": 921069.2,
-    "total_atraso": 267189.27,
-    "total_vencer": 653879.9299999999
+    "clientes_atraso": 56,
+    "total_aberto": 924461.23,
+    "total_atraso": 266657.83,
+    "total_vencer": 657803.3999999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,20 +40,6 @@
       "loja": "Loja 4",
       "saldo": 3618,
       "vencimento": "2026-05-15T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 426.12,
-      "vencimento": "2026-05-15T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 105.32,
-      "vencimento": "2026-05-17T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
@@ -102,6 +88,20 @@
       "dias_atraso": -4,
       "loja": "Loja 1",
       "saldo": 300.53,
+      "vencimento": "2026-05-24T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 1964,
+      "vencimento": "2026-05-24T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 60,
       "vencimento": "2026-05-24T00:00:00"
     }
   ],
