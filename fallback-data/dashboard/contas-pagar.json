@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3170234
+      "saldo": 3077113
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 200136
+      "saldo": 293257
     },
     {
       "faixa": "31–60 dias",
@@ -17,85 +17,85 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-19T21:51:20.373382",
+  "generated_at": "2026-05-20T02:04:06.931554",
   "kpis": {
-    "a_vencer_7d": 464225,
+    "a_vencer_7d": 387521,
     "juros_pagos": 74664,
     "total_aberto": 3400734,
     "total_pago_periodo": 5180489,
-    "total_vencido": 230500
+    "total_vencido": 323621
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-05-19",
-    "data_de": "2026-04-19"
+    "data_ate": "2026-05-20",
+    "data_de": "2026-04-20"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 173,
+      "dias_atraso": 174,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 135,
+      "dias_atraso": 136,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 106,
+      "dias_atraso": 107,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 47,
+      "dias_atraso": 48,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 42,
+      "dias_atraso": 43,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 39,
+      "dias_atraso": 40,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 22,
+      "dias_atraso": 23,
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "loja": "Loja 1",
       "saldo": 6599,
       "vencimento": "2026-04-27T00:00:00"
     },
     {
-      "dias_atraso": 19,
+      "dias_atraso": 20,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 2",
       "saldo": 1088,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 19,
+      "dias_atraso": 20,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 19,
+      "dias_atraso": 20,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
