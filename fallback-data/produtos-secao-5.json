@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-21T10:00:54.330Z",
+  "generated_at": "2026-05-21T13:29:36.735Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5535,
+  "total": 5542,
   "produtos": [
     {
       "descricao": "",
@@ -3729,7 +3729,7 @@
     },
     {
       "descricao": "",
-      "estoque": 29,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13545.jpg",
       "grupo": 33,
       "id": 13545,
@@ -3785,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 268,
+      "estoque": 267,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -6039,7 +6039,7 @@
     },
     {
       "descricao": "",
-      "estoque": 113,
+      "estoque": 112,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10476.jpg",
       "grupo": 34,
       "id": 10476,
@@ -22349,6 +22349,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14032,
+      "marca": "CSM",
+      "nome": "CREMALHEIRA SEGMENTADA BET 400L AMARELO RAL 1007",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3212.jpg",
       "grupo": 1,
@@ -23973,7 +23987,7 @@
     },
     {
       "descricao": "",
-      "estoque": 608,
+      "estoque": 598,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg",
       "grupo": 30,
       "id": 12330,
@@ -24057,7 +24071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1574,
+      "estoque": 1564,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -25947,7 +25961,7 @@
     },
     {
       "descricao": "",
-      "estoque": 182,
+      "estoque": 178,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/878.jpg",
       "grupo": 32,
       "id": 878,
@@ -26381,7 +26395,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1847,
+      "estoque": 1843,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -30679,7 +30693,7 @@
     },
     {
       "descricao": "",
-      "estoque": 758,
+      "estoque": 757,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -30875,7 +30889,7 @@
     },
     {
       "descricao": "",
-      "estoque": 27,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -45645,7 +45659,7 @@
     },
     {
       "descricao": "",
-      "estoque": 292,
+      "estoque": 293,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg",
       "grupo": 60,
       "id": 3658,
@@ -50181,7 +50195,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9255,
+      "estoque": 9155,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4193.jpg",
       "grupo": 64,
       "id": 4193,
@@ -51231,7 +51245,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23675,
+      "estoque": 23671,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12534.jpg",
       "grupo": 64,
       "id": 12534,
@@ -51259,7 +51273,7 @@
     },
     {
       "descricao": "",
-      "estoque": 103064,
+      "estoque": 102994,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4184.jpg",
       "grupo": 64,
       "id": 4184,
@@ -53496,6 +53510,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1433.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14031,
+      "marca": "CSM",
+      "nome": "PINHAO DA CREMALHEIRA BETONEIRA 400L",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -57951,7 +57979,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1111.jpg",
       "grupo": 64,
       "id": 1111,
@@ -58287,7 +58315,7 @@
     },
     {
       "descricao": "",
-      "estoque": 199,
+      "estoque": 198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2487.jpg",
       "grupo": 64,
       "id": 2487,
@@ -61633,6 +61661,34 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14030,
+      "marca": "CSM",
+      "nome": "RODA DIAMETRO 375MM LISA BET 400L",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14028,
+      "marca": "CSM",
+      "nome": "RODA DIAMETRO 375MM REFORÇADA BET 400L",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/607.jpg",
       "grupo": 63,
@@ -62921,6 +62977,48 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14034,
+      "marca": "COLSON",
+      "nome": "ROLDANA BLACK PU 4\" 127MM - FIXO 140KG",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14035,
+      "marca": "COLSON",
+      "nome": "ROLDANA BLACK PU 4\" 127MM - GIRAT FREIO 140KG",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14033,
+      "marca": "COLSON",
+      "nome": "ROLDANA BLACK PU 4\" 127MM - GIRATORIO 140KG",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 100,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13166.jpg",
       "grupo": 71,
@@ -63453,7 +63551,7 @@
     },
     {
       "descricao": "",
-      "estoque": 957,
+      "estoque": 959,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3771.jpg",
       "grupo": 66,
       "id": 3771,
@@ -67457,7 +67555,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 27,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1672.jpg",
       "grupo": 45,
       "id": 1672,
@@ -69904,104 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "MT",
       "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 399,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13762.jpg",
-      "grupo": 79,
-      "id": 13762,
-      "marca": "PRENSAL",
-      "nome": "TELA MOEDA PRETA 0,59A X 1,90MME G (2,04KG/M)",
-      "preco": 69.5,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13762.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 163,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4387.jpg",
-      "grupo": 79,
-      "id": 4387,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO BR 1;00M50M MALHA14X14 - WORKER",
-      "preco": 7.8,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4387.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 67,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4652.jpg",
-      "grupo": 79,
-      "id": 4652,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO BR 1;20M50M MALHA14X14 - WORKER",
-      "preco": 9.35,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4652.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 81,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4388.jpg",
-      "grupo": 79,
-      "id": 4388,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO CZ 1;00MX50M MALHA14X14 - WORKER",
-      "preco": 7.8,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4388.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 78,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4653.jpg",
-      "grupo": 79,
-      "id": 4653,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO CZ 1;20MX50M MALHA14X14 - WORKER",
-      "preco": 9.87,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4653.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 48,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4467.jpg",
-      "grupo": 43,
-      "id": 4467,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO CZ 1;50MX50M MALHA14X14 - WORKER",
-      "preco": 12.28,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4467.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 12,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4389.jpg",
-      "grupo": 79,
-      "id": 4389,
-      "marca": "WORKER",
-      "nome": "TELA MOSQUITEIRO VD 1;00MX50M MALHA14X14 - WORKER",
-      "preco": 8.22,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4389.jpg"
     }
   ]
 }

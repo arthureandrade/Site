@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 622509.08
+      "saldo": 595632.48
     },
     {
       "faixa": "180+ dias",
       "saldo": 111028.57
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 86087.18
-    },
-    {
       "faixa": "31–60 dias",
       "saldo": 75830.51999999999
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 69337.18
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15914.1
     }
   ],
-  "generated_at": "2026-05-21T06:00:52.162202",
+  "generated_at": "2026-05-21T09:29:34.043748",
   "kpis": {
-    "clientes_atraso": 61,
-    "total_aberto": 927472.98,
-    "total_atraso": 304963.89999999997,
-    "total_vencer": 622509.08
+    "clientes_atraso": 60,
+    "total_aberto": 883846.38,
+    "total_atraso": 288213.89999999997,
+    "total_vencer": 595632.48
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -125,12 +125,6 @@
       "total_atraso": 20875.19
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 16750
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 37,
       "titulos": 4,
@@ -159,6 +153,12 @@
       "maior_atraso": 300,
       "titulos": 1,
       "total_atraso": 7150
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 73,
+      "titulos": 2,
+      "total_atraso": 6974.5
     }
   ]
 }
