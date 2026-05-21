@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3089433
+      "saldo": 3016311
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 251386
+      "saldo": 260493
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-21T09:29:34.688225",
+  "generated_at": "2026-05-21T12:25:45.241305",
   "kpis": {
-    "a_vencer_7d": 404528,
-    "juros_pagos": 74664,
-    "total_aberto": 3371183,
-    "total_pago_periodo": 5040995,
-    "total_vencido": 281750
+    "a_vencer_7d": 329708,
+    "juros_pagos": 74693,
+    "total_aberto": 3307168,
+    "total_pago_periodo": 5291309,
+    "total_vencido": 290857
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -120,14 +120,14 @@
       "total_aberto": 231665
     },
     {
-      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 4,
-      "total_aberto": 220584
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 59,
       "total_aberto": 206382
+    },
+    {
+      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+      "titulos": 3,
+      "total_aberto": 154279
     },
     {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",

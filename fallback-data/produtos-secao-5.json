@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-21T13:29:36.735Z",
+  "generated_at": "2026-05-21T16:25:43.765Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5542,
+  "total": 5549,
   "produtos": [
     {
       "descricao": "",
@@ -3547,7 +3547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 236,
+      "estoque": 235,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12745.jpg",
       "grupo": 3,
       "id": 12745,
@@ -4947,7 +4947,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1013,
+      "estoque": 1010,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1975.jpg",
       "grupo": 33,
       "id": 1975,
@@ -8951,7 +8951,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26,
+      "estoque": 25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12882.jpg",
       "grupo": 10,
       "id": 12882,
@@ -11079,7 +11079,7 @@
     },
     {
       "descricao": "",
-      "estoque": 96510,
+      "estoque": 96490,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1670.jpg",
       "grupo": 64,
       "id": 1670,
@@ -11163,7 +11163,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1825,
+      "estoque": 1815,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/450.jpg",
       "grupo": 64,
       "id": 450,
@@ -12924,6 +12924,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12171.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 42,
+      "id": 14044,
+      "marca": "COLSON",
+      "nome": "CAMARA DE AR 3.50 X 8\" - COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -21999,7 +22013,7 @@
     },
     {
       "descricao": "",
-      "estoque": 431,
+      "estoque": 429,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11828.jpg",
       "grupo": 28,
       "id": 11828,
@@ -22027,7 +22041,7 @@
     },
     {
       "descricao": "",
-      "estoque": 416,
+      "estoque": 415,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11830.jpg",
       "grupo": 28,
       "id": 11830,
@@ -22447,7 +22461,7 @@
     },
     {
       "descricao": "",
-      "estoque": 56,
+      "estoque": 41,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11152.jpg",
       "grupo": 92,
       "id": 11152,
@@ -22475,7 +22489,7 @@
     },
     {
       "descricao": "",
-      "estoque": 35,
+      "estoque": 25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11150.jpg",
       "grupo": 92,
       "id": 11150,
@@ -23469,7 +23483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 36,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12852.jpg",
       "grupo": 30,
       "id": 12852,
@@ -23987,7 +24001,7 @@
     },
     {
       "descricao": "",
-      "estoque": 598,
+      "estoque": 595,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg",
       "grupo": 30,
       "id": 12330,
@@ -24071,7 +24085,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1564,
+      "estoque": 1551,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -25765,7 +25779,7 @@
     },
     {
       "descricao": "",
-      "estoque": 905,
+      "estoque": 903,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3964.jpg",
       "grupo": 32,
       "id": 3964,
@@ -26003,7 +26017,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2625,
+      "estoque": 2622,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -26395,7 +26409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1843,
+      "estoque": 1837,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26451,7 +26465,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4348,
+      "estoque": 4342,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -29027,7 +29041,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3036.jpg",
       "grupo": 43,
       "id": 3036,
@@ -31099,7 +31113,7 @@
     },
     {
       "descricao": "",
-      "estoque": 24,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/69.jpg",
       "grupo": 41,
       "id": 69,
@@ -31421,7 +31435,7 @@
     },
     {
       "descricao": "",
-      "estoque": 589,
+      "estoque": 588,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/907.jpg",
       "grupo": 41,
       "id": 907,
@@ -31785,7 +31799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 119,
+      "estoque": 77,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5131.jpg",
       "grupo": 92,
       "id": 5131,
@@ -32037,7 +32051,7 @@
     },
     {
       "descricao": "",
-      "estoque": 188,
+      "estoque": 187,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -34417,7 +34431,7 @@
     },
     {
       "descricao": "",
-      "estoque": 821,
+      "estoque": 819,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1681.jpg",
       "grupo": 64,
       "id": 1681,
@@ -40283,7 +40297,7 @@
     },
     {
       "descricao": "",
-      "estoque": 119,
+      "estoque": 115,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5023.jpg",
       "grupo": 45,
       "id": 5023,
@@ -40451,7 +40465,7 @@
     },
     {
       "descricao": "",
-      "estoque": 102,
+      "estoque": 100,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/254.jpg",
       "grupo": 34,
       "id": 254,
@@ -46135,7 +46149,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12486.jpg",
       "grupo": 58,
       "id": 12486,
@@ -46317,7 +46331,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12484.jpg",
       "grupo": 58,
       "id": 12484,
@@ -46331,7 +46345,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12485.jpg",
       "grupo": 58,
       "id": 12485,
@@ -50307,7 +50321,7 @@
     },
     {
       "descricao": "",
-      "estoque": 68562,
+      "estoque": 68362,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -50335,7 +50349,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4943,
+      "estoque": 4793,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10881.jpg",
       "grupo": 64,
       "id": 10881,
@@ -50391,7 +50405,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3308,
+      "estoque": 3208,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10882.jpg",
       "grupo": 64,
       "id": 10882,
@@ -50699,7 +50713,7 @@
     },
     {
       "descricao": "",
-      "estoque": 655,
+      "estoque": 647,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1608.jpg",
       "grupo": 64,
       "id": 1608,
@@ -50727,7 +50741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 58,
+      "estoque": 48,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1610.jpg",
       "grupo": 64,
       "id": 1610,
@@ -52197,7 +52211,7 @@
     },
     {
       "descricao": "",
-      "estoque": 469,
+      "estoque": 459,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1760.jpg",
       "grupo": 64,
       "id": 1760,
@@ -54283,6 +54297,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 70,
+      "id": 14045,
+      "marca": "COLSON",
+      "nome": "PNEU 3,25X8\" 4 LONAS - COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 37,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3387.jpg",
       "grupo": 42,
@@ -54294,6 +54322,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3387.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 70,
+      "id": 14042,
+      "marca": "COLSON",
+      "nome": "PNEU 3;50X8\" 4 LONAS - COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -54364,6 +54406,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12169.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 70,
+      "id": 14039,
+      "marca": "COLSON",
+      "nome": "PNEU 8X2 MSA 130KG COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -56761,7 +56817,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2115,
+      "estoque": 2114,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1252.jpg",
       "grupo": 64,
       "id": 1252,
@@ -57195,7 +57251,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3583,
+      "estoque": 3569,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/105.jpg",
       "grupo": 2,
       "id": 105,
@@ -61563,7 +61619,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10269.jpg",
       "grupo": 58,
       "id": 10269,
@@ -62613,7 +62669,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10072,
+      "estoque": 10064,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/88.jpg",
       "grupo": 71,
       "id": 88,
@@ -63551,6 +63607,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14037,
+      "marca": "COLSON",
+      "nome": "ROLDANA SUPORTE FECHADO 2.1/2\" COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 959,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3771.jpg",
       "grupo": 66,
@@ -63593,6 +63663,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14036,
+      "marca": "COLSON",
+      "nome": "ROLDANA SUPORTE FECHADO 2\" COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 817,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4316.jpg",
       "grupo": 71,
@@ -63618,6 +63702,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/93.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14038,
+      "marca": "COLSON",
+      "nome": "ROLDANA SUPORTE FECHADO 3\" COLSON",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -63719,7 +63817,7 @@
     },
     {
       "descricao": "",
-      "estoque": 82,
+      "estoque": 80,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/489.jpg",
       "grupo": 71,
       "id": 489,
@@ -67541,7 +67639,7 @@
     },
     {
       "descricao": "",
-      "estoque": 130,
+      "estoque": 128,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1673.jpg",
       "grupo": 45,
       "id": 1673,
@@ -69904,104 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13536.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 4,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12583.jpg",
-      "grupo": 79,
-      "id": 12583,
-      "marca": "VONDER",
-      "nome": "TELA MANGUEIRAO 3\" BWG 16 X 1,20 X 50M VONDER",
-      "preco": 726.22,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12583.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 2,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12584.jpg",
-      "grupo": 79,
-      "id": 12584,
-      "marca": "VONDER",
-      "nome": "TELA MANGUEIRAO 3\" BWG 18 X 0,80 X 50M VONDER",
-      "preco": 332.01,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12584.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12936.jpg",
-      "grupo": 79,
-      "id": 12936,
-      "marca": "VONDER",
-      "nome": "TELA MANGUEIRAO 3\" BWG 18 X 1,00 X 50M VONDER",
-      "preco": 380.87,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12936.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 191,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12121.jpg",
-      "grupo": 79,
-      "id": 12121,
-      "marca": "PRENSAL",
-      "nome": "TELA MOEDA INOX   0,61A X 2,50MME G (3,30KG/M)",
-      "preco": 149.22,
-      "secao": 5,
-      "subgrupo": 23,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12121.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4286.jpg",
-      "grupo": 79,
-      "id": 4286,
-      "marca": "PRENSAL",
-      "nome": "TELA MOEDA PRETA 0,40A X 1,30MME F (1,13KG/M)",
-      "preco": 37.86,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4286.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 480,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2443.jpg",
-      "grupo": 79,
-      "id": 2443,
-      "marca": "PRENSAL",
-      "nome": "TELA MOEDA PRETA 0,58A X 1,30MME F (1,47KG/M)",
-      "preco": 69.28,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2443.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 79,
-      "id": 14008,
-      "marca": "PRENSAL",
-      "nome": "TELA MOEDA PRETA 0,58A X 1,80MME G (2,28KG/M)",
-      "preco": 30.51,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": null
     }
   ]
 }
