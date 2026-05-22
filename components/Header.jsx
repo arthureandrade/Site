@@ -119,6 +119,9 @@ export default function Header() {
 
         {!isVendedorArea ? (
           <nav className="hidden items-center gap-5 text-sm font-black uppercase tracking-wide text-gray-700 md:flex">
+            <Link href="/sorteio" className="transition-colors hover:text-primary">
+              Sorteio
+            </Link>
             <Link href="/vendedor" className="transition-colors hover:text-primary">
               Area do vendedor
             </Link>
@@ -211,6 +214,9 @@ export default function Header() {
       {menuOpen && !isVendedorArea && (
         <div className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3 text-sm font-black uppercase tracking-wide text-gray-700">
+            <Link href="/sorteio" onClick={() => setMenuOpen(false)}>
+              Sorteio
+            </Link>
             <Link href="/vendedor" onClick={() => setMenuOpen(false)}>
               Area do vendedor
             </Link>
