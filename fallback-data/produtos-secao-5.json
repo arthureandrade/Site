@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-22T18:05:13.223Z",
+  "generated_at": "2026-05-22T20:06:27.940Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5547,
+  "total": 5548,
   "produtos": [
     {
       "descricao": "",
@@ -1755,7 +1755,7 @@
     },
     {
       "descricao": "",
-      "estoque": 128,
+      "estoque": 124,
       "foto_url": null,
       "grupo": 92,
       "id": 12112,
@@ -3547,7 +3547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 234,
+      "estoque": 233,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12745.jpg",
       "grupo": 3,
       "id": 12745,
@@ -8209,7 +8209,7 @@
     },
     {
       "descricao": "",
-      "estoque": 78,
+      "estoque": 77,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3983.jpg",
       "grupo": 10,
       "id": 3983,
@@ -8419,7 +8419,7 @@
     },
     {
       "descricao": "",
-      "estoque": -1,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3987.jpg",
       "grupo": 10,
       "id": 3987,
@@ -8993,7 +8993,7 @@
     },
     {
       "descricao": "",
-      "estoque": 24,
+      "estoque": 23,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12777.jpg",
       "grupo": 10,
       "id": 12777,
@@ -11079,7 +11079,7 @@
     },
     {
       "descricao": "",
-      "estoque": 96484,
+      "estoque": 96453,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1670.jpg",
       "grupo": 64,
       "id": 1670,
@@ -11135,7 +11135,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1195,
+      "estoque": 1179,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1664.jpg",
       "grupo": 64,
       "id": 1664,
@@ -11975,7 +11975,7 @@
     },
     {
       "descricao": "",
-      "estoque": 30,
+      "estoque": 29,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10410.jpg",
       "grupo": 11,
       "id": 10410,
@@ -22489,7 +22489,7 @@
     },
     {
       "descricao": "",
-      "estoque": 35,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11150.jpg",
       "grupo": 92,
       "id": 11150,
@@ -23637,7 +23637,7 @@
     },
     {
       "descricao": "",
-      "estoque": 40,
+      "estoque": 35,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11205.jpg",
       "grupo": 30,
       "id": 11205,
@@ -23763,7 +23763,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 27,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11207.jpg",
       "grupo": 30,
       "id": 11207,
@@ -23945,7 +23945,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1459,
+      "estoque": 1457,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12123.jpg",
       "grupo": 30,
       "id": 12123,
@@ -24001,7 +24001,7 @@
     },
     {
       "descricao": "",
-      "estoque": 516,
+      "estoque": 493,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg",
       "grupo": 30,
       "id": 12330,
@@ -26409,7 +26409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1781,
+      "estoque": 1776,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -28006,7 +28006,7 @@
     {
       "descricao": "",
       "estoque": 10,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3297.jpg",
       "grupo": 44,
       "id": 3297,
       "marca": "WORKER",
@@ -28015,12 +28015,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3297.jpg"
     },
     {
       "descricao": "",
       "estoque": 6,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13950.jpg",
       "grupo": 44,
       "id": 13950,
       "marca": "MAKITA",
@@ -28029,7 +28029,7 @@
       "secao": 5,
       "subgrupo": 20,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13950.jpg"
     },
     {
       "descricao": "",
@@ -30707,7 +30707,7 @@
     },
     {
       "descricao": "",
-      "estoque": 757,
+      "estoque": 753,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -30903,7 +30903,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26,
+      "estoque": 27,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/75.jpg",
       "grupo": 41,
       "id": 75,
@@ -30931,7 +30931,7 @@
     },
     {
       "descricao": "",
-      "estoque": 198,
+      "estoque": 197,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/76.jpg",
       "grupo": 41,
       "id": 76,
@@ -31673,7 +31673,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26,
+      "estoque": 25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4050.jpg",
       "grupo": 41,
       "id": 4050,
@@ -31785,7 +31785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38,
+      "estoque": 36,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5130.jpg",
       "grupo": 92,
       "id": 5130,
@@ -44483,7 +44483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11,
+      "estoque": 10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13215.jpg",
       "grupo": 43,
       "id": 13215,
@@ -49397,7 +49397,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13585.jpg",
       "grupo": 92,
       "id": 13585,
@@ -50741,7 +50741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1610.jpg",
       "grupo": 64,
       "id": 1610,
@@ -50825,7 +50825,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1425,
+      "estoque": 1410,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1763.jpg",
       "grupo": 64,
       "id": 1763,
@@ -50853,7 +50853,7 @@
     },
     {
       "descricao": "",
-      "estoque": 435,
+      "estoque": 425,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4872.jpg",
       "grupo": 64,
       "id": 4872,
@@ -51259,7 +51259,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23621,
+      "estoque": 23521,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12534.jpg",
       "grupo": 64,
       "id": 12534,
@@ -51833,7 +51833,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1737,
+      "estoque": 1721,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1753.jpg",
       "grupo": 64,
       "id": 1753,
@@ -52463,7 +52463,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1072,
+      "estoque": 1064,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4909.jpg",
       "grupo": 64,
       "id": 4909,
@@ -53891,7 +53891,7 @@
     },
     {
       "descricao": "",
-      "estoque": 85,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2104.jpg",
       "grupo": 36,
       "id": 2104,
@@ -57013,7 +57013,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4950,
+      "estoque": 4942,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12132.jpg",
       "grupo": 64,
       "id": 12132,
@@ -57476,7 +57476,7 @@
     {
       "descricao": "",
       "estoque": 6,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13818.jpg",
       "grupo": 42,
       "id": 13818,
       "marca": "CARBOGRAFITE",
@@ -57485,12 +57485,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13818.jpg"
     },
     {
       "descricao": "",
       "estoque": 6,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13817.jpg",
       "grupo": 42,
       "id": 13817,
       "marca": "CARBOGRAFITE",
@@ -57499,7 +57499,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13817.jpg"
     },
     {
       "descricao": "",
@@ -59715,7 +59715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 6,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12582.jpg",
       "grupo": 64,
       "id": 12582,
@@ -60205,7 +60205,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4274,
+      "estoque": 4268,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1632.jpg",
       "grupo": 64,
       "id": 1632,
@@ -60303,7 +60303,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4619,
+      "estoque": 4599,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1637.jpg",
       "grupo": 64,
       "id": 1637,
@@ -60331,7 +60331,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4475,
+      "estoque": 4455,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1638.jpg",
       "grupo": 64,
       "id": 1638,
@@ -60373,7 +60373,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1148,
+      "estoque": 1128,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4898.jpg",
       "grupo": 64,
       "id": 4898,
@@ -62664,7 +62664,7 @@
       "preco": 94.44,
       "secao": 5,
       "subgrupo": 9999,
-      "unidade": "PE",
+      "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2084.jpg"
     },
     {
@@ -63369,6 +63369,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14057,
+      "marca": "JOCEC",
+      "nome": "ROLDANA GUIA SUPERIOR ROSC 17X42 1/2\" 10CM JOCEC",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/820.jpg",
       "grupo": 71,
@@ -63481,7 +63495,7 @@
     },
     {
       "descricao": "",
-      "estoque": 987,
+      "estoque": 985,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4320.jpg",
       "grupo": 71,
       "id": 4320,
@@ -65651,7 +65665,7 @@
     },
     {
       "descricao": "",
-      "estoque": 69,
+      "estoque": 68,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11148.jpg",
       "grupo": 69,
       "id": 11148,
@@ -67934,7 +67948,7 @@
     {
       "descricao": "",
       "estoque": 20,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13816.jpg",
       "grupo": 69,
       "id": 13816,
       "marca": "CARBOGRAFITE",
@@ -67943,7 +67957,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13816.jpg"
     },
     {
       "descricao": "",
@@ -68703,7 +68717,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12512.jpg",
       "grupo": 45,
       "id": 12512,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13535.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 20,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13536.jpg",
-      "grupo": 79,
-      "id": 13536,
-      "marca": "VONDER",
-      "nome": "TELA HEX VIVEIRO 1/2\" BWG 26 X 1,20 X 50M VONDER",
-      "preco": 514.87,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13536.jpg"
     }
   ]
 }

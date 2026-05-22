@@ -2,28 +2,28 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3019608
+      "saldo": 3020696
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 327545
+      "saldo": 329228
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 82356
+      "saldo": 83444
     },
     {
       "faixa": "91–180 dias",
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-22T14:05:14.348982",
+  "generated_at": "2026-05-22T16:06:29.228305",
   "kpis": {
-    "a_vencer_7d": 348427,
+    "a_vencer_7d": 349515,
     "juros_pagos": 74705,
-    "total_aberto": 3435668,
+    "total_aberto": 3439527,
     "total_pago_periodo": 5123932,
-    "total_vencido": 416060
+    "total_vencido": 418831
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -63,6 +63,20 @@
       "dias_atraso": 56,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
+      "saldo": 17831,
+      "vencimento": "2026-03-27T00:00:00"
+    },
+    {
+      "dias_atraso": 56,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
+      "saldo": 14804,
+      "vencimento": "2026-03-27T00:00:00"
+    },
+    {
+      "dias_atraso": 56,
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "loja": "Loja 4",
       "saldo": 7743,
       "vencimento": "2026-03-27T00:00:00"
     },
@@ -77,14 +91,7 @@
       "dias_atraso": 56,
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "loja": "Loja 4",
-      "saldo": 14804,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 17831,
+      "saldo": 1088,
       "vencimento": "2026-03-27T00:00:00"
     },
     {
@@ -93,21 +100,14 @@
       "loja": "Loja 4",
       "saldo": 4430,
       "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 50,
-      "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
-      "loja": "Loja 1",
-      "saldo": 14,
-      "vencimento": "2026-04-02T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 48,
-      "total_aberto": 1026019
+      "titulos": 51,
+      "total_aberto": 1029283
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
