@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2939692
+      "saldo": 2940499
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 331866
+      "saldo": 259106
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-23T07:33:07.557921",
+  "generated_at": "2026-05-23T08:40:12.672278",
   "kpis": {
-    "a_vencer_7d": 329346,
+    "a_vencer_7d": 330153,
     "juros_pagos": 74705,
-    "total_aberto": 3301922,
-    "total_pago_periodo": 5327973,
-    "total_vencido": 362230
+    "total_aberto": 3229969,
+    "total_pago_periodo": 5533055,
+    "total_vencido": 289470
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -74,13 +74,6 @@
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 26,
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "loja": "Loja 1",
-      "saldo": 6599,
-      "vencimento": "2026-04-27T00:00:00"
-    },
-    {
       "dias_atraso": 23,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
@@ -100,14 +93,21 @@
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "dias_atraso": 23,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
+      "vencimento": "2026-04-30T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 35,
-      "total_aberto": 910805
+      "titulos": 34,
+      "total_aberto": 850114
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
