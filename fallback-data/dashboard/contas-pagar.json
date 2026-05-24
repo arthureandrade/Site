@@ -2,112 +2,112 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3019608
+      "saldo": 2905950
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 327545
+      "saldo": 293655
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 82356
+      "saldo": 24205
     },
     {
       "faixa": "91–180 dias",
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-22T14:05:14.348982",
+  "generated_at": "2026-05-24T14:46:55.235976",
   "kpis": {
-    "a_vencer_7d": 348427,
-    "juros_pagos": 74705,
-    "total_aberto": 3435668,
-    "total_pago_periodo": 5123932,
-    "total_vencido": 416060
+    "a_vencer_7d": 295604,
+    "juros_pagos": 3641,
+    "total_aberto": 3229969,
+    "total_pago_periodo": 5104283,
+    "total_vencido": 324019
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-05-22",
-    "data_de": "2026-04-22"
+    "data_ate": "2026-05-24",
+    "data_de": "2026-04-24"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 176,
+      "dias_atraso": 178,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 138,
+      "dias_atraso": 140,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 109,
+      "dias_atraso": 111,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 7267,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 7743,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 2181,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 14804,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 17831,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 56,
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "loja": "Loja 4",
-      "saldo": 4430,
-      "vencimento": "2026-03-27T00:00:00"
-    },
-    {
-      "dias_atraso": 50,
+      "dias_atraso": 52,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
+    },
+    {
+      "dias_atraso": 47,
+      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
+      "loja": "Loja 1",
+      "saldo": 23125,
+      "vencimento": "2026-04-07T00:00:00"
+    },
+    {
+      "dias_atraso": 44,
+      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
+      "loja": "Loja 2",
+      "saldo": 1066,
+      "vencimento": "2026-04-10T00:00:00"
+    },
+    {
+      "dias_atraso": 24,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "dias_atraso": 24,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "dias_atraso": 24,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 83,
+      "vencimento": "2026-04-30T00:00:00"
+    },
+    {
+      "dias_atraso": 24,
+      "fornecedor": "FRW ATACADO LTDA",
+      "loja": "Loja 1",
+      "saldo": 419,
+      "vencimento": "2026-04-30T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 48,
-      "total_aberto": 1026019
+      "titulos": 34,
+      "total_aberto": 850114
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
