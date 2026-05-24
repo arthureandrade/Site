@@ -110,7 +110,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
         <div className="rounded-[18px] border border-gray-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-2.5 shadow-inner shadow-slate-100/70 sm:rounded-[22px] sm:p-3">
           {ocultarPreco ? (
             <>
-              <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Preco sob consulta</span>
+              <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Preço sob consulta</span>
               <span className="mt-1 block text-[11px] font-bold uppercase tracking-wide text-primary">
                 Consulte no WhatsApp
               </span>
@@ -135,14 +135,14 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
               )}
             </>
           ) : (
-            <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Consultar preco</span>
+            <span className="text-xs font-bold uppercase tracking-wide text-gray-500">Consultar preço</span>
           )}
 
           {!ocultarEstoque && temEstoque && (
             <span className="mt-2 block text-[11px] text-gray-500">
               {produto.estoque >= 1000
-                ? `${(produto.estoque / 1000).toFixed(0)}k un. disponiveis`
-                : `${produto.estoque} un. disponiveis`}
+                ? `${(produto.estoque / 1000).toFixed(0)}k un. disponíveis`
+                : `${produto.estoque} un. disponíveis`}
             </span>
           )}
         </div>

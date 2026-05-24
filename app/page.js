@@ -5,19 +5,19 @@ import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
 import { getHomeConfig, getProdutos } from '@/lib/api'
 
 export const metadata = {
-  title: 'Galpao do Aco | Material de construcao, ferragens e aco',
+  title: 'Galpão do Aço | Material de construção, ferragens e aço',
 }
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 const TELEFONE = '(95) 3224-0115'
 
 const CATEGORIAS = [
-  { nome: 'Ferro e aco', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
+  { nome: 'Ferro e aço', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
   { nome: 'Ferragens', busca: 'ferragem', cor: 'from-red-700 to-red-500' },
   { nome: 'Telhas', busca: 'telha', cor: 'from-neutral-800 to-neutral-600' },
   { nome: 'Parafusos', busca: 'parafuso', cor: 'from-zinc-800 to-zinc-600' },
   { nome: 'Estruturas', busca: 'estrutura', cor: 'from-black to-gray-700' },
-  { nome: 'Maquinas', busca: 'maquina', cor: 'from-red-900 to-red-600' },
+  { nome: 'Máquinas', busca: 'maquina', cor: 'from-red-900 to-red-600' },
 ]
 
 export default async function HomePage() {
@@ -104,15 +104,15 @@ export default async function HomePage() {
       <section className="border-b border-red-700 bg-primary py-2 text-white">
         <div className="mx-auto flex max-w-[1760px] items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6 lg:px-8">
           <span>{TELEFONE}</span>
-          <span className="hidden sm:inline">Av. Ataide Teive, 5928</span>
-          <span className="hidden lg:inline">Av. Ataide Teive, 4509</span>
+          <span className="hidden sm:inline">Av. Ataíde Teive, 5928</span>
+          <span className="hidden lg:inline">Av. Ataíde Teive, 4509</span>
         </div>
       </section>
 
       <HeroCarousel
         images={heroSlides}
-        title={config?.hero_title || 'Ofertas em aco para sua obra'}
-        subtitle={config?.hero_subtitle || 'Estoque real, preco atualizado e atendimento rapido no WhatsApp.'}
+        title={config?.hero_title || 'Ofertas em aço para sua obra'}
+        subtitle={config?.hero_subtitle || 'Estoque real, preço atualizado e atendimento rápido no WhatsApp.'}
       />
 
       <VitrineSubgrupo24
@@ -120,14 +120,14 @@ export default async function HomePage() {
         produtos={produtosSubgrupo29}
         origem={origemSubgrupo29}
         label="Ferramentas motorizadas"
-        titulo="Potencia, torque e corte pesado para quem precisa produzir mais"
-        descricao="Uma vitrine mais tecnica para motores, cortes, impacto e equipamentos que pedem mais desempenho no trabalho pesado."
+        titulo="Potência, torque e corte pesado para quem precisa produzir mais"
+        descricao="Uma vitrine mais técnica para motores, cortes, impacto e equipamentos que pedem mais desempenho no trabalho pesado."
         href="/produtos?subgrupo=29"
         cta="Ver linha motorizada"
         desconto={14}
-        badge="Alta potencia"
-        vazioTitulo="Nao ha ferramenta motorizada em destaque no momento."
-        resumo={`${produtosSubgrupo29.length} item${produtosSubgrupo29.length !== 1 ? 's' : ''} motorizado${produtosSubgrupo29.length !== 1 ? 's' : ''} reunido${produtosSubgrupo29.length !== 1 ? 's' : ''} em uma vitrine tecnica de alta demanda.`}
+        badge="Alta potência"
+        vazioTitulo="Não há ferramenta motorizada em destaque no momento."
+        resumo={`${produtosSubgrupo29.length} item${produtosSubgrupo29.length !== 1 ? 's' : ''} motorizado${produtosSubgrupo29.length !== 1 ? 's' : ''} reunido${produtosSubgrupo29.length !== 1 ? 's' : ''} em uma vitrine técnica de alta demanda.`}
         tema="motor"
         cardVariant="motor"
       />
@@ -136,21 +136,21 @@ export default async function HomePage() {
         sectionId="mais-vendidos-obra"
         produtos={produtosSubgrupo26}
         origem={origemSubgrupo26}
-        label="Mais vendidos da obra ðŸ”¥"
-        titulo="Os itens que mais giram para obra e reposicao rapida"
-        descricao="Os produtos que mais saem para obra, reforma e manutencao, reunidos para facilitar sua compra."
+        label="Mais vendidos da obra"
+        titulo="Os itens que mais giram para obra e reposição rápida"
+        descricao="Os produtos que mais saem para obra, reforma e manutenção, reunidos para facilitar sua compra."
         href="/produtos?subgrupo=26"
         cta="Ver mais vendidos"
         desconto={12}
         badge="Giro forte"
-        vazioTitulo="Nao ha item de giro forte no momento."
+        vazioTitulo="Não há item de giro forte no momento."
         resumo={`${produtosSubgrupo26.length} item${produtosSubgrupo26.length !== 1 ? 's' : ''} com giro forte em destaque para acelerar a compra.`}
       />
 
       <VitrineSubgrupo24
         produtos={produtosSubgrupo24}
         origem={origemSubgrupo24}
-        descricao="Ofertas online selecionadas para voce economizar e comprar com mais agilidade."
+        descricao="Ofertas online selecionadas para você economizar e comprar com mais agilidade."
         resumo={`${produtosSubgrupo24.length} oferta${produtosSubgrupo24.length !== 1 ? 's' : ''} em destaque carregada${produtosSubgrupo24.length !== 1 ? 's' : ''} para compra online.`}
       />
 
@@ -159,13 +159,13 @@ export default async function HomePage() {
         produtos={produtosSubgrupo28}
         origem={origemSubgrupo28}
         label="Produtos para fazenda"
-        titulo="Selecao comercial para fazenda, manejo e rotina do campo"
+        titulo="Seleção comercial para fazenda, manejo e rotina do campo"
         descricao="Itens escolhidos para facilitar a compra de produtos ligados ao trabalho rural e ao dia a dia da fazenda."
         href="/produtos?subgrupo=28"
         cta="Ver linha fazenda"
         desconto={14}
         badge="Campo"
-        vazioTitulo="Nao ha produto para fazenda em destaque no momento."
+        vazioTitulo="Não há produto para fazenda em destaque no momento."
         resumo={`${produtosSubgrupo28.length} item${produtosSubgrupo28.length !== 1 ? 's' : ''} da linha fazenda com 14% de desconto online.`}
         tema="green"
         cardVariant="farm"
@@ -176,13 +176,13 @@ export default async function HomePage() {
         produtos={produtosSubgrupo27}
         origem={origemSubgrupo27}
         label="Ferramentas profissionais"
-        titulo="Linha profissional para uso intenso e compra mais tecnica"
+        titulo="Linha profissional para uso intenso e compra mais técnica"
         descricao="Ferramentas escolhidas para quem precisa de desempenho, durabilidade e resultado no dia a dia."
         href="/produtos?subgrupo=27"
         cta="Ver ferramentas"
         desconto={12}
         badge="Profissional"
-        vazioTitulo="Nao ha ferramenta profissional em destaque no momento."
+        vazioTitulo="Não há ferramenta profissional em destaque no momento."
         resumo={`${produtosSubgrupo27.length} ferramenta${produtosSubgrupo27.length !== 1 ? 's' : ''} profissional${produtosSubgrupo27.length !== 1 ? 'is' : ''} em destaque na vitrine.`}
       />
 
@@ -191,13 +191,13 @@ export default async function HomePage() {
         produtos={produtosSubgrupo30}
         origem={origemSubgrupo30}
         label="Maquinas de solda"
-        titulo="Linha de solda com oferta online para acelerar a compra tecnica"
-        descricao="Selecionamos maquinas de solda para dar mais velocidade na escolha e destacar oportunidades com desconto direto no site."
+        titulo="Linha de solda com oferta online para acelerar a compra técnica"
+        descricao="Selecionamos máquinas de solda para dar mais velocidade na escolha e destacar oportunidades com desconto direto no site."
         href="/produtos?subgrupo=30"
-        cta="Ver maquinas de solda"
+        cta="Ver máquinas de solda"
         desconto={14}
         badge="Solda"
-        vazioTitulo="Nao ha maquina de solda em destaque no momento."
+        vazioTitulo="Não há máquina de solda em destaque no momento."
         resumo={`${produtosSubgrupo30.length} item${produtosSubgrupo30.length !== 1 ? 's' : ''} da linha de solda com 14% de desconto online.`}
       />
 
@@ -205,8 +205,8 @@ export default async function HomePage() {
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: 'Operacao estruturada', texto: 'Mix amplo, condicao comercial clara e atendimento preparado para volume.' },
-            { titulo: 'Compra com mais confianca', texto: 'Preco, oferta e disponibilidade organizados para decisao mais rapida.' },
-            { titulo: 'Atendimento comercial forte', texto: 'Equipe focada em obra, serralheria, reposicao e venda recorrente.' },
+            { titulo: 'Compra com mais confiança', texto: 'Preço, oferta e disponibilidade organizados para decisão mais rápida.' },
+            { titulo: 'Atendimento comercial forte', texto: 'Equipe focada em obra, serralheria, reposição e venda recorrente.' },
           ].map((item) => (
             <div key={item.titulo} className="surface-panel rounded-[26px] px-5 py-5">
               <div className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">{item.titulo}</div>
@@ -222,7 +222,7 @@ export default async function HomePage() {
             <div className="eyebrow">Categorias principais</div>
             <h2 className="mt-3 text-xl font-black uppercase text-gray-900 sm:text-2xl">Compre por linha de produto</h2>
             <p className="mt-1.5 max-w-3xl text-[13px] leading-relaxed text-slate-600 sm:mt-2 sm:text-sm">
-              Organizamos o catalogo por frentes de compra para deixar a navegacao mais rapida e profissional.
+              Organizamos o catálogo por frentes de compra para deixar a navegação mais rápida e profissional.
             </p>
           </div>
 
@@ -248,17 +248,17 @@ export default async function HomePage() {
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <div className="text-[11px] font-black uppercase tracking-[0.28em] text-[#ff5a0a]">SaldÃ£o</div>
+              <div className="text-[11px] font-black uppercase tracking-[0.28em] text-[#ff5a0a]">Saldão</div>
               <h2 className="mt-2 text-xl font-black uppercase text-[#13214e] sm:text-[1.9rem]">Queima online com 18% de desconto</h2>
               <p className="mt-1.5 max-w-3xl text-[13px] text-slate-600 sm:mt-2 sm:text-sm">
-                Itens do subgrupo 25 em um carrossel de ofertas para girar estoque mais rapido sem perder visibilidade.
+                Itens do subgrupo 25 em um carrossel de ofertas para girar estoque mais rápido sem perder visibilidade.
               </p>
             </div>
             <Link
               href="/produtos?subgrupo=25"
               className="inline-flex rounded-2xl border border-[#ff5a0a] px-4 py-2.5 text-xs sm:px-5 sm:py-3 sm:text-sm font-black uppercase tracking-wide text-[#ff5a0a] transition hover:bg-[#ff5a0a] hover:text-white"
             >
-              Ver saldÃ£o
+              Ver saldão
             </Link>
           </div>
 
@@ -269,9 +269,9 @@ export default async function HomePage() {
       <section className="bg-[#f6f7f8] py-8 sm:py-10">
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
-            { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rapido para obras, oficinas e serralherias.' },
-            { titulo: 'Grande estoque disponivel', texto: 'Produtos ativos com consulta de preco e estoque integrada ao ERP.' },
-            { titulo: 'Compra agil no WhatsApp', texto: 'Peca seu orcamento e feche o pedido com resposta mais rapida.' },
+            { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rápido para obras, oficinas e serralherias.' },
+            { titulo: 'Grande estoque disponível', texto: 'Produtos ativos com consulta de preço e estoque integrada ao ERP.' },
+            { titulo: 'Compra ágil no WhatsApp', texto: 'Peça seu orçamento e feche o pedido com resposta mais rápida.' },
           ].map((item) => (
             <div key={item.titulo} className="surface-panel rounded-[28px] p-6">
               <div className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">Confianca comercial</div>
@@ -285,9 +285,9 @@ export default async function HomePage() {
       <section className="bg-brand py-10 text-white" id="contato">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <div className="eyebrow !border-white/10 !bg-white/10 !text-primary">CTA final</div>
-          <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">Peca seu orcamento agora no WhatsApp</h2>
+          <h2 className="mt-3 text-3xl font-black uppercase sm:text-5xl">Peça seu orçamento agora no WhatsApp</h2>
           <p className="mt-4 text-lg text-gray-300">
-            Envie sua lista de materiais e receba atendimento rapido para cotacao, separacao e retirada.
+            Envie sua lista de materiais e receba atendimento rápido para cotação, separação e retirada.
           </p>
           <a
             href={`https://wa.me/${WHATSAPP}`}

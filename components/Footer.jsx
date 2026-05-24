@@ -12,13 +12,13 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-4 flex items-center gap-2.5">
               <div className="relative h-14 w-[210px]">
-                <Image src="/logo.jpeg" alt="Galpao do Aco" fill className="object-contain object-left" />
+                <Image src="/logo.jpeg" alt="Galpão do Aço" fill className="object-contain object-left" />
               </div>
             </div>
 
             <p className="mb-5 max-w-md text-sm leading-relaxed text-slate-400">
-              A solucao certa para sua obra em Boa Vista, com estoque real, atendimento comercial rapido
-              e uma vitrine organizada para compras mais confiaveis.
+              A solução certa para sua obra em Boa Vista, com estoque real, atendimento comercial rápido
+              e uma vitrine organizada para compras mais confiáveis.
             </p>
 
             <div className="mb-5 space-y-2 text-sm">
@@ -28,8 +28,8 @@ export default function Footer() {
               <a href="tel:9532240115" className="block text-lg font-bold text-white transition-colors hover:text-primary">
                 Telefone: {telefone}
               </a>
-              <p>Av. Ataide Teive, 5928</p>
-              <p>Av. Ataide Teive, 4509</p>
+              <p>Av. Ataíde Teive, 5928</p>
+              <p>Av. Ataíde Teive, 4509</p>
             </div>
 
             <a
@@ -46,12 +46,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-white">Navegacao</h4>
+            <h4 className="mb-4 text-[11px] font-black uppercase tracking-[0.24em] text-white">Navegação</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="transition-colors hover:text-white">Inicio</Link></li>
+              <li><Link href="/" className="transition-colors hover:text-white">Início</Link></li>
               <li><Link href="/produtos" className="transition-colors hover:text-white">Produtos</Link></li>
-              <li><Link href="/produtos?categoria=ferro_aco" className="transition-colors hover:text-white">Ferro e Aco</Link></li>
-              <li><Link href="/vendedor" className="transition-colors hover:text-white">Area do vendedor</Link></li>
+              <li><Link href="/produtos?categoria=ferro_aco" className="transition-colors hover:text-white">Ferro e Aço</Link></li>
+              <li><Link href="/vendedor" className="transition-colors hover:text-white">Área do vendedor</Link></li>
             </ul>
           </div>
 
@@ -85,21 +85,21 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Av. Ataide Teive, 5928
+                Av. Ataíde Teive, 5928
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Av. Ataide Teive, 4509
+                Av. Ataíde Teive, 4509
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} Galpao do Aco. Todos os direitos reservados. Boa Vista/RR
+          © {new Date().getFullYear()} Galpão do Aço. Todos os direitos reservados. Boa Vista/RR
         </div>
       </div>
     </footer>

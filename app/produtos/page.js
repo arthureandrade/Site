@@ -1,23 +1,37 @@
 import ProdutosCliente from '@/components/ProdutosCliente'
+import { carregarCatalogoInicial } from '@/lib/catalogoPublico'
 
 export const metadata = {
-  title: 'Produtos | Galpao do Aco',
-  description: 'Catalogo completo de material de construcao com estoque real e precos atualizados.',
+  title: 'Produtos | Galpão do Aço',
+  description: 'Catálogo completo de material de construção com estoque real e preços atualizados.',
 }
 
-export default function ProdutosPage({ searchParams }) {
-  const initialBusca = searchParams?.busca || ''
-  const initialMarca = searchParams?.marca || ''
-  const initialCategoria = searchParams?.categoria || ''
-  const initialSecao = searchParams?.secao || ''
-  const initialSubgrupo = searchParams?.subgrupo || ''
+export default async function ProdutosPage({ searchParams }) {
+  const params = (await searchParams) || {}
+  const initialBusca = params?.busca || ''
+  const initialMarca = params?.marca || ''
+  const initialCategoria = params?.categoria || ''
+  const initialSecao = params?.secao || ''
+  const initialSubgrupo = params?.subgrupo || ''
   const descricao = initialCategoria === 'ferro_aco'
-    ? 'Ferro e Aco da secao 6. Valores sob consulta no WhatsApp.'
+    ? 'Ferro e aço da seção 6. Valores sob consulta no WhatsApp.'
     : initialSecao && initialSubgrupo
-      ? `Produtos filtrados pela secao ${initialSecao} e subgrupo ${initialSubgrupo}.`
+      ? `Produtos filtrados pela seção ${initialSecao} e subgrupo ${initialSubgrupo}.`
       : initialSubgrupo
         ? `Produtos filtrados pelo subgrupo ${initialSubgrupo}.`
-      : 'Precos e estoque atualizados em tempo real direto do nosso sistema.'
+      : 'Preços e estoque atualizados em tempo real direto do nosso sistema.'
+
+  const catalogoInicial = await carregarCatalogoInicial({
+    busca: initialBusca,
+    marca: initialMarca,
+    categoriaEspecial: initialCategoria,
+    secaoEspecial: initialSecao,
+    subgrupoEspecial: initialSubgrupo,
+    emEstoque: true,
+  })
+
+  const produtosIniciais = catalogoInicial.produtos || []
+  const marcasIniciais = catalogoInicial.marcasCatalogo || []
 
   return (
     <>
@@ -35,6 +49,8 @@ export default function ProdutosPage({ searchParams }) {
         initialCategoria={initialCategoria}
         initialSecao={initialSecao}
         initialSubgrupo={initialSubgrupo}
+        initialProdutos={produtosIniciais}
+        initialMarcasCatalogo={marcasIniciais}
       />
     </>
   )

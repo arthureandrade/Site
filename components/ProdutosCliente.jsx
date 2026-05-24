@@ -1,107 +1,21 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
-import { normalizarCategoriaComercial, obterCategoriaMarcaPorMapa } from '../lib/brandCategories'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
 import { getProdutos } from '../lib/api'
-
-const CATEGORIAS_MARCA = [
-  { nome: 'Ferro e Aco', termos: ['aco', 'metalon', 'perfil', 'tubo', 'barra', 'cantoneira', 'vergalhao', 'trelica', 'chapa', 'tela'] },
-  { nome: 'Construcao e Coberturas', termos: ['cimento', 'argamassa', 'rejunte', 'massa', 'concreto', 'bloco', 'tijolo', 'telha', 'laje'] },
-  { nome: 'Ferramentas e Maquinas', termos: ['betoneira', 'cortadora', 'furadeira', 'serra', 'maquina', 'motor', 'esmerilhadeira', 'compactador', 'lixadeira', 'vibratoria'] },
-  { nome: 'Ferragens e Fixacao', termos: ['parafuso', 'porca', 'arruela', 'fixador', 'corrente', 'cadeado', 'fechadura', 'dobradica', 'ferragem'] },
-  { nome: 'Solda e Abrasivos', termos: ['solda', 'eletrodo', 'disco', 'abrasivo', 'corte', 'desbaste'] },
-  { nome: 'Hidraulica', termos: ['torneira', 'registro', 'conexao', 'tubo pvc', 'hidraul', 'caixa d agua', 'valvula'] },
-  { nome: 'Eletrica', termos: ['fio', 'cabo', 'disjuntor', 'tomada', 'lampada', 'led', 'eletroduto', 'eletric'] },
-  { nome: 'Tintas e Quimicos', termos: ['tinta', 'selador', 'verniz', 'thinner', 'solvente', 'impermeabil', 'silicone', 'cola', 'espuma'] },
-]
-
-function normalizarTexto(valor) {
-  return String(valor || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-}
-
-function inferirCategoriaMarca(marca, produtosDaMarca) {
-  const categoriaPesquisada = obterCategoriaMarcaPorMapa(marca)
-  if (categoriaPesquisada) return categoriaPesquisada
-
-  const base = normalizarTexto(
-    produtosDaMarca
-      .map((p) => `${p.nome || ''} ${p.descricao || ''} ${p.marca || ''}`)
-      .join(' ')
-  )
-
-  for (const categoria of CATEGORIAS_MARCA) {
-    if (categoria.termos.some((termo) => base.includes(termo))) {
-      return normalizarCategoriaComercial(categoria.nome)
-    }
-  }
-
-  return 'Outras marcas'
-}
-
-function montarMarcasCatalogo(produtos) {
-  const mapa = new Map()
-
-  for (const produto of produtos) {
-    if (!produto?.marca) continue
-    const marca = String(produto.marca).trim()
-    if (!marca || marca.toUpperCase() === 'GERAL') continue
-
-    if (!mapa.has(marca)) mapa.set(marca, [])
-    mapa.get(marca).push(produto)
-  }
-
-  return Array.from(mapa.entries())
-    .map(([marca, itens]) => ({
-      marca,
-      categoria: inferirCategoriaMarca(marca, itens),
-      quantidade: itens.length,
-    }))
-    .sort((a, b) => b.quantidade - a.quantidade || a.marca.localeCompare(b.marca, 'pt-BR'))
-}
-
-function produtoCasaBuscaCatalogo(produto, busca) {
-  const buscaNormalizada = normalizarTexto(busca)
-  const nome = normalizarTexto(produto?.nome || '')
-  const descricao = normalizarTexto(produto?.descricao || '')
-  const marca = normalizarTexto(produto?.marca || '')
-  const codigo = String(produto?.id || '')
-  return (
-    nome.includes(buscaNormalizada) ||
-    descricao.includes(buscaNormalizada) ||
-    marca.includes(buscaNormalizada) ||
-    codigo.includes(buscaNormalizada)
-  )
-}
-
-function ehProdutoRamassolCatalogo(produto) {
-  return normalizarTexto(produto?.marca || '').includes('ramassol')
-}
-
-function buscaEhRamassol(busca) {
-  return normalizarTexto(busca).includes('ramassol')
-}
-
-function calcularScoreComercial(produto) {
-  const preco = Number(produto?.preco || 0)
-  const estoque = Number(produto?.estoque || 0)
-  return (preco + estoque) / 2
-}
-
-function calcularScoreFerroAco(produto) {
-  const nome = normalizarTexto(produto?.nome)
-  if (nome.startsWith('perfil')) return 1000000 + calcularScoreComercial(produto)
-  return calcularScoreComercial(produto)
-}
-
-function buscaEhCodigo(busca) {
-  return /^\d+$/.test(String(busca || '').trim())
-}
+import {
+  buscaEhCodigo,
+  buscaEhRamassol,
+  calcularScoreComercial,
+  calcularScoreFerroAco,
+  ehProdutoRamassolCatalogo,
+  inferirCategoriaMarca,
+  montarMarcasCatalogo,
+  normalizarTexto,
+  produtoCasaBuscaCatalogo,
+} from '../lib/catalogoPublico'
 
 export default function ProdutosCliente({
   initialBusca = '',
@@ -109,9 +23,13 @@ export default function ProdutosCliente({
   initialCategoria = '',
   initialSecao = '',
   initialSubgrupo = '',
+  initialProdutos = [],
+  initialMarcasCatalogo = [],
 }) {
-  const [todosProdutos, setTodosProdutos] = useState([])
-  const [loading, setLoading] = useState(true)
+  const possuiCatalogoInicial = initialProdutos.length > 0 || initialMarcasCatalogo.length > 0
+  const pularPrimeiroRefetch = useRef(possuiCatalogoInicial)
+  const [todosProdutos, setTodosProdutos] = useState(initialProdutos)
+  const [loading, setLoading] = useState(!possuiCatalogoInicial)
   const [erro, setErro] = useState(false)
   const [page, setPage] = useState(0)
   const [busca, setBusca] = useState(initialBusca)
@@ -122,8 +40,8 @@ export default function ProdutosCliente({
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
   const [emEstoque, setEmEstoque] = useState(true)
-  const [marcasCatalogo, setMarcasCatalogo] = useState([])
-  const [loadingMarcas, setLoadingMarcas] = useState(true)
+  const [marcasCatalogo, setMarcasCatalogo] = useState(initialMarcasCatalogo)
+  const [loadingMarcas, setLoadingMarcas] = useState(!possuiCatalogoInicial)
   const [produtosPorPagina, setProdutosPorPagina] = useState(24)
   const [mostrarTodasCategorias, setMostrarTodasCategorias] = useState(false)
   const [mostrarTodasMarcas, setMostrarTodasMarcas] = useState(false)
@@ -239,11 +157,16 @@ export default function ProdutosCliente({
   }, [categoriaEspecial, secaoEspecial, subgrupoEspecial])
 
   useEffect(() => {
+    if (possuiCatalogoInicial) return
     fetchProdutos(0, initialBusca, initialMarca, true)
     fetchMarcas()
-  }, [fetchProdutos, fetchMarcas, initialBusca, initialMarca])
+  }, [fetchProdutos, fetchMarcas, initialBusca, initialMarca, possuiCatalogoInicial])
 
   useEffect(() => {
+    if (pularPrimeiroRefetch.current) {
+      pularPrimeiroRefetch.current = false
+      return
+    }
     const t = setTimeout(() => {
       setPage(0)
       fetchProdutos(0, busca, marcaFiltro, emEstoque)
@@ -329,7 +252,7 @@ export default function ProdutosCliente({
             <div className="border-b border-white/10 bg-brand px-5 py-4">
               <div className="flex items-center justify-between gap-3">
                 <div>
-                  <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Catalogo</p>
+                  <p className="mb-1 text-[11px] font-bold uppercase tracking-[0.25em] text-primary">Catálogo</p>
                   <h2 className="font-display text-2xl uppercase leading-none text-white">Filtros laterais</h2>
                 </div>
                 <button
@@ -391,7 +314,7 @@ export default function ProdutosCliente({
                     onClick={() => setCategoriaAtiva('Todas')}
                     aria-label="Limpar categoria"
                   >
-                    <span className="text-lg leading-none">⌃</span>
+                    <span className="text-lg leading-none">×</span>
                   </button>
                 </div>
                 <div className="space-y-2 rounded-2xl border border-gray-200 p-3">
@@ -434,7 +357,7 @@ export default function ProdutosCliente({
                     onClick={() => setMarcaFiltro('')}
                     aria-label="Limpar marca"
                   >
-                    <span className="text-lg leading-none">⌃</span>
+                    <span className="text-lg leading-none">×</span>
                   </button>
                 </div>
 
@@ -442,7 +365,7 @@ export default function ProdutosCliente({
                   <div className="mb-3 flex items-center gap-2 rounded-xl border border-gray-200 px-3 py-2">
                     <input
                       type="text"
-                      placeholder="Busque por Marcas..."
+                      placeholder="Busque por marcas..."
                       value={buscaMarca}
                       onChange={(e) => setBuscaMarca(e.target.value)}
                       className="w-full bg-transparent text-sm outline-none"
@@ -511,15 +434,15 @@ export default function ProdutosCliente({
             <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
               <div>
                 <div className="mb-3 h-1 w-12 rounded bg-primary" />
-                <h3 className="font-display text-2xl uppercase text-gray-900 sm:text-3xl">Catalogo de Produtos</h3>
+                <h3 className="font-display text-2xl uppercase text-gray-900 sm:text-3xl">Catálogo de Produtos</h3>
                 <p className="mt-1 text-sm text-gray-500">
                   {categoriaEspecial === 'ferro_aco'
-                    ? 'Catalogo de aco da secao 6. Exibicao sem preco e sem estoque, apenas para mostrar o mix disponivel.'
+                    ? 'Catálogo de aço da seção 6. Exibição sem preço e sem estoque, apenas para mostrar o mix disponível.'
                     : secaoEspecial && subgrupoEspecial
-                      ? `Exibindo produtos da secao ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
+                      ? `Exibindo produtos da seção ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
                       : subgrupoEspecial
                         ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
-                        : 'Exibindo produtos com preco e itens estrategicos de marca. Use a lateral para navegar por categorias e marcas.'}
+                        : 'Exibindo produtos com preço e itens estratégicos de marca. Use a lateral para navegar por categorias e marcas.'}
                 </p>
               </div>
 
@@ -533,13 +456,13 @@ export default function ProdutosCliente({
                   {totalFiltrado.toLocaleString('pt-BR')} produto{totalFiltrado !== 1 ? 's' : ''}
                 </span>
                 <span className="rounded-full bg-amber-50 px-3 py-1.5 font-bold uppercase tracking-wide text-amber-700">
-                  Ordenado pela media entre valor e estoque
+                  Ordenado pela média entre valor e estoque
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
                 <label className="text-xs font-bold uppercase tracking-[0.18em] text-gray-500">
-                  Itens por pagina
+                  Itens por página
                 </label>
                 <select
                   value={produtosPorPagina}
@@ -559,6 +482,10 @@ export default function ProdutosCliente({
             </div>
           </div>
 
+          <div className="sr-only" aria-live="polite">
+            {totalFiltrado.toLocaleString('pt-BR')} produtos disponíveis no catálogo.
+          </div>
+
           {loading ? (
             <SkeletonGrid count={produtosPorPagina} />
           ) : erro ? (
@@ -568,8 +495,8 @@ export default function ProdutosCliente({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-xl font-black uppercase text-gray-800">Nao foi possivel carregar os produtos</h3>
-              <p className="mb-6 text-sm text-gray-500">Verifique a conexao com a API.</p>
+              <h3 className="mb-2 text-xl font-black uppercase text-gray-800">Não foi possível carregar os produtos</h3>
+              <p className="mb-6 text-sm text-gray-500">Verifique a conexão com a API.</p>
               <button onClick={() => fetchProdutos(page, busca, marcaFiltro, emEstoque)} className="btn-primary">
                 Tentar novamente
               </button>
@@ -639,7 +566,7 @@ export default function ProdutosCliente({
                     onClick={() => handlePage(page + 1)}
                     className="rounded border border-gray-300 px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-40"
                   >
-                    Proxima →
+                    Próxima →
                   </button>
                 </div>
               )}

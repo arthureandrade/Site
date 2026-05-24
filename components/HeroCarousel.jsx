@@ -38,7 +38,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
 
       <div className="relative mx-auto grid max-w-[1760px] gap-5 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:px-8 lg:py-14">
         <div className="relative z-10">
-          <span className="trust-chip">Operacao comercial com estoque real</span>
+          <span className="trust-chip">Operação comercial com estoque real</span>
           <h1 className="mt-3 max-w-3xl text-[2rem] font-black uppercase leading-[0.98] text-white sm:mt-4 sm:text-4xl lg:text-5xl">
             {title}
           </h1>
@@ -47,7 +47,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
           </p>
           <div className="mt-5 flex flex-wrap gap-2 sm:mt-6 sm:gap-3">
             <span className="trust-chip">Compra online</span>
-            <span className="trust-chip">Retirada rapida</span>
+            <span className="trust-chip">Retirada rápida</span>
             <span className="trust-chip">Atendimento no WhatsApp</span>
           </div>
           <div className="mt-5 grid gap-3 sm:mt-6 sm:flex sm:flex-wrap">
@@ -84,10 +84,10 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
 
         <div className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1 lg:mx-0 lg:grid lg:grid-cols-2 lg:overflow-visible lg:px-0 lg:pb-0">
           {[
-            { titulo: '+ clientes atendidos', valor: 'Milhares', detalhe: 'Atuacao forte em obra, serralheria e manutencao' },
-            { titulo: 'Grande estoque', valor: 'Sempre ativo', detalhe: 'Mix amplo para compra rapida e recorrente' },
-            { titulo: 'Parcelamento', valor: '10x sem juros', detalhe: 'Condicao clara para acelerar conversao' },
-            { titulo: 'Atendimento', valor: 'Resposta rapida', detalhe: 'Equipe comercial pronta no WhatsApp' },
+            { titulo: '+ clientes atendidos', valor: 'Milhares', detalhe: 'Atuação forte em obra, serralheria e manutenção' },
+            { titulo: 'Grande estoque', valor: 'Sempre ativo', detalhe: 'Mix amplo para compra rápida e recorrente' },
+            { titulo: 'Parcelamento', valor: '10x sem juros', detalhe: 'Condição clara para acelerar conversão' },
+            { titulo: 'Atendimento', valor: 'Resposta rápida', detalhe: 'Equipe comercial pronta no WhatsApp' },
           ].map((item) => (
             <div
               key={item.titulo}

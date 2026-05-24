@@ -8,12 +8,12 @@ import Script from 'next/script'
 
 export const metadata = {
   title: {
-    default: 'Galpao do Aco | Material de Construcao',
-    template: '%s | Galpao do Aco',
+    default: 'Galpão do Aço | Material de Construção',
+    template: '%s | Galpão do Aço',
   },
   description:
-    'Sua loja de material de construcao com os melhores precos. Cimento, ferro, aco e muito mais.',
-  keywords: ['material de construcao', 'cimento', 'ferro', 'aco', 'galpao do aco'],
+    'Sua loja de material de construção com os melhores preços. Cimento, ferro, aço e muito mais.',
+  keywords: ['material de construção', 'cimento', 'ferro', 'aço', 'galpão do aço'],
   icons: {
     icon: '/logo.jpeg',
     shortcut: '/logo.jpeg',
