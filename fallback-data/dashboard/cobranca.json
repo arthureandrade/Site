@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 515005.52
+      "saldo": 512567.37
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 121656.51
+      "saldo": 124138.14
     },
     {
       "faixa": "180+ dias",
-      "saldo": 111124.47
+      "saldo": 111172.4
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 77609.55
+      "saldo": 77729.65
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 16726.14
+      "saldo": 16735.01
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15120.1
+      "saldo": 15126.23
     }
   ],
-  "generated_at": "2026-05-23T20:13:20.506402",
+  "generated_at": "2026-05-24T00:42:28.283000",
   "kpis": {
-    "clientes_atraso": 62,
-    "total_aberto": 857242.2899999999,
-    "total_atraso": 342236.77,
-    "total_vencer": 515005.52
+    "clientes_atraso": 65,
+    "total_aberto": 857468.7999999999,
+    "total_atraso": 344901.43000000005,
+    "total_vencer": 512567.36999999994
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 1920.74,
+      "saldo": 1922.66,
       "vencimento": "2026-05-20T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
-      "saldo": 4663.95,
+      "saldo": 4668.6,
       "vencimento": "2026-05-20T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 3515.52,
+      "saldo": 3519.02,
       "vencimento": "2026-05-20T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 4",
       "saldo": 1500,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 4",
       "saldo": 2050,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 678.15,
       "vencimento": "2026-05-23T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 56.18,
       "vencimento": "2026-05-24T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 60,
       "vencimento": "2026-05-24T00:00:00"
     },
     {
       "cliente": "ESDRAS MATUZALEM DA SILVA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 226.2,
       "vencimento": "2026-05-27T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 178.09,
       "vencimento": "2026-05-27T00:00:00"
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 399,
+      "maior_atraso": 400,
       "titulos": 3,
-      "total_atraso": 49054.630000000005
+      "total_atraso": 49101.6
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 442,
+      "maior_atraso": 443,
       "titulos": 7,
-      "total_atraso": 39555.44
+      "total_atraso": 39556.69
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 1,
+      "maior_atraso": 2,
       "titulos": 1,
       "total_atraso": 31911.45
     },
     {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
-      "maior_atraso": 38,
+      "maior_atraso": 39,
       "titulos": 1,
-      "total_atraso": 23932.69
+      "total_atraso": 24001.64
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 724,
+      "maior_atraso": 725,
       "titulos": 16,
-      "total_atraso": 20899.829999999998
+      "total_atraso": 20912.129999999997
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 1,
+      "maior_atraso": 2,
       "titulos": 1,
       "total_atraso": 14705.9
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 39,
+      "maior_atraso": 40,
       "titulos": 4,
-      "total_atraso": 13180.06
+      "total_atraso": 13192.99
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 108,
+      "maior_atraso": 109,
       "titulos": 5,
-      "total_atraso": 12912.86
+      "total_atraso": 12925.59
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 895,
+      "maior_atraso": 896,
       "titulos": 2,
-      "total_atraso": 12309.34
+      "total_atraso": 12316.2
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 17,
+      "maior_atraso": 18,
       "titulos": 6,
-      "total_atraso": 9118.17
+      "total_atraso": 9123.66
     }
   ]
 }
