@@ -2,28 +2,28 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2905950
+      "saldo": 2907396
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 293655
+      "saldo": 295682
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 24205
+      "saldo": 28360
     },
     {
       "faixa": "91–180 dias",
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-25T09:52:50.566547",
+  "generated_at": "2026-05-25T12:22:25.947412",
   "kpis": {
     "a_vencer_7d": 426840,
     "juros_pagos": 3641,
-    "total_aberto": 3229969,
-    "total_pago_periodo": 5009229,
-    "total_vencido": 324019
+    "total_aberto": 3237597,
+    "total_pago_periodo": 5003148,
+    "total_vencido": 330201
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -74,31 +74,31 @@
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 25,
-      "fornecedor": "FRW ATACADO LTDA",
+      "dias_atraso": 38,
+      "fornecedor": "TEKWELD IMPORTACAO E COMERCIO DE MAQUINAS INDUSTRIAIS LTDA",
       "loja": "Loja 1",
-      "saldo": 419,
-      "vencimento": "2026-04-30T00:00:00"
+      "saldo": 2027,
+      "vencimento": "2026-04-17T00:00:00"
     },
     {
-      "dias_atraso": 25,
-      "fornecedor": "FRW ATACADO LTDA",
+      "dias_atraso": 32,
+      "fornecedor": "MAKITA DO BRASIL FERRAMENTAS ELETRICAS LTDA",
       "loja": "Loja 1",
-      "saldo": 419,
-      "vencimento": "2026-04-30T00:00:00"
+      "saldo": 442,
+      "vencimento": "2026-04-23T00:00:00"
+    },
+    {
+      "dias_atraso": 32,
+      "fornecedor": "MAKITA DO BRASIL FERRAMENTAS ELETRICAS LTDA",
+      "loja": "Loja 1",
+      "saldo": 1686,
+      "vencimento": "2026-04-23T00:00:00"
     },
     {
       "dias_atraso": 25,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
-      "vencimento": "2026-04-30T00:00:00"
-    },
-    {
-      "dias_atraso": 25,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     }
   ],
