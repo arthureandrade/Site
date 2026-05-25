@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-05-25T15:59:34.601838",
+  "generated_at": "2026-05-25T17:19:51.576327",
   "kpis": {
-    "ticket_medio": 1010.8161146496816,
-    "total_pedidos": 157,
-    "total_vendas": 158698.13,
+    "ticket_medio": 906.1965957446808,
+    "total_pedidos": 188,
+    "total_vendas": 170364.96,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 94128
+      "total_vendas": 95628.5
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 47144.95
+      "total_vendas": 52898.28
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 17425.18
+      "total_vendas": 21838.18
     }
   ],
   "ok": true,
@@ -31,7 +31,7 @@
   "serie_diaria": [
     {
       "data": "2026-05-25",
-      "total_vendas": 158698.13
+      "total_vendas": 170364.96
     }
   ],
   "tipo": "vendas",
@@ -42,38 +42,38 @@
       "vendedor": "Vendedor"
     },
     {
-      "pedidos": 37,
-      "total_vendas": 36656.3,
+      "pedidos": 50,
+      "total_vendas": 38736.9,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 19,
-      "total_vendas": 11313.5,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 23,
-      "total_vendas": 10607.17,
+      "pedidos": 26,
+      "total_vendas": 12108.9,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 24,
-      "total_vendas": 7714,
-      "vendedor": "Adriano"
+      "pedidos": 25,
+      "total_vendas": 12016.5,
+      "vendedor": "Lucas"
     },
     {
-      "pedidos": 7,
-      "total_vendas": 7238,
+      "pedidos": 10,
+      "total_vendas": 10628,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 36,
-      "total_vendas": 7106.780000000001,
+      "pedidos": 37,
+      "total_vendas": 9796.78,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 12,
-      "total_vendas": 2114.88,
+      "pedidos": 27,
+      "total_vendas": 8170.5,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 14,
+      "total_vendas": 2959.88,
       "vendedor": "Juan"
     }
   ]
