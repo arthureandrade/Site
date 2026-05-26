@@ -11,7 +11,8 @@ import {
   calcularScoreComercial,
   calcularScoreFerroAco,
   ehProdutoRamassolCatalogo,
-  inferirCategoriaMarca,
+  inferirCategoriaProduto,
+  montarCategoriasCatalogo,
   montarMarcasCatalogo,
   normalizarTexto,
   produtoCasaBuscaCatalogo,
@@ -25,6 +26,7 @@ export default function ProdutosCliente({
   initialSubgrupo = '',
   initialProdutos = [],
   initialMarcasCatalogo = [],
+  initialCategoriasCatalogo = [],
 }) {
   const possuiCatalogoInicial = initialProdutos.length > 0 || initialMarcasCatalogo.length > 0
   const pularPrimeiroRefetch = useRef(possuiCatalogoInicial)
@@ -41,6 +43,7 @@ export default function ProdutosCliente({
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
   const [emEstoque, setEmEstoque] = useState(true)
   const [marcasCatalogo, setMarcasCatalogo] = useState(initialMarcasCatalogo)
+  const [categoriasCatalogo, setCategoriasCatalogo] = useState(initialCategoriasCatalogo)
   const [loadingMarcas, setLoadingMarcas] = useState(!possuiCatalogoInicial)
   const [produtosPorPagina, setProdutosPorPagina] = useState(24)
   const [mostrarTodasCategorias, setMostrarTodasCategorias] = useState(false)
@@ -74,9 +77,9 @@ export default function ProdutosCliente({
           )
         }
 
-        setTodosProdutos(
-          [...filtrados].sort((a, b) => calcularScoreFerroAco(b) - calcularScoreFerroAco(a))
-        )
+        const ordenados = [...filtrados].sort((a, b) => calcularScoreFerroAco(b) - calcularScoreFerroAco(a))
+        setTodosProdutos(ordenados)
+        setCategoriasCatalogo(montarCategoriasCatalogo(ordenados))
       } else {
         const buscaMarcaRamassol = buscaEhRamassol(busca_) || buscaEhRamassol(marca_)
         const data = await getProdutos(
@@ -114,9 +117,9 @@ export default function ProdutosCliente({
               normalizarTexto(produto.marca || '').includes(marcaNormalizada) || ehProdutoRamassolCatalogo(produto)
           )
         }
-        setTodosProdutos(
-          [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
-        )
+        const ordenados = [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
+        setTodosProdutos(ordenados)
+        setCategoriasCatalogo(montarCategoriasCatalogo(ordenados))
       }
     } catch {
       setErro(true)
@@ -149,8 +152,10 @@ export default function ProdutosCliente({
               (produto) => Number(produto.preco) > 0 || ehProdutoRamassolCatalogo(produto)
             )
       setMarcasCatalogo(montarMarcasCatalogo(produtosValidos))
+      setCategoriasCatalogo(montarCategoriasCatalogo(produtosValidos))
     } catch {
       setMarcasCatalogo([])
+      setCategoriasCatalogo([])
     } finally {
       setLoadingMarcas(false)
     }
@@ -189,14 +194,7 @@ export default function ProdutosCliente({
     fetchProdutos(0, '', '', true)
   }
 
-  const categorias = ['Todas', ...new Set(marcasCatalogo.map((item) => item.categoria))]
-  const categoriasResumo = categorias
-    .filter((categoria) => categoria !== 'Todas')
-    .map((categoria) => ({
-      nome: categoria,
-      quantidade: marcasCatalogo.filter((item) => item.categoria === categoria).length,
-    }))
-    .sort((a, b) => b.quantidade - a.quantidade || a.nome.localeCompare(b.nome, 'pt-BR'))
+  const categoriasResumo = categoriasCatalogo
 
   const marcasFiltradas = marcasCatalogo.filter((item) => {
     const casaCategoria = categoriaAtiva === 'Todas' || item.categoria === categoriaAtiva
@@ -207,9 +205,7 @@ export default function ProdutosCliente({
 
   const produtosFiltradosPorCategoria = useMemo(() => {
     if (categoriaAtiva === 'Todas') return todosProdutos
-    return todosProdutos.filter(
-      (produto) => inferirCategoriaMarca(produto.marca, [produto]) === categoriaAtiva
-    )
+    return todosProdutos.filter((produto) => inferirCategoriaProduto(produto) === categoriaAtiva)
   }, [categoriaAtiva, todosProdutos])
 
   const categoriasVisiveis = mostrarTodasCategorias

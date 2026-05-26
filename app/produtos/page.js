@@ -1,5 +1,6 @@
 import ProdutosCliente from '@/components/ProdutosCliente'
 import { carregarCatalogoInicial } from '@/lib/catalogoPublico'
+import { buildCatalogItemListJsonLd } from '@/lib/seo'
 
 export const metadata = {
   title: 'Produtos | Galpão do Aço',
@@ -32,9 +33,15 @@ export default async function ProdutosPage({ searchParams }) {
 
   const produtosIniciais = catalogoInicial.produtos || []
   const marcasIniciais = catalogoInicial.marcasCatalogo || []
+  const categoriasIniciais = catalogoInicial.categoriasCatalogo || []
+  const itemListJsonLd = buildCatalogItemListJsonLd(produtosIniciais)
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <div className="bg-brand border-b-2 border-primary px-4 py-6 text-white sm:py-8">
         <div className="mx-auto max-w-[1760px]">
           <div className="h-1 w-10 bg-primary rounded mb-3" />
@@ -51,6 +58,7 @@ export default async function ProdutosPage({ searchParams }) {
         initialSubgrupo={initialSubgrupo}
         initialProdutos={produtosIniciais}
         initialMarcasCatalogo={marcasIniciais}
+        initialCategoriasCatalogo={categoriasIniciais}
       />
     </>
   )

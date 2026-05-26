@@ -12,21 +12,19 @@ import {
   whatsappLink,
 } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
+import { buildProductJsonLd, productSeoDescription } from '@/lib/seo'
 
 export async function generateMetadata({ params }) {
   const produto = await getProduto(params.id)
-  if (!produto) return { title: 'Produto nao encontrado' }
+  if (!produto) return { title: 'Produto não encontrado' }
 
   const desconto = obterDescontoPromocional(produto)
   const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
+  const precoSeo = desconto > 0 ? precoPromocional : Number(produto.preco || 0)
 
   return {
     title: produto.nome,
-    description:
-      produto.descricao ||
-      `${produto.nome} - ${
-        desconto > 0 ? `${formatarPreco(precoPromocional)} a vista` : formatarPreco(produto.preco)
-      }`,
+    description: productSeoDescription(produto, precoSeo),
   }
 }
 
@@ -37,6 +35,11 @@ export default async function ProdutoPage({ params }) {
   const ocultarComercial = Number(produto.secao || 0) === 6
   const desconto = obterDescontoPromocional(produto)
   const precoPromocional = calcularPrecoPromocional(produto.preco, desconto)
+  const precoSchema = desconto > 0 ? precoPromocional : Number(produto.preco || 0)
+  const productJsonLd = buildProductJsonLd(produto, {
+    price: precoSchema,
+    ocultarPreco: ocultarComercial,
+  })
   const foto = imagemUrlProduto(produto)
   const temEstoque = produto.estoque > 0
   const linkWpp = whatsappLink(produto.nome, desconto > 0 ? precoPromocional : produto.preco)
@@ -68,6 +71,13 @@ export default async function ProdutoPage({ params }) {
   const similares = Array.from(similaresMap.values()).slice(0, 4)
 
   return (
+    <>
+      {productJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+      ) : null}
     <div className="bg-[#f8f9fb]">
       <div className="mx-auto max-w-[1600px] px-4 py-6 sm:px-6 sm:py-12 lg:px-8">
         <nav className="mb-5 flex items-center gap-2 overflow-x-auto text-xs text-gray-500 sm:mb-8 sm:text-sm">
@@ -113,12 +123,12 @@ export default async function ProdutoPage({ params }) {
                       d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
                     />
                   </svg>
-                  <span className="text-sm font-bold uppercase tracking-[0.25em]">Foto nao disponivel</span>
+                  <span className="text-sm font-bold uppercase tracking-[0.25em]">Foto não disponível</span>
                 </div>
               )}
             </div>
             <div className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-[12px] font-semibold leading-relaxed text-amber-900 sm:text-[13px]">
-              A foto deste produto e ilustrativa e pode nao representar exatamente o item, acabamento, embalagem ou medidas entregues. Em caso de duvida, confirme com nossa equipe antes da compra.
+              A foto deste produto é ilustrativa e pode não representar exatamente o item, acabamento, embalagem ou medidas entregues. Em caso de dúvida, confirme com nossa equipe antes da compra.
             </div>
           </div>
 
@@ -132,12 +142,12 @@ export default async function ProdutoPage({ params }) {
                 )}
                 {produto.secao ? (
                   <span className="rounded-full bg-slate-100 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-slate-700">
-                    Secao {produto.secao}
+                    Seção {produto.secao}
                   </span>
                 ) : null}
                 {desconto > 0 ? (
                   <span className="rounded-full bg-emerald-50 px-3 py-2 text-xs font-black uppercase tracking-[0.2em] text-emerald-700">
-                    Oferta valida para compra online
+                    Oferta válida para compra online
                   </span>
                 ) : null}
               </div>
@@ -148,9 +158,9 @@ export default async function ProdutoPage({ params }) {
 
               <div className="mt-4 grid gap-2 sm:mt-5 sm:gap-3 sm:grid-cols-3">
                 {[
-                  ocultarComercial ? 'Condicoes comerciais sob consulta' : temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
-                  'Compra rapida pelo WhatsApp',
-                  ocultarComercial ? 'Atendimento para aco e estruturas' : 'Parcelamento em 10x no valor cheio',
+                  ocultarComercial ? 'Condições comerciais sob consulta' : temEstoque ? 'Estoque real atualizado' : 'Estoque sob consulta',
+                  'Compra rápida pelo WhatsApp',
+                  ocultarComercial ? 'Atendimento para aço e estruturas' : 'Parcelamento em 10x no valor cheio',
                 ].map((item) => (
                   <div key={item} className="rounded-2xl border border-gray-200 bg-gray-50 px-3 py-2.5 text-xs font-semibold text-slate-700 sm:px-4 sm:py-3 sm:text-sm">
                     {item}
@@ -164,18 +174,18 @@ export default async function ProdutoPage({ params }) {
 
               <div className="mt-6 rounded-[22px] border border-red-100 bg-gradient-to-br from-white via-white to-red-50 p-4 shadow-sm sm:mt-7 sm:rounded-[28px] sm:p-6">
                 <div className="mb-1 text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
-                  {ocultarComercial ? 'Atendimento comercial' : 'Condicao comercial'}
+                  {ocultarComercial ? 'Atendimento comercial' : 'Condição comercial'}
                 </div>
                 {ocultarComercial ? (
                   <>
                     <div className="mt-2 text-3xl font-black leading-tight text-gray-900 sm:text-4xl">
-                      Preco sob consulta
+                      Preço sob consulta
                     </div>
                     <div className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
-                      Produto da secao 6 com atendimento consultivo
+                      Produto da seção 6 com atendimento consultivo
                     </div>
                     <div className="mt-4 text-base font-semibold text-slate-700">
-                      Fale com a equipe para cotacao, disponibilidade e prazo.
+                      Fale com a equipe para cotação, disponibilidade e prazo.
                     </div>
                   </>
                 ) : desconto > 0 ? (
@@ -189,11 +199,11 @@ export default async function ProdutoPage({ params }) {
                         {formatarPreco(precoPromocional).replace('R$', '').trim()}
                       </span>
                       <span className="pb-2 text-sm font-black uppercase tracking-[0.18em] text-primary">
-                        a vista
+                        à vista
                       </span>
                     </div>
                     <div className="mt-3 inline-flex rounded-full bg-primary px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white">
-                      Desconto aplicado tambem nesta pagina
+                      Desconto aplicado também nesta página
                     </div>
                   </>
                 ) : (
@@ -211,8 +221,8 @@ export default async function ProdutoPage({ params }) {
                   <div className={`h-3 w-3 rounded-full ${temEstoque ? 'bg-green-500' : 'bg-red-400'}`} />
                   <span className={`text-sm font-semibold ${temEstoque ? 'text-green-700' : 'text-red-600'}`}>
                     {temEstoque
-                      ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponiveis`
-                      : 'Produto temporariamente indisponivel'}
+                      ? `Em estoque - ${produto.estoque.toLocaleString('pt-BR')} unidades disponíveis`
+                      : 'Produto temporariamente indisponível'}
                   </span>
                 </div>
               )}
@@ -222,7 +232,7 @@ export default async function ProdutoPage({ params }) {
                   <ProductPurchaseActions
                     produto={produto}
                     comprarHref={linkWpp}
-                    comprarLabel={ocultarComercial ? 'Solicitar cotacao' : 'Comprar'}
+                    comprarLabel={ocultarComercial ? 'Solicitar cotação' : 'Comprar'}
                     fullWidth
                   />
                 )}
@@ -232,13 +242,13 @@ export default async function ProdutoPage({ params }) {
                     href="/produtos"
                     className="flex items-center justify-center gap-2 rounded-2xl border-2 border-gray-200 px-5 py-3 text-sm font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50 sm:px-6 sm:py-4"
                   >
-                    Voltar ao catalogo
+                    Voltar ao catálogo
                   </Link>
                 </div>
               </div>
 
               <div className="mt-6 border-t border-gray-100 pt-5 text-xs text-gray-400">
-                Codigo interno: <span className="font-mono">{produto.id}</span>
+                Código interno: <span className="font-mono">{produto.id}</span>
               </div>
             </div>
           </div>
@@ -248,13 +258,13 @@ export default async function ProdutoPage({ params }) {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <div className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">
-                Sugestao de compra
+                Sugestão de compra
               </div>
               <h2 className="mt-2 text-2xl font-black uppercase text-gray-900 sm:text-3xl">
                 Outros produtos semelhantes
               </h2>
               <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Selecionamos itens do mesmo grupo e da mesma marca para facilitar a continuacao da compra.
+                Selecionamos itens do mesmo grupo e da mesma marca para facilitar a continuação da compra.
               </p>
             </div>
           </div>
@@ -271,11 +281,12 @@ export default async function ProdutoPage({ params }) {
             </div>
           ) : (
             <div className="mt-6 rounded-3xl border border-dashed border-gray-300 bg-gray-50 px-6 py-10 text-center text-sm font-semibold text-slate-500">
-              Ainda nao encontramos produtos semelhantes para este item.
+              Ainda não encontramos produtos semelhantes para este item.
             </div>
           )}
         </section>
       </div>
     </div>
+    </>
   )
 }

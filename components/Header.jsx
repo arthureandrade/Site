@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 import { API_URL } from '@/lib/api'
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
   const [logoUrl, setLogoUrl] = useState('/logo.jpeg')
   const [busca, setBusca] = useState('')
   const pathname = usePathname()
@@ -87,8 +86,8 @@ export default function Header() {
           )}
         </Link>
 
-        <div className={`hidden md:order-3 md:block md:w-full md:basis-full md:px-0 xl:order-none xl:w-auto xl:flex-1 xl:basis-auto ${
-          isVendedorArea ? 'md:pt-0 lg:pt-0 xl:px-4 xl:pt-0' : 'md:pt-1 lg:pt-2 xl:px-6 xl:pt-0'
+        <div className={`order-3 w-full basis-full px-0 xl:order-none xl:w-auto xl:flex-1 xl:basis-auto ${
+          isVendedorArea ? 'hidden md:block md:pt-0 lg:pt-0 xl:px-4 xl:pt-0' : 'pt-1 lg:pt-2 xl:px-6 xl:pt-0'
         }`}>
           <form onSubmit={irParaBusca} className={`mx-auto flex w-full max-w-none items-center gap-2 border border-slate-200 bg-white shadow-[0_10px_24px_rgba(15,23,42,0.06)] ${
             isVendedorArea
@@ -117,17 +116,6 @@ export default function Header() {
           </form>
         </div>
 
-        {!isVendedorArea ? (
-          <nav className="hidden items-center gap-5 text-sm font-black uppercase tracking-wide text-gray-700 md:flex">
-            <Link href="/sorteio" className="transition-colors hover:text-primary">
-              Sorteio
-            </Link>
-            <Link href="/vendedor" className="transition-colors hover:text-primary">
-              Área do vendedor
-            </Link>
-          </nav>
-        ) : null}
-
         <div className="flex items-center gap-3">
           {!isVendedorArea ? (
             <Link
@@ -137,58 +125,8 @@ export default function Header() {
               Comprar aço
             </Link>
           ) : null}
-          {!isVendedorArea ? (
-            <button
-              className="rounded-xl border border-gray-200 p-2.5 text-gray-700 md:hidden"
-              onClick={() => setMenuOpen((value) => !value)}
-              aria-label="Menu"
-            >
-              {menuOpen ? (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          ) : null}
         </div>
       </div>
-
-      {!isVendedorArea ? (
-        <div className="border-t border-slate-100 bg-white px-4 py-3 md:hidden">
-          <form onSubmit={irParaBusca} className="flex items-center gap-2 rounded-[22px] border border-slate-200 bg-white p-2 shadow-[0_10px_24px_rgba(15,23,42,0.05)]">
-            <input
-              type="text"
-              value={busca}
-              onChange={(e) => setBusca(e.target.value)}
-              placeholder="Buscar por nome, código ou marca..."
-              className="w-full rounded-2xl border-0 bg-transparent px-4 py-3 text-sm font-semibold text-slate-700 outline-none transition"
-            />
-            <button
-              type="submit"
-              className="rounded-2xl bg-brand px-4 py-3 text-xs font-black uppercase tracking-[0.14em] text-white transition hover:bg-primary"
-            >
-              Buscar
-            </button>
-          </form>
-        </div>
-      ) : null}
-
-      {menuOpen && !isVendedorArea ? (
-        <div className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
-          <div className="flex flex-col gap-3 text-sm font-black uppercase tracking-wide text-gray-700">
-            <Link href="/sorteio" onClick={() => setMenuOpen(false)}>
-              Sorteio
-            </Link>
-            <Link href="/vendedor" onClick={() => setMenuOpen(false)}>
-              Área do vendedor
-            </Link>
-          </div>
-        </div>
-      ) : null}
 
       {!isVendedorArea ? (
         <div className="border-t border-slate-200 bg-gradient-to-r from-[#fff7f4] via-white to-[#f7fafc]">
@@ -216,6 +154,18 @@ export default function Header() {
               className="whitespace-nowrap rounded-full border border-primary bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-primary transition hover:bg-red-50 sm:px-5 sm:text-sm sm:tracking-[0.18em]"
             >
               Saldão
+            </Link>
+            <Link
+              href="/sorteio"
+              className="whitespace-nowrap rounded-full border border-slate-300 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate-700 transition hover:border-primary hover:text-primary sm:px-5 sm:text-sm sm:tracking-[0.18em]"
+            >
+              Sorteio
+            </Link>
+            <Link
+              href="/vendedor"
+              className="whitespace-nowrap rounded-full border border-slate-300 bg-white px-4 py-2 text-[11px] font-black uppercase tracking-[0.16em] text-slate-700 transition hover:border-primary hover:text-primary sm:px-5 sm:text-sm sm:tracking-[0.18em]"
+            >
+              Área do vendedor
             </Link>
             <div className="ml-2 hidden h-6 w-px bg-red-200 md:block" />
             <span className="hidden whitespace-nowrap text-xs font-black uppercase tracking-[0.22em] text-slate-500 md:block">
