@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2890015
+      "saldo": 2850159
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 284965
+      "saldo": 281014
     },
     {
       "faixa": "31–60 dias",
@@ -17,85 +17,85 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-25T17:19:52.558404",
+  "generated_at": "2026-05-26T05:36:09.890315",
   "kpis": {
-    "a_vencer_7d": 397470,
+    "a_vencer_7d": 414112,
     "juros_pagos": 3641,
-    "total_aberto": 3205344,
-    "total_pago_periodo": 5210682,
-    "total_vencido": 315329
+    "total_aberto": 3161537,
+    "total_pago_periodo": 5342020,
+    "total_vencido": 311378
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-05-25",
-    "data_de": "2026-04-25"
+    "data_ate": "2026-05-26",
+    "data_de": "2026-04-26"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 179,
+      "dias_atraso": 180,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2025-11-27T00:00:00"
     },
     {
-      "dias_atraso": 141,
+      "dias_atraso": 142,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 112,
+      "dias_atraso": 113,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 53,
+      "dias_atraso": 54,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 48,
+      "dias_atraso": 49,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 45,
+      "dias_atraso": 46,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 25,
+      "dias_atraso": 26,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 25,
+      "dias_atraso": 26,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 25,
+      "dias_atraso": 26,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 25,
+      "dias_atraso": 26,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
@@ -126,8 +126,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 3,
-      "total_aberto": 154279
+      "titulos": 2,
+      "total_aberto": 132610
     },
     {
       "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
@@ -140,11 +140,6 @@
       "total_aberto": 113462
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 6,
-      "total_aberto": 108002
-    },
-    {
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
       "titulos": 2,
       "total_aberto": 95856
@@ -153,6 +148,11 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 16,
       "total_aberto": 91350
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 5,
+      "total_aberto": 85864
     }
   ]
 }
