@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2898406
+      "saldo": 2903613
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 281014
+      "saldo": 276288
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-26T15:03:48.483025",
+  "generated_at": "2026-05-26T18:37:08.165096",
   "kpis": {
     "a_vencer_7d": 414112,
-    "juros_pagos": 3641,
-    "total_aberto": 3209784,
-    "total_pago_periodo": 5342020,
-    "total_vencido": 311378
+    "juros_pagos": 83447,
+    "total_aberto": 3210265,
+    "total_pago_periodo": 5675873,
+    "total_vencido": 306652
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -121,8 +121,8 @@
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 59,
-      "total_aberto": 206382
+      "titulos": 58,
+      "total_aberto": 202884
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",

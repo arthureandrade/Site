@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 614136.14
+      "saldo": 620923.51
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15138.56
     }
   ],
-  "generated_at": "2026-05-26T15:03:47.784080",
+  "generated_at": "2026-05-26T18:37:07.476419",
   "kpis": {
     "clientes_atraso": 56,
-    "total_aberto": 942255.9299999999,
+    "total_aberto": 949043.3,
     "total_atraso": 328119.79,
-    "total_vencer": 614136.14
+    "total_vencer": 620923.51
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,39 +70,39 @@
       "vencimento": "2026-05-24T00:00:00"
     },
     {
-      "cliente": "ESDRAS MATUZALEM DA SILVA",
-      "dias_atraso": -1,
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 0,
       "loja": "Loja 1",
-      "saldo": 226.2,
-      "vencimento": "2026-05-27T00:00:00"
+      "saldo": 75.38,
+      "vencimento": "2026-05-26T00:00:00"
     },
     {
-      "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -1,
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 0,
       "loja": "Loja 1",
-      "saldo": 178.09,
-      "vencimento": "2026-05-27T00:00:00"
+      "saldo": 157.23,
+      "vencimento": "2026-05-26T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -2,
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 0,
       "loja": "Loja 1",
-      "saldo": 2247,
-      "vencimento": "2026-05-28T00:00:00"
+      "saldo": 75.38,
+      "vencimento": "2026-05-26T00:00:00"
     },
     {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": -2,
-      "loja": "Loja 4",
-      "saldo": 900,
-      "vencimento": "2026-05-28T00:00:00"
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 0,
+      "loja": "Loja 1",
+      "saldo": 96.22,
+      "vencimento": "2026-05-26T00:00:00"
     },
     {
-      "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -2,
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 0,
       "loja": "Loja 1",
-      "saldo": 1995,
-      "vencimento": "2026-05-28T00:00:00"
+      "saldo": 116.55,
+      "vencimento": "2026-05-26T00:00:00"
     }
   ],
   "tipo": "cobranca",
