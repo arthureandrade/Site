@@ -1,6 +1,7 @@
 'use client'
 
-import { createContext, useContext, useReducer, useEffect } from 'react'
+import { createContext, useContext, useReducer, useEffect, useState } from 'react'
+import { syncCartItems } from '@/lib/personalization'
 
 const CartContext = createContext(null)
 
@@ -34,21 +35,27 @@ function cartReducer(state, action) {
 
 export function CartProvider({ children }) {
   const [items, dispatch] = useReducer(cartReducer, [])
+  const [hydrated, setHydrated] = useState(false)
 
   // Carrega do localStorage na inicialização
   useEffect(() => {
     try {
       const saved = localStorage.getItem('carrinho_galpao')
       if (saved) dispatch({ type: 'INIT', items: JSON.parse(saved) })
-    } catch {}
+    } catch {
+    } finally {
+      setHydrated(true)
+    }
   }, [])
 
   // Persiste no localStorage a cada mudança
   useEffect(() => {
+    if (!hydrated) return
     try {
       localStorage.setItem('carrinho_galpao', JSON.stringify(items))
+      syncCartItems(items)
     } catch {}
-  }, [items])
+  }, [hydrated, items])
 
   const totalItens = items.reduce((acc, i) => acc + i.qty, 0)
   const totalPreco = items.reduce((acc, i) => acc + (i.preco || 0) * i.qty, 0)

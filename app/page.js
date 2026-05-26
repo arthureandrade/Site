@@ -1,5 +1,6 @@
 ﻿import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
+import PersonalizedHomeShelf from '@/components/PersonalizedHomeShelf'
 import SaldaoCarousel from '@/components/SaldaoCarousel'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
 import { getHomeConfig, getProdutos } from '@/lib/api'
@@ -75,6 +76,17 @@ export default async function HomePage() {
   const produtosSubgrupo27 = Array.from(produtosFerramentasProfissionaisMap.values()).slice(0, 10)
   const produtosSubgrupo30 = Array.from(produtosSoldaMap.values()).slice(0, 10)
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
+  const produtosPersonalizacao = Array.from(
+    new Map(
+      [
+        ...(secao5Data?.produtos || []),
+        ...(secao14Data?.produtos || []),
+        ...(ramassolData?.produtos || []),
+      ]
+        .filter((produto) => produto?.id && Number(produto?.preco || 0) > 0)
+        .map((produto) => [Number(produto.id), produto])
+    ).values()
+  ).slice(0, 800)
   const totalCatalogoBase =
     (secao5Data?.produtos || []).length +
     (secao6Data?.produtos || []).length +
@@ -114,6 +126,8 @@ export default async function HomePage() {
         title={config?.hero_title || 'Ofertas em aço para sua obra'}
         subtitle={config?.hero_subtitle || 'Estoque real, preço atualizado e atendimento rápido no WhatsApp.'}
       />
+
+      <PersonalizedHomeShelf produtos={produtosPersonalizacao} />
 
       <VitrineSubgrupo24
         sectionId="ferramentas-motorizadas"

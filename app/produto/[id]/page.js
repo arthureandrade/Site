@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ProductCard from '@/components/ProductCard'
 import ProductPurchaseActions from '@/components/ProductPurchaseActions'
+import ProductViewTracker from '@/components/ProductViewTracker'
 import {
   formatarParcelamento,
   formatarPreco,
@@ -72,6 +73,7 @@ export default async function ProdutoPage({ params }) {
 
   return (
     <>
+      <ProductViewTracker produto={produto} />
       {productJsonLd ? (
         <script
           type="application/ld+json"

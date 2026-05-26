@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { formatarParcelamento, formatarPreco, imagemUrlProduto, whatsappLink } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
+import { trackCartAdd } from '@/lib/personalization'
 
 export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
   const foto = imagemUrlProduto(produto)
@@ -24,6 +25,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
     e.preventDefault()
     e.stopPropagation()
     dispatch({ type: 'ADD', produto })
+    trackCartAdd(produto)
     setAdicionado(true)
     setTimeout(() => setAdicionado(false), 1500)
   }

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
+import { trackCartAdd } from '@/lib/personalization'
 
 export default function ProductPurchaseActions({ produto, comprarHref, comprarLabel = 'Comprar agora', fullWidth = false }) {
   const { dispatch } = useCart()
@@ -9,6 +10,7 @@ export default function ProductPurchaseActions({ produto, comprarHref, comprarLa
 
   function handleAdicionar() {
     dispatch({ type: 'ADD', produto })
+    trackCartAdd(produto)
     setAdicionado(true)
     setTimeout(() => setAdicionado(false), 1500)
   }
