@@ -1,4 +1,5 @@
 import ProdutosCliente from '@/components/ProdutosCliente'
+import CatalogViewTracker from '@/components/CatalogViewTracker'
 import { carregarCatalogoInicial } from '@/lib/catalogoPublico'
 import { buildCatalogItemListJsonLd } from '@/lib/seo'
 
@@ -41,6 +42,13 @@ export default async function ProdutosPage({ searchParams }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
+      <CatalogViewTracker
+        busca={initialBusca}
+        categoria={initialCategoria}
+        secao={initialSecao}
+        subgrupo={initialSubgrupo}
+        total={produtosIniciais.length}
       />
       <div className="bg-brand border-b-2 border-primary px-4 py-6 text-white sm:py-8">
         <div className="mx-auto max-w-[1760px]">

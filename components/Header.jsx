@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { API_URL } from '@/lib/api'
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 
 export default function Header() {
   const [logoUrl, setLogoUrl] = useState('/logo.jpeg')
@@ -118,12 +119,15 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           {!isVendedorArea ? (
-            <Link
+            <TrackedWhatsAppLink
               href={whatsappAco}
+              target="_blank"
+              rel="noopener noreferrer"
+              label="header_comprar_aco"
               className="inline-flex items-center justify-center rounded-[18px] bg-gradient-to-r from-green-500 via-green-600 to-green-700 px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.14em] text-white shadow-[0_14px_24px_rgba(22,163,74,0.22)] transition hover:scale-[1.02] hover:shadow-[0_22px_42px_rgba(22,163,74,0.36)] sm:px-5 sm:py-3 sm:text-xs lg:rounded-[22px] lg:px-7 lg:py-4 lg:text-base lg:tracking-[0.18em]"
             >
               Comprar aço
-            </Link>
+            </TrackedWhatsAppLink>
           ) : null}
         </div>
       </div>

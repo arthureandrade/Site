@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 
@@ -57,14 +58,15 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
             >
               Comprar agora
             </Link>
-            <a
+            <TrackedWhatsAppLink
               href={`https://wa.me/${WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
+              label="hero_whatsapp"
               className="rounded-[18px] border border-white/20 bg-black/35 px-5 py-3 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-white/10 sm:rounded-[22px] sm:px-7 sm:py-4 sm:text-sm sm:tracking-[0.18em]"
             >
               Falar no WhatsApp
-            </a>
+            </TrackedWhatsAppLink>
           </div>
 
           {slides.length > 1 && (

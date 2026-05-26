@@ -2,6 +2,7 @@
 import HeroCarousel from '@/components/HeroCarousel'
 import PersonalizedHomeShelf from '@/components/PersonalizedHomeShelf'
 import SaldaoCarousel from '@/components/SaldaoCarousel'
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
 import { getHomeConfig, getProdutos } from '@/lib/api'
 
@@ -303,14 +304,15 @@ export default async function HomePage() {
           <p className="mt-4 text-lg text-gray-300">
             Envie sua lista de materiais e receba atendimento rápido para cotação, separação e retirada.
           </p>
-          <a
+          <TrackedWhatsAppLink
             href={`https://wa.me/${WHATSAPP}`}
             target="_blank"
             rel="noopener noreferrer"
+            label="home_final_cta"
             className="mt-8 inline-flex rounded-2xl bg-green-500 px-8 py-4 text-sm font-black uppercase tracking-wide text-white transition hover:bg-green-600"
           >
             Falar com a equipe
-          </a>
+          </TrackedWhatsAppLink>
         </div>
       </section>
     </>

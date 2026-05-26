@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
+import { trackWhatsAppClick } from '@/lib/analytics'
 import { trackCartAdd } from '@/lib/personalization'
 
 export default function ProductPurchaseActions({ produto, comprarHref, comprarLabel = 'Comprar agora', fullWidth = false }) {
@@ -15,10 +16,24 @@ export default function ProductPurchaseActions({ produto, comprarHref, comprarLa
     setTimeout(() => setAdicionado(false), 1500)
   }
 
+  function handleComprarClick() {
+    if (!comprarHref?.includes('wa.me')) return
+    trackWhatsAppClick({
+      label: 'product_purchase_button',
+      content_id: produto?.id,
+      content_name: produto?.nome,
+      value: Number(produto?.preco || 0) > 0 ? Number(produto.preco) : undefined,
+      currency: 'BRL',
+      category: produto?.grupo_nome || produto?.secao_nome || '',
+      product_type: produto?.subgrupo_nome || produto?.grupo_nome || '',
+    })
+  }
+
   return (
     <div className={`flex flex-col gap-3 sm:flex-row ${fullWidth ? 'w-full' : ''}`}>
       <a
         href={comprarHref}
+        onClick={handleComprarClick}
         target={comprarHref.startsWith('http') ? '_blank' : undefined}
         rel={comprarHref.startsWith('http') ? 'noopener noreferrer' : undefined}
         className="flex flex-1 items-center justify-center gap-3 rounded-2xl bg-green-500 px-6 py-4 text-base font-black text-white shadow-md transition-all hover:bg-green-600 active:scale-95"

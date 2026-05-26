@@ -5,7 +5,8 @@ import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
 import { getProdutos } from '../lib/api'
-import { trackCategory, trackSearch } from '../lib/personalization'
+import { trackSearch as trackAnalyticsSearch } from '../lib/analytics'
+import { trackCategory, trackSearch as trackPersonalizationSearch } from '../lib/personalization'
 import {
   buscaEhCodigo,
   buscaEhRamassol,
@@ -169,7 +170,10 @@ export default function ProdutosCliente({
   }, [fetchProdutos, fetchMarcas, initialBusca, initialMarca, possuiCatalogoInicial])
 
   useEffect(() => {
-    if (initialBusca) trackSearch(initialBusca)
+    if (initialBusca) {
+      trackPersonalizationSearch(initialBusca)
+      trackAnalyticsSearch({ search_term: initialBusca, results_count: todosProdutos.length })
+    }
   }, [initialBusca])
 
   useEffect(() => {
@@ -178,7 +182,10 @@ export default function ProdutosCliente({
       return
     }
     const t = setTimeout(() => {
-      if (busca.trim()) trackSearch(busca)
+      if (busca.trim()) {
+        trackPersonalizationSearch(busca)
+        trackAnalyticsSearch({ search_term: busca, results_count: totalFiltrado })
+      }
       setPage(0)
       fetchProdutos(0, busca, marcaFiltro, emEstoque)
     }, 350)

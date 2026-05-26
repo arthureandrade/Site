@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
 import { formatarPreco, imagemUrlProduto } from '@/lib/api'
+import { trackWhatsAppClick } from '@/lib/analytics'
 import { ehProdutoFerroAco } from '@/lib/catalogo'
 
 const WPP_NUMBER = '559532240115'
@@ -169,6 +170,13 @@ export default function CartDrawer({ open, onClose }) {
     if (items.length === 0) return
     const msg = montarMensagemWpp(items, totalVisivel)
     const url = `https://wa.me/${WPP_NUMBER}?text=${encodeURIComponent(msg)}`
+    trackWhatsAppClick({
+      label: 'cart_whatsapp_order',
+      value: Number(totalVisivel || 0) > 0 ? Number(totalVisivel) : undefined,
+      currency: 'BRL',
+      content_ids: items.map((item) => String(item.id)).filter(Boolean),
+      num_items: items.length,
+    })
     window.open(url, '_blank')
   }
 

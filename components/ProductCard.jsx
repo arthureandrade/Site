@@ -7,6 +7,7 @@ import { useCart } from '@/context/CartContext'
 import { formatarParcelamento, formatarPreco, imagemUrlProduto, whatsappLink } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
 import { trackCartAdd } from '@/lib/personalization'
+import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 
 export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
   const foto = imagemUrlProduto(produto)
@@ -152,14 +153,23 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
         <div className="mt-auto flex items-center justify-between gap-2 border-t border-gray-100 pt-3">
           <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2">
           {ocultarPreco ? (
-            <a
+            <TrackedWhatsAppLink
               href={linkWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
+              label="product_card_whatsapp"
+              eventData={{
+                content_id: produto?.id,
+                content_name: produto?.nome,
+                value: Number(produto?.preco || 0) > 0 ? Number(produto.preco) : undefined,
+                currency: 'BRL',
+                category: produto?.grupo_nome || produto?.secao_nome || '',
+                product_type: produto?.subgrupo_nome || produto?.grupo_nome || '',
+              }}
                 className="rounded-xl bg-green-500 px-3 py-2 text-center text-[11px] font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-green-600 sm:text-xs"
               >
                 Comprar
-              </a>
+              </TrackedWhatsAppLink>
             ) : (
               <Link
                 href={`/produto/${produto.id}`}
