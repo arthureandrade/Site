@@ -17,6 +17,7 @@ function getHeroBackgroundStyle() {
 
   return {
     backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.9)), url("${HERO_BACKGROUND_URL}")`,
+    backgroundAttachment: 'fixed',
     backgroundPosition: 'center top',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',

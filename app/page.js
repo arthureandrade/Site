@@ -15,6 +15,7 @@ export const metadata = {
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 const TELEFONE = '(95) 3224-0115'
 const HERO_EXTENSIONS = ['png', 'jpg', 'jpeg', 'webp']
+const HOME_BACKGROUND_END_DATE = '2026-07-20T23:59:59-04:00'
 
 const CATEGORIAS = [
   { nome: 'Ferro e aço', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
@@ -42,6 +43,15 @@ function getHeroSlides() {
   return slides
 }
 
+function getHomeBackgroundImage() {
+  if (Date.now() > new Date(HOME_BACKGROUND_END_DATE).getTime()) return ''
+
+  const heroDir = path.join(process.cwd(), 'heros')
+  const extensao = HERO_EXTENSIONS.find((ext) => fs.existsSync(path.join(heroDir, `back.${ext}`)))
+
+  return extensao ? `/heros/back.${extensao}` : ''
+}
+
 export default async function HomePage() {
   const [config, secao5Data, secao6Data, secao14Data, ramassolData] = await Promise.all([
     getHomeConfig(),
@@ -51,6 +61,7 @@ export default async function HomePage() {
     getProdutos({ marca: 'ramassol', todas_secoes: true, com_preco: false, limit: 5000, noStore: true }),
   ])
   const heroSlides = getHeroSlides()
+  const homeBackgroundImage = getHomeBackgroundImage()
   const produtosMap = new Map()
   const produtosMotorizadasMap = new Map()
   const produtosMaisVendidosMap = new Map()
@@ -133,7 +144,19 @@ export default async function HomePage() {
     : 'sem retorno'
 
   return (
-    <>
+    <div className="relative isolate overflow-hidden">
+      {homeBackgroundImage ? (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.9)), url("${homeBackgroundImage}")`,
+            backgroundAttachment: 'fixed',
+          }}
+        />
+      ) : null}
+
+      <div className="relative z-10">
       <section className="border-b border-red-700 bg-primary py-2 text-white">
         <div className="mx-auto flex max-w-[1760px] items-center justify-between px-4 text-[11px] font-black uppercase tracking-[0.22em] sm:px-6 lg:px-8">
           <span>{TELEFONE}</span>
@@ -236,7 +259,7 @@ export default async function HomePage() {
         resumo={`${produtosSubgrupo30.length} item${produtosSubgrupo30.length !== 1 ? 's' : ''} da linha de solda com 14% de desconto online.`}
       />
 
-      <section className="bg-white py-4 sm:py-5">
+      <section className="bg-white/90 py-4 backdrop-blur-sm sm:py-5">
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: 'Operacao estruturada', texto: 'Mix amplo, condicao comercial clara e atendimento preparado para volume.' },
@@ -251,7 +274,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-6 sm:py-8">
+      <section className="bg-white/90 py-6 backdrop-blur-sm sm:py-8">
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <div className="eyebrow">Categorias principais</div>
@@ -279,7 +302,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="saldao" className="bg-[#fff7f2] py-6">
+      <section id="saldao" className="bg-[#fff7f2]/92 py-6 backdrop-blur-sm">
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -301,7 +324,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f6f7f8] py-8 sm:py-10">
+      <section className="bg-[#f6f7f8]/92 py-8 backdrop-blur-sm sm:py-10">
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rápido para obras, oficinas e serralherias.' },
@@ -335,7 +358,8 @@ export default async function HomePage() {
           </TrackedWhatsAppLink>
         </div>
       </section>
-    </>
+      </div>
+    </div>
   )
 }
 
