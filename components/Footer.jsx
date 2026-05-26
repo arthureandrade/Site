@@ -52,6 +52,7 @@ export default function Footer() {
               <li><Link href="/" className="transition-colors hover:text-white">Início</Link></li>
               <li><Link href="/produtos" className="transition-colors hover:text-white">Produtos</Link></li>
               <li><Link href="/produtos?categoria=ferro_aco" className="transition-colors hover:text-white">Ferro e Aço</Link></li>
+              <li><Link href="/politica-de-troca-e-devolucao" className="transition-colors hover:text-white">Trocas e devoluções</Link></li>
               <li><Link href="/vendedor" className="transition-colors hover:text-white">Área do vendedor</Link></li>
             </ul>
           </div>
