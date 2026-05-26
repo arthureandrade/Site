@@ -14,7 +14,9 @@ import {
   calcularScoreFerroAco,
   ehProdutoRamassolCatalogo,
   inferirCategoriaProduto,
+  inferirGrupoCatalogo,
   montarCategoriasCatalogo,
+  montarGruposPorSecaoCatalogo,
   montarMarcasCatalogo,
   normalizarTexto,
   produtoCasaBuscaCatalogo,
@@ -43,6 +45,7 @@ export default function ProdutosCliente({
   const [subgrupoEspecial] = useState(initialSubgrupo)
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
+  const [grupoAtivo, setGrupoAtivo] = useState('')
   const [emEstoque, setEmEstoque] = useState(true)
   const [marcasCatalogo, setMarcasCatalogo] = useState(initialMarcasCatalogo)
   const [categoriasCatalogo, setCategoriasCatalogo] = useState(initialCategoriasCatalogo)
@@ -202,12 +205,28 @@ export default function ProdutosCliente({
     setMarcaFiltro('')
     setBuscaMarca('')
     setCategoriaAtiva('Todas')
+    setGrupoAtivo('')
     setEmEstoque(true)
     setPage(0)
     fetchProdutos(0, '', '', true)
   }
 
   const categoriasResumo = categoriasCatalogo
+  const gruposDaCategoriaAtiva = useMemo(
+    () =>
+      categoriaAtiva === 'Todas'
+        ? []
+        : montarGruposPorSecaoCatalogo(todosProdutos, categoriaAtiva),
+    [categoriaAtiva, todosProdutos]
+  )
+  const grupoAtivoResumo = gruposDaCategoriaAtiva.find((grupo) => grupo.id === grupoAtivo)
+
+  useEffect(() => {
+    if (!grupoAtivo) return
+    if (!gruposDaCategoriaAtiva.some((grupo) => grupo.id === grupoAtivo)) {
+      setGrupoAtivo('')
+    }
+  }, [grupoAtivo, gruposDaCategoriaAtiva])
 
   const marcasFiltradas = marcasCatalogo.filter((item) => {
     const casaCategoria = categoriaAtiva === 'Todas' || item.categoria === categoriaAtiva
@@ -218,8 +237,13 @@ export default function ProdutosCliente({
 
   const produtosFiltradosPorCategoria = useMemo(() => {
     if (categoriaAtiva === 'Todas') return todosProdutos
-    return todosProdutos.filter((produto) => inferirCategoriaProduto(produto) === categoriaAtiva)
-  }, [categoriaAtiva, todosProdutos])
+    return todosProdutos.filter((produto) => {
+      const casaCategoria = inferirCategoriaProduto(produto) === categoriaAtiva
+      if (!casaCategoria) return false
+      if (!grupoAtivo) return true
+      return inferirGrupoCatalogo(produto).id === grupoAtivo
+    })
+  }, [categoriaAtiva, grupoAtivo, todosProdutos])
 
   const categoriasVisiveis = mostrarTodasCategorias
     ? categoriasResumo
@@ -327,25 +351,76 @@ export default function ProdutosCliente({
                   </button>
                 </div>
                 <div className="space-y-2 rounded-2xl border border-gray-200 p-3">
-                  {categoriasVisiveis.map((item) => (
-                    <button
-                      key={item.nome}
-                      type="button"
-                      onClick={() => {
-                        setCategoriaAtiva(item.nome)
-                        trackCategory(item.nome)
-                        setPage(0)
-                      }}
-                      className={`flex w-full items-center justify-between gap-3 rounded-xl px-2 py-2 text-left transition ${
-                        categoriaAtiva === item.nome ? 'bg-red-50 text-primary' : 'hover:bg-gray-50'
-                      }`}
-                    >
-                      <span className="text-sm font-semibold text-gray-800">{item.nome}</span>
-                      <span className="rounded-md bg-gray-100 px-2 py-1 text-xs font-bold text-gray-500">
-                        {item.quantidade}
-                      </span>
-                    </button>
-                  ))}
+                  {categoriasVisiveis.map((item) => {
+                    const ativa = categoriaAtiva === item.nome
+
+                    return (
+                      <div key={item.nome} className="rounded-xl">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setCategoriaAtiva(item.nome)
+                            setGrupoAtivo('')
+                            trackCategory(item.nome)
+                            setPage(0)
+                          }}
+                          className={`flex w-full items-center justify-between gap-3 rounded-xl px-2 py-2 text-left transition ${
+                            ativa ? 'bg-red-50 text-primary' : 'hover:bg-gray-50'
+                          }`}
+                        >
+                          <span className="min-w-0 text-sm font-semibold text-gray-800">{item.nome}</span>
+                          <span className="flex shrink-0 items-center gap-2">
+                            <span className="rounded-md bg-gray-100 px-2 py-1 text-xs font-bold text-gray-500">
+                              {item.quantidade}
+                            </span>
+                            <span className={`text-xs transition-transform ${ativa ? 'rotate-90 text-primary' : 'text-gray-400'}`}>
+                              ›
+                            </span>
+                          </span>
+                        </button>
+
+                        {ativa && (
+                          <div className="ml-3 mt-2 space-y-1 border-l border-red-100 pl-3">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setGrupoAtivo('')
+                                setPage(0)
+                              }}
+                              className={`flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-xs font-bold transition ${
+                                !grupoAtivo ? 'bg-primary text-white' : 'text-gray-600 hover:bg-gray-50'
+                              }`}
+                            >
+                              <span>Todos da seção</span>
+                              <span>{item.quantidade}</span>
+                            </button>
+
+                            {gruposDaCategoriaAtiva.map((grupo) => (
+                              <button
+                                key={grupo.id}
+                                type="button"
+                                onClick={() => {
+                                  setGrupoAtivo(grupo.id)
+                                  trackCategory(`${item.nome} > ${grupo.nome}`)
+                                  setPage(0)
+                                }}
+                                className={`flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-xs transition ${
+                                  grupoAtivo === grupo.id
+                                    ? 'bg-red-50 font-black text-primary'
+                                    : 'font-semibold text-gray-600 hover:bg-gray-50'
+                                }`}
+                              >
+                                <span className="min-w-0 truncate">{grupo.nome}</span>
+                                <span className="shrink-0 rounded bg-gray-100 px-1.5 py-0.5 text-[10px] font-bold text-gray-500">
+                                  {grupo.quantidade}
+                                </span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
                   {categoriasResumo.length > 6 && (
                     <button
                       type="button"
@@ -462,11 +537,21 @@ export default function ProdutosCliente({
                     Marca: {marcaFiltro}
                   </span>
                 )}
+                {categoriaAtiva !== 'Todas' && (
+                  <span className="rounded-full bg-red-50 px-3 py-1.5 font-bold uppercase tracking-wide text-primary">
+                    Seção: {categoriaAtiva}
+                  </span>
+                )}
+                {grupoAtivoResumo && (
+                  <span className="rounded-full bg-slate-100 px-3 py-1.5 font-bold uppercase tracking-wide text-slate-700">
+                    Grupo: {grupoAtivoResumo.nome}
+                  </span>
+                )}
                 <span className="rounded-full bg-gray-100 px-3 py-1.5 font-bold uppercase tracking-wide text-gray-600">
                   {totalFiltrado.toLocaleString('pt-BR')} produto{totalFiltrado !== 1 ? 's' : ''}
                 </span>
                 <span className="rounded-full bg-amber-50 px-3 py-1.5 font-bold uppercase tracking-wide text-amber-700">
-                  Ordenado pela média entre valor e estoque
+                  Ordenado por potencial de venda
                 </span>
               </div>
 
