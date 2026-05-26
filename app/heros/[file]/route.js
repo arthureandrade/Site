@@ -19,6 +19,10 @@ const ALLOWED_FILES = new Set([
   'hero4.jpg',
   'hero4.jpeg',
   'hero4.webp',
+  'back.png',
+  'back.jpg',
+  'back.jpeg',
+  'back.webp',
 ])
 
 const CONTENT_TYPES = {

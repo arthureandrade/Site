@@ -5,10 +5,28 @@ import Link from 'next/link'
 import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
+const HERO_BACKGROUND_URL = '/heros/back.png'
+const HERO_BACKGROUND_END_DATE = '2026-07-20T23:59:59-04:00'
+
+function shouldUseHeroBackground() {
+  return Date.now() <= new Date(HERO_BACKGROUND_END_DATE).getTime()
+}
+
+function getHeroBackgroundStyle() {
+  if (!shouldUseHeroBackground()) return undefined
+
+  return {
+    backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.74), rgba(255,255,255,0.9)), url("${HERO_BACKGROUND_URL}")`,
+    backgroundPosition: 'center top',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }
+}
 
 export default function HeroCarousel({ images = [], title, subtitle }) {
   const slides = (images || []).filter(Boolean)
   const [activeIndex, setActiveIndex] = useState(0)
+  const heroBackgroundStyle = getHeroBackgroundStyle()
 
   useEffect(() => {
     if (slides.length <= 1) return undefined
@@ -20,7 +38,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
 
   if (!slides.length) {
     return (
-      <section className="border-b border-slate-200 bg-white py-8">
+      <section className="border-b border-slate-200 bg-white py-8" style={heroBackgroundStyle}>
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-3xl uppercase text-slate-950 sm:text-5xl">{title}</h1>
           <p className="mt-3 max-w-3xl text-slate-600">{subtitle}</p>
@@ -30,7 +48,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
   }
 
   return (
-    <section className="border-b border-slate-200 bg-white">
+    <section className="border-b border-slate-200 bg-white" style={heroBackgroundStyle}>
       <h1 className="sr-only">{title}</h1>
       {subtitle && <p className="sr-only">{subtitle}</p>}
 
@@ -68,7 +86,7 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
           </div>
         )}
 
-        <div className="mx-4 my-4 rounded-[22px] border border-slate-200 bg-white p-3 shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:mx-0 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:p-4">
+        <div className="mx-4 my-4 rounded-[22px] border border-white/70 bg-white/[0.92] p-3 shadow-[0_12px_35px_rgba(15,23,42,0.08)] backdrop-blur sm:mx-0 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:p-4">
           <div className="text-center sm:text-left">
             <div className="text-[11px] font-black uppercase tracking-[0.22em] text-primary">
               Galpão do Aço
