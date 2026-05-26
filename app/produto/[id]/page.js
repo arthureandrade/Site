@@ -7,13 +7,108 @@ import ProductViewTracker from '@/components/ProductViewTracker'
 import {
   formatarParcelamento,
   formatarPreco,
+  getCatalogoCompletoComFallback,
   getProduto,
-  getProdutos,
   imagemUrlProduto,
   whatsappLink,
 } from '@/lib/api'
+import {
+  calcularScoreCatalogo,
+  inferirCategoriaProduto,
+  normalizarTexto,
+} from '@/lib/catalogoPublico'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
 import { buildProductJsonLd, productSeoDescription } from '@/lib/seo'
+
+const TERMOS_GENERICOS_RELACIONADOS = new Set([
+  'aco',
+  'para',
+  'com',
+  'sem',
+  'und',
+  'un',
+  'pc',
+  'mm',
+  'cm',
+  'mt',
+  'mts',
+  'metro',
+  'metros',
+  'kg',
+  'barra',
+  'preto',
+  'branco',
+  'galv',
+  'galvanizado',
+])
+
+function obterTermosProduto(produto) {
+  const texto = normalizarTexto(`${produto?.nome || ''} ${produto?.descricao || ''}`)
+  return new Set(
+    texto
+      .split(/[^a-z0-9]+/i)
+      .map((termo) => termo.trim())
+      .filter((termo) => termo.length >= 3 && !TERMOS_GENERICOS_RELACIONADOS.has(termo))
+  )
+}
+
+function calcularSimilaridadeProduto(produtoBase, candidato) {
+  if (!candidato?.id || Number(candidato.id) === Number(produtoBase?.id)) return -Infinity
+
+  const precoBase = Number(produtoBase?.preco || 0)
+  const precoCandidato = Number(candidato?.preco || 0)
+  const estoque = Number(candidato?.estoque || 0)
+  const secaoBase = inferirCategoriaProduto(produtoBase)
+  const secaoCandidato = inferirCategoriaProduto(candidato)
+  const termosBase = obterTermosProduto(produtoBase)
+  const termosCandidato = obterTermosProduto(candidato)
+  const termosEmComum = [...termosBase].filter((termo) => termosCandidato.has(termo)).length
+  const mesmaMarca =
+    produtoBase?.marca &&
+    candidato?.marca &&
+    normalizarTexto(produtoBase.marca) === normalizarTexto(candidato.marca)
+  const mesmaSecao = Number(produtoBase?.secao || 0) === Number(candidato?.secao || 0)
+  const mesmoGrupo = Number(produtoBase?.grupo || 0) === Number(candidato?.grupo || 0)
+  const mesmoSubgrupo = Number(produtoBase?.subgrupo || 0) === Number(candidato?.subgrupo || 0)
+  const mesmaSecaoComercial = secaoBase === secaoCandidato
+  const temFoto = Boolean(candidato?.fallback_foto_url || candidato?.foto_url || candidato?.image)
+  const precoProximo =
+    precoBase > 0 && precoCandidato > 0
+      ? Math.max(0, 35 - Math.abs(Math.log(precoCandidato / precoBase)) * 18)
+      : 0
+
+  return (
+    (mesmoSubgrupo ? 160 : 0) +
+    (mesmoGrupo ? 120 : 0) +
+    (mesmaSecaoComercial ? 70 : 0) +
+    (mesmaSecao ? 35 : 0) +
+    (mesmaMarca ? 32 : 0) +
+    Math.min(80, termosEmComum * 18) +
+    precoProximo +
+    (estoque > 0 ? 45 : -80) +
+    (temFoto ? 22 : -25) +
+    Math.min(80, calcularScoreCatalogo(candidato) * 0.12)
+  )
+}
+
+async function carregarProdutosSimilares(produto) {
+  const catalogo = await getCatalogoCompletoComFallback({ noStore: true, revalidate: 300 })
+  const candidatos = (catalogo || []).filter((item) => {
+    if (!item?.id || Number(item.id) === Number(produto.id)) return false
+    if (Number(produto.secao || 0) !== 6 && Number(item.preco || 0) <= 0) return false
+    return Number(item.estoque || 0) > 0 || Number(item.secao || 0) === 6
+  })
+
+  return candidatos
+    .map((item) => ({
+      item,
+      score: calcularSimilaridadeProduto(produto, item),
+    }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score || calcularScoreCatalogo(b.item) - calcularScoreCatalogo(a.item))
+    .slice(0, 4)
+    .map(({ item }) => item)
+}
 
 export async function generateMetadata({ params }) {
   const produto = await getProduto(params.id)
@@ -45,31 +140,7 @@ export default async function ProdutoPage({ params }) {
   const temEstoque = produto.estoque > 0
   const linkWpp = whatsappLink(produto.nome, desconto > 0 ? precoPromocional : produto.preco)
   const parcelamento = formatarParcelamento(produto.preco, 10)
-  const [mesmoGrupo, mesmaMarca] = await Promise.all([
-    getProdutos({
-      secao: produto.secao,
-      grupo: produto.grupo,
-      em_estoque: true,
-      com_preco: true,
-      limit: 8,
-      noStore: true,
-    }),
-    getProdutos({
-      marca: produto.marca,
-      secao: produto.secao,
-      em_estoque: true,
-      com_preco: true,
-      limit: 8,
-      noStore: true,
-    }),
-  ])
-
-  const similaresMap = new Map()
-  for (const item of [...(mesmoGrupo?.produtos || []), ...(mesmaMarca?.produtos || [])]) {
-    if (!item?.id || Number(item.id) === Number(produto.id)) continue
-    similaresMap.set(Number(item.id), item)
-  }
-  const similares = Array.from(similaresMap.values()).slice(0, 4)
+  const similares = await carregarProdutosSimilares(produto)
 
   return (
     <>
@@ -266,7 +337,7 @@ export default async function ProdutoPage({ params }) {
                 Outros produtos semelhantes
               </h2>
               <p className="mt-2 max-w-3xl text-sm text-slate-600">
-                Selecionamos itens do mesmo grupo e da mesma marca para facilitar a continuação da compra.
+                Selecionamos itens com maior relação comercial por grupo, seção, marca, preço, estoque e termos do produto.
               </p>
             </div>
           </div>
