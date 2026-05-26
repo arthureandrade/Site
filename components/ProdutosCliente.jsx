@@ -316,12 +316,12 @@ export default function ProdutosCliente({
 
               <div>
                 <div className="mb-3 flex items-center justify-between">
-                  <p className="text-base font-bold text-gray-800">Categorias</p>
+                  <p className="text-base font-bold text-gray-800">Seções</p>
                   <button
                     type="button"
                     className="text-primary"
                     onClick={() => setCategoriaAtiva('Todas')}
-                    aria-label="Limpar categoria"
+                    aria-label="Limpar seção"
                   >
                     <span className="text-lg leading-none">×</span>
                   </button>
@@ -452,7 +452,7 @@ export default function ProdutosCliente({
                       ? `Exibindo produtos da seção ${secaoEspecial} e subgrupo ${subgrupoEspecial}.`
                       : subgrupoEspecial
                         ? `Exibindo produtos do subgrupo ${subgrupoEspecial}.`
-                        : 'Exibindo produtos com preço e itens estratégicos de marca. Use a lateral para navegar por categorias e marcas.'}
+                        : 'Exibindo produtos com preço e itens estratégicos de marca. Use a lateral para navegar por seções e marcas.'}
                 </p>
               </div>
 
@@ -519,7 +519,7 @@ export default function ProdutosCliente({
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-black uppercase text-gray-800">Nenhum produto encontrado</h3>
-              <p className="mb-6 text-sm text-gray-500">Tente outras marcas, categorias ou termos de busca.</p>
+              <p className="mb-6 text-sm text-gray-500">Tente outras marcas, seções ou termos de busca.</p>
               <button onClick={limparFiltros} className="btn-primary">
                 Limpar filtros
               </button>

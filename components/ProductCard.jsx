@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { formatarParcelamento, formatarPreco, imagemUrlProduto, whatsappLink } from '@/lib/api'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
-import { trackCartAdd } from '@/lib/personalization'
+import { trackCartAdd, trackProductClick } from '@/lib/personalization'
 import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 
 export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = false }) {
@@ -31,9 +31,13 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
     setTimeout(() => setAdicionado(false), 1500)
   }
 
+  function handleProductClick() {
+    trackProductClick(produto)
+  }
+
   const conteudo = (
     <>
-      <Link href={`/produto/${produto.id}`} className="group block">
+      <Link href={`/produto/${produto.id}`} onClick={handleProductClick} className="group block">
         <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-white to-slate-100">
           {foto ? (
             <Image
@@ -104,7 +108,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
           )}
         </div>
 
-        <Link href={`/produto/${produto.id}`} className="group block">
+        <Link href={`/produto/${produto.id}`} onClick={handleProductClick} className="group block">
           <h3 className="line-clamp-3 min-h-[3.35rem] text-[13px] font-semibold leading-snug text-gray-900 transition-colors group-hover:text-primary sm:min-h-[3.75rem] sm:text-[15px]">
             {produto.nome}
           </h3>
@@ -173,6 +177,7 @@ export default function ProductCard({ produto, badgeLabel = '', ocultarPreco = f
             ) : (
               <Link
                 href={`/produto/${produto.id}`}
+                onClick={handleProductClick}
                 className="rounded-xl bg-primary px-3 py-2 text-center text-[11px] font-black uppercase tracking-wide text-white transition-all duration-200 hover:bg-red-700 sm:text-xs"
               >
                 Comprar
