@@ -302,9 +302,9 @@ function scoreProdutoInteligente(produto, context, mode = 'work') {
 
   if (estoque > 0) score += 22
   if (produtoTemFoto(produto)) score += 10
-  if (desconto > 0) score += mode === 'offer' ? Math.min(70, desconto * 5) : Math.min(20, desconto * 1.4)
-  if (context.sections.has(secao)) score += mode === 'complement' ? 16 : 34
-  if (context.groups.has(grupo)) score += mode === 'complement' ? 10 : 42
+  if (desconto > 0) score += mode === 'offer' ? Math.min(28, desconto * 2) : Math.min(20, desconto * 1.4)
+  if (context.sections.has(secao)) score += mode === 'complement' ? 16 : mode === 'offer' ? 30 : 28
+  if (context.groups.has(grupo)) score += mode === 'complement' ? 10 : mode === 'offer' ? 64 : 28
   if (marca && context.brands.has(marca)) score += 12
   if (produtoClicado && mode !== 'offer') score += 8
   if (termoMatches) score += termoMatches * (mode === 'complement' ? 8 : 12)
@@ -322,6 +322,66 @@ function scoreProdutoInteligente(produto, context, mode = 'work') {
 function produtoEhComplemento(produto, context) {
   const secao = normalizePersonalizationText(obterSecaoProduto(produto))
   return produtoCasaTermos(produto, context.complementTerms) || context.complementSections.has(secao)
+}
+
+function calcularAfinidadeHistorico(produto, context) {
+  const secao = normalizePersonalizationText(obterSecaoProduto(produto))
+  const grupo = obterGrupoProduto(produto)
+  const marca = obterMarcaProduto(produto)
+  const termoMatches = contarCasamentosProduto(produto, context.behaviorTerms)
+  const produtoTermMatches = contarCasamentosProduto(produto, context.productTerms)
+  const mesmaSecao = context.sections.has(secao)
+  const mesmoGrupo = context.groups.has(grupo)
+  const mesmaMarca = Boolean(marca && context.brands.has(marca))
+  const termosFortes = termoMatches >= 2 || produtoTermMatches >= 3
+  const termosExatos = termoMatches >= 1 && produtoTermMatches >= 1
+
+  return {
+    forte: Boolean(
+      mesmoGrupo ||
+        termosExatos ||
+        (mesmaSecao && termosFortes) ||
+        (mesmaMarca && (mesmaSecao || termoMatches >= 1 || produtoTermMatches >= 2))
+    ),
+    score:
+      (mesmoGrupo ? 80 : 0) +
+      (mesmaSecao ? 34 : 0) +
+      (mesmaMarca ? 18 : 0) +
+      Math.min(64, termoMatches * 16 + produtoTermMatches * 10),
+  }
+}
+
+function selecionarProdutosDiversificados(items = [], { limit = 10, maxPerGroup = 2, maxPerSection = 4 } = {}) {
+  const selecionados = []
+  const grupos = new Map()
+  const secoes = new Map()
+
+  for (const item of items) {
+    if (selecionados.length >= limit) break
+    const produto = item?.produto
+    const grupo = obterGrupoProduto(produto) || `produto-${produto?.id}`
+    const secao = normalizePersonalizationText(obterSecaoProduto(produto))
+    const totalGrupo = grupos.get(grupo) || 0
+    const totalSecao = secoes.get(secao) || 0
+
+    if (totalGrupo >= maxPerGroup || totalSecao >= maxPerSection) continue
+
+    selecionados.push(produto)
+    grupos.set(grupo, totalGrupo + 1)
+    secoes.set(secao, totalSecao + 1)
+  }
+
+  if (selecionados.length >= limit) return selecionados
+
+  const usados = new Set(selecionados.map((produto) => Number(produto?.id || 0)))
+  for (const item of items) {
+    if (selecionados.length >= limit) break
+    if (!item?.produto?.id || usados.has(Number(item.produto.id))) continue
+    selecionados.push(item.produto)
+    usados.add(Number(item.produto.id))
+  }
+
+  return selecionados
 }
 
 function ProductRow({ titulo, descricao, produtos }) {
@@ -377,7 +437,7 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
     ).slice(0, 8)
 
     const blockedBaseIds = new Set([...context.cartIds])
-    const workProducts = catalog
+    const workCandidates = catalog
       .filter((produto) => !blockedBaseIds.has(Number(produto.id)))
       .filter((produto) => !context.viewedIds.includes(Number(produto.id)))
       .map((produto) => ({
@@ -386,8 +446,11 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
       }))
       .filter((item) => item.score >= (context.hasBehavior ? 55 : 120))
       .sort((a, b) => b.score - a.score || Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0))
-      .map((item) => item.produto)
-      .slice(0, 10)
+    const workProducts = selecionarProdutosDiversificados(workCandidates, {
+      limit: 10,
+      maxPerGroup: 2,
+      maxPerSection: 4,
+    })
 
     const complementProducts = context.intents.length
       ? catalog
@@ -411,23 +474,31 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
       ...complementProducts.map((produto) => Number(produto.id)),
     ])
 
-    const offerProducts = catalog
-      .filter((produto) => !usedIds.has(Number(produto.id)))
-      .filter((produto) => obterDescontoPromocional(produto) > 0)
-      .map((produto) => ({
-        produto,
-        desconto: Number(obterDescontoPromocional(produto) || 0),
-        score: scoreProdutoInteligente(produto, context, 'offer'),
-      }))
-      .filter((item) => item.score >= (context.hasBehavior ? 45 : 125))
-      .sort(
-        (a, b) =>
-          b.score - a.score ||
-          b.desconto - a.desconto ||
-          Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0)
-      )
-      .map((item) => item.produto)
-      .slice(0, 10)
+    const offerProducts = context.hasBehavior
+      ? catalog
+          .filter((produto) => !usedIds.has(Number(produto.id)))
+          .filter((produto) => obterDescontoPromocional(produto) > 0)
+          .map((produto) => {
+            const afinidade = calcularAfinidadeHistorico(produto, context)
+            return {
+              produto,
+              afinidade,
+              desconto: Number(obterDescontoPromocional(produto) || 0),
+              score: scoreProdutoInteligente(produto, context, 'offer') + afinidade.score,
+            }
+          })
+          .filter((item) => item.afinidade.forte)
+          .filter((item) => item.score >= 90)
+          .sort(
+            (a, b) =>
+              b.score - a.score ||
+              b.afinidade.score - a.afinidade.score ||
+              b.desconto - a.desconto ||
+              Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0)
+          )
+          .map((item) => item.produto)
+          .slice(0, 10)
+      : []
 
     return {
       topCategories: context.topCategories,
@@ -492,7 +563,7 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
           />
           <ProductRow
             titulo="Mais produtos da sua obra"
-            descricao="Itens parecidos com suas buscas, categorias, cliques e produtos vistos."
+            descricao="Itens no mesmo contexto da sua compra, com variedade para não mostrar só um tipo de produto."
             produtos={data.workProducts}
           />
           <ProductRow
@@ -502,7 +573,7 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
           />
           <ProductRow
             titulo="Ofertas relacionadas"
-            descricao="Produtos com desconto online conectados ao seu histórico de navegação."
+            descricao="Produtos com desconto bem parecidos com o que você viu, buscou ou clicou."
             produtos={data.offerProducts}
           />
         </div>
