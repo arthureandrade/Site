@@ -35,9 +35,19 @@ SELECT
     COALESCE(p.IDSECAO, 0)                         AS secao,
     COALESCE(p.IDGRUPO, 0)                         AS grupo,
     COALESCE(p.IDSUBGRUPO, 0)                      AS subgrupo,
+    COALESCE(TRIM(sec.DESCRSECAO), '')              AS secao_nome,
+    COALESCE(TRIM(g.DESCRGRUPO), '')                AS grupo_nome,
+    COALESCE(TRIM(sg.DESCRSUBGRUPO), '')            AS subgrupo_nome,
     COALESCE(ppd.PRECOVENDA, pep.VALPRECO, 0)      AS preco,
     COALESCE(est.estoque_total, 0)                 AS estoque
 FROM DBA.PRODUTO p
+LEFT JOIN DBA.SECAO sec
+    ON sec.IDSECAO = p.IDSECAO
+LEFT JOIN DBA.GRUPO g
+    ON g.IDGRUPO = p.IDGRUPO
+LEFT JOIN DBA.SUBGRUPO sg
+    ON sg.IDSUBGRUPO = p.IDSUBGRUPO
+   AND sg.IDGRUPO = p.IDGRUPO
 LEFT JOIN (
     SELECT base.IDPRODUTO, base.SUBDESCRICAO
     FROM (

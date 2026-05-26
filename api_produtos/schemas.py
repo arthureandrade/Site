@@ -11,6 +11,9 @@ class ProdutoResponse(BaseModel):
     secao: int = 0
     grupo: int = 0
     subgrupo: int = 0
+    secao_nome: str = ""
+    grupo_nome: str = ""
+    subgrupo_nome: str = ""
     preco: float = Field(ge=0, description="Preco de varejo (R$)")
     marca: str = ""
     marca_logo_url: Optional[str] = None
