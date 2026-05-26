@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2851230
+      "saldo": 2898406
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 6159
     }
   ],
-  "generated_at": "2026-05-26T12:29:11.572277",
+  "generated_at": "2026-05-26T15:03:48.483025",
   "kpis": {
     "a_vencer_7d": 414112,
     "juros_pagos": 3641,
-    "total_aberto": 3162608,
+    "total_aberto": 3209784,
     "total_pago_periodo": 5342020,
     "total_vencido": 311378
   },
@@ -125,6 +125,11 @@
       "total_aberto": 206382
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 11,
+      "total_aberto": 133016
+    },
+    {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
       "titulos": 2,
       "total_aberto": 132610
@@ -148,11 +153,6 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 16,
       "total_aberto": 91350
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 5,
-      "total_aberto": 85864
     }
   ]
 }
