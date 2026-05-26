@@ -1,4 +1,6 @@
 ﻿import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
 import HeroCarousel from '@/components/HeroCarousel'
 import PersonalizedHomeShelf from '@/components/PersonalizedHomeShelf'
 import SaldaoCarousel from '@/components/SaldaoCarousel'
@@ -12,6 +14,7 @@ export const metadata = {
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 const TELEFONE = '(95) 3224-0115'
+const HERO_EXTENSIONS = ['png', 'jpg', 'jpeg', 'webp']
 
 const CATEGORIAS = [
   { nome: 'Ferro e aço', href: '/produtos?categoria=ferro_aco', cor: 'from-slate-900 to-slate-700' },
@@ -22,6 +25,23 @@ const CATEGORIAS = [
   { nome: 'Máquinas', busca: 'maquina', cor: 'from-red-900 to-red-600' },
 ]
 
+function getHeroSlides() {
+  const heroDir = path.join(process.cwd(), 'heros')
+  const slides = []
+
+  for (const numero of [1, 2, 3, 4]) {
+    const extensao = HERO_EXTENSIONS.find((ext) =>
+      fs.existsSync(path.join(heroDir, `hero${numero}.${ext}`))
+    )
+
+    if (extensao) {
+      slides.push(`/heros/hero${numero}.${extensao}`)
+    }
+  }
+
+  return slides
+}
+
 export default async function HomePage() {
   const [config, secao5Data, secao6Data, secao14Data, ramassolData] = await Promise.all([
     getHomeConfig(),
@@ -30,7 +50,7 @@ export default async function HomePage() {
     getProdutos({ secao: 14, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
     getProdutos({ marca: 'ramassol', todas_secoes: true, com_preco: false, limit: 5000, noStore: true }),
   ])
-  const heroSlides = ['/Hero/hero1.jpeg', '/Hero/hero2.jpeg', '/Hero/hero3.jpeg']
+  const heroSlides = getHeroSlides()
   const produtosMap = new Map()
   const produtosMotorizadasMap = new Map()
   const produtosMaisVendidosMap = new Map()

@@ -14,92 +14,87 @@ export default function HeroCarousel({ images = [], title, subtitle }) {
     if (slides.length <= 1) return undefined
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % slides.length)
-    }, 3000)
+    }, 4500)
     return () => window.clearInterval(timer)
   }, [slides.length])
 
+  if (!slides.length) {
+    return (
+      <section className="border-b border-slate-200 bg-white py-8">
+        <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
+          <h1 className="font-display text-3xl uppercase text-slate-950 sm:text-5xl">{title}</h1>
+          <p className="mt-3 max-w-3xl text-slate-600">{subtitle}</p>
+        </div>
+      </section>
+    )
+  }
+
   return (
-    <section className="relative overflow-hidden border-b border-slate-200 bg-[#111]">
-      <div className="absolute inset-0">
-        {slides.map((image, index) => (
-          <div
-            key={`${image}-${index}`}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{
-              opacity: index === activeIndex ? 1 : 0,
-              backgroundImage: `linear-gradient(90deg, rgba(5,10,20,0.94) 0%, rgba(9,18,36,0.84) 34%, rgba(9,18,36,0.48) 70%, rgba(9,18,36,0.16) 100%), url('${image}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-        ))}
-      </div>
+    <section className="border-b border-slate-200 bg-white">
+      <h1 className="sr-only">{title}</h1>
+      {subtitle && <p className="sr-only">{subtitle}</p>}
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.22),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_25%)]" />
-
-      <div className="relative mx-auto grid max-w-[1760px] gap-5 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-8 lg:px-8 lg:py-14">
-        <div className="relative z-10">
-          <span className="trust-chip">Operação comercial com estoque real</span>
-          <h1 className="mt-3 max-w-3xl text-[2rem] font-black uppercase leading-[0.98] text-white sm:mt-4 sm:text-4xl lg:text-5xl">
-            {title}
-          </h1>
-          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-200 sm:mt-4 sm:text-base">
-            {subtitle}
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2 sm:mt-6 sm:gap-3">
-            <span className="trust-chip">Compra online</span>
-            <span className="trust-chip">Retirada rápida</span>
-            <span className="trust-chip">Atendimento no WhatsApp</span>
+      <div className="mx-auto max-w-[1760px] px-0 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden bg-slate-100 sm:mt-4 sm:rounded-[28px] sm:border sm:border-slate-200 sm:shadow-[0_18px_50px_rgba(15,23,42,0.08)]">
+          <div className="relative aspect-[2048/768] w-full">
+            {slides.map((image, index) => (
+              <img
+                key={`${image}-${index}`}
+                src={image}
+                alt={index === 0 ? title || 'Galpão do Aço' : `Hero Galpão do Aço ${index + 1}`}
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                  index === activeIndex ? 'opacity-100' : 'opacity-0'
+                }`}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+            ))}
           </div>
-          <div className="mt-5 grid gap-3 sm:mt-6 sm:flex sm:flex-wrap">
+        </div>
+
+        {slides.length > 1 && (
+          <div className="mt-3 flex justify-center gap-2">
+            {slides.map((_, index) => (
+              <button
+                key={`hero-dot-${index}`}
+                type="button"
+                aria-label={`Ir para imagem ${index + 1}`}
+                onClick={() => setActiveIndex(index)}
+                className={`h-2.5 rounded-full transition-all ${
+                  index === activeIndex ? 'w-10 bg-primary' : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+                }`}
+              />
+            ))}
+          </div>
+        )}
+
+        <div className="mx-4 my-4 rounded-[22px] border border-slate-200 bg-white p-3 shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:mx-0 sm:flex sm:items-center sm:justify-between sm:gap-4 sm:p-4">
+          <div className="text-center sm:text-left">
+            <div className="text-[11px] font-black uppercase tracking-[0.22em] text-primary">
+              Galpão do Aço
+            </div>
+            <div className="mt-1 text-sm font-bold text-slate-700">
+              Estoque real, preço atualizado e atendimento rápido no WhatsApp.
+            </div>
+          </div>
+
+          <div className="mt-3 grid gap-2 sm:mt-0 sm:flex sm:shrink-0">
             <Link
               href="/produtos"
-              className="rounded-[18px] bg-primary px-5 py-3 text-center text-xs font-black uppercase tracking-[0.16em] text-white shadow-[0_18px_32px_rgba(185,28,28,0.3)] transition hover:bg-red-700 sm:rounded-[22px] sm:px-7 sm:py-4 sm:text-sm sm:tracking-[0.18em]"
+              className="rounded-2xl bg-primary px-5 py-3 text-center text-xs font-black uppercase tracking-[0.16em] text-white shadow-[0_14px_28px_rgba(185,28,28,0.22)] transition hover:bg-red-700"
             >
-              Comprar agora
+              Ver catálogo
             </Link>
             <TrackedWhatsAppLink
               href={`https://wa.me/${WHATSAPP}`}
               target="_blank"
               rel="noopener noreferrer"
               label="hero_whatsapp"
-              className="rounded-[18px] border border-white/20 bg-black/35 px-5 py-3 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-white/10 sm:rounded-[22px] sm:px-7 sm:py-4 sm:text-sm sm:tracking-[0.18em]"
+              className="rounded-2xl border border-green-500 bg-green-500 px-5 py-3 text-center text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-green-600"
             >
               Falar no WhatsApp
             </TrackedWhatsAppLink>
           </div>
-
-          {slides.length > 1 && (
-            <div className="mt-5 flex items-center gap-2 sm:mt-6">
-              {slides.map((_, index) => (
-                <button
-                  key={`dot-${index}`}
-                  type="button"
-                  aria-label={`Ir para slide ${index + 1}`}
-                  onClick={() => setActiveIndex(index)}
-                  className={`h-2.5 rounded-full transition-all ${index === activeIndex ? 'w-10 bg-primary' : 'w-2.5 bg-white/45'}`}
-                />
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1 lg:mx-0 lg:grid lg:grid-cols-2 lg:overflow-visible lg:px-0 lg:pb-0">
-          {[
-            { titulo: '+ clientes atendidos', valor: 'Milhares', detalhe: 'Atuação forte em obra, serralheria e manutenção' },
-            { titulo: 'Grande estoque', valor: 'Sempre ativo', detalhe: 'Mix amplo para compra rápida e recorrente' },
-            { titulo: 'Parcelamento', valor: '10x sem juros', detalhe: 'Condição clara para acelerar conversão' },
-            { titulo: 'Atendimento', valor: 'Resposta rápida', detalhe: 'Equipe comercial pronta no WhatsApp' },
-          ].map((item) => (
-            <div
-              key={item.titulo}
-              className="min-w-[220px] rounded-[22px] border border-white/10 bg-white/10 p-4 shadow-[0_18px_34px_rgba(15,23,42,0.18)] backdrop-blur-sm sm:min-w-[240px] lg:min-w-0 lg:rounded-[24px]"
-            >
-              <div className="text-[11px] font-black uppercase tracking-[0.22em] text-gray-300">{item.titulo}</div>
-              <div className="mt-2 text-2xl font-black uppercase leading-none text-white sm:text-[1.8rem]">{item.valor}</div>
-              <div className="mt-2 text-sm leading-relaxed text-gray-300">{item.detalhe}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
