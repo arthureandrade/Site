@@ -8,42 +8,96 @@ import {
   normalizePersonalizationText,
   readPersonalizationProfile,
 } from '@/lib/personalization'
+import {
+  calcularScoreCatalogo,
+  inferirCategoriaProduto,
+  inferirGrupoCatalogo,
+} from '@/lib/catalogoPublico'
 import { obterDescontoPromocional } from '@/lib/ofertas'
 
-const INTENT_GROUPS = [
+const PROJECT_INTENTS = [
   {
-    triggers: ['telha', 'cobertura', 'cumeeira'],
-    complements: ['parafuso', 'cumeeira', 'veda', 'vedante', 'rufo', 'calha', 'silicone'],
+    key: 'cobertura',
+    triggers: ['telha', 'cobertura', 'cumeeira', 'rufo', 'calha', 'galvalume', 'fibrocimento', 'veda telha'],
+    complements: ['parafuso', 'autobrocante', 'veda telha', 'vedante', 'cumeeira', 'rufo', 'calha', 'silicone', 'broca'],
+    sections: ['Telhas e Coberturas', 'Ferragens e Fixação', 'Acabamento, Pintura e Químicos'],
   },
   {
-    triggers: ['parafuso', 'ferragem', 'fixacao'],
-    complements: ['bucha', 'arruela', 'porca', 'broca', 'chave', 'soquete'],
+    key: 'serralheria',
+    triggers: ['metalon', 'perfil', 'cantoneira', 'barra chata', 'chapa', 'tubo industrial', 'serralheiro', 'ferro'],
+    complements: ['disco corte', 'disco desbaste', 'eletrodo', 'solda', 'esmerilhadeira', 'broca', 'luva', 'oculos', 'trena'],
+    sections: ['Aço e Perfis', 'Solda, Corte e Abrasivos', 'Máquinas e Equipamentos', 'EPIs, Casa e Utilidades'],
   },
   {
-    triggers: ['solda', 'eletrodo', 'maquina de solda'],
-    complements: ['eletrodo', 'disco', 'mascara', 'arame', 'esmerilhadeira'],
+    key: 'fixacao',
+    triggers: ['parafuso', 'chumbador', 'bucha', 'prego', 'porca', 'arruela', 'rebite', 'ferragem'],
+    complements: ['broca', 'chave', 'soquete', 'arruela', 'porca', 'bucha', 'alicate', 'nivel'],
+    sections: ['Ferragens e Fixação', 'Ferramentas Manuais e Agrícolas', 'Máquinas e Equipamentos'],
   },
   {
-    triggers: ['hidraulica', 'tubo', 'pvc', 'caixa d agua'],
-    complements: ['joelho', 'luva', 'registro', 'torneira', 'cola pvc', 'adaptador'],
+    key: 'solda',
+    triggers: ['solda', 'eletrodo', 'arame mig', 'disco corte', 'disco flap', 'abrasivo', 'mascara de solda'],
+    complements: ['eletrodo', 'disco', 'mascara', 'luva', 'oculos', 'esmerilhadeira', 'arame mig', 'avental'],
+    sections: ['Solda, Corte e Abrasivos', 'Máquinas e Equipamentos', 'EPIs, Casa e Utilidades'],
   },
   {
-    triggers: ['eletrica', 'fio', 'cabo', 'disjuntor'],
-    complements: ['tomada', 'interruptor', 'eletroduto', 'caixa', 'conector'],
+    key: 'hidraulica',
+    triggers: ['hidraulica', 'tubo pvc', 'joelho', 'luva soldavel', 'registro', 'torneira', 'caixa d agua', 'sifao'],
+    complements: ['joelho', 'luva', 'registro', 'torneira', 'cola pvc', 'adaptador', 'veda rosca', 'sifao', 'ralo'],
+    sections: ['Hidráulica, Elétrica e Iluminação'],
   },
   {
-    triggers: ['ferramenta', 'furadeira', 'serra', 'esmerilhadeira'],
-    complements: ['broca', 'disco', 'luva', 'oculos', 'trena', 'extensao'],
+    key: 'eletrica',
+    triggers: ['eletrica', 'fio', 'cabo flex', 'disjuntor', 'tomada', 'interruptor', 'eletroduto', 'lampada'],
+    complements: ['tomada', 'interruptor', 'eletroduto', 'caixa', 'conector', 'fita isolante', 'lampada', 'plug'],
+    sections: ['Hidráulica, Elétrica e Iluminação'],
+  },
+  {
+    key: 'pintura',
+    triggers: ['tinta', 'pintura', 'spray', 'solvente', 'thinner', 'impermeabilizante', 'selador', 'verniz'],
+    complements: ['rolo', 'pincel', 'bandeja', 'fita', 'solvente', 'thinner', 'silicone', 'lixa'],
+    sections: ['Acabamento, Pintura e Químicos'],
+  },
+  {
+    key: 'obra',
+    triggers: ['argamassa', 'cimento', 'rejunte', 'concreto', 'bloco', 'acabamento'],
+    complements: ['desempenadeira', 'colher', 'balde', 'nivel', 'trena', 'luva', 'impermeabilizante'],
+    sections: ['Acabamento, Pintura e Químicos', 'Ferramentas Manuais e Agrícolas', 'EPIs, Casa e Utilidades'],
   },
 ]
+
+const STOP_TERMS = new Set([
+  'aco',
+  'aco',
+  'galpao',
+  'geral',
+  'para',
+  'com',
+  'sem',
+  'por',
+  'und',
+  'un',
+  'mt',
+  'mm',
+  'cm',
+  'mts',
+  'kg',
+  'pc',
+  'pct',
+  'produto',
+  'linha',
+])
 
 function produtoTexto(produto) {
   return normalizePersonalizationText(
     [
       produto?.nome,
+      produto?.descricao,
       produto?.marca,
       produto?.grupo_nome,
+      produto?.nome_grupo,
       produto?.subgrupo_nome,
+      produto?.nome_subgrupo,
       produto?.grupo,
       produto?.subgrupo,
     ]
@@ -53,11 +107,15 @@ function produtoTexto(produto) {
 }
 
 function produtoCategoria(produto) {
-  return String(produto?.grupo_nome || produto?.marca || produto?.grupo || '').trim()
+  return String(produto?.grupo_nome || produto?.nome_grupo || produto?.marca || produto?.grupo || '').trim()
 }
 
 function produtoVisivel(produto) {
   return produto?.id && String(produto?.nome || '').trim() && Number(produto?.preco || 0) > 0
+}
+
+function produtoTemFoto(produto) {
+  return Boolean(produto?.fallback_foto_url || produto?.foto_url || produto?.image)
 }
 
 function produtoCasaTermos(produto, termos = []) {
@@ -78,47 +136,192 @@ function uniqueById(produtos = []) {
   return Array.from(map.values())
 }
 
-function scoreProduto(produto, termos = [], categorias = [], cartIds = [], viewedIds = []) {
+function uniqueStrings(items = []) {
+  return Array.from(
+    new Set(
+      items
+        .map((item) => String(item || '').trim())
+        .filter(Boolean)
+    )
+  )
+}
+
+function termosRelevantes(valor) {
+  return normalizePersonalizationText(valor)
+    .split(/[^a-z0-9]+/g)
+    .map((termo) => termo.trim())
+    .filter((termo) => termo.length >= 3 && !STOP_TERMS.has(termo) && !/^\d+$/.test(termo))
+}
+
+function obterTermosProduto(produto) {
+  return termosRelevantes([
+    produto?.nome,
+    produto?.descricao,
+    produto?.marca,
+    produto?.grupo_nome,
+    produto?.nome_grupo,
+    produto?.subgrupo_nome,
+    produto?.nome_subgrupo,
+  ].filter(Boolean).join(' '))
+}
+
+function contarCasamentosProduto(produto, termos = []) {
+  if (!termos.length) return 0
   const texto = produtoTexto(produto)
-  const categoria = normalizePersonalizationText(produtoCategoria(produto))
-  let score = 0
-
-  if (Number(produto?.estoque || 0) > 0) score += 2
-  if (Number(produto?.preco || 0) > 0) score += 1
-  if (cartIds.includes(Number(produto.id))) score -= 20
-  if (viewedIds.includes(Number(produto.id))) score -= 8
-
-  for (const termo of termos) {
+  return termos.reduce((total, termo) => {
     const normalizado = normalizePersonalizationText(termo)
-    if (normalizado.length >= 3 && texto.includes(normalizado)) score += 4
-  }
+    return total + (normalizado.length >= 3 && texto.includes(normalizado) ? 1 : 0)
+  }, 0)
+}
 
-  for (const item of categorias) {
-    const normalizado = normalizePersonalizationText(item)
-    if (normalizado && (categoria.includes(normalizado) || texto.includes(normalizado))) score += 6
+function obterSecaoProduto(produto) {
+  return inferirCategoriaProduto(produto)
+}
+
+function obterGrupoProduto(produto) {
+  return inferirGrupoCatalogo(produto)?.id || ''
+}
+
+function obterMarcaProduto(produto) {
+  return normalizePersonalizationText(produto?.marca || '')
+}
+
+function obterProdutoHistorico(item, catalogMap) {
+  const id = Number(item?.id || item || 0)
+  return catalogMap.get(id) || (produtoVisivel(item) ? item : null)
+}
+
+function obterProdutosDoHistorico(profile, catalogMap) {
+  const ids = [
+    ...(profile?.cartIds || []),
+    ...(profile?.clickedIds || []),
+    ...(profile?.viewed || []).map((item) => item?.id),
+  ]
+
+  const porId = ids.map((id) => obterProdutoHistorico(id, catalogMap)).filter(Boolean)
+  const snapshots = (profile?.viewed || []).map((item) => obterProdutoHistorico(item, catalogMap)).filter(Boolean)
+
+  return uniqueById([...porId, ...snapshots]).filter(produtoVisivel)
+}
+
+function obterIntencoes(contextText) {
+  const normalized = normalizePersonalizationText(contextText)
+  return PROJECT_INTENTS.filter((intent) =>
+    intent.triggers.some((trigger) => normalized.includes(normalizePersonalizationText(trigger)))
+  )
+}
+
+function mediana(valores = []) {
+  const ordenados = valores.filter((valor) => Number(valor) > 0).sort((a, b) => a - b)
+  if (!ordenados.length) return 0
+  return ordenados[Math.floor(ordenados.length / 2)]
+}
+
+function montarContextoPersonalizacao(profile, catalog, catalogMap) {
+  const viewedIds = (profile?.viewed || []).map((item) => Number(item?.id || 0)).filter(Boolean)
+  const cartIds = (profile?.cartIds || []).map((id) => Number(id || 0)).filter(Boolean)
+  const clickedIds = (profile?.clickedIds || []).map((id) => Number(id || 0)).filter(Boolean)
+  const topCategories = getTopPersonalizationCategories(profile, 6)
+  const searchTerms = (profile?.searches || []).map((item) => item?.term).filter(Boolean).slice(0, 10)
+  const historyProducts = obterProdutosDoHistorico(profile, catalogMap)
+  const historyText = [
+    ...searchTerms,
+    ...topCategories,
+    ...historyProducts.map((produto) => produto?.nome),
+    ...historyProducts.map((produto) => produtoCategoria(produto)),
+  ].filter(Boolean).join(' ')
+  const intents = obterIntencoes(historyText)
+  const behaviorTerms = uniqueStrings([
+    ...searchTerms,
+    ...topCategories,
+    ...termosRelevantes(historyText),
+  ]).slice(0, 40)
+  const productTerms = uniqueStrings(historyProducts.flatMap(obterTermosProduto)).slice(0, 60)
+  const sections = new Set(
+    uniqueStrings([
+      ...topCategories,
+      ...historyProducts.map(obterSecaoProduto),
+    ]).map(normalizePersonalizationText)
+  )
+  const groups = new Set(historyProducts.map(obterGrupoProduto).filter(Boolean))
+  const brands = new Set(historyProducts.map(obterMarcaProduto).filter(Boolean))
+  const complementTerms = uniqueStrings(intents.flatMap((intent) => intent.complements))
+  const complementSections = new Set(
+    intents
+      .flatMap((intent) => intent.sections)
+      .map(normalizePersonalizationText)
+      .filter(Boolean)
+  )
+  const medianPrice = mediana(historyProducts.map((produto) => Number(produto?.preco || 0)))
+
+  return {
+    viewedIds,
+    cartIds,
+    clickedIds,
+    topCategories,
+    searchTerms,
+    historyProducts,
+    behaviorTerms,
+    productTerms,
+    sections,
+    groups,
+    brands,
+    intents,
+    complementTerms,
+    complementSections,
+    medianPrice,
+    hasBehavior: Boolean(historyProducts.length || searchTerms.length || topCategories.length),
   }
+}
+
+function scoreFaixaPreco(produto, medianPrice) {
+  const preco = Number(produto?.preco || 0)
+  if (!preco || !medianPrice) return 0
+
+  const ratio = Math.abs(preco - medianPrice) / Math.max(preco, medianPrice)
+  if (ratio <= 0.25) return 22
+  if (ratio <= 0.5) return 12
+  if (ratio <= 0.85) return 5
+  return 0
+}
+
+function scoreProdutoInteligente(produto, context, mode = 'work') {
+  const id = Number(produto?.id || 0)
+  const secao = normalizePersonalizationText(obterSecaoProduto(produto))
+  const grupo = obterGrupoProduto(produto)
+  const marca = obterMarcaProduto(produto)
+  const desconto = Number(obterDescontoPromocional(produto) || 0)
+  const estoque = Number(produto?.estoque || 0)
+  const produtoNoCarrinho = context.cartIds.includes(id)
+  const produtoVisto = context.viewedIds.includes(id)
+  const produtoClicado = context.clickedIds.includes(id)
+  const termoMatches = contarCasamentosProduto(produto, context.behaviorTerms)
+  const produtoTermMatches = contarCasamentosProduto(produto, context.productTerms)
+  const complementMatches = contarCasamentosProduto(produto, context.complementTerms)
+  let score = calcularScoreCatalogo(produto) * 0.12
+
+  if (estoque > 0) score += 22
+  if (produtoTemFoto(produto)) score += 10
+  if (desconto > 0) score += mode === 'offer' ? Math.min(70, desconto * 5) : Math.min(20, desconto * 1.4)
+  if (context.sections.has(secao)) score += mode === 'complement' ? 16 : 34
+  if (context.groups.has(grupo)) score += mode === 'complement' ? 10 : 42
+  if (marca && context.brands.has(marca)) score += 12
+  if (produtoClicado && mode !== 'offer') score += 8
+  if (termoMatches) score += termoMatches * (mode === 'complement' ? 8 : 12)
+  if (produtoTermMatches) score += Math.min(40, produtoTermMatches * 5)
+  if (complementMatches) score += mode === 'complement' ? complementMatches * 34 : complementMatches * 8
+  if (context.complementSections.has(secao)) score += mode === 'complement' ? 24 : 8
+  score += scoreFaixaPreco(produto, context.medianPrice)
+
+  if (produtoNoCarrinho) score -= 90
+  if (produtoVisto && mode !== 'recent') score -= mode === 'offer' ? 28 : 45
 
   return score
 }
 
-function getComplementTerms(profile) {
-  const base = [
-    ...(profile?.searches || []).map((item) => item?.term),
-    ...(profile?.viewed || []).map((item) => item?.nome),
-  ]
-    .filter(Boolean)
-    .join(' ')
-
-  const normalizedBase = normalizePersonalizationText(base)
-  const terms = new Set()
-
-  for (const group of INTENT_GROUPS) {
-    if (group.triggers.some((trigger) => normalizedBase.includes(normalizePersonalizationText(trigger)))) {
-      group.complements.forEach((term) => terms.add(term))
-    }
-  }
-
-  return Array.from(terms)
+function produtoEhComplemento(produto, context) {
+  const secao = normalizePersonalizationText(obterSecaoProduto(produto))
+  return produtoCasaTermos(produto, context.complementTerms) || context.complementSections.has(secao)
 }
 
 function ProductRow({ titulo, descricao, produtos }) {
@@ -165,13 +368,7 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
 
     const catalog = uniqueById(produtos).filter(produtoVisivel)
     const catalogMap = new Map(catalog.map((produto) => [Number(produto.id), produto]))
-    const viewedIds = (profile.viewed || []).map((item) => Number(item?.id || 0)).filter(Boolean)
-    const cartIds = (profile.cartIds || []).map((id) => Number(id || 0)).filter(Boolean)
-    const topCategories = getTopPersonalizationCategories(profile, 5)
-    const searchTerms = (profile.searches || []).map((item) => item?.term).filter(Boolean).slice(0, 6)
-    const viewedNames = (profile.viewed || []).map((item) => item?.nome).filter(Boolean).slice(0, 8)
-    const behaviorTerms = [...searchTerms, ...viewedNames]
-    const complementTerms = getComplementTerms(profile)
+    const context = montarContextoPersonalizacao(profile, catalog, catalogMap)
 
     const recentProducts = uniqueById(
       (profile.viewed || [])
@@ -179,44 +376,61 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
         .filter(produtoVisivel)
     ).slice(0, 8)
 
+    const blockedBaseIds = new Set([...context.cartIds])
     const workProducts = catalog
-      .filter((produto) => !viewedIds.includes(Number(produto.id)))
+      .filter((produto) => !blockedBaseIds.has(Number(produto.id)))
+      .filter((produto) => !context.viewedIds.includes(Number(produto.id)))
       .map((produto) => ({
         produto,
-        score: scoreProduto(produto, behaviorTerms, topCategories, cartIds, viewedIds),
+        score: scoreProdutoInteligente(produto, context, 'work'),
       }))
-      .filter((item) => item.score > 2)
+      .filter((item) => item.score >= (context.hasBehavior ? 55 : 120))
       .sort((a, b) => b.score - a.score || Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0))
       .map((item) => item.produto)
       .slice(0, 10)
 
-    const complementProducts = complementTerms.length
+    const complementProducts = context.intents.length
       ? catalog
-          .filter((produto) => !viewedIds.includes(Number(produto.id)) && !cartIds.includes(Number(produto.id)))
-          .filter((produto) => produtoCasaTermos(produto, complementTerms))
+          .filter((produto) => !context.cartIds.includes(Number(produto.id)))
+          .filter((produto) => !context.viewedIds.includes(Number(produto.id)))
+          .filter((produto) => produtoEhComplemento(produto, context))
+          .map((produto) => ({
+            produto,
+            score: scoreProdutoInteligente(produto, context, 'complement'),
+          }))
+          .filter((item) => item.score >= 45)
+          .sort((a, b) => b.score - a.score || Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0))
+          .map((item) => item.produto)
           .slice(0, 10)
       : []
+
     const usedIds = new Set([
-      ...viewedIds,
-      ...cartIds,
+      ...context.viewedIds,
+      ...context.cartIds,
       ...workProducts.map((produto) => Number(produto.id)),
       ...complementProducts.map((produto) => Number(produto.id)),
     ])
-    const offerTerms = [...behaviorTerms, ...topCategories, ...complementTerms]
+
     const offerProducts = catalog
       .filter((produto) => !usedIds.has(Number(produto.id)))
       .filter((produto) => obterDescontoPromocional(produto) > 0)
       .map((produto) => ({
         produto,
-        score: scoreProduto(produto, offerTerms, topCategories, cartIds, viewedIds),
+        desconto: Number(obterDescontoPromocional(produto) || 0),
+        score: scoreProdutoInteligente(produto, context, 'offer'),
       }))
-      .filter((item) => item.score > 2)
-      .sort((a, b) => b.score - a.score || Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0))
+      .filter((item) => item.score >= (context.hasBehavior ? 45 : 125))
+      .sort(
+        (a, b) =>
+          b.score - a.score ||
+          b.desconto - a.desconto ||
+          Number(b.produto.estoque || 0) - Number(a.produto.estoque || 0)
+      )
       .map((item) => item.produto)
       .slice(0, 10)
 
     return {
-      topCategories,
+      topCategories: context.topCategories,
       recentProducts,
       workProducts,
       complementProducts,
@@ -246,7 +460,7 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
                 Continue sua compra para a obra
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
-                Separamos produtos a partir do que você viu, buscou e adicionou ao orçamento neste navegador.
+                Separamos produtos a partir do que você viu, buscou, clicou e adicionou ao orçamento neste navegador.
               </p>
             </div>
             <Link
@@ -278,17 +492,17 @@ export default function PersonalizedHomeShelf({ produtos = [] }) {
           />
           <ProductRow
             titulo="Mais produtos da sua obra"
-            descricao="Itens parecidos com suas buscas, categorias e produtos vistos."
+            descricao="Itens parecidos com suas buscas, categorias, cliques e produtos vistos."
             produtos={data.workProducts}
           />
           <ProductRow
             titulo="Complementos para seu orçamento"
-            descricao="Sugestões para fechar o conjunto da compra sem esquecer acessórios."
+            descricao="Acessórios e itens de apoio para fechar o conjunto da compra."
             produtos={data.complementProducts}
           />
           <ProductRow
             titulo="Ofertas relacionadas"
-            descricao="Produtos com desconto online ligados ao seu histórico de navegação."
+            descricao="Produtos com desconto online conectados ao seu histórico de navegação."
             produtos={data.offerProducts}
           />
         </div>
