@@ -247,7 +247,7 @@ export default function ProdutosCliente({
 
   const categoriasVisiveis = mostrarTodasCategorias
     ? categoriasResumo
-    : categoriasResumo.slice(0, 6)
+    : categoriasResumo.slice(0, 10)
   const marcasVisiveis = mostrarTodasMarcas ? marcasFiltradas : marcasFiltradas.slice(0, 8)
   const totalFiltrado = produtosFiltradosPorCategoria.length
   const totalPages = Math.ceil(totalFiltrado / produtosPorPagina)
@@ -421,7 +421,7 @@ export default function ProdutosCliente({
                       </div>
                     )
                   })}
-                  {categoriasResumo.length > 6 && (
+                  {categoriasResumo.length > 10 && (
                     <button
                       type="button"
                       onClick={() => setMostrarTodasCategorias((valor) => !valor)}
