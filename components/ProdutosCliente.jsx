@@ -19,6 +19,7 @@ import {
   montarGruposPorSecaoCatalogo,
   montarMarcasCatalogo,
   normalizarTexto,
+  ordenarCatalogoPadraoDinamico,
   produtoCasaBuscaCatalogo,
 } from '../lib/catalogoPublico'
 
@@ -122,7 +123,10 @@ export default function ProdutosCliente({
               normalizarTexto(produto.marca || '').includes(marcaNormalizada) || ehProdutoRamassolCatalogo(produto)
           )
         }
-        const ordenados = [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
+        const catalogoPadrao = !busca_ && !marca_ && !secaoEspecial && !subgrupoEspecial
+        const ordenados = catalogoPadrao
+          ? ordenarCatalogoPadraoDinamico(produtosValidos)
+          : [...produtosValidos].sort((a, b) => calcularScoreComercial(b) - calcularScoreComercial(a))
         setTodosProdutos(ordenados)
         setCategoriasCatalogo(montarCategoriasCatalogo(ordenados))
       }
@@ -551,7 +555,9 @@ export default function ProdutosCliente({
                   {totalFiltrado.toLocaleString('pt-BR')} produto{totalFiltrado !== 1 ? 's' : ''}
                 </span>
                 <span className="rounded-full bg-amber-50 px-3 py-1.5 font-bold uppercase tracking-wide text-amber-700">
-                  Ordenado por potencial de venda
+                  {busca || marcaFiltro || categoriaAtiva !== 'Todas' || grupoAtivo
+                    ? 'Ordenado por potencial de venda'
+                    : 'Vitrine dinâmica'}
                 </span>
               </div>
 
