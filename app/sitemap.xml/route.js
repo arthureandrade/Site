@@ -44,6 +44,7 @@ export async function GET() {
     urlEntry(absoluteSiteUrl('/'), { priority: '1.0' }),
     urlEntry(absoluteSiteUrl('/produtos'), { priority: '0.9' }),
     urlEntry(absoluteSiteUrl('/produtos?categoria=ferro_aco'), { priority: '0.8' }),
+    urlEntry(absoluteSiteUrl('/politica-de-privacidade'), { priority: '0.5', changefreq: 'monthly' }),
     urlEntry(absoluteSiteUrl('/politica-de-troca-e-devolucao'), { priority: '0.5', changefreq: 'monthly' }),
     urlEntry(absoluteSiteUrl('/feed-meta.csv'), { priority: '0.4', changefreq: 'hourly' }),
     urlEntry(absoluteSiteUrl('/feed-google.tsv'), { priority: '0.4', changefreq: 'hourly' }),
