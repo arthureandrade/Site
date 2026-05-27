@@ -144,16 +144,22 @@ export default async function HomePage() {
     : 'sem retorno'
 
   return (
-    <div className="relative isolate overflow-hidden">
+    <div className="relative isolate overflow-hidden bg-[#f7f8fa] md:bg-transparent">
       {homeBackgroundImage ? (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.9)), url("${homeBackgroundImage}")`,
-            backgroundAttachment: 'fixed',
-          }}
-        />
+        <>
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(185,28,28,0.08),transparent_32%),linear-gradient(180deg,#ffffff_0%,#f7f8fa_100%)] md:hidden"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none fixed inset-0 -z-10 hidden bg-cover bg-center bg-no-repeat md:block"
+            style={{
+              backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.9)), url("${homeBackgroundImage}")`,
+              backgroundAttachment: 'fixed',
+            }}
+          />
+        </>
       ) : null}
 
       <div className="relative z-10">
@@ -259,7 +265,7 @@ export default async function HomePage() {
         resumo={`${produtosSubgrupo30.length} item${produtosSubgrupo30.length !== 1 ? 's' : ''} da linha de solda com 14% de desconto online.`}
       />
 
-      <section className="bg-white/90 py-4 backdrop-blur-sm sm:py-5">
+      <section className="bg-white py-4 md:bg-white/90 md:backdrop-blur-sm sm:py-5">
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: 'Operacao estruturada', texto: 'Mix amplo, condicao comercial clara e atendimento preparado para volume.' },
@@ -274,7 +280,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-white/90 py-6 backdrop-blur-sm sm:py-8">
+      <section className="bg-white py-6 md:bg-white/90 md:backdrop-blur-sm sm:py-8">
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <div className="eyebrow">Categorias principais</div>
@@ -302,7 +308,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="saldao" className="bg-[#fff7f2]/92 py-6 backdrop-blur-sm">
+      <section id="saldao" className="bg-[#fff7f2] py-6 md:bg-[#fff7f2]/92 md:backdrop-blur-sm">
         <div className="mx-auto max-w-[1760px] px-4 sm:px-6 lg:px-8">
           <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -324,7 +330,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#f6f7f8]/92 py-8 backdrop-blur-sm sm:py-10">
+      <section className="bg-[#f6f7f8] py-8 md:bg-[#f6f7f8]/92 md:backdrop-blur-sm sm:py-10">
         <div className="mx-auto grid max-w-[1760px] gap-4 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {[
             { titulo: '+X clientes atendidos', texto: 'Atendimento comercial rápido para obras, oficinas e serralherias.' },
