@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-27T21:44:38.775Z",
+  "generated_at": "2026-05-27T23:04:19.054Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 448,
+  "total": 450,
   "produtos": [
     {
       "descricao": "",
@@ -1066,6 +1066,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/245.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": -8935,
+      "foto_url": null,
+      "grupo": 80,
+      "id": 14059,
+      "marca": "GERAL",
+      "nome": "BOBINA GALVALUME 0,43MMX1200",
+      "preco": 10,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "KG",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -5112,6 +5126,20 @@
       "subgrupo": 9999,
       "unidade": "MT",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13539.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": -30,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13690.jpg",
+      "grupo": 80,
+      "id": 13690,
+      "marca": "GERAL",
+      "nome": "TELHA GALV. SANDUICHE MANTA 0,43X1200 ASTM A792 AZ150",
+      "preco": 105.88,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "MT",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13690.jpg"
     },
     {
       "descricao": "",
