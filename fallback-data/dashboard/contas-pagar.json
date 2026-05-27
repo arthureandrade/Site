@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2792909
+      "saldo": 2791268
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 336862
+      "saldo": 337428
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-05-27T10:16:55.795354",
+  "generated_at": "2026-05-27T13:37:02.837440",
   "kpis": {
-    "a_vencer_7d": 333918,
+    "a_vencer_7d": 335166,
     "juros_pagos": 83447,
-    "total_aberto": 3157135,
-    "total_pago_periodo": 5827595,
-    "total_vencido": 364226
+    "total_aberto": 3156060,
+    "total_pago_periodo": 5827906,
+    "total_vencido": 364792
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -95,11 +95,11 @@
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 23,
-      "fornecedor": "TELEFONICA BRASIL S.A - VIVO",
+      "dias_atraso": 25,
+      "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
-      "saldo": 20,
-      "vencimento": "2026-05-04T00:00:00"
+      "saldo": 877,
+      "vencimento": "2026-05-02T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
