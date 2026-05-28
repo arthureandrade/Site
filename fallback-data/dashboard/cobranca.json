@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 587764.8099999999
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 130955.04
+      "saldo": 577249.55
     },
     {
       "faixa": "180+ dias",
       "saldo": 111364.16
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 101450.8
     },
     {
       "faixa": "31–60 dias",
@@ -25,22 +25,15 @@
       "saldo": 15216.89
     }
   ],
-  "generated_at": "2026-05-28T08:04:10.293307",
+  "generated_at": "2026-05-28T12:31:24.238431",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 941363.6400000001,
-    "total_atraso": 353598.82999999996,
-    "total_vencer": 587764.81
+    "clientes_atraso": 61,
+    "total_aberto": 901344.1399999999,
+    "total_atraso": 324094.59,
+    "total_vencer": 577249.55
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 681.54,
-      "vencimento": "2026-05-23T00:00:00"
-    },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
       "dias_atraso": 4,
@@ -103,6 +96,13 @@
       "loja": "Loja 1",
       "saldo": 48.51,
       "vencimento": "2026-05-26T00:00:00"
+    },
+    {
+      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
+      "dias_atraso": 2,
+      "loja": "Loja 1",
+      "saldo": 103.39,
+      "vencimento": "2026-05-26T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -110,8 +110,8 @@
     {
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 404,
-      "titulos": 3,
-      "total_atraso": 49289.47
+      "titulos": 2,
+      "total_atraso": 45642.67
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
@@ -138,12 +138,6 @@
       "total_atraso": 20961.34
     },
     {
-      "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 1,
-      "titulos": 2,
-      "total_atraso": 18721
-    },
-    {
       "cliente": "CONSTRUTORA PORTO S.A.",
       "maior_atraso": 6,
       "titulos": 1,
@@ -166,6 +160,12 @@
       "maior_atraso": 44,
       "titulos": 4,
       "total_atraso": 12228.470000000001
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 22,
+      "titulos": 6,
+      "total_atraso": 9166.939999999999
     }
   ]
 }

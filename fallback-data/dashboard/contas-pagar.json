@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2796759
+      "saldo": 3465248
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-05-28T08:04:10.889770",
+  "generated_at": "2026-05-28T12:31:24.916069",
   "kpis": {
     "a_vencer_7d": 351130,
     "juros_pagos": 83447,
-    "total_aberto": 3170903,
+    "total_aberto": 3839392,
     "total_pago_periodo": 5596854,
     "total_vencido": 374144
   },
@@ -110,6 +110,11 @@
       "total_aberto": 850114
     },
     {
+      "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
+      "titulos": 1,
+      "total_aberto": 668489
+    },
+    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 5,
       "total_aberto": 237415
@@ -148,11 +153,6 @@
       "fornecedor": "HENAN FINEWORK CRANE CO LTD",
       "titulos": 2,
       "total_aberto": 95856
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 16,
-      "total_aberto": 91350
     }
   ]
 }
