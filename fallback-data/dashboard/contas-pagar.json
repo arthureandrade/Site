@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3465248
+      "saldo": 3465247
     },
     {
       "faixa": "1–30 dias",
@@ -17,11 +17,11 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-05-28T12:31:24.916069",
+  "generated_at": "2026-05-28T15:15:56.902059",
   "kpis": {
     "a_vencer_7d": 351130,
     "juros_pagos": 83447,
-    "total_aberto": 3839392,
+    "total_aberto": 3839391,
     "total_pago_periodo": 5596854,
     "total_vencido": 374144
   },
@@ -112,7 +112,7 @@
     {
       "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
       "titulos": 1,
-      "total_aberto": 668489
+      "total_aberto": 668488
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
