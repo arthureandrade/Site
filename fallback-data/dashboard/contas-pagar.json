@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3445898
+      "saldo": 3461019
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 362180
+      "saldo": 289740
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-05-29T07:55:14.209853",
+  "generated_at": "2026-05-29T11:58:15.331505",
   "kpis": {
-    "a_vencer_7d": 352889,
+    "a_vencer_7d": 357929,
     "juros_pagos": 83447,
-    "total_aberto": 3835442,
-    "total_pago_periodo": 5197404,
-    "total_vencido": 389544
+    "total_aberto": 3778123,
+    "total_pago_periodo": 5414724,
+    "total_vencido": 317104
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -106,8 +106,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 34,
-      "total_aberto": 850114
+      "titulos": 30,
+      "total_aberto": 793674
     },
     {
       "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",

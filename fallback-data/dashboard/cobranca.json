@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 542002.15
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 183582
+      "saldo": 510298.66000000003
     },
     {
       "faixa": "180+ dias",
       "saldo": 111412.12
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 93007.51
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 15223.08
     }
   ],
-  "generated_at": "2026-05-29T07:55:13.595751",
+  "generated_at": "2026-05-29T11:58:14.621542",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 948410.01,
-    "total_atraso": 406407.86,
-    "total_vencer": 542002.1499999999
+    "clientes_atraso": 60,
+    "total_aberto": 826132.0299999999,
+    "total_atraso": 315833.37,
+    "total_vencer": 510298.66
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -108,12 +108,6 @@
   "tipo": "cobranca",
   "top_clientes": [
     {
-      "cliente": "PERIN 4V MATERIAIS DE CONSTRUCAO LTDA.",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 75947.5
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 405,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 45,
       "titulos": 4,
       "total_atraso": 12240.4
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 23,
+      "titulos": 7,
+      "total_atraso": 10075.98
     }
   ]
 }
