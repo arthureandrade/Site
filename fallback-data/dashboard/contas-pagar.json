@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3468479
+      "saldo": 3416592
     },
     {
       "faixa": "1–30 dias",
@@ -17,12 +17,12 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-05-29T14:38:44.232274",
+  "generated_at": "2026-05-29T17:01:43.572351",
   "kpis": {
     "a_vencer_7d": 357929,
     "juros_pagos": 83447,
-    "total_aberto": 3864765,
-    "total_pago_periodo": 5414724,
+    "total_aberto": 3812878,
+    "total_pago_periodo": 5647967,
     "total_vencido": 396286
   },
   "ok": true,
@@ -115,6 +115,11 @@
       "total_aberto": 668488
     },
     {
+      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+      "titulos": 5,
+      "total_aberto": 293278
+    },
+    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 5,
       "total_aberto": 237415
@@ -135,24 +140,19 @@
       "total_aberto": 133016
     },
     {
-      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 2,
-      "total_aberto": 132610
-    },
-    {
-      "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
-      "titulos": 1,
-      "total_aberto": 131625
-    },
-    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 22,
       "total_aberto": 113462
     },
     {
-      "fornecedor": "HENAN FINEWORK CRANE CO LTD",
-      "titulos": 2,
-      "total_aberto": 95856
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 16,
+      "total_aberto": 111341
+    },
+    {
+      "fornecedor": "GERDAU ACOS LONGOS SA",
+      "titulos": 3,
+      "total_aberto": 85332
     }
   ]
 }

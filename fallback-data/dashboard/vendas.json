@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-05-29T14:38:43.095912",
+  "generated_at": "2026-05-29T17:01:41.988801",
   "kpis": {
-    "ticket_medio": 429.22897435897437,
-    "total_pedidos": 117,
-    "total_vendas": 50219.79,
+    "ticket_medio": 698.5108426966292,
+    "total_pedidos": 178,
+    "total_vendas": 124334.93,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 21516.29
+      "total_vendas": 83775.93
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 17289
+      "total_vendas": 21244.5
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 11414.5
+      "total_vendas": 19314.5
     }
   ],
   "ok": true,
@@ -31,49 +31,49 @@
   "serie_diaria": [
     {
       "data": "2026-05-29",
-      "total_vendas": 50219.79
+      "total_vendas": 124334.93
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 18,
-      "total_vendas": 10372.78,
+      "pedidos": 24,
+      "total_vendas": 70953.78,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 20,
-      "total_vendas": 9830,
+      "pedidos": 28,
+      "total_vendas": 14476.5,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 25,
-      "total_vendas": 9644,
+      "pedidos": 35,
+      "total_vendas": 12201,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 21,
-      "total_vendas": 6535.51,
+      "pedidos": 35,
+      "total_vendas": 10774.15,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 14,
-      "total_vendas": 5186.5,
+      "pedidos": 22,
+      "total_vendas": 6928,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 2,
-      "total_vendas": 4510,
+      "pedidos": 4,
+      "total_vendas": 6260,
       "vendedor": "Jeferson"
     },
     {
-      "pedidos": 12,
-      "total_vendas": 3559,
+      "pedidos": 21,
+      "total_vendas": 4459.5,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 582,
+      "pedidos": 9,
+      "total_vendas": -1718,
       "vendedor": "Juan"
     }
   ]
