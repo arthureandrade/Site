@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-29T15:58:13.664Z",
+  "generated_at": "2026-05-29T18:38:43.057Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5550,
+  "total": 5552,
   "produtos": [
     {
       "descricao": "",
@@ -3463,7 +3463,7 @@
     },
     {
       "descricao": "",
-      "estoque": 30,
+      "estoque": 29,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5609.jpg",
       "grupo": 45,
       "id": 5609,
@@ -3547,7 +3547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 140,
+      "estoque": 139,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12745.jpg",
       "grupo": 3,
       "id": 12745,
@@ -3785,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 175,
+      "estoque": 172,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -9007,7 +9007,7 @@
     },
     {
       "descricao": "",
-      "estoque": 27,
+      "estoque": 26,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12778.jpg",
       "grupo": 10,
       "id": 12778,
@@ -20655,6 +20655,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 93,
+      "id": 14072,
+      "marca": "PRESSURE",
+      "nome": "COMPRESSOR STORM 10PCM 100L 110V - TOMADA FACIL",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11994.jpg",
       "grupo": 93,
@@ -20666,6 +20680,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11994.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 93,
+      "id": 14073,
+      "marca": "PRESSURE",
+      "nome": "COMPRESSOR STORM 450 HEAVY DUTY 200L 175PSI",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -23469,7 +23497,7 @@
     },
     {
       "descricao": "",
-      "estoque": 63,
+      "estoque": 61,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4664.jpg",
       "grupo": 30,
       "id": 4664,
@@ -24029,7 +24057,7 @@
     },
     {
       "descricao": "",
-      "estoque": 201,
+      "estoque": 198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg",
       "grupo": 30,
       "id": 12330,
@@ -25653,7 +25681,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18,
+      "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3437.jpg",
       "grupo": 32,
       "id": 3437,
@@ -26045,7 +26073,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2606,
+      "estoque": 2600,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -26437,7 +26465,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1505,
+      "estoque": 1503,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26493,7 +26521,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4252,
+      "estoque": 4251,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -30707,7 +30735,7 @@
     },
     {
       "descricao": "",
-      "estoque": 34,
+      "estoque": 33,
       "foto_url": null,
       "grupo": 40,
       "id": 13961,
@@ -30735,7 +30763,7 @@
     },
     {
       "descricao": "",
-      "estoque": 740,
+      "estoque": 737,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -31141,7 +31169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 21,
+      "estoque": 20,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/69.jpg",
       "grupo": 41,
       "id": 69,
@@ -32107,7 +32135,7 @@
     },
     {
       "descricao": "",
-      "estoque": 985,
+      "estoque": 984,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/82.jpg",
       "grupo": 41,
       "id": 82,
@@ -32149,7 +32177,7 @@
     },
     {
       "descricao": "",
-      "estoque": 41,
+      "estoque": 40,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10440.jpg",
       "grupo": 41,
       "id": 10440,
@@ -33045,7 +33073,7 @@
     },
     {
       "descricao": "",
-      "estoque": 54,
+      "estoque": 53,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2925.jpg",
       "grupo": 51,
       "id": 2925,
@@ -41501,7 +41529,7 @@
     },
     {
       "descricao": "",
-      "estoque": 202,
+      "estoque": 200,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4675.jpg",
       "grupo": 30,
       "id": 4675,
@@ -51231,7 +51259,7 @@
     },
     {
       "descricao": "",
-      "estoque": 136,
+      "estoque": 132,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11156.jpg",
       "grupo": 92,
       "id": 11156,
@@ -60933,7 +60961,7 @@
     },
     {
       "descricao": "",
-      "estoque": 31,
+      "estoque": 30,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12697.jpg",
       "grupo": 55,
       "id": 12697,
@@ -63019,7 +63047,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 6,
       "foto_url": null,
       "grupo": 71,
       "id": 14013,
@@ -69879,7 +69907,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13530.jpg",
       "grupo": 79,
       "id": 13530,
@@ -69974,34 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13533.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 1,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11008.jpg",
-      "grupo": 79,
-      "id": 11008,
-      "marca": "ACEROSID",
-      "nome": "TELA HEX VIVEIRO 1/2\" BWG 24 X 1,20 X 50,00M",
-      "preco": 617.04,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11008.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 18,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13534.jpg",
-      "grupo": 79,
-      "id": 13534,
-      "marca": "VONDER",
-      "nome": "TELA HEX VIVEIRO 1/2\" BWG 24 X 1,20 X 50M VONDER",
-      "preco": 583.49,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13534.jpg"
     }
   ]
 }
