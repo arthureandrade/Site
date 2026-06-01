@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 569688.65
+      "saldo": 580001.1
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 89345.15000000001
+      "saldo": 86788.67
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 12279.12
     }
   ],
-  "generated_at": "2026-06-01T15:33:42.141176",
+  "generated_at": "2026-06-01T18:23:16.815521",
   "kpis": {
-    "clientes_atraso": 55,
-    "total_aberto": 882876.99,
-    "total_atraso": 313188.34,
-    "total_vencer": 569688.65
+    "clientes_atraso": 54,
+    "total_aberto": 890632.96,
+    "total_atraso": 310631.86000000004,
+    "total_vencer": 580001.1
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -77,32 +77,32 @@
       "vencimento": "2026-05-30T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 2240,
-      "vencimento": "2026-05-30T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 190,
-      "vencimento": "2026-05-30T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 66,
-      "vencimento": "2026-05-30T00:00:00"
-    },
-    {
       "cliente": "ADEMIR DE OLIVEIRA LIRA",
       "dias_atraso": -2,
       "loja": "Loja 2",
       "saldo": 2400,
       "vencimento": "2026-06-03T00:00:00"
+    },
+    {
+      "cliente": "JAIR NEVES DA SILVA",
+      "dias_atraso": -3,
+      "loja": "Loja 2",
+      "saldo": 160,
+      "vencimento": "2026-06-04T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 231,
+      "vencimento": "2026-06-04T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 1910,
+      "vencimento": "2026-06-04T00:00:00"
     }
   ],
   "tipo": "cobranca",

@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3406972
+      "saldo": 3317202
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 430434
+      "saldo": 331025
     },
     {
       "faixa": "31–60 dias",
@@ -17,13 +17,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-01T15:33:42.799174",
+  "generated_at": "2026-06-01T18:23:17.596262",
   "kpis": {
-    "a_vencer_7d": 494153,
+    "a_vencer_7d": 391417,
     "juros_pagos": 83432,
-    "total_aberto": 3866110,
-    "total_pago_periodo": 5472129,
-    "total_vencido": 459138
+    "total_aberto": 3676931,
+    "total_pago_periodo": 6170961,
+    "total_vencido": 359729
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -106,8 +106,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 30,
-      "total_aberto": 793674
+      "titulos": 29,
+      "total_aberto": 737344
     },
     {
       "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
@@ -125,14 +125,14 @@
       "total_aberto": 237415
     },
     {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 9,
-      "total_aberto": 231665
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 58,
       "total_aberto": 202884
+    },
+    {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 6,
+      "total_aberto": 145584
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
@@ -150,9 +150,9 @@
       "total_aberto": 111341
     },
     {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 3,
-      "total_aberto": 85332
+      "fornecedor": "SUPER TERMINAIS COMERCIO E INDUSTRIA LTDA",
+      "titulos": 2,
+      "total_aberto": 79182
     }
   ]
 }
