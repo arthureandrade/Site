@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 560069.21
+      "saldo": 569688.65
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 104594.14
+      "saldo": 89345.15000000001
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 12279.12
     }
   ],
-  "generated_at": "2026-06-01T10:41:36.480173",
+  "generated_at": "2026-06-01T15:33:42.141176",
   "kpis": {
-    "clientes_atraso": 57,
-    "total_aberto": 888506.54,
-    "total_atraso": 328437.32999999996,
-    "total_vencer": 560069.21
+    "clientes_atraso": 55,
+    "total_aberto": 882876.99,
+    "total_atraso": 313188.34,
+    "total_vencer": 569688.65
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -144,12 +144,6 @@
       "total_atraso": 15421.63
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 10,
-      "titulos": 1,
-      "total_atraso": 15048.99
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 904,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 26,
       "titulos": 7,
       "total_atraso": 10106.71
+    },
+    {
+      "cliente": "EDVALDO CASTRO NASCIMENTO",
+      "maior_atraso": 214,
+      "titulos": 2,
+      "total_atraso": 8374.39
     }
   ]
 }
