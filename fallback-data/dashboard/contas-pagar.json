@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3293507
+      "saldo": 3269492
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 341340
+      "saldo": 255675
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 14
     }
   ],
-  "generated_at": "2026-06-02T12:57:38.307868",
+  "generated_at": "2026-06-02T16:12:42.846670",
   "kpis": {
-    "a_vencer_7d": 469040,
+    "a_vencer_7d": 422177,
     "juros_pagos": 83432,
-    "total_aberto": 3664428,
-    "total_pago_periodo": 6239477,
-    "total_vencido": 370921
+    "total_aberto": 3554748,
+    "total_pago_periodo": 6602906,
+    "total_vencido": 285256
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -154,9 +154,9 @@
       "total_aberto": 105633
     },
     {
-      "fornecedor": "SUPER TERMINAIS COMERCIO E INDUSTRIA LTDA",
-      "titulos": 2,
-      "total_aberto": 79182
+      "fornecedor": "O.V.D IMPORTADORA E DISTRIBUIDORA LTDA",
+      "titulos": 8,
+      "total_aberto": 75806
     }
   ]
 }
