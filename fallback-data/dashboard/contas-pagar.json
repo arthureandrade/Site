@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3287454
+      "saldo": 3293507
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 359896
+      "saldo": 341340
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 14
     }
   ],
-  "generated_at": "2026-06-02T08:13:19.191203",
+  "generated_at": "2026-06-02T12:57:38.307868",
   "kpis": {
     "a_vencer_7d": 469040,
     "juros_pagos": 83432,
-    "total_aberto": 3676931,
-    "total_pago_periodo": 6170961,
-    "total_vencido": 389477
+    "total_aberto": 3664428,
+    "total_pago_periodo": 6239477,
+    "total_vencido": 370921
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 16,
-      "total_aberto": 111341
+      "titulos": 15,
+      "total_aberto": 105633
     },
     {
       "fornecedor": "SUPER TERMINAIS COMERCIO E INDUSTRIA LTDA",
