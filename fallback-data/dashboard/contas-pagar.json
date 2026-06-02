@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3269492
+      "saldo": 3212994
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 255675
+      "saldo": 174353
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 14
     }
   ],
-  "generated_at": "2026-06-02T16:12:42.846670",
+  "generated_at": "2026-06-02T18:29:55.236715",
   "kpis": {
-    "a_vencer_7d": 422177,
+    "a_vencer_7d": 365679,
     "juros_pagos": 83432,
-    "total_aberto": 3554748,
-    "total_pago_periodo": 6602906,
-    "total_vencido": 285256
+    "total_aberto": 3416928,
+    "total_pago_periodo": 7016366,
+    "total_vencido": 203934
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -109,14 +109,14 @@
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 29,
-      "total_aberto": 737344
-    },
-    {
       "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
       "titulos": 1,
       "total_aberto": 668488
+    },
+    {
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "titulos": 26,
+      "total_aberto": 623564
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 15,
-      "total_aberto": 105633
+      "titulos": 14,
+      "total_aberto": 81593
     },
     {
       "fornecedor": "O.V.D IMPORTADORA E DISTRIBUIDORA LTDA",
