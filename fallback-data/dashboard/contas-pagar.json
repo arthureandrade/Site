@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3212994
+      "saldo": 3181242
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 174353
+      "saldo": 186058
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 14
     }
   ],
-  "generated_at": "2026-06-03T14:59:12.174414",
+  "generated_at": "2026-06-03T18:03:06.502757",
   "kpis": {
-    "a_vencer_7d": 410439,
+    "a_vencer_7d": 383451,
     "juros_pagos": 83432,
-    "total_aberto": 3416928,
-    "total_pago_periodo": 7016366,
-    "total_vencido": 203934
+    "total_aberto": 3396881,
+    "total_pago_periodo": 7133181,
+    "total_vencido": 215639
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -149,14 +149,14 @@
       "total_aberto": 113462
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 14,
-      "total_aberto": 81593
-    },
-    {
       "fornecedor": "O.V.D IMPORTADORA E DISTRIBUIDORA LTDA",
       "titulos": 8,
       "total_aberto": 75806
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 12,
+      "total_aberto": 73794
     }
   ]
 }
