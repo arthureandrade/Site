@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 584402.64
+      "saldo": 591717.86
     },
     {
       "faixa": "180+ dias",
       "saldo": 111651.83
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 100128.96
+      "faixa": "31–60 dias",
+      "saldo": 78264.13
     },
     {
-      "faixa": "31–60 dias",
-      "saldo": 80589.13
+      "faixa": "1–30 dias",
+      "saldo": 60105.35
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 12296.73
     }
   ],
-  "generated_at": "2026-06-03T06:17:10.774555",
+  "generated_at": "2026-06-03T11:08:55.259664",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 908503.2,
-    "total_atraso": 324100.56,
-    "total_vencer": 584402.6399999999
+    "clientes_atraso": 61,
+    "total_aberto": 873469.81,
+    "total_atraso": 281751.95,
+    "total_vencer": 591717.86
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -106,12 +106,6 @@
       "total_atraso": 39569.23
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 12,
-      "titulos": 1,
-      "total_atraso": 33813.37
-    },
-    {
       "cliente": "DEIVID NASCIMENTO DA CUNHA",
       "maior_atraso": 49,
       "titulos": 1,
@@ -152,6 +146,12 @@
       "maior_atraso": 216,
       "titulos": 2,
       "total_atraso": 8388.2
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 313,
+      "titulos": 1,
+      "total_atraso": 7221.5
     }
   ]
 }
