@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useRouter } from 'next/navigation'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
@@ -21,6 +22,7 @@ import {
   normalizarTexto,
   ordenarCatalogoPadraoDinamico,
   produtoCasaBuscaCatalogo,
+  slugCategoriaCatalogo,
 } from '../lib/catalogoPublico'
 
 export default function ProdutosCliente({
@@ -29,10 +31,12 @@ export default function ProdutosCliente({
   initialCategoria = '',
   initialSecao = '',
   initialSubgrupo = '',
+  initialCategoriaAtiva = 'Todas',
   initialProdutos = [],
   initialMarcasCatalogo = [],
   initialCategoriasCatalogo = [],
 }) {
+  const router = useRouter()
   const possuiCatalogoInicial = initialProdutos.length > 0 || initialMarcasCatalogo.length > 0
   const pularPrimeiroRefetch = useRef(possuiCatalogoInicial)
   const [todosProdutos, setTodosProdutos] = useState(initialProdutos)
@@ -45,7 +49,7 @@ export default function ProdutosCliente({
   const [secaoEspecial] = useState(initialSecao)
   const [subgrupoEspecial] = useState(initialSubgrupo)
   const [buscaMarca, setBuscaMarca] = useState('')
-  const [categoriaAtiva, setCategoriaAtiva] = useState('Todas')
+  const [categoriaAtiva, setCategoriaAtiva] = useState(initialCategoriaAtiva || 'Todas')
   const [grupoAtivo, setGrupoAtivo] = useState('')
   const [emEstoque, setEmEstoque] = useState(true)
   const [marcasCatalogo, setMarcasCatalogo] = useState(initialMarcasCatalogo)
@@ -212,7 +216,25 @@ export default function ProdutosCliente({
     setGrupoAtivo('')
     setEmEstoque(true)
     setPage(0)
+    router.push('/produtos', { scroll: false })
     fetchProdutos(0, '', '', true)
+  }
+
+  function selecionarCategoriaCatalogo(nomeCategoria) {
+    setCategoriaAtiva(nomeCategoria)
+    setGrupoAtivo('')
+    trackCategory(nomeCategoria)
+    setPage(0)
+
+    const slug = slugCategoriaCatalogo(nomeCategoria)
+    if (slug) router.push(`/produtos/${slug}`, { scroll: false })
+  }
+
+  function limparCategoriaCatalogo() {
+    setCategoriaAtiva('Todas')
+    setGrupoAtivo('')
+    setPage(0)
+    router.push('/produtos', { scroll: false })
   }
 
   const categoriasResumo = categoriasCatalogo
@@ -348,7 +370,7 @@ export default function ProdutosCliente({
                   <button
                     type="button"
                     className="text-primary"
-                    onClick={() => setCategoriaAtiva('Todas')}
+                    onClick={limparCategoriaCatalogo}
                     aria-label="Limpar seção"
                   >
                     <span className="text-lg leading-none">×</span>
@@ -362,12 +384,7 @@ export default function ProdutosCliente({
                       <div key={item.nome} className="rounded-xl">
                         <button
                           type="button"
-                          onClick={() => {
-                            setCategoriaAtiva(item.nome)
-                            setGrupoAtivo('')
-                            trackCategory(item.nome)
-                            setPage(0)
-                          }}
+                          onClick={() => selecionarCategoriaCatalogo(item.nome)}
                           className={`flex w-full items-center justify-between gap-3 rounded-xl px-2 py-2 text-left transition ${
                             ativa ? 'bg-red-50 text-primary' : 'hover:bg-gray-50'
                           }`}

@@ -1,6 +1,7 @@
 import { getProdutos } from '@/lib/api'
 import { absoluteSiteUrl } from '@/lib/seo'
 import { SEO_LANDING_PAGES } from '@/lib/seoLandingPages'
+import { SECOES_CATALOGO, slugCategoriaCatalogo } from '@/lib/catalogoPublico'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 1800
@@ -44,6 +45,9 @@ export async function GET() {
     urlEntry(absoluteSiteUrl('/'), { priority: '1.0' }),
     urlEntry(absoluteSiteUrl('/produtos'), { priority: '0.9' }),
     urlEntry(absoluteSiteUrl('/produtos?categoria=ferro_aco'), { priority: '0.8' }),
+    ...SECOES_CATALOGO.map((categoria) =>
+      urlEntry(absoluteSiteUrl(`/produtos/${slugCategoriaCatalogo(categoria.nome)}`), { priority: '0.82' })
+    ),
     urlEntry(absoluteSiteUrl('/politica-de-privacidade'), { priority: '0.5', changefreq: 'monthly' }),
     urlEntry(absoluteSiteUrl('/politica-de-troca-e-devolucao'), { priority: '0.5', changefreq: 'monthly' }),
     urlEntry(absoluteSiteUrl('/feed-meta.csv'), { priority: '0.4', changefreq: 'hourly' }),
