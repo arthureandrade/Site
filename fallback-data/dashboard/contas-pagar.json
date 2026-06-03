@@ -2,100 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2791268
+      "saldo": 3212994
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 337428
+      "saldo": 174353
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 24205
+      "saldo": 26408
     },
     {
       "faixa": "91–180 dias",
       "saldo": 3159
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 14
     }
   ],
-  "generated_at": "2026-05-27T13:37:02.837440",
+  "generated_at": "2026-06-03T06:17:11.475738",
   "kpis": {
-    "a_vencer_7d": 335166,
-    "juros_pagos": 83447,
-    "total_aberto": 3156060,
-    "total_pago_periodo": 5827906,
-    "total_vencido": 364792
+    "a_vencer_7d": 410439,
+    "juros_pagos": 83432,
+    "total_aberto": 3416928,
+    "total_pago_periodo": 7016366,
+    "total_vencido": 203934
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-05-27",
-    "data_de": "2026-04-27"
+    "data_ate": "2026-06-03",
+    "data_de": "2026-05-04"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 143,
+      "dias_atraso": 150,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 114,
+      "dias_atraso": 121,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 55,
+      "dias_atraso": 62,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 50,
+      "dias_atraso": 57,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 47,
+      "dias_atraso": 54,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 27,
+      "dias_atraso": 34,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 27,
+      "dias_atraso": 34,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 27,
+      "dias_atraso": 34,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 27,
+      "dias_atraso": 34,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 25,
+      "dias_atraso": 32,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
@@ -105,9 +109,19 @@
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
+      "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
+      "titulos": 1,
+      "total_aberto": 668488
+    },
+    {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 34,
-      "total_aberto": 850114
+      "titulos": 26,
+      "total_aberto": 623564
+    },
+    {
+      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+      "titulos": 5,
+      "total_aberto": 293278
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -115,29 +129,19 @@
       "total_aberto": 237415
     },
     {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 9,
-      "total_aberto": 231665
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 58,
       "total_aberto": 202884
     },
     {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 6,
+      "total_aberto": 145584
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 11,
-      "total_aberto": 133016
-    },
-    {
-      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 2,
-      "total_aberto": 132610
-    },
-    {
-      "fornecedor": "MAANSHAN WILA CNC MACHINE TOOLS CO",
-      "titulos": 1,
-      "total_aberto": 131625
+      "titulos": 10,
+      "total_aberto": 120249
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
@@ -145,14 +149,14 @@
       "total_aberto": 113462
     },
     {
-      "fornecedor": "HENAN FINEWORK CRANE CO LTD",
-      "titulos": 2,
-      "total_aberto": 95856
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 14,
+      "total_aberto": 81593
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 16,
-      "total_aberto": 91350
+      "fornecedor": "O.V.D IMPORTADORA E DISTRIBUIDORA LTDA",
+      "titulos": 8,
+      "total_aberto": 75806
     }
   ]
 }
