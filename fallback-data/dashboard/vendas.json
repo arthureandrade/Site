@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-05T17:52:27.346059",
+  "generated_at": "2026-06-05T19:08:00.869565",
   "kpis": {
-    "ticket_medio": 444.48090225563914,
+    "ticket_medio": 444.4809022556391,
     "total_pedidos": 266,
-    "total_vendas": 118231.92000000001,
+    "total_vendas": 118231.92,
     "total_vendedores": 8
   },
   "lojas": [
@@ -53,7 +53,7 @@
     },
     {
       "pedidos": 65,
-      "total_vendas": 15598.86,
+      "total_vendas": 15598.859999999999,
       "vendedor": "Gloria"
     },
     {
