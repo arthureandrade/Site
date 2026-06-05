@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3153645
+      "saldo": 3161340
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 220672
+      "saldo": 188515
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 14
     }
   ],
-  "generated_at": "2026-06-05T16:18:43.495331",
+  "generated_at": "2026-06-05T17:52:28.427140",
   "kpis": {
-    "a_vencer_7d": 448495,
+    "a_vencer_7d": 440194,
     "juros_pagos": 83432,
-    "total_aberto": 3403918,
-    "total_pago_periodo": 6321451,
-    "total_vencido": 250273
+    "total_aberto": 3379456,
+    "total_pago_periodo": 6444805,
+    "total_vencido": 218116
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -149,14 +149,14 @@
       "total_aberto": 113462
     },
     {
-      "fornecedor": "O.V.D IMPORTADORA E DISTRIBUIDORA LTDA",
-      "titulos": 8,
-      "total_aberto": 75806
-    },
-    {
       "fornecedor": "STAM METALURGICA LTDA",
       "titulos": 8,
       "total_aberto": 70188
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 11,
+      "total_aberto": 69794
     }
   ]
 }
