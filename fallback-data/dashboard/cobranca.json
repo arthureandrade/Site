@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 557218.59
+      "saldo": 555234.83
     },
     {
       "faixa": "180+ dias",
       "saldo": 111795.66
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 87864.82
-    },
-    {
       "faixa": "31–60 dias",
       "saldo": 79775.26
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 68191.81999999999
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 12525.12
     }
   ],
-  "generated_at": "2026-06-06T08:46:31.395633",
+  "generated_at": "2026-06-06T10:21:55.025748",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 868631.6599999999,
-    "total_atraso": 311413.07,
-    "total_vencer": 557218.5900000001
+    "clientes_atraso": 63,
+    "total_aberto": 846974.9,
+    "total_atraso": 291740.07,
+    "total_vencer": 555234.83
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,12 +132,6 @@
       "total_atraso": 21072.12
     },
     {
-      "cliente": "WESLEY LOPES PEREIRA",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 19343
-    },
-    {
       "cliente": "FABIO RAIOL FEITOSA",
       "maior_atraso": 122,
       "titulos": 8,
@@ -166,6 +160,12 @@
       "maior_atraso": 219,
       "titulos": 2,
       "total_atraso": 8408.92
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 316,
+      "titulos": 1,
+      "total_atraso": 7238
     }
   ]
 }
