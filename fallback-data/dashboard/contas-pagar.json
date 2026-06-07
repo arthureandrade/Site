@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3148533
+      "saldo": 3118676
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 201322
+      "saldo": 230990
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 23139
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 26428
+      "saldo": 3492
     },
     {
       "faixa": "91–180 dias",
       "saldo": 3159
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 14
     }
   ],
-  "generated_at": "2026-06-06T21:52:15.126563",
+  "generated_at": "2026-06-07T02:23:21.083493",
   "kpis": {
-    "a_vencer_7d": 429241,
+    "a_vencer_7d": 412949,
     "juros_pagos": 80096,
     "total_aberto": 3379456,
-    "total_pago_periodo": 6175211,
-    "total_vencido": 230923
+    "total_pago_periodo": 6115500,
+    "total_vencido": 260780
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-06-06",
-    "data_de": "2026-05-07"
+    "data_ate": "2026-06-07",
+    "data_de": "2026-05-08"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 153,
+      "dias_atraso": 154,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 124,
+      "dias_atraso": 125,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 65,
+      "dias_atraso": 66,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 60,
+      "dias_atraso": 61,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 57,
+      "dias_atraso": 58,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 37,
+      "dias_atraso": 38,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 37,
+      "dias_atraso": 38,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 37,
+      "dias_atraso": 38,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 37,
+      "dias_atraso": 38,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 35,
+      "dias_atraso": 36,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
