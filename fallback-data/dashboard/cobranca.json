@@ -2,35 +2,35 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 546159.62
+      "saldo": 634712.4
     },
     {
       "faixa": "180+ dias",
-      "saldo": 110889.64
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 82906.09
+      "saldo": 110599.64
     },
     {
       "faixa": "31–60 dias",
       "saldo": 80584.37
     },
     {
+      "faixa": "1–30 dias",
+      "saldo": 75006.95
+    },
+    {
       "faixa": "91–180 dias",
-      "saldo": 26555.89
+      "saldo": 26445.89
     },
     {
       "faixa": "61–90 dias",
       "saldo": 5451.61
     }
   ],
-  "generated_at": "2026-06-08T10:58:40.705345",
+  "generated_at": "2026-06-08T18:13:40.143881",
   "kpis": {
-    "clientes_atraso": 66,
-    "total_aberto": 852547.22,
-    "total_atraso": 306387.6,
-    "total_vencer": 546159.62
+    "clientes_atraso": 59,
+    "total_aberto": 932800.8600000001,
+    "total_atraso": 298088.45999999996,
+    "total_vencer": 634712.4000000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -57,38 +57,10 @@
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 1917.64,
-      "vencimento": "2026-06-04T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (PR.CRISTIANO)",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 1647.5,
-      "vencimento": "2026-06-05T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 3250,
-      "vencimento": "2026-06-07T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 129,
       "vencimento": "2026-06-07T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": -1,
-      "loja": "Loja 2",
-      "saldo": 508.33,
-      "vencimento": "2026-06-09T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
@@ -98,10 +70,38 @@
       "vencimento": "2026-06-09T00:00:00"
     },
     {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
+      "dias_atraso": -1,
+      "loja": "Loja 2",
+      "saldo": 508.33,
+      "vencimento": "2026-06-09T00:00:00"
+    },
+    {
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 2095,
+      "vencimento": "2026-06-10T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 348,
+      "vencimento": "2026-06-10T00:00:00"
+    },
+    {
+      "cliente": "GRUPO FOLCLORICO NAMORO CAIPIRA THIANGUA",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 734.86,
+      "vencimento": "2026-06-10T00:00:00"
+    },
+    {
+      "cliente": "GRUPO FOLCLORICO NAMORO CAIPIRA THIANGUA",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 904.15,
       "vencimento": "2026-06-10T00:00:00"
     }
   ],
