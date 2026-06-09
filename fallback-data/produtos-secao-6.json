@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T17:47:00.115Z",
+  "generated_at": "2026-06-09T19:50:09.395Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 450,
   "produtos": [
@@ -1055,7 +1055,7 @@
     },
     {
       "descricao": "",
-      "estoque": 250,
+      "estoque": 249,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/245.jpg",
       "grupo": 6,
       "id": 245,
@@ -1097,7 +1097,7 @@
     },
     {
       "descricao": "",
-      "estoque": 776,
+      "estoque": 761,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5236.jpg",
       "grupo": 15,
       "id": 5236,
@@ -1237,7 +1237,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1852,
+      "estoque": 1851,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/42.jpg",
       "grupo": 15,
       "id": 42,
@@ -3071,7 +3071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2283,
+      "estoque": 2281,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -3393,7 +3393,7 @@
     },
     {
       "descricao": "",
-      "estoque": 83,
+      "estoque": 77,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/230.jpg",
       "grupo": 60,
       "id": 230,
@@ -3701,7 +3701,7 @@
     },
     {
       "descricao": "",
-      "estoque": 236,
+      "estoque": 226,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/267.jpg",
       "grupo": 60,
       "id": 267,
@@ -3757,7 +3757,7 @@
     },
     {
       "descricao": "",
-      "estoque": 115,
+      "estoque": 110,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/19.jpg",
       "grupo": 60,
       "id": 19,
@@ -3883,7 +3883,7 @@
     },
     {
       "descricao": "",
-      "estoque": 56,
+      "estoque": 55,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/707.jpg",
       "grupo": 60,
       "id": 707,
@@ -3925,7 +3925,7 @@
     },
     {
       "descricao": "",
-      "estoque": 236,
+      "estoque": 235,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/741.jpg",
       "grupo": 60,
       "id": 741,
@@ -4415,7 +4415,7 @@
     },
     {
       "descricao": "",
-      "estoque": 820,
+      "estoque": 802,
       "foto_url": null,
       "grupo": 65,
       "id": 5,
@@ -5311,7 +5311,7 @@
     },
     {
       "descricao": "",
-      "estoque": -57,
+      "estoque": -59,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/536.jpg",
       "grupo": 85,
       "id": 536,
@@ -5367,7 +5367,7 @@
     },
     {
       "descricao": "",
-      "estoque": 239,
+      "estoque": 227,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/186.jpg",
       "grupo": 85,
       "id": 186,
@@ -6073,7 +6073,7 @@
       "id": 424,
       "marca": "GERAL",
       "nome": "VERGALHAO  4.20 MM CA-60 12MT (1,310KG)",
-      "preco": 11.5,
+      "preco": 10.98,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -6087,7 +6087,7 @@
       "id": 843,
       "marca": "GERAL",
       "nome": "VERGALHAO  5.0MM CA-60 12MT (1,85KG)",
-      "preco": 14.56,
+      "preco": 15.45,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -6101,7 +6101,7 @@
       "id": 948,
       "marca": "GERAL",
       "nome": "VERGALHAO  6.3 MM 1/4\" CA-50 12MT (2,94KG)",
-      "preco": 22.32,
+      "preco": 22.35,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -6115,7 +6115,7 @@
       "id": 842,
       "marca": "GERAL",
       "nome": "VERGALHAO  8.00MM 5/16\" 12 MT (4,74KG)",
-      "preco": 33.52,
+      "preco": 36.2,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -6129,7 +6129,7 @@
       "id": 295,
       "marca": "GERAL",
       "nome": "VERGALHAO 10.00MM 3/8\" CA-50 12 MT (7,404KG)",
-      "preco": 48.66,
+      "preco": 53.45,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -6143,7 +6143,7 @@
       "id": 342,
       "marca": "GERAL",
       "nome": "VERGALHAO 12.50MM 1/2\" CA-50 12MT (11,556KG)",
-      "preco": 78.82,
+      "preco": 86.04,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
