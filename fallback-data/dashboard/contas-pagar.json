@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2893523
+      "saldo": 2892603
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 324474
+      "saldo": 218448
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-10T13:22:51.227539",
+  "generated_at": "2026-06-10T15:53:15.898975",
   "kpis": {
     "a_vencer_7d": 336882,
     "juros_pagos": 80753,
-    "total_aberto": 3256537,
-    "total_pago_periodo": 6029547,
-    "total_vencido": 363014
+    "total_aberto": 3149591,
+    "total_pago_periodo": 6391886,
+    "total_vencido": 256988
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,19 +134,19 @@
       "total_aberto": 202884
     },
     {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 6,
-      "total_aberto": 145584
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 10,
       "total_aberto": 120249
     },
     {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 4,
+      "total_aberto": 112253
+    },
+    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 22,
-      "total_aberto": 113462
+      "titulos": 17,
+      "total_aberto": 85207
     },
     {
       "fornecedor": "STAM METALURGICA LTDA",
