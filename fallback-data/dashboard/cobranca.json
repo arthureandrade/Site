@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 570937.17
+      "saldo": 568801.64
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 52005
+      "saldo": 66130.01
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 4256.6
     }
   ],
-  "generated_at": "2026-06-10T15:53:15.088769",
+  "generated_at": "2026-06-10T18:03:09.913474",
   "kpis": {
-    "clientes_atraso": 51,
-    "total_aberto": 844303.6299999999,
-    "total_atraso": 273366.45999999996,
-    "total_vencer": 570937.1699999999
+    "clientes_atraso": 54,
+    "total_aberto": 856293.11,
+    "total_atraso": 287491.47000000003,
+    "total_vencer": 568801.64
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -162,10 +162,10 @@
       "total_atraso": 8436.54
     },
     {
-      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 320,
+      "cliente": "J S FERREIRA LTDA",
+      "maior_atraso": 8,
       "titulos": 1,
-      "total_atraso": 7260
+      "total_atraso": 7866
     }
   ]
 }
