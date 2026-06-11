@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import ProductCard from './ProductCard'
 import { SkeletonGrid } from './SkeletonCard'
 import { ehProdutoFerroAco, SECAO_FERRO_ACO } from '../lib/catalogo'
@@ -37,17 +37,27 @@ export default function ProdutosCliente({
   initialCategoriasCatalogo = [],
 }) {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const buscaInicial = searchParams.get('busca') || initialBusca
+  const marcaInicial = searchParams.get('marca') || initialMarca
+  const categoriaInicial = searchParams.get('categoria') || initialCategoria
+  const secaoInicial = searchParams.get('secao') || initialSecao
+  const subgrupoInicial = searchParams.get('subgrupo') || initialSubgrupo
+  const possuiFiltrosUrl = Boolean(
+    buscaInicial || marcaInicial || categoriaInicial || secaoInicial || subgrupoInicial
+  )
   const possuiCatalogoInicial = initialProdutos.length > 0 || initialMarcasCatalogo.length > 0
-  const pularPrimeiroRefetch = useRef(possuiCatalogoInicial)
-  const [todosProdutos, setTodosProdutos] = useState(initialProdutos)
-  const [loading, setLoading] = useState(!possuiCatalogoInicial)
+  const catalogoInicialAplicavel = possuiCatalogoInicial && !possuiFiltrosUrl
+  const pularPrimeiroRefetch = useRef(catalogoInicialAplicavel)
+  const [todosProdutos, setTodosProdutos] = useState(catalogoInicialAplicavel ? initialProdutos : [])
+  const [loading, setLoading] = useState(!catalogoInicialAplicavel)
   const [erro, setErro] = useState(false)
   const [page, setPage] = useState(0)
-  const [busca, setBusca] = useState(initialBusca)
-  const [marcaFiltro, setMarcaFiltro] = useState(initialMarca)
-  const [categoriaEspecial] = useState(initialCategoria)
-  const [secaoEspecial] = useState(initialSecao)
-  const [subgrupoEspecial] = useState(initialSubgrupo)
+  const [busca, setBusca] = useState(buscaInicial)
+  const [marcaFiltro, setMarcaFiltro] = useState(marcaInicial)
+  const [categoriaEspecial] = useState(categoriaInicial)
+  const [secaoEspecial] = useState(secaoInicial)
+  const [subgrupoEspecial] = useState(subgrupoInicial)
   const [buscaMarca, setBuscaMarca] = useState('')
   const [categoriaAtiva, setCategoriaAtiva] = useState(initialCategoriaAtiva || 'Todas')
   const [grupoAtivo, setGrupoAtivo] = useState('')
@@ -176,16 +186,16 @@ export default function ProdutosCliente({
 
   useEffect(() => {
     if (possuiCatalogoInicial) return
-    fetchProdutos(0, initialBusca, initialMarca, true)
+    fetchProdutos(0, buscaInicial, marcaInicial, true)
     fetchMarcas()
-  }, [fetchProdutos, fetchMarcas, initialBusca, initialMarca, possuiCatalogoInicial])
+  }, [fetchProdutos, fetchMarcas, buscaInicial, marcaInicial, possuiCatalogoInicial])
 
   useEffect(() => {
-    if (initialBusca) {
-      trackPersonalizationSearch(initialBusca)
-      trackAnalyticsSearch({ search_term: initialBusca, results_count: todosProdutos.length })
+    if (buscaInicial) {
+      trackPersonalizationSearch(buscaInicial)
+      trackAnalyticsSearch({ search_term: buscaInicial, results_count: todosProdutos.length })
     }
-  }, [initialBusca])
+  }, [buscaInicial])
 
   useEffect(() => {
     if (pularPrimeiroRefetch.current) {

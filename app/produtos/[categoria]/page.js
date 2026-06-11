@@ -1,14 +1,19 @@
+import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import ProdutosCliente from '@/components/ProdutosCliente'
 import CatalogViewTracker from '@/components/CatalogViewTracker'
 import {
-  carregarCatalogoInicial,
   inferirCategoriaProduto,
   obterCategoriaPorSlugCatalogo,
   slugCategoriaCatalogo,
   SECOES_CATALOGO,
 } from '@/lib/catalogoPublico'
+import { PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
+import { carregarCatalogoInicialComCache } from '@/lib/catalogoPublicoServer'
 import { buildCatalogItemListJsonLd } from '@/lib/seo'
+
+export const revalidate = 900
+export const dynamicParams = false
 
 export function generateStaticParams() {
   return SECOES_CATALOGO.map((categoria) => ({
@@ -35,24 +40,15 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default async function ProdutosCategoriaPage({ params, searchParams }) {
+export default async function ProdutosCategoriaPage({ params }) {
   const resolvedParams = (await params) || {}
-  const query = (await searchParams) || {}
   const categoriaCatalogo = obterCategoriaPorSlugCatalogo(resolvedParams.categoria)
 
   if (!categoriaCatalogo) notFound()
 
-  const initialBusca = query?.busca || ''
-  const initialMarca = query?.marca || ''
-  const initialSecao = query?.secao || ''
-  const initialSubgrupo = query?.subgrupo || ''
   const descricao = `Produtos de ${categoriaCatalogo.nome.toLowerCase()} com navegação direta por categoria, estoque atualizado e orçamento pelo WhatsApp.`
 
-  const catalogoInicial = await carregarCatalogoInicial({
-    busca: initialBusca,
-    marca: initialMarca,
-    secaoEspecial: initialSecao,
-    subgrupoEspecial: initialSubgrupo,
+  const catalogoInicial = await carregarCatalogoInicialComCache({
     emEstoque: true,
   })
 
@@ -71,10 +67,10 @@ export default async function ProdutosCategoriaPage({ params, searchParams }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <CatalogViewTracker
-        busca={initialBusca}
+        busca=""
         categoria={categoriaCatalogo.nome}
-        secao={initialSecao}
-        subgrupo={initialSubgrupo}
+        secao=""
+        subgrupo=""
         total={produtosDaCategoria.length}
       />
       <div className="bg-brand border-b-2 border-primary px-4 py-6 text-white sm:py-8">
@@ -87,16 +83,14 @@ export default async function ProdutosCategoriaPage({ params, searchParams }) {
         </div>
       </div>
 
-      <ProdutosCliente
-        initialBusca={initialBusca}
-        initialMarca={initialMarca}
-        initialSecao={initialSecao}
-        initialSubgrupo={initialSubgrupo}
-        initialCategoriaAtiva={categoriaCatalogo.nome}
-        initialProdutos={produtosIniciais}
-        initialMarcasCatalogo={marcasIniciais}
-        initialCategoriasCatalogo={categoriasIniciais}
-      />
+      <Suspense fallback={null}>
+        <ProdutosCliente
+          initialCategoriaAtiva={categoriaCatalogo.nome}
+          initialProdutos={produtosIniciais}
+          initialMarcasCatalogo={marcasIniciais}
+          initialCategoriasCatalogo={categoriasIniciais}
+        />
+      </Suspense>
     </>
   )
 }

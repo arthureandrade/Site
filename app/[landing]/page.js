@@ -7,10 +7,12 @@ import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 import { getProdutos, imagemUrlProduto } from '@/lib/api'
 import { buildCatalogItemListJsonLd, absoluteSiteUrl } from '@/lib/seo'
 import { SEO_LANDING_PAGES, getSeoLandingPage } from '@/lib/seoLandingPages'
+import { PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 
 export const dynamicParams = false
+export const revalidate = 900
 
 export function generateStaticParams() {
   return SEO_LANDING_PAGES.map((page) => ({ landing: page.slug }))

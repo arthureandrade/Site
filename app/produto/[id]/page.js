@@ -7,11 +7,12 @@ import ProductViewTracker from '@/components/ProductViewTracker'
 import {
   formatarParcelamento,
   formatarPreco,
-  getCatalogoCompletoComFallback,
   getProduto,
+  getProdutos,
   imagemUrlProduto,
   whatsappLink,
 } from '@/lib/api'
+import { PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
 import {
   calcularScoreCatalogo,
   inferirCategoriaProduto,
@@ -19,6 +20,10 @@ import {
 } from '@/lib/catalogoPublico'
 import { calcularPrecoPromocional, obterDescontoPromocional } from '@/lib/ofertas'
 import { buildProductJsonLd, productSeoDescription } from '@/lib/seo'
+
+export const dynamic = 'force-static'
+export const dynamicParams = true
+export const revalidate = 900
 
 const TERMOS_GENERICOS_RELACIONADOS = new Set([
   'aco',
@@ -92,8 +97,53 @@ function calcularSimilaridadeProduto(produtoBase, candidato) {
 }
 
 async function carregarProdutosSimilares(produto) {
-  const catalogo = await getCatalogoCompletoComFallback({ noStore: true, revalidate: 300 })
-  const candidatos = (catalogo || []).filter((item) => {
+  const consultas = []
+  const subgrupo = Number(produto?.subgrupo || 0)
+  const grupo = Number(produto?.grupo || 0)
+  const secao = Number(produto?.secao || 0)
+
+  if (subgrupo) {
+    consultas.push(
+      getProdutos({
+        subgrupo,
+        todas_secoes: true,
+        com_preco: false,
+        limit: 300,
+        revalidate: PUBLIC_CACHE_SECONDS,
+      })
+    )
+  }
+  if (grupo) {
+    consultas.push(
+      getProdutos({
+        grupo,
+        todas_secoes: true,
+        com_preco: false,
+        limit: 500,
+        revalidate: PUBLIC_CACHE_SECONDS,
+      })
+    )
+  }
+  if (secao) {
+    consultas.push(
+      getProdutos({
+        secao,
+        com_preco: false,
+        limit: 500,
+        revalidate: PUBLIC_CACHE_SECONDS,
+      })
+    )
+  }
+
+  const resultados = await Promise.all(consultas)
+  const candidatosMap = new Map()
+  for (const resultado of resultados) {
+    for (const item of resultado?.produtos || []) {
+      if (item?.id) candidatosMap.set(Number(item.id), item)
+    }
+  }
+
+  const candidatos = Array.from(candidatosMap.values()).filter((item) => {
     if (!item?.id || Number(item.id) === Number(produto.id)) return false
     if (Number(produto.secao || 0) !== 6 && Number(item.preco || 0) <= 0) return false
     return Number(item.estoque || 0) > 0 || Number(item.secao || 0) === 6

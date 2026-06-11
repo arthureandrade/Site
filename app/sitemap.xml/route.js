@@ -2,8 +2,9 @@ import { getProdutos } from '@/lib/api'
 import { absoluteSiteUrl } from '@/lib/seo'
 import { SEO_LANDING_PAGES } from '@/lib/seoLandingPages'
 import { SECOES_CATALOGO, slugCategoriaCatalogo } from '@/lib/catalogoPublico'
+import { LONG_PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 export const revalidate = 1800
 
 function escapeXml(value = '') {
@@ -65,7 +66,7 @@ export async function GET() {
   return new Response(xml, {
     headers: {
       'Content-Type': 'application/xml; charset=utf-8',
-      'Cache-Control': 'public, s-maxage=1800, stale-while-revalidate=3600',
+      'Cache-Control': `public, s-maxage=${LONG_PUBLIC_CACHE_SECONDS}, stale-while-revalidate=3600`,
     },
   })
 }

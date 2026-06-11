@@ -1,6 +1,7 @@
 import { loadMetaFeedProducts, productsToMetaCsv } from '@/lib/metaFeed'
+import { LONG_PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-static'
 export const revalidate = 1800
 
 export async function GET() {
@@ -12,7 +13,7 @@ export async function GET() {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
       'Content-Disposition': 'inline; filename="feed-meta.csv"',
-      'Cache-Control': 'public, s-maxage=1800, stale-while-revalidate=1800',
+      'Cache-Control': `public, s-maxage=${LONG_PUBLIC_CACHE_SECONDS}, stale-while-revalidate=${LONG_PUBLIC_CACHE_SECONDS}`,
     },
   })
 }

@@ -6,11 +6,13 @@ import PersonalizedHomeShelf from '@/components/PersonalizedHomeShelf'
 import SaldaoCarousel from '@/components/SaldaoCarousel'
 import TrackedWhatsAppLink from '@/components/TrackedWhatsAppLink'
 import VitrineSubgrupo24 from '@/components/VitrineSubgrupo24'
-import { getHomeConfig, getProdutos } from '@/lib/api'
+import { getCatalogoCompletoComFallback, getHomeConfig } from '@/lib/api'
+import { PUBLIC_CACHE_SECONDS } from '@/lib/cacheConfig'
 
 export const metadata = {
   title: 'Galpão do Aço | Material de construção, ferragens e aço',
 }
+export const revalidate = 900
 
 const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP || '559532240115'
 const TELEFONE = '(95) 3224-0115'
@@ -36,7 +38,7 @@ function getHeroSlides() {
     )
 
     if (extensao) {
-      slides.push(`/heros/hero${numero}.${extensao}`)
+      slides.push(`/hero-assets/hero${numero}.${extensao}`)
     }
   }
 
@@ -49,17 +51,20 @@ function getHomeBackgroundImage() {
   const heroDir = path.join(process.cwd(), 'heros')
   const extensao = HERO_EXTENSIONS.find((ext) => fs.existsSync(path.join(heroDir, `back.${ext}`)))
 
-  return extensao ? `/heros/back.${extensao}` : ''
+  return extensao ? `/hero-assets/back.${extensao}` : ''
 }
 
 export default async function HomePage() {
-  const [config, secao5Data, secao6Data, secao14Data, ramassolData] = await Promise.all([
+  const [config, catalogoCompleto] = await Promise.all([
     getHomeConfig(),
-    getProdutos({ secao: 5, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
-    getProdutos({ secao: 6, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
-    getProdutos({ secao: 14, em_estoque: true, com_preco: true, limit: 5000, noStore: true }),
-    getProdutos({ marca: 'ramassol', todas_secoes: true, com_preco: false, limit: 5000, noStore: true }),
+    getCatalogoCompletoComFallback({ revalidate: PUBLIC_CACHE_SECONDS }),
   ])
+  const produtosHome = (catalogoCompleto || []).filter((produto) => {
+    const secao = Number(produto?.secao || 0)
+    const ramassol = String(produto?.marca || '').toLowerCase().includes('ramassol')
+    const comercialmenteValido = secao === 6 || Number(produto?.preco || 0) > 0
+    return (secao === 5 || secao === 6 || secao === 14 || ramassol) && comercialmenteValido
+  })
   const heroSlides = getHeroSlides()
   const homeBackgroundImage = getHomeBackgroundImage()
   const produtosMap = new Map()
@@ -70,12 +75,7 @@ export default async function HomePage() {
   const produtosSoldaMap = new Map()
   const produtosSaldaoMap = new Map()
 
-  for (const produto of [
-    ...(secao5Data?.produtos || []),
-    ...(secao6Data?.produtos || []),
-    ...(secao14Data?.produtos || []),
-    ...(ramassolData?.produtos || []),
-  ]) {
+  for (const produto of produtosHome) {
     if (!produto?.id) continue
     const subgrupo = Number(produto.subgrupo || 0)
     if (subgrupo === 24) {
@@ -110,20 +110,13 @@ export default async function HomePage() {
   const produtosSubgrupo25 = Array.from(produtosSaldaoMap.values())
   const produtosPersonalizacao = Array.from(
     new Map(
-      [
-        ...(secao5Data?.produtos || []),
-        ...(secao14Data?.produtos || []),
-        ...(ramassolData?.produtos || []),
-      ]
+      produtosHome
+        .filter((produto) => Number(produto?.secao || 0) !== 6)
         .filter((produto) => produto?.id && Number(produto?.preco || 0) > 0)
         .map((produto) => [Number(produto.id), produto])
     ).values()
   ).slice(0, 800)
-  const totalCatalogoBase =
-    (secao5Data?.produtos || []).length +
-    (secao6Data?.produtos || []).length +
-    (secao14Data?.produtos || []).length +
-    (ramassolData?.produtos || []).length
+  const totalCatalogoBase = produtosHome.length
   const origemSubgrupo29 = produtosSubgrupo29.length
     ? `base secoes 5, 6, 14 + Ramassol (${totalCatalogoBase} itens analisados)`
     : 'sem retorno'
