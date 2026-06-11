@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2873943
+      "saldo": 2850162
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 242275
+      "saldo": 163958
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-11T14:35:21.459698",
+  "generated_at": "2026-06-11T17:07:28.127728",
   "kpis": {
-    "a_vencer_7d": 375766,
+    "a_vencer_7d": 351985,
     "juros_pagos": 80753,
-    "total_aberto": 3154758,
-    "total_pago_periodo": 6119553,
-    "total_vencido": 280815
+    "total_aberto": 3052660,
+    "total_pago_periodo": 6443835,
+    "total_vencido": 202498
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 22,
-      "total_aberto": 511544
+      "titulos": 15,
+      "total_aberto": 456198
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
@@ -134,14 +134,14 @@
       "total_aberto": 202884
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 10,
-      "total_aberto": 120249
-    },
-    {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "titulos": 4,
       "total_aberto": 112253
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 9,
+      "total_aberto": 96468
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
