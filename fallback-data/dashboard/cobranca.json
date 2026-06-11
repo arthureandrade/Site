@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 556028.05
+      "saldo": 581254.46
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 78966.7
+      "saldo": 47964.37
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 4259.1
     }
   ],
-  "generated_at": "2026-06-11T07:46:30.260747",
+  "generated_at": "2026-06-11T11:23:45.230370",
   "kpis": {
-    "clientes_atraso": 62,
-    "total_aberto": 856539.6799999999,
-    "total_atraso": 300511.63,
-    "total_vencer": 556028.05
+    "clientes_atraso": 53,
+    "total_aberto": 850763.76,
+    "total_atraso": 269509.3,
+    "total_vencer": 581254.46
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,12 +132,6 @@
       "total_atraso": 21133.7
     },
     {
-      "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 3,
-      "titulos": 2,
-      "total_atraso": 13250.74
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 914,
       "titulos": 2,
@@ -162,10 +156,16 @@
       "total_atraso": 8443.439999999999
     },
     {
-      "cliente": "J S FERREIRA LTDA",
-      "maior_atraso": 9,
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 321,
       "titulos": 1,
-      "total_atraso": 7866
+      "total_atraso": 7265.5
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 94,
+      "titulos": 2,
+      "total_atraso": 7111
     }
   ]
 }
