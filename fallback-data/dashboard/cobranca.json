@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 578852.9
+      "saldo": 588972.52
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 49492.05
+      "saldo": 36938.67
     },
     {
       "faixa": "91–180 dias",
@@ -25,36 +25,15 @@
       "saldo": 2659.39
     }
   ],
-  "generated_at": "2026-06-12T08:38:41.782939",
+  "generated_at": "2026-06-12T11:56:56.482493",
   "kpis": {
-    "clientes_atraso": 52,
-    "total_aberto": 850073.3899999999,
-    "total_atraso": 271220.49,
-    "total_vencer": 578852.9
+    "clientes_atraso": 47,
+    "total_aberto": 847639.6299999999,
+    "total_atraso": 258667.11,
+    "total_vencer": 588972.52
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 129.64,
-      "vencimento": "2026-06-07T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 2099.19,
-      "vencimento": "2026-06-10T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 348.7,
-      "vencimento": "2026-06-10T00:00:00"
-    },
     {
       "cliente": "GRUPO FOLCLORICO NAMORO CAIPIRA THIANGUA",
       "dias_atraso": 2,
@@ -103,6 +82,20 @@
       "loja": "Loja 4",
       "saldo": 3191.5,
       "vencimento": "2026-06-15T00:00:00"
+    },
+    {
+      "cliente": "LEONARDO JOSE DA SILVA",
+      "dias_atraso": -3,
+      "loja": "Loja 2",
+      "saldo": 525,
+      "vencimento": "2026-06-15T00:00:00"
+    },
+    {
+      "cliente": "ERIVAN DA CRUZ SILVA LIMA",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 676.14,
+      "vencimento": "2026-06-16T00:00:00"
     }
   ],
   "tipo": "cobranca",
