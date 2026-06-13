@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2836874
+      "saldo": 2770391
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 167463
+      "saldo": 169738
     },
     {
       "faixa": "61–90 dias",
@@ -21,85 +21,85 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-12T14:14:33.268222",
+  "generated_at": "2026-06-13T10:31:38.386398",
   "kpis": {
-    "a_vencer_7d": 394786,
+    "a_vencer_7d": 391592,
     "juros_pagos": 80732,
-    "total_aberto": 3042877,
-    "total_pago_periodo": 6039876,
-    "total_vencido": 206003
+    "total_aberto": 2978669,
+    "total_pago_periodo": 6044048,
+    "total_vencido": 208278
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-06-12",
-    "data_de": "2026-05-13"
+    "data_ate": "2026-06-13",
+    "data_de": "2026-05-14"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 159,
+      "dias_atraso": 160,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
       "saldo": 2159,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
-      "dias_atraso": 130,
+      "dias_atraso": 131,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 71,
+      "dias_atraso": 72,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 66,
+      "dias_atraso": 67,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 63,
+      "dias_atraso": 64,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-04-10T00:00:00"
     },
     {
-      "dias_atraso": 43,
+      "dias_atraso": 44,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 43,
+      "dias_atraso": 44,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 43,
+      "dias_atraso": 44,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 43,
+      "dias_atraso": 44,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 41,
+      "dias_atraso": 42,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
@@ -134,11 +134,6 @@
       "total_aberto": 202884
     },
     {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 4,
-      "total_aberto": 112253
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 9,
       "total_aberto": 96468
@@ -154,9 +149,14 @@
       "total_aberto": 70188
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 11,
-      "total_aberto": 69794
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 2,
+      "total_aberto": 66294
+    },
+    {
+      "fornecedor": "GERDAU ACOS LONGOS SA",
+      "titulos": 2,
+      "total_aberto": 56888
     }
   ]
 }
