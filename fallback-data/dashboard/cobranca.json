@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 523421.27
+      "saldo": 534412.53
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 35992.15
+      "saldo": 33484.13
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 5935.79
     }
   ],
-  "generated_at": "2026-06-15T12:25:36.296089",
+  "generated_at": "2026-06-15T16:03:26.693645",
   "kpis": {
     "clientes_atraso": 46,
-    "total_aberto": 758481.6,
-    "total_atraso": 235060.33000000002,
-    "total_vencer": 523421.2700000001
+    "total_aberto": 766964.84,
+    "total_atraso": 232552.31,
+    "total_vencer": 534412.53
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -47,13 +47,6 @@
       "loja": "Loja 1",
       "saldo": 908.67,
       "vencimento": "2026-06-10T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 508.02,
-      "vencimento": "2026-06-11T00:00:00"
     },
     {
       "cliente": "QUADRILHA  FILHOS DE MACUNAIMA THIANGUA",
@@ -73,7 +66,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": 1,
       "loja": "Loja 1",
-      "saldo": 2965,
+      "saldo": 965,
       "vencimento": "2026-06-14T00:00:00"
     },
     {
@@ -103,6 +96,13 @@
       "loja": "Loja 1",
       "saldo": 300.21,
       "vencimento": "2026-06-18T00:00:00"
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "dias_atraso": -4,
+      "loja": "Loja 4",
+      "saldo": 3350,
+      "vencimento": "2026-06-19T00:00:00"
     }
   ],
   "tipo": "cobranca",
