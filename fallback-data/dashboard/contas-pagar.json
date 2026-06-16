@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2885921
+      "saldo": 2960969
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 263277
+      "saldo": 255130
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-16T11:32:18.038783",
+  "generated_at": "2026-06-16T15:05:49.201816",
   "kpis": {
     "a_vencer_7d": 411985,
     "juros_pagos": 80504,
-    "total_aberto": 3188003,
-    "total_pago_periodo": 5684064,
-    "total_vencido": 302082
+    "total_aberto": 3254904,
+    "total_pago_periodo": 5718364,
+    "total_vencido": 293935
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -139,6 +139,11 @@
       "total_aberto": 96468
     },
     {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 11,
+      "total_aberto": 87108
+    },
+    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 17,
       "total_aberto": 85207
@@ -152,11 +157,6 @@
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "titulos": 2,
       "total_aberto": 66294
-    },
-    {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 2,
-      "total_aberto": 56888
     }
   ]
 }
