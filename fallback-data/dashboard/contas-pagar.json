@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2960969
+      "saldo": 2982500
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 255130
+      "saldo": 233837
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-16T15:05:49.201816",
+  "generated_at": "2026-06-16T17:47:23.945682",
   "kpis": {
-    "a_vencer_7d": 411985,
+    "a_vencer_7d": 417415,
     "juros_pagos": 80504,
-    "total_aberto": 3254904,
-    "total_pago_periodo": 5718364,
-    "total_vencido": 293935
+    "total_aberto": 3255142,
+    "total_pago_periodo": 5796048,
+    "total_vencido": 272642
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,11 +134,6 @@
       "total_aberto": 202884
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 9,
-      "total_aberto": 96468
-    },
-    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 11,
       "total_aberto": 87108
@@ -147,6 +142,11 @@
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 17,
       "total_aberto": 85207
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 8,
+      "total_aberto": 83701
     },
     {
       "fornecedor": "STAM METALURGICA LTDA",

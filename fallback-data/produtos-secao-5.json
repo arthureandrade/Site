@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-16T19:05:47.904Z",
+  "generated_at": "2026-06-16T21:47:23.345Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5569,
+  "total": 5577,
   "produtos": [
     {
       "descricao": "",
@@ -3561,7 +3561,7 @@
     },
     {
       "descricao": "",
-      "estoque": 131,
+      "estoque": 107,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12745.jpg",
       "grupo": 3,
       "id": 12745,
@@ -3785,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 120,
+      "estoque": 119,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5508.jpg",
       "grupo": 3,
       "id": 5508,
@@ -4205,7 +4205,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9108,
+      "estoque": 9084,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1770.jpg",
       "grupo": 64,
       "id": 1770,
@@ -4555,6 +4555,62 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14104,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR KIT TESTEIRA AC300 300KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14108,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR KIT TESTEIRA AC500 500KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14112,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR KIT TESTEIRA AC600 600KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14116,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR KIT TESTEIRA AC800 800KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13201.jpg",
       "grupo": 44,
@@ -4580,6 +4636,62 @@
       "subgrupo": 21,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13203.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14102,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR P/ PORTA DE ENROLAR  AC300 300KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14106,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR P/ PORTA DE ENROLAR  AC500 500KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14110,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR P/ PORTA DE ENROLAR  AC600 600KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 44,
+      "id": 14114,
+      "marca": "MECA",
+      "nome": "AUTOMATIZADOR P/ PORTA DE ENROLAR  AC800 800KG MECA",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 21,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -4709,7 +4821,7 @@
     },
     {
       "descricao": "",
-      "estoque": 31,
+      "estoque": 30,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12416.jpg",
       "grupo": 92,
       "id": 12416,
@@ -4891,7 +5003,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3014,
+      "estoque": 3010,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1642.jpg",
       "grupo": 64,
       "id": 1642,
@@ -4961,7 +5073,7 @@
     },
     {
       "descricao": "",
-      "estoque": 609,
+      "estoque": 599,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1975.jpg",
       "grupo": 33,
       "id": 1975,
@@ -6935,7 +7047,7 @@
     },
     {
       "descricao": "",
-      "estoque": 30,
+      "estoque": 29,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2226.jpg",
       "grupo": 34,
       "id": 2226,
@@ -8489,7 +8601,7 @@
     },
     {
       "descricao": "",
-      "estoque": 93,
+      "estoque": 92,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3988.jpg",
       "grupo": 10,
       "id": 3988,
@@ -8587,7 +8699,7 @@
     },
     {
       "descricao": "",
-      "estoque": 120,
+      "estoque": 119,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3990.jpg",
       "grupo": 10,
       "id": 3990,
@@ -10015,7 +10127,7 @@
     },
     {
       "descricao": "",
-      "estoque": 61,
+      "estoque": 59,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3981.jpg",
       "grupo": 10,
       "id": 3981,
@@ -10043,7 +10155,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3991.jpg",
       "grupo": 10,
       "id": 3991,
@@ -11107,7 +11219,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1342,
+      "estoque": 1142,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1668.jpg",
       "grupo": 64,
       "id": 1668,
@@ -11135,7 +11247,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6586,
+      "estoque": 6584,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1665.jpg",
       "grupo": 64,
       "id": 1665,
@@ -19381,7 +19493,7 @@
     },
     {
       "descricao": "",
-      "estoque": 39,
+      "estoque": 38,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10412.jpg",
       "grupo": 40,
       "id": 10412,
@@ -23917,7 +24029,7 @@
     },
     {
       "descricao": "",
-      "estoque": 36,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/626.jpg",
       "grupo": 30,
       "id": 626,
@@ -24113,7 +24225,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4278,
+      "estoque": 4264,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -24183,7 +24295,7 @@
     },
     {
       "descricao": "",
-      "estoque": 461,
+      "estoque": 459,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -24519,7 +24631,7 @@
     },
     {
       "descricao": "",
-      "estoque": 480,
+      "estoque": 478,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11878.jpg",
       "grupo": 30,
       "id": 11878,
@@ -24757,7 +24869,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3413.jpg",
       "grupo": 30,
       "id": 3413,
@@ -26101,7 +26213,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6343,
+      "estoque": 6339,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/60.jpg",
       "grupo": 32,
       "id": 60,
@@ -26143,7 +26255,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7579,
+      "estoque": 7573,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -26549,7 +26661,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2910,
+      "estoque": 2905,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26605,7 +26717,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3930,
+      "estoque": 3920,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -31603,7 +31715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 518,
+      "estoque": 514,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/907.jpg",
       "grupo": 41,
       "id": 907,
@@ -31617,7 +31729,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1375,
+      "estoque": 1373,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11552.jpg",
       "grupo": 40,
       "id": 11552,
@@ -31995,7 +32107,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 26,
       "foto_url": null,
       "grupo": 92,
       "id": 13590,
@@ -32009,7 +32121,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13592.jpg",
       "grupo": 92,
       "id": 13592,
@@ -32191,7 +32303,7 @@
     },
     {
       "descricao": "",
-      "estoque": 87,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10444.jpg",
       "grupo": 41,
       "id": 10444,
@@ -32219,7 +32331,7 @@
     },
     {
       "descricao": "",
-      "estoque": 353,
+      "estoque": 350,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -35215,7 +35327,7 @@
     },
     {
       "descricao": "",
-      "estoque": 313,
+      "estoque": 311,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/407.jpg",
       "grupo": 32,
       "id": 407,
@@ -35243,7 +35355,7 @@
     },
     {
       "descricao": "",
-      "estoque": 321,
+      "estoque": 319,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/488.jpg",
       "grupo": 32,
       "id": 488,
@@ -35551,7 +35663,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3,
+      "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5454.jpg",
       "grupo": 2,
       "id": 5454,
@@ -39877,7 +39989,7 @@
     },
     {
       "descricao": "",
-      "estoque": 99,
+      "estoque": 98,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1195.jpg",
       "grupo": 43,
       "id": 1195,
@@ -40857,7 +40969,7 @@
     },
     {
       "descricao": "",
-      "estoque": 246,
+      "estoque": 245,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12327.jpg",
       "grupo": 45,
       "id": 12327,
@@ -42159,7 +42271,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18,
+      "estoque": 17,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4944.jpg",
       "grupo": 26,
       "id": 4944,
@@ -44287,7 +44399,7 @@
     },
     {
       "descricao": "",
-      "estoque": 73,
+      "estoque": 68,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/771.jpg",
       "grupo": 25,
       "id": 771,
@@ -45057,7 +45169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10680.jpg",
       "grupo": 42,
       "id": 10680,
@@ -45911,7 +46023,7 @@
     },
     {
       "descricao": "",
-      "estoque": 237,
+      "estoque": 235,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg",
       "grupo": 60,
       "id": 3658,
@@ -47087,7 +47199,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 6,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12902.jpg",
       "grupo": 26,
       "id": 12902,
@@ -50559,7 +50671,7 @@
     },
     {
       "descricao": "",
-      "estoque": 40318,
+      "estoque": 40298,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -50587,7 +50699,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4477,
+      "estoque": 4467,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10881.jpg",
       "grupo": 64,
       "id": 10881,
@@ -50629,7 +50741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3748,
+      "estoque": 3728,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4189.jpg",
       "grupo": 64,
       "id": 4189,
@@ -50643,7 +50755,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3109,
+      "estoque": 3099,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10882.jpg",
       "grupo": 64,
       "id": 10882,
@@ -50685,7 +50797,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3622,
+      "estoque": 3762,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10878.jpg",
       "grupo": 64,
       "id": 10878,
@@ -51077,7 +51189,7 @@
     },
     {
       "descricao": "",
-      "estoque": 804,
+      "estoque": 801,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2151.jpg",
       "grupo": 64,
       "id": 2151,
@@ -51497,7 +51609,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22963,
+      "estoque": 22763,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12534.jpg",
       "grupo": 64,
       "id": 12534,
@@ -51511,7 +51623,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13989,
+      "estoque": 13789,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/310.jpg",
       "grupo": 64,
       "id": 310,
@@ -51525,7 +51637,7 @@
     },
     {
       "descricao": "",
-      "estoque": 98691,
+      "estoque": 98541,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4184.jpg",
       "grupo": 64,
       "id": 4184,
@@ -51539,7 +51651,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15955,
+      "estoque": 15805,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4185.jpg",
       "grupo": 64,
       "id": 4185,
@@ -51959,7 +52071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3578,
+      "estoque": 3378,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1262.jpg",
       "grupo": 64,
       "id": 1262,
@@ -54871,7 +54983,7 @@
     },
     {
       "descricao": "",
-      "estoque": 763,
+      "estoque": 761,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg",
       "grupo": 45,
       "id": 11483,
@@ -56299,7 +56411,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5743,
+      "estoque": 5739,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/104.jpg",
       "grupo": 66,
       "id": 104,
@@ -57139,7 +57251,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7130,
+      "estoque": 7106,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1644.jpg",
       "grupo": 64,
       "id": 1644,
@@ -57489,7 +57601,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2801,
+      "estoque": 2791,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/105.jpg",
       "grupo": 2,
       "id": 105,
@@ -62823,7 +62935,7 @@
     },
     {
       "descricao": "",
-      "estoque": 438,
+      "estoque": 437,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13364.jpg",
       "grupo": 71,
       "id": 13364,
@@ -63663,7 +63775,7 @@
     },
     {
       "descricao": "",
-      "estoque": 119,
+      "estoque": 117,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/406.jpg",
       "grupo": 71,
       "id": 406,
@@ -63887,7 +63999,7 @@
     },
     {
       "descricao": "",
-      "estoque": 925,
+      "estoque": 921,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3771.jpg",
       "grupo": 66,
       "id": 3771,
@@ -69890,118 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10356.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 34,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10363.jpg",
-      "grupo": 79,
-      "id": 10363,
-      "marca": "BRAVON",
-      "nome": "TELA DUROC/MANGUEIRAO 3\" BWG 16 X 1,20M",
-      "preco": 15,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10363.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 3,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10353.jpg",
-      "grupo": 79,
-      "id": 10353,
-      "marca": "BRAVON",
-      "nome": "TELA DUROC/MANGUEIRAO 3\" BWG 18 X 0,80 X 50M",
-      "preco": 278.4,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10353.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 1,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10354.jpg",
-      "grupo": 79,
-      "id": 10354,
-      "marca": "BRAVON",
-      "nome": "TELA DUROC/MANGUEIRAO 3\" BWG 18 X 1,20 X 50M",
-      "preco": 412.5,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10354.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 50,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5421.jpg",
-      "grupo": 79,
-      "id": 5421,
-      "marca": "KALA",
-      "nome": "TELA GALV. AREIA 12,5X1M FIO 28 - KALA",
-      "preco": 50,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5421.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 11,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4097.jpg",
-      "grupo": 79,
-      "id": 4097,
-      "marca": "COMEP",
-      "nome": "TELA GALV. AREIA M8XF28 - 1,00X30M",
-      "preco": 28.78,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4097.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 51,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11034.jpg",
-      "grupo": 79,
-      "id": 11034,
-      "marca": "VONDER",
-      "nome": "TELA GALV. ARROZ M10XF28 - 1,00MX12,5M VONDER",
-      "preco": 38.91,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11034.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 107,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4096.jpg",
-      "grupo": 79,
-      "id": 4096,
-      "marca": "VONDER",
-      "nome": "TELA GALV. CAFE M4XF22 - 1,00X12,5M - VONDER",
-      "preco": 42.16,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4096.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 105,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12640.jpg",
-      "grupo": 79,
-      "id": 12640,
-      "marca": "VONDER",
-      "nome": "TELA GALV. FEIJAO M6XF24 - 1,00X12,5M VONDER",
-      "preco": 40.61,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12640.jpg"
     }
   ]
 }
