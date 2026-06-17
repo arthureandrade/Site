@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 557613.78
+      "saldo": 612703.52
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 38152.98
+      "saldo": 37476.840000000004
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15141.75
     }
   ],
-  "generated_at": "2026-06-17T14:02:31.998683",
+  "generated_at": "2026-06-17T16:27:59.896656",
   "kpis": {
-    "clientes_atraso": 50,
-    "total_aberto": 795068.6799999999,
-    "total_atraso": 237454.9,
-    "total_vencer": 557613.78
+    "clientes_atraso": 49,
+    "total_aberto": 849482.28,
+    "total_atraso": 236778.75999999995,
+    "total_vencer": 612703.52
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -61,13 +61,6 @@
       "loja": "Loja 2",
       "saldo": 526.05,
       "vencimento": "2026-06-15T00:00:00"
-    },
-    {
-      "cliente": "ERIVAN DA CRUZ SILVA LIMA",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 676.14,
-      "vencimento": "2026-06-16T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
@@ -103,6 +96,13 @@
       "loja": "Loja 4",
       "saldo": 500,
       "vencimento": "2026-06-21T00:00:00"
+    },
+    {
+      "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 425.89,
+      "vencimento": "2026-06-22T00:00:00"
     }
   ],
   "tipo": "cobranca",
