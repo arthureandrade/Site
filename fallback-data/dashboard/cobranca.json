@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 596947.54
+      "saldo": 594847.54
     },
     {
       "faixa": "180+ dias",
       "saldo": 110903.87
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 53565.82
-    },
-    {
       "faixa": "61–90 dias",
       "saldo": 50552.69
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 36676.770000000004
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15155.68
     }
   ],
-  "generated_at": "2026-06-18T05:15:34.821817",
+  "generated_at": "2026-06-18T08:33:57.469133",
   "kpis": {
-    "clientes_atraso": 54,
-    "total_aberto": 849932.17,
-    "total_atraso": 252984.63000000003,
-    "total_vencer": 596947.54
+    "clientes_atraso": 50,
+    "total_aberto": 830943.1200000001,
+    "total_atraso": 236095.58000000002,
+    "total_vencer": 594847.54
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,12 +132,6 @@
       "total_atraso": 12487.77
     },
     {
-      "cliente": "50.285.484 EDIVAN ASSUNCAO DOS SANTOS",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 12340
-    },
-    {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "maior_atraso": 43,
       "titulos": 7,
@@ -166,6 +160,12 @@
       "maior_atraso": 101,
       "titulos": 2,
       "total_atraso": 7156.5
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "maior_atraso": 29,
+      "titulos": 5,
+      "total_atraso": 5601.62
     }
   ]
 }
