@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 575529.98
+      "saldo": 576896.09
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 33233.24
+      "saldo": 29166.87
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15169.58
     }
   ],
-  "generated_at": "2026-06-19T15:09:17.336572",
+  "generated_at": "2026-06-19T16:47:08.045735",
   "kpis": {
-    "clientes_atraso": 41,
-    "total_aberto": 804069.91,
-    "total_atraso": 228539.93,
-    "total_vencer": 575529.98
+    "clientes_atraso": 39,
+    "total_aberto": 801369.6499999999,
+    "total_atraso": 224473.55999999997,
+    "total_vencer": 576896.0900000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,20 +40,6 @@
       "loja": "Loja 1",
       "saldo": 968.86,
       "vencimento": "2026-06-14T00:00:00"
-    },
-    {
-      "cliente": "LEONARDO JOSE DA SILVA",
-      "dias_atraso": 4,
-      "loja": "Loja 4",
-      "saldo": 3204.27,
-      "vencimento": "2026-06-15T00:00:00"
-    },
-    {
-      "cliente": "LEONARDO JOSE DA SILVA",
-      "dias_atraso": 4,
-      "loja": "Loja 2",
-      "saldo": 527.1,
-      "vencimento": "2026-06-15T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
@@ -102,6 +88,20 @@
       "dias_atraso": -5,
       "loja": "Loja 4",
       "saldo": 450,
+      "vencimento": "2026-06-24T00:00:00"
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 1000.66,
+      "vencimento": "2026-06-24T00:00:00"
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -5,
+      "loja": "Loja 4",
+      "saldo": 1715.18,
       "vencimento": "2026-06-24T00:00:00"
     }
   ],

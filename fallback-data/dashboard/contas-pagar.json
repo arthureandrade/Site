@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 342900
+      "saldo": 251258
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-19T15:09:18.044100",
+  "generated_at": "2026-06-19T16:47:08.648243",
   "kpis": {
     "a_vencer_7d": 329702,
     "juros_pagos": 80504,
-    "total_aberto": 3411336,
-    "total_pago_periodo": 5467558,
-    "total_vencido": 385224
+    "total_aberto": 3319694,
+    "total_pago_periodo": 5789639,
+    "total_vencido": 293582
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 4,
-      "total_aberto": 191500
+      "titulos": 3,
+      "total_aberto": 141666
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
