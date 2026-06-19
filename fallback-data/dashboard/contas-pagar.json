@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3026112
+      "saldo": 2989287
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-19T16:47:08.648243",
+  "generated_at": "2026-06-19T17:55:51.004354",
   "kpis": {
-    "a_vencer_7d": 329702,
+    "a_vencer_7d": 292877,
     "juros_pagos": 80504,
-    "total_aberto": 3319694,
-    "total_pago_periodo": 5789639,
+    "total_aberto": 3282869,
+    "total_pago_periodo": 5900114,
     "total_vencido": 293582
   },
   "ok": true,
@@ -144,14 +144,14 @@
       "total_aberto": 85207
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 8,
-      "total_aberto": 83701
-    },
-    {
       "fornecedor": "STAM METALURGICA LTDA",
       "titulos": 8,
       "total_aberto": 70188
+    },
+    {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 6,
+      "total_aberto": 67984
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
