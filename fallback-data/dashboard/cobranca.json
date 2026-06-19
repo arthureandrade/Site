@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 553057.76
+      "saldo": 575066.78
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 34033.24
+      "saldo": 33233.24
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 15169.58
     }
   ],
-  "generated_at": "2026-06-19T10:46:29.800562",
+  "generated_at": "2026-06-19T13:06:52.782829",
   "kpis": {
-    "clientes_atraso": 42,
-    "total_aberto": 782397.69,
-    "total_atraso": 229339.92999999996,
-    "total_vencer": 553057.76
+    "clientes_atraso": 41,
+    "total_aberto": 803606.7100000001,
+    "total_atraso": 228539.93,
+    "total_vencer": 575066.78
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -146,8 +146,8 @@
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 232,
-      "titulos": 3,
-      "total_atraso": 9038.68
+      "titulos": 2,
+      "total_atraso": 8498.68
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
