@@ -2,35 +2,35 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 558144.39
+      "saldo": 553057.76
     },
     {
       "faixa": "180+ dias",
       "saldo": 110951.23999999999
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 51017.28
+      "faixa": "61–90 dias",
+      "saldo": 48808.479999999996
     },
     {
-      "faixa": "61–90 dias",
-      "saldo": 49923.99
+      "faixa": "1–30 dias",
+      "saldo": 34033.24
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 21989.87
+      "saldo": 20377.39
     },
     {
       "faixa": "31–60 dias",
       "saldo": 15169.58
     }
   ],
-  "generated_at": "2026-06-19T07:49:58.613752",
+  "generated_at": "2026-06-19T10:46:29.800562",
   "kpis": {
-    "clientes_atraso": 50,
-    "total_aberto": 807196.35,
-    "total_atraso": 249051.95999999996,
-    "total_vencer": 558144.3899999999
+    "clientes_atraso": 42,
+    "total_aberto": 782397.69,
+    "total_atraso": 229339.92999999996,
+    "total_vencer": 553057.76
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,12 +132,6 @@
       "total_atraso": 12494.63
     },
     {
-      "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 11750
-    },
-    {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "maior_atraso": 44,
       "titulos": 7,
@@ -166,6 +160,12 @@
       "maior_atraso": 102,
       "titulos": 2,
       "total_atraso": 7163
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "maior_atraso": 30,
+      "titulos": 5,
+      "total_atraso": 5607.09
     }
   ]
 }
