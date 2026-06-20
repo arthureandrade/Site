@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3000611
+      "saldo": 3023338
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-20T10:39:53.476910",
+  "generated_at": "2026-06-20T12:07:49.820138",
   "kpis": {
     "a_vencer_7d": 1009545,
     "juros_pagos": 80504,
-    "total_aberto": 3305397,
+    "total_aberto": 3328124,
     "total_pago_periodo": 5896649,
     "total_vencido": 304786
   },
@@ -154,9 +154,9 @@
       "total_aberto": 67984
     },
     {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 2,
-      "total_aberto": 56888
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 12,
+      "total_aberto": 64339
     }
   ]
 }
