@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2944582
+      "saldo": 3161966
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-22T12:05:23.687182",
+  "generated_at": "2026-06-22T15:44:54.185688",
   "kpis": {
     "a_vencer_7d": 1029203,
     "juros_pagos": 80463,
-    "total_aberto": 3336293,
+    "total_aberto": 3553677,
     "total_pago_periodo": 5339310,
     "total_vencido": 391711
   },
@@ -124,6 +124,11 @@
       "total_aberto": 456198
     },
     {
+      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
+      "titulos": 4,
+      "total_aberto": 217192
+    },
+    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 58,
       "total_aberto": 202884
@@ -152,11 +157,6 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 67984
-    },
-    {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 12,
-      "total_aberto": 64339
     }
   ]
 }
