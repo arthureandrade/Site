@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 523244.87
+      "saldo": 508324.47
     },
     {
       "faixa": "180+ dias",
@@ -10,11 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 73473.53
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 48838.8
+      "saldo": 33901.1
     },
     {
       "faixa": "31–60 dias",
@@ -23,14 +19,18 @@
     {
       "faixa": "91–180 dias",
       "saldo": 20499.17
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 4024.8
     }
   ],
-  "generated_at": "2026-06-23T07:55:59.334160",
+  "generated_at": "2026-06-23T11:19:01.806732",
   "kpis": {
-    "clientes_atraso": 49,
-    "total_aberto": 799799.2,
-    "total_atraso": 276554.33,
-    "total_vencer": 523244.87
+    "clientes_atraso": 46,
+    "total_aberto": 700492.3699999999,
+    "total_atraso": 192167.90000000002,
+    "total_vencer": 508324.47
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -108,22 +108,10 @@
   "tipo": "cobranca",
   "top_clientes": [
     {
-      "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 430,
-      "titulos": 3,
-      "total_atraso": 55218.24
-    },
-    {
       "cliente": "M C A CONSTRUTORA EIRELLI",
       "maior_atraso": 473,
       "titulos": 7,
       "total_atraso": 39594.31
-    },
-    {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 32760.29
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
@@ -142,6 +130,12 @@
       "maior_atraso": 926,
       "titulos": 2,
       "total_atraso": 12522.08
+    },
+    {
+      "cliente": "JOSE ALVES DE MORAIS",
+      "maior_atraso": 430,
+      "titulos": 2,
+      "total_atraso": 10404.24
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
@@ -166,6 +160,12 @@
       "maior_atraso": 106,
       "titulos": 2,
       "total_atraso": 7189
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "maior_atraso": 34,
+      "titulos": 5,
+      "total_atraso": 5629.03
     }
   ]
 }
