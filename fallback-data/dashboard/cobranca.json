@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 508324.47
+      "saldo": 513219.47
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 31673.53
+      "saldo": 28462.34
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 4024.8
     }
   ],
-  "generated_at": "2026-06-23T13:23:20.371677",
+  "generated_at": "2026-06-23T15:26:32.199228",
   "kpis": {
-    "clientes_atraso": 45,
-    "total_aberto": 695082.37,
-    "total_atraso": 186757.90000000002,
-    "total_vencer": 508324.47
+    "clientes_atraso": 44,
+    "total_aberto": 696766.18,
+    "total_atraso": 183546.71000000002,
+    "total_vencer": 513219.47000000003
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -54,13 +54,6 @@
       "loja": "Loja 1",
       "saldo": 505.01,
       "vencimento": "2026-06-19T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 2238.47,
-      "vencimento": "2026-06-21T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
@@ -102,6 +95,13 @@
       "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 226.2,
+      "vencimento": "2026-06-26T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 1916,
       "vencimento": "2026-06-26T00:00:00"
     }
   ],
