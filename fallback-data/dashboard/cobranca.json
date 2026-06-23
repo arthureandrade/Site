@@ -10,26 +10,26 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 33901.1
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 22602.04
+      "saldo": 31673.53
     },
     {
       "faixa": "91–180 dias",
       "saldo": 20499.17
     },
     {
+      "faixa": "31–60 dias",
+      "saldo": 19419.61
+    },
+    {
       "faixa": "61–90 dias",
       "saldo": 4024.8
     }
   ],
-  "generated_at": "2026-06-23T11:19:01.806732",
+  "generated_at": "2026-06-23T13:23:20.371677",
   "kpis": {
-    "clientes_atraso": 46,
-    "total_aberto": 700492.3699999999,
-    "total_atraso": 192167.90000000002,
+    "clientes_atraso": 45,
+    "total_aberto": 695082.37,
+    "total_atraso": 186757.90000000002,
     "total_vencer": 508324.47
   },
   "ok": true,
@@ -162,10 +162,10 @@
       "total_atraso": 7189
     },
     {
-      "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 34,
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 349,
       "titulos": 5,
-      "total_atraso": 5629.03
+      "total_atraso": 5212.5
     }
   ]
 }
