@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3069584
+      "saldo": 2401096
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-24T15:07:20.338759",
+  "generated_at": "2026-06-24T16:55:34.671254",
   "kpis": {
-    "a_vencer_7d": 1036819,
+    "a_vencer_7d": 368331,
     "juros_pagos": 80463,
-    "total_aberto": 3558089,
-    "total_pago_periodo": 5339310,
+    "total_aberto": 2889601,
+    "total_pago_periodo": 5808680,
     "total_vencido": 488505
   },
   "ok": true,
@@ -114,11 +114,6 @@
       "total_aberto": 681361
     },
     {
-      "fornecedor": "SHANDONG YEHUI COATED STEEL CO., LTD.",
-      "titulos": 1,
-      "total_aberto": 668488
-    },
-    {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "titulos": 15,
       "total_aberto": 456198
@@ -157,6 +152,11 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 67984
+    },
+    {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 12,
+      "total_aberto": 64339
     }
   ]
 }
