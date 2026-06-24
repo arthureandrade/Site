@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 31062.05
+      "saldo": 29976.05
     },
     {
       "faixa": "91–180 dias",
@@ -25,11 +25,11 @@
       "saldo": 4028.07
     }
   ],
-  "generated_at": "2026-06-24T05:33:11.866335",
+  "generated_at": "2026-06-24T08:08:04.733553",
   "kpis": {
     "clientes_atraso": 45,
-    "total_aberto": 718199.21,
-    "total_atraso": 186279.83000000002,
+    "total_aberto": 717113.2100000001,
+    "total_atraso": 185193.83,
     "total_vencer": 531919.38
   },
   "ok": true,
