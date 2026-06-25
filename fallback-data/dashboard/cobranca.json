@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 676500.6
+      "saldo": 677012.6
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 41986.96
+      "saldo": 32473.100000000002
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 4031.34
     }
   ],
-  "generated_at": "2026-06-25T13:24:33.063973",
+  "generated_at": "2026-06-25T15:25:24.447581",
   "kpis": {
-    "clientes_atraso": 47,
-    "total_aberto": 873780.88,
-    "total_atraso": 197280.28,
-    "total_vencer": 676500.6000000001
+    "clientes_atraso": 44,
+    "total_aberto": 864779.02,
+    "total_atraso": 187766.41999999998,
+    "total_vencer": 677012.6000000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -155,10 +155,10 @@
       "total_atraso": 7202
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 6340.66
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 351,
+      "titulos": 5,
+      "total_atraso": 5220.8
     }
   ]
 }
