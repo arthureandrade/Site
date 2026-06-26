@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 671732.4400000001
+      "saldo": 655023.6
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 37574.08
+      "saldo": 33198.08
     },
     {
       "faixa": "91–180 dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 4034.62
+      "saldo": 2998.61
     }
   ],
-  "generated_at": "2026-06-26T07:21:10.581353",
+  "generated_at": "2026-06-26T09:27:18.694121",
   "kpis": {
-    "clientes_atraso": 48,
-    "total_aberto": 864675.33,
-    "total_atraso": 192942.89,
-    "total_vencer": 671732.44
+    "clientes_atraso": 45,
+    "total_aberto": 842554.48,
+    "total_atraso": 187530.88,
+    "total_vencer": 655023.6000000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -141,7 +141,7 @@
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 73,
       "titulos": 3,
-      "total_atraso": 10262.67
+      "total_atraso": 9226.66
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
