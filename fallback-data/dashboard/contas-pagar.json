@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2337487
+      "saldo": 2340237
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 536847
+      "saldo": 503560
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 3159
     }
   ],
-  "generated_at": "2026-06-26T17:07:36.025942",
+  "generated_at": "2026-06-26T18:35:58.489473",
   "kpis": {
     "a_vencer_7d": 316075,
     "juros_pagos": 657,
-    "total_aberto": 2921013,
-    "total_pago_periodo": 4997181,
-    "total_vencido": 583526
+    "total_aberto": 2890476,
+    "total_pago_periodo": 5125417,
+    "total_vencido": 550239
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -144,11 +144,6 @@
       "total_aberto": 85207
     },
     {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 8,
-      "total_aberto": 70188
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 6,
       "total_aberto": 67984
@@ -157,6 +152,11 @@
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
       "titulos": 12,
       "total_aberto": 64339
+    },
+    {
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 7,
+      "total_aberto": 57249
     }
   ]
 }
