@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2333244
+      "saldo": 2336670
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 509746
+      "saldo": 275157
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 24205
+      "saldo": 23139
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 20122
+      "saldo": 18900
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 3159
+      "saldo": 2799
     }
   ],
-  "generated_at": "2026-06-27T07:58:48.236511",
+  "generated_at": "2026-06-27T10:02:08.628902",
   "kpis": {
-    "a_vencer_7d": 316351,
-    "juros_pagos": 657,
-    "total_aberto": 2890476,
-    "total_pago_periodo": 5093712,
-    "total_vencido": 557232
+    "a_vencer_7d": 316271,
+    "juros_pagos": 71721,
+    "total_aberto": 2656665,
+    "total_pago_periodo": 6135621,
+    "total_vencido": 319995
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -39,7 +39,7 @@
       "dias_atraso": 174,
       "fornecedor": "RODRIGUES INDUSTRIA E COMERCIO DE COLCHOES LTDA",
       "loja": "Loja 1",
-      "saldo": 2159,
+      "saldo": 1799,
       "vencimento": "2026-01-04T00:00:00"
     },
     {
@@ -64,13 +64,6 @@
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 78,
-      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
-      "loja": "Loja 2",
-      "saldo": 1066,
-      "vencimento": "2026-04-10T00:00:00"
-    },
-    {
       "dias_atraso": 58,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
@@ -81,7 +74,7 @@
       "dias_atraso": 58,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
-      "saldo": 419,
+      "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
@@ -104,19 +97,26 @@
       "loja": "Loja 1",
       "saldo": 877,
       "vencimento": "2026-05-02T00:00:00"
+    },
+    {
+      "dias_atraso": 49,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 7243,
+      "vencimento": "2026-05-09T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 14,
-      "total_aberto": 681361
+      "titulos": 13,
+      "total_aberto": 615056
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 15,
-      "total_aberto": 456198
+      "titulos": 13,
+      "total_aberto": 339175
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -125,8 +125,8 @@
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 58,
-      "total_aberto": 202884
+      "titulos": 57,
+      "total_aberto": 199386
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
