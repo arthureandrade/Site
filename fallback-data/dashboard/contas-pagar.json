@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2336670
+      "saldo": 2337198
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 275157
+      "saldo": 218715
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 2799
     }
   ],
-  "generated_at": "2026-06-27T10:02:08.628902",
+  "generated_at": "2026-06-27T11:35:40.621004",
   "kpis": {
     "a_vencer_7d": 316271,
     "juros_pagos": 71721,
-    "total_aberto": 2656665,
-    "total_pago_periodo": 6135621,
-    "total_vencido": 319995
+    "total_aberto": 2600751,
+    "total_pago_periodo": 6306003,
+    "total_vencido": 263553
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 13,
-      "total_aberto": 339175
+      "titulos": 9,
+      "total_aberto": 282733
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
