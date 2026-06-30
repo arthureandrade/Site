@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 657663.3200000001
+      "saldo": 679338.3200000001
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 28079.29
+      "saldo": 26037.16
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 3007.7
     }
   ],
-  "generated_at": "2026-06-30T09:24:06.849933",
+  "generated_at": "2026-06-30T12:06:43.004850",
   "kpis": {
-    "clientes_atraso": 48,
-    "total_aberto": 850442.4500000001,
-    "total_atraso": 192779.13,
-    "total_vencer": 657663.3200000001
+    "clientes_atraso": 47,
+    "total_aberto": 870075.3200000001,
+    "total_atraso": 190737,
+    "total_vencer": 679338.3200000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -39,20 +39,6 @@
       "dias_atraso": 4,
       "loja": "Loja 1",
       "saldo": 227.1,
-      "vencimento": "2026-06-26T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 1642.54,
-      "vencimento": "2026-06-26T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 399.59,
       "vencimento": "2026-06-26T00:00:00"
     },
     {
@@ -66,7 +52,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -1,
       "loja": "Loja 1",
-      "saldo": 2097,
+      "saldo": 1097,
       "vencimento": "2026-07-01T00:00:00"
     },
     {
@@ -102,6 +88,20 @@
       "dias_atraso": -5,
       "loja": "Loja 1",
       "saldo": 933.75,
+      "vencimento": "2026-07-05T00:00:00"
+    },
+    {
+      "cliente": "QUADRILHA CORACAO CAIPIRA FERQUAJ",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 39.66,
+      "vencimento": "2026-07-05T00:00:00"
+    },
+    {
+      "cliente": "QUADRILHA CORACAO CAIPIRA FERQUAJ",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 354.39,
       "vencimento": "2026-07-05T00:00:00"
     }
   ],
