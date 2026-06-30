@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2197552
+      "saldo": 2198093
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 367435
+      "saldo": 261637
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 2799
     }
   ],
-  "generated_at": "2026-06-30T14:13:52.376933",
+  "generated_at": "2026-06-30T16:23:08.226838",
   "kpis": {
-    "a_vencer_7d": 294979,
+    "a_vencer_7d": 295520,
     "juros_pagos": 71721,
-    "total_aberto": 2626449,
-    "total_pago_periodo": 5076097,
-    "total_vencido": 428897
+    "total_aberto": 2521192,
+    "total_pago_periodo": 5365910,
+    "total_vencido": 323099
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 13,
-      "total_aberto": 615056
+      "titulos": 12,
+      "total_aberto": 561500
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -150,13 +150,13 @@
     },
     {
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 12,
-      "total_aberto": 64339
+      "titulos": 11,
+      "total_aberto": 57765
     },
     {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 7,
-      "total_aberto": 57249
+      "fornecedor": "GERDAU ACOS LONGOS SA",
+      "titulos": 2,
+      "total_aberto": 56888
     }
   ]
 }
