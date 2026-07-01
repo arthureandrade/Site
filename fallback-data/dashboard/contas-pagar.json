@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2167593
+      "saldo": 2175640
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 304291
+      "saldo": 432485
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 2799
     }
   ],
-  "generated_at": "2026-07-01T11:58:24.586929",
+  "generated_at": "2026-07-01T14:06:39.964644",
   "kpis": {
     "a_vencer_7d": 245203,
     "juros_pagos": 71721,
-    "total_aberto": 2532072,
+    "total_aberto": 2668313,
     "total_pago_periodo": 5684687,
-    "total_vencido": 364479
+    "total_vencido": 492673
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,6 +134,11 @@
       "total_aberto": 141666
     },
     {
+      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
+      "titulos": 1,
+      "total_aberto": 131700
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 12,
       "total_aberto": 93212
@@ -152,11 +157,6 @@
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
       "titulos": 11,
       "total_aberto": 57765
-    },
-    {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 2,
-      "total_aberto": 56888
     }
   ]
 }
