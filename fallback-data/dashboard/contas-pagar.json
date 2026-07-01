@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2175640
+      "saldo": 2197894
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 432485
+      "saldo": 327895
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 2799
     }
   ],
-  "generated_at": "2026-07-01T14:06:39.964644",
+  "generated_at": "2026-07-01T16:13:54.170041",
   "kpis": {
-    "a_vencer_7d": 245203,
+    "a_vencer_7d": 247999,
     "juros_pagos": 71721,
-    "total_aberto": 2668313,
-    "total_pago_periodo": 5684687,
-    "total_vencido": 492673
+    "total_aberto": 2585977,
+    "total_pago_periodo": 6083067,
+    "total_vencido": 388083
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -139,24 +139,24 @@
       "total_aberto": 131700
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 12,
-      "total_aberto": 93212
-    },
-    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 10,
       "total_aberto": 86414
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 17,
-      "total_aberto": 85207
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 11,
+      "total_aberto": 80444
     },
     {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 11,
-      "total_aberto": 57765
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 12,
+      "total_aberto": 56952
+    },
+    {
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 6,
+      "total_aberto": 52641
     }
   ]
 }

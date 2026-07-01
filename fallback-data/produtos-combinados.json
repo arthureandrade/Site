@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T18:06:42.665Z",
+  "generated_at": "2026-07-01T20:13:56.927Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5407,
   "produtos": [
@@ -3813,7 +3813,7 @@
     },
     {
       "descricao": "",
-      "estoque": 45,
+      "estoque": 41,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg",
       "grupo": 3,
       "id": 5026,
@@ -4219,7 +4219,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7963,
+      "estoque": 7803,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1770.jpg",
       "grupo": 64,
       "id": 1770,
@@ -5031,7 +5031,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2951,
+      "estoque": 2946,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1642.jpg",
       "grupo": 64,
       "id": 1642,
@@ -8461,7 +8461,7 @@
     },
     {
       "descricao": "",
-      "estoque": 97,
+      "estoque": 94,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3985.jpg",
       "grupo": 10,
       "id": 3985,
@@ -8825,7 +8825,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3993.jpg",
       "grupo": 10,
       "id": 3993,
@@ -10296,7 +10296,7 @@
     {
       "descricao": "",
       "estoque": 8,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/180.jpg",
       "grupo": 10,
       "id": 180,
       "marca": "TRAMONTINA",
@@ -10305,12 +10305,12 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/180.jpg"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/181.jpg",
       "grupo": 10,
       "id": 181,
       "marca": "TRAMONTINA",
@@ -10319,7 +10319,7 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/181.jpg"
     },
     {
       "descricao": "",
@@ -11569,7 +11569,7 @@
     },
     {
       "descricao": "",
-      "estoque": 914,
+      "estoque": 910,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12232.jpg",
       "grupo": 91,
       "id": 12232,
@@ -20193,7 +20193,7 @@
     },
     {
       "descricao": "",
-      "estoque": 214,
+      "estoque": 208,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1592.jpg",
       "grupo": 64,
       "id": 1592,
@@ -22013,7 +22013,7 @@
     },
     {
       "descricao": "",
-      "estoque": 200,
+      "estoque": 197,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11381.jpg",
       "grupo": 27,
       "id": 11381,
@@ -23665,7 +23665,7 @@
     },
     {
       "descricao": "",
-      "estoque": 118,
+      "estoque": 115,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4662.jpg",
       "grupo": 30,
       "id": 4662,
@@ -23735,7 +23735,7 @@
     },
     {
       "descricao": "",
-      "estoque": 82,
+      "estoque": 81,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4668.jpg",
       "grupo": 30,
       "id": 4668,
@@ -24071,7 +24071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 226,
+      "estoque": 221,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11215.jpg",
       "grupo": 30,
       "id": 11215,
@@ -24169,7 +24169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 128,
+      "estoque": 126,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12441.jpg",
       "grupo": 30,
       "id": 12441,
@@ -24323,7 +24323,7 @@
     },
     {
       "descricao": "",
-      "estoque": 265,
+      "estoque": 259,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12331.jpg",
       "grupo": 30,
       "id": 12331,
@@ -24435,7 +24435,7 @@
     },
     {
       "descricao": "",
-      "estoque": 254,
+      "estoque": 248,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11000.jpg",
       "grupo": 30,
       "id": 11000,
@@ -24785,7 +24785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 347,
+      "estoque": 346,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11879.jpg",
       "grupo": 30,
       "id": 11879,
@@ -26325,7 +26325,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7165,
+      "estoque": 7159,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg",
       "grupo": 32,
       "id": 65,
@@ -26479,7 +26479,7 @@
     },
     {
       "descricao": "",
-      "estoque": 76,
+      "estoque": 73,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2125.jpg",
       "grupo": 32,
       "id": 2125,
@@ -26731,7 +26731,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2250,
+      "estoque": 2247,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26927,7 +26927,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12618,
+      "estoque": 12613,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg",
       "grupo": 33,
       "id": 3933,
@@ -31071,7 +31071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 696,
+      "estoque": 695,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg",
       "grupo": 40,
       "id": 12559,
@@ -31547,7 +31547,7 @@
     },
     {
       "descricao": "",
-      "estoque": 64,
+      "estoque": 62,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/77.jpg",
       "grupo": 41,
       "id": 77,
@@ -31603,7 +31603,7 @@
     },
     {
       "descricao": "",
-      "estoque": 76,
+      "estoque": 75,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1777.jpg",
       "grupo": 41,
       "id": 1777,
@@ -32415,7 +32415,7 @@
     },
     {
       "descricao": "",
-      "estoque": 316,
+      "estoque": 616,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -33759,7 +33759,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4,
+      "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5327.jpg",
       "grupo": 48,
       "id": 5327,
@@ -35467,7 +35467,7 @@
     },
     {
       "descricao": "",
-      "estoque": 261,
+      "estoque": 411,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/407.jpg",
       "grupo": 32,
       "id": 407,
@@ -44609,7 +44609,7 @@
     },
     {
       "descricao": "",
-      "estoque": 87,
+      "estoque": 86,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/767.jpg",
       "grupo": 25,
       "id": 767,
@@ -50741,7 +50741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 30803,
+      "estoque": 30773,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5581.jpg",
       "grupo": 64,
       "id": 5581,
@@ -50923,7 +50923,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26332,
+      "estoque": 26302,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -51861,7 +51861,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22431,
+      "estoque": 22231,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12534.jpg",
       "grupo": 64,
       "id": 12534,
@@ -57503,7 +57503,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5994,
+      "estoque": 5914,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1644.jpg",
       "grupo": 64,
       "id": 1644,
@@ -59421,7 +59421,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18,
+      "estoque": 90,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11142.jpg",
       "grupo": 69,
       "id": 11142,
@@ -59491,7 +59491,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3,
+      "estoque": 123,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11143.jpg",
       "grupo": 69,
       "id": 11143,
@@ -60233,7 +60233,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12588.jpg",
       "grupo": 64,
       "id": 12588,
@@ -60779,7 +60779,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6386,
+      "estoque": 6186,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1630.jpg",
       "grupo": 64,
       "id": 1630,
@@ -63187,7 +63187,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": 25,
       "foto_url": null,
       "grupo": 71,
       "id": 14085,
@@ -63285,7 +63285,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 14,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2084.jpg",
       "grupo": 71,
       "id": 2084,
@@ -63887,7 +63887,7 @@
     },
     {
       "descricao": "",
-      "estoque": 113,
+      "estoque": 163,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/262.jpg",
       "grupo": 71,
       "id": 262,
@@ -63901,7 +63901,7 @@
     },
     {
       "descricao": "",
-      "estoque": 63,
+      "estoque": 113,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/386.jpg",
       "grupo": 71,
       "id": 386,
@@ -64083,7 +64083,7 @@
     },
     {
       "descricao": "",
-      "estoque": 269,
+      "estoque": 294,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/91.jpg",
       "grupo": 71,
       "id": 91,
@@ -64139,7 +64139,7 @@
     },
     {
       "descricao": "",
-      "estoque": 96,
+      "estoque": 144,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/95.jpg",
       "grupo": 71,
       "id": 95,
@@ -64279,7 +64279,7 @@
     },
     {
       "descricao": "",
-      "estoque": 265,
+      "estoque": 565,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/90.jpg",
       "grupo": 71,
       "id": 90,
@@ -64363,7 +64363,7 @@
     },
     {
       "descricao": "",
-      "estoque": 189,
+      "estoque": 185,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4318.jpg",
       "grupo": 71,
       "id": 4318,
@@ -64377,7 +64377,7 @@
     },
     {
       "descricao": "",
-      "estoque": 64,
+      "estoque": 122,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/98.jpg",
       "grupo": 71,
       "id": 98,
@@ -64461,7 +64461,7 @@
     },
     {
       "descricao": "",
-      "estoque": 123,
+      "estoque": 197,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/489.jpg",
       "grupo": 71,
       "id": 489,
@@ -64531,7 +64531,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 23,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/96.jpg",
       "grupo": 71,
       "id": 96,
@@ -67499,7 +67499,7 @@
     },
     {
       "descricao": "",
-      "estoque": 13,
+      "estoque": 12,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12820.jpg",
       "grupo": 45,
       "id": 12820,
@@ -69557,7 +69557,7 @@
     },
     {
       "descricao": "",
-      "estoque": 44,
+      "estoque": 43,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/128.jpg",
       "grupo": 76,
       "id": 128,
@@ -70019,7 +70019,7 @@
     },
     {
       "descricao": "",
-      "estoque": 117,
+      "estoque": 115,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/695.jpg",
       "grupo": 6,
       "id": 695,
@@ -70299,7 +70299,7 @@
     },
     {
       "descricao": "",
-      "estoque": 113,
+      "estoque": 112,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1228.jpg",
       "grupo": 87,
       "id": 1228,
@@ -70313,7 +70313,7 @@
     },
     {
       "descricao": "",
-      "estoque": 151,
+      "estoque": 150,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/423.jpg",
       "grupo": 87,
       "id": 423,
@@ -70523,7 +70523,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1277,
+      "estoque": 1276,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/293.jpg",
       "grupo": 15,
       "id": 293,
@@ -72385,7 +72385,7 @@
     },
     {
       "descricao": "",
-      "estoque": 139,
+      "estoque": 130,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4328.jpg",
       "grupo": 60,
       "id": 4328,
@@ -72469,7 +72469,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1100,
+      "estoque": 1068,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -72483,7 +72483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 424,
+      "estoque": 423,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13.jpg",
       "grupo": 60,
       "id": 13,
@@ -72511,7 +72511,7 @@
     },
     {
       "descricao": "",
-      "estoque": 149,
+      "estoque": 144,
       "foto_url": null,
       "grupo": 60,
       "id": 14,
@@ -72539,7 +72539,7 @@
     },
     {
       "descricao": "",
-      "estoque": 512,
+      "estoque": 510,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/473.jpg",
       "grupo": 60,
       "id": 473,
@@ -72553,7 +72553,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1198,
+      "estoque": 1190,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -72595,7 +72595,7 @@
     },
     {
       "descricao": "",
-      "estoque": 197,
+      "estoque": 191,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/266.jpg",
       "grupo": 60,
       "id": 266,
@@ -72791,7 +72791,7 @@
     },
     {
       "descricao": "",
-      "estoque": 392,
+      "estoque": 389,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/230.jpg",
       "grupo": 60,
       "id": 230,
@@ -73785,7 +73785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 284,
+      "estoque": 283,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/229.jpg",
       "grupo": 65,
       "id": 229,
@@ -73855,7 +73855,7 @@
     },
     {
       "descricao": "",
-      "estoque": 553,
+      "estoque": 552,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -75465,7 +75465,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2725,
+      "estoque": 2724,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/424.jpg",
       "grupo": 87,
       "id": 424,
