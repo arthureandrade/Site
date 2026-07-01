@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 689572.32
+      "saldo": 682823.66
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 36039.16
+      "saldo": 32589.22
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 3009.98
     }
   ],
-  "generated_at": "2026-07-01T09:13:42.430964",
+  "generated_at": "2026-07-01T11:58:23.931271",
   "kpis": {
-    "clientes_atraso": 56,
-    "total_aberto": 890395.6100000001,
-    "total_atraso": 200823.29,
-    "total_vencer": 689572.3200000001
+    "clientes_atraso": 52,
+    "total_aberto": 880197.01,
+    "total_atraso": 197373.35,
+    "total_vencer": 682823.6599999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -84,25 +84,25 @@
       "vencimento": "2026-07-05T00:00:00"
     },
     {
-      "cliente": "QUADRILHA CORACAO CAIPIRA FERQUAJ",
+      "cliente": "FABIO RAIOL FEITOSA",
       "dias_atraso": -4,
       "loja": "Loja 1",
-      "saldo": 933.75,
+      "saldo": 3637.36,
       "vencimento": "2026-07-05T00:00:00"
     },
     {
-      "cliente": "QUADRILHA CORACAO CAIPIRA FERQUAJ",
-      "dias_atraso": -4,
-      "loja": "Loja 1",
-      "saldo": 39.66,
-      "vencimento": "2026-07-05T00:00:00"
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -5,
+      "loja": "Loja 2",
+      "saldo": 177,
+      "vencimento": "2026-07-06T00:00:00"
     },
     {
-      "cliente": "QUADRILHA CORACAO CAIPIRA FERQUAJ",
-      "dias_atraso": -4,
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -5,
       "loja": "Loja 1",
-      "saldo": 354.39,
-      "vencimento": "2026-07-05T00:00:00"
+      "saldo": 273.87,
+      "vencimento": "2026-07-06T00:00:00"
     }
   ],
   "tipo": "cobranca",
