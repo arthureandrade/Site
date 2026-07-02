@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-02T09:12:16.313037",
+  "generated_at": "2026-07-02T11:34:10.434662",
   "kpis": {
-    "ticket_medio": 429.6359259259259,
-    "total_pedidos": 27,
-    "total_vendas": 11600.17,
+    "ticket_medio": 636.5045679012345,
+    "total_pedidos": 81,
+    "total_vendas": 51556.869999999995,
     "total_vendedores": 7
   },
   "lojas": [
     {
-      "loja": "Loja 4",
-      "total_vendas": 6322
+      "loja": "Loja 1",
+      "total_vendas": 23967.07
     },
     {
-      "loja": "Loja 1",
-      "total_vendas": 4008.37
+      "loja": "Loja 4",
+      "total_vendas": 19164
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 1269.8
+      "total_vendas": 8425.8
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-07-02",
-      "total_vendas": 11600.17
+      "total_vendas": 51556.869999999995
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 5,
-      "total_vendas": 7547,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 6,
-      "total_vendas": 1538.01,
+      "pedidos": 14,
+      "total_vendas": 25525.510000000002,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 1148.8,
-      "vendedor": "Lucas"
+      "pedidos": 12,
+      "total_vendas": 11023,
+      "vendedor": "Rafael"
     },
     {
-      "pedidos": 3,
-      "total_vendas": 631.8,
-      "vendedor": "Juan"
+      "pedidos": 7,
+      "total_vendas": 5350,
+      "vendedor": "Adriano"
     },
     {
-      "pedidos": 3,
-      "total_vendas": 613.56,
+      "pedidos": 19,
+      "total_vendas": 3176.7599999999998,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 4,
-      "total_vendas": 116,
+      "pedidos": 12,
+      "total_vendas": 2574.8,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 10,
+      "total_vendas": 2493,
       "vendedor": "Claudia"
     },
     {
-      "pedidos": 1,
-      "total_vendas": 5,
-      "vendedor": "Adriano"
+      "pedidos": 7,
+      "total_vendas": 1413.8,
+      "vendedor": "Juan"
     }
   ]
 }
