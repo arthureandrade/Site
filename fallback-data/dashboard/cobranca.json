@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 682657.8300000001
+      "saldo": 693555.8300000001
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 29723.57
+      "saldo": 24429.11
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 3012.25
     }
   ],
-  "generated_at": "2026-07-02T14:52:45.125624",
+  "generated_at": "2026-07-02T16:18:04.307193",
   "kpis": {
     "clientes_atraso": 53,
-    "total_aberto": 879274.4299999999,
-    "total_atraso": 196616.59999999998,
-    "total_vencer": 682657.8300000001
+    "total_aberto": 884877.97,
+    "total_atraso": 191322.13999999998,
+    "total_vencer": 693555.8300000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -113,12 +113,6 @@
       "total_atraso": 21392.19
     },
     {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 57,
-      "titulos": 10,
-      "total_atraso": 15414.01
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 935,
       "titulos": 2,
@@ -129,6 +123,12 @@
       "maior_atraso": 439,
       "titulos": 2,
       "total_atraso": 10490.8
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 49,
+      "titulos": 7,
+      "total_atraso": 10119.55
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",

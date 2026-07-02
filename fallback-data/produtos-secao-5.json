@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T18:52:52.548Z",
+  "generated_at": "2026-07-02T20:18:11.899Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5617,
+  "total": 5619,
   "produtos": [
     {
       "descricao": "",
@@ -4093,7 +4093,7 @@
     },
     {
       "descricao": "",
-      "estoque": 80,
+      "estoque": 78,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12231.jpg",
       "grupo": 92,
       "id": 12231,
@@ -5896,6 +5896,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/10685.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14194,
+      "marca": "NEGREIRA",
+      "nome": "BOLA CAMPO SOCCER",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -9315,7 +9329,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1887.jpg",
       "grupo": 10,
       "id": 1887,
@@ -10127,7 +10141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/178.jpg",
       "grupo": 10,
       "id": 178,
@@ -11261,7 +11275,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2946,
+      "estoque": 2941,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1667.jpg",
       "grupo": 64,
       "id": 1667,
@@ -12045,7 +12059,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 47,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4209.jpg",
       "grupo": 11,
       "id": 4209,
@@ -13137,7 +13151,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16,
+      "estoque": 14,
       "foto_url": null,
       "grupo": 42,
       "id": 14044,
@@ -24379,7 +24393,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3046,
+      "estoque": 3027,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -24435,7 +24449,7 @@
     },
     {
       "descricao": "",
-      "estoque": 390,
+      "estoque": 389,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1490.jpg",
       "grupo": 30,
       "id": 1490,
@@ -24449,7 +24463,7 @@
     },
     {
       "descricao": "",
-      "estoque": 129,
+      "estoque": 132,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg",
       "grupo": 30,
       "id": 11876,
@@ -24519,7 +24533,7 @@
     },
     {
       "descricao": "",
-      "estoque": 245,
+      "estoque": 244,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11000.jpg",
       "grupo": 30,
       "id": 11000,
@@ -26871,7 +26885,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3838,
+      "estoque": 3840,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg",
       "grupo": 33,
       "id": 184,
@@ -29489,7 +29503,7 @@
     },
     {
       "descricao": "",
-      "estoque": 10,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3037.jpg",
       "grupo": 43,
       "id": 3037,
@@ -31883,7 +31897,7 @@
     },
     {
       "descricao": "",
-      "estoque": 465,
+      "estoque": 464,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/907.jpg",
       "grupo": 41,
       "id": 907,
@@ -41235,7 +41249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 245,
+      "estoque": 243,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12327.jpg",
       "grupo": 45,
       "id": 12327,
@@ -44721,7 +44735,7 @@
     },
     {
       "descricao": "",
-      "estoque": 86,
+      "estoque": 85,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/767.jpg",
       "grupo": 25,
       "id": 767,
@@ -49453,7 +49467,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5384.jpg",
       "grupo": 45,
       "id": 5384,
@@ -49898,6 +49912,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1993.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14196,
+      "marca": "NEGREIRA",
+      "nome": "PAR DE REDE MINI GOL",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -51343,7 +51371,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1186,
+      "estoque": 1185,
       "foto_url": null,
       "grupo": 64,
       "id": 2545,
@@ -51567,7 +51595,7 @@
     },
     {
       "descricao": "",
-      "estoque": 750,
+      "estoque": 746,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2151.jpg",
       "grupo": 64,
       "id": 2151,
@@ -55053,7 +55081,7 @@
     },
     {
       "descricao": "",
-      "estoque": 26,
+      "estoque": 24,
       "foto_url": null,
       "grupo": 70,
       "id": 14042,
@@ -55361,7 +55389,7 @@
     },
     {
       "descricao": "",
-      "estoque": 755,
+      "estoque": 754,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg",
       "grupo": 45,
       "id": 11483,
@@ -57587,7 +57615,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2335,
+      "estoque": 2334,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2149.jpg",
       "grupo": 64,
       "id": 2149,
@@ -57979,7 +58007,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1833,
+      "estoque": 1829,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/105.jpg",
       "grupo": 2,
       "id": 105,
@@ -63565,7 +63593,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 20,
       "foto_url": null,
       "grupo": 71,
       "id": 13966,
@@ -63579,7 +63607,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 0,
       "foto_url": null,
       "grupo": 71,
       "id": 13940,
@@ -63663,7 +63691,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 26,
       "foto_url": null,
       "grupo": 71,
       "id": 13973,
@@ -63677,7 +63705,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8,
+      "estoque": 6,
       "foto_url": null,
       "grupo": 71,
       "id": 13972,
@@ -63705,7 +63733,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": null,
       "grupo": 71,
       "id": 13975,
@@ -64503,7 +64531,7 @@
     },
     {
       "descricao": "",
-      "estoque": 183,
+      "estoque": 181,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4318.jpg",
       "grupo": 71,
       "id": 4318,
@@ -66687,7 +66715,7 @@
     },
     {
       "descricao": "",
-      "estoque": 52,
+      "estoque": 51,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/898.jpg",
       "grupo": 63,
       "id": 898,
@@ -69697,7 +69725,7 @@
     },
     {
       "descricao": "",
-      "estoque": 37,
+      "estoque": 36,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/127.jpg",
       "grupo": 76,
       "id": 127,
@@ -69974,34 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "PE",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2839.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 37,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2762.jpg",
-      "grupo": 51,
-      "id": 2762,
-      "marca": "KRONA",
-      "nome": "TE RED SOLD - 25 X 20MM",
-      "preco": 4.18,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "PE",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2762.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 19,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2763.jpg",
-      "grupo": 51,
-      "id": 2763,
-      "marca": "KRONA",
-      "nome": "TE RED SOLD - 32 X 25MM",
-      "preco": 7.71,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "PE",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2763.jpg"
     }
   ]
 }

@@ -5,12 +5,12 @@
       "saldo": 2224115
     },
     {
-      "faixa": "31–60 dias",
-      "saldo": 164069
+      "faixa": "1–30 dias",
+      "saldo": 141368
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 140700
+      "faixa": "31–60 dias",
+      "saldo": 32369
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 2813
     }
   ],
-  "generated_at": "2026-07-02T14:52:46.099250",
+  "generated_at": "2026-07-02T16:18:05.088808",
   "kpis": {
     "a_vencer_7d": 269522,
     "juros_pagos": 71721,
-    "total_aberto": 2556703,
-    "total_pago_periodo": 5690287,
-    "total_vencido": 332588
+    "total_aberto": 2425671,
+    "total_pago_periodo": 5953685,
+    "total_vencido": 201556
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,11 +134,6 @@
       "total_aberto": 141666
     },
     {
-      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
-      "titulos": 1,
-      "total_aberto": 131700
-    },
-    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 10,
       "total_aberto": 86414
@@ -157,6 +152,11 @@
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 21,
       "total_aberto": 52825
+    },
+    {
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 6,
+      "total_aberto": 52641
     }
   ]
 }
