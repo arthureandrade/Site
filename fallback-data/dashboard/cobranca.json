@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 743053.17
+      "saldo": 743576.17
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 40471.83
+      "saldo": 26494.16
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 3014.52
     }
   ],
-  "generated_at": "2026-07-03T16:18:01.952477",
+  "generated_at": "2026-07-03T17:36:07.537485",
   "kpis": {
-    "clientes_atraso": 49,
-    "total_aberto": 943119.4099999999,
-    "total_atraso": 200066.24,
-    "total_vencer": 743053.1699999999
+    "clientes_atraso": 48,
+    "total_aberto": 929664.7400000001,
+    "total_atraso": 186088.57,
+    "total_vencer": 743576.17
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -120,12 +120,6 @@
       "total_atraso": 21404.5
     },
     {
-      "cliente": "SICREDI",
-      "maior_atraso": 78,
-      "titulos": 28,
-      "total_atraso": 16502.6
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 936,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 116,
       "titulos": 2,
       "total_atraso": 7254
+    },
+    {
+      "cliente": "DAGON DA SILVA PEREIRA",
+      "maior_atraso": 359,
+      "titulos": 5,
+      "total_atraso": 5253.99
     }
   ]
 }
