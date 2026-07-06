@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2173816
+      "saldo": 2167689
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 180434
+      "saldo": 186210
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 35547
+      "saldo": 35898
     },
     {
       "faixa": "61–90 dias",
@@ -21,85 +21,85 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-05T21:28:40.745497",
+  "generated_at": "2026-07-06T02:07:42.155045",
   "kpis": {
-    "a_vencer_7d": 312349,
+    "a_vencer_7d": 374524,
     "juros_pagos": 71721,
     "total_aberto": 2415817,
-    "total_pago_periodo": 5422412,
-    "total_vencido": 242001
+    "total_pago_periodo": 5255902,
+    "total_vencido": 248128
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-07-05",
-    "data_de": "2026-06-05"
+    "data_ate": "2026-07-06",
+    "data_de": "2026-06-06"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 153,
+      "dias_atraso": 154,
       "fornecedor": "EUDIANE S. F. CORREA LTDA",
       "loja": "Loja 1",
       "saldo": 1000,
       "vencimento": "2026-02-02T00:00:00"
     },
     {
-      "dias_atraso": 94,
+      "dias_atraso": 95,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 89,
+      "dias_atraso": 90,
       "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
       "loja": "Loja 1",
       "saldo": 23125,
       "vencimento": "2026-04-07T00:00:00"
     },
     {
-      "dias_atraso": 66,
+      "dias_atraso": 67,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 66,
+      "dias_atraso": 67,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 66,
+      "dias_atraso": 67,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 66,
+      "dias_atraso": 67,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 64,
+      "dias_atraso": 65,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
       "vencimento": "2026-05-02T00:00:00"
     },
     {
-      "dias_atraso": 57,
+      "dias_atraso": 58,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 56,
+      "dias_atraso": 57,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
