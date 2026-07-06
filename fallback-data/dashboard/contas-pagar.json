@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 171011
+      "saldo": 174322
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-06T13:26:00.943882",
+  "generated_at": "2026-07-06T15:18:23.810904",
   "kpis": {
     "a_vencer_7d": 375782,
     "juros_pagos": 71721,
-    "total_aberto": 2400356,
+    "total_aberto": 2403667,
     "total_pago_periodo": 5327045,
-    "total_vencido": 231197
+    "total_vencido": 234508
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -144,14 +144,14 @@
       "total_aberto": 80444
     },
     {
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "titulos": 24,
+      "total_aberto": 57236
+    },
+    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 12,
       "total_aberto": 56952
-    },
-    {
-      "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 22,
-      "total_aberto": 53925
     },
     {
       "fornecedor": "STAM METALURGICA LTDA",
