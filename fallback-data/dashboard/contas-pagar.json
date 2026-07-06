@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2168998
+      "saldo": 2169159
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 185710
+      "saldo": 171011
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 35898
+      "saldo": 34166
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-06T10:34:03.235116",
+  "generated_at": "2026-07-06T13:26:00.943882",
   "kpis": {
     "a_vencer_7d": 375782,
     "juros_pagos": 71721,
-    "total_aberto": 2416626,
-    "total_pago_periodo": 5241282,
-    "total_vencido": 247628
+    "total_aberto": 2400356,
+    "total_pago_periodo": 5327045,
+    "total_vencido": 231197
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 21,
-      "total_aberto": 52825
+      "titulos": 22,
+      "total_aberto": 53925
     },
     {
       "fornecedor": "STAM METALURGICA LTDA",
