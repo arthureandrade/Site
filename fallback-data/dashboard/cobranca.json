@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 706498.77
+      "saldo": 707366.69
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 53214.07
+      "saldo": 48392.05
     },
     {
       "faixa": "31–60 dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 3023.62
+      "saldo": 1998.61
     }
   ],
-  "generated_at": "2026-07-07T15:22:21.395559",
+  "generated_at": "2026-07-07T17:05:31.534228",
   "kpis": {
-    "clientes_atraso": 56,
-    "total_aberto": 919624.77,
-    "total_atraso": 213126,
-    "total_vencer": 706498.77
+    "clientes_atraso": 53,
+    "total_aberto": 914645.6599999999,
+    "total_atraso": 207278.96999999997,
+    "total_vencer": 707366.69
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -144,16 +144,16 @@
       "total_atraso": 9420
     },
     {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 84,
-      "titulos": 3,
-      "total_atraso": 9325.01
-    },
-    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 250,
       "titulos": 2,
       "total_atraso": 8622.97
+    },
+    {
+      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
+      "maior_atraso": 84,
+      "titulos": 3,
+      "total_atraso": 8300
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",

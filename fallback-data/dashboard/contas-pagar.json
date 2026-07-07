@@ -6,11 +6,11 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 197645
+      "saldo": 199456
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 36371
+      "saldo": 42854
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 1881
     }
   ],
-  "generated_at": "2026-07-07T15:22:22.417800",
+  "generated_at": "2026-07-07T17:05:32.327245",
   "kpis": {
     "a_vencer_7d": 518721,
     "juros_pagos": 71721,
-    "total_aberto": 2724961,
-    "total_pago_periodo": 5617989,
-    "total_vencido": 260036
+    "total_aberto": 2733255,
+    "total_pago_periodo": 5619414,
+    "total_vencido": 268330
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -139,14 +139,14 @@
       "total_aberto": 86414
     },
     {
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "titulos": 28,
+      "total_aberto": 64793
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 9,
       "total_aberto": 64727
-    },
-    {
-      "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 27,
-      "total_aberto": 62507
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
