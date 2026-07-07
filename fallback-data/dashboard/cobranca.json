@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 704939.42
+      "saldo": 700082.26
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 59236.89
+      "saldo": 55259.07
     },
     {
       "faixa": "31–60 dias",
@@ -25,22 +25,15 @@
       "saldo": 3023.62
     }
   ],
-  "generated_at": "2026-07-07T08:07:11.627161",
+  "generated_at": "2026-07-07T11:13:34.855827",
   "kpis": {
-    "clientes_atraso": 60,
-    "total_aberto": 924088.24,
-    "total_atraso": 219148.82,
-    "total_vencer": 704939.42
+    "clientes_atraso": 57,
+    "total_aberto": 915253.26,
+    "total_atraso": 215171,
+    "total_vencer": 700082.26
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 39.2,
-      "vencimento": "2026-07-02T00:00:00"
-    },
     {
       "cliente": "MIGUEL (SILOALDO)",
       "dias_atraso": 4,
@@ -54,13 +47,6 @@
       "loja": "Loja 4",
       "saldo": 1204.8,
       "vencimento": "2026-07-03T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 210.42,
-      "vencimento": "2026-07-05T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
@@ -91,18 +77,32 @@
       "vencimento": "2026-07-07T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
-      "loja": "Loja 1",
-      "saldo": 1989,
-      "vencimento": "2026-07-08T00:00:00"
-    },
-    {
       "cliente": "MIGUEL (SILOALDO)",
       "dias_atraso": -1,
       "loja": "Loja 2",
       "saldo": 1040,
       "vencimento": "2026-07-08T00:00:00"
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
+      "dias_atraso": -2,
+      "loja": "Loja 4",
+      "saldo": 1591.67,
+      "vencimento": "2026-07-09T00:00:00"
+    },
+    {
+      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 508.33,
+      "vencimento": "2026-07-09T00:00:00"
+    },
+    {
+      "cliente": "YONHNI JOSE HERNANDEZ ASTUDILO",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 261,
+      "vencimento": "2026-07-09T00:00:00"
     }
   ],
   "tipo": "cobranca",

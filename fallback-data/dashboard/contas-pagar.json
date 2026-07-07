@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2046819
+      "saldo": 2464925
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 259015
+      "saldo": 214352
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1881
     }
   ],
-  "generated_at": "2026-07-07T08:07:12.140600",
+  "generated_at": "2026-07-07T11:13:35.513062",
   "kpis": {
-    "a_vencer_7d": 275197,
+    "a_vencer_7d": 518721,
     "juros_pagos": 71721,
-    "total_aberto": 2368225,
-    "total_pago_periodo": 5425873,
-    "total_vencido": 321406
+    "total_aberto": 2741668,
+    "total_pago_periodo": 5572825,
+    "total_vencido": 276743
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,13 +110,13 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 12,
-      "total_aberto": 561500
+      "titulos": 14,
+      "total_aberto": 805024
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 8,
-      "total_aberto": 225449
+      "titulos": 9,
+      "total_aberto": 363034
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -140,13 +140,13 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 11,
-      "total_aberto": 80444
+      "titulos": 9,
+      "total_aberto": 64727
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 25,
-      "total_aberto": 59651
+      "titulos": 26,
+      "total_aberto": 60242
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
