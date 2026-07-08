@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2547774
+      "saldo": 2617242
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 193204
+      "saldo": 93892
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1881
     }
   ],
-  "generated_at": "2026-07-08T09:13:22.833753",
+  "generated_at": "2026-07-08T11:37:07.987817",
   "kpis": {
     "a_vencer_7d": 502258,
     "juros_pagos": 71729,
-    "total_aberto": 2803369,
-    "total_pago_periodo": 5679918,
-    "total_vencido": 255595
+    "total_aberto": 2773525,
+    "total_pago_periodo": 6028903,
+    "total_vencido": 156283
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -114,14 +114,14 @@
       "total_aberto": 805024
     },
     {
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 9,
-      "total_aberto": 363034
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 12,
       "total_aberto": 296060
+    },
+    {
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "titulos": 7,
+      "total_aberto": 284279
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -135,13 +135,13 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 10,
-      "total_aberto": 86414
+      "titulos": 9,
+      "total_aberto": 84093
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 28,
-      "total_aberto": 64793
+      "titulos": 29,
+      "total_aberto": 74216
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
