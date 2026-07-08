@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-08T14:44:37.029699",
+  "generated_at": "2026-07-08T16:12:56.002210",
   "kpis": {
-    "ticket_medio": 282.132937062937,
-    "total_pedidos": 143,
-    "total_vendas": 40345.009999999995,
+    "ticket_medio": 317.479402173913,
+    "total_pedidos": 184,
+    "total_vendas": 58416.20999999999,
     "total_vendedores": 7
   },
   "lojas": [
     {
-      "loja": "Loja 1",
-      "total_vendas": 18750.9
+      "loja": "Loja 2",
+      "total_vendas": 20992.11
     },
     {
-      "loja": "Loja 2",
-      "total_vendas": 14515.11
+      "loja": "Loja 1",
+      "total_vendas": 20422.6
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 7079
+      "total_vendas": 17001.5
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-07-08",
-      "total_vendas": 40345.01
+      "total_vendas": 58416.21
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 28,
-      "total_vendas": 14393.45,
+      "pedidos": 34,
+      "total_vendas": 15602.45,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 17,
-      "total_vendas": 5990.5,
-      "vendedor": "Claudia"
-    },
-    {
-      "pedidos": 24,
-      "total_vendas": 5738.42,
+      "pedidos": 32,
+      "total_vendas": 12050.92,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 25,
-      "total_vendas": 5116.45,
+      "pedidos": 12,
+      "total_vendas": 8995,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 18,
+      "total_vendas": 6725.5,
+      "vendedor": "Claudia"
+    },
+    {
+      "pedidos": 32,
+      "total_vendas": 5871.45,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 19,
-      "total_vendas": 3866,
+      "pedidos": 29,
+      "total_vendas": 5095.7,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 23,
-      "total_vendas": 3750.19,
+      "pedidos": 27,
+      "total_vendas": 4075.19,
       "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 7,
-      "total_vendas": 1490,
-      "vendedor": "Juan"
     }
   ]
 }
