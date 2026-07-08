@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2441740
+      "saldo": 2547774
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 209675
+      "saldo": 193204
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1881
     }
   ],
-  "generated_at": "2026-07-08T07:30:54.304636",
+  "generated_at": "2026-07-08T09:13:22.833753",
   "kpis": {
     "a_vencer_7d": 502258,
-    "juros_pagos": 71721,
-    "total_aberto": 2713806,
-    "total_pago_periodo": 5619414,
-    "total_vencido": 272066
+    "juros_pagos": 71729,
+    "total_aberto": 2803369,
+    "total_pago_periodo": 5679918,
+    "total_vencido": 255595
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -119,6 +119,11 @@
       "total_aberto": 363034
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 12,
+      "total_aberto": 296060
+    },
+    {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
       "titulos": 4,
       "total_aberto": 217192
@@ -127,11 +132,6 @@
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 57,
       "total_aberto": 199386
-    },
-    {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 3,
-      "total_aberto": 141666
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
@@ -154,9 +154,9 @@
       "total_aberto": 56952
     },
     {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 6,
-      "total_aberto": 52641
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 10,
+      "total_aberto": 50774
     }
   ]
 }

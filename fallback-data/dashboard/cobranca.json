@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 636886.11
+      "saldo": 634599.61
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 155199.87
+      "saldo": 134001.53
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 2001.1599999999999
     }
   ],
-  "generated_at": "2026-07-08T07:30:53.812148",
+  "generated_at": "2026-07-08T09:13:22.104623",
   "kpis": {
-    "clientes_atraso": 59,
-    "total_aberto": 951052.4299999999,
-    "total_atraso": 314166.31999999995,
-    "total_vencer": 636886.11
+    "clientes_atraso": 55,
+    "total_aberto": 927567.59,
+    "total_atraso": 292967.98,
+    "total_vencer": 634599.61
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 1,
-      "titulos": 3,
-      "total_atraso": 71013.34
+      "titulos": 1,
+      "total_atraso": 67450
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
@@ -122,8 +122,8 @@
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
       "maior_atraso": 1,
-      "titulos": 3,
-      "total_atraso": 28539.239999999998
+      "titulos": 1,
+      "total_atraso": 24286.91
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
@@ -150,12 +150,6 @@
       "total_atraso": 10548.51
     },
     {
-      "cliente": "CONSPRO CONSTRUCOES LTDA",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 9614.67
-    },
-    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 251,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 85,
       "titulos": 3,
       "total_atraso": 8309.21
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "maior_atraso": 41,
+      "titulos": 6,
+      "total_atraso": 7431.23
     }
   ]
 }
