@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-10T14:50:32.326171",
+  "generated_at": "2026-07-10T16:17:03.688943",
   "kpis": {
-    "ticket_medio": 363.9350625,
-    "total_pedidos": 160,
-    "total_vendas": 58229.61,
+    "ticket_medio": 366.45074257425745,
+    "total_pedidos": 202,
+    "total_vendas": 74023.05,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 26930.58
+      "total_vendas": 31297.58
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 21094.03
+      "total_vendas": 26241.05
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 10205
+      "total_vendas": 16484.42
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-07-10",
-      "total_vendas": 58229.61
+      "total_vendas": 74023.05
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 28,
-      "total_vendas": 11830.15,
+      "pedidos": 37,
+      "total_vendas": 15785.15,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 15,
-      "total_vendas": 10817.5,
+      "pedidos": 38,
+      "total_vendas": 12927.21,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 20,
+      "total_vendas": 11250.5,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 28,
-      "total_vendas": 10008.43,
+      "pedidos": 32,
+      "total_vendas": 11151.43,
       "vendedor": "Adriano"
     },
     {
       "pedidos": 31,
-      "total_vendas": 8242.39,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 18,
-      "total_vendas": 6950,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 18,
-      "total_vendas": 6001,
-      "vendedor": "Claudia"
+      "total_vendas": 8786.76,
+      "vendedor": "Guilherme"
     },
     {
       "pedidos": 21,
-      "total_vendas": 4290.14,
-      "vendedor": "Guilherme"
+      "total_vendas": 7806,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 22,
+      "total_vendas": 6226,
+      "vendedor": "Claudia"
     },
     {
       "pedidos": 1,
