@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2456887
+      "saldo": 2547832
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 156122
+      "saldo": 156461
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 33610
+      "saldo": 34589
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-13T09:06:39.212587",
+  "generated_at": "2026-07-13T11:51:18.608478",
   "kpis": {
     "a_vencer_7d": 619423,
     "juros_pagos": 71072,
-    "total_aberto": 2680948,
+    "total_aberto": 2773211,
     "total_pago_periodo": 4896305,
-    "total_vencido": 224061
+    "total_vencido": 225379
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,19 +134,19 @@
       "total_aberto": 199386
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 12,
+      "total_aberto": 151703
+    },
+    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 9,
       "total_aberto": 84093
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 29,
-      "total_aberto": 74216
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 9,
-      "total_aberto": 64727
+      "titulos": 30,
+      "total_aberto": 75195
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
