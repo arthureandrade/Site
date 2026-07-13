@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2547832
+      "saldo": 2532664
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-13T13:51:23.720995",
+  "generated_at": "2026-07-13T15:18:44.103627",
   "kpis": {
-    "a_vencer_7d": 619423,
+    "a_vencer_7d": 615424,
     "juros_pagos": 71072,
-    "total_aberto": 2773211,
+    "total_aberto": 2758043,
     "total_pago_periodo": 4896305,
     "total_vencido": 225379
   },
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 30,
-      "total_aberto": 75195
+      "titulos": 31,
+      "total_aberto": 76023
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
