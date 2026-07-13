@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 552396
+      "saldo": 560777.15
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 171801.05
+      "saldo": 171196.05
     },
     {
       "faixa": "180+ dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 3870.67
+      "saldo": 2861.76
     }
   ],
-  "generated_at": "2026-07-13T15:18:43.456173",
+  "generated_at": "2026-07-13T16:36:29.670395",
   "kpis": {
-    "clientes_atraso": 60,
-    "total_aberto": 883554.7799999999,
-    "total_atraso": 331158.78,
-    "total_vencer": 552395.9999999999
+    "clientes_atraso": 59,
+    "total_aberto": 890322.0199999999,
+    "total_atraso": 329544.87,
+    "total_vencer": 560777.1499999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -162,10 +162,10 @@
       "total_atraso": 8664.4
     },
     {
-      "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 90,
-      "titulos": 3,
-      "total_atraso": 8348.91
+      "cliente": "FABIO RAIOL FEITOSA",
+      "maior_atraso": 46,
+      "titulos": 6,
+      "total_atraso": 7468.08
     }
   ]
 }
