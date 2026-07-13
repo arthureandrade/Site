@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-13T10:40:42.804Z",
+  "generated_at": "2026-07-13T13:06:40.600Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5621,
+  "total": 5622,
   "produtos": [
     {
       "descricao": "",
@@ -11370,6 +11370,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1432.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": -18,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/790.jpg",
+      "grupo": 64,
+      "id": 790,
+      "marca": "GERAL",
+      "nome": "BUCHA PLASTICA SEM ANEL 12 MM",
+      "preco": 0.18,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/790.jpg"
     },
     {
       "descricao": "",
@@ -22811,7 +22825,7 @@
     },
     {
       "descricao": "",
-      "estoque": 45,
+      "estoque": 41,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11152.jpg",
       "grupo": 92,
       "id": 11152,
@@ -27137,7 +27151,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1051,
+      "estoque": 1033,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1942.jpg",
       "grupo": 33,
       "id": 1942,
@@ -31925,7 +31939,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1272,
+      "estoque": 1269,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11552.jpg",
       "grupo": 40,
       "id": 11552,
@@ -43195,7 +43209,7 @@
     },
     {
       "descricao": "",
-      "estoque": 94,
+      "estoque": 92,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11538.jpg",
       "grupo": 34,
       "id": 11538,
@@ -55235,7 +55249,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4,
+      "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13702.jpg",
       "grupo": 94,
       "id": 13702,
@@ -59603,7 +59617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 84,
+      "estoque": 81,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11142.jpg",
       "grupo": 69,
       "id": 11142,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "PE",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2843.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 70,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2840.jpg",
-      "grupo": 51,
-      "id": 2840,
-      "marca": "KRONA",
-      "nome": "TE ESGOTO PRIM. - DN 50X50",
-      "preco": 6.59,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "PE",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2840.jpg"
     }
   ]
 }
