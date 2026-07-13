@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2548660
+      "saldo": 2526246
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 154742
+      "saldo": 74769
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-13T16:36:30.333920",
+  "generated_at": "2026-07-13T17:35:11.519574",
   "kpis": {
-    "a_vencer_7d": 619423,
+    "a_vencer_7d": 609006,
     "juros_pagos": 71072,
-    "total_aberto": 2772320,
-    "total_pago_periodo": 4904900,
-    "total_vencido": 223660
+    "total_aberto": 2669933,
+    "total_pago_periodo": 5152579,
+    "total_vencido": 143687
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 12,
-      "total_aberto": 742690
+      "titulos": 11,
+      "total_aberto": 675663
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
