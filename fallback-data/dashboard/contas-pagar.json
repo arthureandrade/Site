@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2223203
+      "saldo": 2250084
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-14T14:07:56.957017",
+  "generated_at": "2026-07-14T15:42:11.053275",
   "kpis": {
-    "a_vencer_7d": 397197,
+    "a_vencer_7d": 424078,
     "juros_pagos": 71072,
-    "total_aberto": 2615935,
+    "total_aberto": 2642816,
     "total_pago_periodo": 5311334,
     "total_vencido": 392732
   },
