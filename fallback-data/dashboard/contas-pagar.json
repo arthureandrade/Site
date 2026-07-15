@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 307785
+      "saldo": 452911
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-15T17:00:31.926610",
+  "generated_at": "2026-07-15T18:10:14.728518",
   "kpis": {
     "a_vencer_7d": 406344,
     "juros_pagos": 71072,
-    "total_aberto": 2781851,
+    "total_aberto": 2926977,
     "total_pago_periodo": 5469442,
-    "total_vencido": 376703
+    "total_vencido": 521829
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,6 +134,11 @@
       "total_aberto": 199386
     },
     {
+      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
+      "titulos": 1,
+      "total_aberto": 131700
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 11,
       "total_aberto": 127922
@@ -152,11 +157,6 @@
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 12,
       "total_aberto": 56952
-    },
-    {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 7,
-      "total_aberto": 52896
     }
   ]
 }
