@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2232059
+      "saldo": 2405148
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 341839
+      "saldo": 307785
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 10190
     }
   ],
-  "generated_at": "2026-07-15T00:13:57.663887",
+  "generated_at": "2026-07-15T15:53:00.995837",
   "kpis": {
-    "a_vencer_7d": 433225,
+    "a_vencer_7d": 406344,
     "juros_pagos": 71072,
-    "total_aberto": 2642816,
-    "total_pago_periodo": 5311334,
-    "total_vencido": 410757
+    "total_aberto": 2781851,
+    "total_pago_periodo": 5467446,
+    "total_vencido": 376703
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 11,
-      "total_aberto": 675663
+      "titulos": 20,
+      "total_aberto": 866351
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 9,
-      "total_aberto": 84093
+      "titulos": 8,
+      "total_aberto": 83399
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
@@ -154,9 +154,9 @@
       "total_aberto": 56952
     },
     {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 10,
-      "total_aberto": 50774
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 7,
+      "total_aberto": 52896
     }
   ]
 }
