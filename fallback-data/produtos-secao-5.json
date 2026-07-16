@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T14:20:04.100Z",
+  "generated_at": "2026-07-16T15:53:32.570Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5622,
   "produtos": [
@@ -3799,7 +3799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 147,
+      "estoque": 127,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5508.jpg",
       "grupo": 3,
       "id": 5508,
@@ -3855,7 +3855,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": -25,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/832.jpg",
       "grupo": 3,
       "id": 832,
@@ -16917,7 +16917,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10710.jpg",
       "grupo": 58,
       "id": 10710,
@@ -23791,7 +23791,7 @@
     },
     {
       "descricao": "",
-      "estoque": 106,
+      "estoque": 86,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4662.jpg",
       "grupo": 30,
       "id": 4662,
@@ -23847,7 +23847,7 @@
     },
     {
       "descricao": "",
-      "estoque": 61,
+      "estoque": 60,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4664.jpg",
       "grupo": 30,
       "id": 4664,
@@ -23973,7 +23973,7 @@
     },
     {
       "descricao": "",
-      "estoque": 205,
+      "estoque": 204,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11203.jpg",
       "grupo": 30,
       "id": 11203,
@@ -24169,7 +24169,7 @@
     },
     {
       "descricao": "",
-      "estoque": 228,
+      "estoque": 153,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/699.jpg",
       "grupo": 30,
       "id": 699,
@@ -24197,7 +24197,7 @@
     },
     {
       "descricao": "",
-      "estoque": 187,
+      "estoque": 112,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11215.jpg",
       "grupo": 30,
       "id": 11215,
@@ -24239,7 +24239,7 @@
     },
     {
       "descricao": "",
-      "estoque": 32,
+      "estoque": 12,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12276.jpg",
       "grupo": 30,
       "id": 12276,
@@ -24267,7 +24267,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13348.jpg",
       "grupo": 30,
       "id": 13348,
@@ -24421,7 +24421,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1761,
+      "estoque": 1741,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -24449,7 +24449,7 @@
     },
     {
       "descricao": "",
-      "estoque": 215,
+      "estoque": 205,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12331.jpg",
       "grupo": 30,
       "id": 12331,
@@ -24477,7 +24477,7 @@
     },
     {
       "descricao": "",
-      "estoque": 297,
+      "estoque": 291,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1490.jpg",
       "grupo": 30,
       "id": 1490,
@@ -26409,7 +26409,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5639,
+      "estoque": 5637,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/60.jpg",
       "grupo": 32,
       "id": 60,
@@ -26857,7 +26857,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4181,
+      "estoque": 4174,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -27151,7 +27151,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1028,
+      "estoque": 1027,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1942.jpg",
       "grupo": 33,
       "id": 1942,
@@ -31091,7 +31091,7 @@
       "id": 14082,
       "marca": "SILVANA",
       "nome": "FECH LILLE EXT ESP INOX",
-      "preco": 0,
+      "preco": 40.96,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35711,7 +35711,7 @@
       "id": 14081,
       "marca": "DETONI",
       "nome": "GONZO S/ ABA 1 BATON",
-      "preco": 0,
+      "preco": 25.07,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35725,7 +35725,7 @@
       "id": 110,
       "marca": "GERAL",
       "nome": "GONZO S/ ABA 1/2 BATON",
-      "preco": 2.5,
+      "preco": 5.14,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35739,7 +35739,7 @@
       "id": 2096,
       "marca": "GERAL",
       "nome": "GONZO S/ ABA 3/4 BATON",
-      "preco": 9.69,
+      "preco": 12.6,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35753,7 +35753,7 @@
       "id": 112,
       "marca": "GERAL",
       "nome": "GONZO S/ ABA 3/8 BATON",
-      "preco": 1.99,
+      "preco": 3.67,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35767,7 +35767,7 @@
       "id": 113,
       "marca": "GERAL",
       "nome": "GONZO S/ ABA 5/8 BATON",
-      "preco": 5.69,
+      "preco": 7.68,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35781,7 +35781,7 @@
       "id": 14080,
       "marca": "GERAL",
       "nome": "GONZO S/ ABA 7/8 BATON",
-      "preco": 0,
+      "preco": 13.39,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -42187,7 +42187,7 @@
     },
     {
       "descricao": "",
-      "estoque": 50,
+      "estoque": 49,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10993.jpg",
       "grupo": 30,
       "id": 10993,
@@ -48963,7 +48963,7 @@
     },
     {
       "descricao": "",
-      "estoque": 243,
+      "estoque": 242,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/994.jpg",
       "grupo": 34,
       "id": 994,
@@ -49005,7 +49005,7 @@
     },
     {
       "descricao": "",
-      "estoque": 131,
+      "estoque": 130,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11481.jpg",
       "grupo": 102,
       "id": 11481,
@@ -51119,7 +51119,7 @@
     },
     {
       "descricao": "",
-      "estoque": 67912,
+      "estoque": 67712,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg",
       "grupo": 64,
       "id": 109,
@@ -51273,7 +51273,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16088,
+      "estoque": 16078,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10066.jpg",
       "grupo": 64,
       "id": 10066,
@@ -52519,7 +52519,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3362,
+      "estoque": 3332,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1262.jpg",
       "grupo": 64,
       "id": 1262,
@@ -58413,7 +58413,7 @@
     },
     {
       "descricao": "",
-      "estoque": 51,
+      "estoque": 50,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5509.jpg",
       "grupo": 64,
       "id": 5509,
@@ -59799,7 +59799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 682,
+      "estoque": 681,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/315.jpg",
       "grupo": 71,
       "id": 315,
@@ -61339,7 +61339,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18351,
+      "estoque": 18281,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1017.jpg",
       "grupo": 64,
       "id": 1017,
@@ -64545,7 +64545,7 @@
     },
     {
       "descricao": "",
-      "estoque": 378,
+      "estoque": 376,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/93.jpg",
       "grupo": 71,
       "id": 93,
@@ -68773,7 +68773,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 6,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11817.jpg",
       "grupo": 45,
       "id": 11817,
@@ -69795,7 +69795,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 27,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/129.jpg",
       "grupo": 76,
       "id": 129,
