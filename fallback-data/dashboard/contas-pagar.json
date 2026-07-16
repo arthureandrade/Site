@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2418217
+      "saldo": 2331297
     },
     {
       "faixa": "1–30 dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 38074
+      "saldo": 34324
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 10455
     }
   ],
-  "generated_at": "2026-07-16T16:38:15.249759",
+  "generated_at": "2026-07-16T17:46:01.924911",
   "kpis": {
-    "a_vencer_7d": 428759,
+    "a_vencer_7d": 341839,
     "juros_pagos": 71072,
-    "total_aberto": 2943825,
-    "total_pago_periodo": 5420150,
-    "total_vencido": 525608
+    "total_aberto": 2853155,
+    "total_pago_periodo": 5693028,
+    "total_vencido": 521858
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -114,14 +114,14 @@
       "total_aberto": 866351
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 12,
-      "total_aberto": 296060
-    },
-    {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "titulos": 7,
       "total_aberto": 284279
+    },
+    {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 11,
+      "total_aberto": 250145
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -144,14 +144,14 @@
       "total_aberto": 127922
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 8,
-      "total_aberto": 83399
-    },
-    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 31,
       "total_aberto": 76023
+    },
+    {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 7,
+      "total_aberto": 58383
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
