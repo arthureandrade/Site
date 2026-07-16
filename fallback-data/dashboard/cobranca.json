@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 627689.14
+      "saldo": 630379.17
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 195577.68
+      "saldo": 193617.39
     },
     {
       "faixa": "180+ dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 15646.67
+      "saldo": 10957.32
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 10180.73
+      "saldo": 9680.369999999999
     }
   ],
-  "generated_at": "2026-07-16T15:44:44.236528",
+  "generated_at": "2026-07-16T16:38:14.681663",
   "kpis": {
     "clientes_atraso": 59,
-    "total_aberto": 982267.43,
-    "total_atraso": 354578.29000000004,
-    "total_vencer": 627689.1400000001
+    "total_aberto": 977807.46,
+    "total_atraso": 347428.29,
+    "total_vencer": 630379.17
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -138,12 +138,6 @@
       "total_atraso": 21564.53
     },
     {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 63,
-      "titulos": 11,
-      "total_atraso": 16917.86
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 949,
       "titulos": 2,
@@ -154,6 +148,12 @@
       "maior_atraso": 453,
       "titulos": 2,
       "total_atraso": 10625.45
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 27,
+      "titulos": 7,
+      "total_atraso": 9767.86
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
