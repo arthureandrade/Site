@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 620016.87
+      "saldo": 617357.84
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 203607.51
+      "saldo": 140961.76
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 9688.779999999999
     }
   ],
-  "generated_at": "2026-07-17T08:18:18.251164",
+  "generated_at": "2026-07-17T10:09:24.756808",
   "kpis": {
-    "clientes_atraso": 64,
-    "total_aberto": 977507.56,
-    "total_atraso": 357490.68999999994,
-    "total_vencer": 620016.87
+    "clientes_atraso": 62,
+    "total_aberto": 912202.78,
+    "total_atraso": 294844.93999999994,
+    "total_vencer": 617357.8400000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -114,28 +114,22 @@
       "total_atraso": 72603.42
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 3,
-      "titulos": 2,
-      "total_atraso": 47422.25
-    },
-    {
       "cliente": "M C A CONSTRUTORA EIRELLI",
       "maior_atraso": 497,
       "titulos": 7,
       "total_atraso": 39624.41
     },
     {
-      "cliente": "CONSPRO CONSTRUCOES LTDA",
-      "maior_atraso": 9,
-      "titulos": 3,
-      "total_atraso": 29591.89
-    },
-    {
       "cliente": "FABIANO CANTAL DE SOUZA",
       "maior_atraso": 779,
       "titulos": 16,
       "total_atraso": 21576.809999999998
+    },
+    {
+      "cliente": "CONSPRO CONSTRUCOES LTDA",
+      "maior_atraso": 9,
+      "titulos": 1,
+      "total_atraso": 15593.88
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
@@ -166,6 +160,12 @@
       "maior_atraso": 50,
       "titulos": 8,
       "total_atraso": 7924.450000000001
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 357,
+      "titulos": 1,
+      "total_atraso": 7463.5
     }
   ]
 }
