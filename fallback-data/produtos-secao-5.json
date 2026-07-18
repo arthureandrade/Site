@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-18T14:40:01.282Z",
+  "generated_at": "2026-07-18T15:38:48.386Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 5625,
+  "total": 5633,
   "produtos": [
     {
       "descricao": "",
@@ -2500,6 +2500,20 @@
       "estoque": 0,
       "foto_url": null,
       "grupo": 26,
+      "id": 14224,
+      "marca": "NEGREIRA",
+      "nome": "AGUA SANIT BRILUX LV1PG900ML  - 565",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
       "id": 13997,
       "marca": "NEGREIRA",
       "nome": "AGUA SANITARIA SAO CAETANO/ ECONORTE 1L",
@@ -3771,7 +3785,7 @@
     },
     {
       "descricao": "",
-      "estoque": 46,
+      "estoque": 45,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13545.jpg",
       "grupo": 33,
       "id": 13545,
@@ -4247,7 +4261,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6691,
+      "estoque": 6671,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1648.jpg",
       "grupo": 64,
       "id": 1648,
@@ -5073,7 +5087,7 @@
     },
     {
       "descricao": "",
-      "estoque": 840,
+      "estoque": 838,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1769.jpg",
       "grupo": 64,
       "id": 1769,
@@ -8713,7 +8727,7 @@
     },
     {
       "descricao": "",
-      "estoque": 111,
+      "estoque": 110,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3989.jpg",
       "grupo": 10,
       "id": 3989,
@@ -8867,7 +8881,7 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": 50,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3993.jpg",
       "grupo": 10,
       "id": 3993,
@@ -10239,7 +10253,7 @@
     },
     {
       "descricao": "",
-      "estoque": 55,
+      "estoque": 53,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4002.jpg",
       "grupo": 10,
       "id": 4002,
@@ -10295,7 +10309,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1736.jpg",
       "grupo": 10,
       "id": 1736,
@@ -11289,7 +11303,7 @@
     },
     {
       "descricao": "",
-      "estoque": 886,
+      "estoque": 836,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1668.jpg",
       "grupo": 64,
       "id": 1668,
@@ -19415,7 +19429,7 @@
       "id": 12645,
       "marca": "FERRONORTE",
       "nome": "CHURRASQUEIRA DE CHAPA",
-      "preco": 330,
+      "preco": 450,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -19429,7 +19443,7 @@
       "id": 13885,
       "marca": "FERRONORTE",
       "nome": "CHURRASQUEIRA DE FERRO",
-      "preco": 270,
+      "preco": 450,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -21747,6 +21761,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14225,
+      "marca": "NEGREIRA",
+      "nome": "COPO DESC COPOBRAS 180ML BCO  - 112297",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5257.jpg",
       "grupo": 13,
@@ -23455,7 +23483,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 22,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2027.jpg",
       "grupo": 43,
       "id": 2027,
@@ -23736,6 +23764,20 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14226,
+      "marca": "NEGREIRA",
+      "nome": "DESINF HIPER PLUS 2L LAV",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5085.jpg",
       "grupo": 42,
       "id": 5085,
@@ -23861,7 +23903,7 @@
     },
     {
       "descricao": "",
-      "estoque": 60,
+      "estoque": 58,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4664.jpg",
       "grupo": 30,
       "id": 4664,
@@ -24309,7 +24351,7 @@
     },
     {
       "descricao": "",
-      "estoque": 203,
+      "estoque": 202,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12441.jpg",
       "grupo": 30,
       "id": 12441,
@@ -24435,7 +24477,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3541,
+      "estoque": 3506,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg",
       "grupo": 30,
       "id": 11874,
@@ -24575,7 +24617,7 @@
     },
     {
       "descricao": "",
-      "estoque": 200,
+      "estoque": 198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11000.jpg",
       "grupo": 30,
       "id": 11000,
@@ -24841,7 +24883,7 @@
     },
     {
       "descricao": "",
-      "estoque": 393,
+      "estoque": 390,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11878.jpg",
       "grupo": 30,
       "id": 11878,
@@ -26437,7 +26479,7 @@
     },
     {
       "descricao": "",
-      "estoque": 92,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/878.jpg",
       "grupo": 32,
       "id": 878,
@@ -26479,7 +26521,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1973,
+      "estoque": 1970,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/67.jpg",
       "grupo": 32,
       "id": 67,
@@ -26871,7 +26913,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4023,
+      "estoque": 4016,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg",
       "grupo": 33,
       "id": 47,
@@ -26899,7 +26941,7 @@
     },
     {
       "descricao": "",
-      "estoque": 658,
+      "estoque": 657,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12477.jpg",
       "grupo": 33,
       "id": 12477,
@@ -26913,7 +26955,7 @@
     },
     {
       "descricao": "",
-      "estoque": 212,
+      "estoque": 211,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10798.jpg",
       "grupo": 33,
       "id": 10798,
@@ -27053,7 +27095,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5103,
+      "estoque": 5093,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11598.jpg",
       "grupo": 33,
       "id": 11598,
@@ -27333,7 +27375,7 @@
     },
     {
       "descricao": "",
-      "estoque": 105,
+      "estoque": 104,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5016.jpg",
       "grupo": 92,
       "id": 5016,
@@ -31211,7 +31253,7 @@
     },
     {
       "descricao": "",
-      "estoque": 386,
+      "estoque": 385,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11293.jpg",
       "grupo": 40,
       "id": 11293,
@@ -32569,7 +32611,7 @@
     },
     {
       "descricao": "",
-      "estoque": 553,
+      "estoque": 551,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg",
       "grupo": 41,
       "id": 84,
@@ -33807,6 +33849,34 @@
       "id": 13992,
       "marca": "NEGREIRA",
       "nome": "FLANELA CAEBITEX LARANJA 28X48",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14227,
+      "marca": "NEGREIRA",
+      "nome": "FLANELA UNIAO 28X48CM P  - 569",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14228,
+      "marca": "NEGREIRA",
+      "nome": "FLANELA UNIAO TEXTIL 38X58CM  - 570",
       "preco": 0,
       "secao": 5,
       "subgrupo": 9999,
@@ -35663,7 +35733,7 @@
     },
     {
       "descricao": "",
-      "estoque": 264,
+      "estoque": 261,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/488.jpg",
       "grupo": 32,
       "id": 488,
@@ -40199,6 +40269,20 @@
     },
     {
       "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14229,
+      "marca": "NEGREIRA",
+      "nome": "LA ACO BOMBRIL 6UN  - 1163",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
+    },
+    {
+      "descricao": "",
       "estoque": 45,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12489.jpg",
       "grupo": 45,
@@ -41624,6 +41708,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/12843.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14230,
+      "marca": "NEGREIRA",
+      "nome": "LIMP PERF COALA CONC 120ML BAMBU  - 3010016",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -50965,7 +51063,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28663,
+      "estoque": 28563,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5581.jpg",
       "grupo": 64,
       "id": 5581,
@@ -51301,7 +51399,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15498,
+      "estoque": 15458,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10066.jpg",
       "grupo": 64,
       "id": 10066,
@@ -51945,7 +52043,7 @@
     },
     {
       "descricao": "",
-      "estoque": 200,
+      "estoque": 180,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1881.jpg",
       "grupo": 64,
       "id": 1881,
@@ -52057,7 +52155,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17469,
+      "estoque": 17419,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12378.jpg",
       "grupo": 64,
       "id": 12378,
@@ -52645,7 +52743,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1579,
+      "estoque": 1549,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4878.jpg",
       "grupo": 64,
       "id": 4878,
@@ -52659,7 +52757,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1280,
+      "estoque": 1260,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1753.jpg",
       "grupo": 64,
       "id": 1753,
@@ -54168,6 +54266,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1290.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 26,
+      "id": 14234,
+      "marca": "NEGREIRA",
+      "nome": "PH FLORAL 30M 4UN PERF  - FLO430MPE",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -57055,7 +57167,7 @@
     },
     {
       "descricao": "",
-      "estoque": 707,
+      "estoque": 657,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4149.jpg",
       "grupo": 66,
       "id": 4149,
@@ -57783,7 +57895,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4148,
+      "estoque": 4128,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1645.jpg",
       "grupo": 64,
       "id": 1645,
@@ -59659,7 +59771,7 @@
     },
     {
       "descricao": "",
-      "estoque": 78,
+      "estoque": 77,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11142.jpg",
       "grupo": 69,
       "id": 11142,
@@ -61045,7 +61157,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4257,
+      "estoque": 4237,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1631.jpg",
       "grupo": 64,
       "id": 1631,
@@ -61059,7 +61171,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4346,
+      "estoque": 4326,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1632.jpg",
       "grupo": 64,
       "id": 1632,
@@ -64153,7 +64265,7 @@
     },
     {
       "descricao": "",
-      "estoque": 96,
+      "estoque": 94,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/386.jpg",
       "grupo": 71,
       "id": 386,
@@ -69890,118 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "TU",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3786.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3785.jpg",
-      "grupo": 83,
-      "id": 3785,
-      "marca": "SOLVENTEX",
-      "nome": "TAMBOR TINTA PRIMER CINZA ESCURO FOSC",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "TU",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3785.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 100,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4645.jpg",
-      "grupo": 1,
-      "id": 4645,
-      "marca": "ASTRA",
-      "nome": "TAMPA P/ VALVULA TANQUE/LAV. 1 1/4\"",
-      "preco": 1.28,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4645.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 93,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4644.jpg",
-      "grupo": 1,
-      "id": 4644,
-      "marca": "ASTRA",
-      "nome": "TAMPA P/VALVULA DE PIA/LAV.",
-      "preco": 1.17,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4644.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 130,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11698.jpg",
-      "grupo": 92,
-      "id": 11698,
-      "marca": "CARROCINHA",
-      "nome": "TAMPA PLASTICA P/ CUBO ROLAMENTO RETO",
-      "preco": 2,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/11698.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 14156,
-      "marca": "ANFIX",
-      "nome": "TAMPAR PROTETORA DE PARAFUSOS, PACOTE C/100",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5180.jpg",
-      "grupo": 42,
-      "id": 5180,
-      "marca": "LOTUS",
-      "nome": "TAPETE GRAMA SINT DECOR 10MM 2.0X1.0MT KAPAZI",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5180.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 246,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13336.jpg",
-      "grupo": 62,
-      "id": 13336,
-      "marca": "GERAL",
-      "nome": "TAPETE MINERACAO 16MM 2M ALT. (ROLO 25M)",
-      "preco": 317.64,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13336.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 432,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3439.jpg",
-      "grupo": 41,
-      "id": 3439,
-      "marca": "SILVANA",
-      "nome": "TARJ. 2' ZINCADO",
-      "preco": 5.12,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3439.jpg"
     }
   ]
 }
