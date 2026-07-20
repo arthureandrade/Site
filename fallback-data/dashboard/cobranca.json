@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 585098.49
+      "saldo": 624110.03
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 115422.46
+      "saldo": 110617.51000000001
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 9714.04
     }
   ],
-  "generated_at": "2026-07-20T16:10:23.672059",
+  "generated_at": "2026-07-20T17:34:10.830966",
   "kpis": {
-    "clientes_atraso": 53,
-    "total_aberto": 855979.75,
-    "total_atraso": 270881.26,
-    "total_vencer": 585098.49
+    "clientes_atraso": 50,
+    "total_aberto": 890186.34,
+    "total_atraso": 266076.31,
+    "total_vencer": 624110.03
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -47,13 +47,6 @@
       "loja": "Loja 1",
       "saldo": 641.19,
       "vencimento": "2026-07-15T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 1744.95,
-      "vencimento": "2026-07-16T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
@@ -101,8 +94,15 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -3,
       "loja": "Loja 1",
-      "saldo": 3590,
+      "saldo": 3000,
       "vencimento": "2026-07-23T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -4,
+      "loja": "Loja 2",
+      "saldo": 650,
+      "vencimento": "2026-07-24T00:00:00"
     }
   ],
   "tipo": "cobranca",
