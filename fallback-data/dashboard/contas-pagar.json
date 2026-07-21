@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2189712
+      "saldo": 2173193
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 630599
+      "saldo": 421523
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 13638
     }
   ],
-  "generated_at": "2026-07-21T14:11:05.541771",
+  "generated_at": "2026-07-21T15:53:52.601132",
   "kpis": {
-    "a_vencer_7d": 297533,
+    "a_vencer_7d": 292420,
     "juros_pagos": 71072,
-    "total_aberto": 2893244,
-    "total_pago_periodo": 4937139,
-    "total_vencido": 703532
+    "total_aberto": 2667649,
+    "total_pago_periodo": 5544947,
+    "total_vencido": 494456
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 20,
-      "total_aberto": 866351
+      "titulos": 19,
+      "total_aberto": 800046
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -119,14 +119,14 @@
       "total_aberto": 284279
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 11,
-      "total_aberto": 250145
-    },
-    {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
       "titulos": 4,
       "total_aberto": 217192
+    },
+    {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 10,
+      "total_aberto": 200310
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 11,
-      "total_aberto": 127922
+      "titulos": 9,
+      "total_aberto": 112204
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
@@ -149,14 +149,14 @@
       "total_aberto": 76023
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 7,
-      "total_aberto": 58383
-    },
-    {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 12,
       "total_aberto": 56952
+    },
+    {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 6,
+      "total_aberto": 56062
     }
   ]
 }
