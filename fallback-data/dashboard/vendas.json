@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-21T15:53:51.442413",
+  "generated_at": "2026-07-21T17:12:27.740095",
   "kpis": {
-    "ticket_medio": 187.15110344827585,
-    "total_pedidos": 145,
-    "total_vendas": 27136.909999999996,
+    "ticket_medio": 171.9124096385542,
+    "total_pedidos": 166,
+    "total_vendas": 28537.46,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 22281.85
+      "total_vendas": 24265.9
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 19396.46
+      "total_vendas": 18594.96
     },
     {
       "loja": "Loja 4",
-      "total_vendas": -14541.400000000001
+      "total_vendas": -14323.400000000001
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-07-21",
-      "total_vendas": 27136.91
+      "total_vendas": 28537.46
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 19,
-      "total_vendas": 10309,
+      "pedidos": 23,
+      "total_vendas": 11399,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 30,
-      "total_vendas": 8980.5,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 14,
-      "total_vendas": 7460,
+      "pedidos": 16,
+      "total_vendas": 7821,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 23,
-      "total_vendas": 3385.35,
+      "pedidos": 32,
+      "total_vendas": 7762.55,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 27,
+      "total_vendas": 5354.35,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 15,
-      "total_vendas": 3118.1,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 14,
-      "total_vendas": 2831.96,
+      "pedidos": 16,
+      "total_vendas": 3427.96,
       "vendedor": "Estefanio"
     },
     {
-      "pedidos": 30,
-      "total_vendas": -8948,
+      "pedidos": 17,
+      "total_vendas": 1383.6,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 35,
+      "total_vendas": -8611,
       "vendedor": "Adriano"
     }
   ]

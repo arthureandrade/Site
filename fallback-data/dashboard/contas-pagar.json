@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2173193
+      "saldo": 2123606
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 13638
     }
   ],
-  "generated_at": "2026-07-21T15:53:52.601132",
+  "generated_at": "2026-07-21T17:12:29.057475",
   "kpis": {
-    "a_vencer_7d": 292420,
+    "a_vencer_7d": 232607,
     "juros_pagos": 71072,
-    "total_aberto": 2667649,
-    "total_pago_periodo": 5544947,
+    "total_aberto": 2618062,
+    "total_pago_periodo": 5747105,
     "total_vencido": 494456
   },
   "ok": true,
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 7,
-      "total_aberto": 284279
+      "titulos": 6,
+      "total_aberto": 223586
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 31,
-      "total_aberto": 76023
+      "titulos": 32,
+      "total_aberto": 76441
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
