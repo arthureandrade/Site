@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-22T12:43:17.903486",
+  "generated_at": "2026-07-22T13:55:58.957482",
   "kpis": {
-    "ticket_medio": 319.5304166666667,
-    "total_pedidos": 120,
-    "total_vendas": 38343.65000000001,
+    "ticket_medio": 330.7225190839694,
+    "total_pedidos": 131,
+    "total_vendas": 43324.649999999994,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 19433.36
+      "total_vendas": 23724.36
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 15974.79
+      "total_vendas": 16664.79
     },
     {
       "loja": "Loja 4",
@@ -31,24 +31,24 @@
   "serie_diaria": [
     {
       "data": "2026-07-22",
-      "total_vendas": 38343.65
+      "total_vendas": 43324.65
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 22,
-      "total_vendas": 11494.57,
+      "pedidos": 23,
+      "total_vendas": 13184.57,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 9275.66,
+      "pedidos": 17,
+      "total_vendas": 9725.66,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 24,
-      "total_vendas": 5280.5,
+      "pedidos": 28,
+      "total_vendas": 5520.5,
       "vendedor": "Lucas"
     },
     {
@@ -57,14 +57,14 @@
       "vendedor": "Rafael"
     },
     {
+      "pedidos": 24,
+      "total_vendas": 4281.29,
+      "vendedor": "Gloria"
+    },
+    {
       "pedidos": 7,
       "total_vendas": 4164,
       "vendedor": "Juan"
-    },
-    {
-      "pedidos": 19,
-      "total_vendas": 1680.29,
-      "vendedor": "Gloria"
     },
     {
       "pedidos": 8,
