@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 582120.3
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 122055.81999999999
+      "saldo": 589288.43
     },
     {
       "faixa": "180+ dias",
       "saldo": 118294.88
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 105240.18
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 9881.66
     }
   ],
-  "generated_at": "2026-07-22T08:53:53.367612",
+  "generated_at": "2026-07-22T11:06:27.670751",
   "kpis": {
-    "clientes_atraso": 54,
-    "total_aberto": 860448.53,
-    "total_atraso": 278328.23,
-    "total_vencer": 582120.3
+    "clientes_atraso": 52,
+    "total_aberto": 850801.02,
+    "total_atraso": 261512.59,
+    "total_vencer": 589288.4299999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -126,12 +126,6 @@
       "total_atraso": 21638.36
     },
     {
-      "cliente": "SERRALHERIA CHAVES",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 15815.64
-    },
-    {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
       "maior_atraso": 955,
       "titulos": 2,
@@ -166,6 +160,12 @@
       "maior_atraso": 99,
       "titulos": 3,
       "total_atraso": 7402.46
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 135,
+      "titulos": 2,
+      "total_atraso": 7377.5
     }
   ]
 }

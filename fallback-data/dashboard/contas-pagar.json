@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 436809
+      "saldo": 412457
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 16483
     }
   ],
-  "generated_at": "2026-07-22T08:53:53.993522",
+  "generated_at": "2026-07-22T11:06:28.412971",
   "kpis": {
     "a_vencer_7d": 250932,
-    "juros_pagos": 71138,
-    "total_aberto": 2625514,
-    "total_pago_periodo": 5770523,
-    "total_vencido": 518808
+    "juros_pagos": 71776,
+    "total_aberto": 2601162,
+    "total_pago_periodo": 5916993,
+    "total_vencido": 494456
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -154,9 +154,9 @@
       "total_aberto": 56062
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 11,
-      "total_aberto": 53049
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 4,
+      "total_aberto": 44032
     }
   ]
 }
