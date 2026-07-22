@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 595212.03
+      "saldo": 595270.03
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 104482.18
+      "saldo": 114450.73
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 9881.66
     }
   ],
-  "generated_at": "2026-07-22T15:37:54.821619",
+  "generated_at": "2026-07-22T16:50:30.065015",
   "kpis": {
-    "clientes_atraso": 50,
-    "total_aberto": 855966.62,
-    "total_atraso": 260754.58999999997,
-    "total_vencer": 595212.0299999999
+    "clientes_atraso": 51,
+    "total_aberto": 865993.17,
+    "total_atraso": 270723.14,
+    "total_vencer": 595270.0299999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -144,6 +144,12 @@
       "total_atraso": 10683.16
     },
     {
+      "cliente": "CONSTRUTORA PORTO S.A.",
+      "maior_atraso": 9,
+      "titulos": 1,
+      "total_atraso": 9968.55
+    },
+    {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 265,
       "titulos": 2,
@@ -160,12 +166,6 @@
       "maior_atraso": 99,
       "titulos": 3,
       "total_atraso": 7402.46
-    },
-    {
-      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
-      "maior_atraso": 135,
-      "titulos": 2,
-      "total_atraso": 7377.5
     }
   ]
 }
