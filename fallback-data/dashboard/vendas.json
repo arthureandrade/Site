@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-22T16:50:29.609845",
+  "generated_at": "2026-07-22T17:49:40.083900",
   "kpis": {
-    "ticket_medio": 313.27944700460836,
-    "total_pedidos": 217,
-    "total_vendas": 67981.64000000001,
+    "ticket_medio": 331.51598326359834,
+    "total_pedidos": 239,
+    "total_vendas": 79232.32,
     "total_vendedores": 7
   },
   "lojas": [
     {
-      "loja": "Loja 2",
-      "total_vendas": 32535.67
+      "loja": "Loja 1",
+      "total_vendas": 39866.35
     },
     {
-      "loja": "Loja 1",
-      "total_vendas": 31868.17
+      "loja": "Loja 2",
+      "total_vendas": 33926.67
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 3577.8
+      "total_vendas": 5439.3
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-07-22",
-      "total_vendas": 67981.64
+      "total_vendas": 79232.32
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 31,
-      "total_vendas": 20552.1,
+      "pedidos": 34,
+      "total_vendas": 20982.1,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 34,
-      "total_vendas": 15560.57,
+      "pedidos": 38,
+      "total_vendas": 16872.07,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 36,
-      "total_vendas": 9524.8,
+      "pedidos": 39,
+      "total_vendas": 12046.3,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 44,
-      "total_vendas": 7231.03,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 16,
-      "total_vendas": 6496.18,
+      "pedidos": 19,
+      "total_vendas": 11991.18,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 40,
-      "total_vendas": 6437.89,
+      "pedidos": 44,
+      "total_vendas": 7585.89,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 17,
-      "total_vendas": 2179.07,
+      "pedidos": 48,
+      "total_vendas": 7274.71,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 18,
+      "total_vendas": 2480.07,
       "vendedor": "Estefanio"
     }
   ]
