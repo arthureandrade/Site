@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 594897.03
-    },
-    {
-      "faixa": "180+ dias",
-      "saldo": 118294.88
+      "saldo": 589493.03
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 114450.73
+      "saldo": 119730.28
+    },
+    {
+      "faixa": "180+ dias",
+      "saldo": 118342.25
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15208.41
+      "saldo": 15216.039999999999
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 12887.460000000001
+      "saldo": 12740.5
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 9881.66
+      "saldo": 10270.07
     }
   ],
-  "generated_at": "2026-07-22T23:38:29.046253",
+  "generated_at": "2026-07-23T02:18:23.488450",
   "kpis": {
-    "clientes_atraso": 51,
-    "total_aberto": 865620.1699999999,
-    "total_atraso": 270723.14,
-    "total_vencer": 594897.03
+    "clientes_atraso": 54,
+    "total_aberto": 865792.1699999999,
+    "total_atraso": 276299.14,
+    "total_vencer": 589493.03
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 2",
-      "saldo": 35.14,
+      "saldo": 35.18,
       "vencimento": "2026-07-18T00:00:00"
     },
     {
       "cliente": "ALIANCA  COMUNICACAO VISUAL LTDA",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 1",
-      "saldo": 1400.8,
+      "saldo": 1402.19,
       "vencimento": "2026-07-20T00:00:00"
     },
     {
       "cliente": "ALIANCA  COMUNICACAO VISUAL LTDA",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 4",
-      "saldo": 393.49,
+      "saldo": 393.88,
       "vencimento": "2026-07-20T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 407,
       "vencimento": "2026-07-22T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 2",
       "saldo": 37.89,
       "vencimento": "2026-07-23T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 2",
       "saldo": 190.11,
       "vencimento": "2026-07-23T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 3000,
       "vencimento": "2026-07-23T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 2",
       "saldo": 650,
       "vencimento": "2026-07-24T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 100,
       "vencimento": "2026-07-24T00:00:00"
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 1400,
       "vencimento": "2026-07-26T00:00:00"
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 15,
+      "maior_atraso": 16,
       "titulos": 4,
-      "total_atraso": 71425.6
+      "total_atraso": 71502.45999999999
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 502,
+      "maior_atraso": 503,
       "titulos": 7,
-      "total_atraso": 39630.68
+      "total_atraso": 39631.93
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 784,
+      "maior_atraso": 785,
       "titulos": 16,
-      "total_atraso": 21638.36
+      "total_atraso": 21650.66
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 955,
+      "maior_atraso": 956,
       "titulos": 2,
-      "total_atraso": 12721.11
+      "total_atraso": 12727.97
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 33,
+      "maior_atraso": 34,
       "titulos": 8,
-      "total_atraso": 11446.54
+      "total_atraso": 11451.32
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 459,
+      "maior_atraso": 460,
       "titulos": 2,
-      "total_atraso": 10683.16
+      "total_atraso": 10692.78
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 9,
+      "maior_atraso": 10,
       "titulos": 1,
-      "total_atraso": 9968.55
+      "total_atraso": 9971.8
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 265,
+      "maior_atraso": 266,
       "titulos": 2,
-      "total_atraso": 8726.54
+      "total_atraso": 8733.45
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 362,
+      "maior_atraso": 363,
       "titulos": 1,
-      "total_atraso": 7491
+      "total_atraso": 7496.5
     },
     {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
-      "maior_atraso": 99,
+      "maior_atraso": 100,
       "titulos": 3,
-      "total_atraso": 7402.46
+      "total_atraso": 7409.39
     }
   ]
 }
