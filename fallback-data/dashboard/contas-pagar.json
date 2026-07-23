@@ -13,21 +13,21 @@
       "saldo": 41377
     },
     {
-      "faixa": "91–180 dias",
-      "saldo": 24139
-    },
-    {
       "faixa": "61–90 dias",
       "saldo": 16483
+    },
+    {
+      "faixa": "91–180 dias",
+      "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-23T11:09:41.663837",
+  "generated_at": "2026-07-23T12:47:33.909079",
   "kpis": {
     "a_vencer_7d": 222484,
     "juros_pagos": 71776,
-    "total_aberto": 2594499,
+    "total_aberto": 2571374,
     "total_pago_periodo": 5457844,
-    "total_vencido": 509872
+    "total_vencido": 486747
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -48,13 +48,6 @@
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
-    },
-    {
-      "dias_atraso": 107,
-      "fornecedor": "ALUCOMAXX BRASIL - INDUSTRIA E COMERCIO DE REVESTIMENTOS LTDA",
-      "loja": "Loja 1",
-      "saldo": 23125,
-      "vencimento": "2026-04-07T00:00:00"
     },
     {
       "dias_atraso": 84,
@@ -104,6 +97,13 @@
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-05-10T00:00:00"
+    },
+    {
+      "dias_atraso": 68,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 265,
+      "vencimento": "2026-05-16T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
