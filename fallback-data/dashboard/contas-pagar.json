@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2075519
+      "saldo": 2017732
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 431965
+      "saldo": 431345
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-24T15:53:27.455528",
+  "generated_at": "2026-07-24T17:05:02.581043",
   "kpis": {
-    "a_vencer_7d": 203942,
-    "juros_pagos": 71776,
-    "total_aberto": 2566358,
-    "total_pago_periodo": 5451327,
-    "total_vencido": 490839
+    "a_vencer_7d": 145195,
+    "juros_pagos": 142840,
+    "total_aberto": 2507951,
+    "total_pago_periodo": 6004206,
+    "total_vencido": 490219
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -119,19 +119,19 @@
       "total_aberto": 223586
     },
     {
-      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 4,
-      "total_aberto": 217192
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 10,
       "total_aberto": 200310
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 57,
-      "total_aberto": 199386
+      "titulos": 56,
+      "total_aberto": 195888
+    },
+    {
+      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
+      "titulos": 3,
+      "total_aberto": 162894
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
