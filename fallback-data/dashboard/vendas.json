@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-27T11:12:11.140752",
+  "generated_at": "2026-07-27T13:12:00.988711",
   "kpis": {
-    "ticket_medio": 266.64486842105265,
-    "total_pedidos": 76,
-    "total_vendas": 20265.010000000002,
+    "ticket_medio": 530.464152542373,
+    "total_pedidos": 118,
+    "total_vendas": 62594.77000000001,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 9053.16
+      "total_vendas": 21480.92
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 5842.85
+      "total_vendas": 21226.85
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 5369
+      "total_vendas": 19887
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-07-27",
-      "total_vendas": 20265.01
+      "total_vendas": 62594.77
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 11,
-      "total_vendas": 6430,
+      "pedidos": 21,
+      "total_vendas": 17344.76,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 21,
+      "total_vendas": 16682,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 24,
+      "total_vendas": 8585,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 14,
+      "total_vendas": 7712,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 11,
-      "total_vendas": 6211,
-      "vendedor": "Lucas"
+      "pedidos": 19,
+      "total_vendas": 6782.849999999999,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 7,
+      "total_vendas": 3080,
+      "vendedor": "Juan"
     },
     {
       "pedidos": 12,
       "total_vendas": 2408.16,
       "vendedor": "Estefanio"
-    },
-    {
-      "pedidos": 15,
-      "total_vendas": 1971,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 9,
-      "total_vendas": 1618,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 3,
-      "total_vendas": 1007,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 15,
-      "total_vendas": 619.8499999999995,
-      "vendedor": "Guilherme"
     }
   ]
 }
