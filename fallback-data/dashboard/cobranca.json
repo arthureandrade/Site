@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 588205.58
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 138847.53
+      "saldo": 596549.9400000001
     },
     {
       "faixa": "180+ dias",
       "saldo": 120230.32
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 116219.44
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 10303.75
     }
   ],
-  "generated_at": "2026-07-27T08:06:56.256049",
+  "generated_at": "2026-07-27T11:12:11.774772",
   "kpis": {
-    "clientes_atraso": 60,
-    "total_aberto": 884947.6300000001,
-    "total_atraso": 296742.05000000005,
-    "total_vencer": 588205.5800000001
+    "clientes_atraso": 56,
+    "total_aberto": 870663.8999999999,
+    "total_atraso": 274113.96,
+    "total_vencer": 596549.94
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -53,13 +53,6 @@
       "dias_atraso": 4,
       "loja": "Loja 2",
       "saldo": 190.87,
-      "vencimento": "2026-07-23T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 3012,
       "vencimento": "2026-07-23T00:00:00"
     },
     {
@@ -102,6 +95,13 @@
       "dias_atraso": -4,
       "loja": "Loja 2",
       "saldo": 5620,
+      "vencimento": "2026-07-31T00:00:00"
+    },
+    {
+      "cliente": "ADEMIR DE OLIVEIRA LIRA",
+      "dias_atraso": -4,
+      "loja": "Loja 2",
+      "saldo": 2900,
       "vencimento": "2026-07-31T00:00:00"
     }
   ],
@@ -156,16 +156,16 @@
       "total_atraso": 7518.5
     },
     {
-      "cliente": "J.B. COUTINHO",
-      "maior_atraso": 4,
-      "titulos": 1,
-      "total_atraso": 7455.72
-    },
-    {
       "cliente": "FRANCIVALDO LINHARES DO NASCIMENTO JUNIOR",
       "maior_atraso": 104,
       "titulos": 3,
       "total_atraso": 7437.17
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 140,
+      "titulos": 2,
+      "total_atraso": 7410
     }
   ]
 }

@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2014762
+      "saldo": 2171470
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-27T08:06:56.791851",
+  "generated_at": "2026-07-27T11:12:12.637353",
   "kpis": {
     "a_vencer_7d": 196571,
     "juros_pagos": 71776,
-    "total_aberto": 2511112,
+    "total_aberto": 2667820,
     "total_pago_periodo": 5248712,
     "total_vencido": 496350
   },
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 6,
-      "total_aberto": 223586
+      "titulos": 9,
+      "total_aberto": 379408
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
