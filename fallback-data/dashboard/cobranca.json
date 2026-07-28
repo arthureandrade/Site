@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 575616.53
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 147634.33000000002
+      "saldo": 574535.95
     },
     {
       "faixa": "180+ dias",
       "saldo": 120278.23
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 118744.71
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 10312.17
     }
   ],
-  "generated_at": "2026-07-28T08:08:50.723257",
+  "generated_at": "2026-07-28T10:38:04.012031",
   "kpis": {
-    "clientes_atraso": 60,
-    "total_aberto": 881220.45,
-    "total_atraso": 305603.92000000004,
-    "total_vencer": 575616.53
+    "clientes_atraso": 57,
+    "total_aberto": 851250.25,
+    "total_atraso": 276714.3,
+    "total_vencer": 574535.95
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -56,13 +56,6 @@
       "vencimento": "2026-07-24T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 100.4,
-      "vencimento": "2026-07-24T00:00:00"
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "dias_atraso": 2,
       "loja": "Loja 1",
@@ -80,7 +73,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -2,
       "loja": "Loja 1",
-      "saldo": 2998,
+      "saldo": 2498,
       "vencimento": "2026-07-30T00:00:00"
     },
     {
@@ -103,6 +96,13 @@
       "loja": "Loja 1",
       "saldo": 251.92,
       "vencimento": "2026-08-01T00:00:00"
+    },
+    {
+      "cliente": "JOSE ALVES DE MORAIS",
+      "dias_atraso": -5,
+      "loja": "Loja 4",
+      "saldo": 11250,
+      "vencimento": "2026-08-02T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -118,12 +118,6 @@
       "maior_atraso": 508,
       "titulos": 7,
       "total_atraso": 39638.2
-    },
-    {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 1,
-      "titulos": 3,
-      "total_atraso": 28539.22
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
@@ -166,6 +160,12 @@
       "maior_atraso": 105,
       "titulos": 3,
       "total_atraso": 7444.1
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 141,
+      "titulos": 2,
+      "total_atraso": 7416.5
     }
   ]
 }
