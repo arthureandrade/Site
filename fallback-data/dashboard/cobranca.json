@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 649730.36
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 129190.62999999999
+      "saldo": 641848.36
     },
     {
       "faixa": "180+ dias",
       "saldo": 120326.13
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 113582.12999999999
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 10320.58
     }
   ],
-  "generated_at": "2026-07-29T07:37:30.227962",
+  "generated_at": "2026-07-29T09:23:05.998520",
   "kpis": {
-    "clientes_atraso": 60,
-    "total_aberto": 936965.61,
-    "total_atraso": 287235.25,
-    "total_vencer": 649730.3600000001
+    "clientes_atraso": 57,
+    "total_aberto": 913475.1099999999,
+    "total_atraso": 271626.75,
+    "total_vencer": 641848.36
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -139,14 +139,8 @@
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
       "maior_atraso": 272,
-      "titulos": 3,
-      "total_atraso": 9674.88
-    },
-    {
-      "cliente": "PEDRO VIEIRA DOS SANTOS",
-      "maior_atraso": 1,
       "titulos": 2,
-      "total_atraso": 8229
+      "total_atraso": 8774.88
     },
     {
       "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
@@ -159,6 +153,12 @@
       "maior_atraso": 106,
       "titulos": 3,
       "total_atraso": 7451.030000000001
+    },
+    {
+      "cliente": "RODRYGO DE SOUSA OLIVEIRA",
+      "maior_atraso": 142,
+      "titulos": 2,
+      "total_atraso": 7423
     }
   ]
 }
