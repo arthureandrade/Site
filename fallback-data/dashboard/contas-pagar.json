@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2294742
+      "saldo": 2291078
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 433731
+      "saldo": 302577
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-29T14:08:05.947465",
+  "generated_at": "2026-07-29T15:42:43.576485",
   "kpis": {
-    "a_vencer_7d": 229288,
+    "a_vencer_7d": 222559,
     "juros_pagos": 71776,
-    "total_aberto": 2795351,
-    "total_pago_periodo": 5522343,
-    "total_vencido": 500609
+    "total_aberto": 2660533,
+    "total_pago_periodo": 5815651,
+    "total_vencido": 369455
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -134,11 +134,6 @@
       "total_aberto": 162894
     },
     {
-      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
-      "titulos": 1,
-      "total_aberto": 129778
-    },
-    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 7,
       "total_aberto": 103795
@@ -157,6 +152,11 @@
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 4,
       "total_aberto": 44032
+    },
+    {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 8,
+      "total_aberto": 37209
     }
   ]
 }
