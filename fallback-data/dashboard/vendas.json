@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-29T16:38:45.000235",
+  "generated_at": "2026-07-29T17:38:30.357793",
   "kpis": {
-    "ticket_medio": 822.2753703703703,
-    "total_pedidos": 162,
-    "total_vendas": 133208.61,
+    "ticket_medio": 800.7628191489362,
+    "total_pedidos": 188,
+    "total_vendas": 150543.41,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 83169.45999999999
+      "total_vendas": 88768.45999999999
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 36282
+      "total_vendas": 39914
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 13757.15
+      "total_vendas": 21860.95
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-07-29",
-      "total_vendas": 133208.61
+      "total_vendas": 150543.41
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 30,
-      "total_vendas": 57096.14,
+      "pedidos": 35,
+      "total_vendas": 58326.64,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 29,
-      "total_vendas": 30658.32,
+      "pedidos": 33,
+      "total_vendas": 33480.32,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 12,
-      "total_vendas": 15691,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 38,
-      "total_vendas": 11992,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 24,
-      "total_vendas": 9205.72,
+      "pedidos": 30,
+      "total_vendas": 20100.72,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 13,
-      "total_vendas": 4359.43,
-      "vendedor": "Estefanio"
+      "pedidos": 15,
+      "total_vendas": 16771,
+      "vendedor": "Juan"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 4206,
+      "pedidos": 41,
+      "total_vendas": 12201.5,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 20,
+      "total_vendas": 5188,
       "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 14,
+      "total_vendas": 4475.2300000000005,
+      "vendedor": "Estefanio"
     }
   ]
 }
