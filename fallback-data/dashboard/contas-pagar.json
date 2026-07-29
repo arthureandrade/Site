@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 435653
+      "saldo": 433731
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1014
     }
   ],
-  "generated_at": "2026-07-29T11:29:01.707923",
+  "generated_at": "2026-07-29T14:08:05.947465",
   "kpis": {
     "a_vencer_7d": 229288,
     "juros_pagos": 71776,
-    "total_aberto": 2797273,
-    "total_pago_periodo": 5518501,
-    "total_vencido": 502531
+    "total_aberto": 2795351,
+    "total_pago_periodo": 5522343,
+    "total_vencido": 500609
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -136,7 +136,7 @@
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
-      "total_aberto": 131700
+      "total_aberto": 129778
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
