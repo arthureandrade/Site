@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-30T16:06:29.850433",
+  "generated_at": "2026-07-30T17:29:51.230081",
   "kpis": {
-    "ticket_medio": 369.4864285714286,
-    "total_pedidos": 154,
-    "total_vendas": 56900.91,
+    "ticket_medio": 429.86263440860216,
+    "total_pedidos": 186,
+    "total_vendas": 79954.45,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 30293.18
+      "total_vendas": 48852.43
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 18838.73
+      "total_vendas": 23333.02
     },
     {
       "loja": "Loja 4",
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-07-30",
-      "total_vendas": 56900.91
+      "total_vendas": 79954.45
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 20,
-      "total_vendas": 17975.44,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 29,
-      "total_vendas": 9577.5,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 14,
-      "total_vendas": 9185.21,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 30,
-      "total_vendas": 7165.5,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 25,
-      "total_vendas": 6159.030000000001,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 23,
-      "total_vendas": 3790.5,
+      "pedidos": 33,
+      "total_vendas": 19115.4,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 13,
-      "total_vendas": 3047.73,
+      "pedidos": 25,
+      "total_vendas": 18861.29,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 34,
+      "total_vendas": 11144.5,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 34,
+      "total_vendas": 9731.79,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 15,
+      "total_vendas": 9232.21,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 29,
+      "total_vendas": 8460.53,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 16,
+      "total_vendas": 3408.73,
       "vendedor": "Estefanio"
     }
   ]
