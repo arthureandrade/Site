@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2265124
+      "saldo": 2069418
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 315376
+      "saldo": 301651
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1559
     }
   ],
-  "generated_at": "2026-08-03T16:37:09.534149",
+  "generated_at": "2026-08-03T17:48:26.626658",
   "kpis": {
-    "a_vencer_7d": 542896,
+    "a_vencer_7d": 503012,
     "juros_pagos": 71776,
-    "total_aberto": 2646816,
-    "total_pago_periodo": 4198472,
-    "total_vencido": 381692
+    "total_aberto": 2437385,
+    "total_pago_periodo": 4361290,
+    "total_vencido": 367967
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 9,
-      "total_aberto": 379408
+      "titulos": 6,
+      "total_aberto": 223586
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 6,
-      "total_aberto": 56062
+      "titulos": 5,
+      "total_aberto": 53741
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
@@ -155,8 +155,8 @@
     },
     {
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 8,
-      "total_aberto": 37209
+      "titulos": 7,
+      "total_aberto": 32788
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T20:37:08.837Z",
+  "generated_at": "2026-08-03T21:48:26.047Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 454,
   "produtos": [
@@ -2553,7 +2553,7 @@
     },
     {
       "descricao": "",
-      "estoque": 79,
+      "estoque": 78,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1939.jpg",
       "grupo": 20,
       "id": 1939,
@@ -3099,7 +3099,7 @@
     },
     {
       "descricao": "",
-      "estoque": 216,
+      "estoque": 210,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/472.jpg",
       "grupo": 60,
       "id": 472,
@@ -3267,7 +3267,7 @@
     },
     {
       "descricao": "",
-      "estoque": 86,
+      "estoque": 84,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/468.jpg",
       "grupo": 60,
       "id": 468,
@@ -3687,7 +3687,7 @@
     },
     {
       "descricao": "",
-      "estoque": 154,
+      "estoque": 146,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/265.jpg",
       "grupo": 60,
       "id": 265,
@@ -3897,7 +3897,7 @@
     },
     {
       "descricao": "",
-      "estoque": 224,
+      "estoque": 222,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/149.jpg",
       "grupo": 60,
       "id": 149,
@@ -4364,7 +4364,7 @@
       "grupo": 65,
       "id": 5190,
       "marca": "GERAL",
-      "nome": "PERFIL U 2.3/4\" ABA 30MM CH14 2MM (11,410KG)",
+      "nome": "PERFIL U 2.3/4\" DE ENCAIXE CH14 2MM (11,410KG)",
       "preco": 95.05,
       "secao": 6,
       "subgrupo": 9999,
@@ -4378,7 +4378,7 @@
       "grupo": 65,
       "id": 10858,
       "marca": "GERAL",
-      "nome": "PERFIL U 2.3/4\" ABA 30MM CH15 1,8MM (11,410KG)",
+      "nome": "PERFIL U 2.3/4\" DE ENCAIXE CH15 1,8MM (11,410KG)",
       "preco": 93.05,
       "secao": 6,
       "subgrupo": 9999,
@@ -4392,7 +4392,7 @@
       "grupo": 65,
       "id": 13180,
       "marca": "GERAL",
-      "nome": "PERFIL U 2.5/8\" ABA 30MM CH14 2,00MM (11,8KG)",
+      "nome": "PERFIL U 2.5/8\" DE ENCAIXE CH14 2,00MM (11,8KG)",
       "preco": 98.29,
       "secao": 6,
       "subgrupo": 9999,
@@ -4513,7 +4513,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1329,
+      "estoque": 1326,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -5171,34 +5171,6 @@
     },
     {
       "descricao": "",
-      "estoque": 471,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13539.jpg",
-      "grupo": 80,
-      "id": 13539,
-      "marca": "GERAL",
-      "nome": "TELHA GALV. SANDUICHE 0,43X1200 ASTM A792 AZ150",
-      "preco": 160,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13539.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13690.jpg",
-      "grupo": 80,
-      "id": 13690,
-      "marca": "GERAL",
-      "nome": "TELHA GALV. SANDUICHE MANTA 0,43X1200 ASTM A792 AZ150",
-      "preco": 105.88,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "MT",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13690.jpg"
-    },
-    {
-      "descricao": "",
       "estoque": -4,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3883.jpg",
       "grupo": 86,
@@ -5210,6 +5182,34 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3883.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13690.jpg",
+      "grupo": 80,
+      "id": 13690,
+      "marca": "GERAL",
+      "nome": "TELHA SANDUICHE TELHA/MANTA 0,43X1200 ASTM A792 AZ150",
+      "preco": 105.88,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "MT",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13690.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 471,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13539.jpg",
+      "grupo": 80,
+      "id": 13539,
+      "marca": "GERAL",
+      "nome": "TELHA SANDUICHE TELHA/TELHA 0,43X1200 ASTM A792 AZ150",
+      "preco": 160,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "MT",
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13539.jpg"
     },
     {
       "descricao": "",
