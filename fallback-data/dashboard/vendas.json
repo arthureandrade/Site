@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-03T13:20:09.877266",
+  "generated_at": "2026-08-03T15:02:19.091945",
   "kpis": {
-    "ticket_medio": 506.55101851851856,
-    "total_pedidos": 108,
-    "total_vendas": 54707.51,
+    "ticket_medio": 808.5661486486487,
+    "total_pedidos": 148,
+    "total_vendas": 119667.79000000001,
     "total_vendedores": 7
   },
   "lojas": [
     {
+      "loja": "Loja 4",
+      "total_vendas": 55429.94
+    },
+    {
       "loja": "Loja 1",
-      "total_vendas": 34413.12
+      "total_vendas": 39670.96
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 20084.39
-    },
-    {
-      "loja": "Loja 4",
-      "total_vendas": 210
+      "total_vendas": 24566.89
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-08-03",
-      "total_vendas": 54707.51
+      "total_vendas": 119667.79000000001
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 13,
-      "total_vendas": 21208,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 21,
-      "total_vendas": 10155.5,
+      "pedidos": 32,
+      "total_vendas": 68319.94,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 22,
-      "total_vendas": 8638.54,
+      "pedidos": 17,
+      "total_vendas": 21392,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 26,
+      "total_vendas": 9126.54,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 6888.62,
+      "pedidos": 21,
+      "total_vendas": 8101.62,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 18,
-      "total_vendas": 4433,
+      "pedidos": 30,
+      "total_vendas": 8029.84,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 8,
-      "total_vendas": 2093.5,
+      "pedidos": 9,
+      "total_vendas": 2357.5,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 10,
-      "total_vendas": 1290.3500000000001,
+      "pedidos": 13,
+      "total_vendas": 2340.35,
       "vendedor": "Estefanio"
     }
   ]
