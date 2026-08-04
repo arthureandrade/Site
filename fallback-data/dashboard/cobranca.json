@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 648409.48
+      "saldo": 653185.35
     },
     {
       "faixa": "1–30 dias",
@@ -25,12 +25,12 @@
       "saldo": 12811.35
     }
   ],
-  "generated_at": "2026-08-04T09:22:04.229030",
+  "generated_at": "2026-08-04T11:54:03.206734",
   "kpis": {
     "clientes_atraso": 69,
-    "total_aberto": 965253.98,
+    "total_aberto": 970029.85,
     "total_atraso": 316844.5,
-    "total_vencer": 648409.48
+    "total_vencer": 653185.35
   },
   "ok": true,
   "proximos_vencimentos": [
