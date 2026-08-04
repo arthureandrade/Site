@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 309213
+      "saldo": 309434
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1559
     }
   ],
-  "generated_at": "2026-08-04T07:35:05.576808",
+  "generated_at": "2026-08-04T09:22:04.973340",
   "kpis": {
     "a_vencer_7d": 525897,
     "juros_pagos": 71776,
-    "total_aberto": 2437385,
-    "total_pago_periodo": 4356410,
-    "total_vencido": 375750
+    "total_aberto": 2437606,
+    "total_pago_periodo": 4368766,
+    "total_vencido": 375971
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 35,
-      "total_aberto": 82297
+      "titulos": 36,
+      "total_aberto": 84732
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
@@ -154,9 +154,9 @@
       "total_aberto": 44032
     },
     {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 7,
-      "total_aberto": 32788
+      "fornecedor": "METALURGICA DE TONI LTDA",
+      "titulos": 6,
+      "total_aberto": 32229
     }
   ]
 }
