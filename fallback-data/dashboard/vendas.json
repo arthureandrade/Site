@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-04T13:51:13.520929",
+  "generated_at": "2026-08-04T15:23:00.896858",
   "kpis": {
-    "ticket_medio": 664.5428070175437,
-    "total_pedidos": 114,
-    "total_vendas": 75757.87999999999,
+    "ticket_medio": 643.8117088607595,
+    "total_pedidos": 158,
+    "total_vendas": 101722.25,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 53037.979999999996
+      "total_vendas": 71519.9
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 16657.9
+      "total_vendas": 23260.35
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 6062
+      "total_vendas": 6942
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-08-04",
-      "total_vendas": 75757.88
+      "total_vendas": 101722.25
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 17,
-      "total_vendas": 22583,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 10,
-      "total_vendas": 17835.98,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 18,
-      "total_vendas": 11361,
+      "pedidos": 27,
+      "total_vendas": 24318,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 18,
-      "total_vendas": 7335.5,
+      "pedidos": 22,
+      "total_vendas": 22839.5,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 13,
+      "total_vendas": 21196.4,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 24,
+      "total_vendas": 10626.5,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 7218,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 19,
-      "total_vendas": 6511.99,
+      "pedidos": 25,
+      "total_vendas": 10085.99,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 2912.41,
+      "pedidos": 26,
+      "total_vendas": 9405,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 21,
+      "total_vendas": 3250.8599999999997,
       "vendedor": "Estefanio"
     }
   ]
