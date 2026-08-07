@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1943108
+      "saldo": 1962378
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 545888
+      "saldo": 464494
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 1559
     }
   ],
-  "generated_at": "2026-08-06T11:34:19.115617",
+  "generated_at": "2026-08-06T20:34:05.571055",
   "kpis": {
     "a_vencer_7d": 434757,
     "juros_pagos": 71776,
-    "total_aberto": 2562905,
-    "total_pago_periodo": 3962481,
-    "total_vencido": 619797
+    "total_aberto": 2500781,
+    "total_pago_periodo": 4239026,
+    "total_vencido": 538403
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -114,11 +114,6 @@
       "total_aberto": 955230
     },
     {
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 6,
-      "total_aberto": 223586
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 10,
       "total_aberto": 200310
@@ -127,6 +122,11 @@
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 56,
       "total_aberto": 195888
+    },
+    {
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "titulos": 3,
+      "total_aberto": 170852
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
