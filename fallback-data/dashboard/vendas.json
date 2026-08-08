@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-08T09:56:17.940070",
+  "generated_at": "2026-08-08T10:39:37.208107",
   "kpis": {
-    "ticket_medio": 342.7276470588236,
-    "total_pedidos": 51,
-    "total_vendas": 17479.110000000004,
+    "ticket_medio": 379.6624358974359,
+    "total_pedidos": 78,
+    "total_vendas": 29613.670000000002,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 12924.85
+      "total_vendas": 23503.41
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 4499.86
+      "total_vendas": 6021.86
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 54.4
+      "total_vendas": 88.4
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-08-08",
-      "total_vendas": 17479.11
+      "total_vendas": 29613.67
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 7,
-      "total_vendas": 6486.21,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 11,
-      "total_vendas": 3236,
+      "pedidos": 14,
+      "total_vendas": 10536,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 6,
-      "total_vendas": 2498,
-      "vendedor": "Adriano"
+      "pedidos": 11,
+      "total_vendas": 8003.21,
+      "vendedor": "Guilherme"
     },
     {
-      "pedidos": 9,
-      "total_vendas": 2215.64,
+      "pedidos": 15,
+      "total_vendas": 3501.64,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 1339.26,
-      "vendedor": "Estefanio"
+      "pedidos": 12,
+      "total_vendas": 2951,
+      "vendedor": "Adriano"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 987,
+      "pedidos": 13,
+      "total_vendas": 1763,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 7,
+      "total_vendas": 1462.56,
       "vendedor": "Juan"
     },
     {
-      "pedidos": 8,
-      "total_vendas": 717,
-      "vendedor": "Lucas"
+      "pedidos": 6,
+      "total_vendas": 1396.26,
+      "vendedor": "Estefanio"
     }
   ]
 }
