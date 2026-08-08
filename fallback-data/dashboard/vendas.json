@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-08T12:14:10.084918",
+  "generated_at": "2026-08-08T12:56:20.372535",
   "kpis": {
-    "ticket_medio": 277.27143939393943,
-    "total_pedidos": 132,
-    "total_vendas": 36599.83,
+    "ticket_medio": 278.38218045112785,
+    "total_pedidos": 133,
+    "total_vendas": 37024.83,
     "total_vendedores": 7
   },
   "lojas": [
@@ -13,7 +13,7 @@
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 7405.57
+      "total_vendas": 7830.57
     },
     {
       "loja": "Loja 4",
@@ -31,7 +31,7 @@
   "serie_diaria": [
     {
       "data": "2026-08-08",
-      "total_vendas": 36599.83
+      "total_vendas": 37024.83
     }
   ],
   "tipo": "vendas",
@@ -52,8 +52,8 @@
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 14,
-      "total_vendas": 3031,
+      "pedidos": 15,
+      "total_vendas": 3456,
       "vendedor": "Adriano"
     },
     {
