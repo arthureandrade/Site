@@ -1,19 +1,23 @@
 {
-  "generated_at": "2026-08-08T09:07:33.741301",
+  "generated_at": "2026-08-08T09:56:17.940070",
   "kpis": {
-    "ticket_medio": 418.40599999999995,
-    "total_pedidos": 20,
-    "total_vendas": 8368.119999999999,
+    "ticket_medio": 342.7276470588236,
+    "total_pedidos": 51,
+    "total_vendas": 17479.110000000004,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 6424.26
+      "total_vendas": 12924.85
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 1943.8600000000001
+      "total_vendas": 4499.86
+    },
+    {
+      "loja": "Loja 4",
+      "total_vendas": 54.4
     }
   ],
   "ok": true,
@@ -27,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-08-08",
-      "total_vendas": 8368.12
+      "total_vendas": 17479.11
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 1,
-      "total_vendas": 4920,
+      "pedidos": 7,
+      "total_vendas": 6486.21,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 1556.6399999999999,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 3,
-      "total_vendas": 1094.8600000000001,
-      "vendedor": "Estefanio"
-    },
-    {
-      "pedidos": 2,
-      "total_vendas": 487,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 5,
-      "total_vendas": 362,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 3,
-      "total_vendas": 123,
+      "pedidos": 11,
+      "total_vendas": 3236,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 1,
-      "total_vendas": -175.38,
+      "pedidos": 6,
+      "total_vendas": 2498,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 9,
+      "total_vendas": 2215.64,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 5,
+      "total_vendas": 1339.26,
+      "vendedor": "Estefanio"
+    },
+    {
+      "pedidos": 5,
+      "total_vendas": 987,
       "vendedor": "Juan"
+    },
+    {
+      "pedidos": 8,
+      "total_vendas": 717,
+      "vendedor": "Lucas"
     }
   ]
 }
