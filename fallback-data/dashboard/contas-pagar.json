@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1855154
+      "saldo": 1791569
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 524751
+      "saldo": 588336
     },
     {
       "faixa": "31–60 dias",
@@ -14,92 +14,92 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 17737
+      "saldo": 16671
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 8802
+      "saldo": 9868
     }
   ],
-  "generated_at": "2026-08-08T23:56:40.764312",
+  "generated_at": "2026-08-09T01:12:41.776897",
   "kpis": {
-    "a_vencer_7d": 377433,
+    "a_vencer_7d": 320726,
     "juros_pagos": 71768,
     "total_aberto": 2454079,
     "total_pago_periodo": 4066139,
-    "total_vencido": 598925
+    "total_vencido": 662510
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-08-08",
-    "data_de": "2026-07-09"
+    "data_ate": "2026-08-09",
+    "data_de": "2026-07-10"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 128,
+      "dias_atraso": 129,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 100,
+      "dias_atraso": 101,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 100,
+      "dias_atraso": 101,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 100,
+      "dias_atraso": 101,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 100,
+      "dias_atraso": 101,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 98,
+      "dias_atraso": 99,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
       "vencimento": "2026-05-02T00:00:00"
     },
     {
-      "dias_atraso": 91,
+      "dias_atraso": 92,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 90,
+      "dias_atraso": 91,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-05-10T00:00:00"
     },
     {
-      "dias_atraso": 84,
+      "dias_atraso": 85,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 83,
+      "dias_atraso": 84,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
