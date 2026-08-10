@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T13:17:08.787Z",
+  "generated_at": "2026-08-10T14:33:37.140Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 455,
   "produtos": [
@@ -957,7 +957,7 @@
     },
     {
       "descricao": "",
-      "estoque": 315,
+      "estoque": 305,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/135.jpg",
       "grupo": 87,
       "id": 135,
@@ -1111,7 +1111,7 @@
     },
     {
       "descricao": "",
-      "estoque": 706,
+      "estoque": 705,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/44.jpg",
       "grupo": 15,
       "id": 44,
@@ -1265,7 +1265,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1788,
+      "estoque": 1758,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/42.jpg",
       "grupo": 15,
       "id": 42,
@@ -1993,7 +1993,7 @@
     },
     {
       "descricao": "",
-      "estoque": 180,
+      "estoque": 179,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1750.jpg",
       "grupo": 20,
       "id": 1750,
@@ -3267,7 +3267,7 @@
     },
     {
       "descricao": "",
-      "estoque": 70,
+      "estoque": 60,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/468.jpg",
       "grupo": 60,
       "id": 468,
@@ -3281,7 +3281,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2376,
+      "estoque": 2375,
       "foto_url": null,
       "grupo": 60,
       "id": 20,
@@ -3603,7 +3603,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17,
+      "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/28.jpg",
       "grupo": 60,
       "id": 28,
@@ -4457,7 +4457,7 @@
     },
     {
       "descricao": "",
-      "estoque": 288,
+      "estoque": 284,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3979.jpg",
       "grupo": 65,
       "id": 3979,
@@ -4471,7 +4471,7 @@
     },
     {
       "descricao": "",
-      "estoque": 100,
+      "estoque": 98,
       "foto_url": null,
       "grupo": 65,
       "id": 5,
@@ -5535,7 +5535,7 @@
     },
     {
       "descricao": "",
-      "estoque": 535,
+      "estoque": 534,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/132.jpg",
       "grupo": 85,
       "id": 132,
@@ -5815,13 +5815,13 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
+      "estoque": 3,
       "foto_url": null,
       "grupo": 85,
       "id": 14270,
       "marca": "GERAL",
-      "nome": "TUBO IND.4\" CH9  3,75MM (54,36KG)",
-      "preco": 0,
+      "nome": "TUBO IND.4\" P/ PORTA ENROLAR CH9 3,75MM (54,36KG)",
+      "preco": 745,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
