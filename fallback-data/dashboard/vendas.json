@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-10T10:33:33.947569",
+  "generated_at": "2026-08-10T11:35:02.843827",
   "kpis": {
-    "ticket_medio": 2067.338771929825,
-    "total_pedidos": 57,
-    "total_vendas": 117838.31000000001,
+    "ticket_medio": 1527.254756097561,
+    "total_pedidos": 82,
+    "total_vendas": 125234.89000000001,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 4",
-      "total_vendas": 94481.04000000001
+      "total_vendas": 94764.54000000001
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 13529.35
+      "total_vendas": 17584.85
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 9827.92
+      "total_vendas": 12885.5
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-08-10",
-      "total_vendas": 117838.31
+      "total_vendas": 125234.89
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 9,
-      "total_vendas": 96043.04000000001,
+      "pedidos": 16,
+      "total_vendas": 96562.54000000001,
       "vendedor": "Lucas"
     },
     {
-      "pedidos": 14,
-      "total_vendas": 8887.76,
+      "pedidos": 21,
+      "total_vendas": 12504.76,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 6,
-      "total_vendas": 3984.5,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 10,
-      "total_vendas": 3776.5,
+      "pedidos": 13,
+      "total_vendas": 5334.5,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 6,
-      "total_vendas": 2229.59,
+      "pedidos": 8,
+      "total_vendas": 5178.08,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 7,
+      "total_vendas": 2513.09,
       "vendedor": "Estefanio"
     },
     {
-      "pedidos": 9,
-      "total_vendas": 1470.92,
+      "pedidos": 11,
+      "total_vendas": 1623.92,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 3,
-      "total_vendas": 1446,
+      "pedidos": 6,
+      "total_vendas": 1518,
       "vendedor": "Juan"
     }
   ]
