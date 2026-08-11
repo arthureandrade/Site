@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1588541
+      "saldo": 1582548
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 538584
+      "saldo": 555590
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 9868
     }
   ],
-  "generated_at": "2026-08-11T09:57:34.134216",
+  "generated_at": "2026-08-11T11:08:27.741628",
   "kpis": {
     "a_vencer_7d": 207652,
     "juros_pagos": 71768,
-    "total_aberto": 2203847,
-    "total_pago_periodo": 4613641,
-    "total_vencido": 615306
+    "total_aberto": 2214860,
+    "total_pago_periodo": 4526665,
+    "total_vencido": 632312
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -139,14 +139,14 @@
       "total_aberto": 108596
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 5,
+      "total_aberto": 95386
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 36,
       "total_aberto": 84732
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 4,
-      "total_aberto": 66394
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
