@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 849628.9
+      "saldo": 852747.1
     },
     {
       "faixa": "180+ dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 91072.31
+      "saldo": 85729.6
     },
     {
       "faixa": "61–90 dias",
@@ -25,12 +25,12 @@
       "saldo": 15287.34
     }
   ],
-  "generated_at": "2026-08-11T08:25:30.761048",
+  "generated_at": "2026-08-11T09:57:33.470857",
   "kpis": {
-    "clientes_atraso": 75,
-    "total_aberto": 1186324.22,
-    "total_atraso": 336695.32000000007,
-    "total_vencer": 849628.8999999999
+    "clientes_atraso": 73,
+    "total_aberto": 1184099.71,
+    "total_atraso": 331352.61,
+    "total_vencer": 852747.1
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -46,13 +46,6 @@
       "dias_atraso": 5,
       "loja": "Loja 1",
       "saldo": 360.71,
-      "vencimento": "2026-08-06T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 1734.63,
       "vencimento": "2026-08-06T00:00:00"
     },
     {
@@ -103,6 +96,13 @@
       "loja": "Loja 4",
       "saldo": 2041.49,
       "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "AMAZONIA CONCRETO LTDA",
+      "dias_atraso": 2,
+      "loja": "Loja 4",
+      "saldo": 4609.2,
+      "vencimento": "2026-08-09T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 35,
-      "titulos": 2,
-      "total_atraso": 71359.03
+      "titulos": 1,
+      "total_atraso": 69810.75
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",

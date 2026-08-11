@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 790556
+      "saldo": 538584
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 9868
     }
   ],
-  "generated_at": "2026-08-11T08:25:31.339543",
+  "generated_at": "2026-08-11T09:57:34.134216",
   "kpis": {
     "a_vencer_7d": 207652,
     "juros_pagos": 71768,
-    "total_aberto": 2455819,
-    "total_pago_periodo": 3803427,
-    "total_vencido": 867278
+    "total_aberto": 2203847,
+    "total_pago_periodo": 4613641,
+    "total_vencido": 615306
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 21,
-      "total_aberto": 955230
+      "titulos": 15,
+      "total_aberto": 762306
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -129,14 +129,14 @@
       "total_aberto": 170852
     },
     {
-      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 3,
-      "total_aberto": 162894
-    },
-    {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
+    },
+    {
+      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
+      "titulos": 2,
+      "total_aberto": 108596
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
