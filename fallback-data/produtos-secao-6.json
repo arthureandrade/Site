@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-11T15:08:26.302Z",
+  "generated_at": "2026-08-11T16:10:15.568Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "total": 455,
+  "total": 456,
   "produtos": [
     {
       "descricao": "",
@@ -1139,7 +1139,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1603,
+      "estoque": 1601,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/43.jpg",
       "grupo": 15,
       "id": 43,
@@ -1262,6 +1262,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1944.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 15,
+      "id": 14272,
+      "marca": "GERAL",
+      "nome": "CANTONEIRA 1\" X 1/4\"  (KG)",
+      "preco": 138.43,
+      "secao": 6,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -3113,7 +3127,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4709,
+      "estoque": 4706,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -3197,7 +3211,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3457,
+      "estoque": 3453,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg",
       "grupo": 60,
       "id": 1296,
@@ -3407,7 +3421,7 @@
     },
     {
       "descricao": "",
-      "estoque": 123,
+      "estoque": 122,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/24.jpg",
       "grupo": 60,
       "id": 24,
@@ -4429,7 +4443,7 @@
     },
     {
       "descricao": "",
-      "estoque": 573,
+      "estoque": 569,
       "foto_url": null,
       "grupo": 65,
       "id": 4,
@@ -4513,7 +4527,7 @@
     },
     {
       "descricao": "",
-      "estoque": 937,
+      "estoque": 927,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
