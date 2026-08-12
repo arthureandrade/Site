@@ -2,35 +2,35 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 885986.74
+      "saldo": 867821.9400000001
     },
     {
       "faixa": "180+ dias",
-      "saldo": 120948.94
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 92544.87
+      "saldo": 120996.89
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 78139.25
+      "saldo": 96323.28
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 92705.7
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 16450.08
+      "saldo": 16464.27
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15287.34
+      "saldo": 15295.92
     }
   ],
-  "generated_at": "2026-08-11T23:51:27.657820",
+  "generated_at": "2026-08-12T01:27:54.797542",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 1209357.2200000002,
-    "total_atraso": 323370.48,
-    "total_vencer": 885986.74
+    "clientes_atraso": 74,
+    "total_aberto": 1209608,
+    "total_atraso": 341786.06,
+    "total_vencer": 867821.94
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -38,70 +38,70 @@
       "cliente": "MIGUEL (SILOALDO)",
       "dias_atraso": 5,
       "loja": "Loja 2",
-      "saldo": 552.75,
-      "vencimento": "2026-08-06T00:00:00"
-    },
-    {
-      "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 360.71,
-      "vencimento": "2026-08-06T00:00:00"
-    },
-    {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 4,
-      "loja": "Loja 2",
-      "saldo": 1154.6,
+      "saldo": 1155.75,
       "vencimento": "2026-08-07T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 4",
-      "saldo": 702.8,
+      "saldo": 703.5,
       "vencimento": "2026-08-07T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
-      "saldo": 1596.42,
+      "saldo": 1598.02,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 509.88,
+      "saldo": 510.38,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
       "cliente": "YONHNI JOSE HERNANDEZ ASTUDILO",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 261.78,
+      "saldo": 262.04,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": 3,
+      "loja": "Loja 2",
+      "saldo": 1675.01,
+      "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": 3,
+      "loja": "Loja 2",
+      "saldo": 1083.24,
+      "vencimento": "2026-08-09T00:00:00"
+    },
+    {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
+      "loja": "Loja 4",
+      "saldo": 1158.46,
+      "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
+      "dias_atraso": 3,
+      "loja": "Loja 4",
+      "saldo": 2043.53,
+      "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
+      "dias_atraso": 3,
       "loja": "Loja 1",
-      "saldo": 39.28,
-      "vencimento": "2026-08-09T00:00:00"
-    },
-    {
-      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 2041.49,
-      "vencimento": "2026-08-09T00:00:00"
-    },
-    {
-      "cliente": "AMAZONIA CONCRETO LTDA",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 4609.2,
+      "saldo": 39.32,
       "vencimento": "2026-08-09T00:00:00"
     }
   ],
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 35,
+      "maior_atraso": 36,
       "titulos": 1,
-      "total_atraso": 69810.75
+      "total_atraso": 69878.2
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 522,
+      "maior_atraso": 523,
       "titulos": 7,
-      "total_atraso": 39655.76
+      "total_atraso": 39657.01
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 479,
+      "maior_atraso": 480,
       "titulos": 4,
-      "total_atraso": 23649.17
+      "total_atraso": 23671.44
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 804,
+      "maior_atraso": 805,
       "titulos": 16,
-      "total_atraso": 21884.53
+      "total_atraso": 21896.87
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 53,
+      "maior_atraso": 54,
       "titulos": 10,
-      "total_atraso": 13544.94
+      "total_atraso": 13550.42
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 39,
+      "maior_atraso": 40,
       "titulos": 13,
-      "total_atraso": 13513.11
+      "total_atraso": 13526.47
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 975,
+      "maior_atraso": 976,
       "titulos": 2,
-      "total_atraso": 12858.36
+      "total_atraso": 12865.22
+    },
+    {
+      "cliente": "ANTONIO JOSE (TIMBO)",
+      "maior_atraso": 1,
+      "titulos": 2,
+      "total_atraso": 10100
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 285,
+      "maior_atraso": 286,
       "titulos": 2,
-      "total_atraso": 8864.64
+      "total_atraso": 8871.55
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 18,
+      "maior_atraso": 19,
       "titulos": 2,
-      "total_atraso": 7826.67
-    },
-    {
-      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
-      "maior_atraso": 382,
-      "titulos": 1,
-      "total_atraso": 7601
+      "total_atraso": 7850.92
     }
   ]
 }
