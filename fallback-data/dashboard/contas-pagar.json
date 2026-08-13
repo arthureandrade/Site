@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1561573
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 589064
+      "saldo": 2041556
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 34097
+      "saldo": 277621
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 229241
     },
     {
       "faixa": "61–90 dias",
@@ -21,85 +21,85 @@
       "saldo": 9868
     }
   ],
-  "generated_at": "2026-08-12T01:27:55.330330",
+  "generated_at": "2026-08-13T10:04:31.342419",
   "kpis": {
-    "a_vencer_7d": 187010,
-    "juros_pagos": 71768,
-    "total_aberto": 2227359,
-    "total_pago_periodo": 4577926,
-    "total_vencido": 665786
+    "a_vencer_7d": 177067,
+    "juros_pagos": 73700,
+    "total_aberto": 2591043,
+    "total_pago_periodo": 4683206,
+    "total_vencido": 549487
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-08-12",
-    "data_de": "2026-07-13"
+    "data_ate": "2026-08-13",
+    "data_de": "2026-07-14"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 132,
+      "dias_atraso": 133,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 14,
       "vencimento": "2026-04-02T00:00:00"
     },
     {
-      "dias_atraso": 104,
+      "dias_atraso": 105,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 104,
+      "dias_atraso": 105,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 104,
+      "dias_atraso": 105,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 104,
+      "dias_atraso": 105,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 419,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 102,
+      "dias_atraso": 103,
       "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
       "loja": "Loja 1",
       "saldo": 877,
       "vencimento": "2026-05-02T00:00:00"
     },
     {
-      "dias_atraso": 95,
+      "dias_atraso": 96,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 94,
+      "dias_atraso": 95,
       "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
       "loja": "Loja 2",
       "saldo": 1066,
       "vencimento": "2026-05-10T00:00:00"
     },
     {
-      "dias_atraso": 88,
+      "dias_atraso": 89,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 87,
+      "dias_atraso": 88,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
@@ -110,8 +110,13 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 15,
-      "total_aberto": 762306
+      "titulos": 18,
+      "total_aberto": 972744
+    },
+    {
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "titulos": 5,
+      "total_aberto": 269724
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -124,11 +129,6 @@
       "total_aberto": 195888
     },
     {
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 3,
-      "total_aberto": 170852
-    },
-    {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
@@ -139,9 +139,9 @@
       "total_aberto": 108596
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
-      "titulos": 5,
-      "total_aberto": 95386
+      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
+      "titulos": 3,
+      "total_aberto": 106557
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
@@ -149,14 +149,14 @@
       "total_aberto": 84732
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 5,
-      "total_aberto": 53741
+      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "titulos": 4,
+      "total_aberto": 66394
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 4,
-      "total_aberto": 44032
+      "total_aberto": 53047
     }
   ]
 }

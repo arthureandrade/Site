@@ -2,170 +2,170 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 867821.9400000001
+      "saldo": 959111.9500000001
     },
     {
       "faixa": "180+ dias",
-      "saldo": 120996.89
+      "saldo": 119252.43000000001
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 96323.28
+      "saldo": 94696.79
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 92705.7
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 16464.27
+      "saldo": 92984.43999999999
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15295.92
+      "saldo": 21158.15
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 10124.82
     }
   ],
-  "generated_at": "2026-08-12T01:27:54.797542",
+  "generated_at": "2026-08-13T10:04:30.632451",
   "kpis": {
-    "clientes_atraso": 74,
-    "total_aberto": 1209608,
-    "total_atraso": 341786.06,
-    "total_vencer": 867821.94
+    "clientes_atraso": 69,
+    "total_aberto": 1297328.58,
+    "total_atraso": 338216.63,
+    "total_vencer": 959111.9500000001
   },
   "ok": true,
   "proximos_vencimentos": [
     {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 1155.75,
-      "vencimento": "2026-08-07T00:00:00"
-    },
-    {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "dias_atraso": 5,
-      "loja": "Loja 4",
-      "saldo": 703.5,
-      "vencimento": "2026-08-07T00:00:00"
-    },
-    {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 4",
-      "saldo": 1598.02,
+      "saldo": 1599.61,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
       "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 2",
-      "saldo": 510.38,
+      "saldo": 510.89,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
       "cliente": "YONHNI JOSE HERNANDEZ ASTUDILO",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 1",
-      "saldo": 262.04,
+      "saldo": 262.3,
       "vencimento": "2026-08-08T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 1675.01,
+      "saldo": 1084.32,
       "vencimento": "2026-08-09T00:00:00"
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 1083.24,
+      "saldo": 1676.68,
       "vencimento": "2026-08-09T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
-      "saldo": 1158.46,
+      "saldo": 1159.62,
       "vencimento": "2026-08-09T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
-      "saldo": 2043.53,
+      "saldo": 2045.57,
       "vencimento": "2026-08-09T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 39.32,
+      "saldo": 39.36,
       "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "AMAZONIA CONCRETO LTDA",
+      "dias_atraso": 4,
+      "loja": "Loja 4",
+      "saldo": 4618.4,
+      "vencimento": "2026-08-09T00:00:00"
+    },
+    {
+      "cliente": "EXCELENTE IMPLEMENTOS E REPRESENTAÇÕES",
+      "dias_atraso": 1,
+      "loja": "Loja 2",
+      "saldo": 3244.35,
+      "vencimento": "2026-08-12T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 36,
+      "maior_atraso": 37,
       "titulos": 1,
-      "total_atraso": 69878.2
+      "total_atraso": 69945.65
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 523,
+      "maior_atraso": 524,
       "titulos": 7,
-      "total_atraso": 39657.01
+      "total_atraso": 39658.270000000004
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 480,
+      "maior_atraso": 481,
       "titulos": 4,
-      "total_atraso": 23671.44
+      "total_atraso": 23693.71
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 805,
+      "maior_atraso": 806,
       "titulos": 16,
-      "total_atraso": 21896.87
-    },
-    {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 54,
-      "titulos": 10,
-      "total_atraso": 13550.42
+      "total_atraso": 21909.14
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 40,
-      "titulos": 13,
-      "total_atraso": 13526.47
+      "maior_atraso": 41,
+      "titulos": 14,
+      "total_atraso": 17694.81
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 55,
+      "titulos": 10,
+      "total_atraso": 13555.9
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 976,
+      "maior_atraso": 977,
       "titulos": 2,
-      "total_atraso": 12865.22
-    },
-    {
-      "cliente": "ANTONIO JOSE (TIMBO)",
-      "maior_atraso": 1,
-      "titulos": 2,
-      "total_atraso": 10100
+      "total_atraso": 12872.08
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 286,
+      "maior_atraso": 287,
       "titulos": 2,
-      "total_atraso": 8871.55
+      "total_atraso": 8878.46
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 19,
+      "maior_atraso": 20,
       "titulos": 2,
-      "total_atraso": 7850.92
+      "total_atraso": 7875.179999999999
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 384,
+      "titulos": 1,
+      "total_atraso": 7612
     }
   ]
 }
