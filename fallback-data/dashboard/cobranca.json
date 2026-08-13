@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 973561.56
+      "saldo": 974355.56
     },
     {
       "faixa": "180+ dias",
       "saldo": 119252.43000000001
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 94696.79
+      "faixa": "31–60 dias",
+      "saldo": 92781.64
     },
     {
-      "faixa": "31–60 dias",
-      "saldo": 92984.43999999999
+      "faixa": "1–30 dias",
+      "saldo": 90886.29
     },
     {
       "faixa": "91–180 dias",
@@ -25,29 +25,15 @@
       "saldo": 10124.82
     }
   ],
-  "generated_at": "2026-08-13T15:28:02.369496",
+  "generated_at": "2026-08-13T16:06:47.945788",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 1311778.19,
-    "total_atraso": 338216.63,
-    "total_vencer": 973561.5599999999
+    "clientes_atraso": 68,
+    "total_aberto": 1308558.89,
+    "total_atraso": 334203.32999999996,
+    "total_vencer": 974355.56
   },
   "ok": true,
   "proximos_vencimentos": [
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 5,
-      "loja": "Loja 4",
-      "saldo": 1599.61,
-      "vencimento": "2026-08-08T00:00:00"
-    },
-    {
-      "cliente": "IGREJA DO EVANGELHO QUADRANGULAR (P. EDNA)",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 510.89,
-      "vencimento": "2026-08-08T00:00:00"
-    },
     {
       "cliente": "YONHNI JOSE HERNANDEZ ASTUDILO",
       "dias_atraso": 5,
@@ -103,6 +89,20 @@
       "loja": "Loja 2",
       "saldo": 3244.35,
       "vencimento": "2026-08-12T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": 1,
+      "loja": "Loja 2",
+      "saldo": 4155,
+      "vencimento": "2026-08-12T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": 0,
+      "loja": "Loja 2",
+      "saldo": 115,
+      "vencimento": "2026-08-13T00:00:00"
     }
   ],
   "tipo": "cobranca",
