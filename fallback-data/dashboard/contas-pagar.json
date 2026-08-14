@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 228450
+      "saldo": 176986
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 9868
     }
   ],
-  "generated_at": "2026-08-14T01:09:37.997387",
+  "generated_at": "2026-08-14T11:35:51.003525",
   "kpis": {
     "a_vencer_7d": 203152,
     "juros_pagos": 73700,
-    "total_aberto": 2580934,
-    "total_pago_periodo": 4693571,
-    "total_vencido": 548696
+    "total_aberto": 2529470,
+    "total_pago_periodo": 4847963,
+    "total_vencido": 497232
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -119,14 +119,14 @@
       "total_aberto": 269724
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 10,
-      "total_aberto": 200310
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 56,
       "total_aberto": 195888
+    },
+    {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 7,
+      "total_aberto": 148846
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",

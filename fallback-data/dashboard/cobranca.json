@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 969790.5700000001
+      "saldo": 973659.53
     },
     {
       "faixa": "180+ dias",
       "saldo": 119392.05
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 110455.57
-    },
-    {
       "faixa": "31–60 dias",
       "saldo": 92857.56
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 87076.05
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 10133.07
     }
   ],
-  "generated_at": "2026-08-14T01:09:37.442249",
+  "generated_at": "2026-08-14T11:35:50.204875",
   "kpis": {
-    "clientes_atraso": 70,
-    "total_aberto": 1323801.4900000002,
-    "total_atraso": 354010.92000000004,
-    "total_vencer": 969790.5700000001
+    "clientes_atraso": 66,
+    "total_aberto": 1304290.9300000002,
+    "total_atraso": 330631.39999999997,
+    "total_vencer": 973659.53
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -138,12 +138,6 @@
       "total_atraso": 18056.440000000002
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 1,
-      "titulos": 1,
-      "total_atraso": 15261.59
-    },
-    {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "maior_atraso": 56,
       "titulos": 10,
@@ -166,6 +160,12 @@
       "maior_atraso": 21,
       "titulos": 2,
       "total_atraso": 7899.4400000000005
+    },
+    {
+      "cliente": "BOA VISTA VIDROS IND. COM. DE VIDROS LTDA",
+      "maior_atraso": 385,
+      "titulos": 1,
+      "total_atraso": 7617.5
     }
   ]
 }
