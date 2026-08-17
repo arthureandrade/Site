@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T17:48:09.430Z",
+  "generated_at": "2026-08-17T18:17:59.064Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 5412,
   "produtos": [
@@ -8699,7 +8699,7 @@
     },
     {
       "descricao": "",
-      "estoque": 94,
+      "estoque": 93,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3988.jpg",
       "grupo": 10,
       "id": 3988,
@@ -11919,7 +11919,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16,
+      "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11824.jpg",
       "grupo": 45,
       "id": 11824,
@@ -12378,6 +12378,20 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3677.jpg"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 14,
+      "id": 14315,
+      "marca": "GERAL",
+      "nome": "CADEIRA PARAISO TRANCADA",
+      "preco": 250,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null
     },
     {
       "descricao": "",
@@ -51455,7 +51469,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18183,
+      "estoque": 17983,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10066.jpg",
       "grupo": 64,
       "id": 10066,
@@ -52211,7 +52225,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16472,
+      "estoque": 16272,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12378.jpg",
       "grupo": 64,
       "id": 12378,
@@ -68829,7 +68843,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11772.jpg",
       "grupo": 45,
       "id": 11772,
@@ -68843,7 +68857,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11773.jpg",
       "grupo": 45,
       "id": 11773,
@@ -69988,20 +70002,6 @@
       "subgrupo": 9999,
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/126.jpg"
-    },
-    {
-      "descricao": "",
-      "estoque": 64,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/127.jpg",
-      "grupo": 76,
-      "id": 127,
-      "marca": "PRENSAL",
-      "nome": "TAMBOR COM MOLA1.1/4 4.00X50MM",
-      "preco": 135.73,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "PE",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/127.jpg"
     },
     {
       "descricao": "",
@@ -74471,7 +74471,7 @@
     },
     {
       "descricao": "",
-      "estoque": 48,
+      "estoque": 44,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1925.jpg",
       "grupo": 87,
       "id": 1925,
@@ -74821,7 +74821,7 @@
     },
     {
       "descricao": "",
-      "estoque": 80,
+      "estoque": 35,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/186.jpg",
       "grupo": 85,
       "id": 186,
