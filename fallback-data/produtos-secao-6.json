@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-17T13:49:31.817Z",
+  "generated_at": "2026-08-17T14:18:05.305Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "total": 457,
   "produtos": [
@@ -1069,7 +1069,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4708,
+      "estoque": 4703,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg",
       "grupo": 6,
       "id": 117,
@@ -1223,7 +1223,7 @@
     },
     {
       "descricao": "",
-      "estoque": 451,
+      "estoque": 450,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/41.jpg",
       "grupo": 15,
       "id": 41,
@@ -3127,7 +3127,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4166,
+      "estoque": 4160,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg",
       "grupo": 60,
       "id": 12,
@@ -3239,7 +3239,7 @@
     },
     {
       "descricao": "",
-      "estoque": 153,
+      "estoque": 123,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/655.jpg",
       "grupo": 60,
       "id": 655,
@@ -3799,7 +3799,7 @@
     },
     {
       "descricao": "",
-      "estoque": 78,
+      "estoque": 77,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1746.jpg",
       "grupo": 60,
       "id": 1746,
@@ -4485,7 +4485,7 @@
     },
     {
       "descricao": "",
-      "estoque": 357,
+      "estoque": 308,
       "foto_url": null,
       "grupo": 65,
       "id": 5,
@@ -4667,13 +4667,13 @@
     },
     {
       "descricao": "",
-      "estoque": 202,
+      "estoque": 198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12172.jpg",
       "grupo": 65,
       "id": 12172,
       "marca": "GERAL",
-      "nome": "PERFIL U 4\" ABA 50MM CH12 2.60MM VERMELHO (KG)",
-      "preco": 259.93,
+      "nome": "PERFIL U 4\" ABA 50MM CH12 2.60MM VERMELHO (25,6KG)",
+      "preco": 215,
       "secao": 6,
       "subgrupo": 9999,
       "unidade": "UN",
