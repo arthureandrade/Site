@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2063032
+      "saldo": 2064094
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 208142
+      "saldo": 207571
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-18T15:26:30.540873",
+  "generated_at": "2026-08-18T15:51:00.055866",
   "kpis": {
     "a_vencer_7d": 274095,
     "juros_pagos": 73700,
-    "total_aberto": 2344814,
-    "total_pago_periodo": 5088992,
-    "total_vencido": 281782
+    "total_aberto": 2345305,
+    "total_pago_periodo": 5092418,
+    "total_vencido": 281211
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -88,14 +88,14 @@
       "dias_atraso": 88,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 2580,
+      "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "dias_atraso": 88,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 265,
+      "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 36,
-      "total_aberto": 84732
+      "titulos": 37,
+      "total_aberto": 85794
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
