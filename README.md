@@ -166,6 +166,13 @@ Regras atuais:
 - `vergalhao` -> foto do produto 295
 - `chapa plana` -> foto do produto 2012
 
+Contingencia:
+
+- o workflow pagina toda a API antes de publicar o snapshot;
+- uma base parcial nunca substitui o ultimo fallback valido;
+- as fotos sao revisadas por ETag em lotes e recebem versao na URL;
+- `fallback-data/foto-manifest.json` controla a versao de cada imagem.
+
 ---
 
 ## 9. Como rodar localmente

@@ -8,9 +8,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: atualizar-fallback-json
+  cancel-in-progress: false
+
 jobs:
   atualizar-fallback:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,6 +29,9 @@ jobs:
         run: node scripts/update-fallback.mjs
         env:
           FALLBACK_SOURCE_API_URL: https://vendas.galpaodoaco.com/api
+          FALLBACK_PAGE_SIZE: 5000
+          FALLBACK_MAX_PAGES: 20
+          FALLBACK_MAX_FOTOS: 500
 
       - name: Gerar snapshots do dashboard
         run: node scripts/update-dashboard-fallback.mjs

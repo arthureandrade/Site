@@ -27,9 +27,9 @@ function urlEntry(loc, { priority = '0.7', changefreq = 'daily' } = {}) {
 
 export async function GET() {
   const [secao5, secao14, secao6] = await Promise.all([
-    getProdutos({ secao: 5, com_preco: true, todas_secoes: false, limit: 5000, revalidate: 1800 }),
-    getProdutos({ secao: 14, com_preco: true, todas_secoes: false, limit: 5000, revalidate: 1800 }),
-    getProdutos({ secao: 6, com_preco: false, todas_secoes: false, limit: 5000, revalidate: 1800 }),
+    getProdutos({ secao: 5, com_preco: true, todas_secoes: false, limit: 10000, revalidate: 1800 }),
+    getProdutos({ secao: 14, com_preco: true, todas_secoes: false, limit: 10000, revalidate: 1800 }),
+    getProdutos({ secao: 6, com_preco: false, todas_secoes: false, limit: 10000, revalidate: 1800 }),
   ])
 
   const productMap = new Map()

@@ -79,7 +79,7 @@ export default function ProdutosCliente({
       if (categoriaEspecial === 'ferro_aco') {
         const data = await getProdutos({
           skip: 0,
-          limit: 5000,
+          limit: 10000,
           com_preco: false,
           secao: String(SECAO_FERRO_ACO),
           em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
@@ -109,7 +109,7 @@ export default function ProdutosCliente({
                 todas_secoes: true,
                 com_preco: false,
                 skip: 0,
-                limit: 5000,
+                limit: 10000,
                 noStore: true,
               }
             : {
@@ -120,7 +120,7 @@ export default function ProdutosCliente({
                 em_estoque: !ignorarEstoquePorCodigo ? est : undefined,
                 com_preco: true,
                 skip: 0,
-                limit: 5000,
+                limit: 10000,
                 noStore: true,
               }
         )
@@ -156,7 +156,7 @@ export default function ProdutosCliente({
     try {
       const data = await getProdutos({
         skip: 0,
-        limit: 5000,
+        limit: 10000,
         com_preco: categoriaEspecial === 'ferro_aco' ? false : true,
         secao:
           categoriaEspecial === 'ferro_aco'
