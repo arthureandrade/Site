@@ -5,12 +5,12 @@
       "saldo": 1898802
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 313002
-    },
-    {
       "faixa": "31–60 dias",
       "saldo": 275106
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 211547
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 13652
     }
   ],
-  "generated_at": "2026-08-18T09:59:46.191435",
+  "generated_at": "2026-08-18T10:45:59.004023",
   "kpis": {
     "a_vencer_7d": 274963,
     "juros_pagos": 73700,
-    "total_aberto": 2532295,
-    "total_pago_periodo": 4511255,
-    "total_vencido": 633493
+    "total_aberto": 2430840,
+    "total_pago_periodo": 4817745,
+    "total_vencido": 532038
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -124,11 +124,6 @@
       "total_aberto": 195888
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 7,
-      "total_aberto": 148846
-    },
-    {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
@@ -144,6 +139,11 @@
       "total_aberto": 106557
     },
     {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 6,
+      "total_aberto": 102930
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 36,
       "total_aberto": 84732
@@ -154,9 +154,9 @@
       "total_aberto": 66394
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 4,
-      "total_aberto": 53047
+      "total_aberto": 44032
     }
   ]
 }
