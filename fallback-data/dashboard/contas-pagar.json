@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2126342
+      "saldo": 2128869
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-18T16:43:53.364643",
+  "generated_at": "2026-08-18T17:08:00.349741",
   "kpis": {
     "a_vencer_7d": 274665,
     "juros_pagos": 73700,
-    "total_aberto": 2407553,
+    "total_aberto": 2410080,
     "total_pago_periodo": 5092418,
     "total_vencido": 281211
   },
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 20,
-      "total_aberto": 891568
+      "titulos": 21,
+      "total_aberto": 894095
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
