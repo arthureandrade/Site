@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 209663
+      "saldo": 208142
     },
     {
       "faixa": "61–90 dias",
@@ -18,16 +18,16 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 12250
+      "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-18T14:52:45.795405",
+  "generated_at": "2026-08-18T15:26:30.540873",
   "kpis": {
     "a_vencer_7d": 274095,
     "juros_pagos": 73700,
-    "total_aberto": 2347226,
-    "total_pago_periodo": 5085530,
-    "total_vencido": 284194
+    "total_aberto": 2344814,
+    "total_pago_periodo": 5088992,
+    "total_vencido": 281782
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -36,13 +36,6 @@
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 138,
-      "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
-      "loja": "Loja 1",
-      "saldo": 14,
-      "vencimento": "2026-04-02T00:00:00"
-    },
-    {
       "dias_atraso": 110,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
@@ -69,13 +62,6 @@
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
-    },
-    {
-      "dias_atraso": 108,
-      "fornecedor": "FACEBOOK SERVIÇOS ON LINE DO BRASIL",
-      "loja": "Loja 1",
-      "saldo": 877,
-      "vencimento": "2026-05-02T00:00:00"
     },
     {
       "dias_atraso": 101,
@@ -104,6 +90,20 @@
       "loja": "Loja 1",
       "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
+    },
+    {
+      "dias_atraso": 88,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 265,
+      "vencimento": "2026-05-22T00:00:00"
+    },
+    {
+      "dias_atraso": 83,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 807,
+      "vencimento": "2026-05-27T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
