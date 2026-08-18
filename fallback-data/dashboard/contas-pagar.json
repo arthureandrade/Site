@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1898131
+      "saldo": 1897829
     },
     {
       "faixa": "31–60 dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 210026
+      "saldo": 208984
     },
     {
       "faixa": "61–90 dias",
@@ -18,16 +18,16 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 13316
+      "saldo": 12250
     }
   ],
-  "generated_at": "2026-08-18T11:16:50.454911",
+  "generated_at": "2026-08-18T11:52:09.089122",
   "kpis": {
-    "a_vencer_7d": 274397,
+    "a_vencer_7d": 274095,
     "juros_pagos": 73700,
-    "total_aberto": 2427278,
-    "total_pago_periodo": 4826528,
-    "total_vencido": 529147
+    "total_aberto": 2424868,
+    "total_pago_periodo": 4842008,
+    "total_vencido": 527039
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -85,13 +85,6 @@
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 100,
-      "fornecedor": "AUDITIV COMERCIO E SERVICOS DE PRODUTOS HOSPITALARES LTDA",
-      "loja": "Loja 2",
-      "saldo": 1066,
-      "vencimento": "2026-05-10T00:00:00"
-    },
-    {
       "dias_atraso": 94,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
@@ -104,6 +97,13 @@
       "loja": "Loja 1",
       "saldo": 3519,
       "vencimento": "2026-05-17T00:00:00"
+    },
+    {
+      "dias_atraso": 88,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 2580,
+      "vencimento": "2026-05-22T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
