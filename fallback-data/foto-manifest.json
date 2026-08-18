@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "cursor": 5561,
+  "cursor": 6061,
   "fotos": {
     "1": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/1.jpg?v=1774719969820327200",
@@ -33375,108 +33375,213 @@
       "version": "4424406dc1649fc6"
     },
     "12009": {
-      "version": "cb3ed0e70cf672c9"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12009.jpg?v=1786559533372000000",
+      "etag": "\"1786559533.372-50630-2349015104\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:13 GMT",
+      "version": "620deef631fccb7d"
     },
     "12011": {
-      "version": "ee0a2b6744964532"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12011.jpg?v=1786559535645000000",
+      "etag": "\"1786559535.645-30373-2346786873\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:15 GMT",
+      "version": "df93b2cfd43cd80e"
     },
     "12013": {
-      "version": "2e2e32bca4b6c8da"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12013.jpg?v=1786559536181000000",
+      "etag": "\"1786559536.181-12113-2347442235\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:16 GMT",
+      "version": "782253ae9e4b2da2"
     },
     "12015": {
-      "version": "e80b6579e76a9b5b"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12015.jpg?v=1786559537788000000",
+      "etag": "\"1786559537.788-48664-2348097597\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:17 GMT",
+      "version": "e1ced723ee574235"
     },
     "12017": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12017.jpg?v=1774744898438495600",
+      "etag": "\"1774744898.4384956-13632-2348752959\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:38 GMT",
       "version": "9f59a87da7c0af64"
     },
     "12018": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12018.jpg?v=1774744903268197700",
+      "etag": "\"1774744903.2681978-201603-2349080640\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:43 GMT",
       "version": "99b6bbe3d2623199"
     },
     "12019": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12019.jpg?v=1774744907313927400",
+      "etag": "\"1774744907.3139274-26380-2349408321\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:47 GMT",
       "version": "4b96eb4e0d930e6e"
     },
     "12020": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12020.jpg?v=1774744910813562700",
+      "etag": "\"1774744910.8135626-18928-2346852409\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:50 GMT",
       "version": "61d3d6b02910ffb7"
     },
     "12021": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12021.jpg?v=1774744914336490000",
+      "etag": "\"1774744914.33649-18928-2347180090\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:54 GMT",
       "version": "61d3d6b02910ffb7"
     },
     "12022": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12022.jpg?v=1774744918930348300",
+      "etag": "\"1774744918.9303484-8364-2347507771\"",
+      "last_modified": "Sun, 29 Mar 2026 00:41:58 GMT",
       "version": "a06b97eabfb10ce4"
     },
     "12023": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12023.jpg?v=1774744923696800100",
+      "etag": "\"1774744923.6968-8364-2347835452\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:03 GMT",
       "version": "a06b97eabfb10ce4"
     },
     "12024": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12024.jpg?v=1774744927317779800",
+      "etag": "\"1774744927.3177798-8364-2348163133\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:07 GMT",
       "version": "a06b97eabfb10ce4"
     },
     "12025": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12025.jpg?v=1774744930911746200",
+      "etag": "\"1774744930.9117463-8364-2348490814\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:10 GMT",
       "version": "a06b97eabfb10ce4"
     },
     "12026": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12026.jpg?v=1774744935075475800",
+      "etag": "\"1774744935.0754757-21546-2348818495\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:15 GMT",
       "version": "bd11e60c3f13ff6c"
     },
     "12027": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12027.jpg?v=1774744938904621900",
+      "etag": "\"1774744938.9046218-10266-2349146176\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:18 GMT",
       "version": "d30dfa621e1da3af"
     },
     "12028": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12028.jpg?v=1774744943122924800",
+      "etag": "\"1774744943.1229248-25177-2349473857\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:23 GMT",
       "version": "d5016861de377531"
     },
     "12029": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12029.jpg?v=1774744947374560100",
+      "etag": "\"1774744947.37456-49700-2349801538\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:27 GMT",
       "version": "356daab0c0cbebcb"
     },
     "12030": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12030.jpg?v=1774744951531808400",
+      "etag": "\"1774744951.5318084-40947-2347245626\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:31 GMT",
       "version": "3c65b3eab188975f"
     },
     "12031": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12031.jpg?v=1774744955260927800",
+      "etag": "\"1774744955.260928-25177-2347573307\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:35 GMT",
       "version": "d5016861de377531"
     },
     "12032": {
-      "version": "5bc3e2141df2e50c"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12032.jpg?v=1786390713714000000",
+      "etag": "\"1786390713.714-6303-2347900988\"",
+      "last_modified": "Mon, 10 Aug 2026 19:38:33 GMT",
+      "version": "0b263221980f5180"
     },
     "12033": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12033.jpg?v=1774744963705443000",
+      "etag": "\"1774744963.705443-12837-2348228669\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:43 GMT",
       "version": "5531f88461bb4418"
     },
     "12034": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12034.jpg?v=1774744967442372200",
+      "etag": "\"1774744967.442372-12519-2348556350\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:47 GMT",
       "version": "da8b746a345312d1"
     },
     "12035": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12035.jpg?v=1774744970626766600",
+      "etag": "\"1774744970.6267667-12519-2348884031\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:50 GMT",
       "version": "da8b746a345312d1"
     },
     "12036": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12036.jpg?v=1774744973831016900",
+      "etag": "\"1774744973.831017-12519-2349211712\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:53 GMT",
       "version": "da8b746a345312d1"
     },
     "12037": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12037.jpg?v=1774744977074632200",
+      "etag": "\"1774744977.0746322-12519-2349539393\"",
+      "last_modified": "Sun, 29 Mar 2026 00:42:57 GMT",
       "version": "da8b746a345312d1"
     },
     "12038": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12038.jpg?v=1774744980291253700",
+      "etag": "\"1774744980.2912538-12519-2349867074\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:00 GMT",
       "version": "da8b746a345312d1"
     },
     "12039": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12039.jpg?v=1774744983647257400",
+      "etag": "\"1774744983.6472573-12519-2350194755\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:03 GMT",
       "version": "da8b746a345312d1"
     },
     "12040": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12040.jpg?v=1774744987137652300",
+      "etag": "\"1774744987.1376524-12519-2347638843\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:07 GMT",
       "version": "da8b746a345312d1"
     },
     "12041": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12041.jpg?v=1774744990363209100",
+      "etag": "\"1774744990.363209-12519-2347966524\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:10 GMT",
       "version": "da8b746a345312d1"
     },
     "12042": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12042.jpg?v=1774744993728837300",
+      "etag": "\"1774744993.7288373-12519-2348294205\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:13 GMT",
       "version": "da8b746a345312d1"
     },
     "12043": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12043.jpg?v=1774744996916836900",
+      "etag": "\"1774744996.916837-12519-2348621886\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:16 GMT",
       "version": "da8b746a345312d1"
     },
     "12044": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12044.jpg?v=1774745000378195900",
+      "etag": "\"1774745000.378196-18770-2348949567\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:20 GMT",
       "version": "2fb4c25b5f0df551"
     },
     "12045": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12045.jpg?v=1774745004957019100",
+      "etag": "\"1774745004.957019-30000-2349277248\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:24 GMT",
       "version": "f932401743859bad"
     },
     "12046": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12046.jpg?v=1774745009319548800",
+      "etag": "\"1774745009.3195488-32128-2349604929\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:29 GMT",
       "version": "3dd0e888cbf6134d"
     },
     "12047": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12047.jpg?v=1774745013730887900",
+      "etag": "\"1774745013.730888-65733-2349932610\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:33 GMT",
       "version": "1a9bad6f79093170"
     },
     "12048": {
@@ -33498,6 +33603,9 @@
       "version": "2a2c3fe95446c6a0"
     },
     "12051": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12051.jpg?v=1774745031102003100",
+      "etag": "\"1774745031.102003-27296-2348359741\"",
+      "last_modified": "Sun, 29 Mar 2026 00:43:51 GMT",
       "version": "9da4c494577d456c"
     },
     "12052": {
@@ -33519,15 +33627,27 @@
       "version": "311fcc06728a4a11"
     },
     "12055": {
-      "version": "06c346b05d2869d8"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12055.jpg?v=1786391962033000000",
+      "etag": "\"1786391962.033-31552-2349670465\"",
+      "last_modified": "Mon, 10 Aug 2026 19:59:22 GMT",
+      "version": "f7f508d354d0c207"
     },
     "12056": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12056.jpg?v=1774745061118149400",
+      "etag": "\"1774745061.1181495-90299-2349998146\"",
+      "last_modified": "Sun, 29 Mar 2026 00:44:21 GMT",
       "version": "4f894d15f7c173e1"
     },
     "12058": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12058.jpg?v=1774745065278752600",
+      "etag": "\"1774745065.2787526-62061-2350653508\"",
+      "last_modified": "Sun, 29 Mar 2026 00:44:25 GMT",
       "version": "8788b91eea300b5e"
     },
     "12060": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12060.jpg?v=1774745068818638500",
+      "etag": "\"1774745068.8186386-62061-2348425277\"",
+      "last_modified": "Sun, 29 Mar 2026 00:44:28 GMT",
       "version": "8788b91eea300b5e"
     },
     "12062": {
@@ -33537,6 +33657,9 @@
       "version": "41000f1a6403fbb6"
     },
     "12064": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12064.jpg?v=1774745076681653700",
+      "etag": "\"1774745076.6816537-3597-2349736001\"",
+      "last_modified": "Sun, 29 Mar 2026 00:44:36 GMT",
       "version": "8405ae3ad6e10cf2"
     },
     "12067": {
@@ -33582,6 +33705,9 @@
       "version": "27bb5cf32e076d7c"
     },
     "12079": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12079.jpg?v=1774745108618340100",
+      "etag": "\"1774745108.61834-51247-2351767623\"",
+      "last_modified": "Sun, 29 Mar 2026 00:45:08 GMT",
       "version": "4e41a86eaceb4645"
     },
     "12080": {
@@ -33609,39 +33735,75 @@
       "version": "c40a32bc5f8cb902"
     },
     "12085": {
-      "version": "789613e80e8e379c"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12085.jpg?v=1786389193021000000",
+      "etag": "\"1786389193.021-33052-2350850116\"",
+      "last_modified": "Mon, 10 Aug 2026 19:13:13 GMT",
+      "version": "26122be53b3a4dce"
     },
     "12086": {
-      "version": "4521a1dbb962eae6"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12086.jpg?v=1786389192814000000",
+      "etag": "\"1786389192.814-49708-2351177797\"",
+      "last_modified": "Mon, 10 Aug 2026 19:13:12 GMT",
+      "version": "4cf010be91c57124"
     },
     "12087": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12087.jpg?v=1774745136251176800",
+      "etag": "\"1774745136.2511768-18182-2351505478\"",
+      "last_modified": "Sun, 29 Mar 2026 00:45:36 GMT",
       "version": "b14a863ff11a03a8"
     },
     "12089": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12089.jpg?v=1774745140131719800",
+      "etag": "\"1774745140.1317198-48182-2352160840\"",
+      "last_modified": "Sun, 29 Mar 2026 00:45:40 GMT",
       "version": "b0e8b395335165de"
     },
     "12092": {
-      "version": "ffdec71cac70a191"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12092.jpg?v=1786137667324000000",
+      "etag": "\"1786137667.324-47633-2350260290\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:07 GMT",
+      "version": "feb74a8199d4e82f"
     },
     "12093": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12093.jpg?v=1774745148399066300",
+      "etag": "\"1774745148.3990662-55424-2350587971\"",
+      "last_modified": "Sun, 29 Mar 2026 00:45:48 GMT",
       "version": "8686fa957ceea897"
     },
     "12094": {
-      "version": "938aef5fc62a60ca"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12094.jpg?v=1786481062569000000",
+      "etag": "\"1786481062.569-54936-2350915652\"",
+      "last_modified": "Tue, 11 Aug 2026 20:44:22 GMT",
+      "version": "602432a0e411c010"
     },
     "12095": {
-      "version": "4267a354fd220b24"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12095.jpg?v=1786201062303000000",
+      "etag": "\"1786201062.303-39169-2351243333\"",
+      "last_modified": "Sat, 08 Aug 2026 14:57:42 GMT",
+      "version": "1f3685f7892bebcc"
     },
     "12097": {
-      "version": "8ce132bc0fd08490"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12097.jpg?v=1786201062774000000",
+      "etag": "\"1786201062.774-39093-2351898695\"",
+      "last_modified": "Sat, 08 Aug 2026 14:57:42 GMT",
+      "version": "023584f707b73df3"
     },
     "12098": {
-      "version": "938aef5fc62a60ca"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12098.jpg?v=1786201062867000000",
+      "etag": "\"1786201062.867-39048-2352226376\"",
+      "last_modified": "Sat, 08 Aug 2026 14:57:42 GMT",
+      "version": "7e37b8eddb6e9117"
     },
     "12100": {
-      "version": "33cd17e499cb761b"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12100.jpg?v=1786201062581000000",
+      "etag": "\"1786201062.581-38990-2346524728\"",
+      "last_modified": "Sat, 08 Aug 2026 14:57:42 GMT",
+      "version": "7005111d7fc053ae"
     },
     "12102": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12102.jpg?v=1774745170526835100",
+      "etag": "\"1774745170.5268352-188551-2347180090\"",
+      "last_modified": "Sun, 29 Mar 2026 00:46:10 GMT",
       "version": "69c07511a52545ab"
     },
     "12104": {
@@ -33675,25 +33837,46 @@
       "version": "4cdfe197a372eb34"
     },
     "12112": {
-      "version": "e79500316b6e6dc7"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12112.jpg?v=1785200948000000000",
+      "etag": "\"1785200948.0-22805-2347573307\"",
+      "last_modified": "Tue, 28 Jul 2026 01:09:08 GMT",
+      "version": "ca3b2491315fc611"
     },
     "12114": {
-      "version": "37c0d660bf2592aa"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12114.jpg?v=1786559537901000000",
+      "etag": "\"1786559537.901-20368-2348228669\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:17 GMT",
+      "version": "122060fa18370e64"
     },
     "12116": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12116.jpg?v=1774745200890656600",
+      "etag": "\"1774745200.8906567-252232-2348884031\"",
+      "last_modified": "Sun, 29 Mar 2026 00:46:40 GMT",
       "version": "9a02cef2a6d1d7fa"
     },
     "12118": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12118.jpg?v=1774745204397163000",
+      "etag": "\"1774745204.397163-23354-2349539393\"",
+      "last_modified": "Sun, 29 Mar 2026 00:46:44 GMT",
       "version": "c3962d607bd328f9"
     },
     "12120": {
-      "version": "ece11bbac23f6998"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12120.jpg?v=1786480657751000000",
+      "etag": "\"1786480657.751-51922-2347311162\"",
+      "last_modified": "Tue, 11 Aug 2026 20:37:37 GMT",
+      "version": "f540c053c80b2bbc"
     },
     "12121": {
-      "version": "938ec720be1b5057"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12121.jpg?v=1786389710175000000",
+      "etag": "\"1786389710.175-51309-2347638843\"",
+      "last_modified": "Mon, 10 Aug 2026 19:21:50 GMT",
+      "version": "d528137361a9ae48"
     },
     "12123": {
-      "version": "6f9564f1a791f26a"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12123.jpg?v=1786391837716000000",
+      "etag": "\"1786391837.716-29848-2348294205\"",
+      "last_modified": "Mon, 10 Aug 2026 19:57:17 GMT",
+      "version": "c0d792d6865de0a3"
     },
     "12124": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12124.jpg?v=1774745223049820400",
@@ -33708,76 +33891,148 @@
       "version": "fa96a8286ca1d447"
     },
     "12126": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12126.jpg?v=1774745231890374500",
+      "etag": "\"1774745231.8903744-7863-2349277248\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:11 GMT",
       "version": "79d26c3a769ed975"
     },
     "12127": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12127.jpg?v=1774745236754085800",
+      "etag": "\"1774745236.7540858-7863-2349604929\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:16 GMT",
       "version": "79d26c3a769ed975"
     },
     "12128": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12128.jpg?v=1774745242163184600",
+      "etag": "\"1774745242.1631846-7863-2349932610\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:22 GMT",
       "version": "79d26c3a769ed975"
     },
     "12129": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12129.jpg?v=1774745246720340700",
+      "etag": "\"1774745246.7203407-108884-2350260291\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:26 GMT",
       "version": "5caf3671a3d5b0f5"
     },
     "12130": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12130.jpg?v=1774745250596392500",
+      "etag": "\"1774745250.5963924-51153-2347704379\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:30 GMT",
       "version": "d149a30065663896"
     },
     "12131": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12131.jpg?v=1774745254539687900",
+      "etag": "\"1774745254.5396879-23533-2348032060\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:34 GMT",
       "version": "7eb8fabc527b06fa"
     },
     "12132": {
-      "version": "63a5e156b9f054e8"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12132.jpg?v=1777067897755000000",
+      "etag": "\"1777067897.755-356607-2348359741\"",
+      "last_modified": "Fri, 24 Apr 2026 21:58:17 GMT",
+      "version": "51d141bd019e94b5"
     },
     "12133": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12133.jpg?v=1774745262655746300",
+      "etag": "\"1774745262.6557462-29129-2348687422\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:42 GMT",
       "version": "a0dad8b23394b818"
     },
     "12134": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12134.jpg?v=1774745266052998000",
+      "etag": "\"1774745266.052998-13477-2349015103\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:46 GMT",
       "version": "5029fe3c70c1e383"
     },
     "12135": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12135.jpg?v=1774745269962127500",
+      "etag": "\"1774745269.9621274-57928-2349342784\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:49 GMT",
       "version": "c588dd24c02a3217"
     },
     "12136": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12136.jpg?v=1774745274431119900",
+      "etag": "\"1774745274.43112-57928-2349670465\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:54 GMT",
       "version": "c588dd24c02a3217"
     },
     "12138": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12138.jpg?v=1774745278127236100",
+      "etag": "\"1774745278.1272361-48132-2350325827\"",
+      "last_modified": "Sun, 29 Mar 2026 00:47:58 GMT",
       "version": "378e4f6abc116174"
     },
     "12139": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12139.jpg?v=1774745281939485500",
+      "etag": "\"1774745281.9394855-30359-2350653508\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:01 GMT",
       "version": "1f8b706d4aa23816"
     },
     "12140": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12140.jpg?v=1774745285696046700",
+      "etag": "\"1774745285.6960466-44367-2348097596\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:05 GMT",
       "version": "baeba22bfbfa3a1e"
     },
     "12141": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12141.jpg?v=1774745289267002100",
+      "etag": "\"1774745289.267002-44367-2348425277\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:09 GMT",
       "version": "baeba22bfbfa3a1e"
     },
     "12142": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12142.jpg?v=1774745292852302000",
+      "etag": "\"1774745292.852302-48302-2348752958\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:12 GMT",
       "version": "3924533cff473a58"
     },
     "12143": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12143.jpg?v=1774745296555573200",
+      "etag": "\"1774745296.5555732-61669-2349080639\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:16 GMT",
       "version": "7a779e24e67f9b27"
     },
     "12144": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12144.jpg?v=1774745300110964600",
+      "etag": "\"1774745300.1109645-3464-2349408320\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:20 GMT",
       "version": "191fd9991952e69b"
     },
     "12145": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12145.jpg?v=1774745303435235600",
+      "etag": "\"1774745303.4352355-48302-2349736001\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:23 GMT",
       "version": "3924533cff473a58"
     },
     "12146": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12146.jpg?v=1774745306820565300",
+      "etag": "\"1774745306.8205652-48302-2350063682\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:26 GMT",
       "version": "3924533cff473a58"
     },
     "12147": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12147.jpg?v=1774745310113687700",
+      "etag": "\"1774745310.1136878-48302-2350391363\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:30 GMT",
       "version": "3924533cff473a58"
     },
     "12149": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12149.jpg?v=1774745313464980300",
+      "etag": "\"1774745313.4649804-48302-2351046725\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:33 GMT",
       "version": "3924533cff473a58"
     },
     "12150": {
-      "version": "2d64713b3aa3e3c8"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12150.jpg?v=1786194937777000000",
+      "etag": "\"1786194937.777-22142-2348490813\"",
+      "last_modified": "Sat, 08 Aug 2026 13:15:37 GMT",
+      "version": "c990caecaab81a18"
     },
     "12152": {
-      "version": "63ad7063481b7b53"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12152.jpg?v=1786194937470000000",
+      "etag": "\"1786194937.47-31584-2349146175\"",
+      "last_modified": "Sat, 08 Aug 2026 13:15:37 GMT",
+      "version": "6f0739b84abff14a"
     },
     "12154": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12154.jpg?v=1774745325679362400",
@@ -33786,9 +34041,15 @@
       "version": "5b3e3496f2edb908"
     },
     "12156": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12156.jpg?v=1774745329441647500",
+      "etag": "\"1774745329.4416475-33895-2350456899\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:49 GMT",
       "version": "942758da1e4a1e6b"
     },
     "12158": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12158.jpg?v=1774745332952945400",
+      "etag": "\"1774745332.9529455-188551-2351112261\"",
+      "last_modified": "Sun, 29 Mar 2026 00:48:52 GMT",
       "version": "69c07511a52545ab"
     },
     "12160": {
@@ -33834,27 +34095,51 @@
       "version": "967222b4dd6d8bde"
     },
     "12167": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12167.jpg?v=1774745365644736700",
+      "etag": "\"1774745365.6447368-29688-2351177797\"",
+      "last_modified": "Sun, 29 Mar 2026 00:49:25 GMT",
       "version": "21e173e8ee28e097"
     },
     "12168": {
-      "version": "2ba7c3b2be87ab40"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12168.jpg?v=1786201820874000000",
+      "etag": "\"1786201820.874-39230-2351505478\"",
+      "last_modified": "Sat, 08 Aug 2026 15:10:20 GMT",
+      "version": "b8080b2d192814fe"
     },
     "12169": {
-      "version": "3b44c5e765a3c690"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12169.jpg?v=1786201820842000000",
+      "etag": "\"1786201820.842-39216-2351833159\"",
+      "last_modified": "Sat, 08 Aug 2026 15:10:20 GMT",
+      "version": "7447a0f98b18ad0d"
     },
     "12170": {
-      "version": "7784240d1c291b15"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12170.jpg?v=1786201820830000000",
+      "etag": "\"1786201820.83-22611-2349277247\"",
+      "last_modified": "Sat, 08 Aug 2026 15:10:20 GMT",
+      "version": "7d1b3c9facbe4f5b"
     },
     "12171": {
-      "version": "7784240d1c291b15"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12171.jpg?v=1786201820908000000",
+      "etag": "\"1786201820.908-22319-2349604928\"",
+      "last_modified": "Sat, 08 Aug 2026 15:10:20 GMT",
+      "version": "bb3c0ec9a529f3da"
     },
     "12172": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12172.jpg?v=1774745384925941200",
+      "etag": "\"1774745384.9259412-188551-2349932609\"",
+      "last_modified": "Sun, 29 Mar 2026 00:49:44 GMT",
       "version": "69c07511a52545ab"
     },
     "12174": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12174.jpg?v=1774745388351691400",
+      "etag": "\"1774745388.3516915-121715-2350587971\"",
+      "last_modified": "Sun, 29 Mar 2026 00:49:48 GMT",
       "version": "03cd36061bc507ef"
     },
     "12176": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12176.jpg?v=1774745391840706800",
+      "etag": "\"1774745391.8407068-107226-2351243333\"",
+      "last_modified": "Sun, 29 Mar 2026 00:49:51 GMT",
       "version": "d62403fcd4ecded5"
     },
     "12178": {
@@ -33912,19 +34197,34 @@
       "version": "7da2b6c79deabb50"
     },
     "12196": {
-      "version": "6ee1f79e57116aea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12196.jpg?v=1779475731518000000",
+      "etag": "\"1779475731.518-64194-2352029767\"",
+      "last_modified": "Fri, 22 May 2026 18:48:51 GMT",
+      "version": "362c550e0bfc1010"
     },
     "12197": {
-      "version": "6ee1f79e57116aea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12197.jpg?v=1779475734036000000",
+      "etag": "\"1779475734.036-64523-2352357448\"",
+      "last_modified": "Fri, 22 May 2026 18:48:54 GMT",
+      "version": "a19e5fcc7aa701ba"
     },
     "12198": {
-      "version": "6ee1f79e57116aea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12198.jpg?v=1779475734250000000",
+      "etag": "\"1779475734.25-63771-2352685129\"",
+      "last_modified": "Fri, 22 May 2026 18:48:54 GMT",
+      "version": "726288396642f72b"
     },
     "12199": {
-      "version": "4450ff6c4fec2003"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12199.jpg?v=1779475734201000000",
+      "etag": "\"1779475734.201-63755-2353012810\"",
+      "last_modified": "Fri, 22 May 2026 18:48:54 GMT",
+      "version": "8bc42f654d95d658"
     },
     "12200": {
-      "version": "6ee1f79e57116aea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12200.jpg?v=1779475735801000000",
+      "etag": "\"1779475735.801-64043-2346983481\"",
+      "last_modified": "Fri, 22 May 2026 18:48:55 GMT",
+      "version": "fb2204da0610c2bc"
     },
     "12201": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12201.jpg?v=1786196534051000000",
@@ -33945,9 +34245,15 @@
       "version": "00ad4df0a6e03589"
     },
     "12205": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12205.jpg?v=1774745462439193900",
+      "etag": "\"1774745462.439194-46786-2348621886\"",
+      "last_modified": "Sun, 29 Mar 2026 00:51:02 GMT",
       "version": "85f840f8fa0deade"
     },
     "12206": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12206.jpg?v=1774745466828382700",
+      "etag": "\"1774745466.8283827-132519-2348949567\"",
+      "last_modified": "Sun, 29 Mar 2026 00:51:06 GMT",
       "version": "09a3662332274d2b"
     },
     "12207": {
@@ -33987,39 +34293,75 @@
       "version": "d2669b5dbddd3584"
     },
     "12231": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12231.jpg?v=1774745525676821900",
+      "etag": "\"1774745525.676822-167838-2348490813\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:05 GMT",
       "version": "741550d1a0d01350"
     },
     "12232": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12232.jpg?v=1774745529190078800",
+      "etag": "\"1774745529.1900787-61766-2348818494\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:09 GMT",
       "version": "4318791a44e5b024"
     },
     "12233": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12233.jpg?v=1774745532718581800",
+      "etag": "\"1774745532.718582-55611-2349146175\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:12 GMT",
       "version": "554cb87eb0f5b739"
     },
     "12234": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12234.jpg?v=1774745536355641100",
+      "etag": "\"1774745536.3556411-76026-2349473856\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:16 GMT",
       "version": "a57a4c04e67b98a4"
     },
     "12236": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12236.jpg?v=1774745540023849900",
+      "etag": "\"1774745540.02385-76026-2350129218\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:20 GMT",
       "version": "a57a4c04e67b98a4"
     },
     "12238": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12238.jpg?v=1774745543670874500",
+      "etag": "\"1774745543.6708746-76026-2350784580\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:23 GMT",
       "version": "a57a4c04e67b98a4"
     },
     "12240": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12240.jpg?v=1774745547347481800",
+      "etag": "\"1774745547.3474817-62299-2348556349\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:27 GMT",
       "version": "b7e6c2ecdff36a66"
     },
     "12241": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12241.jpg?v=1774745551111893100",
+      "etag": "\"1774745551.1118932-82532-2348884030\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:31 GMT",
       "version": "5d7ad7553bed31a7"
     },
     "12242": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12242.jpg?v=1774745554804294500",
+      "etag": "\"1774745554.8042946-31928-2349211711\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:34 GMT",
       "version": "4b160f6aea17b549"
     },
     "12245": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12245.jpg?v=1774745563725503100",
+      "etag": "\"1774745563.7255032-110120-2350194754\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:43 GMT",
       "version": "b811136ea6f35888"
     },
     "12246": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12246.jpg?v=1774745567185235200",
+      "etag": "\"1774745567.1852353-28208-2350522435\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:47 GMT",
       "version": "9a67c8be5dbde536"
     },
     "12247": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12247.jpg?v=1774745570677454900",
+      "etag": "\"1774745570.677455-95700-2350850116\"",
+      "last_modified": "Sun, 29 Mar 2026 00:52:50 GMT",
       "version": "a77b1e02e5be2dbe"
     },
     "12249": {
@@ -34077,6 +34419,9 @@
       "version": "1ebb7dbadb4c9e56"
     },
     "12266": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12266.jpg?v=1774745614965249300",
+      "etag": "\"1774745614.9652493-51231-2351308869\"",
+      "last_modified": "Sun, 29 Mar 2026 00:53:34 GMT",
       "version": "61c064d8252499a2"
     },
     "12268": {
@@ -34086,10 +34431,16 @@
       "version": "abe945265ac34882"
     },
     "12269": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12269.jpg?v=1774745622477577700",
+      "etag": "\"1774745622.4775777-17646-2352291912\"",
+      "last_modified": "Sun, 29 Mar 2026 00:53:42 GMT",
       "version": "c767868fd91a9ba1"
     },
     "12271": {
-      "version": "597887e120bcddfa"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12271.jpg?v=1786198284520000000",
+      "etag": "\"1786198284.52-17222-2350063681\"",
+      "last_modified": "Sat, 08 Aug 2026 14:11:24 GMT",
+      "version": "ed23763461113d84"
     },
     "12273": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12273.jpg?v=1774745630246343900",
@@ -34104,18 +34455,33 @@
       "version": "57f55180ccaddc76"
     },
     "12276": {
-      "version": "30825301c157b6de"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12276.jpg?v=1786391837886000000",
+      "etag": "\"1786391837.886-73476-2351702086\"",
+      "last_modified": "Mon, 10 Aug 2026 19:57:17 GMT",
+      "version": "b1004cc213d7f1a8"
     },
     "12277": {
-      "version": "10e63ba1082beae4"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12277.jpg?v=1786196110160000000",
+      "etag": "\"1786196110.16-32610-2352029767\"",
+      "last_modified": "Sat, 08 Aug 2026 13:35:10 GMT",
+      "version": "feb300f149f3720f"
     },
     "12279": {
-      "version": "a313c7ff6ec35b22"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12279.jpg?v=1786196110495000000",
+      "etag": "\"1786196110.495-40973-2352685129\"",
+      "last_modified": "Sat, 08 Aug 2026 13:35:10 GMT",
+      "version": "dfbd2efd174726b1"
     },
     "12281": {
-      "version": "f1216bb1424648fa"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12281.jpg?v=1786196110609000000",
+      "etag": "\"1786196110.609-40961-2350456898\"",
+      "last_modified": "Sat, 08 Aug 2026 13:35:10 GMT",
+      "version": "4bac36251ed43ff5"
     },
     "12283": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12283.jpg?v=1774745655587802100",
+      "etag": "\"1774745655.5878022-107226-2351112260\"",
+      "last_modified": "Sun, 29 Mar 2026 00:54:15 GMT",
       "version": "d62403fcd4ecded5"
     },
     "12285": {
@@ -34125,13 +34491,22 @@
       "version": "d082bb3f9e2d21de"
     },
     "12287": {
-      "version": "03e46453fab11576"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12287.jpg?v=1780511377327000000",
+      "etag": "\"1780511377.327-21004-2352422984\"",
+      "last_modified": "Wed, 03 Jun 2026 18:29:37 GMT",
+      "version": "3296df3b0337c02c"
     },
     "12289": {
-      "version": "03e46453fab11576"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12289.jpg?v=1780511377867000000",
+      "etag": "\"1780511377.867-21004-2353078346\"",
+      "last_modified": "Wed, 03 Jun 2026 18:29:37 GMT",
+      "version": "3296df3b0337c02c"
     },
     "12291": {
-      "version": "03e46453fab11576"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12291.jpg?v=1780511377796000000",
+      "etag": "\"1780511377.796-21004-2350850115\"",
+      "last_modified": "Wed, 03 Jun 2026 18:29:37 GMT",
+      "version": "3296df3b0337c02c"
     },
     "12293": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12293.jpg?v=1774745673047129200",
@@ -34170,24 +34545,45 @@
       "version": "003e9310221b404b"
     },
     "12300": {
-      "version": "f3cd55e07560e9ea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12300.jpg?v=1786201866279000000",
+      "etag": "\"1786201866.279-21456-2347442234\"",
+      "last_modified": "Sat, 08 Aug 2026 15:11:06 GMT",
+      "version": "07bb99a6f729f51a"
     },
     "12301": {
-      "version": "f3cd55e07560e9ea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12301.jpg?v=1786201866345000000",
+      "etag": "\"1786201866.345-11438-2347769915\"",
+      "last_modified": "Sat, 08 Aug 2026 15:11:06 GMT",
+      "version": "33f35751a228261b"
     },
     "12302": {
-      "version": "f3cd55e07560e9ea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12302.jpg?v=1786201866293000000",
+      "etag": "\"1786201866.293-24153-2348097596\"",
+      "last_modified": "Sat, 08 Aug 2026 15:11:06 GMT",
+      "version": "4820bec682cd7a81"
     },
     "12303": {
-      "version": "f3cd55e07560e9ea"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12303.jpg?v=1786201866237000000",
+      "etag": "\"1786201866.237-11438-2348425277\"",
+      "last_modified": "Sat, 08 Aug 2026 15:11:06 GMT",
+      "version": "33f35751a228261b"
     },
     "12304": {
-      "version": "d15c925653c7044a"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12304.jpg?v=1786559537927000000",
+      "etag": "\"1786559537.927-37861-2348752958\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:17 GMT",
+      "version": "2ec05b39360ca434"
     },
     "12306": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12306.jpg?v=1774745717876453600",
+      "etag": "\"1774745717.8764536-83050-2349408320\"",
+      "last_modified": "Sun, 29 Mar 2026 00:55:17 GMT",
       "version": "829dfbd6282182f4"
     },
     "12308": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12308.jpg?v=1774745721422482300",
+      "etag": "\"1774745721.4224823-62061-2350063682\"",
+      "last_modified": "Sun, 29 Mar 2026 00:55:21 GMT",
       "version": "8788b91eea300b5e"
     },
     "12310": {
@@ -34197,13 +34593,22 @@
       "version": "c05d5f6bf858c7ef"
     },
     "12311": {
-      "version": "ad6c630c6d7a1518"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12311.jpg?v=1786198284453000000",
+      "etag": "\"1786198284.453-19810-2348163132\"",
+      "last_modified": "Sat, 08 Aug 2026 14:11:24 GMT",
+      "version": "0ddfa1f6657eaf99"
     },
     "12313": {
-      "version": "597887e120bcddfa"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12313.jpg?v=1786198284553000000",
+      "etag": "\"1786198284.553-27318-2348818494\"",
+      "last_modified": "Sat, 08 Aug 2026 14:11:24 GMT",
+      "version": "c03daa254f2ce729"
     },
     "12315": {
-      "version": "383ed22cecdc1527"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12315.jpg?v=1786559537946000000",
+      "etag": "\"1786559537.946-13808-2349473856\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:17 GMT",
+      "version": "d1f2fadfd3d71e3d"
     },
     "12317": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12317.jpg?v=1774745740752066100",
@@ -34212,9 +34617,15 @@
       "version": "da5c318b22b0215b"
     },
     "12319": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12319.jpg?v=1774745744259161100",
+      "etag": "\"1774745744.259161-19224-2350784580\"",
+      "last_modified": "Sun, 29 Mar 2026 00:55:44 GMT",
       "version": "0597a348b8885fea"
     },
     "12321": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12321.jpg?v=1774745748059406900",
+      "etag": "\"1774745748.059407-95854-2348556349\"",
+      "last_modified": "Sun, 29 Mar 2026 00:55:48 GMT",
       "version": "28b2055d32a8a13d"
     },
     "12323": {
@@ -34242,18 +34653,33 @@
       "version": "c4a45bac453a7268"
     },
     "12327": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12327.jpg?v=1774745767878921500",
+      "etag": "\"1774745767.8789215-5087-2350522435\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:07 GMT",
       "version": "1776ef83ae1251ce"
     },
     "12328": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12328.jpg?v=1774745772417456300",
+      "etag": "\"1774745772.4174564-161137-2350850116\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:12 GMT",
       "version": "5a949dbf4d42bfc1"
     },
     "12329": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12329.jpg?v=1774745776186525500",
+      "etag": "\"1774745776.1865256-161137-2351177797\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:16 GMT",
       "version": "5a949dbf4d42bfc1"
     },
     "12330": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12330.jpg?v=1774745779945132900",
+      "etag": "\"1774745779.945133-98387-2348621885\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:19 GMT",
       "version": "30781bde09f41973"
     },
     "12331": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12331.jpg?v=1774745783434398100",
+      "etag": "\"1774745783.4343982-112660-2348949566\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:23 GMT",
       "version": "622a19129a4a4bd7"
     },
     "12333": {
@@ -34263,15 +34689,27 @@
       "version": "277f2e3cca3deda2"
     },
     "12345": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12345.jpg?v=1774745791601379700",
+      "etag": "\"1774745791.6013796-31036-2350653507\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:31 GMT",
       "version": "d0b82fdab3208fc6"
     },
     "12347": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12347.jpg?v=1774745795330492600",
+      "etag": "\"1774745795.3304925-21665-2351308869\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:35 GMT",
       "version": "559d13cfbe8c0f13"
     },
     "12349": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12349.jpg?v=1774745798794303200",
+      "etag": "\"1774745798.7943032-31036-2351964231\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:38 GMT",
       "version": "d0b82fdab3208fc6"
     },
     "12351": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12351.jpg?v=1774745802318701300",
+      "etag": "\"1774745802.3187013-2795-2349736000\"",
+      "last_modified": "Sun, 29 Mar 2026 00:56:42 GMT",
       "version": "f2afabb76cd3074c"
     },
     "12353": {
@@ -34299,15 +34737,27 @@
       "version": "28154f0278c15005"
     },
     "12357": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12357.jpg?v=1774745823706564100",
+      "etag": "\"1774745823.7065642-80902-2351702086\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:03 GMT",
       "version": "debfd536710fe991"
     },
     "12359": {
-      "version": "c8396a65699f3a75"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12359.jpg?v=1786390451866000000",
+      "etag": "\"1786390451.866-25645-2352357448\"",
+      "last_modified": "Mon, 10 Aug 2026 19:34:11 GMT",
+      "version": "086fb9213ae53131"
     },
     "12361": {
-      "version": "13e52bf071d06037"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12361.jpg?v=1786390435301000000",
+      "etag": "\"1786390435.301-36489-2350129217\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "8ea967422b880e7b"
     },
     "12362": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12362.jpg?v=1774745835650898900",
+      "etag": "\"1774745835.650899-88169-2350456898\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:15 GMT",
       "version": "9649d0eeb0fbeae1"
     },
     "12368": {
@@ -34317,6 +34767,9 @@
       "version": "9f5978116187a4fa"
     },
     "12369": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12369.jpg?v=1774745843384289400",
+      "etag": "\"1774745843.3842895-9003-2352750665\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:23 GMT",
       "version": "dc030dbcbeeca69c"
     },
     "12371": {
@@ -34326,31 +34779,58 @@
       "version": "1ab085119ccce7ee"
     },
     "12372": {
-      "version": "e0cf8bd4d52cfbb1"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12372.jpg?v=1783976799609000000",
+      "etag": "\"1783976799.609-21102-2350850115\"",
+      "last_modified": "Mon, 13 Jul 2026 21:06:39 GMT",
+      "version": "82c817790cf8726c"
     },
     "12373": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12373.jpg?v=1774745855961941400",
+      "etag": "\"1774745855.9619415-36645-2351177796\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:35 GMT",
       "version": "52420e0b21096f87"
     },
     "12374": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12374.jpg?v=1774745860609386500",
+      "etag": "\"1774745860.6093864-33333-2351505477\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:40 GMT",
       "version": "686890206182fb8a"
     },
     "12375": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12375.jpg?v=1774745868113619100",
+      "etag": "\"1774745868.113619-21567-2351833158\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:48 GMT",
       "version": "8a86a2f7540f9167"
     },
     "12376": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12376.jpg?v=1774745879502835400",
+      "etag": "\"1774745879.5028355-87364-2352160839\"",
+      "last_modified": "Sun, 29 Mar 2026 00:57:59 GMT",
       "version": "f7fbb2bd8124fd78"
     },
     "12377": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12377.jpg?v=1774745886360323500",
+      "etag": "\"1774745886.3603234-68658-2352488520\"",
+      "last_modified": "Sun, 29 Mar 2026 00:58:06 GMT",
       "version": "73ebf942a570b8c1"
     },
     "12378": {
-      "version": "841ddb22944fee91"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12378.jpg?v=1786477742155000000",
+      "etag": "\"1786477742.155-32021-2352816201\"",
+      "last_modified": "Tue, 11 Aug 2026 19:49:02 GMT",
+      "version": "160fa64b4dadcbd0"
     },
     "12380": {
-      "version": "cf5f9da72ac773f7"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12380.jpg?v=1786389710082000000",
+      "etag": "\"1786389710.082-26872-2350587970\"",
+      "last_modified": "Mon, 10 Aug 2026 19:21:50 GMT",
+      "version": "f24fafe7873f266b"
     },
     "12382": {
-      "version": "1e85d5bf10a50154"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12382.jpg?v=1786389710224000000",
+      "etag": "\"1786389710.224-41702-2351243332\"",
+      "last_modified": "Mon, 10 Aug 2026 19:21:50 GMT",
+      "version": "209a696cda9fff6f"
     },
     "12384": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12384.jpg?v=1774745901358048000",
@@ -34389,7 +34869,10 @@
       "version": "a8e78494273afa2e"
     },
     "12391": {
-      "version": "f7ff19da856a9a1e"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12391.jpg?v=1786390831107000000",
+      "etag": "\"1786390831.107-20023-2351308868\"",
+      "last_modified": "Mon, 10 Aug 2026 19:40:31 GMT",
+      "version": "fa5c7b26010bd238"
     },
     "12393": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12393.jpg?v=1786391238486000000",
@@ -34518,9 +35001,15 @@
       "version": "7510c6a5599c3a1d"
     },
     "12416": {
-      "version": "0a71d4a697fe74de"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12416.jpg?v=1786559538369000000",
+      "etag": "\"1786559538.369-33484-2350260290\"",
+      "last_modified": "Wed, 12 Aug 2026 18:32:18 GMT",
+      "version": "ea57079dfc693d31"
     },
     "12418": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12418.jpg?v=1774746037534580900",
+      "etag": "\"1774746037.534581-23354-2350915652\"",
+      "last_modified": "Sun, 29 Mar 2026 01:00:37 GMT",
       "version": "c3962d607bd328f9"
     },
     "12420": {
@@ -34572,22 +35061,40 @@
       "version": "4b9122c745708efa"
     },
     "12441": {
-      "version": "6f9564f1a791f26a"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12441.jpg?v=1786391837796000000",
+      "etag": "\"1786391837.796-29882-2349801536\"",
+      "last_modified": "Mon, 10 Aug 2026 19:57:17 GMT",
+      "version": "c3dba57d60b6d72e"
     },
     "12442": {
-      "version": "0b2be41481fe9a12"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12442.jpg?v=1786390435784000000",
+      "etag": "\"1786390435.784-35482-2350129217\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "f88655d04e0a0f0b"
     },
     "12443": {
-      "version": "a0712298f5c428ce"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12443.jpg?v=1786390435396000000",
+      "etag": "\"1786390435.396-28718-2350456898\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "f786ef46289b6a88"
     },
     "12444": {
-      "version": "d11b79e86b11fd51"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12444.jpg?v=1786390435283000000",
+      "etag": "\"1786390435.283-25774-2350784579\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "6d0fd634685e322b"
     },
     "12445": {
-      "version": "20390a3330e15aba"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12445.jpg?v=1786390435360000000",
+      "etag": "\"1786390435.36-12157-2351112260\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "f6791a46199b472a"
     },
     "12446": {
-      "version": "2cda30859d48f9a5"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12446.jpg?v=1786390435662000000",
+      "etag": "\"1786390435.662-39926-2351439941\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:55 GMT",
+      "version": "bda09f36ed36581c"
     },
     "12447": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12447.jpg?v=1774746110008896400",
@@ -34596,57 +35103,111 @@
       "version": "21ef0a2003b4b185"
     },
     "12448": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12448.jpg?v=1774746114235955300",
+      "etag": "\"1774746114.2359552-3155-2352095303\"",
+      "last_modified": "Sun, 29 Mar 2026 01:01:54 GMT",
       "version": "d71d9b951436b027"
     },
     "12449": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12449.jpg?v=1774746118146971500",
+      "etag": "\"1774746118.1469715-19728-2352422984\"",
+      "last_modified": "Sun, 29 Mar 2026 01:01:58 GMT",
       "version": "5837e9273e073c24"
     },
     "12450": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12450.jpg?v=1774746121512598400",
+      "etag": "\"1774746121.5125985-19728-2349867072\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:01 GMT",
       "version": "5837e9273e073c24"
     },
     "12451": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12451.jpg?v=1774746125731035200",
+      "etag": "\"1774746125.7310352-13317-2350194753\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:05 GMT",
       "version": "d0fb52b124748a7a"
     },
     "12452": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12452.jpg?v=1774746129997370400",
+      "etag": "\"1774746129.9973705-216876-2350522434\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:09 GMT",
       "version": "82dfb31545b28e31"
     },
     "12453": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12453.jpg?v=1774746134263892900",
+      "etag": "\"1774746134.263893-59825-2350850115\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:14 GMT",
       "version": "ffe2cfe3c9320235"
     },
     "12454": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12454.jpg?v=1774746138247072200",
+      "etag": "\"1774746138.2470722-18247-2351177796\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:18 GMT",
       "version": "7cbcbb15967dbb0f"
     },
     "12455": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12455.jpg?v=1774746141890596700",
+      "etag": "\"1774746141.8905966-9320-2351505477\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:21 GMT",
       "version": "a0938dd6bc277e29"
     },
     "12456": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12456.jpg?v=1774746146260935800",
+      "etag": "\"1774746146.2609358-36150-2351833158\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:26 GMT",
       "version": "419bdd6fc2ae7f57"
     },
     "12457": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12457.jpg?v=1774746150887756200",
+      "etag": "\"1774746150.887756-163697-2352160839\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:30 GMT",
       "version": "6a3369b7c5a3ba81"
     },
     "12458": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12458.jpg?v=1774746154438210800",
+      "etag": "\"1774746154.4382107-23536-2352488520\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:34 GMT",
       "version": "404143a78201f7ac"
     },
     "12459": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12459.jpg?v=1774746158641824300",
+      "etag": "\"1774746158.6418242-98366-2352816201\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:38 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12460": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12460.jpg?v=1774746162725267200",
+      "etag": "\"1774746162.7252672-98366-2350260289\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:42 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12461": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12461.jpg?v=1774746166654794200",
+      "etag": "\"1774746166.6547942-98366-2350587970\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:46 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12462": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12462.jpg?v=1774746170648851800",
+      "etag": "\"1774746170.6488519-98366-2350915651\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:50 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12463": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12463.jpg?v=1774746174593647300",
+      "etag": "\"1774746174.5936472-98366-2351243332\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:54 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12464": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12464.jpg?v=1774746178581926500",
+      "etag": "\"1774746178.5819266-98366-2351571013\"",
+      "last_modified": "Sun, 29 Mar 2026 01:02:58 GMT",
       "version": "5553ee526ee51d2e"
     },
     "12465": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12465.jpg?v=1774746182345547400",
+      "etag": "\"1774746182.3455474-33880-2351898694\"",
+      "last_modified": "Sun, 29 Mar 2026 01:03:02 GMT",
       "version": "5653dd8d88af21d4"
     },
     "12466": {
@@ -34668,141 +35229,279 @@
       "version": "73bf1a85b7016994"
     },
     "12469": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12469.jpg?v=1774746199092385200",
+      "etag": "\"1774746199.0923853-8364-2353209418\"",
+      "last_modified": "Sun, 29 Mar 2026 01:03:19 GMT",
       "version": "a06b97eabfb10ce4"
     },
     "12470": {
-      "version": "a42904699f270bdb"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12470.jpg?v=1786391691434000000",
+      "etag": "\"1786391691.434-23849-2350653506\"",
+      "last_modified": "Mon, 10 Aug 2026 19:54:51 GMT",
+      "version": "6f4dfa768cca3e1f"
     },
     "12474": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12474.jpg?v=1774746211723249500",
+      "etag": "\"1774746211.7232494-7095-2351964230\"",
+      "last_modified": "Sun, 29 Mar 2026 01:03:31 GMT",
       "version": "0ff0ec91b3bd507f"
     },
     "12476": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12476.jpg?v=1774746215775351000",
+      "etag": "\"1774746215.775351-6909-2352619592\"",
+      "last_modified": "Sun, 29 Mar 2026 01:03:35 GMT",
       "version": "7880d3b57fce4cd3"
     },
     "12477": {
-      "version": "89cc5617484eb7b4"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12477.jpg?v=1786192918082000000",
+      "etag": "\"1786192918.082-48771-2352947273\"",
+      "last_modified": "Sat, 08 Aug 2026 12:41:58 GMT",
+      "version": "73a91e7036992188"
     },
     "12479": {
-      "version": "d93ecdb2cb0a8b11"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12479.jpg?v=1786192918451000000",
+      "etag": "\"1786192918.451-13499-2353602635\"",
+      "last_modified": "Sat, 08 Aug 2026 12:41:58 GMT",
+      "version": "99a842543b0aa951"
     },
     "12481": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12481.jpg?v=1774746231755254400",
+      "etag": "\"1774746231.7552545-122984-2351374404\"",
+      "last_modified": "Sun, 29 Mar 2026 01:03:51 GMT",
       "version": "d257485f02420578"
     },
     "12482": {
-      "version": "68717dea2bdfc417"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12482.jpg?v=1786390437301000000",
+      "etag": "\"1786390437.301-23015-2351702085\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:57 GMT",
+      "version": "fc55b5e5ba4a4e6f"
     },
     "12483": {
-      "version": "994f281d0a0861b8"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12483.jpg?v=1786390437409000000",
+      "etag": "\"1786390437.409-37393-2352029766\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:57 GMT",
+      "version": "dff956d26d671267"
     },
     "12484": {
-      "version": "d8534bee2613cbec"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12484.jpg?v=1786390437966000000",
+      "etag": "\"1786390437.966-11866-2352357447\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:57 GMT",
+      "version": "1f83240b95402cd4"
     },
     "12485": {
-      "version": "e6191ed048f3971d"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12485.jpg?v=1786390439135000000",
+      "etag": "\"1786390439.135-11257-2352685128\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:59 GMT",
+      "version": "4888a2441d2556d4"
     },
     "12486": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12486.jpg?v=1774746253120899700",
+      "etag": "\"1774746253.1208997-48749-2353012809\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:13 GMT",
       "version": "ec3f84990c3b5838"
     },
     "12487": {
-      "version": "e7457ad24a261bd5"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12487.jpg?v=1786390439307000000",
+      "etag": "\"1786390439.307-79534-2353340490\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:59 GMT",
+      "version": "94b6386ad9c1e64c"
     },
     "12488": {
-      "version": "e7457ad24a261bd5"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12488.jpg?v=1786390439843000000",
+      "etag": "\"1786390439.843-43848-2353668171\"",
+      "last_modified": "Mon, 10 Aug 2026 19:33:59 GMT",
+      "version": "56e0f18af349f070"
     },
     "12489": {
-      "version": "0617206c53356768"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12489.jpg?v=1786390441111000000",
+      "etag": "\"1786390441.111-17214-2353995852\"",
+      "last_modified": "Mon, 10 Aug 2026 19:34:01 GMT",
+      "version": "ed05ac31f0539725"
     },
     "12490": {
-      "version": "e3538d9924cfac47"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12490.jpg?v=1786390441900000000",
+      "etag": "\"1786390441.9-95429-2351439940\"",
+      "last_modified": "Mon, 10 Aug 2026 19:34:01 GMT",
+      "version": "92c304937041fbb9"
     },
     "12491": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12491.jpg?v=1774746274829467200",
+      "etag": "\"1774746274.8294673-110120-2351767621\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:34 GMT",
       "version": "b811136ea6f35888"
     },
     "12492": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12492.jpg?v=1774746279139703300",
+      "etag": "\"1774746279.1397033-23672-2352095302\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:39 GMT",
       "version": "4ae239571ad4044d"
     },
     "12493": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12493.jpg?v=1774746283092316600",
+      "etag": "\"1774746283.0923166-80144-2352422983\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:43 GMT",
       "version": "6283cfff17f2e3ce"
     },
     "12494": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12494.jpg?v=1774746287615825900",
+      "etag": "\"1774746287.615826-22506-2352750664\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:47 GMT",
       "version": "0753fac9a1b44c6a"
     },
     "12495": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12495.jpg?v=1774746292252885200",
+      "etag": "\"1774746292.252885-46384-2353078345\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:52 GMT",
       "version": "621a9277632e8cbf"
     },
     "12496": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12496.jpg?v=1774746295893435100",
+      "etag": "\"1774746295.893435-82532-2353406026\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:55 GMT",
       "version": "5d7ad7553bed31a7"
     },
     "12497": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12497.jpg?v=1774746299773440200",
+      "etag": "\"1774746299.7734401-82532-2353733707\"",
+      "last_modified": "Sun, 29 Mar 2026 01:04:59 GMT",
       "version": "5d7ad7553bed31a7"
     },
     "12498": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12498.jpg?v=1774746303321969600",
+      "etag": "\"1774746303.3219695-43461-2354061388\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:03 GMT",
       "version": "841d339694194ac9"
     },
     "12499": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12499.jpg?v=1774746307090358300",
+      "etag": "\"1774746307.0903583-20139-2354389069\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:07 GMT",
       "version": "cec45e8adf53d62c"
     },
     "12500": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12500.jpg?v=1774746310798237300",
+      "etag": "\"1774746310.7982373-19635-2348359740\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:10 GMT",
       "version": "eebf3ff24db8f70c"
     },
     "12501": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12501.jpg?v=1774746315690857200",
+      "etag": "\"1774746315.6908572-33810-2348687421\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:15 GMT",
       "version": "670ceb7d2c70636a"
     },
     "12502": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12502.jpg?v=1774746320068244400",
+      "etag": "\"1774746320.0682445-98280-2349015102\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:20 GMT",
       "version": "0fb5958171e03d7a"
     },
     "12503": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12503.jpg?v=1774746323816262300",
+      "etag": "\"1774746323.8162622-20139-2349342783\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:23 GMT",
       "version": "cec45e8adf53d62c"
     },
     "12504": {
-      "version": "6471585b8891c114"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12504.jpg?v=1786202507445000000",
+      "etag": "\"1786202507.445-10492-2349670464\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "aefd5a1f428a36a6"
     },
     "12505": {
-      "version": "f4b437b317a92df8"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12505.jpg?v=1786202507391000000",
+      "etag": "\"1786202507.391-10494-2349998145\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "fcc27c7fcf7ef3ff"
     },
     "12506": {
-      "version": "8d94d043f2beccdd"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12506.jpg?v=1786202507440000000",
+      "etag": "\"1786202507.44-10495-2350325826\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "bec6cdb7c4d30b64"
     },
     "12507": {
-      "version": "5930474b4b19ac23"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12507.jpg?v=1786202507342000000",
+      "etag": "\"1786202507.342-10490-2350653507\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "32eeb385cb54b71b"
     },
     "12508": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12508.jpg?v=1774746343792285600",
+      "etag": "\"1774746343.7922857-10477-2350981188\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:43 GMT",
       "version": "f555b29a2ce56073"
     },
     "12509": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12509.jpg?v=1774746347865637900",
+      "etag": "\"1774746347.865638-17283-2351308869\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:47 GMT",
       "version": "3d2f67388f632078"
     },
     "12510": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12510.jpg?v=1774746352255057400",
+      "etag": "\"1774746352.2550573-14963-2348752957\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:52 GMT",
       "version": "bd3d869abc27deca"
     },
     "12511": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12511.jpg?v=1774746355662827300",
+      "etag": "\"1774746355.6628273-8866-2349080638\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:55 GMT",
       "version": "9deae87f80697d32"
     },
     "12512": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12512.jpg?v=1774746359720603100",
+      "etag": "\"1774746359.720603-30989-2349408319\"",
+      "last_modified": "Sun, 29 Mar 2026 01:05:59 GMT",
       "version": "05f7359e66f704c9"
     },
     "12513": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12513.jpg?v=1774746363484813100",
+      "etag": "\"1774746363.4848132-30989-2349736000\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:03 GMT",
       "version": "05f7359e66f704c9"
     },
     "12514": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12514.jpg?v=1774746368438476400",
+      "etag": "\"1774746368.4384763-61661-2350063681\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:08 GMT",
       "version": "a77cc6928d915597"
     },
     "12515": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12515.jpg?v=1774746372197372400",
+      "etag": "\"1774746372.1973724-26472-2350391362\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:12 GMT",
       "version": "5367b1d02d9a084c"
     },
     "12516": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12516.jpg?v=1774746376252463500",
+      "etag": "\"1774746376.2524636-47512-2350719043\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:16 GMT",
       "version": "cca6c82d70b6131d"
     },
     "12517": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12517.jpg?v=1774746379961084600",
+      "etag": "\"1774746379.9610846-26154-2351046724\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:19 GMT",
       "version": "3e85fba00c6bb07d"
     },
     "12518": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12518.jpg?v=1774746384554257400",
+      "etag": "\"1774746384.5542574-56107-2351374405\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:24 GMT",
       "version": "d1980b10374a0792"
     },
     "12520": {
-      "version": "ba5e0d3de0b1fb79"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12520.jpg?v=1786137667895000000",
+      "etag": "\"1786137667.895-20724-2349146174\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:07 GMT",
+      "version": "9113259f040bed83"
     },
     "12521": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12521.jpg?v=1774746392090417100",
+      "etag": "\"1774746392.0904171-58961-2349473855\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:32 GMT",
       "version": "a76a5344b41ea89d"
     },
     "12522": {
@@ -34818,6 +35517,9 @@
       "version": "5f37ed6d0f515dee"
     },
     "12524": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12524.jpg?v=1774746404000970900",
+      "etag": "\"1774746404.0009708-95700-2350456898\"",
+      "last_modified": "Sun, 29 Mar 2026 01:06:44 GMT",
       "version": "a77b1e02e5be2dbe"
     },
     "12526": {
@@ -34845,42 +35547,81 @@
       "version": "a0863bb62a2c35dd"
     },
     "12534": {
-      "version": "564da4360724ec2c"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12534.jpg?v=1786477743266000000",
+      "etag": "\"1786477743.266-32053-2350850115\"",
+      "last_modified": "Tue, 11 Aug 2026 19:49:03 GMT",
+      "version": "95be15fdaf20749e"
     },
     "12537": {
-      "version": "8ed3828d1c65bcf1"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12537.jpg?v=1786194937404000000",
+      "etag": "\"1786194937.404-30848-2351833158\"",
+      "last_modified": "Sat, 08 Aug 2026 13:15:37 GMT",
+      "version": "acfcdcde787bff72"
     },
     "12538": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12538.jpg?v=1774746433194692000",
+      "etag": "\"1774746433.194692-29479-2352160839\"",
+      "last_modified": "Sun, 29 Mar 2026 01:07:13 GMT",
       "version": "afaefa79ae2e6a9c"
     },
     "12539": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12539.jpg?v=1774746438601370500",
+      "etag": "\"1774746438.6013706-52904-2352488520\"",
+      "last_modified": "Sun, 29 Mar 2026 01:07:18 GMT",
       "version": "67810e0a2280f384"
     },
     "12540": {
-      "version": "4cedf8ed937e4ecf"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12540.jpg?v=1777408137179000000",
+      "etag": "\"1777408137.179-252566-2349932608\"",
+      "last_modified": "Tue, 28 Apr 2026 20:28:57 GMT",
+      "version": "65e90e970a4c40a7"
     },
     "12541": {
-      "version": "4d9badf781f4f689"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12541.jpg?v=1782424509974000000",
+      "etag": "\"1782424509.974-40326-2350260289\"",
+      "last_modified": "Thu, 25 Jun 2026 21:55:09 GMT",
+      "version": "0fce60e3ed9b9a75"
     },
     "12542": {
-      "version": "7867605e9797d4f4"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12542.jpg?v=1782424510056000000",
+      "etag": "\"1782424510.056-44521-2350587970\"",
+      "last_modified": "Thu, 25 Jun 2026 21:55:10 GMT",
+      "version": "f305f8ea1b1d2577"
     },
     "12543": {
-      "version": "1f7288806ff4e8dd"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12543.jpg?v=1782424510092000000",
+      "etag": "\"1782424510.092-50170-2350915651\"",
+      "last_modified": "Thu, 25 Jun 2026 21:55:10 GMT",
+      "version": "58ba8a9111652879"
     },
     "12544": {
-      "version": "940bc84f62bf6f4c"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12544.jpg?v=1782424510084000000",
+      "etag": "\"1782424510.084-22591-2351243332\"",
+      "last_modified": "Thu, 25 Jun 2026 21:55:10 GMT",
+      "version": "6a3df5f1fd1d83b4"
     },
     "12545": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12545.jpg?v=1774746463730612800",
+      "etag": "\"1774746463.7306128-17301-2351571013\"",
+      "last_modified": "Sun, 29 Mar 2026 01:07:43 GMT",
       "version": "91a6c6e71f408f18"
     },
     "12546": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12546.jpg?v=1774746467312557500",
+      "etag": "\"1774746467.3125575-17301-2351898694\"",
+      "last_modified": "Sun, 29 Mar 2026 01:07:47 GMT",
       "version": "91a6c6e71f408f18"
     },
     "12547": {
-      "version": "b1b6549675db7e38"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12547.jpg?v=1777060342685000000",
+      "etag": "\"1777060342.685-200019-2352226375\"",
+      "last_modified": "Fri, 24 Apr 2026 19:52:22 GMT",
+      "version": "388fe08cdb7a310a"
     },
     "12548": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12548.jpg?v=1774746475664646000",
+      "etag": "\"1774746475.664646-81034-2352554056\"",
+      "last_modified": "Sun, 29 Mar 2026 01:07:55 GMT",
       "version": "f610338eb759bef8"
     },
     "12549": {
@@ -34890,42 +35631,81 @@
       "version": "9b9f0b7519873996"
     },
     "12550": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12550.jpg?v=1774746484810461300",
+      "etag": "\"1774746484.8104613-42212-2350325825\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:04 GMT",
       "version": "9335f051c40a2e30"
     },
     "12552": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12552.jpg?v=1774746488713842600",
+      "etag": "\"1774746488.7138426-42212-2350981187\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:08 GMT",
       "version": "9335f051c40a2e30"
     },
     "12554": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12554.jpg?v=1774746493338079100",
+      "etag": "\"1774746493.3380792-44674-2351636549\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:13 GMT",
       "version": "2d1943b4b44c148c"
     },
     "12556": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12556.jpg?v=1774746497219145700",
+      "etag": "\"1774746497.2191458-42212-2352291911\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:17 GMT",
       "version": "9335f051c40a2e30"
     },
     "12558": {
-      "version": "f555b29a2ce56073"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12558.jpg?v=1786390830956000000",
+      "etag": "\"1786390830.956-26593-2352947273\"",
+      "last_modified": "Mon, 10 Aug 2026 19:40:30 GMT",
+      "version": "4ff9c5c0df9addce"
     },
     "12559": {
-      "version": "864ca61311780a84"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg?v=1786478033424000000",
+      "etag": "\"1786478033.424-11652-2353274954\"",
+      "last_modified": "Tue, 11 Aug 2026 19:53:53 GMT",
+      "version": "50d21ce11c723d07"
     },
     "12560": {
-      "version": "e4fbbd769b94774f"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12560.jpg?v=1786387486195000000",
+      "etag": "\"1786387486.195-46600-2350719042\"",
+      "last_modified": "Mon, 10 Aug 2026 18:44:46 GMT",
+      "version": "b1a1f84b2fb9ceb4"
     },
     "12562": {
-      "version": "e4fbbd769b94774f"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12562.jpg?v=1786387483987000000",
+      "etag": "\"1786387483.987-38597-2351374404\"",
+      "last_modified": "Mon, 10 Aug 2026 18:44:43 GMT",
+      "version": "fb2966506f59e877"
     },
     "12563": {
-      "version": "b6c6484031a53178"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12563.jpg?v=1786387483881000000",
+      "etag": "\"1786387483.881-36733-2351702085\"",
+      "last_modified": "Mon, 10 Aug 2026 18:44:43 GMT",
+      "version": "9d2a580bc0d61e71"
     },
     "12564": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12564.jpg?v=1774746520734911600",
+      "etag": "\"1774746520.7349117-166923-2352029766\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:40 GMT",
       "version": "18decf22af0de0bc"
     },
     "12566": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12566.jpg?v=1774746524805413300",
+      "etag": "\"1774746524.8054132-6536-2352685128\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:44 GMT",
       "version": "a051195bff544666"
     },
     "12568": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12568.jpg?v=1774746529035078300",
+      "etag": "\"1774746529.0350783-9915-2353340490\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:49 GMT",
       "version": "740652e19e67c195"
     },
     "12570": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12570.jpg?v=1774746532968424800",
+      "etag": "\"1774746532.9684248-5482-2351112259\"",
+      "last_modified": "Sun, 29 Mar 2026 01:08:52 GMT",
       "version": "49fe5053d47c4a6a"
     },
     "12572": {
@@ -34935,49 +35715,94 @@
       "version": "5a13f424fc42f64d"
     },
     "12574": {
-      "version": "2e5e3ea25c39d6f7"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12574.jpg?v=1786202505097000000",
+      "etag": "\"1786202505.097-19904-2352422983\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:45 GMT",
+      "version": "d3d04fc3a41ee93c"
     },
     "12575": {
-      "version": "5a8b78bb4e44823f"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12575.jpg?v=1786202507103000000",
+      "etag": "\"1786202507.103-19909-2352750664\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "95d3df73d3ee4a8a"
     },
     "12576": {
-      "version": "dc574c9c21fcad4c"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12576.jpg?v=1786202507318000000",
+      "etag": "\"1786202507.318-19923-2353078345\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "ab9619a519baed93"
     },
     "12577": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12577.jpg?v=1774746554684635400",
+      "etag": "\"1774746554.6846354-25368-2353406026\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:14 GMT",
       "version": "af3b54d64d07740d"
     },
     "12578": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12578.jpg?v=1774746558688114900",
+      "etag": "\"1774746558.688115-4566-2353733707\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:18 GMT",
       "version": "e23f95ad3c379841"
     },
     "12579": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12579.jpg?v=1774746562299895500",
+      "etag": "\"1774746562.2998955-9300-2354061388\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:22 GMT",
       "version": "435c9b67a65842cc"
     },
     "12580": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12580.jpg?v=1774746566264295800",
+      "etag": "\"1774746566.2642958-11705-2351505476\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:26 GMT",
       "version": "db9f2d40e045f09a"
     },
     "12581": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12581.jpg?v=1774746570414732600",
+      "etag": "\"1774746570.4147327-73018-2351833157\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:30 GMT",
       "version": "fb751a4433b66f1c"
     },
     "12582": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12582.jpg?v=1774746575033306600",
+      "etag": "\"1774746575.0333066-46439-2352160838\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:35 GMT",
       "version": "53697d202d82376f"
     },
     "12583": {
-      "version": "86fa1903f085bb2f"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12583.jpg?v=1786137667864000000",
+      "etag": "\"1786137667.864-34478-2352488519\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:07 GMT",
+      "version": "4e41e841495ec519"
     },
     "12584": {
-      "version": "ffdec71cac70a191"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12584.jpg?v=1786137668698000000",
+      "etag": "\"1786137668.698-76585-2352816200\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:08 GMT",
+      "version": "bb5387d7ea10f92d"
     },
     "12585": {
-      "version": "fc43d977c66ad65b"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12585.jpg?v=1786137668893000000",
+      "etag": "\"1786137668.893-57343-2353143881\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:08 GMT",
+      "version": "af7ab06dac098e8d"
     },
     "12586": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12586.jpg?v=1774746590048315600",
+      "etag": "\"1774746590.0483155-12236-2353471562\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:50 GMT",
       "version": "cd87e9a96e116466"
     },
     "12587": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12587.jpg?v=1774746595288100400",
+      "etag": "\"1774746595.2881005-44131-2353799243\"",
+      "last_modified": "Sun, 29 Mar 2026 01:09:55 GMT",
       "version": "05ed2f5a0517b484"
     },
     "12588": {
-      "version": "53697d202d82376f"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12588.jpg?v=1786202507345000000",
+      "etag": "\"1786202507.345-42799-2354126924\"",
+      "last_modified": "Sat, 08 Aug 2026 15:21:47 GMT",
+      "version": "44a9c7c4798dc795"
     },
     "12589": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12589.jpg?v=1774746603902717300",
@@ -35022,6 +35847,9 @@
       "version": "208f46d6d578e4bd"
     },
     "12602": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12602.jpg?v=1774746632994460300",
+      "etag": "\"1774746632.9944603-26995-2349473855\"",
+      "last_modified": "Sun, 29 Mar 2026 01:10:32 GMT",
       "version": "6ef1729ae1e9d7c7"
     },
     "12604": {
@@ -35079,9 +35907,15 @@
       "version": "0f647978dc2220e8"
     },
     "12615": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12615.jpg?v=1774746676474299700",
+      "etag": "\"1774746676.4742997-165235-2350850115\"",
+      "last_modified": "Sun, 29 Mar 2026 01:11:16 GMT",
       "version": "6b9cce994bb9d713"
     },
     "12617": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12617.jpg?v=1774746681252731600",
+      "etag": "\"1774746681.2527316-60678-2351505477\"",
+      "last_modified": "Sun, 29 Mar 2026 01:11:21 GMT",
       "version": "663cef6b7390bddb"
     },
     "12619": {
@@ -35109,7 +35943,10 @@
       "version": "ded22ebf5e6d194c"
     },
     "12624": {
-      "version": "297e716e602fb432"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12624.jpg?v=1786137565819000000",
+      "etag": "\"1786137565.819-19373-2350915651\"",
+      "last_modified": "Fri, 07 Aug 2026 21:19:25 GMT",
+      "version": "8f808069c9a9d766"
     },
     "12625": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12625.jpg?v=1774746710993830400",
@@ -35118,52 +35955,100 @@
       "version": "4a45200d1ecdecb2"
     },
     "12626": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12626.jpg?v=1774746714735946200",
+      "etag": "\"1774746714.7359462-95700-2351571013\"",
+      "last_modified": "Sun, 29 Mar 2026 01:11:54 GMT",
       "version": "a77b1e02e5be2dbe"
     },
     "12628": {
-      "version": "50ac692ae28c7843"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12628.jpg?v=1782499857439000000",
+      "etag": "\"1782499857.439-8919-2352226375\"",
+      "last_modified": "Fri, 26 Jun 2026 18:50:57 GMT",
+      "version": "b6cd3acf9a1faf01"
     },
     "12629": {
-      "version": "996073fcf4302278"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12629.jpg?v=1786203480478000000",
+      "etag": "\"1786203480.478-36013-2352554056\"",
+      "last_modified": "Sat, 08 Aug 2026 15:38:00 GMT",
+      "version": "3bbab52619319f10"
     },
     "12630": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12630.jpg?v=1774746728307210600",
+      "etag": "\"1774746728.3072107-58772-2349998144\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:08 GMT",
       "version": "f36646ef96f505a9"
     },
     "12631": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12631.jpg?v=1774746732766841300",
+      "etag": "\"1774746732.7668414-214523-2350325825\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:12 GMT",
       "version": "455d7cd9cacf357f"
     },
     "12632": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12632.jpg?v=1774746736313017600",
+      "etag": "\"1774746736.3130176-61766-2350653506\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:16 GMT",
       "version": "4318791a44e5b024"
     },
     "12633": {
-      "version": "8bf32ea69cd40078"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12633.jpg?v=1786203480738000000",
+      "etag": "\"1786203480.738-43792-2350981187\"",
+      "last_modified": "Sat, 08 Aug 2026 15:38:00 GMT",
+      "version": "d0aaa08e9169a42e"
     },
     "12634": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12634.jpg?v=1774746744604435300",
+      "etag": "\"1774746744.6044352-57761-2351308868\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:24 GMT",
       "version": "f132eaadc55efbdb"
     },
     "12635": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12635.jpg?v=1774746748762402200",
+      "etag": "\"1774746748.7624023-28168-2351636549\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:28 GMT",
       "version": "d6ed6bd4d51b5d10"
     },
     "12636": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12636.jpg?v=1774746753012832600",
+      "etag": "\"1774746753.0128326-28844-2351964230\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:33 GMT",
       "version": "8ba1bf766051b3aa"
     },
     "12637": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12637.jpg?v=1774746757776815300",
+      "etag": "\"1774746757.7768154-92498-2352291911\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:37 GMT",
       "version": "6bb63f675290c874"
     },
     "12638": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12638.jpg?v=1774746761602637700",
+      "etag": "\"1774746761.6026378-29332-2352619592\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:41 GMT",
       "version": "178ce4645037fa16"
     },
     "12639": {
-      "version": "fc2877591d98391d"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12639.jpg?v=1786203480553000000",
+      "etag": "\"1786203480.553-42267-2352947273\"",
+      "last_modified": "Sat, 08 Aug 2026 15:38:00 GMT",
+      "version": "51dca91d0a7f9f4f"
     },
     "12640": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12640.jpg?v=1774746770906880300",
+      "etag": "\"1774746770.9068804-61509-2350391361\"",
+      "last_modified": "Sun, 29 Mar 2026 01:12:50 GMT",
       "version": "8e54dcdfe6041ab9"
     },
     "12641": {
-      "version": "30ea87ccc93e9767"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12641.jpg?v=1786137669248000000",
+      "etag": "\"1786137669.248-26163-2350719042\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:09 GMT",
+      "version": "a7c7aab94c05ae1f"
     },
     "12642": {
-      "version": "7650f39fd8f0068e"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12642.jpg?v=1786137669534000000",
+      "etag": "\"1786137669.534-38861-2351046723\"",
+      "last_modified": "Fri, 07 Aug 2026 21:21:09 GMT",
+      "version": "f7d172c7ccd29c9e"
     },
     "12643": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12643.jpg?v=1774746783434808100",
@@ -35172,7 +36057,10 @@
       "version": "9fa961df85b2a932"
     },
     "12645": {
-      "version": "b0fe785a5f0fa9cc"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12645.jpg?v=1786394071539000000",
+      "etag": "\"1786394071.539-36186-2352029766\"",
+      "last_modified": "Mon, 10 Aug 2026 20:34:31 GMT",
+      "version": "48d1eb9193b9c2aa"
     },
     "12647": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12647.jpg?v=1774746792319155400",
@@ -35205,7 +36093,10 @@
       "version": "40b74bd813f0a166"
     },
     "12654": {
-      "version": "f1e069ddd948e5c0"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12654.jpg?v=1782161890870000000",
+      "etag": "\"1782161890.87-20747-2352095302\"",
+      "last_modified": "Mon, 22 Jun 2026 20:58:10 GMT",
+      "version": "70fd138f15b3f110"
     },
     "12655": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12655.jpg?v=1774746819174088200",
@@ -35268,58 +36159,112 @@
       "version": "ff60b132bcd94647"
     },
     "12676": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12676.jpg?v=1774746878993071300",
+      "etag": "\"1774746878.9930713-3606-2353537098\"",
+      "last_modified": "Sun, 29 Mar 2026 01:14:38 GMT",
       "version": "82cb9a99e24f7b39"
     },
     "12679": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12679.jpg?v=1774746883365093200",
+      "etag": "\"1774746883.3650932-188551-2354520141\"",
+      "last_modified": "Sun, 29 Mar 2026 01:14:43 GMT",
       "version": "69c07511a52545ab"
     },
     "12681": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12681.jpg?v=1774746887608940100",
+      "etag": "\"1774746887.6089401-188551-2352291910\"",
+      "last_modified": "Sun, 29 Mar 2026 01:14:47 GMT",
       "version": "69c07511a52545ab"
     },
     "12683": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12683.jpg?v=1774746891929120900",
+      "etag": "\"1774746891.929121-95700-2352947272\"",
+      "last_modified": "Sun, 29 Mar 2026 01:14:51 GMT",
       "version": "a77b1e02e5be2dbe"
     },
     "12685": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12685.jpg?v=1774746897028601000",
+      "etag": "\"1774746897.028601-36700-2353602634\"",
+      "last_modified": "Sun, 29 Mar 2026 01:14:57 GMT",
       "version": "e2d05f963fa3f42e"
     },
     "12686": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12686.jpg?v=1774746900621424700",
+      "etag": "\"1774746900.6214247-34523-2353930315\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:00 GMT",
       "version": "8efb1145a8b61b7d"
     },
     "12687": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12687.jpg?v=1774746904430328200",
+      "etag": "\"1774746904.4303281-29520-2354257996\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:04 GMT",
       "version": "de3b4098d13c48cf"
     },
     "12688": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12688.jpg?v=1774746908639485300",
+      "etag": "\"1774746908.6394854-13002-2354585677\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:08 GMT",
       "version": "ce408b53edeea9ba"
     },
     "12689": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12689.jpg?v=1774746914115644600",
+      "etag": "\"1774746914.1156447-66416-2354913358\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:14 GMT",
       "version": "f5756c7f5a19c415"
     },
     "12691": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12691.jpg?v=1774746917892493500",
+      "etag": "\"1774746917.8924935-29180-2352685127\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:17 GMT",
       "version": "409d9323e8ac873f"
     },
     "12692": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12692.jpg?v=1774746921578570200",
+      "etag": "\"1774746921.5785701-141719-2353012808\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:21 GMT",
       "version": "ae4b46ddda4f5f1f"
     },
     "12693": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12693.jpg?v=1774746925970520300",
+      "etag": "\"1774746925.9705203-39241-2353340489\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:25 GMT",
       "version": "cb6ec6d7904cda7e"
     },
     "12694": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12694.jpg?v=1774746929837724100",
+      "etag": "\"1774746929.8377242-74498-2353668170\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:29 GMT",
       "version": "36cbeca528f1a522"
     },
     "12695": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12695.jpg?v=1774746934385613300",
+      "etag": "\"1774746934.3856132-37504-2353995851\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:34 GMT",
       "version": "ef95e546b17797da"
     },
     "12696": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12696.jpg?v=1774746938460432400",
+      "etag": "\"1774746938.4604323-11691-2354323532\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:38 GMT",
       "version": "ad6cc468bd735948"
     },
     "12697": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12697.jpg?v=1774746942331793900",
+      "etag": "\"1774746942.3317938-18796-2354651213\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:42 GMT",
       "version": "12bb5c4004c0f30f"
     },
     "12698": {
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12698.jpg?v=1774746946352326900",
+      "etag": "\"1774746946.3523269-77607-2354978894\"",
+      "last_modified": "Sun, 29 Mar 2026 01:15:46 GMT",
       "version": "267b8904431a89ea"
     },
     "12700": {
-      "version": "9f8330a25d20bf84"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12700.jpg?v=1786390443377000000",
+      "etag": "\"1786390443.377-48601-2349277246\"",
+      "last_modified": "Mon, 10 Aug 2026 19:34:03 GMT",
+      "version": "a02397598ef6c055"
     },
     "12701": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12701.jpg?v=1774746953728091900",
@@ -35406,7 +36351,10 @@
       "version": "267e050c45f1a68e"
     },
     "12721": {
-      "version": "a06dd0e224dc9784"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/12721.jpg?v=1779398255363000000",
+      "etag": "\"1779398255.363-59599-2350391361\"",
+      "last_modified": "Thu, 21 May 2026 21:17:35 GMT",
+      "version": "a07fcb9451d28fc8"
     },
     "12722": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/12722.jpg?v=1774747034822304100",
