@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2064094
+      "saldo": 2126342
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-18T16:15:59.292223",
+  "generated_at": "2026-08-18T16:43:53.364643",
   "kpis": {
-    "a_vencer_7d": 274095,
+    "a_vencer_7d": 274665,
     "juros_pagos": 73700,
-    "total_aberto": 2345305,
+    "total_aberto": 2407553,
     "total_pago_periodo": 5092418,
     "total_vencido": 281211
   },
@@ -154,9 +154,9 @@
       "total_aberto": 66394
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 4,
-      "total_aberto": 44032
+      "fornecedor": "INOX -TECH COMERCIO DE ACOS INOXIDAVEIS LTDA",
+      "titulos": 3,
+      "total_aberto": 48908
     }
   ]
 }
