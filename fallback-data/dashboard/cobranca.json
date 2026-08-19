@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 920750.06
+      "saldo": 915835.61
     },
     {
       "faixa": "180+ dias",
@@ -10,7 +10,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 104508.97
+      "saldo": 97805.69
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 12658.49
     }
   ],
-  "generated_at": "2026-08-19T08:15:12.897293",
+  "generated_at": "2026-08-19T09:15:03.459567",
   "kpis": {
-    "clientes_atraso": 66,
-    "total_aberto": 1269349.9400000002,
-    "total_atraso": 348599.88,
-    "total_vencer": 920750.06
+    "clientes_atraso": 63,
+    "total_aberto": 1257732.21,
+    "total_atraso": 341896.6,
+    "total_vencer": 915835.6100000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,13 +40,6 @@
       "loja": "Loja 2",
       "saldo": 160.8,
       "vencimento": "2026-08-14T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 1004,
-      "vencimento": "2026-08-15T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
@@ -102,6 +95,13 @@
       "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 1970,
+      "vencimento": "2026-08-19T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": 0,
+      "loja": "Loja 2",
+      "saldo": 160,
       "vencimento": "2026-08-19T00:00:00"
     }
   ],
