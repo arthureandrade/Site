@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2114138
+      "saldo": 2105472
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-19T16:46:28.724665",
+  "generated_at": "2026-08-19T17:12:19.661448",
   "kpis": {
-    "a_vencer_7d": 322468,
+    "a_vencer_7d": 316708,
     "juros_pagos": 73700,
-    "total_aberto": 2393178,
-    "total_pago_periodo": 5168021,
+    "total_aberto": 2384512,
+    "total_pago_periodo": 5188793,
     "total_vencido": 279040
   },
   "ok": true,
@@ -88,14 +88,14 @@
       "dias_atraso": 89,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 265,
+      "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "dias_atraso": 89,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 2580,
+      "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
