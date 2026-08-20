@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 887743.56
+      "saldo": 889597.56
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 122965.02
+      "saldo": 120995.02
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 12668.73
     }
   ],
-  "generated_at": "2026-08-20T10:07:20.220457",
+  "generated_at": "2026-08-20T10:54:08.599137",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 1258442.0099999998,
-    "total_atraso": 370698.45,
-    "total_vencer": 887743.56
+    "clientes_atraso": 68,
+    "total_aberto": 1258326.01,
+    "total_atraso": 368728.44999999995,
+    "total_vencer": 889597.56
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -77,17 +77,17 @@
       "vencimento": "2026-08-17T00:00:00"
     },
     {
+      "cliente": "EXCELENTE IMPLEMENTOS E REPRESENTAÇÕES",
+      "dias_atraso": 1,
+      "loja": "Loja 2",
+      "saldo": 2230,
+      "vencimento": "2026-08-19T00:00:00"
+    },
+    {
       "cliente": "LAREDO COMERCIO E SERVICOS LTDA",
       "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 6575,
-      "vencimento": "2026-08-19T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 1970,
       "vencimento": "2026-08-19T00:00:00"
     },
     {
@@ -98,11 +98,11 @@
       "vencimento": "2026-08-19T00:00:00"
     },
     {
-      "cliente": "EXCELENTE IMPLEMENTOS E REPRESENTAÇÕES",
-      "dias_atraso": 1,
-      "loja": "Loja 2",
-      "saldo": 2230,
-      "vencimento": "2026-08-19T00:00:00"
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": 0,
+      "loja": "Loja 4",
+      "saldo": 4199,
+      "vencimento": "2026-08-20T00:00:00"
     }
   ],
   "tipo": "cobranca",
