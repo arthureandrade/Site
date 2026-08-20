@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2105472
+      "saldo": 2172647
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 11359
     }
   ],
-  "generated_at": "2026-08-20T08:17:01.147595",
+  "generated_at": "2026-08-20T09:21:27.015323",
   "kpis": {
     "a_vencer_7d": 318056,
     "juros_pagos": 73700,
-    "total_aberto": 2384512,
+    "total_aberto": 2451687,
     "total_pago_periodo": 4610751,
     "total_vencido": 279040
   },
@@ -149,14 +149,14 @@
       "total_aberto": 86857
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 18,
+      "total_aberto": 77520
+    },
+    {
       "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
       "titulos": 4,
       "total_aberto": 66394
-    },
-    {
-      "fornecedor": "INOX -TECH COMERCIO DE ACOS INOXIDAVEIS LTDA",
-      "titulos": 3,
-      "total_aberto": 48908
     }
   ]
 }
