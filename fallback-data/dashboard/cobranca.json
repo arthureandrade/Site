@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 901300.06
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 130310.23
+      "saldo": 897262.52
     },
     {
       "faixa": "180+ dias",
       "saldo": 120048.19
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 119609.93
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 13209.460000000001
     }
   ],
-  "generated_at": "2026-08-21T09:06:30.323131",
+  "generated_at": "2026-08-21T09:57:18.276792",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1279491.83,
-    "total_atraso": 378191.77,
-    "total_vencer": 901300.06
+    "clientes_atraso": 69,
+    "total_aberto": 1264753.99,
+    "total_atraso": 367491.47000000003,
+    "total_vencer": 897262.52
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 45,
-      "titulos": 7,
-      "total_atraso": 79260.55
+      "titulos": 1,
+      "total_atraso": 70485.25
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",

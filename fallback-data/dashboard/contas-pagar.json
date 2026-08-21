@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2240543
+      "saldo": 2234518
     },
     {
       "faixa": "1–30 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 18434
+      "saldo": 18059
     },
     {
       "faixa": "91–180 dias",
       "saldo": 14204
     }
   ],
-  "generated_at": "2026-08-21T09:06:31.017931",
+  "generated_at": "2026-08-21T09:57:18.966397",
   "kpis": {
-    "a_vencer_7d": 344304,
-    "juros_pagos": 73700,
-    "total_aberto": 2519583,
-    "total_pago_periodo": 4408593,
-    "total_vencido": 279040
+    "a_vencer_7d": 340806,
+    "juros_pagos": 144764,
+    "total_aberto": 2513183,
+    "total_pago_periodo": 4740307,
+    "total_vencido": 278665
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 21,
-      "total_aberto": 894095
+      "titulos": 20,
+      "total_aberto": 891568
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -120,8 +120,8 @@
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 56,
-      "total_aberto": 195888
+      "titulos": 55,
+      "total_aberto": 192390
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
