@@ -6,28 +6,28 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 205025
+      "saldo": 243103
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 47074
     },
     {
       "faixa": "61–90 dias",
       "saldo": 41377
     },
     {
-      "faixa": "31–60 dias",
-      "saldo": 18059
-    },
-    {
       "faixa": "91–180 dias",
       "saldo": 14204
     }
   ],
-  "generated_at": "2026-08-21T09:57:18.966397",
+  "generated_at": "2026-08-21T10:45:11.441921",
   "kpis": {
     "a_vencer_7d": 340806,
     "juros_pagos": 144764,
-    "total_aberto": 2513183,
-    "total_pago_periodo": 4740307,
-    "total_vencido": 278665
+    "total_aberto": 2580276,
+    "total_pago_periodo": 4614076,
+    "total_vencido": 345758
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -154,9 +154,9 @@
       "total_aberto": 77520
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A. ",
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 4,
-      "total_aberto": 66394
+      "total_aberto": 75742
     }
   ]
 }
