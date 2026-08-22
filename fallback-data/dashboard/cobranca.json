@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 932294.0700000001
-    },
-    {
-      "faixa": "180+ dias",
-      "saldo": 120048.19
+      "saldo": 927090.6
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 118750.64
+      "saldo": 123746.35
+    },
+    {
+      "faixa": "180+ dias",
+      "saldo": 120096.06
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 93443.9
+      "saldo": 93938.57
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 20951.28
+      "saldo": 21345.54
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 13209.460000000001
+      "saldo": 12840.19
     }
   ],
-  "generated_at": "2026-08-21T23:28:34.288185",
+  "generated_at": "2026-08-22T00:09:12.042022",
   "kpis": {
-    "clientes_atraso": 66,
-    "total_aberto": 1298697.54,
-    "total_atraso": 366403.47000000003,
-    "total_vencer": 932294.07
+    "clientes_atraso": 70,
+    "total_aberto": 1299057.31,
+    "total_atraso": 371966.70999999996,
+    "total_vencer": 927090.6
   },
   "ok": true,
   "proximos_vencimentos": [
     {
-      "cliente": "REI DAS PECAS COMERCIO DE PECAS USADAS LTDA",
+      "cliente": "MARCIO DA CONCEICAO SOUZA",
+      "dias_atraso": 5,
+      "loja": "Loja 1",
+      "saldo": 376.88,
+      "vencimento": "2026-08-17T00:00:00"
+    },
+    {
+      "cliente": "MARCIO DA CONCEICAO SOUZA",
+      "dias_atraso": 5,
+      "loja": "Loja 1",
+      "saldo": 290.95,
+      "vencimento": "2026-08-17T00:00:00"
+    },
+    {
+      "cliente": "MARCIO DA CONCEICAO SOUZA",
       "dias_atraso": 5,
       "loja": "Loja 4",
-      "saldo": 152.26,
-      "vencimento": "2026-08-16T00:00:00"
-    },
-    {
-      "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 376.5,
-      "vencimento": "2026-08-17T00:00:00"
-    },
-    {
-      "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 290.66,
-      "vencimento": "2026-08-17T00:00:00"
-    },
-    {
-      "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": 4,
-      "loja": "Loja 4",
-      "saldo": 795.17,
+      "saldo": 795.96,
       "vencimento": "2026-08-17T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 1",
-      "saldo": 156.22,
+      "saldo": 156.38,
       "vencimento": "2026-08-17T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 160.32,
+      "saldo": 160.48,
       "vencimento": "2026-08-19T00:00:00"
     },
     {
       "cliente": "EXCELENTE IMPLEMENTOS E REPRESENTAÇÕES",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 2234.46,
+      "saldo": 2236.69,
       "vencimento": "2026-08-19T00:00:00"
     },
     {
       "cliente": "LAREDO COMERCIO E SERVICOS LTDA",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 1",
-      "saldo": 6588.15,
+      "saldo": 6594.73,
       "vencimento": "2026-08-19T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 4",
-      "saldo": 4199,
+      "saldo": 4207.4,
       "vencimento": "2026-08-20T00:00:00"
     },
     {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": 1,
+      "loja": "Loja 2",
+      "saldo": 182,
+      "vencimento": "2026-08-21T00:00:00"
+    },
+    {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 336,
       "vencimento": "2026-08-21T00:00:00"
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 45,
+      "maior_atraso": 46,
       "titulos": 1,
-      "total_atraso": 70485.25
+      "total_atraso": 70552.7
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 532,
+      "maior_atraso": 533,
       "titulos": 7,
-      "total_atraso": 39668.3
+      "total_atraso": 39669.55
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 489,
+      "maior_atraso": 490,
       "titulos": 4,
-      "total_atraso": 23871.85
+      "total_atraso": 23894.12
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 814,
+      "maior_atraso": 815,
       "titulos": 16,
-      "total_atraso": 22007.64
-    },
-    {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 18499.57
+      "total_atraso": 22019.92
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 49,
-      "titulos": 17,
-      "total_atraso": 18342.78
+      "maior_atraso": 50,
+      "titulos": 18,
+      "total_atraso": 18542.780000000002
+    },
+    {
+      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
+      "maior_atraso": 3,
+      "titulos": 1,
+      "total_atraso": 18505.61
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 63,
+      "maior_atraso": 64,
       "titulos": 10,
-      "total_atraso": 13599.75
+      "total_atraso": 13605.23
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 985,
+      "maior_atraso": 986,
       "titulos": 2,
-      "total_atraso": 12926.980000000001
+      "total_atraso": 12933.85
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 295,
+      "maior_atraso": 296,
       "titulos": 2,
-      "total_atraso": 8933.7
+      "total_atraso": 8940.6
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 28,
+      "maior_atraso": 29,
       "titulos": 2,
-      "total_atraso": 8069.219999999999
+      "total_atraso": 8093.48
     }
   ]
 }
