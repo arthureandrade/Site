@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-22T13:35:05.372Z",
+  "generated_at": "2026-08-22T13:57:09.535Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "source_total": 7263,
-  "total": 7263,
+  "source_total": 7256,
+  "total": 7256,
   "produtos": [
     {
       "descricao": "",
@@ -753,21 +753,6 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13771.jpg?v=fe075369e1d63dad",
       "fallback_foto_version": "fe075369e1d63dad"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13696.jpg?v=1774749865924790300",
-      "grupo": 94,
-      "id": 13696,
-      "marca": "",
-      "nome": "(599 - 235/75R17.5 ECO P1) -PNEU XBRI 235/75R17,5 18PR 143/1",
-      "preco": 0,
-      "secao": 9999,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13696.jpg?v=99de3592c5fecec6",
-      "fallback_foto_version": "99de3592c5fecec6"
     },
     {
       "descricao": "",
@@ -7506,7 +7491,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4584,
+      "estoque": 4581,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg?v=1774720449191687200",
       "grupo": 6,
       "id": 117,
@@ -12126,7 +12111,7 @@
     },
     {
       "descricao": "",
-      "estoque": 91,
+      "estoque": 90,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3988.jpg?v=1786396428048000000",
       "grupo": 10,
       "id": 3988,
@@ -19041,7 +19026,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1298,
+      "estoque": 1297,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/43.jpg?v=1774720154504164500",
       "grupo": 15,
       "id": 43,
@@ -35316,7 +35301,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18204,
+      "estoque": 18184,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg?v=1786391840010000000",
       "grupo": 30,
       "id": 11874,
@@ -36816,7 +36801,7 @@
     },
     {
       "descricao": "",
-      "estoque": 11,
+      "estoque": 10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11001.jpg?v=1782161888207000000",
       "grupo": 30,
       "id": 11001,
@@ -36831,7 +36816,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11002.jpg?v=1782161888547000000",
       "grupo": 30,
       "id": 11002,
@@ -37716,7 +37701,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5158,
+      "estoque": 5150,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/60.jpg?v=1786137565754000000",
       "grupo": 32,
       "id": 60,
@@ -38706,7 +38691,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2811,
+      "estoque": 2809,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg?v=1786391962442000000",
       "grupo": 33,
       "id": 47,
@@ -38766,7 +38751,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2643,
+      "estoque": 2642,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg?v=1786391962938000000",
       "grupo": 33,
       "id": 184,
@@ -38916,7 +38901,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12335,
+      "estoque": 12333,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg?v=1786391960623000000",
       "grupo": 33,
       "id": 3933,
@@ -40731,7 +40716,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12,
+      "estoque": 11,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12539.jpg?v=1774746438601370500",
       "grupo": 44,
       "id": 12539,
@@ -60741,21 +60726,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 14138,
-      "marca": "NEGREIRA",
-      "nome": "MACACO HIDROPNEUMATICO 30T",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
       "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4171.jpg?v=1774733543905368000",
       "grupo": 58,
@@ -64476,7 +64446,7 @@
     },
     {
       "descricao": "",
-      "estoque": 169,
+      "estoque": 166,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/473.jpg?v=1774721748119468100",
       "grupo": 60,
       "id": 473,
@@ -64761,7 +64731,7 @@
     },
     {
       "descricao": "",
-      "estoque": 162,
+      "estoque": 160,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/230.jpg?v=1774720897865816000",
       "grupo": 60,
       "id": 230,
@@ -64941,7 +64911,7 @@
     },
     {
       "descricao": "",
-      "estoque": 58,
+      "estoque": 54,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/28.jpg?v=1774720108448756500",
       "grupo": 60,
       "id": 28,
@@ -68661,7 +68631,7 @@
     },
     {
       "descricao": "",
-      "estoque": 81,
+      "estoque": 78,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13414.jpg?v=1783179505489000000",
       "grupo": 34,
       "id": 13414,
@@ -68826,7 +68796,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3,
+      "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10672.jpg?v=1784231617953000000",
       "grupo": 34,
       "id": 10672,
@@ -77811,36 +77781,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1199.jpg?v=1774724352728025600",
-      "grupo": 63,
-      "id": 1199,
-      "marca": "GERAL",
-      "nome": "PNEU 15 195/60R 15 88H EVERTREK",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1199.jpg?v=f6fb1385f8788466",
-      "fallback_foto_version": "f6fb1385f8788466"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1220.jpg?v=1774724369461655300",
-      "grupo": 63,
-      "id": 1220,
-      "marca": "GERAL",
-      "nome": "PNEU 275/80R22.5TL 149/146M FR88",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1220.jpg?v=169673a982db9047",
-      "fallback_foto_version": "169673a982db9047"
-    },
-    {
-      "descricao": "",
       "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11135.jpg?v=1774742147757205800",
       "grupo": 42,
@@ -77886,21 +77826,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1062.jpg?v=1786196892483000000",
-      "grupo": 26,
-      "id": 1062,
-      "marca": "CARNEIRO",
-      "nome": "PNEU 3.25X8' CARNEIRO",
-      "preco": 55.69,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/1062.jpg?v=4f35c2dd4d965caf",
-      "fallback_foto_version": "4f35c2dd4d965caf"
-    },
-    {
-      "descricao": "",
       "estoque": 3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5687.jpg?v=1774738963058204800",
       "grupo": 42,
@@ -77928,21 +77853,6 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/750.jpg?v=52ef5f13bd96a1eb",
       "fallback_foto_version": "52ef5f13bd96a1eb"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/538.jpg?v=1774722002489324500",
-      "grupo": 62,
-      "id": 538,
-      "marca": "GERAL",
-      "nome": "PNEU 4.00X8 LEVORIN",
-      "preco": 136.37,
-      "secao": 9999,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/538.jpg?v=8c3b711b9beb991a",
-      "fallback_foto_version": "8c3b711b9beb991a"
     },
     {
       "descricao": "",
@@ -77988,21 +77898,6 @@
       "unidade": "UN",
       "fallback_foto_url": null,
       "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2004.jpg?v=1774726761457439500",
-      "grupo": 26,
-      "id": 2004,
-      "marca": "GERAL",
-      "nome": "PNEU CAR CONST 4,00X8.LEVORIN",
-      "preco": 154.55,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/2004.jpg?v=119d1a04fc7aec82",
-      "fallback_foto_version": "119d1a04fc7aec82"
     },
     {
       "descricao": "",
@@ -85041,7 +84936,7 @@
     },
     {
       "descricao": "",
-      "estoque": 6272,
+      "estoque": 6266,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1637.jpg?v=1774725482061352700",
       "grupo": 64,
       "id": 1637,
@@ -88956,7 +88851,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/95.jpg?v=1786559100933000000",
       "grupo": 71,
       "id": 95,
@@ -89016,7 +88911,7 @@
     },
     {
       "descricao": "",
-      "estoque": 52,
+      "estoque": 50,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/405.jpg?v=1786559064103000000",
       "grupo": 71,
       "id": 405,
@@ -89571,7 +89466,7 @@
     },
     {
       "descricao": "",
-      "estoque": 20,
+      "estoque": 19,
       "foto_url": null,
       "grupo": 35,
       "id": 13954,
@@ -99531,7 +99426,7 @@
     },
     {
       "descricao": "",
-      "estoque": 325,
+      "estoque": 324,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1812.jpg?v=1786480365703000000",
       "grupo": 82,
       "id": 1812,
@@ -104631,7 +104526,7 @@
     },
     {
       "descricao": "",
-      "estoque": 40,
+      "estoque": 38,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4530.jpg?v=1786200976284000000",
       "grupo": 45,
       "id": 4530,
@@ -105876,7 +105771,7 @@
     },
     {
       "descricao": "",
-      "estoque": 253,
+      "estoque": 248,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10865.jpg?v=1774741342316949500",
       "grupo": 85,
       "id": 10865,
@@ -106221,7 +106116,7 @@
     },
     {
       "descricao": "",
-      "estoque": 45,
+      "estoque": 42,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/685.jpg?v=1774722450618190900",
       "grupo": 85,
       "id": 685,
@@ -108651,7 +108546,7 @@
     },
     {
       "descricao": "",
-      "estoque": 38,
+      "estoque": 37,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/606.jpg?v=1783179583604000000",
       "grupo": 83,
       "id": 606,
