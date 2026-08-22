@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2195599
+      "saldo": 2247833
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 14204
     }
   ],
-  "generated_at": "2026-08-22T09:57:07.153688",
+  "generated_at": "2026-08-22T10:30:10.718091",
   "kpis": {
     "a_vencer_7d": 302542,
     "juros_pagos": 144060,
-    "total_aberto": 2462224,
+    "total_aberto": 2514458,
     "total_pago_periodo": 4669040,
     "total_vencido": 266625
   },
@@ -88,14 +88,14 @@
       "dias_atraso": 92,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 265,
+      "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "dias_atraso": 92,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 2580,
+      "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
@@ -134,6 +134,11 @@
       "total_aberto": 108596
     },
     {
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 8,
+      "total_aberto": 107570
+    },
+    {
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 3,
       "total_aberto": 106557
@@ -152,11 +157,6 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 18,
       "total_aberto": 77520
-    },
-    {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 6,
-      "total_aberto": 62454
     }
   ]
 }
