@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 877247.77
+      "saldo": 885797.77
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 183715.40000000002
+      "saldo": 183379.40000000002
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 13669.11
     }
   ],
-  "generated_at": "2026-08-24T15:43:29.929505",
+  "generated_at": "2026-08-24T16:11:58.715807",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 1314474.09,
-    "total_atraso": 437226.32000000007,
-    "total_vencer": 877247.77
+    "clientes_atraso": 68,
+    "total_aberto": 1322688.09,
+    "total_atraso": 436890.32000000007,
+    "total_vencer": 885797.77
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,13 +70,6 @@
       "vencimento": "2026-08-21T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 336,
-      "vencimento": "2026-08-21T00:00:00"
-    },
-    {
       "cliente": "MIGUEL (SILOALDO)",
       "dias_atraso": 2,
       "loja": "Loja 2",
@@ -102,6 +95,13 @@
       "dias_atraso": 0,
       "loja": "Loja 2",
       "saldo": 90,
+      "vencimento": "2026-08-24T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
+      "dias_atraso": 0,
+      "loja": "Loja 2",
+      "saldo": 500,
       "vencimento": "2026-08-24T00:00:00"
     }
   ],
