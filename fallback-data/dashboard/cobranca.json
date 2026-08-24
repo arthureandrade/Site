@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 870158.77
+      "saldo": 868110.77
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 205940.05000000002
+      "saldo": 183805.87
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 13669.11
     }
   ],
-  "generated_at": "2026-08-24T10:03:30.600186",
+  "generated_at": "2026-08-24T10:56:18.502819",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 1329609.7399999998,
-    "total_atraso": 459450.97000000003,
-    "total_vencer": 870158.77
+    "clientes_atraso": 69,
+    "total_aberto": 1305427.56,
+    "total_atraso": 437316.79000000004,
+    "total_vencer": 868110.77
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -144,12 +144,6 @@
       "total_atraso": 18613.77
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 5,
-      "titulos": 1,
-      "total_atraso": 18517.68
-    },
-    {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
       "maior_atraso": 66,
       "titulos": 10,
@@ -166,6 +160,12 @@
       "maior_atraso": 298,
       "titulos": 2,
       "total_atraso": 8954.41
+    },
+    {
+      "cliente": "YURY NEGREIRO SANTANA",
+      "maior_atraso": 31,
+      "titulos": 2,
+      "total_atraso": 8141.98
     }
   ]
 }
