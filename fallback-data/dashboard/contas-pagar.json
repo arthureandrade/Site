@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 366589
+      "saldo": 251941
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 14204
     }
   ],
-  "generated_at": "2026-08-25T10:22:40.950501",
+  "generated_at": "2026-08-25T11:20:50.932336",
   "kpis": {
     "a_vencer_7d": 120990,
     "juros_pagos": 72996,
-    "total_aberto": 2501386,
-    "total_pago_periodo": 4131450,
-    "total_vencido": 451820
+    "total_aberto": 2386738,
+    "total_pago_periodo": 4529692,
+    "total_vencido": 337172
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 5,
-      "total_aberto": 269724
+      "titulos": 4,
+      "total_aberto": 217784
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -127,11 +127,6 @@
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
-    },
-    {
-      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 2,
-      "total_aberto": 108596
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
@@ -157,6 +152,11 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 18,
       "total_aberto": 77520
+    },
+    {
+      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
+      "titulos": 1,
+      "total_aberto": 54298
     }
   ]
 }
