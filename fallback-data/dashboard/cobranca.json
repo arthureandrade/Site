@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 873863.31
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 187466.3
+      "saldo": 875405.73
     },
     {
       "faixa": "180+ dias",
       "saldo": 120311.06
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 106654.82
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 13680.29
     }
   ],
-  "generated_at": "2026-08-25T09:26:37.334007",
+  "generated_at": "2026-08-25T10:22:40.261195",
   "kpis": {
-    "clientes_atraso": 68,
-    "total_aberto": 1313140.95,
-    "total_atraso": 439277.64,
-    "total_vencer": 873863.31
+    "clientes_atraso": 66,
+    "total_aberto": 1233871.8900000001,
+    "total_atraso": 358466.16000000003,
+    "total_vencer": 875405.7299999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -114,12 +114,6 @@
       "total_atraso": 71982.04000000001
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 2,
-      "titulos": 5,
-      "total_atraso": 68020.26999999999
-    },
-    {
       "cliente": "M C A CONSTRUTORA EIRELLI",
       "maior_atraso": 536,
       "titulos": 7,
@@ -166,6 +160,12 @@
       "maior_atraso": 29,
       "titulos": 6,
       "total_atraso": 8431.869999999999
+    },
+    {
+      "cliente": "YURY NEGREIRO SANTANA",
+      "maior_atraso": 32,
+      "titulos": 2,
+      "total_atraso": 8166.24
     }
   ]
 }
