@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2049566
+      "saldo": 2047250
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 251941
+      "saldo": 180486
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 14204
     }
   ],
-  "generated_at": "2026-08-25T17:05:16.298258",
+  "generated_at": "2026-08-25T17:40:44.394818",
   "kpis": {
-    "a_vencer_7d": 120990,
+    "a_vencer_7d": 118674,
     "juros_pagos": 72996,
-    "total_aberto": 2386738,
-    "total_pago_periodo": 4529692,
-    "total_vencido": 337172
+    "total_aberto": 2312967,
+    "total_pago_periodo": 4751005,
+    "total_vencido": 265717
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -88,14 +88,14 @@
       "dias_atraso": 95,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 2580,
+      "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
       "dias_atraso": 95,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
-      "saldo": 265,
+      "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 20,
-      "total_aberto": 891568
+      "titulos": 19,
+      "total_aberto": 821988
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
