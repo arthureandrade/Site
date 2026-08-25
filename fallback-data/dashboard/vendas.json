@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-25T14:01:33.600930",
+  "generated_at": "2026-08-25T14:54:11.664845",
   "kpis": {
-    "ticket_medio": 393.81266055045876,
-    "total_pedidos": 109,
-    "total_vendas": 42925.58,
+    "ticket_medio": 373.617578125,
+    "total_pedidos": 128,
+    "total_vendas": 47823.05,
     "total_vendedores": 8
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 18964.2
+      "total_vendas": 22018.43
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 15057.58
+      "total_vendas": 16134.82
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 8903.8
+      "total_vendas": 9669.8
     }
   ],
   "ok": true,
@@ -31,20 +31,30 @@
   "serie_diaria": [
     {
       "data": "2026-08-25",
-      "total_vendas": 42925.58
+      "total_vendas": 47823.05
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 7,
-      "total_vendas": 11379,
+      "pedidos": 8,
+      "total_vendas": 11519,
       "vendedor": "Claudia"
+    },
+    {
+      "pedidos": 17,
+      "total_vendas": 8304.65,
+      "vendedor": "Guilherme"
     },
     {
       "pedidos": 11,
       "total_vendas": 6311.7,
       "vendedor": "Juan"
+    },
+    {
+      "pedidos": 28,
+      "total_vendas": 6256.3,
+      "vendedor": "Lucas"
     },
     {
       "pedidos": 15,
@@ -53,28 +63,18 @@
     },
     {
       "pedidos": 23,
-      "total_vendas": 5619.3,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 12,
-      "total_vendas": 4601.42,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 19,
-      "total_vendas": 3418.5,
+      "total_vendas": 3535.5,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 10,
-      "total_vendas": 3033.66,
-      "vendedor": "Estefanio"
+      "pedidos": 14,
+      "total_vendas": 3169,
+      "vendedor": "Adriano"
     },
     {
       "pedidos": 12,
-      "total_vendas": 2912,
-      "vendedor": "Adriano"
+      "total_vendas": 3076.8999999999996,
+      "vendedor": "Estefanio"
     }
   ]
 }
