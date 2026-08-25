@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T18:54:11.896Z",
+  "generated_at": "2026-08-25T19:32:48.220Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "source_total": 7257,
   "total": 7257,
@@ -5031,7 +5031,7 @@
     },
     {
       "descricao": "",
-      "estoque": 555,
+      "estoque": 554,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg?v=1774736639449495100",
       "grupo": 3,
       "id": 5026,
@@ -5061,7 +5061,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2359,
+      "estoque": 2354,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/911.jpg?v=1777490853387000000",
       "grupo": 3,
       "id": 911,
@@ -7491,7 +7491,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4531,
+      "estoque": 4527,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg?v=1774720449191687200",
       "grupo": 6,
       "id": 117,
@@ -35391,7 +35391,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3014,
+      "estoque": 3013,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg?v=1786391839967000000",
       "grupo": 30,
       "id": 11876,
@@ -37371,7 +37371,7 @@
     },
     {
       "descricao": "",
-      "estoque": 115,
+      "estoque": 111,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3829.jpg?v=1786137583250000000",
       "grupo": 32,
       "id": 3829,
@@ -38706,7 +38706,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2715,
+      "estoque": 2712,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg?v=1786391962442000000",
       "grupo": 33,
       "id": 47,
@@ -52957,6 +52957,21 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 61,
+      "id": 14327,
+      "marca": "GERAL",
+      "nome": "JANELA VENEZIANA 2,00 M X 1,00 M",
+      "preco": 800,
+      "secao": 13,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3948.jpg?v=1774732900470222600",
       "grupo": 62,
       "id": 3948,
@@ -57441,7 +57456,7 @@
     },
     {
       "descricao": "",
-      "estoque": 35,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/254.jpg?v=1779475735647000000",
       "grupo": 34,
       "id": 254,
@@ -72276,7 +72291,7 @@
     },
     {
       "descricao": "",
-      "estoque": 61,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/261.jpg?v=1774720983701711200",
       "grupo": 65,
       "id": 261,
@@ -72351,21 +72366,6 @@
     },
     {
       "descricao": "",
-      "estoque": 655,
-      "foto_url": null,
-      "grupo": 65,
-      "id": 2379,
-      "marca": "GERAL",
-      "nome": "PERFIL U 3\" ABA 38MM CH14 2.00MM AMARELO (KG)",
-      "preco": 0,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
       "estoque": 696,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/153.jpg?v=1774720607014182700",
       "grupo": 65,
@@ -72396,7 +72396,7 @@
     },
     {
       "descricao": "",
-      "estoque": 610,
+      "estoque": 1012,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -72471,7 +72471,7 @@
     },
     {
       "descricao": "",
-      "estoque": 32,
+      "estoque": 12,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1303.jpg?v=1774724634608447100",
       "grupo": 65,
       "id": 1303,
@@ -82101,7 +82101,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7,
+      "estoque": 5,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1111.jpg?v=1786481051511000000",
       "grupo": 64,
       "id": 1111,
@@ -97236,7 +97236,7 @@
     },
     {
       "descricao": "",
-      "estoque": 107,
+      "estoque": 88,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2276.jpg?v=1786137655632000000",
       "grupo": 87,
       "id": 2276,
@@ -105591,7 +105591,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": -3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/536.jpg?v=1774721998483061900",
       "grupo": 85,
       "id": 536,
@@ -108741,7 +108741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 311,
+      "estoque": 301,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13385.jpg?v=1786387725456000000",
       "grupo": 8,
       "id": 13385,

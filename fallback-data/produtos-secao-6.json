@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-25T18:54:11.896Z",
+  "generated_at": "2026-08-25T19:32:48.220Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "source_total": 7257,
-  "total": 458,
+  "total": 457,
   "produtos": [
     {
       "descricao": "",
@@ -1146,7 +1146,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4531,
+      "estoque": 4527,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/117.jpg?v=1774720449191687200",
       "grupo": 6,
       "id": 117,
@@ -4746,7 +4746,7 @@
     },
     {
       "descricao": "",
-      "estoque": 61,
+      "estoque": 9,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/261.jpg?v=1774720983701711200",
       "grupo": 65,
       "id": 261,
@@ -4821,21 +4821,6 @@
     },
     {
       "descricao": "",
-      "estoque": 655,
-      "foto_url": null,
-      "grupo": 65,
-      "id": 2379,
-      "marca": "GERAL",
-      "nome": "PERFIL U 3\" ABA 38MM CH14 2.00MM AMARELO (KG)",
-      "preco": 0,
-      "secao": 6,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
       "estoque": 696,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/153.jpg?v=1774720607014182700",
       "grupo": 65,
@@ -4866,7 +4851,7 @@
     },
     {
       "descricao": "",
-      "estoque": 610,
+      "estoque": 1012,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -4941,7 +4926,7 @@
     },
     {
       "descricao": "",
-      "estoque": 32,
+      "estoque": 12,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1303.jpg?v=1774724634608447100",
       "grupo": 65,
       "id": 1303,
@@ -5391,7 +5376,7 @@
     },
     {
       "descricao": "",
-      "estoque": 107,
+      "estoque": 88,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2276.jpg?v=1786137655632000000",
       "grupo": 87,
       "id": 2276,
@@ -5796,7 +5781,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": -3,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/536.jpg?v=1774721998483061900",
       "grupo": 85,
       "id": 536,
