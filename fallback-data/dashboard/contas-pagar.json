@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 180486
+      "saldo": 49288
     },
     {
       "faixa": "61–90 dias",
@@ -21,13 +21,13 @@
       "saldo": 15011
     }
   ],
-  "generated_at": "2026-08-26T14:32:12.299258",
+  "generated_at": "2026-08-26T17:10:17.458854",
   "kpis": {
     "a_vencer_7d": 129090,
     "juros_pagos": 72996,
-    "total_aberto": 2312967,
-    "total_pago_periodo": 4751005,
-    "total_vencido": 265717
+    "total_aberto": 2181769,
+    "total_pago_periodo": 5014403,
+    "total_vencido": 134519
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -124,11 +124,6 @@
       "total_aberto": 192390
     },
     {
-      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
-      "titulos": 1,
-      "total_aberto": 131700
-    },
-    {
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 8,
       "total_aberto": 107570
@@ -157,6 +152,11 @@
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
       "titulos": 1,
       "total_aberto": 54298
+    },
+    {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 6,
+      "total_aberto": 49089
     }
   ]
 }
