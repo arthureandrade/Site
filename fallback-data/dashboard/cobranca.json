@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 878900.73
+      "saldo": 874163.73
     },
     {
       "faixa": "180+ dias",
       "saldo": 120358.99
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 104956.16
-    },
-    {
       "faixa": "31–60 dias",
       "saldo": 98027.04000000001
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 97044.66
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 13691.470000000001
     }
   ],
-  "generated_at": "2026-08-26T09:13:43.800272",
+  "generated_at": "2026-08-26T10:07:34.672804",
   "kpis": {
-    "clientes_atraso": 65,
-    "total_aberto": 1237265.4500000002,
-    "total_atraso": 358364.72000000003,
-    "total_vencer": 878900.73
+    "clientes_atraso": 63,
+    "total_aberto": 1224616.95,
+    "total_atraso": 350453.22000000003,
+    "total_vencer": 874163.73
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -84,13 +84,6 @@
       "vencimento": "2026-08-26T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 1554,
-      "vencimento": "2026-08-26T00:00:00"
-    },
-    {
       "cliente": "FABIO RAIOL FEITOSA",
       "dias_atraso": 0,
       "loja": "Loja 1",
@@ -103,6 +96,13 @@
       "loja": "Loja 1",
       "saldo": 43844.54,
       "vencimento": "2026-08-27T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -1,
+      "loja": "Loja 2",
+      "saldo": 2680,
+      "vencimento": "2026-08-27T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 50,
-      "titulos": 3,
-      "total_atraso": 72053.42
+      "titulos": 1,
+      "total_atraso": 70822.5
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
