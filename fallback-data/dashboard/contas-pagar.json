@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 1985101
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 49959
+      "saldo": 2406169
     },
     {
       "faixa": "61–90 dias",
       "saldo": 38139
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 32031
     },
     {
       "faixa": "31–60 dias",
@@ -21,13 +21,13 @@
       "saldo": 20595
     }
   ],
-  "generated_at": "2026-08-27T06:46:04.606813",
+  "generated_at": "2026-08-27T16:48:52.692565",
   "kpis": {
-    "a_vencer_7d": 75771,
+    "a_vencer_7d": 76426,
     "juros_pagos": 72996,
-    "total_aberto": 2120291,
-    "total_pago_periodo": 4943086,
-    "total_vencido": 135190
+    "total_aberto": 2523431,
+    "total_pago_periodo": 4988495,
+    "total_vencido": 117262
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,18 +115,13 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 4,
-      "total_aberto": 217784
+      "titulos": 22,
+      "total_aberto": 561362
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 55,
       "total_aberto": 192390
-    },
-    {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 8,
-      "total_aberto": 107570
     },
     {
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
@@ -139,24 +134,29 @@
       "total_aberto": 102930
     },
     {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 10,
+      "total_aberto": 93253
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 39,
-      "total_aberto": 86857
+      "titulos": 42,
+      "total_aberto": 92102
+    },
+    {
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 6,
+      "total_aberto": 85554
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 18,
-      "total_aberto": 77520
+      "titulos": 21,
+      "total_aberto": 83049
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
       "titulos": 1,
       "total_aberto": 54298
-    },
-    {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 6,
-      "total_aberto": 49089
     }
   ]
 }
