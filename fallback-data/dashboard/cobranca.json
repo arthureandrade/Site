@@ -2,35 +2,35 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 884341.16
+      "saldo": 879702.55
     },
     {
       "faixa": "180+ dias",
-      "saldo": 117370.31
+      "saldo": 117416.25
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 98027.04000000001
+      "saldo": 99734.62
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 90217.64
+      "saldo": 93325.33
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 21331.06
+      "saldo": 21345.25
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 13154.27
+      "saldo": 13164.95
     }
   ],
-  "generated_at": "2026-08-26T20:49:52.414567",
+  "generated_at": "2026-08-27T06:46:03.773408",
   "kpis": {
-    "clientes_atraso": 59,
-    "total_aberto": 1224441.48,
-    "total_atraso": 340100.32,
-    "total_vencer": 884341.1599999999
+    "clientes_atraso": 64,
+    "total_aberto": 1224688.95,
+    "total_atraso": 344986.4,
+    "total_vencer": 879702.55
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -38,70 +38,70 @@
       "cliente": "MIGUEL (SILOALDO)",
       "dias_atraso": 5,
       "loja": "Loja 2",
-      "saldo": 182.91,
-      "vencimento": "2026-08-21T00:00:00"
-    },
-    {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 4,
-      "loja": "Loja 2",
-      "saldo": 35.14,
+      "saldo": 35.18,
       "vencimento": "2026-08-22T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 812.43,
+      "saldo": 813.24,
       "vencimento": "2026-08-23T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 3029.06,
+      "saldo": 3032.08,
       "vencimento": "2026-08-23T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 90.18,
+      "saldo": 90.27,
       "vencimento": "2026-08-24T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 501,
+      "saldo": 501.5,
       "vencimento": "2026-08-24T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 400,
       "vencimento": "2026-08-26T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 261.36,
       "vencimento": "2026-08-26T00:00:00"
     },
     {
       "cliente": "TATIANE OLIVEIRA BARBOSA",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 112.25,
       "vencimento": "2026-08-26T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 43844.54,
+      "vencimento": "2026-08-27T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
+      "dias_atraso": 0,
+      "loja": "Loja 2",
+      "saldo": 92,
       "vencimento": "2026-08-27T00:00:00"
     }
   ],
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 50,
+      "maior_atraso": 51,
       "titulos": 1,
-      "total_atraso": 70822.5
+      "total_atraso": 70889.95
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 537,
+      "maior_atraso": 538,
       "titulos": 7,
-      "total_atraso": 39674.57
+      "total_atraso": 39675.82
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 819,
+      "maior_atraso": 820,
       "titulos": 16,
-      "total_atraso": 22069.17
+      "total_atraso": 22081.48
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 88,
+      "maior_atraso": 89,
       "titulos": 3,
-      "total_atraso": 21939.4
+      "total_atraso": 21960.3
     },
     {
       "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 54,
+      "maior_atraso": 55,
       "titulos": 19,
-      "total_atraso": 18650.81
+      "total_atraso": 18669.03
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 68,
+      "maior_atraso": 69,
       "titulos": 10,
-      "total_atraso": 13627.15
+      "total_atraso": 13632.63
     },
     {
       "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 990,
+      "maior_atraso": 991,
       "titulos": 2,
-      "total_atraso": 12961.300000000001
+      "total_atraso": 12968.16
     },
     {
       "cliente": "EDVALDO CASTRO NASCIMENTO",
-      "maior_atraso": 300,
+      "maior_atraso": 301,
       "titulos": 2,
-      "total_atraso": 8968.22
+      "total_atraso": 8975.12
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 30,
+      "maior_atraso": 31,
       "titulos": 6,
-      "total_atraso": 8440.7
+      "total_atraso": 8449.02
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 33,
+      "maior_atraso": 34,
       "titulos": 2,
-      "total_atraso": 8190.5
+      "total_atraso": 8214.75
     }
   ]
 }
