@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-27T20:48:52.129Z",
+  "generated_at": "2026-08-28T05:00:23.927Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "source_total": 7287,
-  "total": 5635,
+  "total": 5626,
   "produtos": [
     {
       "descricao": "",
@@ -2706,21 +2706,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13997,
-      "marca": "NEGREIRA",
-      "nome": "AGUA SANITARIA SAO CAETANO/ ECONORTE 1L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
       "estoque": 15,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1816.jpg?v=1786480365926000000",
       "grupo": 82,
@@ -4551,7 +4536,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4202,
+      "estoque": 4178,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1647.jpg?v=1774725523001434900",
       "grupo": 64,
       "id": 1647,
@@ -9111,7 +9096,7 @@
     },
     {
       "descricao": "",
-      "estoque": 33,
+      "estoque": 29,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3985.jpg?v=1786396426796000000",
       "grupo": 10,
       "id": 3985,
@@ -12156,7 +12141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4134,
+      "estoque": 4114,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1666.jpg?v=1774725591241104500",
       "grupo": 64,
       "id": 1666,
@@ -25296,7 +25281,7 @@
     },
     {
       "descricao": "",
-      "estoque": 28,
+      "estoque": 27,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11075.jpg?v=1779479829541000000",
       "grupo": 69,
       "id": 11075,
@@ -25374,51 +25359,6 @@
       "estoque": 0,
       "foto_url": null,
       "grupo": 26,
-      "id": 13981,
-      "marca": "NEGREIRA",
-      "nome": "DESINF ECONORTE FLORAL 2L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13982,
-      "marca": "NEGREIRA",
-      "nome": "DESINF ECONORTE LAVANDA 2L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13983,
-      "marca": "NEGREIRA",
-      "nome": "DESINF ECONORTE TALCO 2L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
       "id": 14226,
       "marca": "NEGREIRA",
       "nome": "DESINF HIPER PLUS 2L LAV",
@@ -25443,21 +25383,6 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5085.jpg?v=9114b2b53cdd91a0",
       "fallback_foto_version": "9114b2b53cdd91a0"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13984,
-      "marca": "NEGREIRA",
-      "nome": "DETERG FACILITA  NEUTRO 5L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -25566,7 +25491,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23,
+      "estoque": 22,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4664.jpg?v=1774735308227929900",
       "grupo": 30,
       "id": 4664,
@@ -26181,7 +26106,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15765,
+      "estoque": 15761,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg?v=1786391840010000000",
       "grupo": 30,
       "id": 11874,
@@ -26256,7 +26181,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1967,
+      "estoque": 1960,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg?v=1786391839967000000",
       "grupo": 30,
       "id": 11876,
@@ -28131,7 +28056,7 @@
     },
     {
       "descricao": "",
-      "estoque": 935,
+      "estoque": 934,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3965.jpg?v=1774732939327735900",
       "grupo": 32,
       "id": 3965,
@@ -28326,7 +28251,7 @@
     },
     {
       "descricao": "",
-      "estoque": 36,
+      "estoque": 28,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/878.jpg?v=1786137569073000000",
       "grupo": 32,
       "id": 878,
@@ -28341,7 +28266,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8021,
+      "estoque": 8019,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/63.jpg?v=1786137565467000000",
       "grupo": 32,
       "id": 63,
@@ -28356,7 +28281,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5281,
+      "estoque": 5279,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/65.jpg?v=1786137565665000000",
       "grupo": 32,
       "id": 65,
@@ -28851,7 +28776,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3555,
+      "estoque": 3553,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg?v=1786391962938000000",
       "grupo": 33,
       "id": 184,
@@ -28986,7 +28911,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4788,
+      "estoque": 4782,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11598.jpg?v=1786391962143000000",
       "grupo": 33,
       "id": 11598,
@@ -33471,7 +33396,7 @@
     },
     {
       "descricao": "",
-      "estoque": 618,
+      "estoque": 617,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12559.jpg?v=1786478033424000000",
       "grupo": 40,
       "id": 12559,
@@ -43134,21 +43059,6 @@
       "estoque": 0,
       "foto_url": null,
       "grupo": 26,
-      "id": 13988,
-      "marca": "NEGREIRA",
-      "nome": "LA  ACO BOMBRIL 45G",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
       "id": 14229,
       "marca": "NEGREIRA",
       "nome": "LA ACO BOMBRIL 6UN  - 1163",
@@ -45828,21 +45738,6 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/3027.jpg?v=6166aeb9d613e9a6",
       "fallback_foto_version": "6166aeb9d613e9a6"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13986,
-      "marca": "NEGREIRA",
-      "nome": "LUSTRA MOVEIS BUTTERFLY 200ML",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -49836,7 +49731,7 @@
     },
     {
       "descricao": "",
-      "estoque": 199,
+      "estoque": 198,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg?v=1774732125075092200",
       "grupo": 60,
       "id": 3658,
@@ -51711,7 +51606,7 @@
     },
     {
       "descricao": "",
-      "estoque": -7,
+      "estoque": -8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13072.jpg?v=1774748241309149600",
       "grupo": 12,
       "id": 13072,
@@ -51741,7 +51636,7 @@
     },
     {
       "descricao": "",
-      "estoque": -6,
+      "estoque": -7,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13076.jpg?v=1774748250048847700",
       "grupo": 12,
       "id": 13076,
@@ -51771,7 +51666,7 @@
     },
     {
       "descricao": "",
-      "estoque": -9,
+      "estoque": -10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13080.jpg?v=1774748257403287000",
       "grupo": 12,
       "id": 13080,
@@ -51786,7 +51681,7 @@
     },
     {
       "descricao": "",
-      "estoque": -7,
+      "estoque": -8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13082.jpg?v=1774748261021330300",
       "grupo": 12,
       "id": 13082,
@@ -54711,7 +54606,7 @@
     },
     {
       "descricao": "",
-      "estoque": 24947,
+      "estoque": 24647,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5581.jpg?v=1786477750240000000",
       "grupo": 64,
       "id": 5581,
@@ -55341,7 +55236,7 @@
     },
     {
       "descricao": "",
-      "estoque": 567,
+      "estoque": 547,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1608.jpg?v=1774725354758499800",
       "grupo": 64,
       "id": 1608,
@@ -56211,7 +56106,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1893,
+      "estoque": 1881,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1836.jpg?v=1774726240591550400",
       "grupo": 64,
       "id": 1836,
@@ -60936,7 +60831,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1419,
+      "estoque": 1399,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4154.jpg?v=1777067900019000000",
       "grupo": 66,
       "id": 4154,
@@ -65601,7 +65496,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8925,
+      "estoque": 8895,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1636.jpg?v=1774725478336891400",
       "grupo": 64,
       "id": 1636,
@@ -69411,7 +69306,7 @@
     },
     {
       "descricao": "",
-      "estoque": 145,
+      "estoque": 143,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/489.jpg?v=1786559063703000000",
       "grupo": 71,
       "id": 489,
@@ -69996,21 +69891,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5092.jpg?v=1774736904424537700",
-      "grupo": 42,
-      "id": 5092,
-      "marca": "LOTUS",
-      "nome": "SABAO EM BARRA VERDE JAPIIM 1KG",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5092.jpg?v=4bd4734d89f541ee",
-      "fallback_foto_version": "4bd4734d89f541ee"
-    },
-    {
-      "descricao": "",
       "estoque": 2,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4589.jpg?v=1774735018253537400",
       "grupo": 45,
@@ -70128,21 +70008,6 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5090.jpg?v=fb1b0b22cc78fd65",
       "fallback_foto_version": "fb1b0b22cc78fd65"
-    },
-    {
-      "descricao": "",
-      "estoque": 0,
-      "foto_url": null,
-      "grupo": 26,
-      "id": 13994,
-      "marca": "NEGREIRA",
-      "nome": "SACO P/ LIXO RAVA PRETO C/100 40L",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -76011,7 +75876,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13532.jpg?v=1786137671172000000",
       "grupo": 79,
       "id": 13532,
@@ -76476,7 +76341,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1980,
+      "estoque": 1910,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13576.jpg?v=1786203121466000000",
       "grupo": 79,
       "id": 13576,
@@ -77271,7 +77136,7 @@
     },
     {
       "descricao": "",
-      "estoque": 292,
+      "estoque": 291,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1812.jpg?v=1786480365703000000",
       "grupo": 82,
       "id": 1812,
@@ -77991,7 +77856,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": 14,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5149.jpg?v=1786480372839000000",
       "grupo": 83,
       "id": 5149,
@@ -83406,7 +83271,7 @@
     },
     {
       "descricao": "",
-      "estoque": 185,
+      "estoque": 184,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2866.jpg?v=1787854606820000000",
       "grupo": 51,
       "id": 2866,
