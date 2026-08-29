@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2387801
+      "saldo": 2638686
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 20595
     }
   ],
-  "generated_at": "2026-08-29T09:33:42.266779",
+  "generated_at": "2026-08-29T13:22:19.434706",
   "kpis": {
     "a_vencer_7d": 110077,
     "juros_pagos": 72996,
-    "total_aberto": 2538373,
+    "total_aberto": 2789258,
     "total_pago_periodo": 4558752,
     "total_vencido": 150572
   },
@@ -119,6 +119,11 @@
       "total_aberto": 561362
     },
     {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 3,
+      "total_aberto": 250885
+    },
+    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 55,
       "total_aberto": 192390
@@ -152,11 +157,6 @@
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
       "titulos": 21,
       "total_aberto": 83049
-    },
-    {
-      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 1,
-      "total_aberto": 54298
     }
   ]
 }
