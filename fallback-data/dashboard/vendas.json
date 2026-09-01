@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-01T12:37:42.108955",
+  "generated_at": "2026-09-01T15:37:00.164668",
   "kpis": {
-    "ticket_medio": 507.0401769911505,
-    "total_pedidos": 113,
-    "total_vendas": 57295.54,
+    "ticket_medio": 609.4366666666666,
+    "total_pedidos": 162,
+    "total_vendas": 98728.73999999999,
     "total_vendedores": 8
   },
   "lojas": [
     {
-      "loja": "Loja 2",
-      "total_vendas": 24351.01
+      "loja": "Loja 1",
+      "total_vendas": 42751.729999999996
     },
     {
-      "loja": "Loja 1",
-      "total_vendas": 20457.53
+      "loja": "Loja 2",
+      "total_vendas": 42708.01
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 12487
+      "total_vendas": 13269
     }
   ],
   "ok": true,
@@ -31,20 +31,35 @@
   "serie_diaria": [
     {
       "data": "2026-09-01",
-      "total_vendas": 57295.54
+      "total_vendas": 98728.74
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 26,
-      "total_vendas": 18558,
+      "pedidos": 31,
+      "total_vendas": 31601,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 11,
-      "total_vendas": 10776,
+      "pedidos": 22,
+      "total_vendas": 19241,
+      "vendedor": "Guilherme"
+    },
+    {
+      "pedidos": 24,
+      "total_vendas": 13342.029999999999,
+      "vendedor": "Rafael"
+    },
+    {
+      "pedidos": 13,
+      "total_vendas": 11154,
       "vendedor": "Juan"
+    },
+    {
+      "pedidos": 29,
+      "total_vendas": 8346,
+      "vendedor": "Lucas"
     },
     {
       "pedidos": 9,
@@ -52,29 +67,14 @@
       "vendedor": "Estefanio"
     },
     {
-      "pedidos": 17,
-      "total_vendas": 6216,
-      "vendedor": "Guilherme"
-    },
-    {
-      "pedidos": 19,
-      "total_vendas": 5472,
-      "vendedor": "Lucas"
+      "pedidos": 18,
+      "total_vendas": 3953,
+      "vendedor": "Claudia"
     },
     {
       "pedidos": 16,
-      "total_vendas": 5469.03,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 8,
-      "total_vendas": 1599.5,
+      "total_vendas": 2889.7,
       "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 7,
-      "total_vendas": 1003,
-      "vendedor": "Claudia"
     }
   ]
 }
