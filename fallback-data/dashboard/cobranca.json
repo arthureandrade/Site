@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 765028.27
+      "saldo": 768115.59
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 232454.35
+      "saldo": 216805.35
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 10130.35
     }
   ],
-  "generated_at": "2026-09-01T08:06:06.657447",
+  "generated_at": "2026-09-01T12:37:42.548578",
   "kpis": {
-    "clientes_atraso": 69,
-    "total_aberto": 1266498.9,
-    "total_atraso": 501470.63,
-    "total_vencer": 765028.27
+    "clientes_atraso": 67,
+    "total_aberto": 1253937.22,
+    "total_atraso": 485821.63,
+    "total_vencer": 768115.5900000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 56,
-      "titulos": 2,
-      "total_atraso": 74316.9
+      "titulos": 1,
+      "total_atraso": 71227.2
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",

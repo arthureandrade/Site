@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2638616
+      "saldo": 2770316
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 20595
     }
   ],
-  "generated_at": "2026-09-01T08:06:07.307067",
+  "generated_at": "2026-09-01T12:37:43.179595",
   "kpis": {
-    "a_vencer_7d": 404140,
+    "a_vencer_7d": 535840,
     "juros_pagos": 72996,
-    "total_aberto": 2793537,
+    "total_aberto": 2925237,
     "total_pago_periodo": 4447553,
     "total_vencido": 154921
   },
@@ -129,6 +129,11 @@
       "total_aberto": 192390
     },
     {
+      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
+      "titulos": 1,
+      "total_aberto": 131700
+    },
+    {
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 3,
       "total_aberto": 106557
@@ -152,11 +157,6 @@
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 6,
       "total_aberto": 85554
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 21,
-      "total_aberto": 83049
     }
   ]
 }
