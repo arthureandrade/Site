@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-02T17:19:08.748Z",
+  "generated_at": "2026-09-02T19:54:58.895Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "source_total": 7293,
-  "total": 5627,
+  "source_total": 7295,
+  "total": 5629,
   "produtos": [
     {
       "descricao": "",
@@ -3981,7 +3981,7 @@
     },
     {
       "descricao": "",
-      "estoque": 41,
+      "estoque": 40,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4101.jpg?v=1774733328258145700",
       "grupo": 3,
       "id": 4101,
@@ -5491,8 +5491,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5259.jpg?v=f0b6240f87db3126",
-      "fallback_foto_version": "f0b6240f87db3126"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5259.jpg?v=2791ddf792643cc6",
+      "fallback_foto_version": "2791ddf792643cc6"
     },
     {
       "descricao": "",
@@ -5526,7 +5526,7 @@
     },
     {
       "descricao": "",
-      "estoque": 157,
+      "estoque": 107,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12015.jpg?v=1786559537788000000",
       "grupo": 92,
       "id": 12015,
@@ -9621,7 +9621,7 @@
     },
     {
       "descricao": "",
-      "estoque": 71,
+      "estoque": 70,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3997.jpg?v=1786396433499000000",
       "grupo": 10,
       "id": 3997,
@@ -9711,7 +9711,7 @@
     },
     {
       "descricao": "",
-      "estoque": 25,
+      "estoque": 24,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4003.jpg?v=1786396435347000000",
       "grupo": 10,
       "id": 4003,
@@ -13221,7 +13221,7 @@
     },
     {
       "descricao": "",
-      "estoque": 24,
+      "estoque": 16,
       "foto_url": null,
       "grupo": 14,
       "id": 14315,
@@ -25731,7 +25731,7 @@
     },
     {
       "descricao": "",
-      "estoque": 248,
+      "estoque": 247,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/623.jpg?v=1786390074011000000",
       "grupo": 30,
       "id": 623,
@@ -26106,7 +26106,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17371,
+      "estoque": 17264,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg?v=1786391840010000000",
       "grupo": 30,
       "id": 11874,
@@ -26181,7 +26181,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2849,
+      "estoque": 2845,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11876.jpg?v=1786391839967000000",
       "grupo": 30,
       "id": 11876,
@@ -26541,7 +26541,7 @@
     },
     {
       "descricao": "",
-      "estoque": 441,
+      "estoque": 437,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11878.jpg?v=1786391840185000000",
       "grupo": 30,
       "id": 11878,
@@ -26631,7 +26631,7 @@
     },
     {
       "descricao": "",
-      "estoque": 445,
+      "estoque": 443,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11879.jpg?v=1786391837976000000",
       "grupo": 30,
       "id": 11879,
@@ -28716,7 +28716,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2423,
+      "estoque": 2414,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg?v=1786391962442000000",
       "grupo": 33,
       "id": 47,
@@ -28776,7 +28776,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3525,
+      "estoque": 3524,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/184.jpg?v=1786391962938000000",
       "grupo": 33,
       "id": 184,
@@ -28926,7 +28926,7 @@
     },
     {
       "descricao": "",
-      "estoque": 12297,
+      "estoque": 12290,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3933.jpg?v=1786391960623000000",
       "grupo": 33,
       "id": 3933,
@@ -34836,7 +34836,7 @@
     },
     {
       "descricao": "",
-      "estoque": 464,
+      "estoque": 450,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/84.jpg?v=1786559096297000000",
       "grupo": 41,
       "id": 84,
@@ -35016,7 +35016,7 @@
     },
     {
       "descricao": "",
-      "estoque": 73,
+      "estoque": 71,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/85.jpg?v=1782942632051000000",
       "grupo": 41,
       "id": 85,
@@ -39981,7 +39981,7 @@
     },
     {
       "descricao": "",
-      "estoque": 45,
+      "estoque": 44,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3720.jpg?v=1786386879396000000",
       "grupo": 58,
       "id": 3720,
@@ -42186,7 +42186,7 @@
     },
     {
       "descricao": "",
-      "estoque": 151,
+      "estoque": 150,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/72.jpg?v=1783179605338000000",
       "grupo": 41,
       "id": 72,
@@ -46371,7 +46371,7 @@
     },
     {
       "descricao": "",
-      "estoque": 224,
+      "estoque": 223,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4133.jpg?v=1786194193624000000",
       "grupo": 34,
       "id": 4133,
@@ -49191,7 +49191,7 @@
     },
     {
       "descricao": "",
-      "estoque": 103,
+      "estoque": 102,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11999.jpg?v=1786193188362000000",
       "grupo": 34,
       "id": 11999,
@@ -52521,7 +52521,7 @@
     },
     {
       "descricao": "",
-      "estoque": 97,
+      "estoque": 96,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11481.jpg?v=1787691998184000000",
       "grupo": 102,
       "id": 11481,
@@ -54606,7 +54606,7 @@
     },
     {
       "descricao": "",
-      "estoque": 23967,
+      "estoque": 23957,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5581.jpg?v=1786477750240000000",
       "grupo": 64,
       "id": 5581,
@@ -54816,7 +54816,7 @@
     },
     {
       "descricao": "",
-      "estoque": 31565,
+      "estoque": 30965,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/109.jpg?v=1786477743244000000",
       "grupo": 64,
       "id": 109,
@@ -54981,7 +54981,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16237,
+      "estoque": 16187,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10066.jpg?v=1786477751192000000",
       "grupo": 64,
       "id": 10066,
@@ -55851,7 +55851,7 @@
     },
     {
       "descricao": "",
-      "estoque": 88913,
+      "estoque": 88893,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4184.jpg?v=1786477745930000000",
       "grupo": 64,
       "id": 4184,
@@ -56716,8 +56716,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5176.jpg?v=8f45333dc70e8722",
-      "fallback_foto_version": "8f45333dc70e8722"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5176.jpg?v=7644bf980bab9253",
+      "fallback_foto_version": "7644bf980bab9253"
     },
     {
       "descricao": "",
@@ -57286,8 +57286,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5264.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5264.jpg?v=4f60609753c554fc",
+      "fallback_foto_version": "4f60609753c554fc"
     },
     {
       "descricao": "",
@@ -57301,8 +57301,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5265.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5265.jpg?v=95c5e27b03656cba",
+      "fallback_foto_version": "95c5e27b03656cba"
     },
     {
       "descricao": "",
@@ -57316,8 +57316,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5266.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5266.jpg?v=cc4b109d3b3d84ca",
+      "fallback_foto_version": "cc4b109d3b3d84ca"
     },
     {
       "descricao": "",
@@ -57346,8 +57346,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5267.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5267.jpg?v=2c9db78819fc0244",
+      "fallback_foto_version": "2c9db78819fc0244"
     },
     {
       "descricao": "",
@@ -57376,8 +57376,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5268.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5268.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57406,8 +57406,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5269.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5269.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57436,8 +57436,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5270.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5270.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57451,8 +57451,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5271.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5271.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57496,8 +57496,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5272.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5272.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57616,8 +57616,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5277.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5277.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57631,8 +57631,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5278.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5278.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57676,8 +57676,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5279.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5279.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57706,8 +57706,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5280.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5280.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57736,8 +57736,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5281.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5281.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57796,8 +57796,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5283.jpg?v=0ff0ec91b3bd507f",
-      "fallback_foto_version": "0ff0ec91b3bd507f"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5283.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57856,8 +57856,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5285.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5285.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57901,8 +57901,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5286.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5286.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -57931,8 +57931,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5287.jpg?v=118956c0364b8b38",
-      "fallback_foto_version": "118956c0364b8b38"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5287.jpg?v=11b2cc838641c26d",
+      "fallback_foto_version": "11b2cc838641c26d"
     },
     {
       "descricao": "",
@@ -58656,7 +58656,7 @@
     },
     {
       "descricao": "",
-      "estoque": 35,
+      "estoque": 34,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12639.jpg?v=1786203480553000000",
       "grupo": 36,
       "id": 12639,
@@ -59406,7 +59406,7 @@
     },
     {
       "descricao": "",
-      "estoque": 688,
+      "estoque": 687,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11483.jpg?v=1787691998605000000",
       "grupo": 45,
       "id": 11483,
@@ -60876,7 +60876,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1589,
+      "estoque": 1579,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4139.jpg?v=1774733435716542500",
       "grupo": 66,
       "id": 4139,
@@ -60906,7 +60906,7 @@
     },
     {
       "descricao": "",
-      "estoque": 3282,
+      "estoque": 3272,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4140.jpg?v=1774733439643902700",
       "grupo": 66,
       "id": 4140,
@@ -60996,7 +60996,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1385,
+      "estoque": 1355,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/410.jpg?v=1774721496154200000",
       "grupo": 66,
       "id": 410,
@@ -61921,8 +61921,8 @@
       "secao": 5,
       "subgrupo": 2,
       "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5260.jpg?v=83b5d1639f962b75",
-      "fallback_foto_version": "83b5d1639f962b75"
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5260.jpg?v=91c413a3368f518a",
+      "fallback_foto_version": "91c413a3368f518a"
     },
     {
       "descricao": "",
@@ -62211,7 +62211,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1166,
+      "estoque": 1156,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/105.jpg?v=1786389711901000000",
       "grupo": 2,
       "id": 105,
@@ -62391,7 +62391,7 @@
     },
     {
       "descricao": "",
-      "estoque": 27,
+      "estoque": 26,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10380.jpg?v=1786391960108000000",
       "grupo": 43,
       "id": 10380,
@@ -63111,7 +63111,7 @@
     },
     {
       "descricao": "",
-      "estoque": 99,
+      "estoque": 96,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1516.jpg?v=1786481051400000000",
       "grupo": 64,
       "id": 1516,
@@ -63141,7 +63141,7 @@
     },
     {
       "descricao": "",
-      "estoque": 81,
+      "estoque": 76,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11080.jpg?v=1786201062400000000",
       "grupo": 64,
       "id": 11080,
@@ -63216,7 +63216,7 @@
     },
     {
       "descricao": "",
-      "estoque": 24,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1519.jpg?v=1786481051539000000",
       "grupo": 64,
       "id": 1519,
@@ -63426,7 +63426,7 @@
     },
     {
       "descricao": "",
-      "estoque": 182,
+      "estoque": 176,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/2487.jpg?v=1786481053518000000",
       "grupo": 64,
       "id": 2487,
@@ -64131,7 +64131,7 @@
     },
     {
       "descricao": "",
-      "estoque": 870,
+      "estoque": 845,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/107.jpg?v=1786559062821000000",
       "grupo": 71,
       "id": 107,
@@ -65481,7 +65481,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2846,
+      "estoque": 2826,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1635.jpg?v=1788297902877000000",
       "grupo": 64,
       "id": 1635,
@@ -65646,7 +65646,7 @@
     },
     {
       "descricao": "",
-      "estoque": 4001,
+      "estoque": 3971,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4900.jpg?v=1788297950742000000",
       "grupo": 64,
       "id": 4900,
@@ -69321,7 +69321,7 @@
     },
     {
       "descricao": "",
-      "estoque": 280,
+      "estoque": 278,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/830.jpg?v=1786559075049000000",
       "grupo": 71,
       "id": 830,
@@ -69348,6 +69348,36 @@
       "unidade": "PE",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/5669.jpg?v=e9f7f916b49eb0ae",
       "fallback_foto_version": "e9f7f916b49eb0ae"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14394,
+      "marca": "JOCEC",
+      "nome": "ROLDANA SUPORTE FECHADO V 3.1/2\" C/ PARAFUSO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 71,
+      "id": 14393,
+      "marca": "JOCEC",
+      "nome": "ROLDANA SUPORTE FECHADO V 3\" C/ PARAFUSO",
+      "preco": 0,
+      "secao": 5,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -74736,7 +74766,7 @@
     },
     {
       "descricao": "",
-      "estoque": 47,
+      "estoque": 46,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/126.jpg?v=1786389710070000000",
       "grupo": 76,
       "id": 126,
@@ -78936,7 +78966,7 @@
     },
     {
       "descricao": "",
-      "estoque": 22,
+      "estoque": 21,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12399.jpg?v=1779476837244000000",
       "grupo": 83,
       "id": 12399,
@@ -83601,7 +83631,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1334,
+      "estoque": 1332,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5628.jpg?v=1786202760862000000",
       "grupo": 69,
       "id": 5628,
@@ -84291,7 +84321,7 @@
     },
     {
       "descricao": "",
-      "estoque": 44,
+      "estoque": 41,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/137.jpg?v=1783179581795000000",
       "grupo": 83,
       "id": 137,
