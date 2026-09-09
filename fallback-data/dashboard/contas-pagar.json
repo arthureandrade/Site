@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2642928
+      "saldo": 3013643
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 191031
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 41244
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 27181
+      "saldo": 240652
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 22041
+      "saldo": 39088
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 34112
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 26652
     }
   ],
-  "generated_at": "2026-09-02T15:54:59.776835",
+  "generated_at": "2026-09-09T19:33:46.531462",
   "kpis": {
-    "a_vencer_7d": 467043,
+    "a_vencer_7d": 383963,
     "juros_pagos": 73743,
-    "total_aberto": 2924425,
-    "total_pago_periodo": 4555575,
-    "total_vencido": 281497
+    "total_aberto": 3354147,
+    "total_pago_periodo": 5456324,
+    "total_vencido": 340504
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-09-02",
-    "data_de": "2026-08-03"
+    "data_ate": "2026-09-09",
+    "data_de": "2026-08-10"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 125,
+      "dias_atraso": 132,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 125,
+      "dias_atraso": 132,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 125,
+      "dias_atraso": 132,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 125,
+      "dias_atraso": 132,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 116,
+      "dias_atraso": 123,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 109,
+      "dias_atraso": 116,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 108,
+      "dias_atraso": 115,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
       "vencimento": "2026-05-17T00:00:00"
     },
     {
-      "dias_atraso": 103,
+      "dias_atraso": 110,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 103,
+      "dias_atraso": 110,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 98,
+      "dias_atraso": 105,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 807,
@@ -111,17 +111,22 @@
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
       "titulos": 18,
-      "total_aberto": 768432
+      "total_aberto": 1098423
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 22,
-      "total_aberto": 561362
+      "titulos": 21,
+      "total_aberto": 504412
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "titulos": 3,
       "total_aberto": 250885
+    },
+    {
+      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
+      "titulos": 13,
+      "total_aberto": 224645
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -134,24 +139,19 @@
       "total_aberto": 131700
     },
     {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 3,
-      "total_aberto": 106557
-    },
-    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 6,
       "total_aberto": 102930
     },
     {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 10,
-      "total_aberto": 93253
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "titulos": 43,
+      "total_aberto": 93086
     },
     {
-      "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 42,
-      "total_aberto": 92102
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 8,
+      "total_aberto": 85743
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
