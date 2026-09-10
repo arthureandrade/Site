@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 739873.06
+      "saldo": 740705.04
     },
     {
       "faixa": "1–30 dias",
@@ -25,12 +25,12 @@
       "saldo": 15073.9
     }
   ],
-  "generated_at": "2026-09-10T14:39:26.536006",
+  "generated_at": "2026-09-10T17:13:20.391283",
   "kpis": {
     "clientes_atraso": 71,
-    "total_aberto": 1271182.51,
+    "total_aberto": 1272014.4900000002,
     "total_atraso": 531309.45,
-    "total_vencer": 739873.0599999999
+    "total_vencer": 740705.0399999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -84,13 +84,6 @@
       "vencimento": "2026-09-09T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 592.13,
-      "vencimento": "2026-09-10T00:00:00"
-    },
-    {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
       "dias_atraso": -2,
       "loja": "Loja 2",
@@ -102,6 +95,13 @@
       "dias_atraso": -2,
       "loja": "Loja 4",
       "saldo": 2360,
+      "vencimento": "2026-09-12T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 69,
       "vencimento": "2026-09-12T00:00:00"
     }
   ],
