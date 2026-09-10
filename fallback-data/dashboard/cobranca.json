@@ -2,170 +2,170 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 762555.03
+      "saldo": 734195.88
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 227577.63
+      "saldo": 256238.09
     },
     {
       "faixa": "180+ dias",
-      "saldo": 130009.48
+      "saldo": 130061.95
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 86188.03
+      "saldo": 86588.65
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 60035.18
+      "saldo": 59768.66
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15058.01
+      "saldo": 15073.9
     }
   ],
-  "generated_at": "2026-09-09T21:26:31.610135",
+  "generated_at": "2026-09-10T02:35:33.513518",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 1281423.3599999999,
-    "total_atraso": 518868.33,
-    "total_vencer": 762555.0299999999
+    "clientes_atraso": 74,
+    "total_aberto": 1281927.1300000001,
+    "total_atraso": 547731.25,
+    "total_vencer": 734195.88
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
       "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 64.32,
-      "vencimento": "2026-09-04T00:00:00"
+      "loja": "Loja 2",
+      "saldo": 32.16,
+      "vencimento": "2026-09-05T00:00:00"
     },
     {
-      "cliente": "MIGUEL (SILOALDO)",
+      "cliente": "FRANCISCO FELIX DO MONTE",
       "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 271.35,
-      "vencimento": "2026-09-04T00:00:00"
+      "loja": "Loja 4",
+      "saldo": 2613,
+      "vencimento": "2026-09-05T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
       "dias_atraso": 4,
       "loja": "Loja 2",
-      "saldo": 32.13,
-      "vencimento": "2026-09-05T00:00:00"
-    },
-    {
-      "cliente": "FRANCISCO FELIX DO MONTE",
-      "dias_atraso": 4,
-      "loja": "Loja 4",
-      "saldo": 2610.4,
-      "vencimento": "2026-09-05T00:00:00"
+      "saldo": 49.2,
+      "vencimento": "2026-09-06T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
       "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 49.15,
-      "vencimento": "2026-09-06T00:00:00"
-    },
-    {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 2,
-      "loja": "Loja 2",
-      "saldo": 415.83,
+      "saldo": 416.25,
       "vencimento": "2026-09-07T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
+      "loja": "Loja 2",
+      "saldo": 912,
+      "vencimento": "2026-09-09T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 3020,
       "vencimento": "2026-09-09T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 2",
       "saldo": 235,
       "vencimento": "2026-09-09T00:00:00"
     },
     {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 0,
-      "loja": "Loja 2",
-      "saldo": 912,
-      "vencimento": "2026-09-09T00:00:00"
-    },
-    {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
+      "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 592.13,
       "vencimento": "2026-09-10T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 595,
+      "vencimento": "2026-09-12T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": -2,
+      "loja": "Loja 4",
+      "saldo": 2360,
+      "vencimento": "2026-09-12T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 64,
-      "titulos": 2,
-      "total_atraso": 73310.13
+      "maior_atraso": 65,
+      "titulos": 3,
+      "total_atraso": 75272.54
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 38,
+      "maior_atraso": 39,
       "titulos": 6,
-      "total_atraso": 66233.42
+      "total_atraso": 66298.77
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 10,
+      "maior_atraso": 11,
       "titulos": 2,
-      "total_atraso": 66201.3
+      "total_atraso": 66222.86
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 551,
+      "maior_atraso": 552,
       "titulos": 7,
-      "total_atraso": 39692.12
-    },
-    {
-      "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 68,
-      "titulos": 26,
-      "total_atraso": 24898.14
+      "total_atraso": 39693.380000000005
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 12,
-      "titulos": 3,
-      "total_atraso": 24431.43
+      "maior_atraso": 13,
+      "titulos": 4,
+      "total_atraso": 28159.68
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "maior_atraso": 69,
+      "titulos": 26,
+      "total_atraso": 24922.26
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 833,
+      "maior_atraso": 834,
       "titulos": 16,
-      "total_atraso": 22241.510000000002
+      "total_atraso": 22253.81
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 102,
+      "maior_atraso": 103,
       "titulos": 3,
-      "total_atraso": 22232
+      "total_atraso": 22252.9
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 47,
+      "maior_atraso": 48,
       "titulos": 3,
-      "total_atraso": 14234.080000000002
+      "total_atraso": 14276.16
     },
     {
-      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
-      "maior_atraso": 1004,
-      "titulos": 2,
-      "total_atraso": 13057.369999999999
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "maior_atraso": 22,
+      "titulos": 16,
+      "total_atraso": 13297.670000000002
     }
   ]
 }
