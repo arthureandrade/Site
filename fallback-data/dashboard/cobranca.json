@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 734195.88
+      "saldo": 735797.06
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 256238.09
+      "saldo": 239816.29
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15073.9
     }
   ],
-  "generated_at": "2026-09-10T07:49:15.705888",
+  "generated_at": "2026-09-10T11:26:27.121739",
   "kpis": {
-    "clientes_atraso": 74,
-    "total_aberto": 1281927.1300000001,
-    "total_atraso": 547731.25,
-    "total_vencer": 734195.88
+    "clientes_atraso": 71,
+    "total_aberto": 1267106.51,
+    "total_atraso": 531309.45,
+    "total_vencer": 735797.06
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,16 +132,16 @@
       "total_atraso": 39693.380000000005
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 13,
-      "titulos": 4,
-      "total_atraso": 28159.68
-    },
-    {
       "cliente": "MIGUEL (SILOALDO)",
       "maior_atraso": 69,
       "titulos": 26,
       "total_atraso": 24922.26
+    },
+    {
+      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
+      "maior_atraso": 13,
+      "titulos": 3,
+      "total_atraso": 24507.88
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
