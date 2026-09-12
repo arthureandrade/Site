@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 728118.92
+      "saldo": 714550.12
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 217416.57
+      "saldo": 210139.94
     },
     {
       "faixa": "180+ dias",
@@ -14,23 +14,23 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 86820.23999999999
+      "saldo": 84734.29999999999
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 69973.58
+      "saldo": 53835.62
     },
     {
       "faixa": "91–180 dias",
       "saldo": 15099.8
     }
   ],
-  "generated_at": "2026-09-12T09:45:26.857819",
+  "generated_at": "2026-09-12T12:33:54.089506",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 1247595.94,
-    "total_atraso": 519477.02,
-    "total_vencer": 728118.9199999999
+    "clientes_atraso": 69,
+    "total_aberto": 1208526.6099999999,
+    "total_atraso": 493976.49,
+    "total_vencer": 714550.12
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -77,13 +77,6 @@
       "vencimento": "2026-09-12T00:00:00"
     },
     {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": 0,
-      "loja": "Loja 2",
-      "saldo": 69,
-      "vencimento": "2026-09-12T00:00:00"
-    },
-    {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
       "dias_atraso": -1,
       "loja": "Loja 2",
@@ -91,18 +84,25 @@
       "vencimento": "2026-09-13T00:00:00"
     },
     {
-      "cliente": "MIGUEL (SILOALDO)",
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
       "dias_atraso": -1,
       "loja": "Loja 2",
-      "saldo": 37,
+      "saldo": 9000,
       "vencimento": "2026-09-13T00:00:00"
     },
     {
-      "cliente": "MIGUEL (SILOALDO)",
-      "dias_atraso": -1,
-      "loja": "Loja 2",
-      "saldo": 34,
-      "vencimento": "2026-09-13T00:00:00"
+      "cliente": "MARCIO DA CONCEICAO SOUZA",
+      "dias_atraso": -4,
+      "loja": "Loja 4",
+      "saldo": 792,
+      "vencimento": "2026-09-16T00:00:00"
+    },
+    {
+      "cliente": "MARCIO DA CONCEICAO SOUZA",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 289.5,
+      "vencimento": "2026-09-16T00:00:00"
     }
   ],
   "tipo": "cobranca",
@@ -130,12 +130,6 @@
       "maior_atraso": 554,
       "titulos": 7,
       "total_atraso": 39695.89
-    },
-    {
-      "cliente": "MIGUEL (SILOALDO)",
-      "maior_atraso": 71,
-      "titulos": 26,
-      "total_atraso": 24970.530000000002
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
@@ -166,6 +160,12 @@
       "maior_atraso": 24,
       "titulos": 16,
       "total_atraso": 13327.91
+    },
+    {
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 1007,
+      "titulos": 2,
+      "total_atraso": 13077.96
     }
   ]
 }
