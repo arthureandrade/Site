@@ -2,170 +2,170 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 655665.05
+      "saldo": 751383.71
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 240401.15
+      "saldo": 166156.85
     },
     {
       "faixa": "180+ dias",
-      "saldo": 130271.70999999999
+      "saldo": 130324.14
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 86474.21
+      "saldo": 86545.16
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 53863.48
+      "saldo": 53918.48
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 15545.7
+      "saldo": 15558.65
     }
   ],
-  "generated_at": "2026-09-14T12:34:26.922514",
+  "generated_at": "2026-09-15T13:17:06.253101",
   "kpis": {
-    "clientes_atraso": 74,
-    "total_aberto": 1182221.2999999998,
-    "total_atraso": 526556.25,
-    "total_vencer": 655665.05
+    "clientes_atraso": 68,
+    "total_aberto": 1203886.99,
+    "total_atraso": 452503.28,
+    "total_vencer": 751383.71
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 3035.1,
-      "vencimento": "2026-09-09T00:00:00"
-    },
-    {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 916.56,
-      "vencimento": "2026-09-09T00:00:00"
-    },
-    {
-      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 236.18,
-      "vencimento": "2026-09-09T00:00:00"
-    },
-    {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 2,
-      "loja": "Loja 2",
-      "saldo": 595,
-      "vencimento": "2026-09-12T00:00:00"
-    },
-    {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 4",
-      "saldo": 2360,
+      "saldo": 2367.08,
       "vencimento": "2026-09-12T00:00:00"
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "dias_atraso": 1,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 164,
+      "saldo": 596.78,
+      "vencimento": "2026-09-12T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": 2,
+      "loja": "Loja 2",
+      "saldo": 164.33,
       "vencimento": "2026-09-13T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 2",
-      "saldo": 9000,
+      "saldo": 9018,
       "vencimento": "2026-09-13T00:00:00"
     },
     {
       "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 4",
       "saldo": 792,
       "vencimento": "2026-09-16T00:00:00"
     },
     {
       "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 289.5,
       "vencimento": "2026-09-16T00:00:00"
     },
     {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": -1,
+      "loja": "Loja 2",
+      "saldo": 1315,
+      "vencimento": "2026-09-16T00:00:00"
+    },
+    {
       "cliente": "MARCIO DA CONCEICAO SOUZA",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 375,
+      "vencimento": "2026-09-16T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": -1,
+      "loja": "Loja 4",
+      "saldo": 150,
+      "vencimento": "2026-09-16T00:00:00"
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "dias_atraso": -1,
+      "loja": "Loja 2",
+      "saldo": 630,
       "vencimento": "2026-09-16T00:00:00"
     }
   ],
   "tipo": "cobranca",
   "top_clientes": [
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 15,
-      "titulos": 3,
-      "total_atraso": 84687.36
-    },
-    {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 69,
+      "maior_atraso": 70,
       "titulos": 2,
-      "total_atraso": 73532.38
+      "total_atraso": 73642.54
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 18,
+      "maior_atraso": 19,
       "titulos": 3,
-      "total_atraso": 46105.619999999995
+      "total_atraso": 46151.04
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 556,
+      "maior_atraso": 557,
       "titulos": 7,
-      "total_atraso": 39698.39
+      "total_atraso": 39699.65
+    },
+    {
+      "cliente": "CONSTRUTORA PORTO S.A.",
+      "maior_atraso": 14,
+      "titulos": 1,
+      "total_atraso": 34413.43
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 107,
+      "maior_atraso": 108,
       "titulos": 3,
-      "total_atraso": 22336.5
+      "total_atraso": 22357.4
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 838,
+      "maior_atraso": 839,
       "titulos": 16,
-      "total_atraso": 22303.05
+      "total_atraso": 22315.35
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 49,
+      "maior_atraso": 50,
       "titulos": 9,
-      "total_atraso": 17928.769999999997
+      "total_atraso": 17955.42
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "maior_atraso": 26,
+      "maior_atraso": 27,
       "titulos": 19,
-      "total_atraso": 16473.19
-    },
-    {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 2,
-      "titulos": 1,
-      "total_atraso": 15261.59
+      "total_atraso": 16495.52
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 52,
+      "maior_atraso": 53,
       "titulos": 3,
-      "total_atraso": 14444.46
+      "total_atraso": 14486.539999999999
+    },
+    {
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 1010,
+      "titulos": 2,
+      "total_atraso": 13098.550000000001
     }
   ]
 }
