@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2789094
+      "saldo": 2763017
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 290961
+      "saldo": 349177
+    },
+    {
+      "faixa": "61–90 dias",
+      "saldo": 91084
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 88691
     },
     {
       "faixa": "91–180 dias",
       "saldo": 40332
-    },
-    {
-      "faixa": "61–90 dias",
-      "saldo": 32868
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 30475
     }
   ],
-  "generated_at": "2026-09-16T15:27:55.398835",
+  "generated_at": "2026-09-16T18:17:15.931921",
   "kpis": {
-    "a_vencer_7d": 367886,
+    "a_vencer_7d": 341809,
     "juros_pagos": 71811,
-    "total_aberto": 3183730,
-    "total_pago_periodo": 4492090,
-    "total_vencido": 394636
+    "total_aberto": 3332301,
+    "total_pago_periodo": 4391273,
+    "total_vencido": 569284
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 18,
-      "total_aberto": 930914
+      "titulos": 21,
+      "total_aberto": 1105562
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -149,14 +149,14 @@
       "total_aberto": 85743
     },
     {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 20,
-      "total_aberto": 77486
-    },
-    {
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 2,
       "total_aberto": 71038
+    },
+    {
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 9,
+      "total_aberto": 68874
     }
   ]
 }
