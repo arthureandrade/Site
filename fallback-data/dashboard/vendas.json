@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-17T15:02:55.574853",
+  "generated_at": "2026-09-17T18:07:04.652613",
   "kpis": {
-    "ticket_medio": 524.3659090909091,
-    "total_pedidos": 132,
-    "total_vendas": 69216.3,
+    "ticket_medio": 678.842784090909,
+    "total_pedidos": 176,
+    "total_vendas": 119476.33,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 4",
-      "total_vendas": 30279
+      "total_vendas": 58104
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 29985.55
+      "total_vendas": 33990.58
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 8951.75
+      "total_vendas": 27381.75
     }
   ],
   "ok": true,
@@ -31,44 +31,44 @@
   "serie_diaria": [
     {
       "data": "2026-09-17",
-      "total_vendas": 69216.3
+      "total_vendas": 119476.33
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 24,
-      "total_vendas": 21537.77,
+      "pedidos": 33,
+      "total_vendas": 43392.770000000004,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 18,
-      "total_vendas": 18857,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 18,
-      "total_vendas": 9783,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 18,
-      "total_vendas": 9526.56,
+      "pedidos": 26,
+      "total_vendas": 22661.559999999998,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 23,
-      "total_vendas": 4197,
-      "vendedor": "Lucas"
+      "pedidos": 26,
+      "total_vendas": 18859.03,
+      "vendedor": "Rafael"
     },
     {
-      "pedidos": 20,
-      "total_vendas": 4159.99,
+      "pedidos": 25,
+      "total_vendas": 16709.989999999998,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 11,
-      "total_vendas": 1154.98,
+      "pedidos": 22,
+      "total_vendas": 11131,
+      "vendedor": "Juan"
+    },
+    {
+      "pedidos": 27,
+      "total_vendas": 5044,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 17,
+      "total_vendas": 1677.98,
       "vendedor": "Estefanio"
     }
   ]

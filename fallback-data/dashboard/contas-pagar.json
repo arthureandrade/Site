@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2747786
+      "saldo": 2780022
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 308492
+      "saldo": 302148
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 30108
     }
   ],
-  "generated_at": "2026-09-17T15:02:56.918360",
+  "generated_at": "2026-09-17T18:07:05.812736",
   "kpis": {
     "a_vencer_7d": 468399,
     "juros_pagos": 71811,
-    "total_aberto": 3159953,
-    "total_pago_periodo": 4256011,
-    "total_vencido": 412167
+    "total_aberto": 3185845,
+    "total_pago_periodo": 4264271,
+    "total_vencido": 405823
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 18,
-      "total_aberto": 930914
+      "titulos": 17,
+      "total_aberto": 930952
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 46,
-      "total_aberto": 104274
+      "titulos": 49,
+      "total_aberto": 109648
     },
     {
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
