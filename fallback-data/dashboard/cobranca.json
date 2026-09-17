@@ -2,19 +2,19 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 767718.84
-    },
-    {
-      "faixa": "1–30 dias",
-      "saldo": 158446.66
+      "saldo": 784728.75
     },
     {
       "faixa": "180+ dias",
       "saldo": 131104
     },
     {
+      "faixa": "1–30 dias",
+      "saldo": 116664.94
+    },
+    {
       "faixa": "61–90 dias",
-      "saldo": 86687.06
+      "saldo": 86355.98
     },
     {
       "faixa": "31–60 dias",
@@ -25,12 +25,12 @@
       "saldo": 14909.54
     }
   ],
-  "generated_at": "2026-09-17T11:09:10.251772",
+  "generated_at": "2026-09-17T15:02:56.120043",
   "kpis": {
-    "clientes_atraso": 66,
-    "total_aberto": 1214552.5,
-    "total_atraso": 446833.66,
-    "total_vencer": 767718.8400000001
+    "clientes_atraso": 62,
+    "total_aberto": 1189449.61,
+    "total_atraso": 404720.86,
+    "total_vencer": 784728.75
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 72,
-      "titulos": 2,
-      "total_atraso": 73786.86
+      "titulos": 1,
+      "total_atraso": 72306.4
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
@@ -124,12 +124,6 @@
       "maior_atraso": 559,
       "titulos": 7,
       "total_atraso": 39702.16
-    },
-    {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 16,
-      "titulos": 1,
-      "total_atraso": 34435.79
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
@@ -166,6 +160,12 @@
       "maior_atraso": 1012,
       "titulos": 2,
       "total_atraso": 13112.279999999999
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 76,
+      "titulos": 7,
+      "total_atraso": 10826.3
     }
   ]
 }
