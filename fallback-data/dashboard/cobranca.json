@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 765866.63
+      "saldo": 767718.84
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 163343.38
+      "saldo": 158446.66
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 14909.54
     }
   ],
-  "generated_at": "2026-09-17T06:21:57.710386",
+  "generated_at": "2026-09-17T11:09:10.251772",
   "kpis": {
-    "clientes_atraso": 70,
-    "total_aberto": 1217597.01,
-    "total_atraso": 451730.38,
-    "total_vencer": 765866.6299999999
+    "clientes_atraso": 66,
+    "total_aberto": 1214552.5,
+    "total_atraso": 446833.66,
+    "total_vencer": 767718.8400000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -128,8 +128,8 @@
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
       "maior_atraso": 16,
-      "titulos": 2,
-      "total_atraso": 35510.51
+      "titulos": 1,
+      "total_atraso": 34435.79
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
