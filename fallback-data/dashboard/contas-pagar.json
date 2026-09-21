@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2708410
+      "saldo": 2687549
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 314239
+      "saldo": 347110
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 45561
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 30475
+      "saldo": 55581
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 27639
+      "saldo": 27042
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 25642
     }
   ],
-  "generated_at": "2026-09-18T09:46:57.829138",
+  "generated_at": "2026-09-21T13:00:19.353499",
   "kpis": {
-    "a_vencer_7d": 399106,
-    "juros_pagos": 71811,
-    "total_aberto": 3126324,
-    "total_pago_periodo": 4396117,
-    "total_vencido": 417914
+    "a_vencer_7d": 444391,
+    "juros_pagos": 747,
+    "total_aberto": 3142924,
+    "total_pago_periodo": 3956006,
+    "total_vencido": 455375
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-09-18",
-    "data_de": "2026-08-19"
+    "data_ate": "2026-09-21",
+    "data_de": "2026-08-22"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 141,
+      "dias_atraso": 144,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 141,
+      "dias_atraso": 144,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 141,
+      "dias_atraso": 144,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 141,
+      "dias_atraso": 144,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 132,
+      "dias_atraso": 135,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 125,
+      "dias_atraso": 128,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 124,
+      "dias_atraso": 127,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
       "vencimento": "2026-05-17T00:00:00"
     },
     {
-      "dias_atraso": 119,
+      "dias_atraso": 122,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 119,
+      "dias_atraso": 122,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 114,
+      "dias_atraso": 117,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 807,
@@ -140,18 +140,18 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 49,
-      "total_aberto": 109648
-    },
-    {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 8,
-      "total_aberto": 85743
+      "titulos": 51,
+      "total_aberto": 110819
     },
     {
       "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
       "titulos": 2,
       "total_aberto": 71038
+    },
+    {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 7,
+      "total_aberto": 69340
     },
     {
       "fornecedor": "STAM METALURGICA LTDA",
