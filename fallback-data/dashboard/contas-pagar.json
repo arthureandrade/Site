@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 387045
+      "saldo": 334249
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 25496
     }
   ],
-  "generated_at": "2026-09-22T05:30:52.680209",
+  "generated_at": "2026-09-22T10:09:43.666055",
   "kpis": {
     "a_vencer_7d": 409127,
     "juros_pagos": 747,
-    "total_aberto": 3142924,
-    "total_pago_periodo": 3956006,
-    "total_vencido": 496165
+    "total_aberto": 3090128,
+    "total_pago_periodo": 4109813,
+    "total_vencido": 443369
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -144,11 +144,6 @@
       "total_aberto": 110819
     },
     {
-      "fornecedor": "GSP INDUSTRIA METALURGICA LTDA",
-      "titulos": 2,
-      "total_aberto": 71038
-    },
-    {
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
       "titulos": 7,
       "total_aberto": 69340
@@ -157,6 +152,11 @@
       "fornecedor": "STAM METALURGICA LTDA",
       "titulos": 9,
       "total_aberto": 68874
+    },
+    {
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 4,
+      "total_aberto": 63538
     }
   ]
 }
