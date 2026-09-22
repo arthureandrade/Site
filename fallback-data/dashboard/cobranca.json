@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 601010.52
+      "saldo": 591705.73
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 298033.47
+      "saldo": 296364.47
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15304.29
     }
   ],
-  "generated_at": "2026-09-22T10:09:43.022379",
+  "generated_at": "2026-09-22T14:07:09.923394",
   "kpis": {
-    "clientes_atraso": 76,
-    "total_aberto": 1193749.38,
-    "total_atraso": 592738.86,
-    "total_vencer": 601010.52
+    "clientes_atraso": 72,
+    "total_aberto": 1182775.59,
+    "total_atraso": 591069.86,
+    "total_vencer": 591705.73
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -84,13 +84,6 @@
       "vencimento": "2026-09-23T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -1,
-      "loja": "Loja 1",
-      "saldo": 2236,
-      "vencimento": "2026-09-23T00:00:00"
-    },
-    {
       "cliente": "PERSONAL CONFECÇÕES RR LTDA",
       "dias_atraso": -2,
       "loja": "Loja 2",
@@ -103,6 +96,13 @@
       "loja": "Loja 4",
       "saldo": 1350,
       "vencimento": "2026-09-24T00:00:00"
+    },
+    {
+      "cliente": "FABIO RAIOL FEITOSA",
+      "dias_atraso": -4,
+      "loja": "Loja 1",
+      "saldo": 12853.46,
+      "vencimento": "2026-09-26T00:00:00"
     }
   ],
   "tipo": "cobranca",
