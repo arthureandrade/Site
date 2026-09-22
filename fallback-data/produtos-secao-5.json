@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-21T21:00:34.530Z",
+  "generated_at": "2026-09-22T00:02:32.657Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
   "source_total": 7322,
-  "total": 5633,
+  "total": 5632,
   "produtos": [
     {
       "descricao": "",
@@ -3636,21 +3636,6 @@
     },
     {
       "descricao": "",
-      "estoque": 0,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4941.jpg?v=1774736319978564100",
-      "grupo": 42,
-      "id": 4941,
-      "marca": "LOTUS",
-      "nome": "AMENDOIM DORI 5X30G SALGADO JAPONES CR QTD. 6.00 CR",
-      "preco": 0,
-      "secao": 5,
-      "subgrupo": 9999,
-      "unidade": "UN",
-      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/4941.jpg?v=75232ee1b81a2153",
-      "fallback_foto_version": "75232ee1b81a2153"
-    },
-    {
-      "descricao": "",
       "estoque": 10,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4866.jpg?v=1786394362474000000",
       "grupo": 42,
@@ -4581,7 +4566,7 @@
     },
     {
       "descricao": "",
-      "estoque": 5845,
+      "estoque": 5829,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1648.jpg?v=1788297910115000000",
       "grupo": 64,
       "id": 1648,
@@ -5541,7 +5526,7 @@
     },
     {
       "descricao": "",
-      "estoque": 67,
+      "estoque": 83,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12015.jpg?v=1786559537788000000",
       "grupo": 92,
       "id": 12015,
@@ -9036,7 +9021,7 @@
     },
     {
       "descricao": "",
-      "estoque": 92,
+      "estoque": 89,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3983.jpg?v=1786396426332000000",
       "grupo": 10,
       "id": 3983,
@@ -13071,7 +13056,7 @@
     },
     {
       "descricao": "",
-      "estoque": 54,
+      "estoque": 52,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4215.jpg?v=1786394362440000000",
       "grupo": 11,
       "id": 4215,
@@ -23946,7 +23931,7 @@
     },
     {
       "descricao": "",
-      "estoque": 214,
+      "estoque": 213,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11827.jpg?v=1779398254167000000",
       "grupo": 28,
       "id": 11827,
@@ -26121,7 +26106,7 @@
     },
     {
       "descricao": "",
-      "estoque": 16084,
+      "estoque": 16081,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11874.jpg?v=1786391840010000000",
       "grupo": 30,
       "id": 11874,
@@ -27022,7 +27007,7 @@
     {
       "descricao": "",
       "estoque": 70,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12686.jpg?v=1774746900621424700",
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12686.jpg?v=1790024850761000000",
       "grupo": 30,
       "id": 12686,
       "marca": "ATLAS",
@@ -27112,7 +27097,7 @@
     {
       "descricao": "",
       "estoque": 100,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12687.jpg?v=1774746904430328200",
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12687.jpg?v=1790024851055000000",
       "grupo": 30,
       "id": 12687,
       "marca": "ATLAS",
@@ -28147,17 +28132,17 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14418.jpg?v=1790040134000000000",
       "grupo": 32,
       "id": 14418,
       "marca": "SILVANA",
       "nome": "DOBRADICA P.CAD. 300 X 1.1/2\" ZINC - CART C/ 02 UNDS",
-      "preco": 0,
+      "preco": 5.97,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14418.jpg?v=909a39385e1481cc",
+      "fallback_foto_version": "909a39385e1481cc"
     },
     {
       "descricao": "",
@@ -28731,7 +28716,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1752,
+      "estoque": 1751,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/47.jpg?v=1786391962442000000",
       "grupo": 33,
       "id": 47,
@@ -28956,7 +28941,7 @@
     },
     {
       "descricao": "",
-      "estoque": 7870,
+      "estoque": 7860,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/691.jpg?v=1786391964699000000",
       "grupo": 33,
       "id": 691,
@@ -29556,7 +29541,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1,
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12372.jpg?v=1783976799609000000",
       "grupo": 101,
       "id": 12372,
@@ -33037,7 +33022,7 @@
     {
       "descricao": "",
       "estoque": 3,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12624.jpg?v=1786137565819000000",
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12624.jpg?v=1790025971831000000",
       "grupo": 41,
       "id": 12624,
       "marca": "SILVANA",
@@ -33292,7 +33277,7 @@
     {
       "descricao": "",
       "estoque": 54,
-      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14082.jpg?v=1786137565533000000",
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14082.jpg?v=1790025971889000000",
       "grupo": 41,
       "id": 14082,
       "marca": "SILVANA",
@@ -33651,7 +33636,7 @@
     },
     {
       "descricao": "",
-      "estoque": 31,
+      "estoque": 30,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/76.jpg?v=1783179605270000000",
       "grupo": 41,
       "id": 76,
@@ -33696,7 +33681,7 @@
     },
     {
       "descricao": "",
-      "estoque": 68,
+      "estoque": 98,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12051.jpg?v=1774745031102003100",
       "grupo": 41,
       "id": 12051,
@@ -35052,7 +35037,7 @@
       "id": 85,
       "marca": "SILVANA",
       "nome": "FERROLHO TIPO BORBOLETA '2' SILVANA",
-      "preco": 2.56,
+      "preco": 7.43,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35062,17 +35047,17 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14414.jpg?v=1790040134000000000",
       "grupo": 41,
       "id": 14414,
       "marca": "SILVANA",
       "nome": "FERROLHO TIPO BORBOLETA 1.1/2 SILVANA",
-      "preco": 0,
+      "preco": 7.1,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14414.jpg?v=70ff27ab76f46d95",
+      "fallback_foto_version": "70ff27ab76f46d95"
     },
     {
       "descricao": "",
@@ -35082,7 +35067,7 @@
       "id": 2101,
       "marca": "SILVANA",
       "nome": "FERROLHO TIPO BORBOLETA 2.1/2 SILVANA",
-      "preco": 3.8,
+      "preco": 8.39,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -35092,47 +35077,47 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14415.jpg?v=1790040134000000000",
       "grupo": 41,
       "id": 14415,
       "marca": "SILVANA",
       "nome": "FERROLHO TIPO BORBOLETA 3\" SILVANA",
-      "preco": 0,
+      "preco": 10.78,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14415.jpg?v=ba976bb2245041b8",
+      "fallback_foto_version": "ba976bb2245041b8"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14396.jpg?v=1790040134000000000",
       "grupo": 41,
       "id": 14396,
       "marca": "SILVANA",
       "nome": "FERROLHO ZINC 500 X 2.1/2\" - SILVANA",
-      "preco": 0,
+      "preco": 5.81,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14396.jpg?v=e46b01375dcadb85",
+      "fallback_foto_version": "e46b01375dcadb85"
     },
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14395.jpg?v=1790040134000000000",
       "grupo": 41,
       "id": 14395,
       "marca": "SILVANA",
       "nome": "FERROLHO ZINC 500 X 2\" - SILVANA",
-      "preco": 0,
+      "preco": 5.31,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14395.jpg?v=e46b01375dcadb85",
+      "fallback_foto_version": "e46b01375dcadb85"
     },
     {
       "descricao": "",
@@ -35152,17 +35137,17 @@
     {
       "descricao": "",
       "estoque": 0,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/14397.jpg?v=1790040134000000000",
       "grupo": 41,
       "id": 14397,
       "marca": "SILVANA",
       "nome": "FERROLHO ZINC 500 X 4\" - SILVANA",
-      "preco": 0,
+      "preco": 7.33,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/14397.jpg?v=2ae88768b89846a1",
+      "fallback_foto_version": "2ae88768b89846a1"
     },
     {
       "descricao": "",
@@ -38301,7 +38286,7 @@
     },
     {
       "descricao": "",
-      "estoque": 135,
+      "estoque": 132,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/488.jpg?v=1786559063624000000",
       "grupo": 32,
       "id": 488,
@@ -39351,7 +39336,7 @@
     },
     {
       "descricao": "",
-      "estoque": 2,
+      "estoque": 1,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10980.jpg?v=1786391691418000000",
       "grupo": 69,
       "id": 10980,
@@ -45306,7 +45291,7 @@
     },
     {
       "descricao": "",
-      "estoque": 180,
+      "estoque": 177,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/10996.jpg?v=1782161887309000000",
       "grupo": 30,
       "id": 10996,
@@ -50571,7 +50556,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9,
+      "estoque": 8,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12484.jpg?v=1786390437966000000",
       "grupo": 58,
       "id": 12484,
@@ -54897,7 +54882,7 @@
       "id": 14384,
       "marca": "JOMARCA",
       "nome": "PF AUTO BROCANTE 12X 3.1/2 TELHA SAND. CH5/16 JM",
-      "preco": 0,
+      "preco": 0.81,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -61941,7 +61926,7 @@
     },
     {
       "descricao": "",
-      "estoque": 17340,
+      "estoque": 17320,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1644.jpg?v=1788297904940000000",
       "grupo": 64,
       "id": 1644,
@@ -65316,7 +65301,7 @@
     },
     {
       "descricao": "",
-      "estoque": 8237,
+      "estoque": 8037,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1766.jpg?v=1788297923407000000",
       "grupo": 64,
       "id": 1766,
@@ -65481,7 +65466,7 @@
     },
     {
       "descricao": "",
-      "estoque": 9831,
+      "estoque": 9821,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1631.jpg?v=1788297902868000000",
       "grupo": 64,
       "id": 1631,
@@ -69111,7 +69096,7 @@
     },
     {
       "descricao": "",
-      "estoque": 73,
+      "estoque": 71,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4322.jpg?v=1780511365758000000",
       "grupo": 71,
       "id": 4322,
@@ -69201,7 +69186,7 @@
     },
     {
       "descricao": "",
-      "estoque": 794,
+      "estoque": 792,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3771.jpg?v=1780511363833000000",
       "grupo": 66,
       "id": 3771,
@@ -69462,7 +69447,7 @@
       "id": 14394,
       "marca": "JOCEC",
       "nome": "ROLDANA SUPORTE FECHADO V 3.1/2\" C/ PARAFUSO",
-      "preco": 0,
+      "preco": 80.87,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -69477,7 +69462,7 @@
       "id": 14393,
       "marca": "JOCEC",
       "nome": "ROLDANA SUPORTE FECHADO V 3\" C/ PARAFUSO",
-      "preco": 0,
+      "preco": 59.05,
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
@@ -69667,7 +69652,7 @@
     {
       "descricao": "",
       "estoque": 21,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13955.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13955,
       "marca": "ATLAS",
@@ -69676,8 +69661,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13955.jpg?v=86832b2df91322e8",
+      "fallback_foto_version": "86832b2df91322e8"
     },
     {
       "descricao": "",
@@ -69697,7 +69682,7 @@
     {
       "descricao": "",
       "estoque": 15,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13954.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13954,
       "marca": "ATLAS",
@@ -69706,8 +69691,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13954.jpg?v=df20ad903cdc5d8c",
+      "fallback_foto_version": "df20ad903cdc5d8c"
     },
     {
       "descricao": "",
@@ -69802,7 +69787,7 @@
     {
       "descricao": "",
       "estoque": 24,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13953.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13953,
       "marca": "ATLAS",
@@ -69811,13 +69796,13 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13953.jpg?v=f121bb64c8aff2b6",
+      "fallback_foto_version": "f121bb64c8aff2b6"
     },
     {
       "descricao": "",
       "estoque": 36,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13952.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13952,
       "marca": "ATLAS",
@@ -69826,13 +69811,13 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13952.jpg?v=f121bb64c8aff2b6",
+      "fallback_foto_version": "f121bb64c8aff2b6"
     },
     {
       "descricao": "",
       "estoque": 5,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13959.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13959,
       "marca": "ATLAS",
@@ -69841,8 +69826,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13959.jpg?v=4bcfdb825123dc95",
+      "fallback_foto_version": "4bcfdb825123dc95"
     },
     {
       "descricao": "",
@@ -69922,7 +69907,7 @@
     {
       "descricao": "",
       "estoque": 24,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13958.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13958,
       "marca": "ATLAS",
@@ -69931,13 +69916,13 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13958.jpg?v=02bd59ccb2feb0b0",
+      "fallback_foto_version": "02bd59ccb2feb0b0"
     },
     {
       "descricao": "",
       "estoque": 24,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13956.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13956,
       "marca": "ATLAS",
@@ -69946,13 +69931,13 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13956.jpg?v=cad40b502dd0953d",
+      "fallback_foto_version": "cad40b502dd0953d"
     },
     {
       "descricao": "",
       "estoque": 24,
-      "foto_url": null,
+      "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13957.jpg?v=1790039164000000000",
       "grupo": 35,
       "id": 13957,
       "marca": "ATLAS",
@@ -69961,8 +69946,8 @@
       "secao": 5,
       "subgrupo": 9999,
       "unidade": "UN",
-      "fallback_foto_url": null,
-      "fallback_foto_version": null
+      "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13957.jpg?v=38fbaee732e9b687",
+      "fallback_foto_version": "38fbaee732e9b687"
     },
     {
       "descricao": "",
@@ -77571,7 +77556,7 @@
     },
     {
       "descricao": "",
-      "estoque": 52,
+      "estoque": 51,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13249.jpg?v=1783179586907000000",
       "grupo": 83,
       "id": 13249,
@@ -77586,7 +77571,7 @@
     },
     {
       "descricao": "",
-      "estoque": 29,
+      "estoque": 30,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13254.jpg?v=1783179588586000000",
       "grupo": 83,
       "id": 13254,
@@ -77646,7 +77631,7 @@
     },
     {
       "descricao": "",
-      "estoque": 32,
+      "estoque": 31,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13665.jpg?v=1783179588708000000",
       "grupo": 83,
       "id": 13665,
@@ -81921,7 +81906,7 @@
     },
     {
       "descricao": "",
-      "estoque": 64,
+      "estoque": 63,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4770.jpg?v=1786396443654000000",
       "grupo": 45,
       "id": 4770,
