@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 591705.73
+      "saldo": 598859.53
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 296364.47
+      "saldo": 290763.41000000003
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15304.29
     }
   ],
-  "generated_at": "2026-09-22T14:07:09.923394",
+  "generated_at": "2026-09-22T17:17:56.728570",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 1182775.59,
-    "total_atraso": 591069.86,
-    "total_vencer": 591705.73
+    "clientes_atraso": 68,
+    "total_aberto": 1184328.33,
+    "total_atraso": 585468.8,
+    "total_vencer": 598859.53
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -122,8 +122,8 @@
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
       "maior_atraso": 3,
-      "titulos": 3,
-      "total_atraso": 65994.45
+      "titulos": 2,
+      "total_atraso": 65367.57
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
