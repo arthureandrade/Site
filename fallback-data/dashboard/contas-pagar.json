@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 462016
+      "saldo": 337164
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 24642
     }
   ],
-  "generated_at": "2026-09-23T08:38:04.630231",
+  "generated_at": "2026-09-23T13:28:43.584186",
   "kpis": {
     "a_vencer_7d": 298042,
     "juros_pagos": 747,
-    "total_aberto": 3095328,
-    "total_pago_periodo": 4119675,
-    "total_vencido": 571528
+    "total_aberto": 2970476,
+    "total_pago_periodo": 4500681,
+    "total_vencido": 446676
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,13 +110,13 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 16,
-      "total_aberto": 861372
+      "titulos": 15,
+      "total_aberto": 786310
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 21,
-      "total_aberto": 504412
+      "titulos": 20,
+      "total_aberto": 452472
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
