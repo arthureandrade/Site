@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2523800
+      "saldo": 2511102
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 24642
     }
   ],
-  "generated_at": "2026-09-23T13:28:43.584186",
+  "generated_at": "2026-09-23T16:39:33.169302",
   "kpis": {
-    "a_vencer_7d": 298042,
+    "a_vencer_7d": 285344,
     "juros_pagos": 747,
-    "total_aberto": 2970476,
-    "total_pago_periodo": 4500681,
+    "total_aberto": 2957778,
+    "total_pago_periodo": 4548391,
     "total_vencido": 446676
   },
   "ok": true,
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 15,
-      "total_aberto": 786310
+      "titulos": 14,
+      "total_aberto": 784392
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -149,14 +149,14 @@
       "total_aberto": 69340
     },
     {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 9,
-      "total_aberto": 68874
-    },
-    {
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 4,
       "total_aberto": 63538
+    },
+    {
+      "fornecedor": "STAM METALURGICA LTDA",
+      "titulos": 8,
+      "total_aberto": 62940
     }
   ]
 }
