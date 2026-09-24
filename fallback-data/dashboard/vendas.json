@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-09-24T13:22:06.038707",
+  "generated_at": "2026-09-24T16:40:32.959548",
   "kpis": {
-    "ticket_medio": 272.843738317757,
-    "total_pedidos": 107,
-    "total_vendas": 29194.28,
+    "ticket_medio": 499.0432692307692,
+    "total_pedidos": 156,
+    "total_vendas": 77850.75,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 1",
-      "total_vendas": 20386.58
+      "total_vendas": 61325.17999999999
     },
     {
       "loja": "Loja 2",
-      "total_vendas": 8705.7
+      "total_vendas": 14793.57
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 102
+      "total_vendas": 1732
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-09-24",
-      "total_vendas": 29194.28
+      "total_vendas": 77850.75
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 25,
-      "total_vendas": 14670.980000000001,
-      "vendedor": "Gloria"
-    },
-    {
-      "pedidos": 22,
-      "total_vendas": 6266,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 11,
-      "total_vendas": 2411,
-      "vendedor": "Juan"
-    },
-    {
-      "pedidos": 19,
-      "total_vendas": 1814.6,
+      "pedidos": 27,
+      "total_vendas": 41245.299999999996,
       "vendedor": "Rafael"
     },
     {
-      "pedidos": 17,
-      "total_vendas": 1793.5,
+      "pedidos": 34,
+      "total_vendas": 15759.880000000001,
+      "vendedor": "Gloria"
+    },
+    {
+      "pedidos": 34,
+      "total_vendas": 8281,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 26,
+      "total_vendas": 5864.5,
       "vendedor": "Adriano"
     },
     {
-      "pedidos": 5,
-      "total_vendas": 1490,
-      "vendedor": "Guilherme"
+      "pedidos": 12,
+      "total_vendas": 2574,
+      "vendedor": "Juan"
     },
     {
-      "pedidos": 8,
-      "total_vendas": 748.2,
+      "pedidos": 13,
+      "total_vendas": 2380.07,
       "vendedor": "Estefanio"
+    },
+    {
+      "pedidos": 10,
+      "total_vendas": 1746,
+      "vendedor": "Guilherme"
     }
   ]
 }
