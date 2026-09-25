@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2456512
+      "saldo": 2884898
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 461736
+      "saldo": 479315
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 24421
     }
   ],
-  "generated_at": "2026-09-25T08:43:37.037288",
+  "generated_at": "2026-09-25T13:34:51.541399",
   "kpis": {
-    "a_vencer_7d": 198231,
-    "juros_pagos": 747,
-    "total_aberto": 3027760,
-    "total_pago_periodo": 3926676,
-    "total_vencido": 571248
+    "a_vencer_7d": 202116,
+    "juros_pagos": 71811,
+    "total_aberto": 3473725,
+    "total_pago_periodo": 4185800,
+    "total_vencido": 588827
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 14,
-      "total_aberto": 784392
+      "titulos": 17,
+      "total_aberto": 1017861
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -129,9 +129,14 @@
       "total_aberto": 199629
     },
     {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 6,
+      "total_aberto": 191294
+    },
+    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
-      "titulos": 55,
-      "total_aberto": 192390
+      "titulos": 54,
+      "total_aberto": 188892
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
@@ -140,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 51,
-      "total_aberto": 110819
+      "titulos": 52,
+      "total_aberto": 118202
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
@@ -149,14 +154,9 @@
       "total_aberto": 85181
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 4,
-      "total_aberto": 63538
-    },
-    {
-      "fornecedor": "STAM METALURGICA LTDA",
-      "titulos": 8,
-      "total_aberto": 62940
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 7,
+      "total_aberto": 69340
     }
   ]
 }
