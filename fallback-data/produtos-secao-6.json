@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T07:00:56.139Z",
+  "generated_at": "2026-09-25T12:43:38.867Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "source_total": 7336,
-  "total": 456,
+  "source_total": 7337,
+  "total": 457,
   "produtos": [
     {
       "descricao": "",
@@ -48,6 +48,21 @@
       "unidade": "PC",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13855.jpg?v=cbd891f6f8e41432",
       "fallback_foto_version": "cbd891f6f8e41432"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 98,
+      "id": 14457,
+      "marca": "RAMASSOL",
+      "nome": "JANELA BASCULH WC GRAD QUADR BR 0.60L X 0.40A",
+      "preco": 0,
+      "secao": 14,
+      "subgrupo": 9999,
+      "unidade": "PC",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -2046,7 +2061,7 @@
     },
     {
       "descricao": "",
-      "estoque": 161,
+      "estoque": 160,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1412.jpg?v=1774724945929428400",
       "grupo": 20,
       "id": 1412,
@@ -3351,7 +3366,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1652,
+      "estoque": 1651,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12.jpg?v=1774720012088098800",
       "grupo": 60,
       "id": 12,
@@ -3441,7 +3456,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1501,
+      "estoque": 1499,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1296.jpg?v=1774724620819598600",
       "grupo": 60,
       "id": 1296,
@@ -3531,7 +3546,7 @@
     },
     {
       "descricao": "",
-      "estoque": 512,
+      "estoque": 507,
       "foto_url": null,
       "grupo": 60,
       "id": 20,
@@ -4836,7 +4851,7 @@
     },
     {
       "descricao": "",
-      "estoque": 702,
+      "estoque": 693,
       "foto_url": null,
       "grupo": 65,
       "id": 7,
@@ -5136,7 +5151,7 @@
     },
     {
       "descricao": "",
-      "estoque": 36,
+      "estoque": 35,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11086.jpg?v=1774741980533651700",
       "grupo": 65,
       "id": 11086,
