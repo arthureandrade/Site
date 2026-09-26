@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 481683
+      "saldo": 486438
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 25092
     }
   ],
-  "generated_at": "2026-09-26T08:26:43.835824",
+  "generated_at": "2026-09-26T12:40:50.446200",
   "kpis": {
     "a_vencer_7d": 204935,
     "juros_pagos": 71811,
-    "total_aberto": 3467884,
+    "total_aberto": 3472639,
     "total_pago_periodo": 3734914,
-    "total_vencido": 591866
+    "total_vencido": 596621
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 52,
-      "total_aberto": 118202
+      "titulos": 53,
+      "total_aberto": 122634
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
