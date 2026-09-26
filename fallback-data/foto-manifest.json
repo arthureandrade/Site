@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "cursor": 3514,
+  "cursor": 4014,
   "fotos": {
     "1": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/1.jpg?v=1774719969820327200",
@@ -21450,7 +21450,10 @@
       "version": "0d52c34c30050b72"
     },
     "4979": {
-      "version": "30005c1555f03a09"
+      "source_url": "http://vendas.galpaodoaco.com/api/fotos/4979.jpg?v=1790382156000000000",
+      "etag": "\"1790382156.0-25105-1827545121\"",
+      "last_modified": "Sat, 26 Sep 2026 00:22:36 GMT",
+      "version": "5fcd7b600093bb9d"
     },
     "4980": {
       "source_url": "http://vendas.galpaodoaco.com/api/fotos/4980.jpg?v=1777491489286000000",
