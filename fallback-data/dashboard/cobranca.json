@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 609378.18
+      "saldo": 614634.48
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 301625.69
+      "saldo": 222557.84
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 15875.17
     }
   ],
-  "generated_at": "2026-09-28T02:42:43.776710",
+  "generated_at": "2026-09-28T10:33:38.707706",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 1261711.69,
-    "total_atraso": 652333.51,
-    "total_vencer": 609378.1799999999
+    "clientes_atraso": 70,
+    "total_aberto": 1187900.1400000001,
+    "total_atraso": 573265.66,
+    "total_vencer": 614634.4800000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -113,12 +113,6 @@
       "total_atraso": 69038.43
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 9,
-      "titulos": 2,
-      "total_atraso": 66179.76
-    },
-    {
       "cliente": "FABIO RAIOL FEITOSA",
       "maior_atraso": 32,
       "titulos": 4,
@@ -159,6 +153,12 @@
       "maior_atraso": 10,
       "titulos": 2,
       "total_atraso": 19414.73
+    },
+    {
+      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
+      "maior_atraso": 10,
+      "titulos": 1,
+      "total_atraso": 18547.86
     }
   ]
 }
