@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2902550
+      "saldo": 2902882
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 490772
+      "saldo": 365022
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 30795
+      "saldo": 39535
     },
     {
       "faixa": "61–90 dias",
       "saldo": 24381
     }
   ],
-  "generated_at": "2026-09-28T10:33:39.366419",
+  "generated_at": "2026-09-28T16:46:48.739817",
   "kpis": {
-    "a_vencer_7d": 355955,
+    "a_vencer_7d": 356287,
     "juros_pagos": 71811,
-    "total_aberto": 3511643,
-    "total_pago_periodo": 3731096,
-    "total_vencido": 609093
+    "total_aberto": 3394965,
+    "total_pago_periodo": 3950462,
+    "total_vencido": 492083
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -139,24 +139,24 @@
       "total_aberto": 188892
     },
     {
-      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
-      "titulos": 1,
-      "total_aberto": 131700
-    },
-    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 53,
       "total_aberto": 122634
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 6,
-      "total_aberto": 102542
+      "titulos": 8,
+      "total_aberto": 120022
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
       "titulos": 3,
       "total_aberto": 85181
+    },
+    {
+      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
+      "titulos": 7,
+      "total_aberto": 69340
     }
   ]
 }
