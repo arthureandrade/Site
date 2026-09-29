@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 614938.92
+      "saldo": 625025.76
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 234281.81
+      "saldo": 219947.03
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 18888.56
     }
   ],
-  "generated_at": "2026-09-29T02:15:01.055859",
+  "generated_at": "2026-09-29T14:38:08.680329",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1203752.04,
-    "total_atraso": 588813.1200000001,
-    "total_vencer": 614938.92
+    "clientes_atraso": 66,
+    "total_aberto": 1199504.1,
+    "total_atraso": 574478.34,
+    "total_vencer": 625025.76
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -148,10 +148,10 @@
       "total_atraso": 20475.58
     },
     {
-      "cliente": "AGORA ESTRUTURAS E ENGENHARIA",
+      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
       "maior_atraso": 11,
-      "titulos": 2,
-      "total_atraso": 19866.53
+      "titulos": 1,
+      "total_atraso": 18553.89
     }
   ]
 }

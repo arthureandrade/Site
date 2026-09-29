@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2815095
+      "saldo": 2857129
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 349128
+      "saldo": 326289
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 24433
     }
   ],
-  "generated_at": "2026-09-29T02:15:01.717574",
+  "generated_at": "2026-09-29T14:38:09.337397",
   "kpis": {
     "a_vencer_7d": 268848,
     "juros_pagos": 71811,
-    "total_aberto": 3284090,
-    "total_pago_periodo": 4277729,
-    "total_vencido": 468995
+    "total_aberto": 3303285,
+    "total_pago_periodo": 4326163,
+    "total_vencido": 446156
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -144,14 +144,14 @@
       "total_aberto": 122634
     },
     {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 6,
-      "total_aberto": 102542
-    },
-    {
       "fornecedor": "GERDAU ACOS LONGOS SA",
       "titulos": 3,
       "total_aberto": 85181
+    },
+    {
+      "fornecedor": "CAPO ACESSORIOS LTDA",
+      "titulos": 5,
+      "total_aberto": 79984
     },
     {
       "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
