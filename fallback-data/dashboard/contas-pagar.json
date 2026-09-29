@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2857129
+      "saldo": 3011058
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 24433
     }
   ],
-  "generated_at": "2026-09-29T14:38:09.337397",
+  "generated_at": "2026-09-29T18:38:52.698173",
   "kpis": {
     "a_vencer_7d": 268848,
     "juros_pagos": 71811,
-    "total_aberto": 3303285,
+    "total_aberto": 3457214,
     "total_pago_periodo": 4326163,
     "total_vencido": 446156
   },
@@ -124,9 +124,14 @@
       "total_aberto": 199629
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 6,
-      "total_aberto": 191294
+      "total_aberto": 194166
+    },
+    {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 9,
+      "total_aberto": 194165
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
@@ -152,11 +157,6 @@
       "fornecedor": "CAPO ACESSORIOS LTDA",
       "titulos": 5,
       "total_aberto": 79984
-    },
-    {
-      "fornecedor": "SOLVENTEX INDUSTRIA QUIMICA LTDA",
-      "titulos": 7,
-      "total_aberto": 69340
     }
   ]
 }

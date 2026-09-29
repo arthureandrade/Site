@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 625025.76
+      "saldo": 592477.74
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 219947.03
+      "saldo": 213716.32
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 18888.56
     }
   ],
-  "generated_at": "2026-09-29T14:38:08.680329",
+  "generated_at": "2026-09-29T18:38:51.980830",
   "kpis": {
-    "clientes_atraso": 66,
-    "total_aberto": 1199504.1,
-    "total_atraso": 574478.34,
-    "total_vencer": 625025.76
+    "clientes_atraso": 61,
+    "total_aberto": 1160725.37,
+    "total_atraso": 568247.6299999999,
+    "total_vencer": 592477.74
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,24 +70,10 @@
       "vencimento": "2026-09-28T00:00:00"
     },
     {
-      "cliente": "BOA VISTA MATERIAL ELETRICO LTDA",
-      "dias_atraso": -2,
-      "loja": "Loja 4",
-      "saldo": 1000,
-      "vencimento": "2026-10-01T00:00:00"
-    },
-    {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
       "dias_atraso": -4,
       "loja": "Loja 1",
       "saldo": 103.68,
-      "vencimento": "2026-10-03T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -4,
-      "loja": "Loja 1",
-      "saldo": 233,
       "vencimento": "2026-10-03T00:00:00"
     }
   ],
