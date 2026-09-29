@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2902882
+      "saldo": 2815998
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 365022
+      "saldo": 349771
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 39535
+      "saldo": 30795
     },
     {
       "faixa": "61–90 dias",
       "saldo": 24381
     }
   ],
-  "generated_at": "2026-09-28T16:46:48.739817",
+  "generated_at": "2026-09-28T20:38:22.032117",
   "kpis": {
-    "a_vencer_7d": 356287,
+    "a_vencer_7d": 269403,
     "juros_pagos": 71811,
-    "total_aberto": 3394965,
-    "total_pago_periodo": 3950462,
-    "total_vencido": 492083
+    "total_aberto": 3284090,
+    "total_pago_periodo": 4277729,
+    "total_vencido": 468092
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -119,11 +119,6 @@
       "total_aberto": 452472
     },
     {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 3,
-      "total_aberto": 250885
-    },
-    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 12,
       "total_aberto": 199629
@@ -139,14 +134,19 @@
       "total_aberto": 188892
     },
     {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 2,
+      "total_aberto": 167257
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 53,
       "total_aberto": 122634
     },
     {
       "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 8,
-      "total_aberto": 120022
+      "titulos": 6,
+      "total_aberto": 102542
     },
     {
       "fornecedor": "GERDAU ACOS LONGOS SA",
