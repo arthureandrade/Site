@@ -2,76 +2,62 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 592477.74
+      "saldo": 585051.02
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 213716.32
+      "saldo": 221670.55
     },
     {
       "faixa": "180+ dias",
-      "saldo": 131733.33
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 104795.56
+      "saldo": 131785.77
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 99113.86
+      "saldo": 102288.19
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 101823.92
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 18888.56
+      "saldo": 18901.96
     }
   ],
-  "generated_at": "2026-09-29T21:36:57.025619",
+  "generated_at": "2026-09-30T03:28:24.100596",
   "kpis": {
-    "clientes_atraso": 61,
-    "total_aberto": 1160725.37,
-    "total_atraso": 568247.6299999999,
-    "total_vencer": 592477.74
+    "clientes_atraso": 65,
+    "total_aberto": 1161521.41,
+    "total_atraso": 576470.3899999999,
+    "total_vencer": 585051.02
   },
   "ok": true,
   "proximos_vencimentos": [
     {
-      "cliente": "PERSONAL CONFECÇÕES RR LTDA",
-      "dias_atraso": 5,
-      "loja": "Loja 2",
-      "saldo": 580.31,
-      "vencimento": "2026-09-24T00:00:00"
-    },
-    {
-      "cliente": "AMAZONIA CONCRETO LTDA",
-      "dias_atraso": 5,
-      "loja": "Loja 4",
-      "saldo": 1356.75,
-      "vencimento": "2026-09-24T00:00:00"
-    },
-    {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 12892.02,
+      "saldo": 12904.87,
       "vencimento": "2026-09-26T00:00:00"
     },
     {
       "cliente": "PERSONAL CONFECÇÕES RR LTDA",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
-      "saldo": 7513.9,
+      "saldo": 7521.4,
       "vencimento": "2026-09-27T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 1",
-      "saldo": 183.56,
+      "saldo": 183.93,
       "vencimento": "2026-09-28T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 103.68,
       "vencimento": "2026-10-03T00:00:00"
@@ -81,63 +67,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 84,
+      "maior_atraso": 85,
       "titulos": 4,
-      "total_atraso": 92320.24
+      "total_atraso": 92492.36
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 64,
+      "maior_atraso": 65,
       "titulos": 10,
-      "total_atraso": 69106.59
+      "total_atraso": 69174.75
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 33,
+      "maior_atraso": 34,
       "titulos": 4,
-      "total_atraso": 59678.880000000005
+      "total_atraso": 59737.15
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 571,
+      "maior_atraso": 572,
       "titulos": 7,
-      "total_atraso": 39717.2
-    },
-    {
-      "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 122,
-      "titulos": 3,
-      "total_atraso": 22650
-    },
-    {
-      "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 853,
-      "titulos": 16,
-      "total_atraso": 22487.69
-    },
-    {
-      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "maior_atraso": 41,
-      "titulos": 25,
-      "total_atraso": 21055.47
+      "total_atraso": 39718.46
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 9,
-      "titulos": 2,
-      "total_atraso": 20555.54
+      "maior_atraso": 10,
+      "titulos": 3,
+      "total_atraso": 24846.02
+    },
+    {
+      "cliente": "JOSE ALVES DE MORAIS",
+      "maior_atraso": 123,
+      "titulos": 3,
+      "total_atraso": 22670.9
+    },
+    {
+      "cliente": "FABIANO CANTAL DE SOUZA",
+      "maior_atraso": 854,
+      "titulos": 16,
+      "total_atraso": 22499.99
+    },
+    {
+      "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
+      "maior_atraso": 42,
+      "titulos": 25,
+      "total_atraso": 21075.98
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 67,
+      "maior_atraso": 68,
       "titulos": 4,
-      "total_atraso": 20475.58
+      "total_atraso": 20661.3
     },
     {
       "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 11,
+      "maior_atraso": 12,
       "titulos": 1,
-      "total_atraso": 18553.89
+      "total_atraso": 18559.93
     }
   ]
 }
