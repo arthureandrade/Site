@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 593849.34
+      "saldo": 589591.52
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 199191.82
+      "saldo": 172175.61
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 18915.37
     }
   ],
-  "generated_at": "2026-10-01T05:00:37.889786",
+  "generated_at": "2026-10-01T12:20:52.092593",
   "kpis": {
-    "clientes_atraso": 63,
-    "total_aberto": 1148318.8200000003,
-    "total_atraso": 554469.48,
-    "total_vencer": 593849.34
+    "clientes_atraso": 59,
+    "total_aberto": 1117044.79,
+    "total_atraso": 527453.27,
+    "total_vencer": 589591.52
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -68,8 +68,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 86,
-      "titulos": 3,
-      "total_atraso": 88436.4
+      "titulos": 2,
+      "total_atraso": 85346.7
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
@@ -120,10 +120,10 @@
       "total_atraso": 20721.2
     },
     {
-      "cliente": "CONSTRUBAN SERVICOS E CONSTRUCOES LTDA",
-      "maior_atraso": 13,
-      "titulos": 1,
-      "total_atraso": 18565.96
+      "cliente": "PERSONAL CONFECÇÕES RR LTDA",
+      "maior_atraso": 228,
+      "titulos": 5,
+      "total_atraso": 18291.75
     }
   ]
 }
