@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-01T21:10:30.072Z",
+  "generated_at": "2026-10-02T00:49:35.788Z",
   "source_api": "https://vendas.galpaodoaco.com/api",
-  "source_total": 7370,
-  "total": 7370,
+  "source_total": 7375,
+  "total": 7375,
   "produtos": [
     {
       "descricao": "",
@@ -5136,7 +5136,7 @@
     },
     {
       "descricao": "",
-      "estoque": 416,
+      "estoque": 415,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5026.jpg?v=1774736639449495100",
       "grupo": 3,
       "id": 5026,
@@ -21966,7 +21966,7 @@
     },
     {
       "descricao": "",
-      "estoque": 139,
+      "estoque": 129,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/1412.jpg?v=1774724945929428400",
       "grupo": 20,
       "id": 1412,
@@ -48606,7 +48606,7 @@
     },
     {
       "descricao": "",
-      "estoque": 18,
+      "estoque": 19,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/12422.jpg?v=1774746047069297300",
       "grupo": 61,
       "id": 12422,
@@ -56406,7 +56406,7 @@
     },
     {
       "descricao": "",
-      "estoque": 133,
+      "estoque": 132,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/72.jpg?v=1783179605338000000",
       "grupo": 41,
       "id": 72,
@@ -66741,7 +66741,7 @@
     },
     {
       "descricao": "",
-      "estoque": 126,
+      "estoque": 125,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/3658.jpg?v=1774732125075092200",
       "grupo": 60,
       "id": 3658,
@@ -75696,7 +75696,7 @@
     },
     {
       "descricao": "",
-      "estoque": 87727,
+      "estoque": 87477,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4184.jpg?v=1786477745930000000",
       "grupo": 64,
       "id": 4184,
@@ -87576,7 +87576,7 @@
     },
     {
       "descricao": "",
-      "estoque": 19,
+      "estoque": 18,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/4217.jpg?v=1786394362613000000",
       "grupo": 48,
       "id": 4217,
@@ -90561,7 +90561,7 @@
     },
     {
       "descricao": "",
-      "estoque": 15,
+      "estoque": 13,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/98.jpg?v=1786559102640000000",
       "grupo": 71,
       "id": 98,
@@ -90666,7 +90666,7 @@
     },
     {
       "descricao": "",
-      "estoque": 264,
+      "estoque": 263,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/830.jpg?v=1786559075049000000",
       "grupo": 71,
       "id": 830,
@@ -91338,6 +91338,21 @@
       "unidade": "UN",
       "fallback_foto_url": "https://raw.githubusercontent.com/arthureandrade/Site/main/fallback-data/fotos/13422.jpg?v=ef1da8d0f887c528",
       "fallback_foto_version": "ef1da8d0f887c528"
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 94,
+      "id": 14505,
+      "marca": "GERAL",
+      "nome": "SABAO BAR GLORIA 1KG 5UN 200G LILAS  - 7898911005268",
+      "preco": 0,
+      "secao": 10,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
     },
     {
       "descricao": "",
@@ -96277,6 +96292,21 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 94,
+      "id": 14506,
+      "marca": "GERAL",
+      "nome": "ST LIQ INF GRANADO BEBE 250ML LAV  - 17896512911930",
+      "preco": 0,
+      "secao": 10,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11719.jpg?v=1774744004691894100",
       "grupo": 94,
       "id": 11719,
@@ -100026,7 +100056,7 @@
     },
     {
       "descricao": "",
-      "estoque": 161,
+      "estoque": 176,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13926.jpg?v=1786391092038000000",
       "grupo": 79,
       "id": 13926,
@@ -100041,7 +100071,7 @@
     },
     {
       "descricao": "",
-      "estoque": 198,
+      "estoque": 183,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/13928.jpg?v=1786391092040000000",
       "grupo": 79,
       "id": 13928,
@@ -104037,6 +104067,21 @@
       "id": 14239,
       "marca": "NEGREIRA",
       "nome": "TOALHA ROSTO SOCIAL UNIAO 22X32CM  - 000640",
+      "preco": 0,
+      "secao": 10,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 94,
+      "id": 14507,
+      "marca": "GERAL",
+      "nome": "TOALHA UMED MAMYPOKO 50UN TOQ SUAVE  - 201592",
       "preco": 0,
       "secao": 10,
       "subgrupo": 9999,
@@ -109206,7 +109251,7 @@
     },
     {
       "descricao": "",
-      "estoque": 1200,
+      "estoque": 1188,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/5628.jpg?v=1786202760862000000",
       "grupo": 69,
       "id": 5628,
@@ -109882,6 +109927,36 @@
     {
       "descricao": "",
       "estoque": 0,
+      "foto_url": null,
+      "grupo": 94,
+      "id": 14508,
+      "marca": "GERAL",
+      "nome": "VINHO CHI CYT 750ML RES SUAV BLANC T13%  - RS201750",
+      "preco": 0,
+      "secao": 10,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
+      "foto_url": null,
+      "grupo": 94,
+      "id": 14509,
+      "marca": "GERAL",
+      "nome": "VINHO POR MONTE PINNHEIROS 750ML TTO T13%  - 1744",
+      "preco": 0,
+      "secao": 10,
+      "subgrupo": 9999,
+      "unidade": "UN",
+      "fallback_foto_url": null,
+      "fallback_foto_version": null
+    },
+    {
+      "descricao": "",
+      "estoque": 0,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/11504.jpg?v=1774743368157179000",
       "grupo": 94,
       "id": 11504,
@@ -110316,7 +110391,7 @@
     },
     {
       "descricao": "",
-      "estoque": 46,
+      "estoque": 43,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/137.jpg?v=1783179581795000000",
       "grupo": 83,
       "id": 137,
@@ -110331,7 +110406,7 @@
     },
     {
       "descricao": "",
-      "estoque": 114,
+      "estoque": 111,
       "foto_url": "http://vendas.galpaodoaco.com/api/fotos/140.jpg?v=1783179581897000000",
       "grupo": 83,
       "id": 140,

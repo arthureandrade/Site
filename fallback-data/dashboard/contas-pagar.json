@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 2980376
+      "saldo": 3112727
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 335597
+      "saldo": 336248
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 27181
     }
   ],
-  "generated_at": "2026-10-01T17:10:30.860060",
+  "generated_at": "2026-10-01T20:49:35.458578",
   "kpis": {
-    "a_vencer_7d": 325728,
+    "a_vencer_7d": 457428,
     "juros_pagos": 71064,
-    "total_aberto": 3435840,
+    "total_aberto": 3568842,
     "total_pago_periodo": 4305484,
-    "total_vencido": 455464
+    "total_vencido": 456115
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -144,6 +144,11 @@
       "total_aberto": 167257
     },
     {
+      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
+      "titulos": 1,
+      "total_aberto": 131700
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 53,
       "total_aberto": 122634
@@ -152,11 +157,6 @@
       "fornecedor": "GERDAU ACOS LONGOS SA",
       "titulos": 3,
       "total_aberto": 85181
-    },
-    {
-      "fornecedor": "CAPO ACESSORIOS LTDA",
-      "titulos": 5,
-      "total_aberto": 79984
     }
   ]
 }
