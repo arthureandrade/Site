@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3097885
+      "saldo": 3758872
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 669882
+      "saldo": 528952
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 24966
     }
   ],
-  "generated_at": "2026-10-06T15:03:15.302031",
+  "generated_at": "2026-10-06T19:00:14.704516",
   "kpis": {
-    "a_vencer_7d": 350980,
+    "a_vencer_7d": 350632,
     "juros_pagos": 71064,
-    "total_aberto": 3896908,
-    "total_pago_periodo": 4047356,
-    "total_vencido": 799023
+    "total_aberto": 4416965,
+    "total_pago_periodo": 4487578,
+    "total_vencido": 658093
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,18 +115,23 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 23,
-      "total_aberto": 539962
+      "titulos": 34,
+      "total_aberto": 771106
+    },
+    {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 9,
+      "total_aberto": 361697
+    },
+    {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 5,
+      "total_aberto": 326077
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 12,
       "total_aberto": 199629
-    },
-    {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 6,
-      "total_aberto": 194166
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
@@ -142,11 +147,6 @@
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
       "titulos": 4,
       "total_aberto": 176472
-    },
-    {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 2,
-      "total_aberto": 167257
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
