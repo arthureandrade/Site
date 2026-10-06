@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3010395
+      "saldo": 3097885
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 671022
+      "saldo": 669882
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 24966
     }
   ],
-  "generated_at": "2026-10-06T09:34:20.473120",
+  "generated_at": "2026-10-06T15:03:15.302031",
   "kpis": {
     "a_vencer_7d": 350980,
     "juros_pagos": 71064,
-    "total_aberto": 3810558,
-    "total_pago_periodo": 4027385,
-    "total_vencido": 800163
+    "total_aberto": 3896908,
+    "total_pago_periodo": 4047356,
+    "total_vencido": 799023
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 20,
-      "total_aberto": 452472
+      "titulos": 23,
+      "total_aberto": 539962
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
@@ -155,8 +155,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 53,
-      "total_aberto": 122634
+      "titulos": 54,
+      "total_aberto": 124347
     }
   ]
 }
