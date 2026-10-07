@@ -2,76 +2,76 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 651238.27
+      "saldo": 635475.27
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 259570.27
+      "saldo": 275644.7
     },
     {
       "faixa": "180+ dias",
-      "saldo": 132100.43
+      "saldo": 132152.87
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 95724.22
+      "saldo": 95805.95
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 87590.23
+      "saldo": 86990.33
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 39810.56
+      "saldo": 40596.5
     }
   ],
-  "generated_at": "2026-10-06T22:16:59.815225",
+  "generated_at": "2026-10-07T04:54:04.531949",
   "kpis": {
-    "clientes_atraso": 59,
-    "total_aberto": 1266033.98,
-    "total_atraso": 614795.71,
-    "total_vencer": 651238.27
+    "clientes_atraso": 64,
+    "total_aberto": 1266665.6199999999,
+    "total_atraso": 631190.35,
+    "total_vencer": 635475.27
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 103.99,
+      "saldo": 104.09,
       "vencimento": "2026-10-03T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 279.85,
       "vencimento": "2026-10-09T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 19,
       "vencimento": "2026-10-09T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 3664,
       "vencimento": "2026-10-10T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 1142.48,
       "vencimento": "2026-10-10T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -5,
+      "dias_atraso": -4,
       "loja": "Loja 1",
       "saldo": 120,
       "vencimento": "2026-10-11T00:00:00"
@@ -81,63 +81,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 91,
+      "maior_atraso": 92,
       "titulos": 3,
-      "total_atraso": 87185.81
+      "total_atraso": 87269.87999999999
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 71,
+      "maior_atraso": 72,
       "titulos": 10,
-      "total_atraso": 69583.67
+      "total_atraso": 69651.83
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 17,
+      "maior_atraso": 18,
       "titulos": 2,
-      "total_atraso": 66352.15
+      "total_atraso": 66373.7
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 40,
+      "maior_atraso": 41,
       "titulos": 4,
-      "total_atraso": 60086.759999999995
+      "total_atraso": 60145.04
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 578,
+      "maior_atraso": 579,
       "titulos": 7,
-      "total_atraso": 39725.98
+      "total_atraso": 39727.24
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 16,
+      "maior_atraso": 17,
       "titulos": 4,
-      "total_atraso": 28714.31
+      "total_atraso": 28881.57
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 129,
+      "maior_atraso": 130,
       "titulos": 3,
-      "total_atraso": 22796.3
+      "total_atraso": 22817.2
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 860,
+      "maior_atraso": 861,
       "titulos": 16,
-      "total_atraso": 22573.86
+      "total_atraso": 22586.16
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "maior_atraso": 48,
+      "maior_atraso": 49,
       "titulos": 25,
-      "total_atraso": 21199.28
+      "total_atraso": 21219.83
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 74,
+      "maior_atraso": 75,
       "titulos": 4,
-      "total_atraso": 21020.670000000002
+      "total_atraso": 21080.559999999998
     }
   ]
 }
