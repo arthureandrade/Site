@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3758872
+      "saldo": 4050543
     },
     {
       "faixa": "1–30 dias",
@@ -21,12 +21,12 @@
       "saldo": 29112
     }
   ],
-  "generated_at": "2026-10-07T12:10:08.490814",
+  "generated_at": "2026-10-07T17:19:44.636618",
   "kpis": {
-    "a_vencer_7d": 461399,
+    "a_vencer_7d": 451081,
     "juros_pagos": 71064,
-    "total_aberto": 4407754,
-    "total_pago_periodo": 4506000,
+    "total_aberto": 4699425,
+    "total_pago_periodo": 4536095,
     "total_vencido": 648882
   },
   "ok": true,
@@ -119,14 +119,14 @@
       "total_aberto": 771106
     },
     {
+      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
+      "titulos": 8,
+      "total_aberto": 628066
+    },
+    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 9,
       "total_aberto": 361697
-    },
-    {
-      "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 5,
-      "total_aberto": 326077
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
