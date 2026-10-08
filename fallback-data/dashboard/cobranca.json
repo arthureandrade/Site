@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 607200.42
+      "saldo": 629536.14
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 258380.24
+      "saldo": 174296.03
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 38782.61
     }
   ],
-  "generated_at": "2026-10-08T10:48:40.563096",
+  "generated_at": "2026-10-08T16:17:15.731628",
   "kpis": {
-    "clientes_atraso": 64,
-    "total_aberto": 1221823.94,
-    "total_atraso": 614623.52,
-    "total_vencer": 607200.42
+    "clientes_atraso": 58,
+    "total_aberto": 1160075.4500000002,
+    "total_atraso": 530539.31,
+    "total_vencer": 629536.1400000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -85,12 +85,6 @@
       "total_atraso": 69719.98999999999
     },
     {
-      "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 19,
-      "titulos": 2,
-      "total_atraso": 66395.26000000001
-    },
-    {
       "cliente": "FABIO RAIOL FEITOSA",
       "maior_atraso": 42,
       "titulos": 4,
@@ -131,6 +125,12 @@
       "maior_atraso": 76,
       "titulos": 4,
       "total_atraso": 21140.46
+    },
+    {
+      "cliente": "PERSONAL CONFECÇÕES RR LTDA",
+      "maior_atraso": 235,
+      "titulos": 5,
+      "total_atraso": 18418.09
     }
   ]
 }
