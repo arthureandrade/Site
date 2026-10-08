@@ -2,69 +2,69 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 640752.97
+      "saldo": 622905.97
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 254739.79
+      "saldo": 272429.42
     },
     {
       "faixa": "180+ dias",
-      "saldo": 132152.87
+      "saldo": 132205.3
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 95805.95
+      "saldo": 98022.42000000001
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 86990.33
+      "saldo": 87232.95
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 40596.5
+      "saldo": 38782.61
     }
   ],
-  "generated_at": "2026-10-07T21:07:44.626135",
+  "generated_at": "2026-10-08T03:24:49.331025",
   "kpis": {
-    "clientes_atraso": 61,
-    "total_aberto": 1251038.4099999997,
-    "total_atraso": 610285.44,
-    "total_vencer": 640752.9700000001
+    "clientes_atraso": 66,
+    "total_aberto": 1251578.67,
+    "total_atraso": 628672.7,
+    "total_vencer": 622905.9700000001
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": 4,
+      "dias_atraso": 5,
       "loja": "Loja 1",
-      "saldo": 104.09,
+      "saldo": 104.2,
       "vencimento": "2026-10-03T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 279.85,
       "vencimento": "2026-10-09T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 1664,
       "vencimento": "2026-10-10T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 1142.48,
       "vencimento": "2026-10-10T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
-      "dias_atraso": -4,
+      "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 120,
       "vencimento": "2026-10-11T00:00:00"
@@ -74,63 +74,63 @@
   "top_clientes": [
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 92,
+      "maior_atraso": 93,
       "titulos": 3,
-      "total_atraso": 87269.87999999999
+      "total_atraso": 87353.95000000001
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 72,
+      "maior_atraso": 73,
       "titulos": 10,
-      "total_atraso": 69651.83
+      "total_atraso": 69719.98999999999
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 18,
+      "maior_atraso": 19,
       "titulos": 2,
-      "total_atraso": 66373.7
+      "total_atraso": 66395.26000000001
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 41,
+      "maior_atraso": 42,
       "titulos": 4,
-      "total_atraso": 60145.04
+      "total_atraso": 60203.3
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 579,
+      "maior_atraso": 580,
       "titulos": 7,
-      "total_atraso": 39727.24
+      "total_atraso": 39728.49
     },
     {
       "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 17,
+      "maior_atraso": 18,
       "titulos": 3,
-      "total_atraso": 25502.35
+      "total_atraso": 25582.059999999998
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 130,
+      "maior_atraso": 131,
       "titulos": 3,
-      "total_atraso": 22817.2
+      "total_atraso": 22838.1
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 861,
+      "maior_atraso": 862,
       "titulos": 16,
-      "total_atraso": 22586.16
+      "total_atraso": 22598.440000000002
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "maior_atraso": 49,
+      "maior_atraso": 50,
       "titulos": 25,
-      "total_atraso": 21219.83
+      "total_atraso": 21240.36
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 75,
+      "maior_atraso": 76,
       "titulos": 4,
-      "total_atraso": 21080.559999999998
+      "total_atraso": 21140.46
     }
   ]
 }
