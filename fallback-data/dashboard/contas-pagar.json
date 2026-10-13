@@ -2,15 +2,15 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3724246
+      "saldo": 3728041
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 665881
+      "saldo": 757862
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 136825
+      "saldo": 142388
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 30272
     }
   ],
-  "generated_at": "2026-10-13T03:49:23.947779",
+  "generated_at": "2026-10-13T11:23:04.595611",
   "kpis": {
     "a_vencer_7d": 251254,
     "juros_pagos": 71064,
-    "total_aberto": 4630424,
-    "total_pago_periodo": 3451714,
-    "total_vencido": 906178
+    "total_aberto": 4731763,
+    "total_pago_periodo": 3164662,
+    "total_vencido": 1003722
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -120,8 +120,8 @@
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 8,
-      "total_aberto": 628066
+      "titulos": 9,
+      "total_aberto": 711694
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
