@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 452178.3
+      "saldo": 463104.08999999997
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 175570.35
+      "saldo": 174193.69
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 50412.2
     }
   ],
-  "generated_at": "2026-10-14T14:58:30.376131",
+  "generated_at": "2026-10-14T18:12:52.903711",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 1000117.52,
-    "total_atraso": 547939.22,
-    "total_vencer": 452178.3
+    "clientes_atraso": 64,
+    "total_aberto": 1009666.6500000001,
+    "total_atraso": 546562.56,
+    "total_vencer": 463104.09
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,13 +40,6 @@
       "loja": "Loja 1",
       "saldo": 281.25,
       "vencimento": "2026-10-09T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 666.66,
-      "vencimento": "2026-10-10T00:00:00"
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
@@ -103,6 +96,13 @@
       "loja": "Loja 4",
       "saldo": 1266.67,
       "vencimento": "2026-10-16T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 143,
+      "vencimento": "2026-10-17T00:00:00"
     }
   ],
   "tipo": "cobranca",
