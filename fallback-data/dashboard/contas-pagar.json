@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3605901
+      "saldo": 3606451
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 449240
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 136622
+      "saldo": 448957
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 73200
+      "saldo": 72051
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 52034
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 30475
+      "saldo": 27787
     }
   ],
-  "generated_at": "2026-10-15T10:53:30.787777",
+  "generated_at": "2026-10-15T14:54:23.429541",
   "kpis": {
-    "a_vencer_7d": 335896,
+    "a_vencer_7d": 336446,
     "juros_pagos": 71064,
-    "total_aberto": 4295438,
+    "total_aberto": 4207280,
     "total_pago_periodo": 4196242,
-    "total_vencido": 689537
+    "total_vencido": 600829
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -35,13 +35,6 @@
     "data_de": "2026-09-15"
   },
   "proximos_vencimentos": [
-    {
-      "dias_atraso": 168,
-      "fornecedor": "FRW ATACADO LTDA",
-      "loja": "Loja 1",
-      "saldo": 83,
-      "vencimento": "2026-04-30T00:00:00"
-    },
     {
       "dias_atraso": 168,
       "fornecedor": "FRW ATACADO LTDA",
@@ -104,19 +97,26 @@
       "loja": "Loja 1",
       "saldo": 807,
       "vencimento": "2026-05-27T00:00:00"
+    },
+    {
+      "dias_atraso": 140,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 2",
+      "saldo": 5584,
+      "vencimento": "2026-05-28T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
-      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 12,
-      "total_aberto": 784910
-    },
-    {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "titulos": 33,
       "total_aberto": 714769
+    },
+    {
+      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+      "titulos": 10,
+      "total_aberto": 703736
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
