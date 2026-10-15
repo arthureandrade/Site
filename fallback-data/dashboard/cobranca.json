@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 441102.6
+      "saldo": 470183.69
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 186929.95
+      "saldo": 160790
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 50466.35
     }
   ],
-  "generated_at": "2026-10-15T14:54:22.724056",
+  "generated_at": "2026-10-15T18:00:14.006329",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1000687.86,
-    "total_atraso": 559585.26,
-    "total_vencer": 441102.6
+    "clientes_atraso": 70,
+    "total_aberto": 1003629,
+    "total_atraso": 533445.31,
+    "total_vencer": 470183.69
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -132,12 +132,6 @@
       "total_atraso": 39737.270000000004
     },
     {
-      "cliente": "COEMA CONSTRUTORA LTDA - EDIFICIO SUMARÉ",
-      "maior_atraso": 25,
-      "titulos": 3,
-      "total_atraso": 26139.949999999997
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 138,
       "titulos": 3,
@@ -166,6 +160,12 @@
       "maior_atraso": 242,
       "titulos": 5,
       "total_atraso": 18544.42
+    },
+    {
+      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
+      "maior_atraso": 104,
+      "titulos": 9,
+      "total_atraso": 14043.95
     }
   ]
 }

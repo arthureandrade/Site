@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3606451
+      "saldo": 3606801
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 448957
+      "saldo": 353608
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 52034
+      "saldo": 43909
     },
     {
       "faixa": "61–90 dias",
       "saldo": 27787
     }
   ],
-  "generated_at": "2026-10-15T14:54:23.429541",
+  "generated_at": "2026-10-15T18:00:14.636274",
   "kpis": {
-    "a_vencer_7d": 336446,
+    "a_vencer_7d": 336796,
     "juros_pagos": 71064,
-    "total_aberto": 4207280,
-    "total_pago_periodo": 4196242,
-    "total_vencido": 600829
+    "total_aberto": 4104156,
+    "total_pago_periodo": 4495529,
+    "total_vencido": 497355
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 11,
-      "total_aberto": 168575
+      "titulos": 9,
+      "total_aberto": 138345
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
