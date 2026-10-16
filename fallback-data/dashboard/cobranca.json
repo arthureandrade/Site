@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 489255.67
+      "saldo": 492001.93
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 147479.22
+      "saldo": 143734.66
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 50681.229999999996
     }
   ],
-  "generated_at": "2026-10-16T14:01:31.099958",
+  "generated_at": "2026-10-16T17:00:02.317340",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 1009675.1499999999,
-    "total_atraso": 520419.4799999999,
-    "total_vencer": 489255.67
+    "clientes_atraso": 65,
+    "total_aberto": 1008676.8499999999,
+    "total_atraso": 516674.92000000004,
+    "total_vencer": 492001.93
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,13 +40,6 @@
       "loja": "Loja 1",
       "saldo": 120.6,
       "vencimento": "2026-10-11T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 723.44,
-      "vencimento": "2026-10-14T00:00:00"
     },
     {
       "cliente": "WAGNER FRANKLIN ALVES DA SILVA",
@@ -60,13 +53,6 @@
       "dias_atraso": 0,
       "loja": "Loja 4",
       "saldo": 162,
-      "vencimento": "2026-10-16T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 1890,
       "vencimento": "2026-10-16T00:00:00"
     },
     {
