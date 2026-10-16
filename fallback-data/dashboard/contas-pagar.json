@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3606801
+      "saldo": 3599798
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 353608
+      "saldo": 360611
     },
     {
       "faixa": "91–180 dias",
@@ -21,85 +21,85 @@
       "saldo": 27787
     }
   ],
-  "generated_at": "2026-10-15T20:19:01.446604",
+  "generated_at": "2026-10-16T00:45:36.191805",
   "kpis": {
-    "a_vencer_7d": 336796,
+    "a_vencer_7d": 373367,
     "juros_pagos": 71064,
     "total_aberto": 4104156,
-    "total_pago_periodo": 4495529,
-    "total_vencido": 497355
+    "total_pago_periodo": 4281916,
+    "total_vencido": 504358
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-10-15",
-    "data_de": "2026-09-15"
+    "data_ate": "2026-10-16",
+    "data_de": "2026-09-16"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 168,
+      "dias_atraso": 169,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 168,
+      "dias_atraso": 169,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 168,
+      "dias_atraso": 169,
       "fornecedor": "FRW ATACADO LTDA",
       "loja": "Loja 1",
       "saldo": 83,
       "vencimento": "2026-04-30T00:00:00"
     },
     {
-      "dias_atraso": 159,
+      "dias_atraso": 160,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 7243,
       "vencimento": "2026-05-09T00:00:00"
     },
     {
-      "dias_atraso": 152,
+      "dias_atraso": 153,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 151,
+      "dias_atraso": 152,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
       "vencimento": "2026-05-17T00:00:00"
     },
     {
-      "dias_atraso": 146,
+      "dias_atraso": 147,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 146,
+      "dias_atraso": 147,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 141,
+      "dias_atraso": 142,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 807,
       "vencimento": "2026-05-27T00:00:00"
     },
     {
-      "dias_atraso": 140,
+      "dias_atraso": 141,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 2",
       "saldo": 5584,
