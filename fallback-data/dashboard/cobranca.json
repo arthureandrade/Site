@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 454918.67
+      "saldo": 486070.17
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 176142.68
+      "saldo": 158632.52
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 50681.229999999996
     }
   ],
-  "generated_at": "2026-10-16T05:20:58.330204",
+  "generated_at": "2026-10-16T10:05:41.357450",
   "kpis": {
-    "clientes_atraso": 79,
-    "total_aberto": 1004001.6099999999,
-    "total_atraso": 549082.94,
-    "total_vencer": 454918.67
+    "clientes_atraso": 75,
+    "total_aberto": 1017642.95,
+    "total_atraso": 531572.7799999999,
+    "total_vencer": 486070.17
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -110,8 +110,8 @@
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 101,
-      "titulos": 9,
-      "total_atraso": 96493.51
+      "titulos": 5,
+      "total_atraso": 91674.37
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",

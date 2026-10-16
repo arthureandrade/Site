@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3599798
+      "saldo": 3622265
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 360611
+      "saldo": 384365
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 27787
     }
   ],
-  "generated_at": "2026-10-16T05:20:59.043132",
+  "generated_at": "2026-10-16T10:05:41.950238",
   "kpis": {
-    "a_vencer_7d": 373367,
+    "a_vencer_7d": 388214,
     "juros_pagos": 71064,
-    "total_aberto": 4104156,
-    "total_pago_periodo": 4281916,
-    "total_vencido": 504358
+    "total_aberto": 4150377,
+    "total_pago_periodo": 4283316,
+    "total_vencido": 528112
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -109,14 +109,14 @@
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
+      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
+      "titulos": 12,
+      "total_aberto": 718583
+    },
+    {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
       "titulos": 33,
       "total_aberto": 714769
-    },
-    {
-      "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 10,
-      "total_aberto": 703736
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -149,14 +149,14 @@
       "total_aberto": 138345
     },
     {
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "titulos": 57,
+      "total_aberto": 135054
+    },
+    {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
-    },
-    {
-      "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 56,
-      "total_aberto": 127000
     }
   ]
 }
