@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3611477
+      "saldo": 3611347
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 386367
+      "saldo": 292798
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 38113
+      "saldo": 35280
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 27787
+      "saldo": 26721
     }
   ],
-  "generated_at": "2026-10-19T13:02:09.922303",
+  "generated_at": "2026-10-19T17:28:42.682094",
   "kpis": {
     "a_vencer_7d": 642901,
     "juros_pagos": 71064,
-    "total_aberto": 4135795,
-    "total_pago_periodo": 4075179,
-    "total_vencido": 524318
+    "total_aberto": 4038197,
+    "total_pago_periodo": 4363156,
+    "total_vencido": 426850
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 11,
-      "total_aberto": 711733
+      "titulos": 9,
+      "total_aberto": 630559
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
