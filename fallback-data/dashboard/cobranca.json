@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 595604.0599999999
+      "saldo": 654216.63
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 165194.35
+      "saldo": 158739.01
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 57791.46
     }
   ],
-  "generated_at": "2026-10-20T11:14:36.107755",
+  "generated_at": "2026-10-20T18:26:42.176569",
   "kpis": {
-    "clientes_atraso": 75,
-    "total_aberto": 1155897.35,
-    "total_atraso": 560293.29,
-    "total_vencer": 595604.06
+    "clientes_atraso": 71,
+    "total_aberto": 1208054.58,
+    "total_atraso": 553837.95,
+    "total_vencer": 654216.63
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -46,20 +46,6 @@
       "dias_atraso": 4,
       "loja": "Loja 4",
       "saldo": 162.65,
-      "vencimento": "2026-10-16T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 3413.6,
-      "vencimento": "2026-10-16T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 4,
-      "loja": "Loja 4",
-      "saldo": 1271.74,
       "vencimento": "2026-10-16T00:00:00"
     },
     {
@@ -103,6 +89,13 @@
       "loja": "Loja 1",
       "saldo": 2093,
       "vencimento": "2026-10-24T00:00:00"
+    },
+    {
+      "cliente": "JAIR NEVES DA SILVA",
+      "dias_atraso": -5,
+      "loja": "Loja 4",
+      "saldo": 148.5,
+      "vencimento": "2026-10-25T00:00:00"
     }
   ],
   "tipo": "cobranca",
