@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 605787.76
+      "saldo": 604624.43
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 155231.09
+      "saldo": 154992.76
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 53278.17
     }
   ],
-  "generated_at": "2026-10-19T17:28:42.088569",
+  "generated_at": "2026-10-19T20:35:46.720046",
   "kpis": {
     "clientes_atraso": 69,
-    "total_aberto": 1154683.37,
-    "total_atraso": 548895.61,
-    "total_vencer": 605787.76
+    "total_aberto": 1153281.71,
+    "total_atraso": 548657.28,
+    "total_vencer": 604624.4299999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,13 +70,6 @@
       "vencimento": "2026-10-18T00:00:00"
     },
     {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 238.33,
-      "vencimento": "2026-10-18T00:00:00"
-    },
-    {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
       "dias_atraso": -3,
       "loja": "Loja 1",
@@ -102,6 +95,13 @@
       "dias_atraso": -5,
       "loja": "Loja 2",
       "saldo": 148,
+      "vencimento": "2026-10-24T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -5,
+      "loja": "Loja 1",
+      "saldo": 2093,
       "vencimento": "2026-10-24T00:00:00"
     }
   ],
