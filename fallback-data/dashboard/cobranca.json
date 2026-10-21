@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 647444.96
+      "saldo": 628141.74
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 148777.51
+      "saldo": 144637.51
     },
     {
       "faixa": "180+ dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 100437.95
+      "saldo": 94886.18
     },
     {
       "faixa": "61–90 dias",
       "saldo": 57853.81
     }
   ],
-  "generated_at": "2026-10-21T15:37:03.794461",
+  "generated_at": "2026-10-21T18:45:26.544572",
   "kpis": {
-    "clientes_atraso": 67,
-    "total_aberto": 1199664.68,
-    "total_atraso": 552219.72,
-    "total_vencer": 647444.96
+    "clientes_atraso": 65,
+    "total_aberto": 1170669.69,
+    "total_atraso": 542527.95,
+    "total_vencer": 628141.74
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -141,10 +141,10 @@
       "total_atraso": 18652.7
     },
     {
-      "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
-      "maior_atraso": 110,
-      "titulos": 9,
-      "total_atraso": 14069.630000000001
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 1046,
+      "titulos": 2,
+      "total_atraso": 13345.62
     }
   ]
 }

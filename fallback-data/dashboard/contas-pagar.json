@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3806168
+      "saldo": 3792852
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 257781
+      "saldo": 257210
     },
     {
       "faixa": "91–180 dias",
       "saldo": 81474
     },
     {
-      "faixa": "31–60 dias",
-      "saldo": 31375
-    },
-    {
       "faixa": "61–90 dias",
       "saldo": 21888
+    },
+    {
+      "faixa": "31–60 dias",
+      "saldo": 21375
     }
   ],
-  "generated_at": "2026-10-21T15:37:05.189226",
+  "generated_at": "2026-10-21T18:45:27.274029",
   "kpis": {
-    "a_vencer_7d": 737335,
+    "a_vencer_7d": 724896,
     "juros_pagos": 71064,
-    "total_aberto": 4198686,
-    "total_pago_periodo": 4629352,
-    "total_vencido": 392518
+    "total_aberto": 4174799,
+    "total_pago_periodo": 4706592,
+    "total_vencido": 381947
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -150,8 +150,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 57,
-      "total_aberto": 135054
+      "titulos": 58,
+      "total_aberto": 135319
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
