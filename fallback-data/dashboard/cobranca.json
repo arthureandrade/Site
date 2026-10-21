@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 652156.63
+      "saldo": 639258.96
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 153053.47
+      "saldo": 148777.51
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 57853.81
     }
   ],
-  "generated_at": "2026-10-21T06:33:16.956793",
+  "generated_at": "2026-10-21T11:35:44.308942",
   "kpis": {
-    "clientes_atraso": 74,
-    "total_aberto": 1208652.31,
-    "total_atraso": 556495.6799999999,
-    "total_vencer": 652156.63
+    "clientes_atraso": 67,
+    "total_aberto": 1191478.68,
+    "total_atraso": 552219.72,
+    "total_vencer": 639258.96
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,13 +40,6 @@
       "loja": "Loja 4",
       "saldo": 162.81,
       "vencimento": "2026-10-16T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 480.96,
-      "vencimento": "2026-10-18T00:00:00"
     },
     {
       "cliente": "DOMINGO JOSE VILLA NUEVA LARA",
@@ -59,7 +52,7 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -1,
       "loja": "Loja 1",
-      "saldo": 1659,
+      "saldo": 1400,
       "vencimento": "2026-10-22T00:00:00"
     },
     {
