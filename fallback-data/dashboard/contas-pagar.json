@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3771213
+      "saldo": 3806168
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 280695
+      "saldo": 257781
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 21888
     }
   ],
-  "generated_at": "2026-10-21T11:35:45.072782",
+  "generated_at": "2026-10-21T15:37:05.189226",
   "kpis": {
     "a_vencer_7d": 737335,
     "juros_pagos": 71064,
-    "total_aberto": 4186645,
-    "total_pago_periodo": 4582456,
-    "total_vencido": 415432
+    "total_aberto": 4198686,
+    "total_pago_periodo": 4629352,
+    "total_vencido": 392518
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 9,
-      "total_aberto": 194165
+      "titulos": 13,
+      "total_aberto": 205793
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
