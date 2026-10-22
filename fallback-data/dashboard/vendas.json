@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T18:45:26.034497",
+  "generated_at": "2026-10-21T20:59:21.107124",
   "kpis": {
     "ticket_medio": 226.56504504504505,
     "total_pedidos": 222,
@@ -17,7 +17,7 @@
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 5190.829999999998
+      "total_vendas": 5190.83
     }
   ],
   "ok": true,
@@ -31,7 +31,7 @@
   "serie_diaria": [
     {
       "data": "2026-10-21",
-      "total_vendas": 50297.44
+      "total_vendas": 50297.439999999995
     }
   ],
   "tipo": "vendas",
@@ -63,7 +63,7 @@
     },
     {
       "pedidos": 38,
-      "total_vendas": -13621.34,
+      "total_vendas": -13621.340000000002,
       "vendedor": "Rafael"
     }
   ]
