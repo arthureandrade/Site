@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 610584.27
+      "saldo": 614123.75
     },
     {
       "faixa": "31–60 dias",
@@ -13,24 +13,24 @@
       "saldo": 132991.95
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 109124.09
-    },
-    {
       "faixa": "91–180 dias",
       "saldo": 99519.99
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 88724.09
     },
     {
       "faixa": "61–90 dias",
       "saldo": 57405.729999999996
     }
   ],
-  "generated_at": "2026-10-23T08:03:17.862626",
+  "generated_at": "2026-10-23T13:00:20.160978",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1170166.58,
-    "total_atraso": 559582.31,
-    "total_vencer": 610584.27
+    "clientes_atraso": 66,
+    "total_aberto": 1153306.06,
+    "total_atraso": 539182.31,
+    "total_vencer": 614123.75
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -73,7 +73,7 @@
       "cliente": "JAIR NEVES DA SILVA",
       "dias_atraso": -2,
       "loja": "Loja 4",
-      "saldo": 148.5,
+      "saldo": 48.5,
       "vencimento": "2026-10-25T00:00:00"
     },
     {
@@ -141,10 +141,10 @@
       "total_atraso": 18688.81
     },
     {
-      "cliente": "TROY ANTHONY SCOTT",
-      "maior_atraso": 1,
-      "titulos": 4,
-      "total_atraso": 17880
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 1048,
+      "titulos": 2,
+      "total_atraso": 13359.34
     }
   ]
 }
