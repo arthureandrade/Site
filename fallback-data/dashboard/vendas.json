@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-10-23T13:00:19.712497",
+  "generated_at": "2026-10-23T16:21:51.909641",
   "kpis": {
-    "ticket_medio": 262.5337735849057,
-    "total_pedidos": 106,
-    "total_vendas": 27828.58,
+    "ticket_medio": 286.4410714285715,
+    "total_pedidos": 168,
+    "total_vendas": 48122.100000000006,
     "total_vendedores": 7
   },
   "lojas": [
     {
       "loja": "Loja 2",
-      "total_vendas": 17625.5
+      "total_vendas": 24937.5
     },
     {
       "loja": "Loja 1",
-      "total_vendas": 8938.08
+      "total_vendas": 13029.60000000001
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 1265
+      "total_vendas": 10155
     }
   ],
   "ok": true,
@@ -31,45 +31,45 @@
   "serie_diaria": [
     {
       "data": "2026-10-23",
-      "total_vendas": 27828.58
+      "total_vendas": 48122.100000000006
     }
   ],
   "tipo": "vendas",
   "top_vendedores": [
     {
-      "pedidos": 27,
-      "total_vendas": 13161,
-      "vendedor": "Lucas"
-    },
-    {
-      "pedidos": 24,
-      "total_vendas": 4084.5,
-      "vendedor": "Adriano"
-    },
-    {
-      "pedidos": 13,
-      "total_vendas": 3038.58,
-      "vendedor": "Rafael"
-    },
-    {
-      "pedidos": 12,
-      "total_vendas": 2805,
+      "pedidos": 25,
+      "total_vendas": 37103.2,
       "vendedor": "Guilherme"
     },
     {
-      "pedidos": 16,
-      "total_vendas": 2223.5,
+      "pedidos": 43,
+      "total_vendas": 16000,
+      "vendedor": "Lucas"
+    },
+    {
+      "pedidos": 30,
+      "total_vendas": 13393.220000000001,
       "vendedor": "Gloria"
     },
     {
-      "pedidos": 13,
-      "total_vendas": 1861,
+      "pedidos": 36,
+      "total_vendas": 9217.5,
+      "vendedor": "Adriano"
+    },
+    {
+      "pedidos": 14,
+      "total_vendas": 2041,
       "vendedor": "Juan"
     },
     {
       "pedidos": 1,
       "total_vendas": 655,
       "vendedor": "Estefanio"
+    },
+    {
+      "pedidos": 19,
+      "total_vendas": -30287.819999999992,
+      "vendedor": "Rafael"
     }
   ]
 }
