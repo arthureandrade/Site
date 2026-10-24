@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 650755.97
+      "saldo": 636821.08
     },
     {
       "faixa": "31–60 dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 76883.75
+      "saldo": 67197.31
     },
     {
       "faixa": "61–90 dias",
       "saldo": 58091.32
     }
   ],
-  "generated_at": "2026-10-24T07:35:30.223563",
+  "generated_at": "2026-10-24T10:53:34.578885",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1190827.07,
-    "total_atraso": 540071.1000000001,
-    "total_vencer": 650755.97
+    "clientes_atraso": 67,
+    "total_aberto": 1167205.7400000002,
+    "total_atraso": 530384.66,
+    "total_vencer": 636821.0800000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -45,7 +45,7 @@
       "cliente": "SERRALHERIA WF",
       "dias_atraso": 1,
       "loja": "Loja 2",
-      "saldo": 660,
+      "saldo": 400,
       "vencimento": "2026-10-23T00:00:00"
     },
     {
