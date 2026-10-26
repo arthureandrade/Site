@@ -2,32 +2,32 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3683507
+      "saldo": 3697498
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 316521
-    },
-    {
-      "faixa": "31–60 dias",
-      "saldo": 94088
+      "saldo": 208832
     },
     {
       "faixa": "91–180 dias",
       "saldo": 83942
     },
     {
+      "faixa": "31–60 dias",
+      "saldo": 35900
+    },
+    {
       "faixa": "61–90 dias",
       "saldo": 20483
     }
   ],
-  "generated_at": "2026-10-26T07:24:27.672969",
+  "generated_at": "2026-10-26T17:51:00.999182",
   "kpis": {
-    "a_vencer_7d": 448857,
+    "a_vencer_7d": 444651,
     "juros_pagos": 71064,
-    "total_aberto": 4198541,
-    "total_pago_periodo": 4673775,
-    "total_vencido": 515034
+    "total_aberto": 4046655,
+    "total_pago_periodo": 5179058,
+    "total_vencido": 349157
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,18 +110,18 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 15,
-      "total_aberto": 924962
-    },
-    {
-      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 32,
-      "total_aberto": 662827
+      "titulos": 14,
+      "total_aberto": 847139
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
       "titulos": 8,
       "total_aberto": 628066
+    },
+    {
+      "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
+      "titulos": 27,
+      "total_aberto": 604639
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 58,
-      "total_aberto": 135319
+      "titulos": 60,
+      "total_aberto": 135897
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",

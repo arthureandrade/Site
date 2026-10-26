@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 608361.97
+      "saldo": 630867.1
     },
     {
       "faixa": "31–60 dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 89820.3
+      "saldo": 56185.28
     },
     {
       "faixa": "61–90 dias",
       "saldo": 55506.1
     }
   ],
-  "generated_at": "2026-10-26T07:24:26.946979",
+  "generated_at": "2026-10-26T17:51:00.233084",
   "kpis": {
-    "clientes_atraso": 73,
-    "total_aberto": 1164096.93,
-    "total_atraso": 555734.96,
-    "total_vencer": 608361.97
+    "clientes_atraso": 68,
+    "total_aberto": 1152967.04,
+    "total_atraso": 522099.94,
+    "total_vencer": 630867.1000000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -98,7 +98,7 @@
       "vencimento": "2026-10-29T00:00:00"
     },
     {
-      "cliente": "WAGNER FRANKLIN ALVES DA SILVA",
+      "cliente": "WAGNER FRANKLIN ALVES DA SILVA 00948242400",
       "dias_atraso": -4,
       "loja": "Loja 2",
       "saldo": 1146,
@@ -162,10 +162,10 @@
       "total_atraso": 18742.95
     },
     {
-      "cliente": "AGORA ESTRUTURAS E ENGENHARIA",
-      "maior_atraso": 2,
+      "cliente": "JOSE ISMAR OLIVEIRA DIAS",
+      "maior_atraso": 1051,
       "titulos": 2,
-      "total_atraso": 18182.46
+      "total_atraso": 13379.93
     }
   ]
 }
