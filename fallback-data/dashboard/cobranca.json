@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 613326.17
+      "saldo": 618788.82
     },
     {
       "faixa": "31–60 dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 51303.45
+      "saldo": 48561.19
     }
   ],
-  "generated_at": "2026-10-27T14:09:55.949747",
+  "generated_at": "2026-10-27T18:16:48.236626",
   "kpis": {
-    "clientes_atraso": 74,
-    "total_aberto": 1144167.2200000002,
-    "total_atraso": 530841.05,
-    "total_vencer": 613326.1699999999
+    "clientes_atraso": 72,
+    "total_aberto": 1146887.61,
+    "total_atraso": 528098.79,
+    "total_vencer": 618788.8200000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,39 +70,39 @@
       "vencimento": "2026-10-25T00:00:00"
     },
     {
-      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
-      "dias_atraso": 0,
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -1,
       "loja": "Loja 1",
-      "saldo": 115.86,
-      "vencimento": "2026-10-27T00:00:00"
+      "saldo": 692,
+      "vencimento": "2026-10-28T00:00:00"
     },
     {
-      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
-      "dias_atraso": 0,
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -2,
       "loja": "Loja 1",
-      "saldo": 236.67,
-      "vencimento": "2026-10-27T00:00:00"
+      "saldo": 567,
+      "vencimento": "2026-10-29T00:00:00"
     },
     {
-      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 533.34,
-      "vencimento": "2026-10-27T00:00:00"
+      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "dias_atraso": -2,
+      "loja": "Loja 4",
+      "saldo": 1000,
+      "vencimento": "2026-10-29T00:00:00"
     },
     {
-      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 405,
-      "vencimento": "2026-10-27T00:00:00"
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 186,
+      "vencimento": "2026-10-29T00:00:00"
     },
     {
-      "cliente": "G.A. GESTAO EMPRESARIAL LTDA",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 44.82,
-      "vencimento": "2026-10-27T00:00:00"
+      "cliente": "WAGNER FRANKLIN ALVES DA SILVA 00948242400",
+      "dias_atraso": -3,
+      "loja": "Loja 2",
+      "saldo": 1146,
+      "vencimento": "2026-10-30T00:00:00"
     }
   ],
   "tipo": "cobranca",
