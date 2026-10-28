@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3359908
+      "saldo": 3350848
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 272620
+      "saldo": 260330
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 25454
     }
   ],
-  "generated_at": "2026-10-28T15:37:49.095114",
+  "generated_at": "2026-10-28T19:33:34.158563",
   "kpis": {
-    "a_vencer_7d": 246630,
+    "a_vencer_7d": 236009,
     "juros_pagos": 71064,
-    "total_aberto": 3777978,
-    "total_pago_periodo": 5766653,
-    "total_vencido": 418070
+    "total_aberto": 3756628,
+    "total_pago_periodo": 5819695,
+    "total_vencido": 405780
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 61,
-      "total_aberto": 139652
+      "titulos": 62,
+      "total_aberto": 141213
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
