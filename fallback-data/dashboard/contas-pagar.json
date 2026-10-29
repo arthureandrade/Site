@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3350616
+      "saldo": 3354820
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 263875
+      "saldo": 271872
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 26269
     }
   ],
-  "generated_at": "2026-10-29T12:08:08.331307",
+  "generated_at": "2026-10-29T17:07:21.287987",
   "kpis": {
-    "a_vencer_7d": 342414,
+    "a_vencer_7d": 346618,
     "juros_pagos": 71064,
-    "total_aberto": 3760678,
-    "total_pago_periodo": 5273062,
-    "total_vencido": 410062
+    "total_aberto": 3772879,
+    "total_pago_periodo": 5265065,
+    "total_vencido": 418059
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 14,
-      "total_aberto": 847139
+      "titulos": 15,
+      "total_aberto": 855136
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -145,8 +145,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 62,
-      "total_aberto": 141213
+      "titulos": 63,
+      "total_aberto": 145417
     },
     {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
