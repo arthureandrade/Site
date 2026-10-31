@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 610962.43
+      "saldo": 600969.27
     },
     {
       "faixa": "31–60 dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 57093.35
+      "saldo": 53783.7
     }
   ],
-  "generated_at": "2026-10-31T04:33:43.007886",
+  "generated_at": "2026-10-31T10:43:46.248043",
   "kpis": {
-    "clientes_atraso": 79,
-    "total_aberto": 1163430.8900000001,
-    "total_atraso": 552468.46,
-    "total_vencer": 610962.4299999999
+    "clientes_atraso": 77,
+    "total_aberto": 1150128.08,
+    "total_atraso": 549158.81,
+    "total_vencer": 600969.27
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -53,13 +53,6 @@
       "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 568.13,
-      "vencimento": "2026-10-29T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 1002,
       "vencimento": "2026-10-29T00:00:00"
     },
     {
@@ -95,6 +88,13 @@
       "dias_atraso": 0,
       "loja": "Loja 1",
       "saldo": 1830,
+      "vencimento": "2026-10-31T00:00:00"
+    },
+    {
+      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "dias_atraso": 0,
+      "loja": "Loja 1",
+      "saldo": 3400,
       "vencimento": "2026-10-31T00:00:00"
     },
     {
