@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3310300
+      "saldo": 3496136
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 334743
+      "saldo": 241534
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 49188
+      "saldo": 48787
     },
     {
       "faixa": "61–90 dias",
       "saldo": 19827
     }
   ],
-  "generated_at": "2026-11-03T04:44:36.030765",
+  "generated_at": "2026-11-03T12:38:45.867453",
   "kpis": {
-    "a_vencer_7d": 589569,
-    "juros_pagos": 71064,
-    "total_aberto": 3807628,
-    "total_pago_periodo": 5126471,
-    "total_vencido": 497328
+    "a_vencer_7d": 727269,
+    "juros_pagos": 86136,
+    "total_aberto": 3899854,
+    "total_pago_periodo": 6058963,
+    "total_vencido": 403718
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -129,11 +129,6 @@
       "total_aberto": 262669
     },
     {
-      "fornecedor": "METALURGICA RAMASSOL LTDA",
-      "titulos": 13,
-      "total_aberto": 205793
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 53,
       "total_aberto": 185394
@@ -149,14 +144,19 @@
       "total_aberto": 150320
     },
     {
+      "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
+      "titulos": 1,
+      "total_aberto": 131700
+    },
+    {
+      "fornecedor": "METALURGICA RAMASSOL LTDA",
+      "titulos": 10,
+      "total_aberto": 125048
+    },
+    {
       "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
       "titulos": 6,
       "total_aberto": 122568
-    },
-    {
-      "fornecedor": "GERDAU ACOS LONGOS SA",
-      "titulos": 3,
-      "total_aberto": 85181
     }
   ]
 }

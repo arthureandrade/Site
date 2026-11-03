@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 644991.92
+      "saldo": 683888.4500000001
     },
     {
       "faixa": "31–60 dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 126429.81000000001
+      "saldo": 124579.81000000001
     },
     {
       "faixa": "61–90 dias",
@@ -22,15 +22,15 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 77357.45999999999
+      "saldo": 67131.77
     }
   ],
-  "generated_at": "2026-11-03T04:44:35.234275",
+  "generated_at": "2026-11-03T12:38:45.224901",
   "kpis": {
-    "clientes_atraso": 82,
-    "total_aberto": 1218478.2200000002,
-    "total_atraso": 573486.3,
-    "total_vencer": 644991.92
+    "clientes_atraso": 77,
+    "total_aberto": 1245299.06,
+    "total_atraso": 561410.61,
+    "total_vencer": 683888.4500000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -39,13 +39,6 @@
       "dias_atraso": 5,
       "loja": "Loja 2",
       "saldo": 186.93,
-      "vencimento": "2026-10-29T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 5,
-      "loja": "Loja 1",
-      "saldo": 569.84,
       "vencimento": "2026-10-29T00:00:00"
     },
     {
@@ -77,13 +70,6 @@
       "vencimento": "2026-10-30T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 1835.49,
-      "vencimento": "2026-10-31T00:00:00"
-    },
-    {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
       "dias_atraso": 3,
       "loja": "Loja 1",
@@ -103,6 +89,20 @@
       "loja": "Loja 2",
       "saldo": 270.54,
       "vencimento": "2026-11-01T00:00:00"
+    },
+    {
+      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "dias_atraso": 1,
+      "loja": "Loja 1",
+      "saldo": 238.33,
+      "vencimento": "2026-11-02T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 6060,
+      "vencimento": "2026-11-05T00:00:00"
     }
   ],
   "tipo": "cobranca",
