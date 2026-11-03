@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3496136
+      "saldo": 3716100
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 241534
+      "saldo": 229030
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 19827
     }
   ],
-  "generated_at": "2026-11-03T12:38:45.867453",
+  "generated_at": "2026-11-03T18:02:06.403055",
   "kpis": {
     "a_vencer_7d": 727269,
     "juros_pagos": 86136,
-    "total_aberto": 3899854,
-    "total_pago_periodo": 6058963,
-    "total_vencido": 403718
+    "total_aberto": 4107314,
+    "total_pago_periodo": 6101524,
+    "total_vencido": 391214
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -124,6 +124,11 @@
       "total_aberto": 544438
     },
     {
+      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
+      "titulos": 8,
+      "total_aberto": 323488
+    },
+    {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
       "titulos": 5,
       "total_aberto": 262669
@@ -132,11 +137,6 @@
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 53,
       "total_aberto": 185394
-    },
-    {
-      "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 4,
-      "total_aberto": 176472
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
