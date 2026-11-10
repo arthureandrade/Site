@@ -2,126 +2,126 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3520556
+      "saldo": 3471175
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 432525
+      "saldo": 489031
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 93570
+      "saldo": 90296
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 51340
+      "saldo": 49542
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 19827
+      "saldo": 18097
     }
   ],
-  "generated_at": "2026-11-05T14:19:09.422399",
+  "generated_at": "2026-11-10T17:58:29.214079",
   "kpis": {
-    "a_vencer_7d": 522491,
+    "a_vencer_7d": 421492,
     "juros_pagos": 86136,
-    "total_aberto": 4117818,
-    "total_pago_periodo": 6388252,
-    "total_vencido": 597262
+    "total_aberto": 4118141,
+    "total_pago_periodo": 6799337,
+    "total_vencido": 646966
   },
   "ok": true,
   "periodo_pagamentos": {
-    "data_ate": "2026-11-05",
-    "data_de": "2026-10-06"
+    "data_ate": "2026-11-10",
+    "data_de": "2026-10-11"
   },
   "proximos_vencimentos": [
     {
-      "dias_atraso": 180,
-      "fornecedor": "M E B TRANSPORTES LTDA",
-      "loja": "Loja 1",
-      "saldo": 7243,
-      "vencimento": "2026-05-09T00:00:00"
-    },
-    {
-      "dias_atraso": 173,
+      "dias_atraso": 178,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-16T00:00:00"
     },
     {
-      "dias_atraso": 172,
+      "dias_atraso": 177,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 3519,
       "vencimento": "2026-05-17T00:00:00"
     },
     {
-      "dias_atraso": 167,
+      "dias_atraso": 172,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 2580,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 167,
+      "dias_atraso": 172,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 265,
       "vencimento": "2026-05-22T00:00:00"
     },
     {
-      "dias_atraso": 162,
+      "dias_atraso": 167,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 807,
       "vencimento": "2026-05-27T00:00:00"
     },
     {
-      "dias_atraso": 161,
+      "dias_atraso": 166,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 2",
       "saldo": 5584,
       "vencimento": "2026-05-28T00:00:00"
     },
     {
-      "dias_atraso": 155,
+      "dias_atraso": 160,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 1446,
       "vencimento": "2026-06-03T00:00:00"
     },
     {
-      "dias_atraso": 152,
+      "dias_atraso": 157,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 1",
       "saldo": 653,
       "vencimento": "2026-06-06T00:00:00"
     },
     {
-      "dias_atraso": 152,
+      "dias_atraso": 157,
       "fornecedor": "M E B TRANSPORTES LTDA",
       "loja": "Loja 2",
       "saldo": 1552,
       "vencimento": "2026-06-06T00:00:00"
+    },
+    {
+      "dias_atraso": 153,
+      "fornecedor": "M E B TRANSPORTES LTDA",
+      "loja": "Loja 1",
+      "saldo": 6053,
+      "vencimento": "2026-06-10T00:00:00"
     }
   ],
   "tipo": "contas-pagar",
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 14,
-      "total_aberto": 847139
+      "titulos": 13,
+      "total_aberto": 776993
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 27,
-      "total_aberto": 604639
+      "titulos": 38,
+      "total_aberto": 739263
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 7,
-      "total_aberto": 544438
+      "titulos": 5,
+      "total_aberto": 390835
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 65,
-      "total_aberto": 150320
+      "titulos": 66,
+      "total_aberto": 144018
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
@@ -154,9 +154,9 @@
       "total_aberto": 125048
     },
     {
-      "fornecedor": "CSM-COMPONENTES SISTEMAS E MAQUINAS PARA CONSTRUCAO LTD",
-      "titulos": 6,
-      "total_aberto": 122568
+      "fornecedor": "CIPALAM INDUSTRIA E COMERCIO DE LAMINADOS LTDA",
+      "titulos": 8,
+      "total_aberto": 116144
     }
   ]
 }
