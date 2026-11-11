@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3447029
+      "saldo": 3497400
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 525317
+      "saldo": 497402
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 17113
     }
   ],
-  "generated_at": "2026-11-11T12:39:56.725687",
+  "generated_at": "2026-11-11T19:05:40.099309",
   "kpis": {
-    "a_vencer_7d": 394180,
+    "a_vencer_7d": 397680,
     "juros_pagos": 86136,
-    "total_aberto": 4130281,
-    "total_pago_periodo": 6799337,
-    "total_vencido": 683252
+    "total_aberto": 4152737,
+    "total_pago_periodo": 6889741,
+    "total_vencido": 655337
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -115,8 +115,8 @@
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 38,
-      "total_aberto": 739263
+      "titulos": 37,
+      "total_aberto": 731361
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 66,
-      "total_aberto": 144018
+      "titulos": 67,
+      "total_aberto": 144283
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
