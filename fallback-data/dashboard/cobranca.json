@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 739784.59
+      "saldo": 728082.27
     },
     {
       "faixa": "91–180 dias",
@@ -17,20 +17,20 @@
       "saldo": 129325.47
     },
     {
-      "faixa": "1–30 dias",
-      "saldo": 87115.27
-    },
-    {
       "faixa": "61–90 dias",
       "saldo": 84738.92
+    },
+    {
+      "faixa": "1–30 dias",
+      "saldo": 82280.11
     }
   ],
-  "generated_at": "2026-11-12T07:55:47.336883",
+  "generated_at": "2026-11-12T15:46:21.019200",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1315069.3599999999,
-    "total_atraso": 575284.77,
-    "total_vencer": 739784.59
+    "clientes_atraso": 69,
+    "total_aberto": 1298531.88,
+    "total_atraso": 570449.61,
+    "total_vencer": 728082.27
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -138,16 +138,16 @@
       "total_atraso": 27853.559999999998
     },
     {
-      "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 111,
-      "titulos": 5,
-      "total_atraso": 25878.08
-    },
-    {
       "cliente": "JOSE ALVES DE MORAIS",
       "maior_atraso": 166,
       "titulos": 3,
       "total_atraso": 23569.6
+    },
+    {
+      "cliente": "YURY NEGREIRO SANTANA",
+      "maior_atraso": 111,
+      "titulos": 4,
+      "total_atraso": 23236.78
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",

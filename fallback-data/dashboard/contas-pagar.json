@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3426815
+      "saldo": 4191045
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 567987
+      "saldo": 460728
     },
     {
       "faixa": "91–180 dias",
@@ -14,20 +14,20 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 49429
+      "saldo": 42974
     },
     {
       "faixa": "61–90 dias",
       "saldo": 17226
     }
   ],
-  "generated_at": "2026-11-12T07:55:48.135003",
+  "generated_at": "2026-11-12T15:46:21.654132",
   "kpis": {
-    "a_vencer_7d": 330689,
-    "juros_pagos": 86136,
-    "total_aberto": 4152737,
-    "total_pago_periodo": 6889741,
-    "total_vencido": 725922
+    "a_vencer_7d": 334539,
+    "juros_pagos": 86138,
+    "total_aberto": 4803253,
+    "total_pago_periodo": 7204396,
+    "total_vencido": 612208
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,18 +110,18 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 13,
-      "total_aberto": 776993
+      "titulos": 16,
+      "total_aberto": 993581
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 37,
-      "total_aberto": 731361
+      "titulos": 40,
+      "total_aberto": 889586
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
-      "titulos": 5,
-      "total_aberto": 390835
+      "titulos": 8,
+      "total_aberto": 765166
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
@@ -130,8 +130,8 @@
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 5,
-      "total_aberto": 262669
+      "titulos": 4,
+      "total_aberto": 215107
     },
     {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
