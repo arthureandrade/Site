@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 719270.99
+      "saldo": 727008.49
     },
     {
       "faixa": "91–180 dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 93948.9
+      "saldo": 85948.9
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 87966.97
+      "saldo": 83135.15
     }
   ],
-  "generated_at": "2026-11-13T11:36:58.057864",
+  "generated_at": "2026-11-13T17:38:28.166116",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1296924.18,
-    "total_atraso": 577653.1900000001,
-    "total_vencer": 719270.99
+    "clientes_atraso": 68,
+    "total_aberto": 1291829.8599999999,
+    "total_atraso": 564821.3700000001,
+    "total_vencer": 727008.49
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -123,7 +123,7 @@
       "cliente": "FABIO RAIOL FEITOSA",
       "maior_atraso": 78,
       "titulos": 5,
-      "total_atraso": 63482.33
+      "total_atraso": 55482.33
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
