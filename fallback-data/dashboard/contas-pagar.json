@@ -6,7 +6,7 @@
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 454993
+      "saldo": 340713
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 17226
     }
   ],
-  "generated_at": "2026-11-14T04:16:01.690687",
+  "generated_at": "2026-11-14T11:12:08.009104",
   "kpis": {
     "a_vencer_7d": 362407,
     "juros_pagos": 86138,
-    "total_aberto": 4727632,
-    "total_pago_periodo": 6048497,
-    "total_vencido": 602828
+    "total_aberto": 4613352,
+    "total_pago_periodo": 6389083,
+    "total_vencido": 488548
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 16,
-      "total_aberto": 993581
+      "titulos": 15,
+      "total_aberto": 894338
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
