@@ -2,104 +2,104 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 614045.34
+      "saldo": 593359.34
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 190948.75
+      "saldo": 211529.53999999998
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 138977.68
+      "saldo": 140696.72999999998
     },
     {
       "faixa": "180+ dias",
-      "saldo": 136280.11
+      "saldo": 136334.35
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 123558.4
+      "saldo": 119305.99
     },
     {
       "faixa": "61–90 dias",
-      "saldo": 86086.19
+      "saldo": 89109.53
     }
   ],
-  "generated_at": "2026-11-15T22:24:53.911718",
+  "generated_at": "2026-11-16T06:03:58.863081",
   "kpis": {
-    "clientes_atraso": 72,
-    "total_aberto": 1289896.47,
-    "total_atraso": 675851.1299999999,
-    "total_vencer": 614045.34
+    "clientes_atraso": 74,
+    "total_aberto": 1290335.48,
+    "total_atraso": 696976.1399999999,
+    "total_vencer": 593359.34
   },
   "ok": true,
   "proximos_vencimentos": [
     {
       "cliente": "MARCELO VIANA BARROS (CARRETA)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 1",
-      "saldo": 2562.32,
+      "saldo": 2564.88,
       "vencimento": "2026-11-12T00:00:00"
     },
     {
       "cliente": "MARCELO VIANA BARROS (CARRETA)",
-      "dias_atraso": 3,
+      "dias_atraso": 4,
       "loja": "Loja 4",
-      "saldo": 1155.46,
+      "saldo": 1156.61,
       "vencimento": "2026-11-12T00:00:00"
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "dias_atraso": 2,
+      "dias_atraso": 3,
       "loja": "Loja 2",
       "saldo": 180,
       "vencimento": "2026-11-13T00:00:00"
     },
     {
       "cliente": "WAGNER FRANKLIN ALVES DA SILVA 00948242400",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 2",
       "saldo": 1146,
       "vencimento": "2026-11-14T00:00:00"
     },
     {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 1,
+      "dias_atraso": 2,
       "loja": "Loja 1",
       "saldo": 500,
       "vencimento": "2026-11-14T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 2226,
       "vencimento": "2026-11-15T00:00:00"
     },
     {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 1",
       "saldo": 3400,
       "vencimento": "2026-11-15T00:00:00"
     },
     {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 0,
+      "dias_atraso": 1,
       "loja": "Loja 4",
       "saldo": 1266.67,
       "vencimento": "2026-11-15T00:00:00"
     },
     {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": -2,
+      "dias_atraso": -1,
       "loja": "Loja 1",
       "saldo": 238.34,
       "vencimento": "2026-11-17T00:00:00"
     },
     {
       "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": -3,
+      "dias_atraso": -2,
       "loja": "Loja 1",
       "saldo": 2056,
       "vencimento": "2026-11-18T00:00:00"
@@ -109,63 +109,63 @@
   "top_clientes": [
     {
       "cliente": "E D S CONSTRUCOES E IMOBILIARIA LTDA",
-      "maior_atraso": 16,
+      "maior_atraso": 17,
       "titulos": 3,
-      "total_atraso": 104967.16
+      "total_atraso": 104969.36
     },
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
-      "maior_atraso": 131,
-      "titulos": 1,
-      "total_atraso": 76285.95
+      "maior_atraso": 132,
+      "titulos": 2,
+      "total_atraso": 79528.4
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
-      "maior_atraso": 111,
+      "maior_atraso": 112,
       "titulos": 12,
-      "total_atraso": 74139.19
+      "total_atraso": 74208.98
     },
     {
       "cliente": "FABIO RAIOL FEITOSA",
-      "maior_atraso": 80,
+      "maior_atraso": 81,
       "titulos": 5,
-      "total_atraso": 55546.149999999994
+      "total_atraso": 55578.07
     },
     {
       "cliente": "M C A CONSTRUTORA EIRELLI",
-      "maior_atraso": 618,
+      "maior_atraso": 619,
       "titulos": 7,
-      "total_atraso": 39776.14
+      "total_atraso": 39777.4
     },
     {
       "cliente": "CONSTRUTORA PORTO S.A.",
-      "maior_atraso": 7,
+      "maior_atraso": 8,
       "titulos": 2,
-      "total_atraso": 27880.81
+      "total_atraso": 27889.890000000003
     },
     {
       "cliente": "JOSE ALVES DE MORAIS",
-      "maior_atraso": 169,
+      "maior_atraso": 170,
       "titulos": 3,
-      "total_atraso": 23632.3
+      "total_atraso": 23653.2
     },
     {
       "cliente": "YURY NEGREIRO SANTANA",
-      "maior_atraso": 114,
+      "maior_atraso": 115,
       "titulos": 4,
-      "total_atraso": 23416.47
+      "total_atraso": 23476.36
     },
     {
       "cliente": "FABIANO CANTAL DE SOUZA",
-      "maior_atraso": 900,
+      "maior_atraso": 901,
       "titulos": 16,
-      "total_atraso": 23066.21
+      "total_atraso": 23078.54
     },
     {
       "cliente": "MARLENE CAMARGO BROTAS DE CARVALHO",
-      "maior_atraso": 88,
+      "maior_atraso": 89,
       "titulos": 25,
-      "total_atraso": 22021.12
+      "total_atraso": 22041.66
     }
   ]
 }
