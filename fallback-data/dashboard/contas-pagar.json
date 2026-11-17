@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3955445
+      "saldo": 3998948
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 537429
+      "saldo": 343764
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 25280
     }
   ],
-  "generated_at": "2026-11-17T07:43:34.686359",
+  "generated_at": "2026-11-17T16:03:52.865933",
   "kpis": {
     "a_vencer_7d": 557435,
     "juros_pagos": 86138,
-    "total_aberto": 4642012,
-    "total_pago_periodo": 6013957,
-    "total_vencido": 686567
+    "total_aberto": 4491850,
+    "total_pago_periodo": 6643842,
+    "total_vencido": 492902
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "AMAZON ACO INDUSTRIA E COMERCIO LTDA.",
-      "titulos": 15,
-      "total_aberto": 894338
+      "titulos": 14,
+      "total_aberto": 824284
     },
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
@@ -125,8 +125,8 @@
     },
     {
       "fornecedor": "CIPALAM IND. COM. DE LAMINADOS LTDA",
-      "titulos": 8,
-      "total_aberto": 323488
+      "titulos": 7,
+      "total_aberto": 279370
     },
     {
       "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
@@ -154,9 +154,9 @@
       "total_aberto": 125048
     },
     {
-      "fornecedor": "CIPALAM INDUSTRIA E COMERCIO DE LAMINADOS LTDA",
-      "titulos": 8,
-      "total_aberto": 116144
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 12,
+      "total_aberto": 104558
     }
   ]
 }
