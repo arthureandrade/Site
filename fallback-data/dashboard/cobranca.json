@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 623053.16
+      "saldo": 625610.75
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 210529.53999999998
+      "saldo": 207363.53999999998
     },
     {
       "faixa": "91–180 dias",
@@ -18,19 +18,19 @@
     },
     {
       "faixa": "31–60 dias",
-      "saldo": 119305.99
+      "saldo": 114961.39
     },
     {
       "faixa": "61–90 dias",
       "saldo": 89109.53
     }
   ],
-  "generated_at": "2026-11-16T16:23:26.968398",
+  "generated_at": "2026-11-16T23:02:51.319062",
   "kpis": {
-    "clientes_atraso": 73,
-    "total_aberto": 1319029.3,
-    "total_atraso": 695976.1399999999,
-    "total_vencer": 623053.1599999999
+    "clientes_atraso": 71,
+    "total_aberto": 1314076.29,
+    "total_atraso": 688465.54,
+    "total_vencer": 625610.75
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -70,13 +70,6 @@
       "vencimento": "2026-11-14T00:00:00"
     },
     {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 1486,
-      "vencimento": "2026-11-15T00:00:00"
-    },
-    {
       "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
       "dias_atraso": 1,
       "loja": "Loja 1",
@@ -101,7 +94,14 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -2,
       "loja": "Loja 1",
-      "saldo": 2056,
+      "saldo": 927,
+      "vencimento": "2026-11-18T00:00:00"
+    },
+    {
+      "cliente": "ANTONI GONZALEZ",
+      "dias_atraso": -2,
+      "loja": "Loja 1",
+      "saldo": 480,
       "vencimento": "2026-11-18T00:00:00"
     }
   ],
