@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3998948
+      "saldo": 4049398
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 25280
     }
   ],
-  "generated_at": "2026-11-17T16:03:52.865933",
+  "generated_at": "2026-11-17T22:23:49.709462",
   "kpis": {
-    "a_vencer_7d": 557435,
+    "a_vencer_7d": 557965,
     "juros_pagos": 86138,
-    "total_aberto": 4491850,
+    "total_aberto": 4542300,
     "total_pago_periodo": 6643842,
     "total_vencido": 492902
   },
@@ -144,6 +144,11 @@
       "total_aberto": 149738
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 21,
+      "total_aberto": 138374
+    },
+    {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
       "titulos": 1,
       "total_aberto": 131700
@@ -152,11 +157,6 @@
       "fornecedor": "METALURGICA RAMASSOL LTDA",
       "titulos": 10,
       "total_aberto": 125048
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 12,
-      "total_aberto": 104558
     }
   ]
 }

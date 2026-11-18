@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 618390.65
+      "saldo": 622139.59
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 203704.47
+      "saldo": 195137.35
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 103034.25
     }
   ],
-  "generated_at": "2026-11-17T16:03:52.123363",
+  "generated_at": "2026-11-17T22:23:49.045077",
   "kpis": {
-    "clientes_atraso": 71,
-    "total_aberto": 1312719.6800000002,
-    "total_atraso": 694329.03,
-    "total_vencer": 618390.6499999999
+    "clientes_atraso": 67,
+    "total_aberto": 1307901.5,
+    "total_atraso": 685761.9099999999,
+    "total_vencer": 622139.5900000001
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -63,34 +63,6 @@
       "vencimento": "2026-11-14T00:00:00"
     },
     {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 3,
-      "loja": "Loja 1",
-      "saldo": 501.5,
-      "vencimento": "2026-11-14T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 3406.8,
-      "vencimento": "2026-11-15T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 2,
-      "loja": "Loja 4",
-      "saldo": 1269.2,
-      "vencimento": "2026-11-15T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 238.34,
-      "vencimento": "2026-11-17T00:00:00"
-    },
-    {
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -1,
       "loja": "Loja 1",
@@ -103,6 +75,34 @@
       "loja": "Loja 1",
       "saldo": 480,
       "vencimento": "2026-11-18T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 1177,
+      "vencimento": "2026-11-19T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -2,
+      "loja": "Loja 2",
+      "saldo": 768,
+      "vencimento": "2026-11-19T00:00:00"
+    },
+    {
+      "cliente": "L. DA SILVA GUIMARAES - ME",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 712,
+      "vencimento": "2026-11-20T00:00:00"
+    },
+    {
+      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 612.5,
+      "vencimento": "2026-11-20T00:00:00"
     }
   ],
   "tipo": "cobranca",

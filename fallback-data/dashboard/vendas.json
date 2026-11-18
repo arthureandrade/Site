@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-17T16:03:51.605198",
+  "generated_at": "2026-11-17T22:23:48.426504",
   "kpis": {
-    "ticket_medio": 587.5912903225806,
-    "total_pedidos": 31,
-    "total_vendas": 18215.329999999998,
+    "ticket_medio": 589.8540625,
+    "total_pedidos": 32,
+    "total_vendas": 18875.33,
     "total_vendedores": 6
   },
   "lojas": [
@@ -17,7 +17,7 @@
     },
     {
       "loja": "Loja 4",
-      "total_vendas": 190
+      "total_vendas": 850
     }
   ],
   "ok": true,
@@ -31,7 +31,7 @@
   "serie_diaria": [
     {
       "data": "2026-11-17",
-      "total_vendas": 18215.33
+      "total_vendas": 18875.33
     }
   ],
   "tipo": "vendas",
