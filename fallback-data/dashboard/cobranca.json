@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 606496.02
+      "saldo": 594479.21
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 205629.82
+      "saldo": 175957.4
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 99218.56
     }
   ],
-  "generated_at": "2026-11-19T04:46:00.050239",
+  "generated_at": "2026-11-19T13:44:27.521307",
   "kpis": {
-    "clientes_atraso": 70,
-    "total_aberto": 1302428.36,
-    "total_atraso": 695932.3400000001,
-    "total_vencer": 606496.02
+    "clientes_atraso": 66,
+    "total_aberto": 1260739.13,
+    "total_atraso": 666259.92,
+    "total_vencer": 594479.21
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -40,13 +40,6 @@
       "loja": "Loja 2",
       "saldo": 1151.73,
       "vencimento": "2026-11-14T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 1,
-      "loja": "Loja 1",
-      "saldo": 927,
-      "vencimento": "2026-11-18T00:00:00"
     },
     {
       "cliente": "ANTONI GONZALEZ",
@@ -102,15 +95,15 @@
   "top_clientes": [
     {
       "cliente": "E D S CONSTRUCOES E IMOBILIARIA LTDA",
-      "maior_atraso": 20,
-      "titulos": 3,
-      "total_atraso": 107110.59
+      "maior_atraso": 6,
+      "titulos": 2,
+      "total_atraso": 100334.63
     },
     {
       "cliente": "CAPITAL CONSTRUCAO, INDUSTRIA, SERVICOS E COMERCIO LTDA",
       "maior_atraso": 135,
-      "titulos": 2,
-      "total_atraso": 77554.97
+      "titulos": 1,
+      "total_atraso": 76555.75
     },
     {
       "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
