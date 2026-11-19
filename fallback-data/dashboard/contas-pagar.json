@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 4037874
+      "saldo": 4035278
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 342272
+      "saldo": 283964
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 25280
     }
   ],
-  "generated_at": "2026-11-18T15:01:11.217540",
+  "generated_at": "2026-11-18T21:06:28.324799",
   "kpis": {
-    "a_vencer_7d": 563593,
+    "a_vencer_7d": 560093,
     "juros_pagos": 86138,
-    "total_aberto": 4530484,
-    "total_pago_periodo": 6672482,
-    "total_vencido": 492610
+    "total_aberto": 4469580,
+    "total_pago_periodo": 6855564,
+    "total_vencido": 434302
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -129,14 +129,14 @@
       "total_aberto": 279370
     },
     {
-      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
-      "titulos": 4,
-      "total_aberto": 215107
-    },
-    {
       "fornecedor": "MAGGI ADMINISTRADORA DE CONSORCIOS LTDA",
       "titulos": 53,
       "total_aberto": 185394
+    },
+    {
+      "fornecedor": "SIDERÚRGICA NORTE BRASIL S.A.",
+      "titulos": 3,
+      "total_aberto": 159269
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
