@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 556286.28
+      "saldo": 580628.79
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 228291.74
+      "saldo": 218812.66
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 49638.369999999995
     }
   ],
-  "generated_at": "2026-11-23T03:18:22.173997",
+  "generated_at": "2026-11-23T15:22:17.802720",
   "kpis": {
     "clientes_atraso": 70,
-    "total_aberto": 1276986.4100000001,
-    "total_atraso": 720700.13,
-    "total_vencer": 556286.28
+    "total_aberto": 1291849.84,
+    "total_atraso": 711221.05,
+    "total_vencer": 580628.79
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -144,12 +144,6 @@
       "total_atraso": 39786.17
     },
     {
-      "cliente": "CONSPRO CONSTRUCOES LTDA",
-      "maior_atraso": 37,
-      "titulos": 9,
-      "total_atraso": 31665.83
-    },
-    {
       "cliente": "YURY NEGREIRO SANTANA",
       "maior_atraso": 122,
       "titulos": 4,
@@ -166,6 +160,12 @@
       "maior_atraso": 908,
       "titulos": 16,
       "total_atraso": 23164.670000000002
+    },
+    {
+      "cliente": "CONSPRO CONSTRUCOES LTDA",
+      "maior_atraso": 37,
+      "titulos": 6,
+      "total_atraso": 22186.75
     }
   ]
 }
