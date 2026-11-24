@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 534345.88
+      "saldo": 580107.13
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 234051.46
+      "saldo": 229663.86000000002
     },
     {
       "faixa": "61–90 dias",
@@ -14,7 +14,7 @@
     },
     {
       "faixa": "91–180 dias",
-      "saldo": 153423.06
+      "saldo": 146592.9
     },
     {
       "faixa": "180+ dias",
@@ -25,12 +25,12 @@
       "saldo": 47448.03
     }
   ],
-  "generated_at": "2026-11-24T11:05:13.696443",
+  "generated_at": "2026-11-24T19:52:27.287837",
   "kpis": {
-    "clientes_atraso": 73,
-    "total_aberto": 1261005.6600000001,
-    "total_atraso": 726659.78,
-    "total_vencer": 534345.88
+    "clientes_atraso": 66,
+    "total_aberto": 1295549.15,
+    "total_atraso": 715442.02,
+    "total_vencer": 580107.13
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -47,27 +47,6 @@
       "loja": "Loja 2",
       "saldo": 771.84,
       "vencimento": "2026-11-19T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 714.85,
-      "vencimento": "2026-11-20T00:00:00"
-    },
-    {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
-      "dias_atraso": 4,
-      "loja": "Loja 1",
-      "saldo": 614.95,
-      "vencimento": "2026-11-20T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 2,
-      "loja": "Loja 1",
-      "saldo": 1400.8,
-      "vencimento": "2026-11-22T00:00:00"
     },
     {
       "cliente": "SPIES COMERCIO DE MATERIAIS DE CONSTRUCAO E SERVICOS DE TRANSPORTES LTDA",
@@ -87,14 +66,28 @@
       "cliente": "L. DA SILVA GUIMARAES - ME",
       "dias_atraso": -2,
       "loja": "Loja 1",
-      "saldo": 2023,
+      "saldo": 1523,
       "vencimento": "2026-11-26T00:00:00"
     },
     {
-      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "cliente": "RUBENS BENICIO DE CARVALHO",
+      "dias_atraso": -3,
+      "loja": "Loja 2",
+      "saldo": 1100,
+      "vencimento": "2026-11-27T00:00:00"
+    },
+    {
+      "cliente": "MIGUEL (SILOALDO)",
+      "dias_atraso": -3,
+      "loja": "Loja 2",
+      "saldo": 272,
+      "vencimento": "2026-11-27T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
       "dias_atraso": -3,
       "loja": "Loja 1",
-      "saldo": 896,
+      "saldo": 4225,
       "vencimento": "2026-11-27T00:00:00"
     },
     {
@@ -102,6 +95,13 @@
       "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 3620,
+      "vencimento": "2026-11-27T00:00:00"
+    },
+    {
+      "cliente": "RORAIMA ELETRICA COMERCIO DE MATERIAL DE CONTRUCAO",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 896,
       "vencimento": "2026-11-27T00:00:00"
     }
   ],
