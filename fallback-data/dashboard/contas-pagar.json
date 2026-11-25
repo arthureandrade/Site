@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3525630
+      "saldo": 3526913
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 521893
+      "saldo": 536028
     },
     {
       "faixa": "91–180 dias",
@@ -21,13 +21,13 @@
       "saldo": 17920
     }
   ],
-  "generated_at": "2026-11-25T03:00:20.933253",
+  "generated_at": "2026-11-25T13:55:44.533341",
   "kpis": {
-    "a_vencer_7d": 402795,
+    "a_vencer_7d": 403542,
     "juros_pagos": 15089,
-    "total_aberto": 4183804,
+    "total_aberto": 4199222,
     "total_pago_periodo": 6488637,
-    "total_vencido": 658174
+    "total_vencido": 672309
   },
   "ok": true,
   "periodo_pagamentos": {
@@ -140,8 +140,8 @@
     },
     {
       "fornecedor": "M E B TRANSPORTES LTDA",
-      "titulos": 68,
-      "total_aberto": 146410
+      "titulos": 69,
+      "total_aberto": 147886
     },
     {
       "fornecedor": "ARCELORMITTAL BRASIL S.A.",
