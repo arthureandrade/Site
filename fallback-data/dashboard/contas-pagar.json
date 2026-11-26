@@ -2,7 +2,7 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 3526913
+      "saldo": 3708723
     },
     {
       "faixa": "1–30 dias",
@@ -21,11 +21,11 @@
       "saldo": 17920
     }
   ],
-  "generated_at": "2026-11-25T13:55:44.533341",
+  "generated_at": "2026-11-25T21:43:22.041969",
   "kpis": {
-    "a_vencer_7d": 403542,
+    "a_vencer_7d": 403822,
     "juros_pagos": 15089,
-    "total_aberto": 4199222,
+    "total_aberto": 4381032,
     "total_pago_periodo": 6488637,
     "total_vencido": 672309
   },
@@ -110,8 +110,8 @@
   "top_fornecedores": [
     {
       "fornecedor": "ACO CEARENSE INDUSTRIAL LTDA EM RECUPERACAO JUDICIAL",
-      "titulos": 37,
-      "total_aberto": 770760
+      "titulos": 40,
+      "total_aberto": 940406
     },
     {
       "fornecedor": "STEEL BR AMAZONIA FABRICACAO DE PRODUTOS TREFILADOS DE METAL LTDA",
@@ -139,14 +139,14 @@
       "total_aberto": 159269
     },
     {
+      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
+      "titulos": 24,
+      "total_aberto": 150149
+    },
+    {
       "fornecedor": "M E B TRANSPORTES LTDA",
       "titulos": 69,
       "total_aberto": 147886
-    },
-    {
-      "fornecedor": "ARCELORMITTAL BRASIL S.A.",
-      "titulos": 21,
-      "total_aberto": 138374
     },
     {
       "fornecedor": "G.A. GESTAO EMPRESARIAL LTDA",
