@@ -2,11 +2,11 @@
   "faixas": [
     {
       "faixa": "A Vencer",
-      "saldo": 576022.78
+      "saldo": 588380.15
     },
     {
       "faixa": "1–30 dias",
-      "saldo": 245859.63
+      "saldo": 243357.63
     },
     {
       "faixa": "91–180 dias",
@@ -25,12 +25,12 @@
       "saldo": 37209.840000000004
     }
   ],
-  "generated_at": "2026-11-26T06:04:09.178013",
+  "generated_at": "2026-11-26T15:34:58.810722",
   "kpis": {
-    "clientes_atraso": 79,
-    "total_aberto": 1305640.43,
-    "total_atraso": 729617.65,
-    "total_vencer": 576022.7799999999
+    "clientes_atraso": 74,
+    "total_aberto": 1315495.7999999998,
+    "total_atraso": 727115.65,
+    "total_vencer": 588380.1499999999
   },
   "ok": true,
   "proximos_vencimentos": [
@@ -46,13 +46,6 @@
       "dias_atraso": 0,
       "loja": "Loja 2",
       "saldo": 675,
-      "vencimento": "2026-11-26T00:00:00"
-    },
-    {
-      "cliente": "L. DA SILVA GUIMARAES - ME",
-      "dias_atraso": 0,
-      "loja": "Loja 1",
-      "saldo": 1523,
       "vencimento": "2026-11-26T00:00:00"
     },
     {
@@ -102,6 +95,13 @@
       "dias_atraso": -3,
       "loja": "Loja 1",
       "saldo": 55.83,
+      "vencimento": "2026-11-29T00:00:00"
+    },
+    {
+      "cliente": "M & B TRANSPPORTE LTDA    TRANS AMIGOS",
+      "dias_atraso": -3,
+      "loja": "Loja 1",
+      "saldo": 1017,
       "vencimento": "2026-11-29T00:00:00"
     }
   ],
